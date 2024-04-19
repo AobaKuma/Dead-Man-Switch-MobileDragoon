@@ -1,39 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-    <ThingCategoryDef>
-		<defName>DMS_Module</defName>
-		<label>heavy module</label>
-		<parent>ApparelArmor</parent>
-	</ThingCategoryDef>
+  <ThingCategoryDef>
+    <defName>DMS_Module</defName>
+    <label>heavy module</label>
+    <parent>ApparelArmor</parent>
+  </ThingCategoryDef>
 
-    <ThingDef ParentName="ResourceBase">
-        <defName>DMS_ModuleCoreFrame</defName>
-        <label>PV-8 mechanical frame</label>
-        <description>todo.</description>
-        <descriptionHyperlinks><ThingDef>DMS_TableMachinePrinter</ThingDef></descriptionHyperlinks>
-        <possessionCount>2</possessionCount>
-        <graphicData>
-          <texPath>Things/Resource/ComponentStamped</texPath>
-          <graphicClass>Graphic_Single</graphicClass>
-        </graphicData>
-        <soundInteract>Metal_Drop</soundInteract>
-        <soundDrop>Standard_Drop</soundDrop>
-        <stackLimit>1</stackLimit>
-        <healthAffectsPrice>true</healthAffectsPrice>
-        <statBases>
-          <MaxHitPoints>100</MaxHitPoints>
-          <Mass>80</Mass>
-          <Flammability>0</Flammability>
-          <DeteriorationRate>2.0</DeteriorationRate>
-        </statBases>
-        <intricate>true</intricate>
-        <thingSetMakerTags>
-          <li>RewardStandardCore</li>
-        </thingSetMakerTags>
-        <tradeTags/>
-        <thingCategories>
-          <li>DMS_Module</li>
-        </thingCategories>
-        <allowedArchonexusCount>10</allowedArchonexusCount>
-      </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>DMS_ModuleCoreFrame</defName>
+    <label>PV-8 mechanical frame</label>
+    <description>todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_TableMachinePrinter</ThingDef>
+    </descriptionHyperlinks>
+    <possessionCount>2</possessionCount>
+    <graphicData>
+      <texPath>Things/Resource/ComponentStamped</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>true</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>80</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <tradeTags />
+    <thingCategories>
+      <li>DMS_Module</li>
+    </thingCategories>
+    <allowedArchonexusCount>10</allowedArchonexusCount>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>Apparel_PowerArmor</EquipedThingDef>
+        <slot>Core</slot>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>DMS_ModuleHead</defName>
+    <label>PV-8 standard sensor</label>
+    <description>todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_TableMachinePrinter</ThingDef>
+    </descriptionHyperlinks>
+    <possessionCount>2</possessionCount>
+    <graphicData>
+      <texPath>Things/Resource/ComponentStamped</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>true</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>80</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <tradeTags />
+    <thingCategories>
+      <li>DMS_Module</li>
+    </thingCategories>
+    <allowedArchonexusCount>10</allowedArchonexusCount>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>Apparel_PowerArmorHelmet</EquipedThingDef>
+        <slot>Head</slot>
+      </li>
+    </comps>
+  </ThingDef>
 </Defs>

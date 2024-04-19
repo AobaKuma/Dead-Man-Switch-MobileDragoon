@@ -18,7 +18,7 @@
 
     <JobDef>
         <defName>WG_RepairComponent</defName>
-        <driverClass>JobDriver_HaulToCell</driverClass>
+        <driverClass>JobDriver_Repair</driverClass>
         <reportString>hauling TargetA.</reportString>
         <suspendable>false</suspendable>
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>

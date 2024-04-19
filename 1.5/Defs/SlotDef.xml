@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <WalkerGear.SlotDef>
+        <defName>Core</defName>
+        <isCoreFrame>true</isCoreFrame>
+        <supportedSlots>
+            <li>Head</li>
+            <li>Attachment</li>
+            <li>ArmLeft</li>
+            <li>ArmRight</li>
+            <li>MountLeft</li>
+            <li>MountRight</li>
+        </supportedSlots>
+    </WalkerGear.SlotDef>
+
+    <WalkerGear.SlotDef>
+        <defName>Head</defName>
+    </WalkerGear.SlotDef>
+
+    <WalkerGear.SlotDef>
+        <defName>Attachment</defName>
+    </WalkerGear.SlotDef>
+
+    <WalkerGear.SlotDef>
+        <defName>ArmLeft</defName>
+    </WalkerGear.SlotDef>
+
+    <WalkerGear.SlotDef>
+        <defName>ArmRight</defName>
+    </WalkerGear.SlotDef>
+
+    <WalkerGear.SlotDef>
+        <defName>MountLeft</defName>
+    </WalkerGear.SlotDef>
+
+    <WalkerGear.SlotDef>
+        <defName>MountRight</defName>
+    </WalkerGear.SlotDef>
+</Defs>

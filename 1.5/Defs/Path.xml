@@ -1,4 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-
+    <ThingDef ParentName="BuildingBase">
+        <defName>DMS_Building_MaintenanceBay</defName>
+        <label>maintenance bay</label>
+        <description>A place for mobile dragoon assembly and maintenance, it has a gantry to lift modules of mobile dragoon.</description>
+        <thingClass>WalkerGear.Building_MaintenanceBay</thingClass>
+        <graphicData>
+          <texPath>Things/Building/DragoonBay_Bottom</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>(4,4)</drawSize>
+        </graphicData>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>     
+        <canOverlapZones>false</canOverlapZones>
+        <altitudeLayer>Building</altitudeLayer>
+        <statBases>
+          <WorkToBuild>3600</WorkToBuild>
+        </statBases>
+        <costList>
+          <Steel>50</Steel>
+        </costList>
+        <scatterableOnMapGen>false</scatterableOnMapGen>
+        <useHitPoints>false</useHitPoints>
+        <size>(3,3)</size>
+        <pathCost>100</pathCost>
+        <designationCategory>DMS_Category</designationCategory>
+        <uiOrder>2000</uiOrder>
+        <passability>PassThroughOnly</passability>
+        <hasInteractionCell>True</hasInteractionCell>
+        <interactionCellOffset>(1,0,-2)</interactionCellOffset>
+        <surfaceType>Item</surfaceType>
+        <building>
+          <buildingTags>
+            <li>Production</li>
+          </buildingTags>
+        </building>
+        <comps>
+          <li Class="CompProperties_AffectedByFacilities">
+            <linkableFacilities>
+              <li>ToolCabinet</li>
+            </linkableFacilities>
+          </li>
+          <li Class="CompProperties_ReportWorkSpeed">
+            <workSpeedStat>WorkTableWorkSpeedFactor</workSpeedStat>
+          </li>
+        </comps>
+        <placeWorkers>
+          <li>PlaceWorker_ShowFacilitiesConnections</li>
+          <li>PlaceWorker_ReportWorkSpeedPenalties</li>
+          <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+      </ThingDef>
 </Defs>

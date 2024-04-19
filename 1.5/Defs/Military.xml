@@ -7,6 +7,7 @@
         <suspendable>false</suspendable>
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     </JobDef>
+
     <JobDef>
         <defName>WG_RemoveComponent</defName>
         <driverClass>JobDriver_HaulToCell</driverClass>
@@ -22,6 +23,21 @@
         <suspendable>false</suspendable>
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     </JobDef>
+
+    <JobDef>
+        <defName>WG_GetInWalkerCore</defName>
+        <driverClass>JobDriver_Goto</driverClass>
+        <reportString>entering mobile dragoon</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+    
+    <JobDef>
+        <defName>WG_GetOffWalkerCore</defName>
+        <driverClass>JobDriver_Goto</driverClass>
+        <reportString>heading back to bay</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
     <WorkGiverDef>
         <defName>WG_RepairComponent</defName>
         <label>repair damaged things</label>

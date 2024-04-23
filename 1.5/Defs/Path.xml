@@ -4,15 +4,18 @@
   <ThingDef ParentName="BuildingBase">
     <defName>DMS_Building_MaintenanceBay</defName>
     <label>maintenance bay</label>
-    <description>A place for mobile dragoon assembly and maintenance, it has a gantry to lift modules of mobile dragoon.</description>
+    <description>A place for mobile dragoon assembly and maintenance, it has a gantry to lift
+      modules of mobile dragoon.</description>
     <thingClass>WalkerGear.Building_MaintenanceBay</thingClass>
     <graphicData>
       <texPath>Things/Building/DragoonBay_Bottom</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(4,4)</drawSize>
     </graphicData>
+    <tickerType>Normal</tickerType>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <canOverlapZones>false</canOverlapZones>
+    <drawerType>MapMeshAndRealTime</drawerType>
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
       <WorkToBuild>3600</WorkToBuild>

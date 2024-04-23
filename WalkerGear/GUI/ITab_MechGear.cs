@@ -20,14 +20,14 @@ namespace WalkerGear
             this.size = new Vector2(512f, 368f);
             this.labelKey = "TabMechGear".Translate();
         }
-        private Building_MaintenanceBay parent
+        private Building_MaintenanceBay Parent
         {
             get => SelThing as Building_MaintenanceBay;
         }
         private const float side = 80f;
         private Vector2 GizmoSize
         {
-            get => new Vector2(side, side);
+            get => new(side, side);
         }
         private readonly Color grey = new ColorInt(72, 82, 92).ToColor;
 
@@ -36,36 +36,88 @@ namespace WalkerGear
         protected override void FillTab()
         {
             Text.Font = GameFont.Small;
-            Rect rect = new Rect(0f, 0f, this.size.x, this.size.y);
+            Rect rect = new(0f, 0f, this.size.x, this.size.y);
             Rect inner = rect.ContractedBy(3f);
             //Draw Title
             {
-                Text.Font = GameFont.Medium;
                 Text.Anchor = TextAnchor.UpperRight;
                 string title = "MechSolution".Translate();
                 Vector2 titleSize = Text.CalcSize(title);
-                Rect titleBox = new Rect(new Vector2(inner.xMax - titleSize.x, inner.y), titleSize);
-                Widgets.Label(titleBox, title);
-                Text.Font = GameFont.Small;
-
+                Rect titleBox = new(new Vector2(inner.xMax - titleSize.x - 20f, inner.y), titleSize);
+                Widgets.LabelFit(titleBox, title);
                 Text.Anchor = TextAnchor.UpperLeft;
             }
-            
 
-            foreach (SlotDef slot in parent.slotDefs)
+            //Draw S/L solution
+            {
+                Vector2 slPosition = new(14f, inner.y);
+
+                string text = "Save".Translate();
+                Vector2 size = Text.CalcSize(text);
+                size.Scale(new(1.2f,1.2f));
+                Rect slgizmoRect = new(slPosition, size);
+                Widgets.ButtonText(slgizmoRect,text);
+                text = "Load".Translate();
+                slgizmoRect.x = slgizmoRect.xMax + 10f;
+                size=Text.CalcSize(text);
+                size.Scale(new(1.2f, 1.2f));
+                slgizmoRect.size = size;
+                Widgets.ButtonText(slgizmoRect, text);
+                text = "UnArm".Translate();
+                slgizmoRect.x = slgizmoRect.xMax + 10f;
+                size = Text.CalcSize(text);
+                size.Scale(new(1.2f, 1.2f));
+                slgizmoRect.size = size;
+                Widgets.ButtonText(slgizmoRect, text);
+            }
+
+            foreach (SlotDef slot in Parent.slotDefs)
             {
                 Draw_GizmoSlot(slot);
             }
-            if (parent.occupiedSlots.ContainsKey(SlotDefOf.Core))
+            if (Parent.HasGearCore())
             {
                 Vector2 position = positions[0];
-                position.x =170f - (side / 5f);
+                //stats
+                {position.x =170f - (side / 5f);
                 position.y = 56f+(side * 2 + 5f);
                 Vector2 box = GizmoSize * 2f;
                 box.x *= 1.1f;
                 box.y = size.y - position.y - 10f;
-                Rect statBlock = new Rect(position, box);
-                DrawStatEntries(statBlock, parent.occupiedSlots[SlotDefOf.Core]);
+                Rect statBlock = new(position, box);
+                    DrawStatEntries(statBlock, Parent.occupiedSlots[SlotDefOf.Core]);
+                }
+
+                //rotate
+                Vector2 rotateGizmosBotLeft = new(340f, 216f);
+                {
+                    Vector2 smallGizmoSize = new(30f,30f);
+                    
+                    for (int i = 0; i < 3; i++)
+                    {
+                        rotateGizmosBotLeft.y -= 30f;
+                        Rect gizmoRect = new(rotateGizmosBotLeft,smallGizmoSize);
+                        switch (i)
+                        {
+                            case 0://染色
+                                break;
+                            case 1:
+                                if (Widgets.ButtonImage(gizmoRect, Building_MaintenanceBay.rotateButton)) {
+                                    Parent.direction.Rotate(RotationDirection.Clockwise);
+                                }
+                                break;
+                            case 2:
+
+                                if (Widgets.ButtonImage(gizmoRect, Building_MaintenanceBay.rotateOppoButton))
+                                {
+                                    Parent.direction.Rotate(RotationDirection.Counterclockwise);
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
             }
             
         }
@@ -75,21 +127,21 @@ namespace WalkerGear
         {
             Text.Anchor = TextAnchor.MiddleCenter;
             Vector2 position = positions[slot.uiPriority];
-            Rect gizmoRect = new Rect(position,GizmoSize);
+            Rect gizmoRect = new(position, GizmoSize);
             if (slot.isCoreFrame) { 
                 gizmoRect = gizmoRect.ScaledBy(2f); 
                 gizmoRect.position = position;
             }
             
-            bool disabled = !parent.slotDefs.Contains(slot);
-            bool hasThing = parent.occupiedSlots.ContainsKey(slot);
+            bool disabled = !Parent.slotDefs.Contains(slot);
+            bool hasThing = Parent.occupiedSlots.ContainsKey(slot);
             float healthPerc = 0f;
             //标签
             {
                 TaggedString label = $"{slot.label.Translate()}";
                 if (hasThing)
                 {
-                    Thing thing = parent.occupiedSlots[slot];
+                    Thing thing = Parent.occupiedSlots[slot];
                     healthPerc = (float)thing.HitPoints / (float)thing.MaxHitPoints;
                     label += "(" + healthPerc.ToStringPercent() + ")";
                 }
@@ -99,7 +151,7 @@ namespace WalkerGear
                 }
                 Text.Font = GameFont.Small;
                 Vector2 labelSize = Text.CalcSize(label);
-                Rect labelBlock = new Rect(gizmoRect.x, gizmoRect.y - labelSize.y, gizmoRect.width, labelSize.y);
+                Rect labelBlock = new(gizmoRect.x, gizmoRect.y - labelSize.y, gizmoRect.width, labelSize.y);
                 Widgets.LabelFit(labelBlock, label);
             }
             //血条
@@ -119,7 +171,7 @@ namespace WalkerGear
             if(disabled) return;
             Texture2D icon = EmptySlotIcon;
             if (hasThing)
-                icon = new CachedTexture(parent.occupiedSlots[slot].def.graphicData.texPath).Texture;
+                icon = new CachedTexture(Parent.occupiedSlots[slot].def.graphicData.texPath).Texture;
             GizmoInteraction(gizmoRect,icon,slot);
             Widgets.DrawHighlightIfMouseover(gizmoRect);
             //部件名字
@@ -128,7 +180,7 @@ namespace WalkerGear
                 Rect nameBlock = gizmoRect.BottomPart(1f/8f);
                 nameBlock.y -= nameBlock.height/4f;
                 GUI.DrawTexture(nameBlock, TexUI.TextBGBlack);
-                Widgets.LabelFit(nameBlock, parent.occupiedSlots[slot].LabelCap);
+                Widgets.LabelFit(nameBlock, Parent.occupiedSlots[slot].LabelCap);
             }
             Text.Anchor = TextAnchor.UpperLeft;
         }
@@ -151,27 +203,34 @@ namespace WalkerGear
         }
         private void GizmoInteraction(Rect rect, Texture2D icon,SlotDef slot)
         {
-            if (Widgets.ButtonImage(rect, icon))//没做完
+            if (slot.isCoreFrame && Parent.HasGearCore())
+            {
+                RenderTexture portrait = PortraitsCache.Get(Parent.Dummy, rect.size, Parent.Face);
+                Widgets.DrawTextureFitted(rect,portrait,1f);
+            }
+            else Widgets.DrawTextureFitted(rect, icon, 1f);
+
+            if (Widgets.ButtonInvisible(rect, icon))//没做完
             {
                 switch (Event.current.button)
                 {
                     case 0://左键
                         {
-                            if (parent.occupiedSlots.ContainsKey(slot))
+                            if (Parent.occupiedSlots.ContainsKey(slot))
                             {
-                                Find.WindowStack.Add(new Dialog_InfoCard(parent.occupiedSlots[slot]));
+                                Find.WindowStack.Add(new Dialog_InfoCard(Parent.occupiedSlots[slot]));
                             }
                             else Find.WindowStack.Add(new Dialog_InfoCard(slot));
                             break;
                         }
                     case 1://右键
                         {
-                            List<FloatMenuOption> options = new List<FloatMenuOption>();
-                            if (parent.occupiedSlots.ContainsKey(slot))
+                            List<FloatMenuOption> options = new();
+                            if (Parent.occupiedSlots.ContainsKey(slot))
                             {
-                                Thing thing = parent.occupiedSlots[slot];
+                                Thing thing = Parent.occupiedSlots[slot];
                                 string label = "Remove".Translate() + thing.LabelCap;
-                                Action action = () => parent.RemoveComp(thing);
+                                Action action = () => Parent.RemoveComp(thing);
                                 options.Add(new FloatMenuOption(label, action, MenuOptionPriority.High));
                             }
                             options.AddRange(TryMakeOptions(slot));
@@ -184,13 +243,13 @@ namespace WalkerGear
         }
         private IEnumerable<FloatMenuOption> TryMakeOptions(SlotDef slot)
         {
-            parent.UpdateCache();
+            Parent.UpdateCache();
             if (Building_MaintenanceBay.availableCompsForSlots.ContainsKey(slot))
             {
                 foreach (var thing in Building_MaintenanceBay.availableCompsForSlots[slot])
                 {
                     string label = thing.LabelCap;
-                    Action action = () => parent.AddOrReplaceComp(thing);
+                    Action action = () => Parent.AddOrReplaceComp(thing);
                     yield return new FloatMenuOption(label,action);
                 }
             }
@@ -200,7 +259,7 @@ namespace WalkerGear
         //Stats Components
         private void DrawStatEntries(Rect rect,Thing thing)
         {
-            WidgetRow row = new WidgetRow(rect.x,rect.y,UIDirection.RightThenDown,rect.width);
+            WidgetRow row = new(rect.x,rect.y,UIDirection.RightThenDown,rect.width);
             float curY;
             row.Label("Performance".Translate());
             row.Gap(int.MaxValue);
@@ -222,9 +281,9 @@ namespace WalkerGear
             }
             Widgets.EndGroup();
         }
-        
 
-        private static readonly  Dictionary<int,Vector2> positions =new Dictionary<int, Vector2>()
+
+        private static readonly Dictionary<int, Vector2> positions = new()
         {
             {0,new Vector2(170f,56f)},
             {1,new Vector2(14f,56f)},
@@ -234,7 +293,7 @@ namespace WalkerGear
             {5,new Vector2(412f,164f)},
             {6,new Vector2(412f,282f)},
         };
-        private static readonly List<StatDef> toDraw = new List<StatDef>() {
+        private static readonly List<StatDef> toDraw = new() {
             StatDefOf.ArmorRating_Sharp, StatDefOf.ArmorRating_Blunt,StatDefOf.ArmorRating_Heat
         };
     }

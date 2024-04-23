@@ -6,6 +6,7 @@ using UnityEngine;
 using Verse;
 using Verse.AI;
 using Verse.Noise;
+using static Verse.HediffCompProperties_RandomizeSeverityPhases;
 
 
 namespace WalkerGear
@@ -20,9 +21,10 @@ namespace WalkerGear
 
     [StaticConstructorOnStartup]
     public class Building_MaintenanceBay : Building, IThingHolder
-	{
+    {
         private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
-
+        public static readonly Texture2D rotateButton = new CachedTexture("UI/Rotate").Texture;
+        public static readonly Texture2D rotateOppoButton = new CachedTexture("UI/RotateOppo").Texture;
 
         [Unsaved(false)]
         private CompPowerTrader cachedPowerComp;
@@ -39,6 +41,23 @@ namespace WalkerGear
                 return cachedPowerComp;
             }
         }
+        private Pawn cachePawn;
+        public Pawn Dummy
+        {
+            get
+            {
+                if (this.cachePawn == null)
+                {
+                    cachePawn = innerContainer.InnerListForReading.Where((t) => t is Pawn).First() as Pawn;
+                }
+                return this.cachePawn;
+            }
+        } 
+        public Rot4 direction = Rot4.North;
+        public Rot4 Face
+        {
+            get=> direction; set => direction = value;
+        }
         private CompAffectedByFacilities ABFComp
         {
             get => this.TryGetComp<CompAffectedByFacilities>();
@@ -48,37 +67,6 @@ namespace WalkerGear
         public static Dictionary<SlotDef,List<Thing>> availableCompsForSlots = new Dictionary<SlotDef, List<Thing>>();
         public override IEnumerable<Gizmo> GetGizmos()
         {
-            /*List<Thing> things = Map.listerThings.AllThings.Where(a => a.TryGetComp<CompWalkerComponent>(out var x)).ToList();
-            foreach (SlotDef def in DefDatabase<SlotDef>.AllDefs)//顯示每一個可用的Slot
-            {
-                Command_Action command_Action = new Command_Action();
-                command_Action.defaultLabel = "InsertCompoment".Translate() + "...";
-                command_Action.defaultDesc = "InsertCompomentExtractorDesc".Translate();
-                command_Action.icon = SlotCompomentIcon;
-                command_Action.action = delegate
-                {
-                    List<FloatMenuOption> list = new List<FloatMenuOption>();
-                    foreach (Thing thing in things.Where(a => a.TryGetComp<CompWalkerComponent>().Props.slot == def))//遍歷每一個可用選項並選擇
-                    {
-                        if (CanReach(thing))
-                        {
-                            string label = thing.LabelCap + " " + thing.HitPoints.ToString() + "/" + thing.MaxHitPoints.ToString();
-                            list.Add(new FloatMenuOption(label, delegate 
-                            { 
-                            
-                            }, MenuOptionPriority.AttackEnemy));
-                        }
-                        //這東西得能走到位子上
-                    }
-
-                    if (!list.Any())
-                    {
-                        list.Add(new FloatMenuOption("NoAvaliableComponent".Translate(), null));
-                    }
-
-                    Find.WindowStack.Add(new FloatMenu(list));
-                };
-            }*/
             
             if (HasGearCore())
             {
@@ -129,8 +117,11 @@ namespace WalkerGear
             if (!HasGearCore()) return "NoArmor".Translate().CapitalizeFirst();
             return true;
         }
-
-        public bool HasGearCore()=> occupiedSlots.ContainsKey(SlotDefOf.Core);
+        public bool hasGearCore;
+        public bool HasGearCore(){
+            hasGearCore =  occupiedSlots.ContainsKey(SlotDefOf.Core);
+            return hasGearCore;
+        } 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn) //選擇殖民者後右鍵
         {
             if (!selPawn.CanReach(this, PathEndMode.InteractionCell, Danger.Deadly))
@@ -198,6 +189,8 @@ namespace WalkerGear
         public override void Tick()
         {
             base.Tick();
+            
+            if (Find.TickManager.TicksGame % 10 == 0) HasGearCore();
             if (Find.TickManager.TicksGame % 250 == 0)  UpdateCache();
         }
 
@@ -207,10 +200,15 @@ namespace WalkerGear
             if (!respawningAfterLoad)
             {
                 
+                Pawn p = PawnGenerator.GeneratePawn(RimWorld.PawnKindDefOf.Colonist);
+                p.apparel.DestroyAll();
+                p.rotationInt = Rotation.Opposite;
+                direction = Rotation;
+                innerContainer.TryAdd(p);
             }
             foreach (Thing t in innerContainer)
             {
-                Log.Message(t.def);
+                //Log.Message(t.def);
                 var c = t.TryGetComp<CompWalkerComponent>();
                 if (c != null)
                 {
@@ -221,7 +219,20 @@ namespace WalkerGear
             UpdateCache();
             if (slotDefs.Empty()) slotDefs.Add(SlotDefOf.Core);
         }
+        public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
+        {
+            if (hasGearCore)
+            {
+                Dummy.Drawer.renderer.DynamicDrawPhaseAt(phase, drawLoc.WithYOffset(1f), null, true);
+            }
+            base.DynamicDrawPhaseAt(phase, drawLoc, flip);
+        }
 
+        public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
+        {
+            Dummy.Destroy();
+            base.Destroy(mode);
+        }
         public override void PostPostMake()
         {
             base.PostPostMake();
@@ -231,7 +242,6 @@ namespace WalkerGear
         public ThingOwner<Thing> innerContainer;
         public void GetChildHolders(List<IThingHolder> outChildren)
         {
-            
         }
 
         public ThingOwner GetDirectlyHeldThings()
@@ -325,6 +335,7 @@ namespace WalkerGear
                     
             }
         }
+
         private void Clear()
         {
             slotDefs.Clear();

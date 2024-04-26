@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!--DMS_PDW .50AE衝鋒槍.-->
+	<ThingDef ParentName="DMS_BaseMakeableGun">
+		<defName>DMS_CAR</defName>
+		<label>caseless assault rifle</label>
+		<description>An advanced assault rifle that uses caseless ammunition and has a higher firing response speed and rate of fire than traditional assault rifles..</description>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<weaponTags>
+			<li>DMS_IndustrialGun</li>
+			<li>A_PDW</li>
+		</weaponTags>
+		<graphicData>
+			<texPath>Things/Weapons/DMS_G93Caseless</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.3,1.3)</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<statBases>
+			<WorkToMake>48000</WorkToMake>
+			<Mass>4</Mass>
+			<AccuracyTouch>0.67</AccuracyTouch>
+			<AccuracyShort>0.77</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.60</AccuracyLong>
+			<RangedWeapon_Cooldown>1.40</RangedWeapon_Cooldown>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>BlowbackOperation</li>
+				<li>DMS_EquipmentElite</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Tungsteel>65</Tungsteel>
+			<ComponentStamped>3</ComponentStamped>
+		</costList>
+		<verbs>
+			<li>        
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>DMS_Bullet_Pistol</defaultProjectile>
+				<warmupTime>1.1</warmupTime>
+				<range>30</range>
+				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+				<burstShotCount>5</burstShotCount>
+				<soundCast>Shot_Minigun</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(0.5,0.5)</drawSize>
+				<offsets>
+					<li>(0.25,0)</li>
+				</offsets>
+				<isAlternately>true</isAlternately>
+			</li>
+			<li Class="DMS.HeavyEquippableExtension">
+				<EquippableDef>AverageHumanCanUse</EquippableDef>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+	  <defName>DMS_Bullet_Caseless</defName>
+	  <label>caseless bullet</label>
+	  <graphicData>
+		<texPath>Things/Projectile/Bullet_Small</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	  </graphicData>
+	  <projectile>
+		<damageDef>Bullet</damageDef>
+		<damageAmountBase>10</damageAmountBase>
+		<speed>70</speed>
+	  </projectile>
+	</ThingDef>
+</Defs>

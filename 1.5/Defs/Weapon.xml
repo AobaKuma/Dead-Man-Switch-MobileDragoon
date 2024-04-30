@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!--DMS_PDW .50AE衝鋒槍.-->
+	<!--無殼AR-->
 	<ThingDef ParentName="DMS_BaseMakeableGun">
 		<defName>DMS_CAR</defName>
 		<label>caseless assault rifle</label>
@@ -41,7 +41,7 @@
 			<li>        
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>DMS_Bullet_Pistol</defaultProjectile>
+				<defaultProjectile>DMS_Bullet_Caseless</defaultProjectile>
 				<warmupTime>1.1</warmupTime>
 				<range>30</range>
 				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
@@ -78,4 +78,8 @@
 		<speed>70</speed>
 	  </projectile>
 	</ThingDef>
+
+	<!--ATC-->
+
+
 </Defs>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingCategoryDef>
+        <defName>DMS_Module</defName>
+        <label>heavy module</label>
+        <parent>ApparelArmor</parent>
+    </ThingCategoryDef>    <!-- 物品型態的龍騎兵裝備 -->
+    <ThingDef Name="DMS_ModuleItemBase" Abstract="True">
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <drawerType>MapMeshOnly</drawerType>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <useHitPoints>true</useHitPoints>
+        <selectable>true</selectable>
+        <altitudeLayer>Item</altitudeLayer>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <stackLimit>1</stackLimit>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <intricate>true</intricate>
+        <alwaysHaulable>true</alwaysHaulable>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <rotatable>false</rotatable>
+        <pathCost>14</pathCost>
+        <allowedArchonexusCount>-1</allowedArchonexusCount>
+        <techLevel>Industrial</techLevel>
+        <possessionCount>2</possessionCount>
+        <generateCommonality>0</generateCommonality>
+        <thingCategories>
+            <li>DMS_Module</li>
+        </thingCategories>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>2.00</drawSize>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>0.0</Flammability>
+            <Beauty>-3</Beauty>
+        </statBases>
+        <tickerType>Never</tickerType>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>false</smeltable>
+        <comps>
+            <li Class="CompProperties_Forbiddable" />
+            <li Class="CompProperties_Styleable" />
+            <li>
+                <compClass>CompColorable</compClass>
+            </li>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+    </ThingDef>    <!--
+    衣服型態的龍騎兵裝備 -->
+    <ThingDef Name="DMS_ModuleApparelBase" Abstract="True">
+        <thingClass>Apparel</thingClass>
+        <category>Item</category>
+        <drawerType>MapMeshOnly</drawerType>
+        <selectable>True</selectable>
+        <pathCost>14</pathCost>
+        <useHitPoints>true</useHitPoints>
+        <techLevel>Industrial</techLevel>
+        <generateCommonality>0</generateCommonality>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>2.00</drawSize>
+        </graphicData>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>0.0</Flammability>
+            <Beauty>-3</Beauty>
+        </statBases>
+        <altitudeLayer>Item</altitudeLayer>
+        <alwaysHaulable>True</alwaysHaulable>
+        <tickerType>Never</tickerType>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>false</smeltable>
+        <thingSetMakerTags>
+            <li>RewardStandardCore</li>
+        </thingSetMakerTags>
+        <tradeTags />
+        <comps>
+            <li Class="CompProperties_Forbiddable" />
+            <li Class="CompProperties_Styleable" />
+            <li>
+                <compClass>CompColorable</compClass>
+            </li>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+    <ThingDef Name="DMS_ModuleApparelCore" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <apparel>
+            <parentTagDef>WGApparelBody</parentTagDef>
+            <renderSkipFlags>
+                <li>Body</li>
+            </renderSkipFlags>
+        </apparel>
+    </ThingDef>
+    <PawnRenderNodeTagDef>
+        <defName>WGApparel</defName>
+    </PawnRenderNodeTagDef>
+    <PawnRenderNodeTagDef>
+        <defName>WGApparelBody</defName>
+    </PawnRenderNodeTagDef>
+    <PawnRenderNodeTagDef>
+        <defName>WGApparelHead</defName>
+    </PawnRenderNodeTagDef>
+</Defs>

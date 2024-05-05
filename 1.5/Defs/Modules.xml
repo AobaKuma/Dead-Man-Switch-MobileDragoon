@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>    <!-- PV-8核心 -->
+    <ThingDef ParentName="DMS_ModuleItemBase">
+        <defName>DMS_Module_PV8_Core</defName>
+        <label>PV-8 mechanical frame</label>
+        <description>todo.</description>
+        <descriptionHyperlinks>
+            <ThingDef>DMS_TableMachinePrinter</ThingDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/Module</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>8</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <comps>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <EquipedThingDef>DMS_Apparel_PV8_Core</EquipedThingDef>
+                <slot>Core</slot>
+            </li>
+        </comps>
+    </ThingDef>
+    <ThingDef ParentName="DMS_ModuleApparelCore">
+        <defName>DMS_Apparel_PV8_Core</defName>
+        <label>PV-8 Drgaoon</label>
+        <description>Todo.</description>
+        <graphicData>
+            <texPath>Things/Dragoon/PV8/apparel_south</texPath>
+        </graphicData>
+        <useHitPoints>false</useHitPoints>
+        <statBases>
+            <Mass>0</Mass>
+            <Flammability>0</Flammability>
+            <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.08</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.10</ArmorRating_Heat>
+            <Insulation_Cold>14.4</Insulation_Cold>
+            <Insulation_Heat>3</Insulation_Heat>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.12</MoveSpeed>
+        </equippedStatOffsets>
+        <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Neck</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Things/Dragoon/PV8/apparel</wornGraphicPath>
+            <layers>
+                <li>Shell</li>
+            </layers>
+            <drawData>
+                <scale>1.5</scale>
+            </drawData>
+        </apparel>
+        <comps>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <isApparal>true</isApparal>
+                <ItemDef>DMS_Module_PV8_Core</ItemDef>
+                <slot>Core</slot>
+            </li>
+        </comps>
+        <thingClass>WalkerGear.WalkerGear_Core</thingClass>
+        <modExtensions>
+            <li Class="VFECore.ApparelDrawPosExtension">
+                <isUnifiedApparel>true</isUnifiedApparel>
+            </li>
+        </modExtensions>
+    </ThingDef>
+        <!-- PV-8頭盔 -->
+    <ThingDef ParentName="DMS_ModuleItemBase">
+        <defName>DMS_Module_PV8_Helmet</defName>
+        <label>PV-8 mechanical helmet</label>
+        <description>todo.</description>
+        <descriptionHyperlinks>
+            <ThingDef>DMS_TableMachinePrinter</ThingDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/Module</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>8</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <comps>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <EquipedThingDef>DMS_Apparel_PV8_Helmet</EquipedThingDef>
+                <slot>Head</slot>
+            </li>
+        </comps>
+    </ThingDef>
+    <ThingDef ParentName="DMS_ModuleApparelBase">
+        <defName>DMS_Apparel_PV8_Helmet</defName>
+        <label>PV-8 Drgaoon helmet</label>
+        <description>Todo.</description>
+        <graphicData>
+            <texPath>Things/Dragoon/PV8/helmet_south</texPath>
+        </graphicData>
+        <thingCategories>
+            <li>ApparelArmor</li>
+        </thingCategories>
+        <useHitPoints>false</useHitPoints>
+        <statBases>
+            <Mass>0</Mass>
+            <Flammability>0</Flammability>
+            <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.08</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.10</ArmorRating_Heat>
+            <Insulation_Cold>14.4</Insulation_Cold>
+            <Insulation_Heat>3</Insulation_Heat>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.12</MoveSpeed>
+        </equippedStatOffsets>
+        <apparel>
+            <bodyPartGroups>
+                <li>FullHead</li>
+                <li>Neck</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Things/Dragoon/PV8/helmet</wornGraphicPath>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <parentTagDef>WGApparelHead</parentTagDef>
+            <renderSkipFlags><li>Head</li></renderSkipFlags>
+        </apparel>
+        <comps>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <isApparal>true</isApparal>
+                <ItemDef>DMS_Module_PV8_Helmet</ItemDef>
+                <slot>Head</slot>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

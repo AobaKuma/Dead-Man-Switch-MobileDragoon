@@ -19,6 +19,7 @@ namespace WalkerGear
         /// </summary>
         public static JobDef WG_RepairComponent;
 
+        public static JobDef WG_ModuleMaintenance;
         /// <summary>
         /// 右鍵選擇後 移動到維護塢並登上Walker
         /// </summary>

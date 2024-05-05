@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -22,61 +23,73 @@ namespace WalkerGear
     [StaticConstructorOnStartup]
     public class Building_MaintenanceBay : Building, IThingHolder
     {
+        //cached stuffs
         private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
         public static readonly Texture2D rotateButton = new CachedTexture("UI/Rotate").Texture;
         public static readonly Texture2D rotateOppoButton = new CachedTexture("UI/RotateOppo").Texture;
-
         [Unsaved(false)]
         private CompPowerTrader cachedPowerComp;
-        public bool PowerOn => PowerTraderComp.PowerOn;
+        private Pawn cachePawn;
+        private CompAffectedByFacilities abfComp;
+        public bool hasGearCore;
+
+        //Fileds
+        public Rot4 direction = Rot4.South;
+        public List<SlotDef> slotDefs = new(); //所有槽位,画格子用
+        public Dictionary<SlotDef, Apparel> occupiedSlots = new();//已使用槽位
+        public Dictionary<SlotDef, List<Thing>> availableCompsForSlots = new();
+        public ThingOwner<Thing> innerContainer;
+
+        //Properties
         private CompPowerTrader PowerTraderComp
         {
             get
             {
-                if (cachedPowerComp == null)
-                {
-                    cachedPowerComp = this.TryGetComp<CompPowerTrader>();
-                }
-
-                return cachedPowerComp;
+                return cachedPowerComp ??= this.TryGetComp<CompPowerTrader>();
             }
         }
-        private Pawn cachePawn;
+        public bool PowerOn => PowerTraderComp.PowerOn;
         public Pawn Dummy
         {
             get
             {
-                if (this.cachePawn == null)
-                {
-                    cachePawn = innerContainer.InnerListForReading.Where((t) => t is Pawn).First() as Pawn;
-                }
-                return this.cachePawn;
+                return cachePawn ??= (Pawn)innerContainer.First();
             }
         } 
-        public Rot4 direction = Rot4.North;
         public Rot4 Face
         {
             get=> direction; set => direction = value;
         }
         private CompAffectedByFacilities ABFComp
         {
-            get => this.TryGetComp<CompAffectedByFacilities>();
+            get{
+                return abfComp ??= this.TryGetComp<CompAffectedByFacilities>();
+            } 
         }
-        public List<SlotDef> slotDefs = new List<SlotDef>(); //所有槽位,画格子用
-        public Dictionary<SlotDef,Thing> occupiedSlots = new Dictionary<SlotDef, Thing>();//已使用槽位
-        public static Dictionary<SlotDef,List<Thing>> availableCompsForSlots = new Dictionary<SlotDef, List<Thing>>();
+        public bool HasGearCore => hasGearCore = occupiedSlots.ContainsKey(SlotDefOf.Core);
+        public Pawn_ApparelTracker DummyApparels
+        {
+            get
+            {
+                return Dummy.apparel;
+            }
+        }
+        public List<Apparel> ModuleStorage=> DummyApparels.WornApparel.Where((a)=>a.HasComp<CompWalkerComponent>()).ToList();
+        //methods override
         public override IEnumerable<Gizmo> GetGizmos()
         {
             
-            if (HasGearCore())
+            if (HasGearCore)
             {
-                Command_Target command_GetIn = new Command_Target();
-                command_GetIn.defaultLabel = "Get In".Translate();
-                command_GetIn.targetingParams = TargetingParameters.ForPawns();
-                command_GetIn.action = (tar) =>
+                Command_Target command_GetIn = new()
                 {
-                    if (tar.Pawn == null || !CanAcceptPawn(tar.Pawn)) return;
-                    tar.Pawn.jobs.StartJob(JobMaker.MakeJob(JobDefOf.WG_GetInWalkerCore, this));
+                    defaultLabel = "Get In".Translate(),
+                    targetingParams = TargetingParameters.ForPawns(),
+                    action = (tar) =>
+                    {
+                        if (tar.Pawn == null || !CanAcceptPawn(tar.Pawn)) return;
+                        tar.Pawn.jobs.StartJob(JobMaker.MakeJob(JobDefOf.WG_GetInWalkerCore, this));
+                    }
                 };
                 yield return command_GetIn;
             }
@@ -85,7 +98,6 @@ namespace WalkerGear
                 yield return gizmo;
             }
         }
-
         public override void ExposeData()
         {
             base.ExposeData();
@@ -93,6 +105,99 @@ namespace WalkerGear
             {
                 this
             });
+        }
+        public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn) //選擇殖民者後右鍵
+        {
+            if (!selPawn.CanReach(this, PathEndMode.InteractionCell, Danger.Deadly))
+            {
+                yield return new FloatMenuOption("CannotEnterBuilding".Translate(this) + ": " + "NoPath".Translate().CapitalizeFirst(), null);
+                yield break;
+            }
+            AcceptanceReport acceptanceReport = CanAcceptPawn(selPawn);
+            if (acceptanceReport.Accepted)
+            {
+                yield return FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("EnterBuilding".Translate(this), delegate
+                {
+                    selPawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(JobDefOf.WG_GetInWalkerCore, this), JobTag.DraftedOrder);
+                }), selPawn, this);
+            }
+            else if (selPawn.CanReach(this, PathEndMode.Touch, Danger.Deadly))
+            {
+                if(!HasGearCore&&selPawn.apparel.LockedApparel.Any((a)=>a is WalkerGear_Core))
+                {
+                    yield return FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("EnterBuilding".Translate(this), delegate
+                    {
+                        selPawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(JobDefOf.WG_GetOffWalkerCore, this), JobTag.DraftedOrder);
+                    }), selPawn, this);
+                }
+            }
+
+            foreach (FloatMenuOption floatMenuOption in base.GetFloatMenuOptions(selPawn))
+            {
+                yield return floatMenuOption;
+            }
+        }
+        public override void Tick()
+        {
+            base.Tick();
+            
+            if (Find.TickManager.TicksGame % 10 == 0 && HasGearCore) GetDirectlyHeldThings();
+
+            if (Find.TickManager.TicksGame % 250 == 0)  UpdateCache();
+        }
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+            if (!respawningAfterLoad)
+            {
+                Pawn p = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist);
+                p.apparel.DestroyAll();
+                p.rotationInt = Rotation.Opposite;
+                p.apparel.Wear((Apparel)ThingMaker.MakeThing(ThingDefOf.Apparel_Dummy));
+                innerContainer.TryAdd(p);
+            }
+            foreach (Apparel a in ModuleStorage)
+            {
+                if (a.TryGetComp<CompWalkerComponent>(out CompWalkerComponent c))
+                {
+                    AddSlotWithChild(c.Props.slot);
+                    occupiedSlots[c.Props.slot] = a;
+                }
+            }
+            UpdateCache();
+            if (slotDefs.Empty()) slotDefs.Add(SlotDefOf.Core);
+        }
+        public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
+        {
+            if (hasGearCore)
+            {
+                Dummy.Drawer.renderer.DynamicDrawPhaseAt(phase, drawLoc.WithYOffset(1f), null, true);
+            }
+            base.DynamicDrawPhaseAt(phase, drawLoc, flip);
+        }
+        public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
+        {
+            foreach(Apparel a in ModuleStorage)
+            {
+                GenPlace.TryPlaceThing(MechUtility.Conversion(a),Position,Map,ThingPlaceMode.Direct);
+            }
+            Dummy.Destroy();
+            base.Destroy(mode);
+        }
+        public override void PostPostMake()
+        {
+            base.PostPostMake();
+            innerContainer = new ThingOwner<Thing>(this, false, LookMode.Deep);
+        }
+
+        //Help Functions
+        public void GetChildHolders(List<IThingHolder> outChildren)
+        {
+        }
+
+        public ThingOwner GetDirectlyHeldThings()
+        {
+            return innerContainer;
         }
         public AcceptanceReport CanReach(Thing thing)
         {
@@ -110,147 +215,15 @@ namespace WalkerGear
             {
                 return false;
             }
-            if (!PowerOn)
+            if (PowerComp!=null && !PowerOn)
             {
                 return "NoPower".Translate().CapitalizeFirst();
             }
-            if (!HasGearCore()) return "NoArmor".Translate().CapitalizeFirst();
+            if (pawn.apparel.LockedApparel.Any((a) => a is WalkerGear_Core)) return "AlreadyHasArmor".Translate().CapitalizeFirst();
+            if (!HasGearCore) return "NoArmor".Translate().CapitalizeFirst();
             return true;
         }
-        public bool hasGearCore;
-        public bool HasGearCore(){
-            hasGearCore =  occupiedSlots.ContainsKey(SlotDefOf.Core);
-            return hasGearCore;
-        } 
-        public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn) //選擇殖民者後右鍵
-        {
-            if (!selPawn.CanReach(this, PathEndMode.InteractionCell, Danger.Deadly))
-            {
-                yield return new FloatMenuOption("CannotEnterBuilding".Translate(this) + ": " + "NoPath".Translate().CapitalizeFirst(), null);
-                yield break;
-            }
-            AcceptanceReport acceptanceReport = CanAcceptPawn(selPawn);
-            if (acceptanceReport.Accepted)
-            {
-                yield return FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("EnterBuilding".Translate(this), delegate
-                {
-                    selPawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(JobDefOf.WG_GetInWalkerCore, this), JobTag.DraftedOrder);
-                }), selPawn, this);
-            }
-
-            foreach (FloatMenuOption floatMenuOption in base.GetFloatMenuOptions(selPawn))
-            {
-                yield return floatMenuOption;
-            }
-        }
-
         
-        private Command_Action MakeInteractionGizmo(Pawn pawn)//棄用
-        {
-            Command_Action command_Action = new Command_Action();
-            if (MechUtility.PawnWearingWalkerCore(pawn))
-            {
-                //脫下的Job
-                command_Action.defaultLabel = "CommandCancelLoad".Translate();
-                command_Action.defaultDesc = "CommandCancelLoadDesc".Translate();
-                command_Action.icon = CancelIcon;
-                command_Action.activateSound = SoundDefOf.Designate_Cancel;
-                command_Action.action = delegate
-                {
-                    if (pawn.CurJobDef == JobDefOf.WG_GetInWalkerCore)
-                    {
-                        pawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
-                    }
-
-                    pawn = null;
-                };
-                return command_Action;
-            }
-            else
-            {
-                //WIP檢測操作能力
-                command_Action.defaultLabel = "CommandCancelLoad".Translate();
-                command_Action.defaultDesc = "CommandCancelLoadDesc".Translate();
-                command_Action.icon = CancelIcon;
-                command_Action.activateSound = SoundDefOf.Designate_Cancel;
-                command_Action.action = delegate
-                {
-                    if (pawn.CurJobDef == JobDefOf.WG_GetOffWalkerCore)
-                    {
-                        pawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
-                    }
-
-                    pawn = null;
-                };
-                return command_Action;
-            }
-        }
-
-        public override void Tick()
-        {
-            base.Tick();
-            
-            if (Find.TickManager.TicksGame % 10 == 0) HasGearCore();
-            if (Find.TickManager.TicksGame % 250 == 0)  UpdateCache();
-        }
-
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
-        {
-            base.SpawnSetup(map, respawningAfterLoad);
-            if (!respawningAfterLoad)
-            {
-                
-                Pawn p = PawnGenerator.GeneratePawn(RimWorld.PawnKindDefOf.Colonist);
-                p.apparel.DestroyAll();
-                p.rotationInt = Rotation.Opposite;
-                direction = Rotation;
-                innerContainer.TryAdd(p);
-            }
-            foreach (Thing t in innerContainer)
-            {
-                //Log.Message(t.def);
-                var c = t.TryGetComp<CompWalkerComponent>();
-                if (c != null)
-                {
-                    AddSlotWithChild(c.Props.slot);
-                    occupiedSlots[c.Props.slot] = t;
-                }
-            }
-            UpdateCache();
-            if (slotDefs.Empty()) slotDefs.Add(SlotDefOf.Core);
-        }
-        public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
-        {
-            if (hasGearCore)
-            {
-                Dummy.Drawer.renderer.DynamicDrawPhaseAt(phase, drawLoc.WithYOffset(1f), null, true);
-            }
-            base.DynamicDrawPhaseAt(phase, drawLoc, flip);
-        }
-
-        public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
-        {
-            Dummy.Destroy();
-            base.Destroy(mode);
-        }
-        public override void PostPostMake()
-        {
-            base.PostPostMake();
-            this.innerContainer = new ThingOwner<Thing>(this, false, LookMode.Deep);
-        }
-
-        public ThingOwner<Thing> innerContainer;
-        public void GetChildHolders(List<IThingHolder> outChildren)
-        {
-        }
-
-        public ThingOwner GetDirectlyHeldThings()
-        {
-            return innerContainer;
-        }
-
-
-        //Functions
         private void AddSlotWithChild(SlotDef slot)
         {
             slotDefs.Add(slot);
@@ -262,19 +235,20 @@ namespace WalkerGear
         }
         private void RemoveSlotWithChild(SlotDef slot)
         {
-            if (!slot.isCoreFrame)
-            slotDefs.Remove(slot);
-            foreach (var s in slot.supportedSlots)
+            /*if (!slot.isCoreFrame)
+            slotDefs.Remove(slot);*/
+            if (slot.isCoreFrame)
             {
-                slotDefs.Remove(s);
+                slot.supportedSlots.ForEach((s) => slotDefs.Remove(s));                       
             }
         }
         public void RemoveComp(Thing t)
         {
             if (innerContainer == null) return;
-            if (innerContainer.TryDrop(t,ThingPlaceMode.Near,out Thing th))
+            if (ModuleStorage.Contains((Apparel)t))
             {
                 SlotDef s = t.TryGetComp<CompWalkerComponent>().Props.slot;
+                GenPlace.TryPlaceThing(MechUtility.Conversion(t),Position,Map,ThingPlaceMode.Direct);
                 RemoveSlotWithChild(s);
                 occupiedSlots.Remove(s);
                 foreach (var item in s.supportedSlots)
@@ -285,7 +259,6 @@ namespace WalkerGear
         }
         public void AddOrReplaceComp(Thing t)
         {
-            
             if (innerContainer == null) return;
             SlotDef s = t.TryGetComp<CompWalkerComponent>().Props.slot;
             if (occupiedSlots.ContainsKey(s))
@@ -293,33 +266,79 @@ namespace WalkerGear
                 RemoveComp(occupiedSlots[s]);
             }
             if (availableCompsForSlots.ContainsKey(s) && availableCompsForSlots[s].Contains(t)){
-                t.DeSpawnOrDeselect(DestroyMode.Vanish);
-                if (innerContainer.TryAdd(t,false)) {
-
+                if (MechUtility.Conversion(t) is Apparel a) {
+                    DummyApparels.Wear(a);
                     AddSlotWithChild(s);
-                    occupiedSlots[s] = t;
+                    occupiedSlots[s] = a;
                 }
             }
-            
         }
         public void GearUp(Pawn pawn)
         {
-            if (innerContainer == null) return;
-            foreach (var thing in GetDirectlyHeldThings())
+            if (innerContainer == null ||!HasGearCore) return;
+            foreach(Apparel a in ModuleStorage)
             {
-                pawn.apparel.Wear(MechUtility.Conversion(thing) as Apparel,locked:true);
+                foreach (var item in pawn.apparel.WornApparel)
+                if (!ApparelUtility.CanWearTogether(item.def, a.def, pawn.RaceProps.body)&& pawn.apparel.IsLocked(item)) return;
             }
+            for (int i = ModuleStorage.Count-1; i >=0;i--) {
+                Apparel a = ModuleStorage[i];
+                DummyApparels.Remove(a);
+                pawn.apparel.Wear(a,true, locked: true);
+            }
+            pawn.apparel.WornApparel.Find((a)=>a is WalkerGear_Core c&&c.RefreshHP());
             this.Clear();
+        }
+        public void GearDown(Pawn pawn)
+        {
+            if (innerContainer == null) return;
+            if (HasGearCore) return;
+            List<Apparel> tmpList = new();
+            //Log.Message(1);
+            for (int i = pawn.apparel.LockedApparel.Count-1;i>=0;i--)
+            {
+                var a = pawn.apparel.LockedApparel[i];
+                if (a.HasComp<CompWalkerComponent>())
+                {
+                    tmpList.Add(a);
+                    pawn.apparel.Remove(a);
+                }
+            }
+            WalkerGear_Core core = (WalkerGear_Core)tmpList.Find((a) => a is WalkerGear_Core);
+            if (core == null) return;
+            List<float> values=new();
+            Rand.SplitRandomly(core.HealthDamaged,tmpList.Count,values);
+            //Log.Message(2);
+            for (int j=0;j<tmpList.Count;j++)
+            {
+                var a = tmpList[j];
+                if (values[j] >= a.HitPoints)
+                {
+                    if (j < tmpList.Count - 1)
+                    {
+                        values[j + 1] += values[j] - a.HitPoints;
+                    }
+                    a.HitPoints = 1;
+                }
+                else
+                {
+                    a.HitPoints -= Mathf.FloorToInt(values[j]);
+                }
+                DummyApparels.Wear(a);
+                SlotDef s = a.TryGetComp<CompWalkerComponent>().Props.slot;
+                AddSlotWithChild(s);
+                occupiedSlots[s] = a;
+            }
+            //Log.Message(3);
         }
         public void UpdateCache()
         {
             availableCompsForSlots.Clear();
-            CompAffectedByFacilities comp = ABFComp;
-            if ( comp == null) return;
+            if (ABFComp == null) return;
             //Log.Warning($"Looking for{comp.LinkedFacilitiesListForReading.Count} facilities");
-            foreach (Thing thing in comp.LinkedFacilitiesListForReading.Where(t => t.HasComp<CompComponentStorage>()))
+            foreach (Thing thing in ABFComp.LinkedFacilitiesListForReading.Where(t => t.HasComp<CompComponentStorage>()))
             {
-                if (!(thing is Building_Storage b))continue;
+                if (thing is not Building_Storage b)continue;
                 //Log.Warning("Get storage");
                 foreach (Thing t in b.slotGroup.HeldThings)
                 {
@@ -335,12 +354,11 @@ namespace WalkerGear
                     
             }
         }
-
         private void Clear()
         {
             slotDefs.Clear();
             occupiedSlots.Clear();
-            innerContainer.Clear();
+            slotDefs.AddDistinct(SlotDefOf.Core);
             UpdateCache();
         }
     }

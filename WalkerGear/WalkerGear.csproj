@@ -56,20 +56,29 @@
     <Compile Include="Defs\SlotDef.cs" />
     <Compile Include="DummyPawn.cs" />
     <Compile Include="GUI\ITab_MechGear.cs" />
+    <Compile Include="Job\JobDriver_GetOffWalkerCore.cs" />
     <Compile Include="Job\JobDriver_RepairThing.cs" />
     <Compile Include="Job\JobDriver_ReturnToBay.cs" />
-    <Compile Include="Job\WG_Jobs.cs" />
+    <Compile Include="Job\JobDriver_GetInWalkerCore.cs" />
+    <Compile Include="Job\WorkGiver_ModuleMaintenance.cs" />
     <Compile Include="MechUtility.cs" />
     <Compile Include="Patch\Patch_PawnCanRepairNow.cs" />
-    <Compile Include="StatPart_MoveSpeed.cs" />
     <Compile Include="Comp\CompUseEffect_GetIntoGear.cs" />
-    <Compile Include="Gizmo_Gui.cs" />
     <Compile Include="Comp\CompNoItemMode.cs" />
     <Compile Include="DefOf\ThingDefOf.cs" />
     <Compile Include="WalkerGear_Core.cs" />
     <Compile Include="Comp\CompWalkerGearBuilding.cs" />
     <Compile Include="Defs\WalkerGearDef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <LangVersion>9.0</LangVersion>
+    <PublicizerClearCacheOnClean>true</PublicizerClearCacheOnClean>
+    <!-- <PublicizeAll>true</PublicizeAll> -->
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- <Publicize Include="Assembly-CSharp:Verse." /> -->
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Publicizer">
@@ -84,11 +93,6 @@
       <Version>2.3.3</Version>
     </PackageReference>
     <Publicize Include="Assembly-CSharp:Verse.Thing.rotationInt" />
+    <Publicize Include="Assembly-CSharp:Verse.Projectile" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <LangVersion>9.0</LangVersion>
-    <PublicizerClearCacheOnClean>true</PublicizerClearCacheOnClean>
-    <!-- <PublicizeAll>true</PublicizeAll> -->
-  </PropertyGroup>
 </Project>

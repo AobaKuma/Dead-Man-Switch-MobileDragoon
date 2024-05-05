@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <!-- 物品型態的龍騎兵裝備 -->
+    <ThingCategoryDef>
+        <defName>DMS_Module</defName>
+        <label>heavy module</label>
+        <parent>ApparelArmor</parent>
+    </ThingCategoryDef>    <!-- 物品型態的龍騎兵裝備 -->
     <ThingDef Name="DMS_ModuleItemBase" Abstract="True">
         <thingClass>ThingWithComps</thingClass>
         <category>Item</category>
@@ -18,12 +22,12 @@
         <drawGUIOverlay>true</drawGUIOverlay>
         <rotatable>false</rotatable>
         <pathCost>14</pathCost>
-        <allowedArchonexusCount>-1</allowedArchonexusCount>  
+        <allowedArchonexusCount>-1</allowedArchonexusCount>
         <techLevel>Industrial</techLevel>
         <possessionCount>2</possessionCount>
         <generateCommonality>0</generateCommonality>
         <thingCategories>
-          <li>DMS_Module</li>
+            <li>DMS_Module</li>
         </thingCategories>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
@@ -44,19 +48,18 @@
                 <compClass>CompColorable</compClass>
             </li>
             <li>
-              <compClass>CompQuality</compClass>
+                <compClass>CompQuality</compClass>
             </li>
         </comps>
-    </ThingDef>
-
-    <!-- 衣服型態的龍騎兵裝備 -->
+    </ThingDef>    <!--
+    衣服型態的龍騎兵裝備 -->
     <ThingDef Name="DMS_ModuleApparelBase" Abstract="True">
         <thingClass>Apparel</thingClass>
         <category>Item</category>
         <drawerType>MapMeshOnly</drawerType>
         <selectable>True</selectable>
         <pathCost>14</pathCost>
-        <useHitPoints>True</useHitPoints>
+        <useHitPoints>true</useHitPoints>
         <techLevel>Industrial</techLevel>
         <generateCommonality>0</generateCommonality>
         <graphicData>
@@ -75,9 +78,9 @@
         <burnableByRecipe>false</burnableByRecipe>
         <smeltable>false</smeltable>
         <thingSetMakerTags>
-        <li>RewardStandardCore</li>
+            <li>RewardStandardCore</li>
         </thingSetMakerTags>
-        <tradeTags/>
+        <tradeTags />
         <comps>
             <li Class="CompProperties_Forbiddable" />
             <li Class="CompProperties_Styleable" />
@@ -85,9 +88,25 @@
                 <compClass>CompColorable</compClass>
             </li>
             <li>
-              <compClass>CompQuality</compClass>
+                <compClass>CompQuality</compClass>
             </li>
         </comps>
     </ThingDef>
-
+    <ThingDef Name="DMS_ModuleApparelCore" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <apparel>
+            <parentTagDef>WGApparelBody</parentTagDef>
+            <renderSkipFlags>
+                <li>Body</li>
+            </renderSkipFlags>
+        </apparel>
+    </ThingDef>
+    <PawnRenderNodeTagDef>
+        <defName>WGApparel</defName>
+    </PawnRenderNodeTagDef>
+    <PawnRenderNodeTagDef>
+        <defName>WGApparelBody</defName>
+    </PawnRenderNodeTagDef>
+    <PawnRenderNodeTagDef>
+        <defName>WGApparelHead</defName>
+    </PawnRenderNodeTagDef>
 </Defs>

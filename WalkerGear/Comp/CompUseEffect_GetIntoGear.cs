@@ -1,4 +1,4 @@
-﻿using RimWorld;
+﻿/*using RimWorld;
 using Verse;
 
 namespace WalkerGear
@@ -32,8 +32,6 @@ namespace WalkerGear
 			{
 				core.colorInt = colorable.Color;
 			}
-			core.fuelInt = parent.TryGetComp<CompRefuelable>().Fuel;
-			parent.TryGetComp<CompRefuelable>().ConsumeFuel(99999999);
 			core.Health = parent.HitPoints;
 			usedBy.apparel.Wear(core, true, true);
 			parent.Destroy(DestroyMode.Vanish);
@@ -44,3 +42,4 @@ namespace WalkerGear
 		private CompWalkerGearBuilding comp;
 	}
 }
+*/

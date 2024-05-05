@@ -42,19 +42,19 @@ namespace WalkerGear
         public static Thing Conversion(this Thing source)
         {
             if (!source.TryGetComp(out CompWalkerComponent comp)) return null;
-            MechData data =new MechData(source);
+            MechData data =new(source);
             Thing outcome;
 
             if (comp.Props.isApparal)
             {
                 Thing item = ThingMaker.MakeThing(comp.Props.ItemDef);
-                data.GetDataFromMech(data,item);
+                data.GetDataFromMech(item);
                 outcome = item;
             }
             else
             {
                 Thing mech = ThingMaker.MakeThing(comp.Props.EquipedThingDef);
-                data.SetDataToMech(data,mech);
+                data.SetDataToMech(mech);
                 outcome = mech;
             }
             
@@ -68,11 +68,18 @@ namespace WalkerGear
     {
         private int remainingCharges;
         private QualityCategory quality;
-        public MechData(Thing thing) { throw new NotImplementedException(); }
-        public void GetDataFromMech(MechData mech, Thing item) { throw new NotImplementedException(); }
-        public void SetDataToMech(MechData item, Thing mech) { throw new NotImplementedException(); }
-    }
-    public static class GizmoUltily
-    {
+        private Color color;
+        public MechData(Thing thing) {
+            thing.TryGetQuality(out quality);  
+            if(thing.TryGetComp<CompColorable>(out CompColorable colorable))color=colorable.Color;
+            ; }
+        public void GetDataFromMech( Thing item) {
+            if (item.TryGetComp<CompQuality>(out CompQuality compQuality)) compQuality.SetQuality(quality, null);
+            item.SetColor(color);
+            ; }
+        public void SetDataToMech( Thing mech) {
+            if (mech.TryGetComp<CompQuality>(out CompQuality compQuality)) compQuality.SetQuality(quality, null);
+            mech.SetColor(color);
+            ; }
     }
 }

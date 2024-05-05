@@ -1,13 +1,8 @@
 ﻿using RimWorld;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
-using static HarmonyLib.Code;
-using static UnityEngine.Random;
 
 
 namespace WalkerGear
@@ -75,7 +70,7 @@ namespace WalkerGear
             {
                 Draw_GizmoSlot(slot);
             }
-            if (Parent.HasGearCore())
+            if (Parent.HasGearCore)
             {
                 Vector2 position = positions[0];
                 //stats
@@ -88,7 +83,7 @@ namespace WalkerGear
                     DrawStatEntries(statBlock, Parent.occupiedSlots[SlotDefOf.Core]);
                 }
 
-                //rotate
+                //rotate&color
                 Vector2 rotateGizmosBotLeft = new(340f, 216f);
                 {
                     Vector2 smallGizmoSize = new(30f,30f);
@@ -100,18 +95,16 @@ namespace WalkerGear
                         switch (i)
                         {
                             case 0://染色
+                                
                                 break;
                             case 1:
-                                if (Widgets.ButtonImage(gizmoRect, Building_MaintenanceBay.rotateButton)) {
+                                if (Widgets.ButtonImage(gizmoRect, Building_MaintenanceBay.rotateButton))
                                     Parent.direction.Rotate(RotationDirection.Clockwise);
-                                }
                                 break;
                             case 2:
 
                                 if (Widgets.ButtonImage(gizmoRect, Building_MaintenanceBay.rotateOppoButton))
-                                {
                                     Parent.direction.Rotate(RotationDirection.Counterclockwise);
-                                }
                                 break;
                             default:
                                 break;
@@ -178,10 +171,12 @@ namespace WalkerGear
             if (hasThing)
             {
                 Rect nameBlock = gizmoRect.BottomPart(1f/8f);
-                nameBlock.y -= nameBlock.height/4f;
+                nameBlock.y+=nameBlock.height-26f;
+                nameBlock.height = 26f;
                 GUI.DrawTexture(nameBlock, TexUI.TextBGBlack);
                 Widgets.LabelFit(nameBlock, Parent.occupiedSlots[slot].LabelCap);
             }
+            Text.Font = GameFont.Small;
             Text.Anchor = TextAnchor.UpperLeft;
         }
         private void GizmoHealthBar(Rect gizmoRect,SlotDef slot,float healthPerc)
@@ -203,9 +198,9 @@ namespace WalkerGear
         }
         private void GizmoInteraction(Rect rect, Texture2D icon,SlotDef slot)
         {
-            if (slot.isCoreFrame && Parent.HasGearCore())
+            if (slot.isCoreFrame && Parent.HasGearCore)
             {
-                RenderTexture portrait = PortraitsCache.Get(Parent.Dummy, rect.size, Parent.Face);
+                RenderTexture portrait = PortraitsCache.Get(Parent.Dummy, rect.size, Parent.direction);
                 Widgets.DrawTextureFitted(rect,portrait,1f);
             }
             else Widgets.DrawTextureFitted(rect, icon, 1f);
@@ -244,17 +239,15 @@ namespace WalkerGear
         private IEnumerable<FloatMenuOption> TryMakeOptions(SlotDef slot)
         {
             Parent.UpdateCache();
-            if (Building_MaintenanceBay.availableCompsForSlots.ContainsKey(slot))
+            if (Parent.availableCompsForSlots.ContainsKey(slot))
             {
-                foreach (var thing in Building_MaintenanceBay.availableCompsForSlots[slot])
+                foreach (var thing in Parent.availableCompsForSlots[slot])
                 {
                     string label = thing.LabelCap;
                     Action action = () => Parent.AddOrReplaceComp(thing);
                     yield return new FloatMenuOption(label,action);
                 }
             }
-
-            yield break;
         }
         //Stats Components
         private void DrawStatEntries(Rect rect,Thing thing)
@@ -279,19 +272,17 @@ namespace WalkerGear
                      
                 }
             }
-            Widgets.EndGroup();
         }
-
 
         private static readonly Dictionary<int, Vector2> positions = new()
         {
-            {0,new Vector2(170f,56f)},
-            {1,new Vector2(14f,56f)},
-            {2,new Vector2(14f,164f)},
-            {3,new Vector2(14f,282f)},
-            {4,new Vector2(412f,56f)},
-            {5,new Vector2(412f,164f)},
-            {6,new Vector2(412f,282f)},
+            {0,new(170f,56f)},
+            {1,new(14f,56f)},
+            {2,new(14f,164f)},
+            {3,new(14f,282f)},
+            {4,new(412f,56f)},
+            {5,new(412f,164f)},
+            {6,new(412f,282f)},
         };
         private static readonly List<StatDef> toDraw = new() {
             StatDefOf.ArmorRating_Sharp, StatDefOf.ArmorRating_Blunt,StatDefOf.ArmorRating_Heat

@@ -29,7 +29,7 @@ namespace WalkerGear
                 initAction = delegate ()
                 {
                     pawn.GetWalkerCore(out WalkerGear_Core Core);
-                    Core.GetOut();
+                    //Core.GetOut();
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant
             };

@@ -5,7 +5,8 @@ using Verse;
 namespace WalkerGear
 {
     public class Patch_PawnCanRepairNow
-    { 
-    
+    {
+
     }
 }
+

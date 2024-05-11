@@ -4,7 +4,9 @@
         <defName>DMS_Module</defName>
         <label>heavy module</label>
         <parent>ApparelArmor</parent>
-    </ThingCategoryDef>    <!-- 物品型態的龍騎兵裝備 -->
+    </ThingCategoryDef>
+
+    <!-- 物品型態的龍騎兵裝備 -->
     <ThingDef Name="DMS_ModuleItemBase" Abstract="True">
         <thingClass>ThingWithComps</thingClass>
         <category>Item</category>
@@ -31,7 +33,7 @@
         </thingCategories>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>2.00</drawSize>
+            <drawSize>1.50</drawSize>
         </graphicData>
         <statBases>
             <MaxHitPoints>100</MaxHitPoints>
@@ -51,35 +53,36 @@
                 <compClass>CompQuality</compClass>
             </li>
         </comps>
-    </ThingDef>    <!--
-    衣服型態的龍騎兵裝備 -->
+    </ThingDef>    
+    
+    <!--衣服型態的龍騎兵裝備，理論上玩家不應該能獲取 -->
     <ThingDef Name="DMS_ModuleApparelBase" Abstract="True">
         <thingClass>Apparel</thingClass>
         <category>Item</category>
         <drawerType>MapMeshOnly</drawerType>
         <selectable>True</selectable>
         <pathCost>14</pathCost>
-        <useHitPoints>true</useHitPoints>
+        <useHitPoints>false</useHitPoints>
         <techLevel>Industrial</techLevel>
         <generateCommonality>0</generateCommonality>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>2.00</drawSize>
+            <drawSize>1.00</drawSize>
         </graphicData>
         <drawGUIOverlay>true</drawGUIOverlay>
         <statBases>
             <MaxHitPoints>100</MaxHitPoints>
             <Flammability>0.0</Flammability>
             <Beauty>-3</Beauty>
+            <Mass>10</Mass>
         </statBases>
         <altitudeLayer>Item</altitudeLayer>
         <alwaysHaulable>True</alwaysHaulable>
         <tickerType>Never</tickerType>
         <burnableByRecipe>false</burnableByRecipe>
         <smeltable>false</smeltable>
-        <thingSetMakerTags>
-            <li>RewardStandardCore</li>
-        </thingSetMakerTags>
+        <thingCategories Inherit="false"/>
+        <thingSetMakerTags Inherit="false"/>
         <tradeTags />
         <comps>
             <li Class="CompProperties_Forbiddable" />
@@ -91,6 +94,11 @@
                 <compClass>CompQuality</compClass>
             </li>
         </comps>
+        <modExtensions>
+            <li Class="VFECore.ApparelDrawPosExtension">
+                <isUnifiedApparel>true</isUnifiedApparel>
+            </li>
+        </modExtensions>
     </ThingDef>
     <ThingDef Name="DMS_ModuleApparelCore" ParentName="DMS_ModuleApparelBase" Abstract="True">
         <apparel>
@@ -100,6 +108,7 @@
             </renderSkipFlags>
         </apparel>
     </ThingDef>
+
     <PawnRenderNodeTagDef>
         <defName>WGApparel</defName>
     </PawnRenderNodeTagDef>
@@ -109,4 +118,5 @@
     <PawnRenderNodeTagDef>
         <defName>WGApparelHead</defName>
     </PawnRenderNodeTagDef>
+
 </Defs>

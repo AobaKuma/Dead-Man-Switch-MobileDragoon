@@ -100,12 +100,73 @@
             </li>
         </modExtensions>
     </ThingDef>
+
+    <ThingDef Name="DMS_ModuleApparelHead" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <apparel>
+            <bodyPartGroups>
+                <li>UpperHead</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <parentTagDef>WGApparelHead</parentTagDef>
+            <renderSkipFlags>
+                <li>Head</li>
+            </renderSkipFlags>
+        </apparel>
+    </ThingDef>
+
     <ThingDef Name="DMS_ModuleApparelCore" ParentName="DMS_ModuleApparelBase" Abstract="True">
         <apparel>
             <parentTagDef>WGApparelBody</parentTagDef>
             <renderSkipFlags>
                 <li>Body</li>
             </renderSkipFlags>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Neck</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Shell</li>
+            </layers>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef Name="DMS_ModuleApparelMountRight" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <apparel>
+            <bodyPartGroups>
+                <li>Shoulders</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <parentTagDef>WGApparelBody</parentTagDef>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef Name="DMS_ModuleApparelMountLeft" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <apparel>
+            <bodyPartGroups>
+                <li>Neck</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <parentTagDef>WGApparelBody</parentTagDef>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef Name="DMS_ModuleApparelArmLeft" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <apparel>
+            <bodyPartGroups>
+                <li>Arms</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <parentTagDef>WGApparelBody</parentTagDef>
         </apparel>
     </ThingDef>
 

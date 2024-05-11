@@ -40,16 +40,7 @@
             <MoveSpeed>-0.12</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <bodyPartGroups>
-                <li>Torso</li>
-                <li>Neck</li>
-                <li>Shoulders</li>
-                <li>Arms</li>
-            </bodyPartGroups>
             <wornGraphicPath>Things/Dragoon/PV8/apparel</wornGraphicPath>
-            <layers>
-                <li>Shell</li>
-            </layers>
             <drawData>
                 <scale>1.5</scale>
             </drawData>
@@ -87,7 +78,7 @@
             </li>
         </comps>
     </ThingDef>
-    <ThingDef ParentName="DMS_ModuleApparelBase">
+    <ThingDef ParentName="DMS_ModuleApparelHead">
         <defName>DMS_Apparel_PV8_Helmet</defName>
         <label>PV-8 Drgaoon helmet</label>
         <description>Todo.</description>
@@ -101,17 +92,7 @@
             <MoveSpeed>-0.12</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <bodyPartGroups>
-                <li>UpperHead</li>
-            </bodyPartGroups>
             <wornGraphicPath>Things/Dragoon/PV8/helmet</wornGraphicPath>
-            <layers>
-                <li>Overhead</li>
-            </layers>
-            <parentTagDef>WGApparelHead</parentTagDef>
-            <renderSkipFlags>
-                <li>Head</li>
-            </renderSkipFlags>
             <drawData>
                 <defaultData>
                     <layer>20</layer>
@@ -158,7 +139,7 @@
         </comps>
     </ThingDef>
 
-    <ThingDef ParentName="DMS_ModuleApparelBase">
+    <ThingDef ParentName="DMS_ModuleApparelMountRight">
         <defName>DMS_Apparel_TurretPackLight</defName>
         <label>Mounted LMG</label>
         <description>Todo.</description>
@@ -172,14 +153,7 @@
             <MoveSpeed>-0.12</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <bodyPartGroups>
-                <li>Shoulders</li>
-            </bodyPartGroups>
             <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
-            <layers>
-                <li>Overhead</li>
-            </layers>
-            <parentTagDef>WGApparelBody</parentTagDef>
             <drawData>
                 <scale>0.75</scale>
                 <defaultData>
@@ -235,15 +209,15 @@
                                 <compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
                                 <humanAsDefault>false</humanAsDefault>
                                 <graphic>
-                                    <texPath>Things/Turrets/Dummy</texPath>
+                                    <texPath>Things/Turrets/DMS_Gun_LMG</texPath>
                                     <!-- <texPath>Things/Turrets/DMS_Gun_LMG</texPath> -->
                                     <graphicClass>Graphic_Single</graphicClass>
                                 </graphic>
                                 <defaultPosition>
-                                    <Up>(0.75,0.5)</Up>
-                                    <Down>(-0.65,1.15)</Down>
-                                    <Right>(-1.25,0.5)</Right>
-                                    <Left>(0.25,1.00)</Left>
+                                    <Up>(0.65,0.5)</Up>
+                                    <Down>(-0.65,1.325)</Down>
+                                    <Right>(-1.1,0.525)</Right>
+                                    <Left>(0.25,1.20)</Left>
                                     <Default>(0,0)</Default>
                                 </defaultPosition>
                                 <drawScale>1.125</drawScale>
@@ -280,7 +254,7 @@
         </comps>
     </ThingDef>
 
-    <ThingDef ParentName="DMS_ModuleApparelBase">
+    <ThingDef ParentName="DMS_ModuleApparelMountLeft">
         <defName>DMS_Apparel_MissilePod</defName>
         <label>Missile Pod</label>
         <description>Todo.</description>
@@ -294,14 +268,7 @@
             <MoveSpeed>-0.12</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <bodyPartGroups>
-                <li>Neck</li>
-            </bodyPartGroups>
             <wornGraphicPath>Things/Dragoon/MissilePod/apparel</wornGraphicPath>
-            <layers>
-                <li>Overhead</li>
-            </layers>
-            <parentTagDef>WGApparelBody</parentTagDef>
             <drawData>
                 <scale>0.75</scale>
                 <defaultData>
@@ -364,6 +331,82 @@
                 <ItemDef>DMS_Module_MissilePod</ItemDef>
                 <slot>MountLeft</slot>
             </li>
+        </comps>
+    </ThingDef>
+
+    <!-- (左)手脈衝盾 -->
+    <ThingDef ParentName="DMS_ModuleItemBase">
+        <defName>DMS_Module_PulseShield</defName>
+        <label>pulse shield</label>
+        <description>todo.</description>
+        <descriptionHyperlinks>
+            <ThingDef>DMS_TableMachinePrinter</ThingDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/Module</texPath>
+        </graphicData>
+        <statBases>
+            <Mass>8</Mass>
+        </statBases>
+        <comps>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <EquipedThingDef>DMS_Apparel_PulseShield</EquipedThingDef>
+                <slot>ArmLeft</slot>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="DMS_ModuleApparelArmLeft">
+        <defName>DMS_Apparel_PulseShield</defName>
+        <label>pulse shield</label>
+        <description>Todo.</description>
+        <graphicData>
+            <texPath>Things/Dragoon/PulseShield/apparel_south</texPath>
+        </graphicData>
+        <statBases>
+            <Mass>0</Mass>
+			<EnergyShieldRechargeRate>0.75</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>0.5</EnergyShieldEnergyMax>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.12</MoveSpeed>
+        </equippedStatOffsets>
+        <apparel>
+            <wornGraphicPath>Things/Dragoon/PulseShield/apparel</wornGraphicPath>
+            <drawData>
+                <scale>0.75</scale>
+                <defaultData>
+                    <layer>20</layer>
+                </defaultData>
+                <dataSouth>
+                    <offset>(0.75,0,-0.10)</offset>
+                </dataSouth>
+                <dataNorth>
+                    <offset>(-0.50,0,0.15)</offset>
+                    <layer>0</layer>
+                </dataNorth>
+                <dataWest>
+                    <offset>(-0.15,0,-0.10)</offset>
+                </dataWest>
+                <dataEast>
+                    <offset>(-0.80,0,0.8)</offset>
+                    <layer>0</layer>
+                </dataEast>
+            </drawData>
+        </apparel>
+        <comps>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <isApparal>true</isApparal>
+                <ItemDef>DMS_Module_PulseShield</ItemDef>
+                <slot>ArmLeft</slot>
+            </li>
+			<li Class="CompProperties_Shield">
+				<blocksRangedWeapons>false</blocksRangedWeapons>
+				<maxDrawSize>5</maxDrawSize>
+				<minDrawSize>3</minDrawSize>
+				<energyOnReset>50</energyOnReset>
+				<startingTicksToReset>1200</startingTicksToReset>
+			</li>
         </comps>
     </ThingDef>
 </Defs>

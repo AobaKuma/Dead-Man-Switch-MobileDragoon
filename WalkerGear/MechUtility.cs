@@ -45,7 +45,7 @@ namespace WalkerGear
             MechData data =new(source);
             Thing outcome;
 
-            if (comp.Props.isApparal)
+            if (comp.parent.def.IsApparel)
             {
                 Thing item = ThingMaker.MakeThing(comp.Props.ItemDef);
                 data.GetDataFromMech(item);
@@ -72,14 +72,31 @@ namespace WalkerGear
         public MechData(Thing thing) {
             thing.TryGetQuality(out quality);  
             if(thing.TryGetComp<CompColorable>(out CompColorable colorable))color=colorable.Color;
-            ; }
+            if (thing.TryGetComp(out CompWalkerComponent comp))
+            {
+                if (comp.hasReloadableProps)
+                {
+                    remainingCharges = comp.remainingCharges;
+                }
+                else if(thing.TryGetComp<CompApparelReloadable>(out var reloadable))
+                {
+                    remainingCharges = reloadable.RemainingCharges;
+                }
+                if(remainingCharges<0)remainingCharges= 0;
+            }
+        }
         public void GetDataFromMech( Thing item) {
             if (item.TryGetComp<CompQuality>(out CompQuality compQuality)) compQuality.SetQuality(quality, null);
             item.SetColor(color);
-            ; }
+            if(item.TryGetComp<CompWalkerComponent>(out var comp)) comp.remainingCharges = remainingCharges;
+        }
         public void SetDataToMech( Thing mech) {
+            Log.Message(1);
             if (mech.TryGetComp<CompQuality>(out CompQuality compQuality)) compQuality.SetQuality(quality, null);
+            Log.Message(2);
             mech.SetColor(color);
-            ; }
+            Log.Message(3);
+            if (mech.TryGetComp<CompApparelReloadable>(out var comp))comp.remainingCharges = remainingCharges; 
+        }
     }
 }

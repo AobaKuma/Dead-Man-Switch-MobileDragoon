@@ -59,6 +59,8 @@
     <ThingDef Name="DMS_ModuleApparelBase" Abstract="True">
         <thingClass>Apparel</thingClass>
         <category>Item</category>
+        <tradeability>None</tradeability>
+        <destroyOnDrop>true</destroyOnDrop>
         <drawerType>MapMeshOnly</drawerType>
         <selectable>True</selectable>
         <pathCost>14</pathCost>
@@ -179,5 +181,5 @@
     <PawnRenderNodeTagDef>
         <defName>WGApparelHead</defName>
     </PawnRenderNodeTagDef>
-
+    
 </Defs>

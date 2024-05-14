@@ -47,7 +47,6 @@
         </apparel>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <isApparal>true</isApparal>
                 <ItemDef>DMS_Module_PV8_Core</ItemDef>
                 <slot>Core</slot>
             </li>
@@ -108,7 +107,6 @@
         </apparel>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <isApparal>true</isApparal>
                 <ItemDef>DMS_Module_PV8_Helmet</ItemDef>
                 <slot>Head</slot>
             </li>
@@ -154,27 +152,69 @@
         </equippedStatOffsets>
         <apparel>
             <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
-            <drawData>
-                <scale>0.75</scale>
-                <defaultData>
-                    <layer>20</layer>
-                </defaultData>
-                <dataSouth>
-                    <offset>(-0.50,0,1.05)</offset>
-                    <layer>0</layer>
-                </dataSouth>
-                <dataNorth>
-                    <offset>(0.50,0,0.45)</offset>
-                    <layer>20</layer>
-                </dataNorth>
-                <dataWest>
-                    <offset>(0.5,0,0.45)</offset>
-                    <layer>0</layer>
-                </dataWest>
-                <dataEast>
-                    <offset>(-0.80,0,0.45)</offset>
-                </dataEast>
-            </drawData>
+            
+            <renderNodeProperties>
+                <li>
+                    <debugLabel>肩部炮塔底座</debugLabel>
+                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
+                    <workClass>PawnRenderNodeWorker_Apparel_Body</workClass>
+                    <parentTagDef>WGApparelBody</parentTagDef>
+                    <drawData>
+                        <scale>0.75</scale>
+                        <defaultData>
+                            <layer>20</layer>
+                        </defaultData>
+                        <dataSouth>
+                            <offset>(-0.50,0,1.05)</offset>
+                            <layer>0</layer>
+                        </dataSouth>
+                        <dataNorth>
+                            <offset>(0.50,0,0.45)</offset>
+                            <layer>20</layer>
+                        </dataNorth>
+                        <dataWest>
+                            <offset>(0.5,0,0.45)</offset>
+                            <layer>0</layer>
+                        </dataWest>
+                        <dataEast>
+                            <offset>(-0.80,0,0.45)</offset>
+                        </dataEast>
+                    </drawData>
+                </li>
+                <li>
+                    <debugLabel>肩部炮塔</debugLabel>
+                    <nodeClass>WalkerGear.PawnRenderNode_VerbCompTurret</nodeClass>
+                    <workerClass>WalkerGear.PawnRenderNodeWorker_VerbCompTurret</workerClass>
+                    <texPath>Things/Turrets/DMS_Gun_LMG</texPath>
+                    <anchorTag>Gun</anchorTag>
+                    <parentTagDef>WGApparelBody</parentTagDef>
+                    <drawSize>1.25</drawSize>
+                    <baseLayer>40</baseLayer>
+                    <pawnType>Any</pawnType>
+                    <drawData>
+                        <scale>0.75</scale>
+                        <defaultData>
+                            <layer>30</layer>
+                        </defaultData>
+                        <dataSouth>
+                            <offset>(-0.80,0,1.05)</offset>
+                            <layer>10</layer>
+                        </dataSouth>
+                        <dataNorth>
+                            <offset>(0.50,0,0.25)</offset>
+                            <layer>30</layer>
+                        </dataNorth>
+                        <dataWest>
+                            <offset>(0.75,0,0.5)</offset>
+                            <layer>10</layer>
+                            <rotationOffset>-180</rotationOffset>
+                        </dataWest>
+                        <dataEast>
+                            <offset>(-1.0,0,0.15)</offset>
+                        </dataEast>
+                    </drawData>
+                </li>
+            </renderNodeProperties>
         </apparel>
         <verbs>
             <li>
@@ -193,7 +233,6 @@
         </verbs>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <isApparal>true</isApparal>
                 <ItemDef>DMS_Module_TurretPackLight</ItemDef>
                 <slot>MountRight</slot>
             </li>
@@ -205,25 +244,9 @@
                         <description>A simple automatic gun made to be mounted on a shoulder.</description>
                         <canBeToggled>true</canBeToggled>
                         <comps>
-                            <li Class="MVCF.VerbComps.VerbCompProperties_Turret">
-                                <compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
-                                <humanAsDefault>false</humanAsDefault>
-                                <graphic>
-                                    <texPath>Things/Turrets/DMS_Gun_LMG</texPath>
-                                    <!-- <texPath>Things/Turrets/DMS_Gun_LMG</texPath> -->
-                                    <graphicClass>Graphic_Single</graphicClass>
-                                </graphic>
-                                <defaultPosition>
-                                    <Up>(0.65,0.5)</Up>
-                                    <Down>(-0.65,1.325)</Down>
-                                    <Right>(-1.1,0.525)</Right>
-                                    <Left>(0.25,1.20)</Left>
-                                    <Default>(0,0)</Default>
-                                </defaultPosition>
-                                <drawScale>1.125</drawScale>
+                            <li Class="WalkerGear.VerbCompPropertiesTurret">
                                 <uniqueTargets>true</uniqueTargets>
-                                <drawAsEquipment>false</drawAsEquipment>
-                                <onlyWhenDrafted>false</onlyWhenDrafted>
+                                <angleOffset>-90</angleOffset>
                             </li>
                         </comps>
                     </li>
@@ -327,7 +350,6 @@
                 <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
             </li>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <isApparal>true</isApparal>
                 <ItemDef>DMS_Module_MissilePod</ItemDef>
                 <slot>MountLeft</slot>
             </li>
@@ -396,7 +418,6 @@
         </apparel>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <isApparal>true</isApparal>
                 <ItemDef>DMS_Module_PulseShield</ItemDef>
                 <slot>ArmLeft</slot>
             </li>

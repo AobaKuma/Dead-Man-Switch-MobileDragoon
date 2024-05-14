@@ -26,12 +26,12 @@ namespace WalkerGear
                         {
                             return JobMaker.MakeJob(JobDefOf.WG_RepairComponent,th);
                         }
-                        if (comp.NeedAmmo)
+                        /*if (comp.NeedAmmo)
                         {
                             var tmpList = RefuelWorkGiverUtility.FindEnoughReservableThings(pawn,t.Position,new(comp.NeedAmmoCount,comp.NeedAmmoCount),(tar)=>tar.def==comp.AmmoDef);
                             var job = JobGiver_Reload.MakeReloadJob(comp, tmpList);
                             return job;
-                        }
+                        }*/
                     }
                 }
             }

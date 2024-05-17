@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building_MaintenanceBay.cs" />
+    <Compile Include="CompWreckage.cs" />
     <Compile Include="Comp\CompComponentStorage.cs" />
     <Compile Include="Comp\CompWalkerComponent.cs" />
     <Compile Include="DefOf\JobDefOf.cs" />
@@ -99,5 +100,6 @@
     <Publicize Include="Assembly-CSharp:Verse.Thing.rotationInt" />
     <Publicize Include="Assembly-CSharp:Verse.Projectile" />
     <Publicize Include="Assembly-CSharp:RimWorld.CompApparelVerbOwner_Charged.remainingCharges" />
+    <Publicize Include="Assembly-CSharp:Verse.ArmorUtility.ApplyArmor" />
   </ItemGroup>
 </Project>

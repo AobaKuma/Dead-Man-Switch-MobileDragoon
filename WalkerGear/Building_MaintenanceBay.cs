@@ -21,7 +21,7 @@ namespace WalkerGear
     }
 
     [StaticConstructorOnStartup]
-    public class Building_MaintenanceBay : Building, IThingHolder
+    public partial class Building_MaintenanceBay : Building, IThingHolder
     {
         //cached stuffs
         private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
@@ -29,7 +29,7 @@ namespace WalkerGear
         public static readonly Texture2D rotateOppoButton = new CachedTexture("UI/RotateOppo").Texture;
         [Unsaved(false)]
         private CompPowerTrader cachedPowerComp;
-        private Pawn cachePawn;
+        
         private CompAffectedByFacilities abfComp;
         public bool hasGearCore;
 
@@ -49,36 +49,19 @@ namespace WalkerGear
             }
         }
         public bool PowerOn => PowerTraderComp.PowerOn;
-        public Pawn Dummy
-        {
-            get
-            {
-                return cachePawn ??= (Pawn)innerContainer.First();
-            }
-        } 
-        public Rot4 Face
-        {
-            get=> direction; set => direction = value;
-        }
+        
         private CompAffectedByFacilities ABFComp
         {
-            get{
+            get {
                 return abfComp ??= this.TryGetComp<CompAffectedByFacilities>();
-            } 
-        }
-        public bool HasGearCore => hasGearCore = occupiedSlots.ContainsKey(SlotDefOf.Core);
-        public Pawn_ApparelTracker DummyApparels
-        {
-            get
-            {
-                return Dummy.apparel;
             }
         }
-        public List<Apparel> ModuleStorage=> DummyApparels.WornApparel.Where((a)=>a.HasComp<CompWalkerComponent>()).ToList();
+        public bool HasGearCore => hasGearCore = occupiedSlots.ContainsKey(SlotDefOf.Core);
+        
         //methods override
         public override IEnumerable<Gizmo> GetGizmos()
         {
-            
+
             if (HasGearCore)
             {
                 Command_Target command_GetIn = new()
@@ -123,7 +106,7 @@ namespace WalkerGear
             }
             else if (selPawn.CanReach(this, PathEndMode.Touch, Danger.Deadly))
             {
-                if(!HasGearCore&&selPawn.apparel.LockedApparel.Any((a)=>a is WalkerGear_Core))
+                if (!HasGearCore && selPawn.apparel.LockedApparel.Any((a) => a is WalkerGear_Core))
                 {
                     yield return FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("EnterBuilding".Translate(this), delegate
                     {
@@ -140,10 +123,10 @@ namespace WalkerGear
         public override void Tick()
         {
             base.Tick();
-            
+
             if (Find.TickManager.TicksGame % 10 == 0 && HasGearCore) GetDirectlyHeldThings();
 
-            if (Find.TickManager.TicksGame % 250 == 0)  UpdateCache();
+            if (Find.TickManager.TicksGame % 250 == 0) UpdateCache();
         }
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
@@ -167,13 +150,20 @@ namespace WalkerGear
             UpdateCache();
             if (slotDefs.Empty()) slotDefs.Add(SlotDefOf.Core);
         }
-        public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
+        public BuildingExtraRenderer ExtraRenderer
         {
-            if (hasGearCore)
+            get
             {
-                Dummy.Drawer.renderer.DynamicDrawPhaseAt(phase, drawLoc.WithYOffset(1f), null, true);
+                return def.GetModExtension<BuildingExtraRenderer>()??null;
             }
-            base.DynamicDrawPhaseAt(phase, drawLoc, flip);
+        }
+        public Graphic ExtraGraphic => extraGraphic ??= ExtraRenderer?.extraGraphic.GraphicColoredFor(this);
+        public Graphic extraGraphic;
+        public override void Print(SectionLayer layer)
+        {
+            base.Print(layer);
+            if (ExtraRenderer != null)
+                ExtraGraphic.Print(layer,this,0);
         }
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
@@ -335,11 +325,11 @@ namespace WalkerGear
         {
             availableCompsForSlots.Clear();
             if (ABFComp == null) return;
-            //Log.Warning($"Looking for{comp.LinkedFacilitiesListForReading.Count} facilities");
+           
             foreach (Thing thing in ABFComp.LinkedFacilitiesListForReading.Where(t => t.HasComp<CompComponentStorage>()))
             {
                 if (thing is not Building_Storage b)continue;
-                //Log.Warning("Get storage");
+              
                 foreach (Thing t in b.slotGroup.HeldThings)
                 {
                     if (!t.TryGetComp<CompWalkerComponent>(out CompWalkerComponent c)) continue;
@@ -361,5 +351,33 @@ namespace WalkerGear
             slotDefs.AddDistinct(SlotDefOf.Core);
             UpdateCache();
         }
+
+        
+    }
+
+    public partial class Building_MaintenanceBay
+    {
+        private Pawn cachePawn;
+        public Pawn Dummy => cachePawn ??= (Pawn)innerContainer.First();
+        public Rot4 Face
+        {
+            get => direction; set => direction = value;
+        }
+        public Pawn_ApparelTracker DummyApparels => Dummy.apparel;
+        public List<Apparel> ModuleStorage => DummyApparels.WornApparel.Where((a) => a.HasComp<CompWalkerComponent>()).ToList();
+        public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
+        {
+            if (hasGearCore)
+            {
+                Dummy.Drawer.renderer.DynamicDrawPhaseAt(phase, drawLoc.WithYOffset(1f), null, true);
+            }
+
+            base.DynamicDrawPhaseAt(phase, drawLoc, flip);
+        }
+    }
+    public class BuildingExtraRenderer : DefModExtension
+    {
+        public GraphicData extraGraphic;
+        public AltitudeLayer altitudeLayer;
     }
 }

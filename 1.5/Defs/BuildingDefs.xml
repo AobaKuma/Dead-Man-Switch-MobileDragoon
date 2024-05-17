@@ -2,6 +2,17 @@
 <Defs>
   <!-- 维护坞 -->
   <ThingDef ParentName="BuildingBase">
+    <modExtensions>
+      <li Class="WalkerGear.BuildingExtraRenderer">
+        <extraGraphic>
+          <texPath>Things/Building/DragoonBay_Top</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>(4,4)</drawSize>
+          <drawOffset>(0,2,0)</drawOffset>
+        </extraGraphic>
+        <altitudeLayer>BuildingOnTop</altitudeLayer>
+      </li>
+    </modExtensions>
     <defName>DMS_Building_MaintenanceBay</defName>
     <label>maintenance bay</label>
     <description>A place for mobile dragoon assembly and maintenance, it has a gantry to lift modules of mobile dragoon.</description>

@@ -157,7 +157,7 @@
                 <li>
                     <debugLabel>肩部炮塔底座</debugLabel>
                     <nodeClass>PawnRenderNode_Apparel</nodeClass>
-                    <workClass>PawnRenderNodeWorker_Apparel_Body</workClass>
+                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
                     <parentTagDef>WGApparelBody</parentTagDef>
                     <drawData>
                         <scale>0.75</scale>

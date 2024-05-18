@@ -9,11 +9,12 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WalkerGear</RootNamespace>
     <AssemblyName>WalkerGear</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -25,7 +26,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\1.5\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
@@ -40,6 +41,7 @@
     <Reference Include="MVCF, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\workshop\content\294100\2023507013\1.5\Assemblies\MVCF.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building_MaintenanceBay.cs" />
-    <Compile Include="CompWreckage.cs" />
+    <Compile Include="Comp\CompWreckage.cs" />
     <Compile Include="Comp\CompComponentStorage.cs" />
     <Compile Include="Comp\CompWalkerComponent.cs" />
     <Compile Include="DefOf\JobDefOf.cs" />
@@ -67,12 +69,10 @@
     <Compile Include="Job\WorkGiver_ModuleMaintenance.cs" />
     <Compile Include="MechUtility.cs" />
     <Compile Include="Patch\Patch_PawnCanRepairNow.cs" />
-    <Compile Include="Comp\CompUseEffect_GetIntoGear.cs" />
     <Compile Include="Comp\CompNoItemMode.cs" />
     <Compile Include="DefOf\ThingDefOf.cs" />
     <Compile Include="VerbCompTurret.cs" />
     <Compile Include="WalkerGear_Core.cs" />
-    <Compile Include="Comp\CompWalkerGearBuilding.cs" />
     <Compile Include="Defs\WalkerGearDef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -84,6 +84,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- <Publicize Include="Assembly-CSharp:Verse." /> -->
+    <ProjectReference Include="..\DMSLibs\DMSLibs.csproj">
+      <Project>{15c81fc1-e2b9-42a3-b374-0b0fb0be4263}</Project>
+      <Name>DMSLibs</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Publicizer">

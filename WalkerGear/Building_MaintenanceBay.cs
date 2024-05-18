@@ -49,7 +49,6 @@ namespace WalkerGear
             }
         }
         public bool PowerOn => PowerTraderComp.PowerOn;
-        
         private CompAffectedByFacilities ABFComp
         {
             get {
@@ -57,7 +56,6 @@ namespace WalkerGear
             }
         }
         public bool HasGearCore => hasGearCore = occupiedSlots.ContainsKey(SlotDefOf.Core);
-        
         //methods override
         public override IEnumerable<Gizmo> GetGizmos()
         {

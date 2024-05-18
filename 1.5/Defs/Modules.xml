@@ -24,6 +24,11 @@
         </comps>
     </ThingDef>
     <ThingDef ParentName="DMS_ModuleApparelCore">
+        <modExtensions>
+            <li Class="WalkerGear.BuildingWreckage">
+                <building>DMS_Building_Wreckage</building>
+            </li>
+        </modExtensions>
         <defName>DMS_Apparel_PV8_Core</defName>
         <label>PV-8 Drgaoon</label>
         <description>Todo.</description>
@@ -43,6 +48,9 @@
             <wornGraphicPath>Things/Dragoon/PV8/apparel</wornGraphicPath>
             <drawData>
                 <scale>1.5</scale>
+                <dataNorth>
+                    <layer>70</layer>
+                </dataNorth>
             </drawData>
         </apparel>
         <comps>
@@ -51,7 +59,7 @@
                 <slot>Core</slot>
             </li>
         </comps>
-        <thingClass>WalkerGear.WalkerGear_Core</thingClass>
+        
     </ThingDef>
 
     <!-- PV-8頭盔 -->

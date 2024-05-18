@@ -69,7 +69,9 @@ namespace WalkerGear
         private int remainingCharges;
         private QualityCategory quality;
         private Color color;
+        private int hp;
         public MechData(Thing thing) {
+            hp = thing.HitPoints;
             thing.TryGetQuality(out quality);  
             if(thing.TryGetComp<CompColorable>(out CompColorable colorable))color=colorable.Color;
             if (thing.TryGetComp(out CompWalkerComponent comp))
@@ -86,16 +88,18 @@ namespace WalkerGear
             }
         }
         public void GetDataFromMech( Thing item) {
+            item.HitPoints = hp;
             if (item.TryGetComp<CompQuality>(out CompQuality compQuality)) compQuality.SetQuality(quality, null);
             item.SetColor(color);
             if(item.TryGetComp<CompWalkerComponent>(out var comp)) comp.remainingCharges = remainingCharges;
         }
         public void SetDataToMech( Thing mech) {
-            Log.Message(1);
+            mech.HitPoints = hp;
+
             if (mech.TryGetComp<CompQuality>(out CompQuality compQuality)) compQuality.SetQuality(quality, null);
-            Log.Message(2);
+
             mech.SetColor(color);
-            Log.Message(3);
+
             if (mech.TryGetComp<CompApparelReloadable>(out var comp))comp.remainingCharges = remainingCharges; 
         }
     }

@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using DMSLib;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,13 +7,30 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
+using VFECore;
 
 namespace WalkerGear
 {
     [StaticConstructorOnStartup]
-	public class WalkerGear_Core : Apparel
+	public class WalkerGear_Core : Apparel,IHealthParms
     {
-		public float HealthMax => HitPoints<combinedHealth?combinedHealth:HitPoints;
+        #region IHealthParms
+        public float HPPercent => Health / HealthMax;
+
+        public string PanelName => "StructurePoint".Translate();
+
+        public string LabelHPPart => Health.ToString("F1");
+
+        public string LabelMaxHPPart => HealthMax.ToString("F0");
+
+        public string Tooltips => "StructurePoint.Tooltip".Translate();
+
+        public Texture2D FullShieldBarTex => fBarTex;
+        private static readonly Texture2D fBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.2f, 0.2f, 0.24f));
+        public Texture2D EmptyShieldBarTex => eBarTex;
+        private static readonly Texture2D eBarTex = SolidColorMaterials.NewSolidColorTexture(Color.clear);
+        #endregion
+        public float HealthMax => MaxHitPoints < combinedHealth?combinedHealth: MaxHitPoints;
 		public float Health
 		{
 			get
@@ -27,55 +45,65 @@ namespace WalkerGear
 			}
 		}
 		public float HealthDamaged=>HealthMax-Health;
+        
+        public BuildingWreckage BuildingWreckage=>def.GetModExtension<BuildingWreckage>()??null;
         public override IEnumerable<Gizmo> GetWornGizmos()
 		{
 			foreach(Gizmo gizmo in base.GetWornGizmos())
 			{
 				yield return gizmo;
 			}
+			yield return new Gizmo_HealthPanel(this);
 		}
 		public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
 		{
+            foreach(var a in Wearer.apparel.WornApparel)
+            {
+                if (a.IsShield(out var c))
+                {
+
+                    c.PostPreApplyDamage(ref dinfo, out var absorbed);
+                    if (absorbed) return true;
+                }
+            }
 			if (!dinfo.Def.harmsHealth)
 			{
 				return true;
 			}
-			
+            if (Health <= 0)
+            {
+                return false;
+            }
+
             Health -= GetPostArmorDamage(dinfo);
-			return true;
+            if (Health <= 0)
+            {
+                GearDestory();
+                return false;
+            }
+            return true;
 		}
 		
 		public float GetPostArmorDamage(DamageInfo dinfo)
 		{
             float amount = dinfo.Amount;
             DamageDef damageDef = dinfo.Def;
+            if (DebugSettings.godMode)
+            {
+                Log.Message("Incoming DMG:"+amount);
+            }
             if (damageDef.armorCategory != null)
             {
+                
                 StatDef armorRatingStat = damageDef.armorCategory.armorRatingStat;
+                if (DebugSettings.godMode) Log.Message($"DMG Reduced:{armorRatingStat} Pen {dinfo.ArmorPenetrationInt}, Def {this.GetStatValue(armorRatingStat)}");
                 ArmorUtility.ApplyArmor(ref amount, dinfo.ArmorPenetrationInt, this.GetStatValue(armorRatingStat), null, ref damageDef, Wearer, out _);
             }
-			return amount;
-        }
-
-		public override void Tick()
-		{
-			base.Tick();
-			if(Wearer == null)
-			{
-				return;
-			}
-			if (Health <= 0)
-			{
-				GearDestory();
-				return;
-			}
-		}
-		public void TryBackToMaintainBay()
-		{
-            if (Wearer.Position.GetFirstThing(Wearer.Map, ThingDefOf.DMS_Building_MaintenanceBay) is Building_MaintenanceBay building)
+            if (DebugSettings.godMode)
             {
-                //WIP
+                Log.Message("DMG Taken:" + amount);
             }
+            return amount;
         }
 		public bool RefreshHP()
 		{
@@ -100,7 +128,7 @@ namespace WalkerGear
 		{
             GenExplosion.DoExplosion(Wearer.Position, Wearer.Map, 5, DamageDefOf.Bomb, null, 5);
 
-            Building building = (Building)ThingMaker.MakeThing(ThingDefOf.DMS_Building_Wreckage);
+            Building building = (Building)ThingMaker.MakeThing(BuildingWreckage.building);
             building.SetFactionDirect(Wearer.Faction);
             building.Rotation = Rot4.South;
 			
@@ -109,16 +137,17 @@ namespace WalkerGear
             if (building.TryGetComp(out CompWreckage compWreckage))
             {
                 Wearer.DeSpawnOrDeselect();
-                compWreckage.pawnContainer.TryAdd(Wearer);
+                compWreckage.pawnContainer.Add(Wearer);
                 foreach (var m in modules)
                 {
+                    if (m==this) continue;
                     Wearer.apparel.Remove((Apparel)m);
-					m.DeSpawnOrDeselect();
                     m.HitPoints = 1;
-                    if (Rand.Bool) compWreckage.moduleContainer.TryAdd(m);
+                    if (Rand.Bool) compWreckage.moduleContainer.Add(MechUtility.Conversion(m));
                 }
+                Wearer.apparel.Remove(this);
             }
-
+			
             
         }
 		public override void ExposeData()
@@ -133,6 +162,11 @@ namespace WalkerGear
 		private float healthInt = -1;
 		public List<Thing> modules = new();
         public static readonly Texture2D GetOutIcon = ContentFinder<Texture2D>.Get("Things/GetOffWalker", true);
+    }
+
+    public class BuildingWreckage : DefModExtension
+    {
+        public ThingDef building;
     }
 }
 

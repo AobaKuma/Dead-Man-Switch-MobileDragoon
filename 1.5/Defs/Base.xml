@@ -64,7 +64,7 @@
         <drawerType>MapMeshOnly</drawerType>
         <selectable>True</selectable>
         <pathCost>14</pathCost>
-        <useHitPoints>false</useHitPoints>
+        <useHitPoints>true</useHitPoints>
         <techLevel>Industrial</techLevel>
         <generateCommonality>0</generateCommonality>
         <graphicData>
@@ -119,6 +119,7 @@
     </ThingDef>
 
     <ThingDef Name="DMS_ModuleApparelCore" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <thingClass>WalkerGear.WalkerGear_Core</thingClass>
         <apparel>
             <parentTagDef>WGApparelBody</parentTagDef>
             <renderSkipFlags>

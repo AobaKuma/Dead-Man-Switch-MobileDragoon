@@ -35,6 +35,7 @@ namespace WalkerGear
                 {
                     actor.Position = bay.Position;
                     bay.GearUp(actor);
+                    actor.drafter.Drafted=true;
                 }
 
             };

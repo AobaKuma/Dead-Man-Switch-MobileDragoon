@@ -165,7 +165,7 @@ namespace WalkerGear
         public ThingDef EquipedThingDef;//提供的裝備
         public ThingDef ItemDef;//物品def
         public SlotDef slot;//被填裝時的槽位
-
+        public List<SlotDef> disabledSlots;
         public float repairEfficiency = 0.01f;//作為物品被修理的效率
 
     }

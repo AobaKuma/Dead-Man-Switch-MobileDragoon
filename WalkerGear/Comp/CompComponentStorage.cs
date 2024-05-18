@@ -6,28 +6,19 @@ namespace WalkerGear
     public class CompComponentStorage:ThingComp
     {
         public Building_Storage Parent => (Building_Storage)this.parent;
-        public bool needMaintenance;
-        public override void CompTickRare()
+        public Thing maintanenceTar;        
+        public bool CheckMaintenance()
         {
-            base.CompTickRare();
-            CheckMaintenance();
-        }
-        public override void PostSpawnSetup(bool respawningAfterLoad)
-        {
-            base.PostSpawnSetup(respawningAfterLoad);
-            CheckMaintenance();
-        }
-        private void CheckMaintenance()
-        {
+            maintanenceTar=null;
             foreach (Thing thing in Parent.slotGroup.HeldThings)
             {
                 if (thing is ThingWithComps twc && twc.TryGetComp<CompWalkerComponent>(out CompWalkerComponent c) && c.NeedMaintenance)
                 {
-                    needMaintenance = true;
-                    break;
+                    maintanenceTar = thing;
+                    return true;
                 }
             }
-            needMaintenance = false;
+            return false;
         }
     }
 }

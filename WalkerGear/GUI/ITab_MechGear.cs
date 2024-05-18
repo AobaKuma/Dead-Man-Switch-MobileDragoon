@@ -125,8 +125,9 @@ namespace WalkerGear
                 gizmoRect = gizmoRect.ScaledBy(2f); 
                 gizmoRect.position = position;
             }
-            
-            bool disabled = !Parent.slotDefs.Contains(slot);
+            var disabledSlots = Parent.occupiedSlots?.GetValueOrDefault(SlotDefOf.Core)
+                ?.TryGetComp<CompWalkerComponent>().Props.ItemDef?.GetCompProperties<CompProperties_WalkerComponent>()?.disabledSlots;
+            bool disabled = disabledSlots!=null&&disabledSlots.Contains(slot);
             bool hasThing = Parent.occupiedSlots.ContainsKey(slot);
             float healthPerc = 0f;
             //标签
@@ -149,7 +150,7 @@ namespace WalkerGear
             }
             //血条
             if (hasThing)
-                GizmoHealthBar(gizmoRect, slot,healthPerc);
+                GizmoHealthBar(gizmoRect, slot, Parent.occupiedSlots[slot]);
             //灰边
             {
                 Widgets.DrawBoxSolid(gizmoRect, grey);
@@ -179,8 +180,9 @@ namespace WalkerGear
             Text.Font = GameFont.Small;
             Text.Anchor = TextAnchor.UpperLeft;
         }
-        private void GizmoHealthBar(Rect gizmoRect,SlotDef slot,float healthPerc)
+        private void GizmoHealthBar(Rect gizmoRect,SlotDef slot,Thing t)
         {
+            var healthPerc = (float)t.HitPoints/t.MaxHitPoints;
             bool leftBar = slot.uiPriority == 0 || slot.uiPriority > 3;
             Rect bar = gizmoRect.LeftPart(1f/15f);
             if (leftBar)

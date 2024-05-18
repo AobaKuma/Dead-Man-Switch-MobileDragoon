@@ -11,29 +11,29 @@ namespace WalkerGear
             ThingRequest.ForDef(ThingDefOf.DMS_Building_ComponentStorage);
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
-        {
-            return t.TryGetComp<CompComponentStorage>(out CompComponentStorage c)&&c.needMaintenance;
+        {            
+            return JobOnThing(pawn,t,forced)!=null;
         }
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            if (t is Building_Storage&& t.HasComp<CompComponentStorage>())
+            if (t is Building_Storage&& t.TryGetComp(out CompComponentStorage c))
             {
-                foreach(Thing th in t.GetSlotGroup().HeldThings)
+                c.CheckMaintenance();
+                var th = c.maintanenceTar;
+                if (th is ThingWithComps&& th.TryGetComp<CompWalkerComponent>(out CompWalkerComponent comp))
                 {
-                    if (th is ThingWithComps&& th.TryGetComp<CompWalkerComponent>(out CompWalkerComponent comp))
+                    if (comp.NeedRepair)
                     {
-                        if (comp.NeedRepair)
-                        {
-                            return JobMaker.MakeJob(JobDefOf.WG_RepairComponent,th);
-                        }
-                        /*if (comp.NeedAmmo)
-                        {
-                            var tmpList = RefuelWorkGiverUtility.FindEnoughReservableThings(pawn,t.Position,new(comp.NeedAmmoCount,comp.NeedAmmoCount),(tar)=>tar.def==comp.AmmoDef);
-                            var job = JobGiver_Reload.MakeReloadJob(comp, tmpList);
-                            return job;
-                        }*/
+                        return JobMaker.MakeJob(JobDefOf.WG_RepairComponent,th);
                     }
+                    /*if (comp.NeedAmmo)
+                    {
+                        var tmpList = RefuelWorkGiverUtility.FindEnoughReservableThings(pawn,t.Position,new(comp.NeedAmmoCount,comp.NeedAmmoCount),(tar)=>tar.def==comp.AmmoDef);
+                        var job = JobGiver_Reload.MakeReloadJob(comp, tmpList);
+                        return job;
+                    }*/
                 }
+                
             }
             return null;
         }

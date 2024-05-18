@@ -86,6 +86,7 @@
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <canOverlapZones>false</canOverlapZones>
     <altitudeLayer>Building</altitudeLayer>
+    <tickerType>Rare</tickerType>
     <statBases>
       <WorkToBuild>3600</WorkToBuild>
     </statBases>
@@ -139,5 +140,24 @@
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>
     </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>DMS_Building_Wreckage</defName>
+    <graphicData>
+      <texPath>Things/Building/ModulePlatform</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <canOverlapZones>false</canOverlapZones>
+    <altitudeLayer>Building</altitudeLayer>
+    <useHitPoints>true</useHitPoints>
+    <size>(2,2)</size>
+    <pathCost>100</pathCost>
+    <passability>PassThroughOnly</passability>
+    <surfaceType>Item</surfaceType>
+    <comps>
+      <li><compClass>WalkerGear.CompWreckage</compClass></li>
+    </comps>
   </ThingDef>
 </Defs>

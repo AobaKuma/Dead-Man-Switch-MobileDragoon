@@ -2,17 +2,6 @@
 <Defs>
   <!-- 维护坞 -->
   <ThingDef ParentName="BuildingBase">
-    <modExtensions>
-      <li Class="WalkerGear.BuildingExtraRenderer">
-        <extraGraphic>
-          <texPath>Things/Building/DragoonBay_Top</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>(4,4)</drawSize>
-          <drawOffset>(0,2,0)</drawOffset>
-        </extraGraphic>
-        <altitudeLayer>BuildingOnTop</altitudeLayer>
-      </li>
-    </modExtensions>
     <defName>DMS_Building_MaintenanceBay</defName>
     <label>maintenance bay</label>
     <description>A place for mobile dragoon assembly and maintenance, it has a gantry to lift modules of mobile dragoon.</description>
@@ -22,6 +11,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(4,4)</drawSize>
     </graphicData>
+    <uiIconPath>Things/Building/DragoonBay</uiIconPath>
     <tickerType>Normal</tickerType>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <canOverlapZones>false</canOverlapZones>
@@ -29,12 +19,13 @@
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
       <WorkToBuild>3600</WorkToBuild>
+      <MaxHitPoints>200</MaxHitPoints>
     </statBases>
     <costList>
-      <Steel>50</Steel>
+      <Steel>200</Steel>
     </costList>
     <scatterableOnMapGen>false</scatterableOnMapGen>
-    <useHitPoints>false</useHitPoints>
+    <useHitPoints>true</useHitPoints>
     <size>(3,3)</size>
     <pathCost>100</pathCost>
     <designationCategory>DMS_Category</designationCategory>
@@ -70,6 +61,17 @@
       <li>PlaceWorker_ReportWorkSpeedPenalties</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
+    <modExtensions>
+      <li Class="WalkerGear.BuildingExtraRenderer">
+        <extraGraphic>
+          <texPath>Things/Building/DragoonBay_Top</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>(4,4)</drawSize>
+          <drawOffset>(0,0.7,0)</drawOffset>
+        </extraGraphic>
+        <altitudeLayer>BuildingOnTop</altitudeLayer>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <!-- 部件櫃 -->

@@ -137,6 +137,23 @@
         </apparel>
     </ThingDef>
 
+
+    <ThingDef Name="DMS_ModuleApparelAttachment" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <thingClass>WalkerGear.WalkerGear_Core</thingClass>
+        <apparel>
+            <parentTagDef>WGApparelBody</parentTagDef>
+            <renderSkipFlags>
+                <li>Body</li>
+            </renderSkipFlags>
+            <bodyPartGroups>
+                <li>Waist</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Shell</li>
+            </layers>
+        </apparel>
+    </ThingDef>
+
     <ThingDef Name="DMS_ModuleApparelMountRight" ParentName="DMS_ModuleApparelBase" Abstract="True">
         <apparel>
             <bodyPartGroups>

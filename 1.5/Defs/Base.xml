@@ -31,6 +31,15 @@
         <thingCategories>
             <li>DMS_Module</li>
         </thingCategories>
+        <recipeMaker>
+            <recipeUsers>
+                <li>DMS_TableMachinePrinter</li>
+            </recipeUsers>
+            <effectWorking>Repair</effectWorking>
+            <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+            <workAmount>500</workAmount>
+            <soundWorking>Recipe_Machining</soundWorking>
+        </recipeMaker>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1.50</drawSize>

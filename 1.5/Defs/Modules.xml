@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+    
     <!-- (右)肩部機槍 -->
     <ThingDef ParentName="DMS_ModuleItemBase">
         <defName>DMS_Module_TurretPackLight</defName>
         <label>Mounted LMG</label>
         <description>todo.</description>
         <descriptionHyperlinks>
-            <ThingDef>DMS_TableMachinePrinter</ThingDef>
+            <ThingDef>DMS_Apparel_TurretPackLight</ThingDef>
         </descriptionHyperlinks>
         <graphicData>
             <texPath>Things/Item/Module</texPath>
@@ -16,6 +17,10 @@
             <Mass>8</Mass>
             <Flammability>0</Flammability>
         </statBases>
+        <costList>
+            <Steel>100</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <EquipedThingDef>DMS_Apparel_TurretPackLight</EquipedThingDef>
@@ -39,7 +44,6 @@
         </equippedStatOffsets>
         <apparel>
             <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
-
             <renderNodeProperties>
                 <li>
                     <debugLabel>肩部炮塔底座</debugLabel>
@@ -148,7 +152,7 @@
         <label>Missile Pod</label>
         <description>todo.</description>
         <descriptionHyperlinks>
-            <ThingDef>DMS_TableMachinePrinter</ThingDef>
+            <ThingDef>DMS_Apparel_MissilePod</ThingDef>
         </descriptionHyperlinks>
         <graphicData>
             <texPath>Things/Item/Module</texPath>
@@ -156,6 +160,10 @@
         <statBases>
             <Mass>8</Mass>
         </statBases>
+        <costList>
+            <Steel>100</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <EquipedThingDef>DMS_Apparel_MissilePod</EquipedThingDef>
@@ -249,7 +257,7 @@
         <label>pulse shield</label>
         <description>todo.</description>
         <descriptionHyperlinks>
-            <ThingDef>DMS_TableMachinePrinter</ThingDef>
+            <ThingDef>DMS_Apparel_PulseShield</ThingDef>
         </descriptionHyperlinks>
         <graphicData>
             <texPath>Things/Item/Module</texPath>
@@ -257,6 +265,11 @@
         <statBases>
             <Mass>8</Mass>
         </statBases>
+        <costList>
+            <Steel>100</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+            <BroadshieldCore>1</BroadshieldCore>
+        </costList>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <EquipedThingDef>DMS_Apparel_PulseShield</EquipedThingDef>
@@ -324,7 +337,7 @@
         <label>burst thruster</label>
         <description>todo.</description>
         <descriptionHyperlinks>
-            <ThingDef>DMS_TableMachinePrinter</ThingDef>
+            <ThingDef>DMS_Apparel_JumpThruster</ThingDef>
         </descriptionHyperlinks>
         <graphicData>
             <texPath>Things/Item/Module</texPath>
@@ -332,6 +345,10 @@
         <statBases>
             <Mass>8</Mass>
         </statBases>
+        <costList>
+            <Steel>100</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <EquipedThingDef>DMS_Apparel_JumpThruster</EquipedThingDef>

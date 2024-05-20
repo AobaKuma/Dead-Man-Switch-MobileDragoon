@@ -3,10 +3,10 @@
     <!-- PV-8核心 -->
     <ThingDef ParentName="DMS_ModuleItemBase">
         <defName>DMS_Module_PV8_Core</defName>
-        <label>PV-8 drgaoon</label>
+        <label>PV-8 frame</label>
         <description>todo.</description>
         <descriptionHyperlinks>
-            <ThingDef>DMS_TableMachinePrinter</ThingDef>
+            <ThingDef>DMS_Apparel_PV8_Core</ThingDef>
         </descriptionHyperlinks>
         <graphicData>
             <texPath>Things/Item/Module</texPath>
@@ -23,7 +23,7 @@
             </li>
         </comps>
     </ThingDef>
-    
+
     <ThingDef ParentName="DMS_ModuleApparelCore">
         <defName>DMS_Apparel_PV8_Core</defName>
         <label>PV-8 frame</label>
@@ -65,10 +65,10 @@
     <!-- PV-8頭盔 -->
     <ThingDef ParentName="DMS_ModuleItemBase">
         <defName>DMS_Module_PV8_Helmet</defName>
-        <label>PV-8 mechanical helmet</label>
+        <label>PV-8 helmet</label>
         <description>todo.</description>
         <descriptionHyperlinks>
-            <ThingDef>DMS_TableMachinePrinter</ThingDef>
+            <ThingDef>DMS_Apparel_PV8_Helmet</ThingDef>
         </descriptionHyperlinks>
         <graphicData>
             <texPath>Things/Item/Module</texPath>
@@ -88,7 +88,7 @@
 
     <ThingDef ParentName="DMS_ModuleApparelHead">
         <defName>DMS_Apparel_PV8_Helmet</defName>
-        <label>PV-8 Drgaoon helmet</label>
+        <label>PV-8 helmet</label>
         <description>Todo.</description>
         <graphicData>
             <texPath>Things/Dragoon/PV8/helmet_south</texPath>

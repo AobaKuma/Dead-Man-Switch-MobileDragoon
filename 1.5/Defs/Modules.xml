@@ -1,416 +1,409 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    
-    <!-- (右)肩部機槍 -->
-    <ThingDef ParentName="DMS_ModuleItemBase">
-        <defName>DMS_Module_TurretPackLight</defName>
-        <label>Mounted LMG</label>
-        <description>todo.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_TurretPackLight</ThingDef>
-        </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Item/Module</texPath>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>100</MaxHitPoints>
-            <Mass>8</Mass>
-            <Flammability>0</Flammability>
-        </statBases>
-        <costList>
-            <Steel>100</Steel>
-            <ComponentIndustrial>2</ComponentIndustrial>
-        </costList>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <EquipedThingDef>DMS_Apparel_TurretPackLight</EquipedThingDef>
-                <slot>MountRight</slot>
-            </li>
-        </comps>
-    </ThingDef>
-
-    <ThingDef ParentName="DMS_ModuleApparelMountRight">
-        <defName>DMS_Apparel_TurretPackLight</defName>
-        <label>Mounted LMG</label>
-        <description>Todo.</description>
-        <graphicData>
-            <texPath>Things/Dragoon/TurretPack/TurretPack_MachineGun</texPath>
-        </graphicData>
-        <statBases>
-            <Mass>0</Mass>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.12</MoveSpeed>
-        </equippedStatOffsets>
-        <apparel>
-            <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
-            <renderNodeProperties>
-                <li>
-                    <debugLabel>肩部炮塔底座</debugLabel>
-                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
-                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <drawData>
-                        <scale>0.75</scale>
-                        <defaultData>
-                            <layer>20</layer>
-                        </defaultData>
-                        <dataSouth>
-                            <offset>(-0.50,0,1.05)</offset>
-                            <layer>0</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(0.50,0,0.45)</offset>
-                            <layer>20</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0.5,0,0.45)</offset>
-                            <layer>0</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.80,0,0.45)</offset>
-                        </dataEast>
-                    </drawData>
-                </li>
-                <li>
-                    <debugLabel>肩部炮塔</debugLabel>
-                    <nodeClass>WalkerGear.PawnRenderNode_VerbCompTurret</nodeClass>
-                    <workerClass>WalkerGear.PawnRenderNodeWorker_VerbCompTurret</workerClass>
-                    <texPath>Things/Turrets/DMS_Gun_LMG</texPath>
-                    <anchorTag>Gun</anchorTag>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <drawSize>1.25</drawSize>
-                    <baseLayer>40</baseLayer>
-                    <pawnType>Any</pawnType>
-                    <drawData>
-                        <scale>0.75</scale>
-                        <defaultData>
-                            <layer>30</layer>
-                        </defaultData>
-                        <dataSouth>
-                            <offset>(-0.80,0,1.05)</offset>
-                            <layer>10</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(0.50,0,0.25)</offset>
-                            <layer>30</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0.75,0,0.5)</offset>
-                            <layer>10</layer>
-                            <rotationOffset>-180</rotationOffset>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-1.0,0,0.15)</offset>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
-        </apparel>
-        <verbs>
-            <li>
-                <verbClass>Verb_Shoot</verbClass>
-                <label>Gun</label>
-                <defaultProjectile>Bullet_MiniTurret</defaultProjectile>
-                <warmupTime>0</warmupTime>
-                <range>28.9</range>
-                <hasStandardCommand>true</hasStandardCommand>
-                <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-                <burstShotCount>1</burstShotCount>
-                <soundCast>GunShotA</soundCast>
-                <soundCastTail>GunTail_Light</soundCastTail>
-                <muzzleFlashScale>9</muzzleFlashScale>
-            </li>
-        </verbs>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <ItemDef>DMS_Module_TurretPackLight</ItemDef>
-                <slot>MountRight</slot>
-            </li>
-            <li Class="MVCF.Comps.CompProperties_VerbGiver">
-                <verbProps>
-                    <li>
-                        <label>Gun</label>
-                        <visualLabel>mini-turret gun</visualLabel>
-                        <description>A simple automatic gun made to be mounted on a shoulder.</description>
-                        <canBeToggled>true</canBeToggled>
-                        <comps>
-                            <li Class="WalkerGear.VerbCompPropertiesTurret">
-                                <uniqueTargets>true</uniqueTargets>
-                                <angleOffset>-90</angleOffset>
-                            </li>
-                        </comps>
-                    </li>
-                </verbProps>
-            </li>
-        </comps>
-    </ThingDef>
-
-    <!-- (左)肩部導彈 -->
-    <ThingDef ParentName="DMS_ModuleItemBase">
-        <defName>DMS_Module_MissilePod</defName>
-        <label>Missile Pod</label>
-        <description>todo.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_MissilePod</ThingDef>
-        </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Item/Module</texPath>
-        </graphicData>
-        <statBases>
-            <Mass>8</Mass>
-        </statBases>
-        <costList>
-            <Steel>100</Steel>
-            <ComponentIndustrial>2</ComponentIndustrial>
-        </costList>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <EquipedThingDef>DMS_Apparel_MissilePod</EquipedThingDef>
-                <slot>MountLeft</slot>
-            </li>
-        </comps>
-    </ThingDef>
-
-    <ThingDef ParentName="DMS_ModuleApparelMountLeft">
-        <defName>DMS_Apparel_MissilePod</defName>
-        <label>Missile Pod</label>
-        <description>Todo.</description>
-        <graphicData>
-            <texPath>Things/Dragoon/MissilePod/apparel_south</texPath>
-        </graphicData>
-        <statBases>
-            <Mass>0</Mass>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.12</MoveSpeed>
-        </equippedStatOffsets>
-        <apparel>
-            <wornGraphicPath>Things/Dragoon/MissilePod/apparel</wornGraphicPath>
-            <drawData>
-                <scale>0.75</scale>
-                <defaultData>
-                    <layer>20</layer>
-                </defaultData>
-                <dataSouth>
-                    <offset>(0.50,0,1.05)</offset>
-                    <layer>0</layer>
-                </dataSouth>
-                <dataNorth>
-                    <offset>(-0.50,0,0.45)</offset>
-                    <layer>20</layer>
-                </dataNorth>
-                <dataWest>
-                    <offset>(0.80,0,0.45)</offset>
-                </dataWest>
-                <dataEast>
-                    <offset>(-0.80,0,0.8)</offset>
-                    <layer>0</layer>
-                </dataEast>
-            </drawData>
-        </apparel>
-        <verbs>
-            <li>
-                <label>launch missile</label>
-                <verbClass>Verb_LaunchProjectileStatic</verbClass>
-                <hasStandardCommand>true</hasStandardCommand>
-                <commandIcon>UI/Ability/Missile</commandIcon>
-                <onlyManualCast>True</onlyManualCast>
-                <range>99.9</range>
-                <forcedMissRadius>1.9</forcedMissRadius>
-                <warmupTime>2</warmupTime>
-                <noiseRadius>4</noiseRadius>
-                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-                <soundCast>RocketswarmLauncher_Fire</soundCast>
-                <soundCastTail>GunTail_Medium</soundCastTail>
-                <muzzleFlashScale>14</muzzleFlashScale>
-                <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
-                <targetParams>
-                    <canTargetLocations>true</canTargetLocations>
-                    <canTargetBuildings>true</canTargetBuildings>
-                </targetParams>
-                <defaultProjectile>Bullet_9M311V</defaultProjectile>
-                <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
-            </li>
-        </verbs>
-        <comps>
-            <li Class="CompProperties_ApparelReloadable">
-                <maxCharges>4</maxCharges>
-                <ammoDef>Steel</ammoDef>
-                <ammoCountPerCharge>25</ammoCountPerCharge>
-                <baseReloadTicks>60</baseReloadTicks>
-                <soundReload>Standard_Reload</soundReload>
-                <hotKey>Misc4</hotKey>
-                <chargeNoun>missile</chargeNoun>
-                <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-            </li>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <ItemDef>DMS_Module_MissilePod</ItemDef>
-                <slot>MountLeft</slot>
-            </li>
-        </comps>
-    </ThingDef>
-
-    <!-- (左)手脈衝盾 -->
-    <ThingDef ParentName="DMS_ModuleItemBase">
-        <defName>DMS_Module_PulseShield</defName>
-        <label>pulse shield</label>
-        <description>todo.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_PulseShield</ThingDef>
-        </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Item/Module</texPath>
-        </graphicData>
-        <statBases>
-            <Mass>8</Mass>
-        </statBases>
-        <costList>
-            <Steel>100</Steel>
-            <ComponentIndustrial>2</ComponentIndustrial>
-            <BroadshieldCore>1</BroadshieldCore>
-        </costList>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <EquipedThingDef>DMS_Apparel_PulseShield</EquipedThingDef>
-                <slot>ArmLeft</slot>
-            </li>
-        </comps>
-    </ThingDef>
-
-    <ThingDef ParentName="DMS_ModuleApparelArmLeft">
-        <defName>DMS_Apparel_PulseShield</defName>
-        <label>pulse shield</label>
-        <description>Todo.</description>
-        <graphicData>
-            <texPath>Things/Dragoon/PulseShield/apparel_south</texPath>
-        </graphicData>
-        <statBases>
-            <Mass>0</Mass>
-            <EnergyShieldRechargeRate>0.75</EnergyShieldRechargeRate>
-            <EnergyShieldEnergyMax>0.5</EnergyShieldEnergyMax>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.12</MoveSpeed>
-        </equippedStatOffsets>
-        <apparel>
-            <wornGraphicPath>Things/Dragoon/PulseShield/apparel</wornGraphicPath>
-            <drawData>
-                <scale>0.75</scale>
-                <defaultData>
-                    <layer>20</layer>
-                </defaultData>
-                <dataSouth>
-                    <offset>(0.75,0,-0.10)</offset>
-                </dataSouth>
-                <dataNorth>
-                    <offset>(-0.50,0,0.15)</offset>
-                    <layer>0</layer>
-                </dataNorth>
-                <dataWest>
-                    <offset>(-0.15,0,-0.10)</offset>
-                </dataWest>
-                <dataEast>
-                    <offset>(-0.80,0,0.8)</offset>
-                    <layer>0</layer>
-                </dataEast>
-            </drawData>
-        </apparel>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <ItemDef>DMS_Module_PulseShield</ItemDef>
-                <slot>ArmLeft</slot>
-            </li>
-            <li Class="CompProperties_Shield">
-                <blocksRangedWeapons>false</blocksRangedWeapons>
-                <maxDrawSize>5</maxDrawSize>
-                <minDrawSize>3</minDrawSize>
-                <energyOnReset>50</energyOnReset>
-                <startingTicksToReset>1200</startingTicksToReset>
-            </li>
-        </comps>
-    </ThingDef>
-
-    <!-- (背)推進器 -->
-    <ThingDef ParentName="DMS_ModuleItemBase">
-        <defName>DMS_Module_JumpThruster</defName>
-        <label>burst thruster</label>
-        <description>todo.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_JumpThruster</ThingDef>
-        </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Item/Module</texPath>
-        </graphicData>
-        <statBases>
-            <Mass>8</Mass>
-        </statBases>
-        <costList>
-            <Steel>100</Steel>
-            <ComponentIndustrial>2</ComponentIndustrial>
-        </costList>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <EquipedThingDef>DMS_Apparel_JumpThruster</EquipedThingDef>
-                <slot>Attachment</slot>
-            </li>
-        </comps>
-    </ThingDef>
-
-    <ThingDef ParentName="DMS_ModuleApparelAttachment">
-        <defName>DMS_Apparel_JumpThruster</defName>
-        <label>burst thruster</label>
-        <description>Todo.</description>
-        <graphicData>
-            <texPath>Things/Dragoon/BurstThruster/apparel_south</texPath>
-        </graphicData>
-        <statBases>
-            <Mass>0</Mass>
-            <JumpRange>9.9</JumpRange>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.12</MoveSpeed>
-        </equippedStatOffsets>
-        <apparel>
-            <wornGraphicPath>Things/Dragoon/BurstThruster/apparel</wornGraphicPath>
-            <drawData>
-                <scale>2.25</scale>
-                <defaultData>
-                    <layer>18</layer>
-                </defaultData>
-                <dataSouth>
-                    <layer>0</layer>
-                </dataSouth>
-                <dataNorth>
-                    <layer>75</layer>
-                </dataNorth>
-            </drawData>
-        </apparel>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <ItemDef>DMS_Module_JumpThruster</ItemDef>
-                <slot>Attachment</slot>
-            </li>
-        </comps>
-        <verbs>
-            <li>
-                <verbClass>Verb_Jump</verbClass>
-                <label>jump</label>
-                <violent>false</violent>
-                <hasStandardCommand>true</hasStandardCommand>
-                <onlyManualCast>True</onlyManualCast>
-                <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-                <warmupTime>0.5</warmupTime>
-                <warmupEffecter>JumpWarmupEffect</warmupEffecter>
-                <requireLineOfSight>true</requireLineOfSight>
-                <flightEffecterDef>JumpFlightEffect</flightEffecterDef>
-                <soundLanding>JumpPackLand</soundLanding>
-                <targetParams>
-                    <canTargetLocations>true</canTargetLocations>
-                    <canTargetPawns>false</canTargetPawns>
-                    <canTargetBuildings>false</canTargetBuildings>
-                </targetParams>
-            </li>
-        </verbs>
-    </ThingDef>
+  <!-- (右)肩部機槍 -->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_TurretPackLight</defName>
+    <label>Mounted LMG</label>
+    <description>todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_TurretPackLight</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>8</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_TurretPackLight</EquipedThingDef>
+        <slot>MountRight</slot>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelMountRight">
+    <defName>DMS_Apparel_TurretPackLight</defName>
+    <label>Mounted LMG</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/TurretPack/TurretPack_MachineGun</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>0</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
+      <renderNodeProperties>
+        <li>
+          <debugLabel>肩部炮塔底座</debugLabel>
+          <nodeClass>PawnRenderNode_Apparel</nodeClass>
+          <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <drawData>
+            <scale>0.75</scale>
+            <defaultData>
+              <layer>20</layer>
+            </defaultData>
+            <dataSouth>
+              <offset>(-0.50,0,1.05)</offset>
+              <layer>0</layer>
+            </dataSouth>
+            <dataNorth>
+              <offset>(0.50,0,0.45)</offset>
+              <layer>20</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(0.5,0,0.45)</offset>
+              <layer>0</layer>
+            </dataWest>
+            <dataEast>
+              <offset>(-0.80,0,0.45)</offset>
+            </dataEast>
+          </drawData>
+        </li>
+        <li>
+          <debugLabel>肩部炮塔</debugLabel>
+          <nodeClass>WalkerGear.PawnRenderNode_VerbCompTurret</nodeClass>
+          <workerClass>WalkerGear.PawnRenderNodeWorker_VerbCompTurret</workerClass>
+          <texPath>Things/Turrets/DMS_Gun_LMG</texPath>
+          <anchorTag>Gun</anchorTag>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <drawSize>1.25</drawSize>
+          <baseLayer>40</baseLayer>
+          <pawnType>Any</pawnType>
+          <drawData>
+            <scale>0.75</scale>
+            <defaultData>
+              <layer>30</layer>
+            </defaultData>
+            <dataSouth>
+              <offset>(-0.80,0,1.05)</offset>
+              <layer>10</layer>
+            </dataSouth>
+            <dataNorth>
+              <offset>(0.50,0,0.25)</offset>
+              <layer>30</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(0.75,0,0.5)</offset>
+              <layer>10</layer>
+              <rotationOffset>-180</rotationOffset>
+            </dataWest>
+            <dataEast>
+              <offset>(-1.0,0,0.15)</offset>
+            </dataEast>
+          </drawData>
+        </li>
+      </renderNodeProperties>
+    </apparel>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <label>Gun</label>
+        <defaultProjectile>Bullet_MiniTurret</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <range>28.9</range>
+        <hasStandardCommand>true</hasStandardCommand>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>GunShotA</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_TurretPackLight</ItemDef>
+        <slot>MountRight</slot>
+      </li>
+      <li Class="MVCF.Comps.CompProperties_VerbGiver">
+        <verbProps>
+          <li>
+            <label>Gun</label>
+            <visualLabel>mini-turret gun</visualLabel>
+            <description>A simple automatic gun made to be mounted on a shoulder.</description>
+            <canBeToggled>true</canBeToggled>
+            <comps>
+              <li Class="WalkerGear.VerbCompPropertiesTurret">
+                <uniqueTargets>true</uniqueTargets>
+                <angleOffset>-90</angleOffset>
+              </li>
+            </comps>
+          </li>
+        </verbProps>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- (左)肩部導彈 -->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_MissilePod</defName>
+    <label>Missile Pod</label>
+    <description>todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_MissilePod</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_MissilePod</EquipedThingDef>
+        <slot>MountLeft</slot>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelMountLeft">
+    <defName>DMS_Apparel_MissilePod</defName>
+    <label>Missile Pod</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/MissilePod/apparel_south</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>0</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/MissilePod/apparel</wornGraphicPath>
+      <drawData>
+        <scale>0.75</scale>
+        <defaultData>
+          <layer>20</layer>
+        </defaultData>
+        <dataSouth>
+          <offset>(0.50,0,1.05)</offset>
+          <layer>0</layer>
+        </dataSouth>
+        <dataNorth>
+          <offset>(-0.50,0,0.45)</offset>
+          <layer>20</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(0.80,0,0.45)</offset>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.80,0,0.8)</offset>
+          <layer>0</layer>
+        </dataEast>
+      </drawData>
+    </apparel>
+    <verbs>
+      <li>
+        <label>launch missile</label>
+        <verbClass>Verb_LaunchProjectileStatic</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <commandIcon>UI/Ability/Missile</commandIcon>
+        <onlyManualCast>True</onlyManualCast>
+        <range>99.9</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>2</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>RocketswarmLauncher_Fire</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetBuildings>true</canTargetBuildings>
+        </targetParams>
+        <defaultProjectile>Bullet_9M311V</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_ApparelReloadable">
+        <maxCharges>4</maxCharges>
+        <ammoDef>Steel</ammoDef>
+        <ammoCountPerCharge>25</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>missile</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_MissilePod</ItemDef>
+        <slot>MountLeft</slot>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- (左)手脈衝盾 -->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_PulseShield</defName>
+    <label>pulse shield</label>
+    <description>todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_PulseShield</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <BroadshieldCore>1</BroadshieldCore>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_PulseShield</EquipedThingDef>
+        <slot>ArmLeft</slot>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelArmLeft">
+    <defName>DMS_Apparel_PulseShield</defName>
+    <label>pulse shield</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/PulseShield/apparel_south</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>0</Mass>
+      <EnergyShieldRechargeRate>0.75</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>0.5</EnergyShieldEnergyMax>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/PulseShield/apparel</wornGraphicPath>
+      <drawData>
+        <scale>0.75</scale>
+        <defaultData>
+          <layer>20</layer>
+        </defaultData>
+        <dataSouth>
+          <offset>(0.75,0,-0.10)</offset>
+        </dataSouth>
+        <dataNorth>
+          <offset>(-0.50,0,0.15)</offset>
+          <layer>0</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(-0.15,0,-0.10)</offset>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.80,0,0.8)</offset>
+          <layer>0</layer>
+        </dataEast>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_PulseShield</ItemDef>
+        <slot>ArmLeft</slot>
+      </li>
+      <li Class="CompProperties_Shield">
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+        <maxDrawSize>5</maxDrawSize>
+        <minDrawSize>3</minDrawSize>
+        <energyOnReset>50</energyOnReset>
+        <startingTicksToReset>1200</startingTicksToReset>
+        <tickerType>Normal</tickerType>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- (背)推進器 -->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_JumpThruster</defName>
+    <label>burst thruster</label>
+    <description>todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_JumpThruster</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_JumpThruster</EquipedThingDef>
+        <slot>Attachment</slot>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelAttachment">
+    <defName>DMS_Apparel_JumpThruster</defName>
+    <label>burst thruster</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/BurstThruster/apparel_south</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>0</Mass>
+      <JumpRange>9.9</JumpRange>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/BurstThruster/apparel</wornGraphicPath>
+      <drawData>
+        <scale>2.25</scale>
+        <defaultData>
+          <layer>18</layer>
+        </defaultData>
+        <dataSouth>
+          <layer>0</layer>
+        </dataSouth>
+        <dataNorth>
+          <layer>75</layer>
+        </dataNorth>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_JumpThruster</ItemDef>
+        <slot>Attachment</slot>
+      </li>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>Verb_Jump</verbClass>
+        <label>jump</label>
+        <violent>false</violent>
+        <hasStandardCommand>true</hasStandardCommand>
+        <onlyManualCast>True</onlyManualCast>
+        <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+        <warmupTime>0.5</warmupTime>
+        <warmupEffecter>JumpWarmupEffect</warmupEffecter>
+        <requireLineOfSight>true</requireLineOfSight>
+        <flightEffecterDef>JumpFlightEffect</flightEffecterDef>
+        <soundLanding>JumpPackLand</soundLanding>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>false</canTargetPawns>
+          <canTargetBuildings>false</canTargetBuildings>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
 </Defs>

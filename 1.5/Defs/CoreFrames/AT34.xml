@@ -1,124 +1,137 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <!-- AT-34核心 -->
-    <ThingDef ParentName="DMS_ModuleItemBase">
-        <defName>DMS_Module_AT34_Core</defName>
-        <label>AT-34 drgaoon</label>
-        <description>todo.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_AT34_Core</ThingDef>
-        </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Item/Module</texPath>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>100</MaxHitPoints>
-            <Mass>8</Mass>
-            <Flammability>0</Flammability>
-        </statBases>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <EquipedThingDef>DMS_Apparel_AT34_Core</EquipedThingDef>
-                <slot>Core</slot>
-            </li>
-        </comps>
-    </ThingDef>
-    
-    <ThingDef ParentName="DMS_ModuleApparelCore">
-        <defName>DMS_Apparel_AT34_Core</defName>
-        <label>AT-34 frame</label>
-        <description>Todo.</description>
-        <graphicData>
-            <texPath>Things/Dragoon/AT34/apparel_south</texPath>
-        </graphicData>
-        <statBases>
-            <Mass>10</Mass>
-            <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
-            <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-            <ArmorRating_Heat>0.10</ArmorRating_Heat>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.12</MoveSpeed>
-        </equippedStatOffsets>
-        <apparel>
-            <wornGraphicPath>Things/Dragoon/AT34/apparel</wornGraphicPath>
-            <drawData>
-                <scale>1.5</scale>
-                <dataNorth>
-                    <layer>70</layer>
-                </dataNorth>
-            </drawData>
-        </apparel>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <ItemDef>DMS_Module_AT34_Core</ItemDef>
-                <slot>Core</slot>
-            </li>
-        </comps>
-        <modExtensions>
-            <li Class="WalkerGear.BuildingWreckage">
-                <building>DMS_Building_Wreckage</building>
-            </li>
-        </modExtensions>
-    </ThingDef>
-
-    <!-- AT-34頭盔 -->
-    <ThingDef ParentName="DMS_ModuleItemBase">
-        <defName>DMS_Module_AT34_Helmet</defName>
-        <label>AT-34 mechanical helmet</label>
-        <description>todo.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_AT34_Helmet</ThingDef>
-        </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Item/Module</texPath>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>100</MaxHitPoints>
-            <Mass>8</Mass>
-            <Flammability>0</Flammability>
-        </statBases>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <EquipedThingDef>DMS_Apparel_AT34_Helmet</EquipedThingDef>
-                <slot>Head</slot>
-            </li>
-        </comps>
-    </ThingDef>
-
-    <ThingDef ParentName="DMS_ModuleApparelHead">
-        <defName>DMS_Apparel_AT34_Helmet</defName>
-        <label>AT-34 Drgaoon helmet</label>
-        <description>Todo.</description>
-        <graphicData>
-            <texPath>Things/Dragoon/AT34/helmet_south</texPath>
-        </graphicData>
-        <statBases>
-            <Mass>0</Mass>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.12</MoveSpeed>
-        </equippedStatOffsets>
-        <apparel>
-            <wornGraphicPath>Things/Dragoon/AT34/helmet</wornGraphicPath>
-            <drawData>
-                <defaultData>
-                    <layer>20</layer>
-                    <offset>(0,0,0.15)</offset>
-                </defaultData>
-                <dataWest>
-                    <offset>(-0.25,0,0.15)</offset>
-                </dataWest>
-                <dataEast>
-                    <offset>(0.25,0,0.15)</offset>
-                </dataEast>
-            </drawData>
-        </apparel>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <ItemDef>DMS_Module_AT34_Helmet</ItemDef>
-                <slot>Head</slot>
-            </li>
-        </comps>
-    </ThingDef>
+  <!-- AT-34核心 -->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_AT34_Core</defName>
+    <label>AT-34 drgaoon</label>
+    <description>todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_AT34_Core</ThingDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Tungsteel>275</Tungsteel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ComponentStamped>8</ComponentStamped>
+      <Neurocomputer>1</Neurocomputer>
+    </costList>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>8</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_AT34_Core</EquipedThingDef>
+        <slot>Core</slot>
+      </li>
+    </comps>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelCore">
+    <defName>DMS_Apparel_AT34_Core</defName>
+    <label>AT-34 frame</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/AT34/apparel_south</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>10</Mass>
+      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.10</ArmorRating_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/AT34/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.5</scale>
+        <dataNorth>
+          <layer>70</layer>
+        </dataNorth>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_AT34_Core</ItemDef>
+        <slot>Core</slot>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="WalkerGear.BuildingWreckage">
+        <building>DMS_Building_Wreckage</building>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <!-- AT-34頭盔 -->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_AT34_Helmet</defName>
+    <label>AT-34 helmet</label>
+    <description>todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_AT34_Helmet</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>8</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_AT34_Helmet</EquipedThingDef>
+        <slot>Head</slot>
+      </li>
+    </comps>
+    <costList>
+      <Tungsteel>40</Tungsteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentStamped>2</ComponentStamped>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelHead">
+    <defName>DMS_Apparel_AT34_Helmet</defName>
+    <label>AT-34 helmet</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/AT34/helmet_south</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>0</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/AT34/helmet</wornGraphicPath>
+      <drawData>
+        <defaultData>
+          <layer>20</layer>
+          <offset>(0,0,0.15)</offset>
+        </defaultData>
+        <dataWest>
+          <offset>(-0.25,0,0.15)</offset>
+        </dataWest>
+        <dataEast>
+          <offset>(0.25,0,0.15)</offset>
+        </dataEast>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_AT34_Helmet</ItemDef>
+        <slot>Head</slot>
+      </li>
+    </comps>
+  </ThingDef>
 </Defs>

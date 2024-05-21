@@ -146,7 +146,6 @@
         </apparel>
     </ThingDef>
 
-
     <ThingDef Name="DMS_ModuleApparelAttachment" ParentName="DMS_ModuleApparelBase" Abstract="True">
         <thingClass>WalkerGear.WalkerGear_Core</thingClass>
         <apparel>

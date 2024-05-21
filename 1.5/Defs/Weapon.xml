@@ -1,4 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
+  <ThingDef ParentName="DMS_AutomatroidHeavyGun">
+    <defName>DMS_Dragoon_LMG</defName>
+    <label>DragoonLMG</label>
+    <description>1111</description>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+      <li>LongShots</li>
+      <li>Ranged</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>DMS_MechWeaponHeavy</li>
+      <li>A_SuppressWeaponHeavy</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Things/Weapons/DMS_Dragoon_LMG</texPath>
+      <drawSize>3</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.8</AccuracyMedium>
+      <AccuracyLong>0.7</AccuracyLong>
+      <Mass>18.50</Mass>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>DMS_EquipmentHeavy</li>
+      </researchPrerequisites>
+    </recipeMaker>
+    <costList>
+      <Tungsteel>220</Tungsteel>
+      <ComponentStamped>4</ComponentStamped>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_AutocannonTurret</defaultProjectile>
+        <warmupTime>3</warmupTime>
+        <range>45</range>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <burstShotCount>20</burstShotCount>
+        <soundCast>Shot_Autocannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <modExtensions>
+      <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+        <def>MF_StandardMuzzleFalsh</def>
+        <drawSize>(0.75,0.75)</drawSize>
+        <offsets>
+          <li>(0.75,0)</li>
+        </offsets>
+        <isAlternately>true</isAlternately>
+      </li>
+    </modExtensions>
+  </ThingDef>
 </Defs>

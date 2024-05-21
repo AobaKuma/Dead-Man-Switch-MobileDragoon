@@ -1,124 +1,132 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <!-- F/A-47核心 -->
-    <ThingDef ParentName="DMS_ModuleItemBase">
-        <defName>DMS_Module_FA47_Core</defName>
-        <label>F/A-47 frame</label>
-        <description>todo.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_FA47_Core</ThingDef>
-        </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Item/Module</texPath>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>100</MaxHitPoints>
-            <Mass>8</Mass>
-            <Flammability>0</Flammability>
-        </statBases>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <EquipedThingDef>DMS_Apparel_FA47_Core</EquipedThingDef>
-                <slot>Core</slot>
-            </li>
-        </comps>
-    </ThingDef>
-    
-    <ThingDef ParentName="DMS_ModuleApparelCore">
-        <defName>DMS_Apparel_FA47_Core</defName>
-        <label>F/A-47 frame</label>
-        <description>Todo.</description>
-        <graphicData>
-            <texPath>Things/Dragoon/PV8/apparel_south</texPath>
-        </graphicData>
-        <statBases>
-            <Mass>10</Mass>
-            <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
-            <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-            <ArmorRating_Heat>0.10</ArmorRating_Heat>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.12</MoveSpeed>
-        </equippedStatOffsets>
-        <apparel>
-            <wornGraphicPath>Things/Dragoon/FA47/apparel</wornGraphicPath>
-            <drawData>
-                <scale>2.25</scale>
-                <dataNorth>
-                    <layer>70</layer>
-                </dataNorth>
-            </drawData>
-        </apparel>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <ItemDef>DMS_Module_FA47_Core</ItemDef>
-                <slot>Core</slot>
-            </li>
-        </comps>
-        <modExtensions>
-            <li Class="WalkerGear.BuildingWreckage">
-                <building>DMS_Building_Wreckage</building>
-            </li>
-        </modExtensions>
-    </ThingDef>
-
-    <!-- F/A-47頭盔 -->
-    <ThingDef ParentName="DMS_ModuleItemBase">
-        <defName>DMS_Module_FA47_Helmet</defName>
-        <label>F/A-47 helmet</label>
-        <description>todo.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_FA47_Helmet</ThingDef>
-        </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Item/Module</texPath>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>100</MaxHitPoints>
-            <Mass>8</Mass>
-            <Flammability>0</Flammability>
-        </statBases>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <EquipedThingDef>DMS_Apparel_FA47_Helmet</EquipedThingDef>
-                <slot>Head</slot>
-            </li>
-        </comps>
-    </ThingDef>
-
-    <ThingDef ParentName="DMS_ModuleApparelHead">
-        <defName>DMS_Apparel_FA47_Helmet</defName>
-        <label>F/A-47 helmet</label>
-        <description>Todo.</description>
-        <graphicData>
-            <texPath>Things/Dragoon/FA47/helmet_south</texPath>
-        </graphicData>
-        <statBases>
-            <Mass>0</Mass>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.12</MoveSpeed>
-        </equippedStatOffsets>
-        <apparel>
-            <wornGraphicPath>Things/Dragoon/FA47/helmet</wornGraphicPath>
-            <drawData>
-                <defaultData>
-                    <layer>20</layer>
-                    <offset>(0,0,0.15)</offset>
-                </defaultData>
-                <dataWest>
-                    <offset>(-0.25,0,0.15)</offset>
-                </dataWest>
-                <dataEast>
-                    <offset>(0.25,0,0.15)</offset>
-                </dataEast>
-            </drawData>
-        </apparel>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <ItemDef>DMS_Module_FA47_Helmet</ItemDef>
-                <slot>Head</slot>
-            </li>
-        </comps>
-    </ThingDef>
+  <!-- F/A-47核心 -->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_FA47_Core</defName>
+    <label>F/A-47 frame</label>
+    <description>todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_FA47_Core</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>8</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_FA47_Core</EquipedThingDef>
+        <slot>Core</slot>
+      </li>
+    </comps>
+    <costList>
+      <Tungsteel>325</Tungsteel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <ComponentStamped>12</ComponentStamped>
+      <Neurocomputer>1</Neurocomputer>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelCore">
+    <defName>DMS_Apparel_FA47_Core</defName>
+    <label>F/A-47 frame</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/PV8/apparel_south</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>10</Mass>
+      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.10</ArmorRating_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/FA47/apparel</wornGraphicPath>
+      <drawData>
+        <scale>2.25</scale>
+        <dataNorth>
+          <layer>70</layer>
+        </dataNorth>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_FA47_Core</ItemDef>
+        <slot>Core</slot>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="WalkerGear.BuildingWreckage">
+        <building>DMS_Building_Wreckage</building>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <!-- F/A-47頭盔 -->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_FA47_Helmet</defName>
+    <label>F/A-47 helmet</label>
+    <description>todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_FA47_Helmet</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>8</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_FA47_Helmet</EquipedThingDef>
+        <slot>Head</slot>
+      </li>
+    </comps>
+    <costList>
+      <Tungsteel>50</Tungsteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentStamped>2</ComponentStamped>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelHead">
+    <defName>DMS_Apparel_FA47_Helmet</defName>
+    <label>F/A-47 helmet</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/FA47/helmet_south</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>0</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/FA47/helmet</wornGraphicPath>
+      <drawData>
+        <defaultData>
+          <layer>20</layer>
+          <offset>(0,0,0.15)</offset>
+        </defaultData>
+        <dataWest>
+          <offset>(-0.25,0,0.15)</offset>
+        </dataWest>
+        <dataEast>
+          <offset>(0.25,0,0.15)</offset>
+        </dataEast>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_FA47_Helmet</ItemDef>
+        <slot>Head</slot>
+      </li>
+    </comps>
+  </ThingDef>
 </Defs>

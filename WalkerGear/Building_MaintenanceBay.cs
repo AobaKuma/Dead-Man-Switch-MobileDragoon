@@ -24,18 +24,17 @@ namespace WalkerGear
     public partial class Building_MaintenanceBay : Building, IThingHolder
     {
         //cached stuffs
-        private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
+        //private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
         public static readonly Texture2D rotateButton = new CachedTexture("UI/Rotate").Texture;
         public static readonly Texture2D rotateOppoButton = new CachedTexture("UI/RotateOppo").Texture;
         [Unsaved(false)]
         private CompPowerTrader cachedPowerComp;
-        
         private CompAffectedByFacilities abfComp;
         public bool hasGearCore;
 
         //Fileds
         public Rot4 direction = Rot4.South;
-        public List<SlotDef> slotDefs = new(); //所有槽位,画格子用
+        public HashSet<SlotDef> slotDefs = new(); //所有槽位,画格子用
         public Dictionary<SlotDef, Apparel> occupiedSlots = new();//已使用槽位
         public Dictionary<SlotDef, List<Thing>> availableCompsForSlots = new();
         public ThingOwner<Thing> innerContainer;
@@ -146,7 +145,7 @@ namespace WalkerGear
                 }
             }
             UpdateCache();
-            if (slotDefs.Empty()) slotDefs.Add(SlotDefOf.Core);
+            slotDefs.Add(SlotDefOf.Core);
         }
         public BuildingExtraRenderer ExtraRenderer
         {
@@ -219,7 +218,6 @@ namespace WalkerGear
             {
                 slotDefs.Add(s);
             }
-            slotDefs.RemoveDuplicates();
         }
         private void RemoveSlotWithChild(SlotDef slot)
         {
@@ -267,14 +265,18 @@ namespace WalkerGear
             foreach(Apparel a in ModuleStorage)
             {
                 foreach (var item in pawn.apparel.WornApparel)
-                if (!ApparelUtility.CanWearTogether(item.def, a.def, pawn.RaceProps.body)&& pawn.apparel.IsLocked(item)) return;
+                {
+                    if (!ApparelUtility.CanWearTogether(item.def, a.def, pawn.RaceProps.body) && pawn.apparel.IsLocked(item)) 
+                        return;
+                }
+                
             }
             for (int i = ModuleStorage.Count-1; i >=0;i--) {
                 Apparel a = ModuleStorage[i];
                 DummyApparels.Remove(a);
                 pawn.apparel.Wear(a,true, locked: true);
             }
-            pawn.apparel.WornApparel.Find((a)=>a is WalkerGear_Core c&&c.RefreshHP());
+            pawn.apparel.WornApparel.Find((a)=>a is WalkerGear_Core c&&c.RefreshHP(true));
             this.Clear();
         }
         public void GearDown(Pawn pawn)
@@ -300,6 +302,10 @@ namespace WalkerGear
             for (int j=0;j<tmpList.Count;j++)
             {
                 var a = tmpList[j];
+                if(a.TryGetQuality(out var quality)&& WalkerGear_Core.qualityToHPFactor.TryGetValue(quality,out var v))
+                {
+                    values[j]/= v;
+                }
                 if (values[j] >= a.HitPoints)
                 {
                     if (j < tmpList.Count - 1)
@@ -346,7 +352,7 @@ namespace WalkerGear
         {
             slotDefs.Clear();
             occupiedSlots.Clear();
-            slotDefs.AddDistinct(SlotDefOf.Core);
+            slotDefs.Add(SlotDefOf.Core);
             UpdateCache();
         }
 

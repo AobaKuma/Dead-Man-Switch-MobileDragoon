@@ -12,12 +12,12 @@
     </statBases>
     <useHitPoints>false</useHitPoints>
     <apparel>
-        <bodyPartGroups>
-            <li>FullHead</li>
-        </bodyPartGroups>
         <wornGraphicPath>Things/Dragoon/PV8/apparel</wornGraphicPath>
+        <bodyPartGroups>
+          <li>Waist</li>
+        </bodyPartGroups>
         <layers>
-            <li>Overhead</li>
+          <li>Belt</li>
         </layers>
         <renderSkipFlags>
           <li>Head</li>

@@ -273,6 +273,7 @@
     </comps>
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelArmLeft">
+    <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_PulseShield</defName>
     <label>pulse shield</label>
     <description>Todo.</description>
@@ -321,7 +322,7 @@
         <minDrawSize>3</minDrawSize>
         <energyOnReset>50</energyOnReset>
         <startingTicksToReset>1200</startingTicksToReset>
-        <tickerType>Normal</tickerType>
+        
       </li>
     </comps>
   </ThingDef>
@@ -351,6 +352,7 @@
     </comps>
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelAttachment">
+    <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_JumpThruster</defName>
     <label>burst thruster</label>
     <description>Todo.</description>
@@ -383,6 +385,16 @@
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_JumpThruster</ItemDef>
         <slot>Attachment</slot>
+      </li>
+      <li Class="CompProperties_ApparelReloadable">
+        <maxCharges>10</maxCharges>
+        <ammoDef>Chemfuel</ammoDef>
+        <ammoCountPerCharge>20</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>jump</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
       </li>
     </comps>
     <verbs>

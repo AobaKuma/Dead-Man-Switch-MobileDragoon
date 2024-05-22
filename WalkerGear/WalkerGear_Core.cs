@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
-using VFECore;
 
 namespace WalkerGear
 {
@@ -59,9 +58,10 @@ namespace WalkerGear
 		{
             foreach(var a in Wearer.apparel.WornApparel)
             {
-                if (a.IsShield(out var c))
-                {
 
+                if (a!= this && a.TryGetComp(out CompShield c))
+                {
+                    //Log.Message("Shield: "+a.def);
                     c.PostPreApplyDamage(ref dinfo, out var absorbed);
                     if (absorbed) return true;
                 }
@@ -83,7 +83,6 @@ namespace WalkerGear
             }
             return true;
 		}
-		
 		public float GetPostArmorDamage(DamageInfo dinfo)
 		{
             float amount = dinfo.Amount;
@@ -105,12 +104,31 @@ namespace WalkerGear
             }
             return amount;
         }
-		public bool RefreshHP()
+		public bool RefreshHP(bool setup=false)
 		{
+            if(setup)
+            {
+                healthInt = -1f;
+                combinedHealth = -1f;
+                modules.Clear();
+            }
 			CheckModules();
-			float hp=0f; modules.ForEach((t)=>hp+=t.HitPoints);
-			combinedHealth = hp;
-			healthInt = combinedHealth;
+			float hpmax=0f;
+            float hp=0f;
+            foreach (var t in modules)
+            {
+                if (t.TryGetQuality(out QualityCategory qc) && 
+                    qualityToHPFactor.TryGetValue(qc, out float factor))
+                {
+                    hpmax += t.def.BaseMaxHitPoints * factor;
+                    hp += t.HitPoints * factor;
+                    continue;
+                }
+                hpmax += t.def.BaseMaxHitPoints;
+                hp += t.HitPoints;
+            }
+			combinedHealth = hpmax;
+            if (setup) healthInt = hp;
             return true;
         }
 		public void CheckModules()
@@ -153,15 +171,30 @@ namespace WalkerGear
 		public override void ExposeData()
 		{
 			base.ExposeData();
-			Scribe_Values.Look(ref healthInt, "healthInt",-1);
+            Scribe_Values.Look(ref combinedHealth, "healthMax", -1f);
+			Scribe_Values.Look(ref healthInt, "healthInt",-1f);
 			Scribe_Values.Look(ref colorInt, "colorInt",Color.white);
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            {
+                RefreshHP();
+            }
 		}
+        
 
-		public Color colorInt = Color.white;
-		private float combinedHealth;
+        public Color colorInt = Color.white;
+		private float combinedHealth=-1;
 		private float healthInt = -1;
 		public List<Thing> modules = new();
         public static readonly Texture2D GetOutIcon = ContentFinder<Texture2D>.Get("Things/GetOffWalker", true);
+        public static readonly Dictionary<QualityCategory, float> qualityToHPFactor = new() {
+            {QualityCategory.Awful, 1f},
+            {QualityCategory.Poor,1.6f },
+            {QualityCategory.Normal,2f},
+            {QualityCategory.Good,2.3f},
+            {QualityCategory.Excellent,2.6f},
+            {QualityCategory.Masterwork,3f},
+            {QualityCategory.Legendary,3.6f }
+        };
     }
 
     public class BuildingWreckage : DefModExtension

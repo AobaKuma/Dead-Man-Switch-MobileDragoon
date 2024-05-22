@@ -194,9 +194,10 @@ namespace WalkerGear
                 bar.x = gizmoRect.xMax + 0.5f * bar.width;
             }
             Widgets.DrawBoxSolid(bar,Color.black);
-            bar.y-=bar.height*(1f-healthPerc);
-            bar.height*=healthPerc;
-            Widgets.DrawBoxSolid(bar,Color.green);
+            bar.yMin+=bar.height*(1f-healthPerc);
+            //bar.height*=healthPerc;          
+            var hColor = healthPerc < 0.3f?Color.red:healthPerc<0.7f?Color.yellow:Color.green;
+            Widgets.DrawBoxSolid(bar, hColor);
         }
         private void GizmoInteraction(Rect rect, Texture2D icon,SlotDef slot)
         {

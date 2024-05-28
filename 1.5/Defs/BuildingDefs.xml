@@ -12,7 +12,6 @@
       <drawSize>(4,4)</drawSize>
     </graphicData>
     <uiIconPath>Things/Building/DragoonBay</uiIconPath>
-    <tickerType>Normal</tickerType>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <canOverlapZones>false</canOverlapZones>
     <drawerType>MapMeshAndRealTime</drawerType>
@@ -55,23 +54,22 @@
       <li Class="CompProperties_ReportWorkSpeed">
         <workSpeedStat>WorkTableWorkSpeedFactor</workSpeedStat>
       </li>
+      <li Class="DMSLib.CompProperties_BuildingExtraRenderer">
+        <extraGraphic>
+          <li>
+            <texPath>Things/Building/DragoonBay_Top</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(4,4)</drawSize>
+            <drawOffset>(0,0.7,0)</drawOffset>
+          </li>
+        </extraGraphic>
+      </li>
     </comps>
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>PlaceWorker_ReportWorkSpeedPenalties</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
-    <modExtensions>
-      <li Class="WalkerGear.BuildingExtraRenderer">
-        <extraGraphic>
-          <texPath>Things/Building/DragoonBay_Top</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>(4,4)</drawSize>
-          <drawOffset>(0,0.7,0)</drawOffset>
-        </extraGraphic>
-        <altitudeLayer>BuildingOnTop</altitudeLayer>
-      </li>
-    </modExtensions>
   </ThingDef>
 
   <!-- 部件櫃 -->

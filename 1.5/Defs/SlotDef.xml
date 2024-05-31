@@ -2,7 +2,6 @@
 <Defs>
   <WalkerGear.SlotDef Name="BaseSlot" Abstract="true">
     <description>...</description>
-    <isCoreFrame>false</isCoreFrame>
     <supportedSlots>
     </supportedSlots>
   </WalkerGear.SlotDef>
@@ -19,7 +18,6 @@
       <li>MountLeft</li>
       <li>MountRight</li>
     </supportedSlots>
-    <isCoreFrame>true</isCoreFrame>
     <uiPriority>0</uiPriority>
   </WalkerGear.SlotDef>
 

@@ -14,7 +14,8 @@ namespace WalkerGear
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.Look<int>(ref remainingCharges, "remainingCharges", -999, false);
+            Scribe_Values.Look<int>(ref remainingCharges, "remainingCharges", -999);
+            Scribe_Values.Look(ref hp, "hp",-1);
             if (Scribe.mode == LoadSaveMode.PostLoadInit && remainingCharges == -999)
             {
                 remainingCharges = 0;
@@ -145,7 +146,38 @@ namespace WalkerGear
                 }
             }
         }
+        public int HP
+        {
+            get
+            {
+                if (parent is Apparel)
+                {
+                    return hp;
+                }
+                return parent.HitPoints;
+            }
+            set
+            {
+                if (parent is Apparel)
+                {
+                    hp= value;
+                    return;
 
+                }
+                parent.HitPoints=value;
+            }
+        }
+        public int MaxHP
+        {
+            get
+            {
+                if (parent is Apparel)
+                {
+                    return Props.ItemDef.BaseMaxHitPoints;
+                }
+                return parent.MaxHitPoints;
+            }
+        }
         public bool hasReloadableProps;
         public ThingDef ammoDef;
         public int ammoCountToRefill;
@@ -155,6 +187,7 @@ namespace WalkerGear
         public SoundDef soundReload;
         public int remainingCharges;
         public int maxCharges;
+        private int hp=-1;
     }
     public class CompProperties_WalkerComponent : CompProperties
     {

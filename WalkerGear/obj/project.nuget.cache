@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "SNqWA9kX/QW1IXrUsacw9r7OEar6kLufZOOdVIPJ3mQ5LZXzKLRRwM0PVaH9tIIR5gt0yPsPwjZzC9TlELLIJw==",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\WalkerGear.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sakil\\.nuget\\packages\\krafs.publicizer\\2.2.1\\krafs.publicizer.2.2.1.nupkg.sha512",
+    "C:\\Users\\sakil\\.nuget\\packages\\krafs.rimworld.ref\\1.5.4085\\krafs.rimworld.ref.1.5.4085.nupkg.sha512",
+    "C:\\Users\\sakil\\.nuget\\packages\\lib.harmony\\2.3.3\\lib.harmony.2.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}

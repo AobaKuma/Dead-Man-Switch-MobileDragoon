@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System.Collections.Generic;
 using Verse;
 using Verse.AI;
 
@@ -9,7 +10,6 @@ namespace WalkerGear
     {
         public override ThingRequest PotentialWorkThingRequest =>
             ThingRequest.ForDef(ThingDefOf.DMS_Building_ComponentStorage);
-
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {            
             return JobOnThing(pawn,t,forced)!=null;

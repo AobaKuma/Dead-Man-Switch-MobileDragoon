@@ -9,6 +9,15 @@ namespace WalkerGear
 {
     public static class MechUtility
 	{
+        public static readonly Dictionary<QualityCategory, float> qualityToHPFactor = new() {
+            {QualityCategory.Awful, 1f},
+            {QualityCategory.Poor,1.6f },
+            {QualityCategory.Normal,2f},
+            {QualityCategory.Good,2.3f},
+            {QualityCategory.Excellent,2.6f},
+            {QualityCategory.Masterwork,3f},
+            {QualityCategory.Legendary,3.6f }
+        };
         public static bool GetWalkerCore(this Pawn pawn, out WalkerGear_Core core)
         {
             Pawn_ApparelTracker apparel = pawn.apparel;
@@ -71,11 +80,11 @@ namespace WalkerGear
         private Color color;
         private int hp;
         public MechData(Thing thing) {
-            hp = thing.HitPoints;
-            thing.TryGetQuality(out quality);  
-            if(thing.TryGetComp<CompColorable>(out CompColorable colorable))color=colorable.Color;
+            thing.TryGetQuality(out quality);
+            if (thing.TryGetComp(out CompColorable colorable)) color = colorable.Color;
             if (thing.TryGetComp(out CompWalkerComponent comp))
             {
+                hp = comp.HP;
                 if (comp.hasReloadableProps)
                 {
                     remainingCharges = comp.remainingCharges;
@@ -88,19 +97,30 @@ namespace WalkerGear
             }
         }
         public void GetDataFromMech( Thing item) {
-            item.HitPoints = hp;
             if (item.TryGetComp<CompQuality>(out CompQuality compQuality)) compQuality.SetQuality(quality, null);
             item.SetColor(color);
-            if(item.TryGetComp<CompWalkerComponent>(out var comp)) comp.remainingCharges = remainingCharges;
+            if (item.TryGetComp<CompWalkerComponent>(out var comp))
+            {
+                comp.remainingCharges = remainingCharges;
+                comp.HP = hp;
+            }
         }
         public void SetDataToMech( Thing mech) {
-            mech.HitPoints = hp;
+            
 
             if (mech.TryGetComp<CompQuality>(out CompQuality compQuality)) compQuality.SetQuality(quality, null);
 
             mech.SetColor(color);
 
-            if (mech.TryGetComp<CompApparelReloadable>(out var comp))comp.remainingCharges = remainingCharges; 
+            if (mech.TryGetComp<CompApparelReloadable>(out var comp))
+            {
+                comp.remainingCharges = remainingCharges;
+            }
+            if (mech.TryGetComp<CompWalkerComponent>(out var c))
+            {
+
+                c.HP = hp;
+            }
         }
     }
 }

@@ -144,6 +144,7 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>DMS_Building_Wreckage</defName>
+    <label>wreckage</label>
     <graphicData>
       <texPath>Things/Building/ModulePlatform</texPath>
       <graphicClass>Graphic_Multi</graphicClass>

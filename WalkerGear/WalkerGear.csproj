@@ -62,18 +62,17 @@
     <Compile Include="DefOf\SlotDefOf.cs" />
     <Compile Include="Defs\SlotDef.cs" />
     <Compile Include="GUI\ITab_MechGear.cs" />
+    <Compile Include="Job\JobDriver_GetInWalkerCore.cs" />
     <Compile Include="Job\JobDriver_GetOffWalkerCore.cs" />
     <Compile Include="Job\JobDriver_RepairThing.cs" />
     <Compile Include="Job\JobDriver_ReturnToBay.cs" />
-    <Compile Include="Job\JobDriver_GetInWalkerCore.cs" />
     <Compile Include="Job\WorkGiver_ModuleMaintenance.cs" />
+    <Compile Include="MechDrawer.cs" />
     <Compile Include="MechUtility.cs" />
-    <Compile Include="Patch\Patch_PawnCanRepairNow.cs" />
-    <Compile Include="Comp\CompNoItemMode.cs" />
     <Compile Include="DefOf\ThingDefOf.cs" />
+    <Compile Include="PawnRenderNodeWorker_VerbCompTurret_Gunlike.cs" />
     <Compile Include="VerbCompTurret.cs" />
     <Compile Include="WalkerGear_Core.cs" />
-    <Compile Include="Defs\WalkerGearDef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

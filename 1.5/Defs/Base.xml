@@ -194,6 +194,18 @@
         </apparel>
     </ThingDef>
 
+    <ThingDef Name="DMS_ModuleApparelArmRight" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <apparel>
+          <bodyPartGroups>
+            <li>Waist</li>
+          </bodyPartGroups>
+          <layers>
+            <li>Overhead</li>
+          </layers>
+          <parentTagDef>WGApparelBody</parentTagDef>
+        </apparel>
+      </ThingDef>
+
     <PawnRenderNodeTagDef>
         <defName>WGApparel</defName>
     </PawnRenderNodeTagDef>

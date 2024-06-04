@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -31,7 +32,7 @@ namespace WalkerGear
         protected override void FillTab()
         {
             Text.Font = GameFont.Small;
-            Rect rect = new(0f, 0f, this.size.x, this.size.y);
+            Rect rect = new(Vector2.zero, size);
             Rect inner = rect.ContractedBy(3f);
             //Draw Title
             {
@@ -44,6 +45,7 @@ namespace WalkerGear
             }
 
             //Draw S/L solution
+            if(false)
             {
                 Vector2 slPosition = new(14f, inner.y);
 
@@ -66,49 +68,52 @@ namespace WalkerGear
                 Widgets.ButtonText(slgizmoRect, text);
             }
 
-            foreach (SlotDef slot in Parent.slotDefs)
+            if (!Parent.HasGearCore)
+            {
+                Draw_GizmoSlot(SlotDefOf.Core);
+                return;
+            }
+
+            foreach (SlotDef slot in DefDatabase<SlotDef>.AllDefs)
             {
                 Draw_GizmoSlot(slot);
             }
-            if (Parent.HasGearCore)
+            Vector2 position = positions[0];
+            //stats
+            {position.x =170f - (side / 5f);
+            position.y = 56f+(side * 2 + 5f);
+            Vector2 box = GizmoSize * 2f;
+            box.x *= 1.1f;
+            box.y = size.y - position.y - 10f;
+            Rect statBlock = new(position, box);
+                DrawStatEntries(statBlock, Parent.occupiedSlots[SlotDefOf.Core]);
+            }
+
+            //rotate&color
+            Vector2 rotateGizmosBotLeft = new(340f, 216f);
             {
-                Vector2 position = positions[0];
-                //stats
-                {position.x =170f - (side / 5f);
-                position.y = 56f+(side * 2 + 5f);
-                Vector2 box = GizmoSize * 2f;
-                box.x *= 1.1f;
-                box.y = size.y - position.y - 10f;
-                Rect statBlock = new(position, box);
-                    DrawStatEntries(statBlock, Parent.occupiedSlots[SlotDefOf.Core]);
-                }
-
-                //rotate&color
-                Vector2 rotateGizmosBotLeft = new(340f, 216f);
-                {
-                    Vector2 smallGizmoSize = new(30f,30f);
+                Vector2 smallGizmoSize = new(30f,30f);
                     
-                    for (int i = 0; i < 3; i++)
+                for (int i = 1; i < 3; i++)
+                {
+                    rotateGizmosBotLeft.y -= 30f;
+                    Rect gizmoRect = new(rotateGizmosBotLeft,smallGizmoSize);
+                    switch (i)
                     {
-                        rotateGizmosBotLeft.y -= 30f;
-                        Rect gizmoRect = new(rotateGizmosBotLeft,smallGizmoSize);
-                        switch (i)
-                        {
-                            case 0://染色
+                        case 0://染色
                                 
-                                break;
-                            case 1:
-                                if (Widgets.ButtonImage(gizmoRect, Building_MaintenanceBay.rotateButton))
-                                    Parent.direction.Rotate(RotationDirection.Clockwise);
-                                break;
-                            case 2:
+                            break;
+                        case 1:
+                            if (Widgets.ButtonImage(gizmoRect, Building_MaintenanceBay.rotateButton))
+                                Parent.direction.Rotate(RotationDirection.Clockwise);
+                            break;
+                        case 2:
 
-                                if (Widgets.ButtonImage(gizmoRect, Building_MaintenanceBay.rotateOppoButton))
-                                    Parent.direction.Rotate(RotationDirection.Counterclockwise);
-                                break;
-                            default:
-                                break;
-                        }
+                            if (Widgets.ButtonImage(gizmoRect, Building_MaintenanceBay.rotateOppoButton))
+                                Parent.direction.Rotate(RotationDirection.Counterclockwise);
+                            break;
+                        default:
+                            break;
                     }
                 }
             }
@@ -121,23 +126,26 @@ namespace WalkerGear
             Text.Anchor = TextAnchor.MiddleCenter;
             Vector2 position = positions[slot.uiPriority];
             Rect gizmoRect = new(position, GizmoSize);
-            if (slot.isCoreFrame) { 
+            if (slot.IsCoreFrame) { 
                 gizmoRect = gizmoRect.ScaledBy(2f); 
                 gizmoRect.position = position;
             }
             var disabledSlots = Parent.occupiedSlots?.GetValueOrDefault(SlotDefOf.Core)
                 ?.TryGetComp<CompWalkerComponent>().Props.ItemDef?.GetCompProperties<CompProperties_WalkerComponent>()?.disabledSlots;
+
             bool disabled = disabledSlots!=null&&disabledSlots.Contains(slot);
             bool hasThing = Parent.occupiedSlots.ContainsKey(slot);
-            float healthPerc = 0f;
             //标签
             {
-                TaggedString label = $"{slot.label.Translate()}";
+                string label = $"{slot.label.Translate()}";
                 if (hasThing)
                 {
                     Thing thing = Parent.occupiedSlots[slot];
-                    healthPerc = (float)thing.HitPoints / (float)thing.MaxHitPoints;
-                    label += "(" + healthPerc.ToStringPercent() + ")";
+                    var c = thing.TryGetComp<CompWalkerComponent>();
+                    var healthPerc = (float)c.HP / (float)c.MaxHP;
+                    label.Insert(0,"(" + healthPerc.ToStringPercent() + ")");
+                    //血条
+                    GizmoHealthBar(gizmoRect, slot, healthPerc);
                 }
                 else if (disabled)
                 {
@@ -148,9 +156,8 @@ namespace WalkerGear
                 Rect labelBlock = new(gizmoRect.x, gizmoRect.y - labelSize.y, gizmoRect.width, labelSize.y);
                 Widgets.LabelFit(labelBlock, label);
             }
-            //血条
-            if (hasThing)
-                GizmoHealthBar(gizmoRect, slot, Parent.occupiedSlots[slot]);
+            
+            
             //灰边
             {
                 Widgets.DrawBoxSolid(gizmoRect, grey);
@@ -180,9 +187,8 @@ namespace WalkerGear
             Text.Font = GameFont.Small;
             Text.Anchor = TextAnchor.UpperLeft;
         }
-        private void GizmoHealthBar(Rect gizmoRect,SlotDef slot,Thing t)
+        private void GizmoHealthBar(Rect gizmoRect,SlotDef slot,float healthPerc)
         {
-            var healthPerc = (float)t.HitPoints/t.MaxHitPoints;
             bool leftBar = slot.uiPriority == 0 || slot.uiPriority > 3;
             Rect bar = gizmoRect.LeftPart(1f/15f);
             if (leftBar)
@@ -201,7 +207,7 @@ namespace WalkerGear
         }
         private void GizmoInteraction(Rect rect, Texture2D icon,SlotDef slot)
         {
-            if (slot.isCoreFrame && Parent.HasGearCore)
+            if (slot.IsCoreFrame && Parent.HasGearCore)
             {
                 RenderTexture portrait = PortraitsCache.Get(Parent.Dummy, rect.size, Parent.direction);
                 Widgets.DrawTextureFitted(rect,portrait,1f);
@@ -228,7 +234,7 @@ namespace WalkerGear
                             {
                                 Thing thing = Parent.occupiedSlots[slot];
                                 string label = "Remove".Translate() + thing.LabelCap;
-                                Action action = () => Parent.RemoveComp(thing);
+                                Action action = () => Parent.RemoveModule(thing);
                                 options.Add(new FloatMenuOption(label, action, MenuOptionPriority.High));
                             }
                             options.AddRange(TryMakeOptions(slot));
@@ -241,16 +247,14 @@ namespace WalkerGear
         }
         private IEnumerable<FloatMenuOption> TryMakeOptions(SlotDef slot)
         {
-            Parent.UpdateCache();
-            if (Parent.availableCompsForSlots.ContainsKey(slot))
+
+            foreach (var thing in Parent.ModulesAvailable(slot))
             {
-                foreach (var thing in Parent.availableCompsForSlots[slot])
-                {
-                    string label = thing.LabelCap;
-                    Action action = () => Parent.AddOrReplaceComp(thing);
-                    yield return new FloatMenuOption(label,action);
-                }
+                string label = thing.LabelCap;
+                Action action = () => Parent.AddOrReplaceModule(thing);
+                yield return new FloatMenuOption(label,action);
             }
+
         }
         //Stats Components
         private void DrawStatEntries(Rect rect,Thing thing)

@@ -9,17 +9,17 @@ namespace WalkerGear
         /// <summary>
         /// 將組件從儲存位置搬運到維護港
         /// </summary>
-        public static JobDef WG_LoadComponent;
+        //public static JobDef WG_LoadComponent;
         /// <summary>
         /// 從維護塢插槽上移除並搬運組件
         /// </summary>
-        public static JobDef WG_RemoveComponent;
+        //public static JobDef WG_RemoveComponent;
         /// <summary>
         /// 維修物品形式的組件
         /// </summary>
         public static JobDef WG_RepairComponent;
 
-        public static JobDef WG_ModuleMaintenance;
+        //public static JobDef WG_ModuleMaintenance;
         /// <summary>
         /// 右鍵選擇後 移動到維護塢並登上Walker
         /// </summary>

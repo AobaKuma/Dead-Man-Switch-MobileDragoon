@@ -45,7 +45,7 @@ namespace WalkerGear
 		}
 		public float HealthDamaged=>HealthMax-Health;
         
-        public BuildingWreckage BuildingWreckage=>def.GetModExtension<BuildingWreckage>()??null;
+        public BuildingWreckage BuildingWreckage=>def.GetModExtension<BuildingWreckage>();
         public override IEnumerable<Gizmo> GetWornGizmos()
 		{
 			foreach(Gizmo gizmo in base.GetWornGizmos())
@@ -56,7 +56,12 @@ namespace WalkerGear
 		}
 		public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
 		{
-            foreach(var a in Wearer.apparel.WornApparel)
+            if (!dinfo.Def.harmsHealth)
+            {
+                return true;
+            }
+            float dmg = GetPostArmorDamage(dinfo);
+            foreach (var a in Wearer.apparel.WornApparel)
             {
 
                 if (a!= this && a.TryGetComp(out CompShield c))
@@ -66,16 +71,13 @@ namespace WalkerGear
                     if (absorbed) return true;
                 }
             }
-			if (!dinfo.Def.harmsHealth)
-			{
-				return true;
-			}
+			
             if (Health <= 0)
             {
                 return false;
             }
 
-            Health -= GetPostArmorDamage(dinfo);
+            Health -= dmg;
             if (Health <= 0)
             {
                 GearDestory();
@@ -102,6 +104,7 @@ namespace WalkerGear
             {
                 Log.Message("DMG Taken:" + amount);
             }
+            dinfo.SetAmount(amount);
             return amount;
         }
 		public bool RefreshHP(bool setup=false)
@@ -117,15 +120,15 @@ namespace WalkerGear
             float hp=0f;
             foreach (var t in modules)
             {
-                if (t.TryGetQuality(out QualityCategory qc) && 
-                    qualityToHPFactor.TryGetValue(qc, out float factor))
+                if (t.TryGetQuality(out QualityCategory qc) && t.TryGetComp<CompWalkerComponent>(out var wc)&&
+                    MechUtility.qualityToHPFactor.TryGetValue(qc, out float factor))
                 {
-                    hpmax += t.def.BaseMaxHitPoints * factor;
-                    hp += t.HitPoints * factor;
+                    hpmax += wc.MaxHP * factor;
+                    hp += wc.HP * factor;
                     continue;
                 }
-                hpmax += t.def.BaseMaxHitPoints;
-                hp += t.HitPoints;
+                hpmax += 100;
+                hp += 100;
             }
 			combinedHealth = hpmax;
             if (setup) healthInt = hp;
@@ -186,15 +189,7 @@ namespace WalkerGear
 		private float healthInt = -1;
 		public List<Thing> modules = new();
         public static readonly Texture2D GetOutIcon = ContentFinder<Texture2D>.Get("Things/GetOffWalker", true);
-        public static readonly Dictionary<QualityCategory, float> qualityToHPFactor = new() {
-            {QualityCategory.Awful, 1f},
-            {QualityCategory.Poor,1.6f },
-            {QualityCategory.Normal,2f},
-            {QualityCategory.Good,2.3f},
-            {QualityCategory.Excellent,2.6f},
-            {QualityCategory.Masterwork,3f},
-            {QualityCategory.Legendary,3.6f }
-        };
+        
     }
 
     public class BuildingWreckage : DefModExtension

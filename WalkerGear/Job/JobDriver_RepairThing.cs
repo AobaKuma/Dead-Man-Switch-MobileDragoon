@@ -33,7 +33,7 @@ namespace WalkerGear
             repair.tickAction = delegate
             {
                 Pawn actor = repair.actor;
-                actor.skills?.Learn(SkillDefOf.Crafting, 0.05f);
+                actor.skills?.Learn(SkillDefOf.Construction, 0.05f);
                 actor.rotationTracker.FaceTarget(actor.CurJob.GetTarget(TargetIndex.A));
 
                 float num = actor.GetStatValue(StatDefOf.WorkSpeedGlobal) * 1.7f;
@@ -51,7 +51,7 @@ namespace WalkerGear
                 }
             };
             repair.FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch);
-            repair.WithEffect(TargetThingA.def.repairEffect, TargetIndex.A);
+            repair.WithEffect(EffecterDefOf.MechRepairing, TargetIndex.A);
             repair.defaultCompleteMode = ToilCompleteMode.Never;
             repair.activeSkill = () => SkillDefOf.Crafting;
             repair.handlingFacing = true;

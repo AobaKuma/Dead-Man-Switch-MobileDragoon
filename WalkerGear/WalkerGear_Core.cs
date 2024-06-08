@@ -123,8 +123,8 @@ namespace WalkerGear
                 if (t.TryGetQuality(out QualityCategory qc) && t.TryGetComp<CompWalkerComponent>(out var wc)&&
                     MechUtility.qualityToHPFactor.TryGetValue(qc, out float factor))
                 {
-                    hpmax += wc.MaxHP * factor;
-                    hp += wc.HP * factor;
+                    hpmax += wc.MaxHP;
+                    hp += wc.HP;
                     continue;
                 }
                 hpmax += 100;
@@ -139,7 +139,7 @@ namespace WalkerGear
 			modules.Clear();
 			foreach(Apparel a in Wearer.apparel.WornApparel)
 			{
-				if (a.TryGetComp<CompWalkerComponent>(out var c))
+				if (a.HasComp<CompWalkerComponent>())
 				{
 					modules.Add(a);
                 }

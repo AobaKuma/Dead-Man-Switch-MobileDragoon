@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net.NetworkInformation;
 using RimWorld;
 using UnityEngine;
 using Verse;
 using Verse.AI;
-using Verse.Noise;
-using static Verse.HediffCompProperties_RandomizeSeverityPhases;
 
 
 namespace WalkerGear
@@ -22,7 +18,7 @@ namespace WalkerGear
         [Unsaved(false)]
         private CompPowerTrader cachedPowerComp;
         //Fileds
-        public Dictionary<SlotDef, Apparel> occupiedSlots = new();//已使用槽位
+        //public Dictionary<SlotDef, Apparel> occupiedSlots = new();//已使用槽位
         //Properties
         private CompPowerTrader PowerTraderComp
         {
@@ -65,13 +61,7 @@ namespace WalkerGear
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            foreach (Apparel a in DummyApparels.WornApparel)
-            {
-                if (a.TryGetComp<CompWalkerComponent>(out CompWalkerComponent c))
-                {
-                    occupiedSlots[c.Props.slot] = a;
-                }
-            }
+
         }
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
@@ -85,67 +75,32 @@ namespace WalkerGear
         public void RemoveModule(Thing t)
         {
             if (cachePawn == null) return;
-            if (occupiedSlots.Values.Contains((Apparel)t))
+            if (DummyApparels.Contains(t))
             {
-                SlotDef s = t.TryGetComp<CompWalkerComponent>().Props.slot;
-                GenPlace.TryPlaceThing(MechUtility.Conversion(t),Position,Map,ThingPlaceMode.Direct);
-                occupiedSlots.Remove(s);
-                foreach (var slot in s.supportedSlots)
-                {
-                    if (occupiedSlots.ContainsKey(slot)) 
-                        RemoveModule(occupiedSlots[slot]);
-                }
+                GenPlace.TryPlaceThing(MechUtility.Conversion(t), Position, Map, ThingPlaceMode.Direct);
             }
         }
-        public void AddOrReplaceModule(Thing t)
+        public void Add(Thing t)
         {
             if (cachePawn == null) return;
-            SlotDef s = t.TryGetComp<CompWalkerComponent>().Props.slot;
-            if (occupiedSlots.ContainsKey(s))
-            {
-                RemoveModule(occupiedSlots[s]);
-            }
-
-            if (MechUtility.Conversion(t) is Apparel a) {
-                DummyApparels.Wear(a);
-                occupiedSlots[s] = a;
-            }
-        }
-        private void Clear()
-        {
-            occupiedSlots.Clear();
+            Apparel a = MechUtility.Conversion(t) as Apparel;
+            DummyApparels.Wear(a);
         }
     }
     //给Itab提供的功能
     public partial class Building_MaintenanceBay
     {
         public Rot4 direction = Rot4.South;//缓存Itab里pawn的方向
-        private CompAffectedByFacilities abfComp;
-        public CompAffectedByFacilities ABFComp
-        {
-            get
-            {
-                return abfComp ??= this.TryGetComp<CompAffectedByFacilities>();
-            }
-        }
-        public bool HasGearCore =>hasGearCore=occupiedSlots.ContainsKey(SlotDefOf.Core);
-        private bool hasGearCore;
-        public IEnumerable<Thing> ModulesAvailable(SlotDef slot)
-        {
-            foreach(var t in ABFComp.LinkedFacilitiesListForReading)
-            {
-                if (t is Building_Storage bs&&bs.HasComp<CompComponentStorage>())
+        public bool HasGearCore{
+            get {
+                foreach (var a in DummyApparels.WornApparel)
                 {
-                    foreach (var module in bs.slotGroup.HeldThings)
-                    {
-                        if (module.TryGetComp<CompWalkerComponent>(out var c)&&c.Props.slot==slot)
-                        {
-                            yield return module;
-                        }
-                    }
+                    if (a is WalkerGear_Core) return true;
                 }
+                return false;
             }
         }
+
     }
     //穿脱龙骑兵
     public partial class Building_MaintenanceBay
@@ -224,7 +179,6 @@ namespace WalkerGear
                 pawn.apparel.Wear(a, true, locked: true);
             }
             pawn.apparel.WornApparel.Find((a) => a is WalkerGear_Core c && c.RefreshHP(true));
-            Clear();
         }
         public void GearDown(Pawn pawn)
         {
@@ -245,32 +199,36 @@ namespace WalkerGear
             WalkerGear_Core core = (WalkerGear_Core)tmpApparelList.Find((a) => a is WalkerGear_Core);
             if (core == null) return;
             List<float> values = new();
-            Rand.SplitRandomly(core.HealthDamaged, tmpApparelList.Count, values);
+            Log.Message(core.HealthDamaged);
+            if (core.HealthDamaged>0)
+            {
+                Rand.SplitRandomly(core.HealthDamaged, tmpApparelList.Count, values);
+            }
+            
 
             for (int j = 0; j < tmpApparelList.Count; j++)
             {
                 var a = tmpApparelList[j];
-                if (a.TryGetQuality(out var quality) && MechUtility.qualityToHPFactor.TryGetValue(quality, out var v))
-                {
-                    values[j] /= v;
-                }
                 var c = a.TryGetComp<CompWalkerComponent>();
-                if (values[j] >= c.HP)
+                if (!values.Empty())
                 {
-                    if (j < tmpApparelList.Count - 1)
+                    if (values[j] >= c.HP)
                     {
-                        values[j + 1] += values[j] - c.HP;
+                        if (j < tmpApparelList.Count - 1)
+                        {
+                            values[j + 1] += values[j] - c.HP;
+                        }
+                        c.HP = 1;
                     }
-                    c.HP = 1;
+                    else
+                    {
+                        c.HP -= Mathf.FloorToInt(values[j]);
+                    }
                 }
-                else
-                {
-                    c.HP -= Mathf.FloorToInt(values[j]);
-                }
+                
                 DummyApparels.Wear(a);
-                SlotDef s = a.TryGetComp<CompWalkerComponent>().Props.slot;
-                occupiedSlots[s] = a;
             }
+            ITab_MechGear.needUpdateCache=true;
             tmpApparelList.Clear();
         }
 
@@ -297,7 +255,13 @@ namespace WalkerGear
         public List<Apparel> ModuleStorage {
             get
             {
-                return occupiedSlots.Values.ToList();
+                List<Apparel> tmp = new();
+                foreach(Apparel a in DummyApparels.WornApparel)
+                {
+                    if (a.HasComp<CompWalkerComponent>())
+                        tmp.Add(a);
+                }
+                return tmp;
             }
         }
         public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)

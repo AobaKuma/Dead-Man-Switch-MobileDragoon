@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building_MaintenanceBay.cs" />
+    <Compile Include="Comp\CompApparelForcedWeapon.cs" />
     <Compile Include="Comp\CompWreckage.cs" />
     <Compile Include="Comp\CompComponentStorage.cs" />
     <Compile Include="Comp\CompWalkerComponent.cs" />
@@ -62,15 +63,15 @@
     <Compile Include="DefOf\SlotDefOf.cs" />
     <Compile Include="Defs\SlotDef.cs" />
     <Compile Include="GUI\ITab_MechGear.cs" />
+    <Compile Include="HarmonyInit.cs" />
     <Compile Include="Job\JobDriver_GetInWalkerCore.cs" />
     <Compile Include="Job\JobDriver_GetOffWalkerCore.cs" />
     <Compile Include="Job\JobDriver_RepairThing.cs" />
     <Compile Include="Job\JobDriver_ReturnToBay.cs" />
     <Compile Include="Job\WorkGiver_ModuleMaintenance.cs" />
-    <Compile Include="MechDrawer.cs" />
     <Compile Include="MechUtility.cs" />
     <Compile Include="DefOf\ThingDefOf.cs" />
-    <Compile Include="PawnRenderNodeWorker_VerbCompTurret_Gunlike.cs" />
+    <Compile Include="Pawn_EquipmentTracker_Patch.cs" />
     <Compile Include="VerbCompTurret.cs" />
     <Compile Include="WalkerGear_Core.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,7 +96,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.5.4085</Version>
+      <Version>1.5.4104</Version>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
       <Version>2.3.3</Version>

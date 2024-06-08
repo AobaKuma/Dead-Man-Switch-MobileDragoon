@@ -158,11 +158,11 @@ namespace WalkerGear
             }
             set
             {
+                Log.Message(value);
                 if (parent is Apparel)
                 {
                     hp= value;
                     return;
-
                 }
                 parent.HitPoints=value;
             }
@@ -171,13 +171,17 @@ namespace WalkerGear
         {
             get
             {
-                if (parent is Apparel)
-                {
-                    return Props.ItemDef.BaseMaxHitPoints;
+                if (maxhp < 0) {
+                    float m = parent is Apparel ? Props.ItemDef.BaseMaxHitPoints : parent.MaxHitPoints;
+                    if (parent.TryGetQuality(out var qc))
+                        m *= MechUtility.qualityToHPFactor[qc];
+                    maxhp = Mathf.FloorToInt(m);
                 }
-                return parent.MaxHitPoints;
+                
+                return maxhp;
             }
         }
+        
         public bool hasReloadableProps;
         public ThingDef ammoDef;
         public int ammoCountToRefill;
@@ -188,6 +192,7 @@ namespace WalkerGear
         public int remainingCharges;
         public int maxCharges;
         private int hp=-1;
+        private int maxhp=-1;
     }
     public class CompProperties_WalkerComponent : CompProperties
     {
@@ -198,9 +203,21 @@ namespace WalkerGear
         public ThingDef EquipedThingDef;//提供的裝備
         public ThingDef ItemDef;//物品def
         public SlotDef slot;//被填裝時的槽位
+        public List<SlotDef> slots;
         public List<SlotDef> disabledSlots;
         public float repairEfficiency = 0.01f;//作為物品被修理的效率
+        public override IEnumerable<string> ConfigErrors(ThingDef parentDef)
+        {
+            if (slots.NullOrEmpty()&& slot!=null)
+            {
+                (slots??=new()).Add(slot);
+            }
+            else if(slot==null){
+                return base.ConfigErrors(parentDef).Append("No proper slot");
+            }
+            return base.ConfigErrors(parentDef);
 
+        }
     }
 
 

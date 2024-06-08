@@ -9,6 +9,7 @@ namespace WalkerGear
 {
     public static class MechUtility
 	{
+        static MechData mechData = new();
         public static readonly Dictionary<QualityCategory, float> qualityToHPFactor = new() {
             {QualityCategory.Awful, 1f},
             {QualityCategory.Poor,1.6f },
@@ -51,19 +52,19 @@ namespace WalkerGear
         public static Thing Conversion(this Thing source)
         {
             if (!source.TryGetComp(out CompWalkerComponent comp)) return null;
-            MechData data =new(source);
+            mechData.Init(source);
             Thing outcome;
 
             if (comp.parent.def.IsApparel)
             {
                 Thing item = ThingMaker.MakeThing(comp.Props.ItemDef);
-                data.GetDataFromMech(item);
+                mechData.GetDataFromMech(item); 
                 outcome = item;
             }
             else
             {
                 Thing mech = ThingMaker.MakeThing(comp.Props.EquipedThingDef);
-                data.SetDataToMech(mech);
+                mechData.SetDataToMech(mech);
                 outcome = mech;
             }
             
@@ -79,7 +80,18 @@ namespace WalkerGear
         private QualityCategory quality;
         private Color color;
         private int hp;
-        public MechData(Thing thing) {
+        public MechData()
+        {
+
+        }
+
+        public void Init(Thing thing)
+        {
+            quality =default;
+            color = default;
+            remainingCharges = default;
+            hp = default;
+
             thing.TryGetQuality(out quality);
             if (thing.TryGetComp(out CompColorable colorable)) color = colorable.Color;
             if (thing.TryGetComp(out CompWalkerComponent comp))
@@ -89,11 +101,11 @@ namespace WalkerGear
                 {
                     remainingCharges = comp.remainingCharges;
                 }
-                else if(thing.TryGetComp<CompApparelReloadable>(out var reloadable))
+                else if (thing.TryGetComp<CompApparelReloadable>(out var reloadable))
                 {
                     remainingCharges = reloadable.RemainingCharges;
                 }
-                if(remainingCharges<0)remainingCharges= 0;
+                if (remainingCharges < 0) remainingCharges = 0;
             }
         }
         public void GetDataFromMech( Thing item) {
@@ -102,7 +114,7 @@ namespace WalkerGear
             if (item.TryGetComp<CompWalkerComponent>(out var comp))
             {
                 comp.remainingCharges = remainingCharges;
-                comp.HP = hp;
+                comp.HP = Mathf.FloorToInt((hp / MechUtility.qualityToHPFactor[quality]));
             }
         }
         public void SetDataToMech( Thing mech) {
@@ -119,7 +131,7 @@ namespace WalkerGear
             if (mech.TryGetComp<CompWalkerComponent>(out var c))
             {
 
-                c.HP = hp;
+                c.HP = Mathf.FloorToInt(hp * MechUtility.qualityToHPFactor[quality]);
             }
         }
     }

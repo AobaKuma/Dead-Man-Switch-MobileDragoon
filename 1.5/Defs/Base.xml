@@ -68,14 +68,15 @@
     <ThingDef Name="DMS_ModuleApparelBase" Abstract="True">
         <thingClass>Apparel</thingClass>
         <category>Item</category>
-        <tradeability>None</tradeability>
         <destroyOnDrop>true</destroyOnDrop>
+        <tradeability>None</tradeability>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
         <drawerType>MapMeshOnly</drawerType>
         <selectable>True</selectable>
         <pathCost>14</pathCost>
         <useHitPoints>false</useHitPoints>
         <techLevel>Industrial</techLevel>
-        <generateCommonality>0</generateCommonality>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1.00</drawSize>

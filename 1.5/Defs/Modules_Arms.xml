@@ -121,43 +121,8 @@
       <MoveSpeed>-0.12</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>WalkerGear.PawnRenderNode_VerbCompTurret</nodeClass>
-          <workerClass>WalkerGear.PawnRenderNodeWorker_VerbCompTurret</workerClass>
-          <texPath>Things/Weapons/DMS_Dragoon_LMG</texPath>
-          <anchorTag>Gun</anchorTag>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <drawSize>2.9</drawSize>
-          <baseLayer>40</baseLayer>
-          <pawnType>Any</pawnType>
-          <drawData>
-            <scale>0.75</scale>
-            <defaultData>
-              <layer>30</layer>
-            </defaultData>
-            <dataSouth>
-              <offset>(-0.4,0,-0.5)</offset>
-              <layer>10</layer>
-            </dataSouth>
-            <dataNorth>
-              <offset>(1,0,0.25)</offset>
-              <layer>30</layer>
-            </dataNorth>
-            <dataWest>
-              <offset>(0.4,0,-0.8)</offset>
-              <layer>10</layer>
-              <flip>true</flip>
-            </dataWest>
-            <dataEast>
-              <offset>(-0.1,0,-0.15)</offset>
-            </dataEast>
-          </drawData>
-        </li>
-      </renderNodeProperties>
     </apparel>
-    <verbs>
+    <!-- <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <label>Gun</label>
@@ -171,13 +136,13 @@
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
-    </verbs>
+    </verbs> -->
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_WeaponLmg</ItemDef>
         <slot>ArmRight</slot>
       </li>
-      <li Class="MVCF.Comps.CompProperties_VerbGiver">
+      <!-- <li Class="MVCF.Comps.CompProperties_VerbGiver">
           <verbProps>
             <li>
               <label>Gun</label>
@@ -192,7 +157,10 @@
               </comps>
             </li>
           </verbProps>
-        </li>
+        </li> -->
+      <li Class="WalkerGear.CompProperties_ForceUseWeapon">
+        <weapon>DMS_Dragoon_LMG</weapon>
+      </li>
     </comps>
   </ThingDef>
   

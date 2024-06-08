@@ -4,6 +4,10 @@
     <defName>DMS_Dragoon_LMG</defName>
     <label>DragoonLMG</label>
     <description>1111</description>
+    <destroyOnDrop>true</destroyOnDrop>
+    <tradeability>None</tradeability>
+    <generateCommonality>0</generateCommonality>
+    <generateAllowChance>0</generateAllowChance>
     <weaponClasses>
       <li>RangedHeavy</li>
       <li>LongShots</li>
@@ -63,5 +67,8 @@
         <isAlternately>true</isAlternately>
       </li>
     </modExtensions>
+    <comps>
+      <li><compClass>WalkerGear.CompApparelForcedWeapon</compClass></li>
+    </comps>
   </ThingDef>
 </Defs>

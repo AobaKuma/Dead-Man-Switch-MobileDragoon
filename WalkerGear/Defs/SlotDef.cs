@@ -18,19 +18,17 @@ namespace WalkerGear
         public int uiPriority; //slot在UI里占用的格子
         public SlotDef parentSlot;
         public bool IsCoreFrame => this ==SlotDefOf.Core;
-
         
         public override void ResolveReferences()
         {
             base.ResolveReferences();
-            LongEventHandler.ExecuteWhenFinished(() => ResolveAvailableComps());
+            ResolveAvailableComps();
         }
         private void ResolveAvailableComps()
         {
             cachedAvailableComponents = DefDatabase<ThingDef>.AllDefs.Where<ThingDef>(t =>
             {
-                if (!t.HasComp<CompWalkerComponent>()) return false;
-                return t.GetCompProperties<CompProperties_WalkerComponent>().slot == this;
+                return t.HasComp<CompWalkerComponent>() && t.GetCompProperties<CompProperties_WalkerComponent>().slot == this;
             }).ToList<ThingDef>();
         }
     }

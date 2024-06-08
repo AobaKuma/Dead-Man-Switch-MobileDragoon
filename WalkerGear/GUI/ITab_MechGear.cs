@@ -4,22 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
-
+using static Verse.Text;
 
 namespace WalkerGear
 {
     [StaticConstructorOnStartup]
-    public class ITab_MechGear : ITab
+    public partial class ITab_MechGear : ITab
     {
         public ITab_MechGear()
         {
-            this.size = new Vector2(512f, 368f);
-            this.labelKey = "TabMechGear".Translate();
+            size = new Vector2(512f, 368f);
+            labelKey = "TabMechGear".Translate();
         }
-        private Building_MaintenanceBay Parent
-        {
-            get => SelThing as Building_MaintenanceBay;
-        }
+        
         private const float side = 80f;
         private Vector2 GizmoSize
         {
@@ -31,17 +28,20 @@ namespace WalkerGear
 
         protected override void FillTab()
         {
+            if (needUpdateCache)
+            {
+                UpdateOccupiedSlotsCache();
+            }   
             Text.Font = GameFont.Small;
             Rect rect = new(Vector2.zero, size);
             Rect inner = rect.ContractedBy(3f);
             //Draw Title
             {
-                Text.Anchor = TextAnchor.UpperRight;
+                Anchor = TextAnchor.UpperRight;
                 string title = "MechSolution".Translate();
-                Vector2 titleSize = Text.CalcSize(title);
-                Rect titleBox = new(new Vector2(inner.xMax - titleSize.x - 20f, inner.y), titleSize);
-                Widgets.LabelFit(titleBox, title);
-                Text.Anchor = TextAnchor.UpperLeft;
+                var titleSize = CalcSize(title);
+                Widgets.LabelFit(new(new(inner.xMax - titleSize.x - 20f, inner.y), titleSize), title);
+                Anchor = TextAnchor.UpperLeft;
             }
 
             //Draw S/L solution
@@ -50,19 +50,19 @@ namespace WalkerGear
                 Vector2 slPosition = new(14f, inner.y);
 
                 string text = "Save".Translate();
-                Vector2 size = Text.CalcSize(text);
+                Vector2 size = CalcSize(text);
                 size.Scale(new(1.2f,1.2f));
                 Rect slgizmoRect = new(slPosition, size);
                 Widgets.ButtonText(slgizmoRect,text);
                 text = "Load".Translate();
                 slgizmoRect.x = slgizmoRect.xMax + 10f;
-                size=Text.CalcSize(text);
+                size=CalcSize(text);
                 size.Scale(new(1.2f, 1.2f));
                 slgizmoRect.size = size;
                 Widgets.ButtonText(slgizmoRect, text);
                 text = "UnArm".Translate();
                 slgizmoRect.x = slgizmoRect.xMax + 10f;
-                size = Text.CalcSize(text);
+                size = CalcSize(text);
                 size.Scale(new(1.2f, 1.2f));
                 slgizmoRect.size = size;
                 Widgets.ButtonText(slgizmoRect, text);
@@ -86,7 +86,7 @@ namespace WalkerGear
             box.x *= 1.1f;
             box.y = size.y - position.y - 10f;
             Rect statBlock = new(position, box);
-                DrawStatEntries(statBlock, Parent.occupiedSlots[SlotDefOf.Core]);
+                DrawStatEntries(statBlock, occupiedSlots[SlotDefOf.Core]);
             }
 
             //rotate&color
@@ -123,36 +123,37 @@ namespace WalkerGear
         //Gizmo Components
         public void Draw_GizmoSlot(SlotDef slot)
         {
-            Text.Anchor = TextAnchor.MiddleCenter;
+            Anchor = TextAnchor.MiddleCenter;
             Vector2 position = positions[slot.uiPriority];
             Rect gizmoRect = new(position, GizmoSize);
             if (slot.IsCoreFrame) { 
                 gizmoRect = gizmoRect.ScaledBy(2f); 
                 gizmoRect.position = position;
             }
-            var disabledSlots = Parent.occupiedSlots?.GetValueOrDefault(SlotDefOf.Core)
+            var disabledSlots = occupiedSlots.GetValueOrDefault(SlotDefOf.Core)
                 ?.TryGetComp<CompWalkerComponent>().Props.ItemDef?.GetCompProperties<CompProperties_WalkerComponent>()?.disabledSlots;
 
             bool disabled = disabledSlots!=null&&disabledSlots.Contains(slot);
-            bool hasThing = Parent.occupiedSlots.ContainsKey(slot);
+            bool hasThing = occupiedSlots.ContainsKey(slot);
             //标签
             {
-                string label = $"{slot.label.Translate()}";
+                string label = "";
                 if (hasThing)
                 {
-                    Thing thing = Parent.occupiedSlots[slot];
+                    Thing thing = occupiedSlots[slot];
                     var c = thing.TryGetComp<CompWalkerComponent>();
-                    var healthPerc = (float)c.HP / (float)c.MaxHP;
-                    label.Insert(0,"(" + healthPerc.ToStringPercent() + ")");
+                    var healthPerc = c.HP / (float)c.MaxHP;
+                    //label+="(" + healthPerc.ToStringPercent() + ")";
                     //血条
                     GizmoHealthBar(gizmoRect, slot, healthPerc);
                 }
-                else if (disabled)
+                label += $"{slot.label.Translate()}";
+                if (disabled)
                 {
                     label += "("+"Disabled".Translate()+")";
                 }
                 Text.Font = GameFont.Small;
-                Vector2 labelSize = Text.CalcSize(label);
+                Vector2 labelSize = CalcSize(label);
                 Rect labelBlock = new(gizmoRect.x, gizmoRect.y - labelSize.y, gizmoRect.width, labelSize.y);
                 Widgets.LabelFit(labelBlock, label);
             }
@@ -172,7 +173,7 @@ namespace WalkerGear
             if(disabled) return;
             Texture2D icon = EmptySlotIcon;
             if (hasThing)
-                icon = new CachedTexture(Parent.occupiedSlots[slot].def.graphicData.texPath).Texture;
+                icon = new CachedTexture(occupiedSlots[slot].def.graphicData.texPath).Texture;
             GizmoInteraction(gizmoRect,icon,slot);
             Widgets.DrawHighlightIfMouseover(gizmoRect);
             //部件名字
@@ -182,10 +183,10 @@ namespace WalkerGear
                 nameBlock.y+=nameBlock.height-26f;
                 nameBlock.height = 26f;
                 GUI.DrawTexture(nameBlock, TexUI.TextBGBlack);
-                Widgets.LabelFit(nameBlock, Parent.occupiedSlots[slot].LabelCap);
+                Widgets.LabelFit(nameBlock, occupiedSlots[slot].LabelCap);
             }
             Text.Font = GameFont.Small;
-            Text.Anchor = TextAnchor.UpperLeft;
+            Anchor = TextAnchor.UpperLeft;
         }
         private void GizmoHealthBar(Rect gizmoRect,SlotDef slot,float healthPerc)
         {
@@ -209,49 +210,53 @@ namespace WalkerGear
         {
             if (slot.IsCoreFrame && Parent.HasGearCore)
             {
-                RenderTexture portrait = PortraitsCache.Get(Parent.Dummy, rect.size, Parent.direction);
+                RenderTexture portrait = PortraitsCache.Get(Parent.Dummy, 0.75f*rect.size, Parent.direction);
                 Widgets.DrawTextureFitted(rect,portrait,1f);
             }
             else Widgets.DrawTextureFitted(rect, icon, 1f);
 
-            if (Widgets.ButtonInvisible(rect, icon))//没做完
+            if (!Widgets.ButtonInvisible(rect, icon)) return;//没做完
+            
+            switch (Event.current.button)
             {
-                switch (Event.current.button)
-                {
-                    case 0://左键
+                case 0://左键
+                    {
+                        if (occupiedSlots.ContainsKey(slot))
                         {
-                            if (Parent.occupiedSlots.ContainsKey(slot))
-                            {
-                                Find.WindowStack.Add(new Dialog_InfoCard(Parent.occupiedSlots[slot]));
-                            }
-                            else Find.WindowStack.Add(new Dialog_InfoCard(slot));
-                            break;
+                            Find.WindowStack.Add(new Dialog_InfoCard(occupiedSlots[slot]));
                         }
-                    case 1://右键
-                        {
-                            List<FloatMenuOption> options = new();
-                            if (Parent.occupiedSlots.ContainsKey(slot))
-                            {
-                                Thing thing = Parent.occupiedSlots[slot];
-                                string label = "Remove".Translate() + thing.LabelCap;
-                                Action action = () => Parent.RemoveModule(thing);
-                                options.Add(new FloatMenuOption(label, action, MenuOptionPriority.High));
-                            }
-                            options.AddRange(TryMakeOptions(slot));
-                            if (!options.Empty())
-                                Find.WindowStack.Add(new FloatMenu(options));
-                            break;
-                        }
-                }
-            }
-        }
-        private IEnumerable<FloatMenuOption> TryMakeOptions(SlotDef slot)
-        {
+                        else Find.WindowStack.Add(new Dialog_InfoCard(slot));
+                        break;
+                    }
+                case 1://右键
+                    {
+                        List<FloatMenuOption> options = GizmoFloatMenu(slot).ToList();
 
-            foreach (var thing in Parent.ModulesAvailable(slot))
+                        Find.WindowStack.Add(new FloatMenu(options));
+                        break;
+                    }
+            }
+            
+        }
+        private IEnumerable<FloatMenuOption> GizmoFloatMenu(SlotDef slot)
+        {
+            if (occupiedSlots.TryGetValue(slot,out Thing t))
+            {
+                yield return new("Remove".Translate(t.LabelCap), () => RemoveModules(slot), MenuOptionPriority.High);
+            }
+            var modules = GetAvailableModules(slot);
+            if (modules.EnumerableNullOrEmpty())
+            {
+                if (!occupiedSlots.ContainsKey(slot))
+                {
+                    yield return new("NoModuleForSlot", null);
+                }
+                yield break;
+            }
+            foreach (var thing in modules)
             {
                 string label = thing.LabelCap;
-                Action action = () => Parent.AddOrReplaceModule(thing);
+                Action action = () => AddOrReplaceModule(thing);
                 yield return new FloatMenuOption(label,action);
             }
 
@@ -294,5 +299,98 @@ namespace WalkerGear
         private static readonly List<StatDef> toDraw = new() {
             StatDefOf.ArmorRating_Sharp, StatDefOf.ArmorRating_Blunt,StatDefOf.ArmorRating_Heat
         };
+    }
+    //和维护坞连接
+    public partial class ITab_MechGear
+    {
+        public static bool needUpdateCache=false;
+        private Building_MaintenanceBay Parent
+        {
+            get => SelThing as Building_MaintenanceBay;
+        }
+        private static readonly Dictionary<SlotDef, Thing> occupiedSlots = new();
+        private static readonly List<SlotDef> toRemove=new();
+        public override void OnOpen()
+        {
+            base.OnOpen();
+            UpdateOccupiedSlotsCache();
+        }
+        public void UpdateOccupiedSlotsCache()
+        {
+            occupiedSlots.Clear();
+            foreach (var a in Parent.DummyApparels.WornApparel)
+            {
+                if (a.TryGetComp<CompWalkerComponent>(out var c))
+                {
+                    foreach (var s in c.Props.slots)
+                    {
+                        occupiedSlots[s] = a;
+                    }
+                }
+            }
+            needUpdateCache = false;
+        }
+        private IEnumerable<Thing> GetAvailableModules(SlotDef slotDef)
+        {
+            if (!Parent.TryGetComp(out CompAffectedByFacilities abf))
+            {
+                yield break;
+            }
+            foreach (var b in abf.LinkedFacilitiesListForReading)
+            {
+                if (b is not Building_Storage s)
+                {
+                    continue;
+                }
+                foreach (var t in s.GetSlotGroup().HeldThings)
+                {
+                    if (!t.TryGetComp(out CompWalkerComponent c)|| !c.Props.slots.Contains(slotDef))
+                    {
+                        continue;
+                    }
+                    yield return t;
+                }
+            }
+
+        }
+        private void RemoveModules(SlotDef slot,bool updateNow=true)
+        {
+            if (!occupiedSlots.ContainsKey(slot)) return;
+            toRemove.Clear();
+            GetSupportedSlotRecur(slot);
+            foreach (var s in toRemove)
+            {
+                if (occupiedSlots.TryGetValue(s,out var t))
+                {
+                    Parent.RemoveModule(t);
+                }
+                
+            }
+            if (updateNow)
+            {
+                UpdateOccupiedSlotsCache();
+            }
+        }
+        private void AddOrReplaceModule(Thing thing)
+        {
+            if (!thing.TryGetComp(out CompWalkerComponent c)) return;
+            foreach (var s in c.Props.slots)
+            {
+                RemoveModules(s,false);
+            }
+            Parent.Add(thing);
+            UpdateOccupiedSlotsCache();
+        }
+        private static void GetSupportedSlotRecur(SlotDef slotDef)
+        {
+            if (!slotDef.supportedSlots.NullOrEmpty())
+            {
+                foreach (var s in slotDef.supportedSlots)
+                {
+                    GetSupportedSlotRecur(s);
+                }
+            }
+            toRemove.Add(slotDef);
+        }
     }
 }

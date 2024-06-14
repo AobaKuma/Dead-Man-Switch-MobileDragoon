@@ -16,7 +16,7 @@
           "build/Krafs.Publicizer.targets": {}
         }
       },
-      "Krafs.Rimworld.Ref/1.5.4085": {
+      "Krafs.Rimworld.Ref/1.5.4104": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -149,7 +149,7 @@
           "build/Krafs.Publicizer.targets": {}
         }
       },
-      "Krafs.Rimworld.Ref/1.5.4085": {
+      "Krafs.Rimworld.Ref/1.5.4104": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -282,7 +282,7 @@
           "build/Krafs.Publicizer.targets": {}
         }
       },
-      "Krafs.Rimworld.Ref/1.5.4085": {
+      "Krafs.Rimworld.Ref/1.5.4104": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -415,7 +415,7 @@
           "build/Krafs.Publicizer.targets": {}
         }
       },
-      "Krafs.Rimworld.Ref/1.5.4085": {
+      "Krafs.Rimworld.Ref/1.5.4104": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -548,7 +548,7 @@
           "build/Krafs.Publicizer.targets": {}
         }
       },
-      "Krafs.Rimworld.Ref/1.5.4085": {
+      "Krafs.Rimworld.Ref/1.5.4104": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -686,17 +686,17 @@
         "krafs.publicizer.nuspec"
       ]
     },
-    "Krafs.Rimworld.Ref/1.5.4085": {
-      "sha512": "cCmMo/U96zJm1bQfOKYIUo5Cj9DowuPjGaBLtbr+NU4cwGKFJFBQZpJu0Z7G9mWZ1yFi503dVJUyFWp7zQX7Zg==",
+    "Krafs.Rimworld.Ref/1.5.4104": {
+      "sha512": "/EQrSATOpDbBNtYDQJIT27FMNTuzL6fVuvyCxoqHWWdoINjljPna8s2/9wqD5AwDGiG9A8QN53zXnWTqUdy0Cw==",
       "type": "package",
-      "path": "krafs.rimworld.ref/1.5.4085",
+      "path": "krafs.rimworld.ref/1.5.4104",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "README.md",
         "icon.png",
-        "krafs.rimworld.ref.1.5.4085.nupkg.sha512",
+        "krafs.rimworld.ref.1.5.4104.nupkg.sha512",
         "krafs.rimworld.ref.nuspec",
         "ref/net472/Assembly-CSharp-firstpass.dll",
         "ref/net472/Assembly-CSharp.dll",
@@ -840,39 +840,37 @@
     ".NETFramework,Version=v4.8": [
       "DMSLibs >= 1.0.0",
       "Krafs.Publicizer >= 2.2.1",
-      "Krafs.Rimworld.Ref >= 1.5.4085",
+      "Krafs.Rimworld.Ref >= 1.5.4104",
       "Lib.Harmony >= 2.3.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sakil\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\WalkerGear.csproj",
+      "projectUniqueName": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\WalkerGear.csproj",
       "projectName": "WalkerGear",
-      "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\WalkerGear.csproj",
-      "packagesPath": "C:\\Users\\sakil\\.nuget\\packages\\",
-      "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\obj\\",
+      "projectPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\WalkerGear.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\sakil\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net48"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net48": {
           "projectReferences": {
-            "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\DMSLibs\\DMSLibs.csproj": {
-              "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\DMSLibs\\DMSLibs.csproj"
+            "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\DMSLibs\\DMSLibs.csproj": {
+              "projectPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\DMSLibs\\DMSLibs.csproj"
             }
           }
         }
@@ -894,7 +892,7 @@
           },
           "Krafs.Rimworld.Ref": {
             "target": "Package",
-            "version": "[1.5.4085, )"
+            "version": "[1.5.4104, )"
           },
           "Lib.Harmony": {
             "target": "Package",

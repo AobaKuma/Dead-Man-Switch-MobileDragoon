@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- (左)紅外傳感器 -->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_PileBunker</defName>
+    <label>pile bunker</label>
+    <description>一種安裝於龍騎兵機體上的工程模塊，由於其工作效率極高因此也經常被用來拆除建築時使用，讓那些訓練機能在一定程度上能做點別的事情。</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_PileBunker</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>20</Mass>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_PileBunker</EquipedThingDef>
+        <slot>ArmRight</slot>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelArmLeft">
+    <tickerType>Normal</tickerType>
+    <defName>DMS_Apparel_PileBunker</defName>
+    <label>pile bunker</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/PileBunker/apparel_south</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>20</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.1</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/PileBunker/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.5</scale>
+        <defaultData>
+          <layer>0</layer>
+        </defaultData>
+        <dataSouth>
+          <offset>(-0.85,0,0.10)</offset>
+        </dataSouth>
+        <dataNorth>
+          <offset>(0.75,0,0.0)</offset>
+          <layer>72</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(-0.40,0,0.7)</offset>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.05,0,-0.4)</offset>
+          <layer>10</layer>
+        </dataEast>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_PileBunker</ItemDef>
+        <slot>ArmRight</slot>
+      </li>
+    </comps>
+		<tools>
+			<li>
+				<label>tungsteel pile</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>100</power>
+        <armorPenetration>2.0</armorPenetration>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <chanceFactor>1.8</chanceFactor>
+				<cooldownTime>4.5</cooldownTime>
+			</li>
+			<li>
+				<label>mechanical tool</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>18</power>
+        <armorPenetration>0.5</armorPenetration>
+				<cooldownTime>1</cooldownTime>
+			</li>
+		</tools>
+  </ThingDef>
+
+  <!-- (右)lmg-->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_WeaponLmg</defName>
+    <label>LMG</label>
+    <description>todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_WeaponLmg</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>24</Mass>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_WeaponLmg</EquipedThingDef>
+        <slot>ArmRight</slot>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelArmRight">
+    <defName>DMS_Apparel_WeaponLmg</defName>
+    <label>LMG</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Weapons/DMS_Dragoon_LMG</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>24</Mass>
+    </statBases>
+    <apparel>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_WeaponLmg</ItemDef>
+        <slot>ArmRight</slot>
+      </li>
+      <li Class="WalkerGear.CompProperties_ForceUseWeapon">
+        <weapon>DMS_Dragoon_LMG</weapon>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- (右)鈾彈砲-->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_WeaponSlugCannon</defName>
+    <label>Slug Cannon</label>
+    <description>一種由閉鎖式線膛砲改造的龍騎兵武裝，精確且具有十足的威力能夠對建築與重裝甲目標造成破壞.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_WeaponSlugCannon</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>30</Mass>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_WeaponLmg</EquipedThingDef>
+        <slot>ArmRight</slot>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelArmRight">
+    <defName>DMS_Apparel_WeaponSlugCannon</defName>
+    <label>slug cannon</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Weapons/DMS_Dragoon_Rifle</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>30</Mass>
+    </statBases>
+    <apparel>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_WeaponSlugCannon</ItemDef>
+        <slot>ArmRight</slot>
+      </li>
+      <li Class="WalkerGear.CompProperties_ForceUseWeapon">
+        <weapon>DMS_Dragoon_SlugCannon</weapon>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

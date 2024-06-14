@@ -290,7 +290,7 @@
         </comps>
     </ThingDef>
 
-    <!-- (左)肩部導彈 -->
+    <!-- (左)4x反工事導彈 -->
     <ThingDef ParentName="DMS_ModuleItemBase">
         <defName>DMS_Module_MissilePod</defName>
         <label>Missile Pod</label>
@@ -317,16 +317,16 @@
     </ThingDef>
     <ThingDef ParentName="DMS_ModuleApparelMountLeft">
         <defName>DMS_Apparel_MissilePod</defName>
-        <label>Missile Pod</label>
+        <label>Demolish Missile Pod</label>
         <description>Todo.</description>
         <graphicData>
-            <texPath>Things/Dragoon/MissilePod/apparel_south</texPath>
+            <texPath>Things/Dragoon/MissilePod/apparel_north</texPath>
         </graphicData>
         <statBases>
             <Mass>0</Mass>
         </statBases>
         <equippedStatOffsets>
-            <MoveSpeed>-0.12</MoveSpeed>
+            <MoveSpeed>-0.25</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
             <wornGraphicPath>Things/Dragoon/MissilePod/apparel</wornGraphicPath>
@@ -336,18 +336,18 @@
                     <layer>20</layer>
                 </defaultData>
                 <dataSouth>
-                    <offset>(0.50,0,1.05)</offset>
+                    <offset>(0.95,0,0.9)</offset>
                     <layer>0</layer>
                 </dataSouth>
                 <dataNorth>
-                    <offset>(-0.50,0,0.45)</offset>
-                    <layer>20</layer>
+                    <offset>(-0.95,0,0.7)</offset>
+                    <layer>80</layer>
                 </dataNorth>
                 <dataWest>
-                    <offset>(0.80,0,0.45)</offset>
+                    <offset>(0.75,0,0.55)</offset>
                 </dataWest>
                 <dataEast>
-                    <offset>(-0.80,0,0.8)</offset>
+                    <offset>(-0.55,0,0.95)</offset>
                     <layer>0</layer>
                 </dataEast>
             </drawData>
@@ -372,7 +372,7 @@
                     <canTargetLocations>true</canTargetLocations>
                     <canTargetBuildings>true</canTargetBuildings>
                 </targetParams>
-                <defaultProjectile>Bullet_9M311V</defaultProjectile>
+                <defaultProjectile>Bullet_9M311V</defaultProjectile><!-- 投射物有待修改 -->
                 <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
             </li>
         </verbs>
@@ -380,7 +380,111 @@
             <li Class="CompProperties_ApparelReloadable">
                 <maxCharges>4</maxCharges>
                 <ammoDef>Steel</ammoDef>
-                <ammoCountPerCharge>25</ammoCountPerCharge>
+                <ammoCountPerCharge>20</ammoCountPerCharge>
+                <baseReloadTicks>60</baseReloadTicks>
+                <soundReload>Standard_Reload</soundReload>
+                <hotKey>Misc4</hotKey>
+                <chargeNoun>missile</chargeNoun>
+                <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+            </li>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <ItemDef>DMS_Module_MissilePod</ItemDef>
+                <slot>MountLeft</slot>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- (左)肩部蜂窩導彈(SRM) -->
+    <ThingDef ParentName="DMS_ModuleItemBase">
+        <defName>DMS_Module_SwarmMissilePod</defName>
+        <label>Swarm Missile Pod</label>
+        <description>todo.</description>
+        <descriptionHyperlinks>
+            <ThingDef>DMS_Apparel_SwarmMissilePod</ThingDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/Module</texPath>
+        </graphicData>
+        <statBases>
+            <Mass>8</Mass>
+        </statBases>
+        <costList>
+            <Steel>100</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <EquipedThingDef>DMS_Apparel_SwarmMissilePod</EquipedThingDef>
+                <slot>MountLeft</slot>
+            </li>
+        </comps>
+    </ThingDef>
+    <ThingDef ParentName="DMS_ModuleApparelMountLeft">
+        <defName>DMS_Apparel_SwarmMissilePod</defName>
+        <label>Missile Pod</label>
+        <description>Todo.</description>
+        <graphicData>
+            <texPath>Things/Dragoon/MissilePodSwarm/apparel_north</texPath>
+        </graphicData>
+        <statBases>
+            <Mass>0</Mass>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.2</MoveSpeed>
+        </equippedStatOffsets>
+        <apparel>
+            <wornGraphicPath>Things/Dragoon/MissilePodSwarm/apparel</wornGraphicPath>
+            <drawData>
+                <scale>0.75</scale>
+                <defaultData>
+                    <layer>20</layer>
+                </defaultData>
+                <dataSouth>
+                    <offset>(0.95,0,0.9)</offset>
+                    <layer>10</layer>
+                </dataSouth>
+                <dataNorth>
+                    <offset>(-0.95,0,0.95)</offset>
+                    <layer>80</layer>
+                </dataNorth>
+                <dataWest>
+                    <offset>(0.75,0,0.55)</offset>
+                </dataWest>
+                <dataEast>
+                    <offset>(-0.15,0,1.1)</offset>
+                    <layer>0</layer>
+                </dataEast>
+            </drawData>
+        </apparel>
+        <verbs>
+            <li>
+                <label>launch missile</label>
+                <verbClass>Verb_LaunchProjectileStatic</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <commandIcon>UI/Ability/Missile</commandIcon>
+                <onlyManualCast>True</onlyManualCast>
+                <range>99.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>2</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>RocketswarmLauncher_Fire</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>14</muzzleFlashScale>
+                <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                    <canTargetBuildings>true</canTargetBuildings>
+                </targetParams>
+                <defaultProjectile>Bullet_9M311V</defaultProjectile><!-- 投射物有待修改 -->
+                <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_ApparelReloadable">
+                <maxCharges>4</maxCharges>
+                <ammoDef>Steel</ammoDef>
+                <ammoCountPerCharge>20</ammoCountPerCharge>
                 <baseReloadTicks>60</baseReloadTicks>
                 <soundReload>Standard_Reload</soundReload>
                 <hotKey>Misc4</hotKey>
@@ -435,23 +539,23 @@
         <apparel>
             <wornGraphicPath>Things/Dragoon/MissilePod8/apparel</wornGraphicPath>
             <drawData>
-                <scale>1</scale>
+                <scale>0.75</scale>
                 <defaultData>
                     <layer>20</layer>
                 </defaultData>
                 <dataSouth>
-                    <offset>(0.50,0,1.05)</offset>
+                    <offset>(0.95,0,0.9)</offset>
                     <layer>0</layer>
                 </dataSouth>
                 <dataNorth>
-                    <offset>(-0.50,0,0.45)</offset>
-                    <layer>20</layer>
+                    <offset>(-0.95,0,0.7)</offset>
+                    <layer>80</layer>
                 </dataNorth>
                 <dataWest>
-                    <offset>(0.80,0,0.45)</offset>
+                    <offset>(0.75,0,0.55)</offset>
                 </dataWest>
                 <dataEast>
-                    <offset>(-0.80,0,0.8)</offset>
+                    <offset>(-0.55,0,0.95)</offset>
                     <layer>0</layer>
                 </dataEast>
             </drawData>

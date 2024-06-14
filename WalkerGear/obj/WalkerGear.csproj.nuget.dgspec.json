@@ -1,28 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\WalkerGear.csproj": {}
+    "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\WalkerGear.csproj": {}
   },
   "projects": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\DMSLibs\\DMSLibs.csproj": {
+    "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\DMSLibs\\DMSLibs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\DMSLibs\\DMSLibs.csproj",
+        "projectUniqueName": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\DMSLibs\\DMSLibs.csproj",
         "projectName": "DMSLibs",
-        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\DMSLibs\\DMSLibs.csproj",
-        "packagesPath": "C:\\Users\\sakil\\.nuget\\packages\\",
-        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\DMSLibs\\obj\\",
+        "projectPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\DMSLibs\\DMSLibs.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\DMSLibs\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\sakil\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net48"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,32 +69,30 @@
         }
       }
     },
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\WalkerGear.csproj": {
+    "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\WalkerGear.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\WalkerGear.csproj",
+        "projectUniqueName": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\WalkerGear.csproj",
         "projectName": "WalkerGear",
-        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\WalkerGear.csproj",
-        "packagesPath": "C:\\Users\\sakil\\.nuget\\packages\\",
-        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\obj\\",
+        "projectPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\WalkerGear.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\sakil\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net48"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net48": {
             "projectReferences": {
-              "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\DMSLibs\\DMSLibs.csproj": {
-                "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\DMSLibs\\DMSLibs.csproj"
+              "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\DMSLibs\\DMSLibs.csproj": {
+                "projectPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\DMSLibs\\DMSLibs.csproj"
               }
             }
           }
@@ -118,7 +114,7 @@
             },
             "Krafs.Rimworld.Ref": {
               "target": "Package",
-              "version": "[1.5.4085, )"
+              "version": "[1.5.4104, )"
             },
             "Lib.Harmony": {
               "target": "Package",

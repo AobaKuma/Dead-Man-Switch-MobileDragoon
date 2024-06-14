@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- (背)推進器 -->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_JumpThruster</defName>
+    <label>burst thruster</label>
+    <description>龍騎兵使用的重型推進器，由四具噴氣引擎驅動整個機體進行短距離飛行，也能夠在消耗大量燃料的狀況下進行較長距離的突擊空襲。</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_JumpThruster</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>60</Mass>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_JumpThruster</EquipedThingDef>
+        <slot>Attachment</slot>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelAttachment">
+    <tickerType>Normal</tickerType>
+    <defName>DMS_Apparel_JumpThruster</defName>
+    <label>burst thruster</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/BurstThruster/apparel_south</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>60</Mass>
+      <JumpRange>14.9</JumpRange>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/BurstThruster/apparel</wornGraphicPath>
+      <drawData>
+        <scale>2.25</scale>
+        <defaultData>
+          <layer>16</layer>
+        </defaultData>
+        <dataSouth>
+          <layer>-4</layer>
+        </dataSouth>
+        <dataNorth>
+          <layer>75</layer>
+        </dataNorth>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_JumpThruster</ItemDef>
+        <slot>Attachment</slot>
+      </li>
+      <li Class="CompProperties_ApparelReloadable">
+        <maxCharges>10</maxCharges>
+        <ammoDef>Chemfuel</ammoDef>
+        <ammoCountPerCharge>20</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>jump</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>Verb_Jump</verbClass>
+        <label>jump</label>
+        <violent>false</violent>
+        <hasStandardCommand>true</hasStandardCommand>
+        <onlyManualCast>True</onlyManualCast>
+        <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+        <warmupTime>1</warmupTime>
+        <warmupEffecter>JumpWarmupEffect</warmupEffecter>
+        <requireLineOfSight>true</requireLineOfSight>
+        <flightEffecterDef>JumpFlightEffect</flightEffecterDef>
+        <soundLanding>JumpPackLand</soundLanding>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>false</canTargetPawns>
+          <canTargetBuildings>false</canTargetBuildings>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- (背)機控背包，這種大包會占用到右肩層 -->
+  <!-- 穿戴者能夠給玩家機械師提供額外的控制範圍，以及一個範圍性的EMP技能 -->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_PackControlRelay</defName>
+    <label>relay pack</label>
+    <description>todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_PackControlRelay</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>30</Mass>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_PackControlRelay</EquipedThingDef>
+        <slots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelAttachment">
+    <tickerType>Normal</tickerType>
+    <defName>DMS_Apparel_PackControlRelay</defName>
+    <label>relay pack</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/PackControlRelay/apparel_north</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>30</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/PackControlRelay/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.125</scale>
+        <defaultData>
+          <layer>16</layer>
+        </defaultData>
+        <dataSouth>
+          <layer>-2</layer>
+          <offset>(0,0,0.9)</offset>
+        </dataSouth>
+        <dataEast>
+          <layer>0</layer>
+          <offset>(-1.05,0,0.5)</offset>
+        </dataEast>
+        <dataWest>
+          <layer>0</layer>
+          <offset>(1.05,0,0.5)</offset>
+        </dataWest>
+        <dataNorth>
+          <layer>75</layer>
+          <offset>(0,0,0.15)</offset>
+        </dataNorth>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_PackControlRelay</ItemDef>
+        <slots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- 穿戴者能夠給玩家機械師提供額外的控制範圍，以及一個範圍性的EMP技能 -->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_PackEngineering</defName>
+    <label>engineering pack</label>
+    <description>安裝於龍騎兵框架上的工程用模塊，具有一對輔助機械臂來進行建築、維修、搬運與加工等後勤工作。</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_PackEngineering</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>35</Mass>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_PackEngineering</EquipedThingDef>
+        <slots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelAttachment">
+    <tickerType>Normal</tickerType>
+    <defName>DMS_Apparel_PackEngineering</defName>
+    <label>engineering pack</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/PackEngineering/apparel_north</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>35</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/PackEngineering/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.125</scale>
+        <defaultData>
+          <layer>16</layer>
+        </defaultData>
+        <dataSouth>
+          <layer>-2</layer>
+          <offset>(0,0,0.9)</offset>
+        </dataSouth>
+        <dataEast>
+          <layer>0</layer>
+          <offset>(-1.05,0,0.5)</offset>
+        </dataEast>
+        <dataWest>
+          <layer>0</layer>
+          <offset>(1.05,0,0.5)</offset>
+        </dataWest>
+        <dataNorth>
+          <layer>75</layer>
+          <offset>(0,0,0.15)</offset>
+        </dataNorth>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_PackControlRelay</ItemDef>
+        <slots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

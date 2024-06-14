@@ -25,9 +25,9 @@ namespace WalkerGear
         public string Tooltips => "StructurePoint.Tooltip".Translate();
 
         public Texture2D FullShieldBarTex => fBarTex;
-        private static readonly Texture2D fBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.2f, 0.2f, 0.24f));
+        public static readonly Texture2D fBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.2f, 0.2f, 0.24f));
         public Texture2D EmptyShieldBarTex => eBarTex;
-        private static readonly Texture2D eBarTex = SolidColorMaterials.NewSolidColorTexture(Color.clear);
+        public static readonly Texture2D eBarTex = SolidColorMaterials.NewSolidColorTexture(Color.clear);
         #endregion
         public float HealthMax => MaxHitPoints < combinedHealth?combinedHealth: MaxHitPoints;
 		public float Health

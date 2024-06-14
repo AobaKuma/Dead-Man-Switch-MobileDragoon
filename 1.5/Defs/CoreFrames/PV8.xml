@@ -39,12 +39,14 @@
     </graphicData>
     <statBases>
       <Mass>10</Mass>
-      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
       <ArmorRating_Heat>0.10</ArmorRating_Heat>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.12</MoveSpeed>
+      <MoveSpeed>-0.2</MoveSpeed>
+			<WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
+			<VEF_MassCarryCapacity>575</VEF_MassCarryCapacity>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/PV8/apparel</wornGraphicPath>

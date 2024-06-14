@@ -29,6 +29,7 @@
       <Neurocomputer>1</Neurocomputer>
     </costList>
   </ThingDef>
+    <!-- F/A-47，能增加額外的跳躍距離 -->
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_FA47_Core</defName>
     <label>F/A-47 frame</label>
@@ -37,13 +38,16 @@
       <texPath>Things/Dragoon/PV8/apparel_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>10</Mass>
+      <Mass>80</Mass>
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.10</ArmorRating_Heat>
+      <ArmorRating_Heat>0.80</ArmorRating_Heat>
+      <JumpRange>9.9</JumpRange>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.12</MoveSpeed>
+			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
+			<VEF_MassCarryCapacity>480</VEF_MassCarryCapacity>
+      <MoveSpeed>0.5</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/FA47/apparel</wornGraphicPath>

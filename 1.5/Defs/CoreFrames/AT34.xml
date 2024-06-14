@@ -22,6 +22,10 @@
       <Mass>8</Mass>
       <Flammability>0</Flammability>
     </statBases>
+    <equippedStatOffsets>
+			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
+			<VEF_MassCarryCapacity>600</VEF_MassCarryCapacity>
+    </equippedStatOffsets>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_AT34_Core</EquipedThingDef>
@@ -48,7 +52,7 @@
       <ArmorRating_Heat>0.10</ArmorRating_Heat>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.12</MoveSpeed>
+      <MoveSpeed>-0.1</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/AT34/apparel</wornGraphicPath>

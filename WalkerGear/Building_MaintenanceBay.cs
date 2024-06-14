@@ -199,7 +199,7 @@ namespace WalkerGear
             WalkerGear_Core core = (WalkerGear_Core)tmpApparelList.Find((a) => a is WalkerGear_Core);
             if (core == null) return;
             List<float> values = new();
-            Log.Message(core.HealthDamaged);
+            //Log.Message(core.HealthDamaged);
             if (core.HealthDamaged>0)
             {
                 Rand.SplitRandomly(core.HealthDamaged, tmpApparelList.Count, values);
@@ -247,11 +247,15 @@ namespace WalkerGear
                     cachePawn.apparel.DestroyAll();
                     cachePawn.rotationInt = Rotation.Opposite;
                     cachePawn.apparel.Wear((Apparel)ThingMaker.MakeThing(ThingDefOf.Apparel_Dummy));
+                    cachePawn.drafter = new(cachePawn)
+                    {
+                        Drafted = true
+                    };
                 }
                 return cachePawn;
             }
         }
-        public Pawn_ApparelTracker DummyApparels => Dummy.apparel;
+        public Pawn_ApparelTracker DummyApparels => Dummy?.apparel;
         public List<Apparel> ModuleStorage {
             get
             {

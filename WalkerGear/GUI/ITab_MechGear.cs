@@ -123,7 +123,7 @@ namespace WalkerGear
         //Gizmo Components
         public void Draw_GizmoSlot(SlotDef slot)
         {
-            Anchor = TextAnchor.MiddleCenter;
+            using (new TextBlock(TextAnchor.MiddleCenter)) {
             Vector2 position = positions[slot.uiPriority];
             Rect gizmoRect = new(position, GizmoSize);
             if (slot.IsCoreFrame) { 
@@ -185,8 +185,7 @@ namespace WalkerGear
                 GUI.DrawTexture(nameBlock, TexUI.TextBGBlack);
                 Widgets.LabelFit(nameBlock, occupiedSlots[slot].LabelCap);
             }
-            Text.Font = GameFont.Small;
-            Anchor = TextAnchor.UpperLeft;
+            }
         }
         private void GizmoHealthBar(Rect gizmoRect,SlotDef slot,float healthPerc)
         {
@@ -210,7 +209,7 @@ namespace WalkerGear
         {
             if (slot.IsCoreFrame && Parent.HasGearCore)
             {
-                RenderTexture portrait = PortraitsCache.Get(Parent.Dummy, 0.75f*rect.size, Parent.direction);
+                RenderTexture portrait = PortraitsCache.Get(Parent.Dummy, rect.size, Parent.direction,cameraZoom:0.75f);
                 Widgets.DrawTextureFitted(rect,portrait,1f);
             }
             else Widgets.DrawTextureFitted(rect, icon, 1f);
@@ -264,27 +263,29 @@ namespace WalkerGear
         //Stats Components
         private void DrawStatEntries(Rect rect,Thing thing)
         {
-            WidgetRow row = new(rect.x,rect.y,UIDirection.RightThenDown,rect.width);
-            float curY;
+            WidgetRow row = new(rect.x,rect.y,UIDirection.RightThenDown,rect.width,gap:-8);
             row.Label("Performance".Translate());
             row.Gap(int.MaxValue);
+            float loadPercent = Mathf.Max(1f,currentLoad / massCapacity);
+            row.FillableBar(rect.width, 16f, loadPercent,$"{currentLoad.ToStringDecimalIfSmall() }/{massCapacity.ToStringDecimalIfSmall()}",WalkerGear_Core.fBarTex);
             //replace
-            row.Gap(int.MaxValue);
-            row.Gap(int.MaxValue);
-            row.Gap(int.MaxValue);
-            row.Label("OverallArmor".Translate());
-            curY = row.FinalY;            
+            row.Label("OverallArmor".Translate());     
             foreach (StatDef statDef in toDraw)
             {
-                float statValue = thing.GetStatValue(statDef, true, -1);
+                float statValue = thing.GetStatValue(statDef);
                 if (statDef.showOnDefaultValue || statValue != statDef.defaultBaseValue)
                 {
-                    curY += new StatDrawEntry(statDef.category, statDef, statValue, StatRequest.For(thing), ToStringNumberSense.Undefined, null, false).
-                        Draw(rect.x,curY,rect.width,false,false,false,null,null,new Vector2(),new Rect());
-                     
+                    row.Gap(int.MaxValue);
+                    var t=statDef.LabelCap;
+                    var v =statValue>4?statValue.ToStringDecimalIfSmall():statValue.ToStringPercent();
+                    
+                    row.Label(t);
+                    row.Gap(rect.width-CalcSize(t + v).x-8f);
+                    row.Label(v);
                 }
             }
         }
+
 
         private static readonly Dictionary<int, Vector2> positions = new()
         {
@@ -296,8 +297,11 @@ namespace WalkerGear
             {5,new(412f,164f)},
             {6,new(412f,282f)},
         };
-        private static readonly List<StatDef> toDraw = new() {
-            StatDefOf.ArmorRating_Sharp, StatDefOf.ArmorRating_Blunt,StatDefOf.ArmorRating_Heat
+        private static readonly List<StatDef> toDraw = new()
+        {
+            StatDefOf.ArmorRating_Sharp,
+            StatDefOf.ArmorRating_Blunt,
+            StatDefOf.ArmorRating_Heat
         };
     }
     //和维护坞连接
@@ -310,6 +314,9 @@ namespace WalkerGear
         }
         private static readonly Dictionary<SlotDef, Thing> occupiedSlots = new();
         private static readonly List<SlotDef> toRemove=new();
+        private static float massCapacity;
+        private static float currentLoad;
+
         public override void OnOpen()
         {
             base.OnOpen();
@@ -318,10 +325,14 @@ namespace WalkerGear
         public void UpdateOccupiedSlotsCache()
         {
             occupiedSlots.Clear();
+            massCapacity = 0;
+            currentLoad = 0;
             foreach (var a in Parent.DummyApparels.WornApparel)
             {
                 if (a.TryGetComp<CompWalkerComponent>(out var c))
                 {
+                    massCapacity += a.GetStatValue(MiscDefOf.VEF_MassCarryCapacity);
+                   currentLoad+=a.GetStatValue(StatDefOf.Mass);
                     foreach (var s in c.Props.slots)
                     {
                         occupiedSlots[s] = a;
@@ -342,7 +353,7 @@ namespace WalkerGear
                 {
                     continue;
                 }
-                foreach (var t in s.GetSlotGroup().HeldThings)
+                foreach (var t in s.GetSlotGroup()?.HeldThings)
                 {
                     if (!t.TryGetComp(out CompWalkerComponent c)|| !c.Props.slots.Contains(slotDef))
                     {

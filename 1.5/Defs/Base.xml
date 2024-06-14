@@ -6,6 +6,35 @@
         <parent>ApparelArmor</parent>
     </ThingCategoryDef>
 
+    <ThingCategoryDef>
+        <defName>DMS_Module_LeftMount</defName>
+        <label>left mount module</label>
+        <parent>DMS_Module</parent>
+    </ThingCategoryDef>
+    <ThingCategoryDef>
+        <defName>DMS_Module_RightMount</defName>
+        <label>right mount module</label>
+        <parent>DMS_Module</parent>
+    </ThingCategoryDef>
+    
+    <ThingCategoryDef>
+        <defName>DMS_Module_Pack</defName>
+        <label>back mount module</label>
+        <parent>DMS_Module</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>DMS_Module_ArmLeft</defName>
+        <label>attachment module</label>
+        <parent>DMS_Module</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>DMS_Module_ArmRight</defName>
+        <label>primary module</label>
+        <parent>DMS_Module</parent>
+    </ThingCategoryDef>
+
     <!-- 物品型態的龍騎兵裝備 -->
     <ThingDef Name="DMS_ModuleItemBase" Abstract="True">
         <thingClass>ThingWithComps</thingClass>
@@ -127,7 +156,6 @@
             </renderSkipFlags>
         </apparel>
     </ThingDef>
-
     <ThingDef Name="DMS_ModuleApparelCore" ParentName="DMS_ModuleApparelBase" Abstract="True">
         <thingClass>WalkerGear.WalkerGear_Core</thingClass>
         <apparel>
@@ -145,9 +173,32 @@
                 <li>Shell</li>
             </layers>
         </apparel>
+		<tools>
+			<li>
+				<label>mechanical fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>24</power>
+                <armorPenetration>0.8</armorPenetration>
+				<cooldownTime>0.5</cooldownTime>
+			</li>
+			<li>
+				<label>mechanical leg</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>18</power>
+                <armorPenetration>0.5</armorPenetration>
+				<cooldownTime>1</cooldownTime>
+			</li>
+		</tools>
     </ThingDef>
 
     <ThingDef Name="DMS_ModuleApparelAttachment" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <thingCategories>
+            <li>DMS_Module_Pack</li>
+        </thingCategories>
         <apparel>
             <parentTagDef>WGApparelBody</parentTagDef>
             <bodyPartGroups>
@@ -160,6 +211,9 @@
     </ThingDef>
 
     <ThingDef Name="DMS_ModuleApparelMountRight" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <thingCategories>
+            <li>DMS_Module_RightMount</li>
+        </thingCategories>
         <apparel>
             <bodyPartGroups>
                 <li>Shoulders</li>
@@ -172,6 +226,9 @@
     </ThingDef>
 
     <ThingDef Name="DMS_ModuleApparelMountLeft" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <thingCategories>
+            <li>DMS_Module_LeftMount</li>
+        </thingCategories>
         <apparel>
             <bodyPartGroups>
                 <li>Neck</li>
@@ -184,6 +241,9 @@
     </ThingDef>
 
     <ThingDef Name="DMS_ModuleApparelArmLeft" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <thingCategories>
+            <li>DMS_Module_ArmLeft</li>
+        </thingCategories>
         <apparel>
             <bodyPartGroups>
                 <li>Arms</li>
@@ -196,6 +256,9 @@
     </ThingDef>
 
     <ThingDef Name="DMS_ModuleApparelArmRight" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <thingCategories>
+            <li>DMS_Module_ArmRight</li>
+        </thingCategories>
         <apparel>
           <bodyPartGroups>
             <li>Waist</li>

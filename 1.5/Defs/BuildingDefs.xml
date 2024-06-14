@@ -131,7 +131,7 @@
     </building>
     <comps>
       <li Class = "CompProperties_Facility">
-        <maxSimultaneous>2</maxSimultaneous>
+        <maxSimultaneous>4</maxSimultaneous>
       </li>
       <li>
         <compClass>WalkerGear.CompComponentStorage</compClass>

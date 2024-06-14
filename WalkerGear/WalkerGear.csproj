@@ -60,6 +60,7 @@
     <Compile Include="Comp\CompComponentStorage.cs" />
     <Compile Include="Comp\CompWalkerComponent.cs" />
     <Compile Include="DefOf\JobDefOf.cs" />
+    <Compile Include="DefOf\MiscDefOf.cs" />
     <Compile Include="DefOf\SlotDefOf.cs" />
     <Compile Include="Defs\SlotDef.cs" />
     <Compile Include="GUI\ITab_MechGear.cs" />

@@ -1,65 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <ThingCategoryDef>
-        <defName>DMS_Module</defName>
-        <label>heavy module</label>
-        <parent>ApparelArmor</parent>
-    </ThingCategoryDef>
-
-    <ThingCategoryDef>
         <defName>DMS_Module_LeftMount</defName>
         <label>left mount module</label>
-        <parent>DMS_Module</parent>
+        <parent>MF_Module</parent>
     </ThingCategoryDef>
     <ThingCategoryDef>
         <defName>DMS_Module_RightMount</defName>
         <label>right mount module</label>
-        <parent>DMS_Module</parent>
+        <parent>MF_Module</parent>
     </ThingCategoryDef>
     
     <ThingCategoryDef>
         <defName>DMS_Module_Pack</defName>
         <label>back mount module</label>
-        <parent>DMS_Module</parent>
+        <parent>MF_Module</parent>
     </ThingCategoryDef>
 
     <ThingCategoryDef>
         <defName>DMS_Module_ArmLeft</defName>
         <label>attachment module</label>
-        <parent>DMS_Module</parent>
+        <parent>MF_Module</parent>
     </ThingCategoryDef>
 
     <ThingCategoryDef>
         <defName>DMS_Module_ArmRight</defName>
         <label>primary module</label>
-        <parent>DMS_Module</parent>
+        <parent>MF_Module</parent>
     </ThingCategoryDef>
 
     <!-- 物品型態的龍騎兵裝備 -->
-    <ThingDef Name="DMS_ModuleItemBase" Abstract="True">
-        <thingClass>ThingWithComps</thingClass>
-        <category>Item</category>
-        <drawerType>MapMeshOnly</drawerType>
-        <resourceReadoutPriority>Middle</resourceReadoutPriority>
-        <useHitPoints>true</useHitPoints>
-        <selectable>true</selectable>
-        <altitudeLayer>Item</altitudeLayer>
-        <soundInteract>Metal_Drop</soundInteract>
-        <soundDrop>Standard_Drop</soundDrop>
-        <stackLimit>1</stackLimit>
-        <healthAffectsPrice>true</healthAffectsPrice>
-        <intricate>true</intricate>
-        <alwaysHaulable>true</alwaysHaulable>
-        <drawGUIOverlay>true</drawGUIOverlay>
-        <rotatable>false</rotatable>
-        <pathCost>14</pathCost>
-        <allowedArchonexusCount>-1</allowedArchonexusCount>
-        <techLevel>Industrial</techLevel>
-        <possessionCount>2</possessionCount>
-        <generateCommonality>0</generateCommonality>
-        <thingCategories>
-            <li>DMS_Module</li>
-        </thingCategories>
+    <ThingDef Name="DMS_ModuleItemBase" ParentName="ModuleItemBase" Abstract="True">
         <recipeMaker>
             <recipeUsers>
                 <li>DMS_TableMachinePrinter</li>
@@ -69,28 +40,6 @@
             <workAmount>500</workAmount>
             <soundWorking>Recipe_Machining</soundWorking>
         </recipeMaker>
-        <graphicData>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>1.50</drawSize>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>100</MaxHitPoints>
-            <Flammability>0.0</Flammability>
-            <Beauty>-3</Beauty>
-        </statBases>
-        <tickerType>Never</tickerType>
-        <burnableByRecipe>false</burnableByRecipe>
-        <smeltable>false</smeltable>
-        <comps>
-            <li Class="CompProperties_Forbiddable" />
-            <li Class="CompProperties_Styleable" />
-            <li>
-                <compClass>CompColorable</compClass>
-            </li>
-            <li>
-                <compClass>CompQuality</compClass>
-            </li>
-        </comps>
     </ThingDef>    
     
     <!--衣服型態的龍騎兵裝備，理論上玩家不應該能獲取 -->
@@ -269,15 +218,5 @@
           <parentTagDef>WGApparelBody</parentTagDef>
         </apparel>
       </ThingDef>
-
-    <PawnRenderNodeTagDef>
-        <defName>WGApparel</defName>
-    </PawnRenderNodeTagDef>
-    <PawnRenderNodeTagDef>
-        <defName>WGApparelBody</defName>
-    </PawnRenderNodeTagDef>
-    <PawnRenderNodeTagDef>
-        <defName>WGApparelHead</defName>
-    </PawnRenderNodeTagDef>
     
 </Defs>

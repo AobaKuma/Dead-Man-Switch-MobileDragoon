@@ -1,22 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\",
+  "WorkspaceRootPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\dead-man-switch-mobiledragoon\\walkergear\\pawn_equipmenttracker_patch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:pawn_equipmenttracker_patch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_mechsuitframework\\walkergear\\gui\\itab_mechgear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:gui\\itab_mechgear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\verbcompturret.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:verbcompturret.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\job\\workgiver_modulemaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:job\\workgiver_modulemaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\mechutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\defof\\miscdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:defof\\miscdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_mechsuitframework\\walkergear\\ihealthparms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:ihealthparms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_mechsuitframework\\walkergear\\mechutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:mechutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\building_maintenancebay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:building_maintenancebay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_mechsuitframework\\walkergear\\resources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:resources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\defof\\thingdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:defof\\thingdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,55 +38,96 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "VerbCompTurret.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\VerbCompTurret.cs",
-              "RelativeDocumentMoniker": "VerbCompTurret.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\VerbCompTurret.cs",
-              "RelativeToolTip": "VerbCompTurret.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAJYAAAAuAAAA",
+              "DocumentIndex": 3,
+              "Title": "IHealthParms.cs",
+              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\IHealthParms.cs",
+              "RelativeDocumentMoniker": "IHealthParms.cs",
+              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\IHealthParms.cs",
+              "RelativeToolTip": "IHealthParms.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAA5wCgAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T11:49:22.878Z"
+              "WhenOpened": "2024-07-25T13:33:41.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MechUtility.cs",
+              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\MechUtility.cs",
+              "RelativeDocumentMoniker": "MechUtility.cs",
+              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\MechUtility.cs",
+              "RelativeToolTip": "MechUtility.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAuwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T13:33:27.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Resources.cs",
+              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\Resources.cs",
+              "RelativeDocumentMoniker": "Resources.cs",
+              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\Resources.cs",
+              "RelativeToolTip": "Resources.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T13:33:05.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ThingDefOf.cs",
+              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\DefOf\\ThingDefOf.cs",
+              "RelativeDocumentMoniker": "DefOf\\ThingDefOf.cs",
+              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\DefOf\\ThingDefOf.cs",
+              "RelativeToolTip": "DefOf\\ThingDefOf.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T11:50:51.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WorkGiver_ModuleMaintenance.cs",
+              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\Job\\WorkGiver_ModuleMaintenance.cs",
+              "RelativeDocumentMoniker": "Job\\WorkGiver_ModuleMaintenance.cs",
+              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\Job\\WorkGiver_ModuleMaintenance.cs",
+              "RelativeToolTip": "Job\\WorkGiver_ModuleMaintenance.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAIwAwAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T11:50:43.356Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MechUtility.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\MechUtility.cs",
-              "RelativeDocumentMoniker": "MechUtility.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\MechUtility.cs",
-              "RelativeToolTip": "MechUtility.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "MiscDefOf.cs",
+              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\DefOf\\MiscDefOf.cs",
+              "RelativeDocumentMoniker": "DefOf\\MiscDefOf.cs",
+              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\DefOf\\MiscDefOf.cs",
+              "RelativeToolTip": "DefOf\\MiscDefOf.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T11:47:53.982Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Building_MaintenanceBay.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\Building_MaintenanceBay.cs",
-              "RelativeDocumentMoniker": "Building_MaintenanceBay.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\Building_MaintenanceBay.cs",
-              "RelativeToolTip": "Building_MaintenanceBay.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T11:47:52.84Z"
+              "WhenOpened": "2024-07-02T11:50:27.674Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Pawn_EquipmentTracker_Patch.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\Pawn_EquipmentTracker_Patch.cs",
-              "RelativeDocumentMoniker": "Pawn_EquipmentTracker_Patch.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dead-Man-Switch-MobileDragoon\\WalkerGear\\Pawn_EquipmentTracker_Patch.cs",
-              "RelativeToolTip": "Pawn_EquipmentTracker_Patch.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAkwAAAAAAAAAAA",
+              "Title": "ITab_MechGear.cs",
+              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\GUI\\ITab_MechGear.cs",
+              "RelativeDocumentMoniker": "GUI\\ITab_MechGear.cs",
+              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_MechsuitFramework\\WalkerGear\\GUI\\ITab_MechGear.cs",
+              "RelativeToolTip": "GUI\\ITab_MechGear.cs",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAUwOIAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T11:47:39.415Z",
+              "WhenOpened": "2024-06-27T10:00:08.566Z",
               "EditorCaption": ""
             }
           ]

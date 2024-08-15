@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+
   <!-- 维护坞 -->
   <ThingDef ParentName="BuildingBase">
-    <defName>DMS_Building_MaintenanceBay</defName>
+    <defName>MF_Building_MaintenanceBay</defName>
     <label>maintenance bay</label>
-    <description>A place for mobile dragoon assembly and maintenance, it has a gantry to lift modules of mobile dragoon.</description>
+    <description>A place for mecha suit storage and maintenance, it has a gantry that allows you to do mecha suit loadout modification but requires at least one connected module storage shelve.</description>
     <thingClass>WalkerGear.Building_MaintenanceBay</thingClass>
     <graphicData>
-      <texPath>Things/Building/DragoonBay_Bottom</texPath>
+      <texPath>Things/Building/MaintenanceBay_Bottom</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(4,4)</drawSize>
     </graphicData>
-    <uiIconPath>Things/Building/DragoonBay</uiIconPath>
+    <uiIconPath>Things/Building/MaintenanceBay</uiIconPath>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <canOverlapZones>false</canOverlapZones>
     <drawerType>MapMeshAndRealTime</drawerType>
@@ -27,7 +28,7 @@
     <useHitPoints>true</useHitPoints>
     <size>(3,3)</size>
     <pathCost>100</pathCost>
-    <designationCategory>DMS_Category</designationCategory>
+    <designationCategory>Misc</designationCategory>
     <uiOrder>2000</uiOrder>
     <passability>PassThroughOnly</passability>
     <hasInteractionCell>True</hasInteractionCell>
@@ -41,23 +42,23 @@
         <li>Production</li>
       </buildingTags>
       <relatedBuildCommands>
-        <li>DMS_Building_ComponentStorage</li>
+        <li>MF_Building_ComponentStorage</li>
       </relatedBuildCommands>
     </building>
     <comps>
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
           <li>ToolCabinet</li>
-          <li>DMS_Building_ComponentStorage</li>
+          <li>MF_Building_ComponentStorage</li>
         </linkableFacilities>
       </li>
       <li Class="CompProperties_ReportWorkSpeed">
         <workSpeedStat>WorkTableWorkSpeedFactor</workSpeedStat>
       </li>
-      <li Class="DMSLib.CompProperties_BuildingExtraRenderer">
+      <li Class="WalkerGear.CompProperties_BuildingExtraRenderer">
         <extraGraphic>
           <li>
-            <texPath>Things/Building/DragoonBay_Top</texPath>
+            <texPath>Things/Building/MaintenanceBay_Top</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>(4,4)</drawSize>
             <drawOffset>(0,0.7,0)</drawOffset>
@@ -74,9 +75,9 @@
 
   <!-- 部件櫃 -->
   <ThingDef ParentName="BuildingBase">
-    <defName>DMS_Building_ComponentStorage</defName>
-    <label>Module Storage</label>
-    <description>...</description>
+    <defName>MF_Building_ComponentStorage</defName>
+    <label>module shelve</label>
+    <description>a module storage rack, pawn can repair damaged module on it. and the maintenance bay can only select modules storaged in connected storage shelve.</description>
     <thingClass>Building_Storage</thingClass>
     <graphicData>
       <texPath>Things/Building/ModulePlatform</texPath>
@@ -97,7 +98,7 @@
     <useHitPoints>true</useHitPoints>
     <size>(3,1)</size>
     <pathCost>100</pathCost>
-    <designationCategory>DMS_Category</designationCategory>
+    <designationCategory>Misc</designationCategory>
     <uiOrder>2000</uiOrder>
     <passability>PassThroughOnly</passability>
     <hasInteractionCell>false</hasInteractionCell>
@@ -113,7 +114,7 @@
         <filter>
           <disallowNotEverStorable>true</disallowNotEverStorable>
           <categories>
-            <li>DMS_Module</li>
+            <li>MF_Module</li>
           </categories>
         </filter>
       </fixedStorageSettings>
@@ -121,16 +122,16 @@
         <priority>Preferred</priority>
         <filter>
           <categories>
-            <li>DMS_Module</li>
+            <li>MF_Module</li>
           </categories>
         </filter>
       </defaultStorageSettings>
       <relatedBuildCommands>
-        <li>DMS_Building_MaintenanceBay</li>
+        <li>MF_Building_MaintenanceBay</li>
       </relatedBuildCommands>
     </building>
     <comps>
-      <li Class = "CompProperties_Facility">
+      <li Class="CompProperties_Facility">
         <maxSimultaneous>4</maxSimultaneous>
       </li>
       <li>
@@ -143,12 +144,13 @@
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
-    <defName>DMS_Building_Wreckage</defName>
+    <defName>MF_Building_Wreckage</defName>
     <label>wreckage</label>
+    <thingClass>WalkerGear.Building_Wreckage</thingClass>
     <graphicData>
-      <texPath>Things/Building/ModulePlatform</texPath>
+      <texPath>Things/Building/MechChunk</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(2,2)</drawSize>
+      <drawSize>(2.5,2.5)</drawSize>
     </graphicData>
     <canOverlapZones>false</canOverlapZones>
     <altitudeLayer>Building</altitudeLayer>
@@ -157,8 +159,5 @@
     <pathCost>100</pathCost>
     <passability>PassThroughOnly</passability>
     <surfaceType>Item</surfaceType>
-    <comps>
-      <li><compClass>WalkerGear.CompWreckage</compClass></li>
-    </comps>
   </ThingDef>
 </Defs>

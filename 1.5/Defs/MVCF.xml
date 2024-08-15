@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <MVCF.ModDef>
-        <defName>DMS_Dragoon</defName>
-        <label>Dead Man Switch - Dragoon</label>
-        <description>Dead Man Switch - Dragoon</description>
+        <defName>MF_MVCF</defName>
+        <label>Mecha suit framework</label>
+        <description>Mecha suit framework</description>
         <ActivateFeatures>
             <li>Drawing</li>
             <li>ApparelVerbs</li>

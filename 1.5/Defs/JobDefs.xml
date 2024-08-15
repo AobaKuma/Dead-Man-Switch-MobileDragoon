@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-    <!-- <JobDef>
-        <defName>WG_LoadComponent</defName>
-        <driverClass>JobDriver_HaulToCell</driverClass>
-        <reportString>hauling TargetA.</reportString>
-        <suspendable>false</suspendable>
-        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
-    </JobDef>
-
-    <JobDef>
-        <defName>WG_RemoveComponent</defName>
-        <driverClass>JobDriver_HaulToCell</driverClass>
-        <reportString>hauling TargetA.</reportString>
-        <suspendable>false</suspendable>
-        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
-    </JobDef> -->
-
     <JobDef>
         <defName>WG_RepairComponent</defName>
         <driverClass>WalkerGear.JobDriver_RepairThing</driverClass>
@@ -27,7 +11,7 @@
     <JobDef>
         <defName>WG_GetInWalkerCore</defName>
         <driverClass>WalkerGear.JobDriver_GetInWalkerCore</driverClass>
-        <reportString>entering mobile dragoon</reportString>
+        <reportString>entering mecha suit</reportString>
         <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
     </JobDef>
     

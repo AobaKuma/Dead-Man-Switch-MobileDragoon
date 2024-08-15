@@ -65,7 +65,7 @@
     </comps>
     <modExtensions>
       <li Class="WalkerGear.BuildingWreckage">
-        <building>DMS_Building_Wreckage</building>
+        <building>MF_Building_Wreckage</building>
       </li>
     </modExtensions>
   </ThingDef>

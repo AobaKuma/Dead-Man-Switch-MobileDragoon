@@ -336,7 +336,7 @@ namespace WalkerGear
                 if (a.TryGetComp<CompWalkerComponent>(out var c))
                 {
                     massCapacity += a.GetStatValue(MiscDefOf.VEF_MassCarryCapacity);
-                   currentLoad+=a.GetStatValue(StatDefOf.Mass);
+                    currentLoad += a.GetStatValue(StatDefOf.Mass);
                     foreach (var s in c.Props.slots)
                     {
                         occupiedSlots[s] = a;
@@ -344,7 +344,6 @@ namespace WalkerGear
                     }
                 }
             }
-            
             needUpdateCache = false;
         }
         private IEnumerable<Thing> GetAvailableModules(SlotDef slotDef, bool IsCore=false)

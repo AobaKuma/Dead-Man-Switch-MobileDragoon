@@ -1,13 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- PV-8核心 -->
+  <!-- AT-34核心 -->
   <ThingDef ParentName="DMS_ModuleItemBase">
-    <defName>DMS_Module_PV8_Core</defName>
-    <label>PV-8 frame</label>
+    <defName>DMS_Module_AT34_Core</defName>
+    <label>AT-34 drgaoon</label>
     <description>todo.</description>
     <descriptionHyperlinks>
-      <ThingDef>DMS_Apparel_PV8_Core</ThingDef>
+      <ThingDef>DMS_Apparel_AT34_Core</ThingDef>
     </descriptionHyperlinks>
+    <thingCategories Inherit="false">
+      <li>DMS_Module_Core</li>
+    </thingCategories>
+    <costList>
+      <Tungsteel>275</Tungsteel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ComponentStamped>8</ComponentStamped>
+      <Neurocomputer>1</Neurocomputer>
+    </costList>
     <graphicData>
       <texPath>Things/Item/Module</texPath>
     </graphicData>
@@ -16,40 +25,40 @@
       <Mass>8</Mass>
       <Flammability>0</Flammability>
     </statBases>
+    <equippedStatOffsets>
+			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
+			<VEF_MassCarryCapacity>600</VEF_MassCarryCapacity>
+    </equippedStatOffsets>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
-        <EquipedThingDef>DMS_Apparel_PV8_Core</EquipedThingDef>
+        <EquipedThingDef>DMS_Apparel_AT34_Core</EquipedThingDef>
         <slot>Core</slot>
       </li>
     </comps>
-    <costList>
-      <Tungsteel>375</Tungsteel>
-      <Steel>75</Steel>
-      <ComponentIndustrial>10</ComponentIndustrial>
-      <ComponentStamped>12</ComponentStamped>
-      <Neurocomputer>1</Neurocomputer>
-    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelCore">
-    <defName>DMS_Apparel_PV8_Core</defName>
-    <label>PV-8 frame</label>
+    <defName>DMS_Apparel_AT34_Core</defName>
+    <label>AT-34 frame</label>
     <description>Todo.</description>
     <graphicData>
-      <texPath>Things/Dragoon/PV8/apparel_south</texPath>
+      <texPath>Things/Dragoon/AT34/apparel_south</texPath>
     </graphicData>
     <statBases>
       <Mass>10</Mass>
-      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
       <ArmorRating_Heat>0.10</ArmorRating_Heat>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.2</MoveSpeed>
-			<WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
-			<VEF_MassCarryCapacity>575</VEF_MassCarryCapacity>
+      <MoveSpeed>-0.1</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/PV8/apparel</wornGraphicPath>
+      <wornGraphicPath>Things/Dragoon/AT34/apparel</wornGraphicPath>
       <drawData>
         <scale>1.5</scale>
         <dataNorth>
@@ -59,7 +68,7 @@
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
-        <ItemDef>DMS_Module_PV8_Core</ItemDef>
+        <ItemDef>DMS_Module_AT34_Core</ItemDef>
         <slot>Core</slot>
       </li>
     </comps>
@@ -69,20 +78,17 @@
       </li>
     </modExtensions>
   </ThingDef>
-  <!-- PV-8頭盔 -->
+  <!-- AT-34頭盔 -->
   <ThingDef ParentName="DMS_ModuleItemBase">
-    <defName>DMS_Module_PV8_Helmet</defName>
-    <label>PV-8 helmet</label>
+    <defName>DMS_Module_AT34_Helmet</defName>
+    <label>AT-34 helmet</label>
     <description>todo.</description>
-    <costList>
-      <Tungsteel>50</Tungsteel>
-      <Steel>40</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
-      <ComponentStamped>4</ComponentStamped>
-    </costList>
     <descriptionHyperlinks>
-      <ThingDef>DMS_Apparel_PV8_Helmet</ThingDef>
+      <ThingDef>DMS_Apparel_AT34_Helmet</ThingDef>
     </descriptionHyperlinks>
+    <thingCategories Inherit="false">
+      <li>DMS_Module_Helmet</li>
+    </thingCategories>
     <graphicData>
       <texPath>Things/Item/Module</texPath>
     </graphicData>
@@ -93,17 +99,22 @@
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
-        <EquipedThingDef>DMS_Apparel_PV8_Helmet</EquipedThingDef>
+        <EquipedThingDef>DMS_Apparel_AT34_Helmet</EquipedThingDef>
         <slot>Head</slot>
       </li>
     </comps>
+    <costList>
+      <Tungsteel>40</Tungsteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentStamped>2</ComponentStamped>
+    </costList>
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelHead">
-    <defName>DMS_Apparel_PV8_Helmet</defName>
-    <label>PV-8 helmet</label>
+    <defName>DMS_Apparel_AT34_Helmet</defName>
+    <label>AT-34 helmet</label>
     <description>Todo.</description>
     <graphicData>
-      <texPath>Things/Dragoon/PV8/helmet_south</texPath>
+      <texPath>Things/Dragoon/AT34/helmet_south</texPath>
     </graphicData>
     <statBases>
       <Mass>0</Mass>
@@ -112,7 +123,7 @@
       <MoveSpeed>-0.12</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/PV8/helmet</wornGraphicPath>
+      <wornGraphicPath>Things/Dragoon/AT34/helmet</wornGraphicPath>
       <drawData>
         <defaultData>
           <layer>20</layer>
@@ -128,7 +139,7 @@
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
-        <ItemDef>DMS_Module_PV8_Helmet</ItemDef>
+        <ItemDef>DMS_Module_AT34_Helmet</ItemDef>
         <slot>Head</slot>
       </li>
     </comps>

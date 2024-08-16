@@ -176,7 +176,7 @@ namespace WalkerGear
 			
             
         }
-		public override void ExposeData()
+        public override void ExposeData()
 		{
 			base.ExposeData();
             Scribe_Values.Look(ref combinedHealth, "healthMax", -1f);
@@ -188,7 +188,6 @@ namespace WalkerGear
             }
 		}
         
-
         public Color colorInt = Color.white;
 		private float combinedHealth=-1;
 		private float healthInt = -1;

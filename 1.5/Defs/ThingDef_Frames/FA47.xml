@@ -1,19 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- AT-34核心 -->
+  <!-- F/A-47核心 -->
   <ThingDef ParentName="DMS_ModuleItemBase">
-    <defName>DMS_Module_AT34_Core</defName>
-    <label>AT-34 drgaoon</label>
+    <defName>DMS_Module_FA47_Core</defName>
+    <label>F/A-47 frame</label>
     <description>todo.</description>
     <descriptionHyperlinks>
-      <ThingDef>DMS_Apparel_AT34_Core</ThingDef>
+      <ThingDef>DMS_Apparel_FA47_Core</ThingDef>
     </descriptionHyperlinks>
-    <costList>
-      <Tungsteel>275</Tungsteel>
-      <ComponentIndustrial>8</ComponentIndustrial>
-      <ComponentStamped>8</ComponentStamped>
-      <Neurocomputer>1</Neurocomputer>
-    </costList>
+    <thingCategories Inherit="false">
+      <li>DMS_Module_Core</li>
+    </thingCategories>
     <graphicData>
       <texPath>Things/Item/Module</texPath>
     </graphicData>
@@ -22,42 +19,43 @@
       <Mass>8</Mass>
       <Flammability>0</Flammability>
     </statBases>
-    <equippedStatOffsets>
-			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
-			<VEF_MassCarryCapacity>600</VEF_MassCarryCapacity>
-    </equippedStatOffsets>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
-        <EquipedThingDef>DMS_Apparel_AT34_Core</EquipedThingDef>
+        <EquipedThingDef>DMS_Apparel_FA47_Core</EquipedThingDef>
         <slot>Core</slot>
       </li>
     </comps>
-    <recipeMaker>
-      <skillRequirements>
-        <Crafting>8</Crafting>
-      </skillRequirements>
-    </recipeMaker>
+    <costList>
+      <Tungsteel>325</Tungsteel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <ComponentStamped>12</ComponentStamped>
+      <Neurocomputer>1</Neurocomputer>
+    </costList>
   </ThingDef>
+    <!-- F/A-47，能增加額外的跳躍距離 -->
   <ThingDef ParentName="DMS_ModuleApparelCore">
-    <defName>DMS_Apparel_AT34_Core</defName>
-    <label>AT-34 frame</label>
+    <defName>DMS_Apparel_FA47_Core</defName>
+    <label>F/A-47 frame</label>
     <description>Todo.</description>
     <graphicData>
-      <texPath>Things/Dragoon/AT34/apparel_south</texPath>
+      <texPath>Things/Dragoon/PV8/apparel_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>10</Mass>
+      <Mass>80</Mass>
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.10</ArmorRating_Heat>
+      <ArmorRating_Heat>0.80</ArmorRating_Heat>
+      <JumpRange MayRequire="ludeon.rimworld.royalty">9.9</JumpRange>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.1</MoveSpeed>
+			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
+			<VEF_MassCarryCapacity>480</VEF_MassCarryCapacity>
+      <MoveSpeed>0.5</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/AT34/apparel</wornGraphicPath>
+      <wornGraphicPath>Things/Dragoon/FA47/apparel</wornGraphicPath>
       <drawData>
-        <scale>1.5</scale>
+        <scale>2.25</scale>
         <dataNorth>
           <layer>70</layer>
         </dataNorth>
@@ -65,7 +63,7 @@
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
-        <ItemDef>DMS_Module_AT34_Core</ItemDef>
+        <ItemDef>DMS_Module_FA47_Core</ItemDef>
         <slot>Core</slot>
       </li>
     </comps>
@@ -75,14 +73,17 @@
       </li>
     </modExtensions>
   </ThingDef>
-  <!-- AT-34頭盔 -->
+  <!-- F/A-47頭盔 -->
   <ThingDef ParentName="DMS_ModuleItemBase">
-    <defName>DMS_Module_AT34_Helmet</defName>
-    <label>AT-34 helmet</label>
+    <defName>DMS_Module_FA47_Helmet</defName>
+    <label>F/A-47 helmet</label>
     <description>todo.</description>
     <descriptionHyperlinks>
-      <ThingDef>DMS_Apparel_AT34_Helmet</ThingDef>
+      <ThingDef>DMS_Apparel_FA47_Helmet</ThingDef>
     </descriptionHyperlinks>
+    <thingCategories Inherit="false">
+      <li>DMS_Module_Helmet</li>
+    </thingCategories>
     <graphicData>
       <texPath>Things/Item/Module</texPath>
     </graphicData>
@@ -93,22 +94,22 @@
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
-        <EquipedThingDef>DMS_Apparel_AT34_Helmet</EquipedThingDef>
+        <EquipedThingDef>DMS_Apparel_FA47_Helmet</EquipedThingDef>
         <slot>Head</slot>
       </li>
     </comps>
     <costList>
-      <Tungsteel>40</Tungsteel>
-      <ComponentIndustrial>2</ComponentIndustrial>
-      <ComponentStamped>2</ComponentStamped>
+      <Plasteel>75</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+      <ComponentStamped>3</ComponentStamped>
     </costList>
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelHead">
-    <defName>DMS_Apparel_AT34_Helmet</defName>
-    <label>AT-34 helmet</label>
+    <defName>DMS_Apparel_FA47_Helmet</defName>
+    <label>F/A-47 helmet</label>
     <description>Todo.</description>
     <graphicData>
-      <texPath>Things/Dragoon/AT34/helmet_south</texPath>
+      <texPath>Things/Dragoon/FA47/helmet_south</texPath>
     </graphicData>
     <statBases>
       <Mass>0</Mass>
@@ -117,7 +118,7 @@
       <MoveSpeed>-0.12</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/AT34/helmet</wornGraphicPath>
+      <wornGraphicPath>Things/Dragoon/FA47/helmet</wornGraphicPath>
       <drawData>
         <defaultData>
           <layer>20</layer>
@@ -133,7 +134,7 @@
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
-        <ItemDef>DMS_Module_AT34_Helmet</ItemDef>
+        <ItemDef>DMS_Module_FA47_Helmet</ItemDef>
         <slot>Head</slot>
       </li>
     </comps>

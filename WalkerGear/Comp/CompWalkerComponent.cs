@@ -208,11 +208,12 @@ namespace WalkerGear
         public float repairEfficiency = 0.01f;//作為物品被修理的效率
         public override IEnumerable<string> ConfigErrors(ThingDef parentDef)
         {
-            if (slots.NullOrEmpty()&& slot!=null)
+            if (slots.NullOrEmpty() && slot != null)
             {
-                (slots??=new()).Add(slot);
+                (slots ??= new()).Add(slot);
             }
-            else if(slot==null){
+            else if (slot == null)
+            {
                 return base.ConfigErrors(parentDef).Append("No proper slot");
             }
             return base.ConfigErrors(parentDef);

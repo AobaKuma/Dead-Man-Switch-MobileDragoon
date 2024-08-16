@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- F/A-47核心 -->
+  <!-- PV-8核心 -->
   <ThingDef ParentName="DMS_ModuleItemBase">
-    <defName>DMS_Module_FA47_Core</defName>
-    <label>F/A-47 frame</label>
+    <defName>DMS_Module_PV8_Core</defName>
+    <label>PV-8 frame</label>
     <description>todo.</description>
     <descriptionHyperlinks>
-      <ThingDef>DMS_Apparel_FA47_Core</ThingDef>
+      <ThingDef>DMS_Apparel_PV8_Core</ThingDef>
     </descriptionHyperlinks>
+    <thingCategories Inherit="false">
+      <li>DMS_Module_Core</li>
+    </thingCategories>
     <graphicData>
       <texPath>Things/Item/Module</texPath>
     </graphicData>
@@ -18,41 +21,40 @@
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
-        <EquipedThingDef>DMS_Apparel_FA47_Core</EquipedThingDef>
+        <EquipedThingDef>DMS_Apparel_PV8_Core</EquipedThingDef>
         <slot>Core</slot>
       </li>
     </comps>
     <costList>
-      <Tungsteel>325</Tungsteel>
+      <Tungsteel>375</Tungsteel>
+      <Steel>75</Steel>
       <ComponentIndustrial>10</ComponentIndustrial>
       <ComponentStamped>12</ComponentStamped>
       <Neurocomputer>1</Neurocomputer>
     </costList>
   </ThingDef>
-    <!-- F/A-47，能增加額外的跳躍距離 -->
   <ThingDef ParentName="DMS_ModuleApparelCore">
-    <defName>DMS_Apparel_FA47_Core</defName>
-    <label>F/A-47 frame</label>
+    <defName>DMS_Apparel_PV8_Core</defName>
+    <label>PV-8 frame</label>
     <description>Todo.</description>
     <graphicData>
       <texPath>Things/Dragoon/PV8/apparel_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>80</Mass>
-      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.80</ArmorRating_Heat>
-      <JumpRange MayRequire="ludeon.rimworld.royalty">9.9</JumpRange>
+      <Mass>10</Mass>
+      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.10</ArmorRating_Heat>
     </statBases>
     <equippedStatOffsets>
-			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
-			<VEF_MassCarryCapacity>480</VEF_MassCarryCapacity>
-      <MoveSpeed>0.5</MoveSpeed>
+      <MoveSpeed>-0.2</MoveSpeed>
+			<WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
+			<VEF_MassCarryCapacity>575</VEF_MassCarryCapacity>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/FA47/apparel</wornGraphicPath>
+      <wornGraphicPath>Things/Dragoon/PV8/apparel</wornGraphicPath>
       <drawData>
-        <scale>2.25</scale>
+        <scale>1.5</scale>
         <dataNorth>
           <layer>70</layer>
         </dataNorth>
@@ -60,7 +62,7 @@
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
-        <ItemDef>DMS_Module_FA47_Core</ItemDef>
+        <ItemDef>DMS_Module_PV8_Core</ItemDef>
         <slot>Core</slot>
       </li>
     </comps>
@@ -70,14 +72,23 @@
       </li>
     </modExtensions>
   </ThingDef>
-  <!-- F/A-47頭盔 -->
+  <!-- PV-8頭盔 -->
   <ThingDef ParentName="DMS_ModuleItemBase">
-    <defName>DMS_Module_FA47_Helmet</defName>
-    <label>F/A-47 helmet</label>
+    <defName>DMS_Module_PV8_Helmet</defName>
+    <label>PV-8 helmet</label>
     <description>todo.</description>
+    <costList>
+      <Tungsteel>50</Tungsteel>
+      <Steel>40</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentStamped>4</ComponentStamped>
+    </costList>
     <descriptionHyperlinks>
-      <ThingDef>DMS_Apparel_FA47_Helmet</ThingDef>
+      <ThingDef>DMS_Apparel_PV8_Helmet</ThingDef>
     </descriptionHyperlinks>
+    <thingCategories Inherit="false">
+      <li>DMS_Module_Helmet</li>
+    </thingCategories>
     <graphicData>
       <texPath>Things/Item/Module</texPath>
     </graphicData>
@@ -88,22 +99,17 @@
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
-        <EquipedThingDef>DMS_Apparel_FA47_Helmet</EquipedThingDef>
+        <EquipedThingDef>DMS_Apparel_PV8_Helmet</EquipedThingDef>
         <slot>Head</slot>
       </li>
     </comps>
-    <costList>
-      <Tungsteel>50</Tungsteel>
-      <ComponentIndustrial>2</ComponentIndustrial>
-      <ComponentStamped>2</ComponentStamped>
-    </costList>
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelHead">
-    <defName>DMS_Apparel_FA47_Helmet</defName>
-    <label>F/A-47 helmet</label>
+    <defName>DMS_Apparel_PV8_Helmet</defName>
+    <label>PV-8 helmet</label>
     <description>Todo.</description>
     <graphicData>
-      <texPath>Things/Dragoon/FA47/helmet_south</texPath>
+      <texPath>Things/Dragoon/PV8/helmet_south</texPath>
     </graphicData>
     <statBases>
       <Mass>0</Mass>
@@ -112,7 +118,7 @@
       <MoveSpeed>-0.12</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/FA47/helmet</wornGraphicPath>
+      <wornGraphicPath>Things/Dragoon/PV8/helmet</wornGraphicPath>
       <drawData>
         <defaultData>
           <layer>20</layer>
@@ -128,7 +134,7 @@
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
-        <ItemDef>DMS_Module_FA47_Helmet</ItemDef>
+        <ItemDef>DMS_Module_PV8_Helmet</ItemDef>
         <slot>Head</slot>
       </li>
     </comps>

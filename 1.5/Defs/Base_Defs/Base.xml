@@ -1,33 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <ThingCategoryDef>
-        <defName>DMS_Module_LeftMount</defName>
-        <label>left mount module</label>
-        <parent>MF_Module</parent>
-    </ThingCategoryDef>
-    <ThingCategoryDef>
-        <defName>DMS_Module_RightMount</defName>
-        <label>right mount module</label>
-        <parent>MF_Module</parent>
-    </ThingCategoryDef>
-    
-    <ThingCategoryDef>
-        <defName>DMS_Module_Pack</defName>
-        <label>back mount module</label>
-        <parent>MF_Module</parent>
-    </ThingCategoryDef>
-
-    <ThingCategoryDef>
-        <defName>DMS_Module_ArmLeft</defName>
-        <label>attachment module</label>
-        <parent>MF_Module</parent>
-    </ThingCategoryDef>
-
-    <ThingCategoryDef>
-        <defName>DMS_Module_ArmRight</defName>
-        <label>primary module</label>
-        <parent>MF_Module</parent>
-    </ThingCategoryDef>
 
     <!-- 物品型態的龍騎兵裝備 -->
     <ThingDef Name="DMS_ModuleItemBase" ParentName="ModuleItemBase" Abstract="True">
@@ -161,7 +133,7 @@
 
     <ThingDef Name="DMS_ModuleApparelMountRight" ParentName="DMS_ModuleApparelBase" Abstract="True">
         <thingCategories>
-            <li>DMS_Module_RightMount</li>
+            <li>DMS_Module_ShoulderRight</li>
         </thingCategories>
         <apparel>
             <bodyPartGroups>
@@ -176,7 +148,7 @@
 
     <ThingDef Name="DMS_ModuleApparelMountLeft" ParentName="DMS_ModuleApparelBase" Abstract="True">
         <thingCategories>
-            <li>DMS_Module_LeftMount</li>
+            <li>DMS_Module_ShoulderLeft</li>
         </thingCategories>
         <apparel>
             <bodyPartGroups>
@@ -191,7 +163,7 @@
 
     <ThingDef Name="DMS_ModuleApparelArmLeft" ParentName="DMS_ModuleApparelBase" Abstract="True">
         <thingCategories>
-            <li>DMS_Module_ArmLeft</li>
+            <li>DMS_Module_Attachment</li>
         </thingCategories>
         <apparel>
             <bodyPartGroups>
@@ -206,7 +178,7 @@
 
     <ThingDef Name="DMS_ModuleApparelArmRight" ParentName="DMS_ModuleApparelBase" Abstract="True">
         <thingCategories>
-            <li>DMS_Module_ArmRight</li>
+            <li>DMS_Module_Equipment</li>
         </thingCategories>
         <apparel>
           <bodyPartGroups>

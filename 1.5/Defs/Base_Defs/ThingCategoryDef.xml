@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <ThingCategoryDef>
+    <defName>DMS_Module</defName>
+    <label>mobile dragoon module</label>
+    <parent>MF_Module</parent>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>DMS_Module_Helmet</defName>
+    <label>helmet module</label>
+    <parent>DMS_Module</parent>
+  </ThingCategoryDef>
+  
+  <ThingCategoryDef>
+    <defName>DMS_Module_Core</defName>
+    <label>core module</label>
+    <parent>DMS_Module</parent>
+  </ThingCategoryDef>
+
+  <!-- 左手-->
+  <ThingCategoryDef> 
+    <defName>DMS_Module_Attachment</defName>
+    <label>attachment module</label>
+    <parent>DMS_Module</parent>
+  </ThingCategoryDef>
+
+  <!-- 右手-->
+  <ThingCategoryDef>
+    <defName>DMS_Module_Equipment</defName>
+    <label>equipment module</label>
+    <parent>DMS_Module</parent>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>DMS_Module_Pack</defName>
+    <label>pack module</label>
+    <parent>DMS_Module</parent>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>DMS_Module_ShoulderRight</defName>
+    <label>right shoulder module</label>
+    <parent>DMS_Module</parent>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>DMS_Module_ShoulderLeft</defName>
+    <label>left shoulder module</label>
+    <parent>DMS_Module</parent>
+  </ThingCategoryDef>
+</Defs>

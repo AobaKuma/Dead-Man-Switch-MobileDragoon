@@ -18,7 +18,10 @@ namespace WalkerGear
         public void Open()
         {
             if (CanOpen)
+            {
                 GenDrop.TryDropSpawn(pawnContainer.FirstOrDefault(), Position, Map, ThingPlaceMode.Direct, out var _);
+                pawnContainer.Clear();
+            }          
         }
         public override void Destroy(DestroyMode mode)
         {

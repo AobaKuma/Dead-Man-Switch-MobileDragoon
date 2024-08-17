@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comp\CompBuildingExtraRenderer.cs" />
+    <Compile Include="Comp\PawnRenderSubWorker_Offset.cs" />
     <Compile Include="DefOf\ThingDefOf.cs" />
     <Compile Include="IHealthParms.cs" />
     <Compile Include="ThingClass\Building_MaintenanceBay.cs" />

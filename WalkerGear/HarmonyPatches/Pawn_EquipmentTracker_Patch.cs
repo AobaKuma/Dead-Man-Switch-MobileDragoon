@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using System;
+using UnityEngine;
 using Verse;
 
 namespace WalkerGear
@@ -52,13 +53,13 @@ namespace WalkerGear
                 || !eq.HasComp<CompApparelForcedWeapon>();
         }
     }
-    [HarmonyPatch(typeof(EquipmentUtility), nameof(EquipmentUtility.CanEquip), new Type[] { typeof(Thing), typeof(Pawn), typeof(string), typeof(bool) },new ArgumentType[]{ArgumentType.Normal,ArgumentType.Normal,ArgumentType.Out,ArgumentType.Normal})]
+    [HarmonyPatch(typeof(EquipmentUtility), nameof(EquipmentUtility.CanEquip), new Type[] { typeof(Thing), typeof(Pawn), typeof(string), typeof(bool) }, new ArgumentType[] { ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Out, ArgumentType.Normal })]
     static class EquipmentUtility_CanEquip
     {
         static bool Prefix(Pawn pawn, out string cantReason)
         {
             cantReason = "";
-            if (pawn.equipment.Primary==null) return true;
+            if (pawn.equipment.Primary == null) return true;
             if (pawn.equipment.Primary.HasComp<CompApparelForcedWeapon>())
             {
                 cantReason += "HasMechWeapon".Translate();
@@ -67,5 +68,4 @@ namespace WalkerGear
             return true;
         }
     }
-    
 }

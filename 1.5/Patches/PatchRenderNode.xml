@@ -25,4 +25,20 @@
             </li>
         </value>
     </Operation>
+      <!-- add comps field to Caravan WorldObjectDef if it doesn't exist -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnRenderTreeDef[defName="Humanlike"]/root/children/li[workerClass="PawnRenderNodeWorker_Head" or workerClass="PawnRenderNodeWorker_Carried"]/subworkerClasses</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/PawnRenderTreeDef[defName="Humanlike"]/root/children/li[workerClass="PawnRenderNodeWorker_Head" or workerClass="PawnRenderNodeWorker_Carried"]</xpath>
+      <value>
+        <subworkerClasses />
+      </value>
+    </nomatch>
+  </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnRenderTreeDef[defName="Humanlike"]/root/children/li[workerClass="PawnRenderNodeWorker_Head" or workerClass="PawnRenderNodeWorker_Carried"]/subworkerClasses</xpath>
+        <value>
+            <li>WalkerGear.PawnRenderSubWorker_Offset</li>
+        </value>
+    </Operation>
 </Patch>

@@ -70,6 +70,9 @@
       <li Class="WalkerGear.BuildingWreckage">
         <building>MF_Building_Wreckage</building>
       </li>
+      <li>
+        
+      </li>
     </modExtensions>
   </ThingDef>
   <!-- PV-8頭盔 -->

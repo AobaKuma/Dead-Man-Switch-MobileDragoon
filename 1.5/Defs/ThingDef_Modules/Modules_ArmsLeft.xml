@@ -14,10 +14,13 @@
     <statBases>
       <Mass>8</Mass>
     </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonModule</researchPrerequisite>
+    </recipeMaker>
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
-      <!-- <BroadshieldCore>1</BroadshieldCore> -->
+      <BroadshieldCore MayRequire="ludeon.rimworld.royalty">1</BroadshieldCore>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -96,6 +99,9 @@
       <MaxHitPoints>300</MaxHitPoints>
       <Mass>8</Mass>
     </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonBasis</researchPrerequisite>
+    </recipeMaker>
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
@@ -168,6 +174,9 @@
     <statBases>
       <Mass>8</Mass>
     </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonBasis</researchPrerequisite>
+    </recipeMaker>
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>

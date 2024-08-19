@@ -29,10 +29,13 @@
     <size>(3,3)</size>
     <pathCost>100</pathCost>
     <designationCategory>Misc</designationCategory>
-    <uiOrder>2000</uiOrder>
+    <uiOrder>10</uiOrder>
     <passability>PassThroughOnly</passability>
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+    <researchPrerequisites>
+      <li>DMS_MobileDragoonBasis</li>
+    </researchPrerequisites>
     <surfaceType>Item</surfaceType>
     <inspectorTabs>
       <li>WalkerGear.ITab_MechGear</li>
@@ -92,16 +95,19 @@
       <WorkToBuild>3600</WorkToBuild>
     </statBases>
     <costList>
-      <Steel>50</Steel>
+      <Steel>100</Steel>
     </costList>
     <scatterableOnMapGen>false</scatterableOnMapGen>
     <useHitPoints>true</useHitPoints>
     <size>(3,1)</size>
     <pathCost>100</pathCost>
     <designationCategory>Misc</designationCategory>
-    <uiOrder>2000</uiOrder>
+    <uiOrder>11</uiOrder>
     <passability>PassThroughOnly</passability>
     <hasInteractionCell>false</hasInteractionCell>
+    <researchPrerequisites>
+      <li>DMS_MobileDragoonBasis</li>
+    </researchPrerequisites>
     <surfaceType>Item</surfaceType>
     <inspectorTabs>
       <li>ITab_Storage</li>

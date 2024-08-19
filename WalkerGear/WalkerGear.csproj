@@ -131,5 +131,7 @@
     <Publicize Include="Assembly-CSharp:RimWorld.CompApparelVerbOwner_Charged.remainingCharges" />
     <Publicize Include="Assembly-CSharp:Verse.ArmorUtility.ApplyArmor" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ModExtension\" />
+  </ItemGroup>
 </Project>

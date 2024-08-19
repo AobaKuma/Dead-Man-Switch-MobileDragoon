@@ -25,6 +25,12 @@
         <slot>Core</slot>
       </li>
     </comps>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
     <costList>
       <Tungsteel>375</Tungsteel>
       <Steel>75</Steel>
@@ -92,12 +98,6 @@
     <defName>DMS_Module_PV8_Helmet</defName>
     <label>PV-8 helmet</label>
     <description>todo.</description>
-    <costList>
-      <Tungsteel>50</Tungsteel>
-      <Steel>40</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
-      <ComponentStamped>4</ComponentStamped>
-    </costList>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PV8_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -117,7 +117,19 @@
         <EquipedThingDef>DMS_Apparel_PV8_Helmet</EquipedThingDef>
         <slot>Head</slot>
       </li>
-    </comps>
+    </comps>    
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Tungsteel>50</Tungsteel>
+      <Steel>40</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentStamped>4</ComponentStamped>
+    </costList>
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_PV8_Helmet</defName>

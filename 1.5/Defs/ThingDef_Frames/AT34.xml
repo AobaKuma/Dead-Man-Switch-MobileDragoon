@@ -11,12 +11,6 @@
     <thingCategories Inherit="false">
       <li>DMS_Module_Core</li>
     </thingCategories>
-    <costList>
-      <Tungsteel>275</Tungsteel>
-      <ComponentIndustrial>8</ComponentIndustrial>
-      <ComponentStamped>8</ComponentStamped>
-      <Neurocomputer>1</Neurocomputer>
-    </costList>
     <graphicData>
       <texPath>Things/Item/Module</texPath>
     </graphicData>
@@ -36,10 +30,17 @@
       </li>
     </comps>
     <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
       <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>4</Crafting>
       </skillRequirements>
     </recipeMaker>
+    <costList>
+      <Tungsteel>175</Tungsteel>
+      <Steel>250</Steel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <ComponentStamped>6</ComponentStamped>
+    </costList>
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_AT34_Core</defName>
@@ -118,10 +119,17 @@
         <slot>Head</slot>
       </li>
     </comps>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
     <costList>
-      <Tungsteel>40</Tungsteel>
+      <Tungsteel>30</Tungsteel>
+      <Steel>50</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
-      <ComponentStamped>2</ComponentStamped>
+      <ComponentStamped>1</ComponentStamped>
     </costList>
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelHead">

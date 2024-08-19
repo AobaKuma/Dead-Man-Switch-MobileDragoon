@@ -1,19 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   
-  <ThingDef ParentName="DMS_AutomatroidHeavyGun" Name="DMS_BaseDragoonMainWeapon" Abstract="True">
+  <ThingDef ParentName="BaseGun" Name="DMS_BaseDragoonWeapon" Abstract="True">
+    <soundInteract>DMS_EquipGear</soundInteract>
+		<thingCategories Inherit="False">
+			<li>AutomatroidWeapon</li>
+		</thingCategories>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToMake>40000</WorkToMake>
+		</statBases>
+		<tradeTags>
+			<li>DMS_WeaponRanged</li>
+		</tradeTags>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions/>
     <destroyOnDrop>true</destroyOnDrop>
     <tradeability>None</tradeability>
     <generateCommonality>0</generateCommonality>
     <generateAllowChance>0</generateAllowChance>
-    <soundInteract>Interact_Rifle</soundInteract>
     <relicChance>0</relicChance>
     <comps>
       <li><compClass>WalkerGear.CompApparelForcedWeapon</compClass></li>
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="DMS_BaseDragoonMainWeapon">
+  <ThingDef ParentName="DMS_BaseDragoonWeapon">
     <defName>DMS_Dragoon_LMG</defName>
     <label>Dragoon LMG</label>
     <description>1111</description>
@@ -42,15 +75,6 @@
     <equippedStatOffsets>
       <MoveSpeed>-0.2</MoveSpeed>
     </equippedStatOffsets>
-    <recipeMaker>
-      <researchPrerequisites>
-        <li>DMS_EquipmentHeavy</li>
-      </researchPrerequisites>
-    </recipeMaker>
-    <costList>
-      <Tungsteel>220</Tungsteel>
-      <ComponentStamped>4</ComponentStamped>
-    </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>

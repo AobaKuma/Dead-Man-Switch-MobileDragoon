@@ -4,7 +4,7 @@
     <!-- (右)肩部機槍 -->
     <ThingDef ParentName="DMS_ModuleItemBase">
         <defName>DMS_Module_TurretPackLight</defName>
-        <label>Mounted LMG</label>
+        <label>LMG Shoulder Mount</label>
         <description>todo.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_TurretPackLight</ThingDef>
@@ -17,6 +17,9 @@
             <Mass>8</Mass>
             <Flammability>0</Flammability>
         </statBases>
+        <recipeMaker>
+            <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+        </recipeMaker>
         <costList>
             <Steel>100</Steel>
             <ComponentIndustrial>2</ComponentIndustrial>
@@ -30,7 +33,7 @@
     </ThingDef>
     <ThingDef ParentName="DMS_ModuleApparelMountRight">
         <defName>DMS_Apparel_TurretPackLight</defName>
-        <label>Mounted LMG</label>
+        <label>LMG Shoulder Mount</label>
         <description>Todo.</description>
         <graphicData>
             <texPath>Things/Dragoon/TurretPack/TurretPack_MachineGun</texPath>
@@ -146,7 +149,7 @@
     <!-- (右)肩部機槍plus (gau)-->
     <ThingDef ParentName="DMS_ModuleItemBase">
         <defName>DMS_Module_TurretPackHeavy</defName>
-        <label>Mounted gau</label>
+        <label>GAU19/A Shoulder Mount</label>
         <description>todo.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_TurretPackHeavy</ThingDef>
@@ -159,6 +162,9 @@
             <Mass>8</Mass>
             <Flammability>0</Flammability>
         </statBases>
+        <recipeMaker>
+            <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+        </recipeMaker>
         <costList>
             <Steel>100</Steel>
             <ComponentIndustrial>2</ComponentIndustrial>
@@ -172,7 +178,7 @@
     </ThingDef>
     <ThingDef ParentName="DMS_ModuleApparelMountRight">
         <defName>DMS_Apparel_TurretPackHeavy</defName>
-        <label>Mounted gau</label>
+        <label>GAU19/A Shoulder Mount</label>
         <description>Todo.</description>
         <graphicData>
             <texPath>Things/Dragoon/TurretPack/TurretPack_MachineGun</texPath>
@@ -213,7 +219,6 @@
                     </drawData>
                 </li>
                 <li>
-                    <debugLabel>肩部炮塔</debugLabel>
                     <nodeClass>WalkerGear.PawnRenderNode_VerbCompTurret</nodeClass>
                     <workerClass>WalkerGear.PawnRenderNodeWorker_VerbCompTurret</workerClass>
                     <texPath>Things/Weapons/DMS_Weapon_GAU19</texPath>

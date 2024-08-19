@@ -14,7 +14,8 @@
     <apparelTags>
       <li>IndustrialMilitaryBasic</li>
     </apparelTags>
-    <weaponMoney>300~1000</weaponMoney>
+    <apparelMoney>2000~5000</apparelMoney>
+    <weaponMoney>2000~10000</weaponMoney>
     <weaponTags>
       <li>H_Gatling127mm</li>
     </weaponTags>

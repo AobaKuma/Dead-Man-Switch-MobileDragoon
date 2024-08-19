@@ -25,8 +25,15 @@
         <slot>Core</slot>
       </li>
     </comps>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
     <costList>
-      <Tungsteel>325</Tungsteel>
+      <Plasteel>200</Plasteel>
+      <Tungsteel>125</Tungsteel>
       <ComponentIndustrial>10</ComponentIndustrial>
       <ComponentStamped>12</ComponentStamped>
       <Neurocomputer>1</Neurocomputer>
@@ -113,6 +120,12 @@
         <slot>Head</slot>
       </li>
     </comps>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
     <costList>
       <Plasteel>75</Plasteel>
       <ComponentSpacer>2</ComponentSpacer>

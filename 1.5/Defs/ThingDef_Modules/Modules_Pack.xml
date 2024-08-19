@@ -19,6 +19,9 @@
     <statBases>
       <Mass>60</Mass>
     </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
+    </recipeMaker>
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
@@ -116,6 +119,9 @@
     <statBases>
       <Mass>30</Mass>
     </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonModule</researchPrerequisite>
+    </recipeMaker>
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
@@ -180,7 +186,7 @@
     </comps>
   </ThingDef>
 
-  <!-- 穿戴者能夠給玩家機械師提供額外的控制範圍，以及一個範圍性的EMP技能 -->
+  <!-- 增加建築與拆除速度 -->
   <ThingDef ParentName="DMS_ModuleItemBase">
     <defName>DMS_Module_PackEngineering</defName>
     <label>engineering pack</label>
@@ -198,6 +204,9 @@
     <statBases>
       <Mass>35</Mass>
     </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+    </recipeMaker>
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>

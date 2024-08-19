@@ -4,7 +4,8 @@
   <ThingDef ParentName="DMS_ModuleItemBase">
     <defName>DMS_Module_PileBunker</defName>
     <label>pile bunker</label>
-    <description>一種安裝於龍騎兵機體上的工程模塊，由於其工作效率極高因此也經常被用來拆除建築時使用，讓那些訓練機能在一定程度上能做點別的事情。</description>
+    <description>todo</description>
+    <!-- <description>一種安裝於龍騎兵機體上的工程模塊，由於其工作效率極高因此也經常被用來拆除建築時使用，讓那些訓練機能在一定程度上能做點別的事情。</description> -->
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PileBunker</ThingDef>
     </descriptionHyperlinks>
@@ -25,7 +26,7 @@
       </li>
     </comps>
   </ThingDef>
-  <ThingDef ParentName="DMS_ModuleApparelArmLeft">
+  <ThingDef ParentName="DMS_ModuleApparelArmRight">
     <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_PileBunker</defName>
     <label>pile bunker</label>
@@ -128,8 +129,6 @@
     <statBases>
       <Mass>24</Mass>
     </statBases>
-    <apparel>
-    </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_WeaponLmg</ItemDef>

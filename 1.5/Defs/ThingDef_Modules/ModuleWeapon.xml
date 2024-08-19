@@ -12,6 +12,7 @@
       <li><compClass>WalkerGear.CompApparelForcedWeapon</compClass></li>
     </comps>
   </ThingDef>
+
   <ThingDef ParentName="DMS_BaseDragoonMainWeapon">
     <defName>DMS_Dragoon_LMG</defName>
     <label>Dragoon LMG</label>
@@ -75,4 +76,5 @@
       </li>
     </modExtensions>
   </ThingDef>
+  <!-- Gau-8減裝型 -->
 </Defs>

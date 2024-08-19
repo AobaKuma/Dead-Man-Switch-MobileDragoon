@@ -5,7 +5,8 @@
   <ThingDef ParentName="DMS_ModuleItemBase">
     <defName>DMS_Module_JumpThruster</defName>
     <label>burst thruster</label>
-    <description>龍騎兵使用的重型推進器，由四具噴氣引擎驅動整個機體進行短距離飛行，也能夠在消耗大量燃料的狀況下進行較長距離的空中突擊。</description>
+    <description>todo</description>
+    <!-- <description>龍騎兵使用的重型推進器，由四具噴氣引擎驅動整個機體進行短距離飛行，也能夠在消耗大量燃料的狀況下進行較長距離的空中突擊。</description> -->
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_JumpThruster</ThingDef>
     </descriptionHyperlinks>
@@ -183,7 +184,8 @@
   <ThingDef ParentName="DMS_ModuleItemBase">
     <defName>DMS_Module_PackEngineering</defName>
     <label>engineering pack</label>
-    <description>安裝於龍騎兵框架上的工程用模塊，具有一對輔助機械臂來進行建築、維修、搬運與加工等後勤工作。</description>
+    <description>todo</description>
+    <!-- <description>安裝於龍騎兵框架上的工程用模塊，具有一對輔助機械臂來進行建築、維修、搬運與加工等後勤工作。</description> -->
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackEngineering</ThingDef>
     </descriptionHyperlinks>

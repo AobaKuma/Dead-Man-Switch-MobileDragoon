@@ -215,6 +215,11 @@ namespace WalkerGear
             }
             ITab_MechGear.needUpdateCache=true;
             tmpApparelList.Clear();
+            if (pawn.equipment.Primary != null && !EquipmentUtility.CanEquip(pawn.equipment.Primary, pawn))
+            {
+                Messages.Message("WG_WeaponDropped", pawn, MessageTypeDefOf.NeutralEvent, false);
+                pawn.equipment.TryDropEquipment(pawn.equipment.Primary, out var weapon, pawn.Position, false);
+            }
         }
 
         static readonly List<Apparel> tmpApparelList = new();

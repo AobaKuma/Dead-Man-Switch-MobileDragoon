@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <PawnKindDef ParentName="DMS_SoldierBase">
+    <defName>DMS_Squad_ArmyDragoon</defName>
+    <label>mobile dragoon</label>
+    <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_Major</titleRequired>
+    <combatPower>50</combatPower>
+    <apparelRequired Inherit="false">
+      <li>DMS_Apparel_PV8_Core</li>
+      <li>DMS_Apparel_PV8_Helmet</li>
+      <li>DMS_Apparel_InfraredSensor</li>
+      <li>DMS_Apparel_MissilePod</li>
+    </apparelRequired>
+    <apparelTags>
+      <li>IndustrialMilitaryBasic</li>
+    </apparelTags>
+    <weaponMoney>300~1000</weaponMoney>
+    <weaponTags>
+      <li>H_Gatling127mm</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>5~12</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>6~8</range>
+      </li>
+    </skills>
+    <specificApparelRequirements>
+      <li>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(90, 100, 90)</only>
+            </li>            
+            <li>
+              <only>(85, 100, 95)</only>
+            </li>
+            <li>
+              <only>(95, 100, 85)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+    </specificApparelRequirements>
+  </PawnKindDef>
+</Defs>

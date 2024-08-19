@@ -70,8 +70,20 @@
       <li Class="WalkerGear.BuildingWreckage">
         <building>MF_Building_Wreckage</building>
       </li>
-      <li>
-        
+      <li Class="WalkerGear.ApparelRenderOffsets">
+        <headData>
+          <dataWest>
+            <offset>(-0.29,0,0.44)</offset>
+          </dataWest>
+          <dataEast>
+            <offset>(0.29,0,0.44)</offset>
+          </dataEast>
+        </headData>
+        <rootData>
+          <defaultData>
+            <offset>(0,0,0.5)</offset>
+          </defaultData>
+        </rootData>
       </li>
     </modExtensions>
   </ThingDef>

@@ -147,7 +147,7 @@ namespace WalkerGear
 		}
 		public void GearDestory()
 		{
-            GenExplosion.DoExplosion(Wearer.Position, Wearer.Map, 5, DamageDefOf.Bomb, null, 5);
+            GenExplosion.DoExplosion(Wearer.Position, Wearer.Map, 5, DefDatabase<DamageDef>.GetNamed("Bomb"), null, 5);
             Building building;
             if (def.HasModExtension<BuildingWreckage>())
             {

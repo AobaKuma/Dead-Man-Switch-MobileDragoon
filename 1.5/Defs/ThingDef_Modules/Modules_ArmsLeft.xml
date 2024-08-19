@@ -17,7 +17,7 @@
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
-      <BroadshieldCore>1</BroadshieldCore>
+      <!-- <BroadshieldCore>1</BroadshieldCore> -->
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -84,7 +84,8 @@
   <ThingDef ParentName="DMS_ModuleItemBase">
     <defName>DMS_Module_Shield</defName>
     <label>ballistic shield</label>
-    <description>一面安裝在龍騎兵框架上的複合裝甲防彈盾牌，雖然有些沉重但能夠有效的抵擋大口徑破片與反器材步槍彈對於本體的傷害。</description>
+    <description>todo.</description>
+    <!-- <description>一面安裝在龍騎兵框架上的複合裝甲防彈盾牌，雖然有些沉重但能夠有效的抵擋大口徑破片與反器材步槍彈對於本體的傷害。</description> -->
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_Shield</ThingDef>
     </descriptionHyperlinks>
@@ -156,7 +157,8 @@
   <ThingDef ParentName="DMS_ModuleItemBase">
     <defName>DMS_Module_InfraredSensor</defName>
     <label>infrared sensor</label>
-    <description>一種安裝於龍騎兵機體上的外置紅外線探照燈與火控雷達模塊，具備一定程度上的夜視與彈道測距能力。</description>
+    <description>todo.</description>
+    <!-- <description>一種安裝於龍騎兵機體上的外置紅外線探照燈與火控雷達模塊，具備一定程度上的夜視與彈道測距能力。</description> -->
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_InfraredSensor</ThingDef>
     </descriptionHyperlinks>
@@ -169,6 +171,7 @@
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -194,7 +197,7 @@
     <apparel>
       <wornGraphicPath>Things/Dragoon/InfraredSensor/apparel</wornGraphicPath>
       <drawData>
-        <scale>1</scale>
+        <scale>0.8</scale>
         <defaultData>
           <layer>20</layer>
         </defaultData>

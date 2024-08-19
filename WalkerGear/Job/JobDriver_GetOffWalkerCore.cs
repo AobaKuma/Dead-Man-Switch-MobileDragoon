@@ -27,7 +27,6 @@ namespace WalkerGear
                     Pawn actor = this.pawn;
                     if (actor.CurJob.GetTarget(TargetIndex.A).Thing is Building_MaintenanceBay bay && !bay.HasGearCore)
                     {
-                        //actor.Position = bay.Position;
                         bay.GearDown(actor);
                     }
                 }

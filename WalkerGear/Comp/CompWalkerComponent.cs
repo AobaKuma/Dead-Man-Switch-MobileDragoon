@@ -212,7 +212,7 @@ namespace WalkerGear
             {
                 (slots ??= new()).Add(slot);
             }
-            else if (slot == null)
+            else if (slot == null && slots.NullOrEmpty())
             {
                 return base.ConfigErrors(parentDef).Append("No proper slot");
             }

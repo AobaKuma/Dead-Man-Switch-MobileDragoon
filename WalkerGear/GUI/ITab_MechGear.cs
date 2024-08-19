@@ -211,7 +211,7 @@ namespace WalkerGear
         {
             if (slot!=null&&slot.isCoreFrame && Parent.HasGearCore)
             {
-                RenderTexture portrait = PortraitsCache.Get(Parent.Dummy, rect.size, Parent.direction,cameraZoom:0.75f);
+                RenderTexture portrait = PortraitsCache.Get(Parent.Dummy, rect.size, Parent.direction, cameraOffset: new Vector3(0, 0, 0.6f), cameraZoom: 0.75f);
                 Widgets.DrawTextureFitted(rect,portrait,1f);
             }
             else Widgets.DrawTextureFitted(rect, icon, 1f);
@@ -335,7 +335,7 @@ namespace WalkerGear
             {
                 if (a.TryGetComp<CompWalkerComponent>(out var c))
                 {
-                    massCapacity += a.GetStatValue(MiscDefOf.VEF_MassCarryCapacity);
+                    massCapacity += a.GetStatValue(StatDefOf.CarryingCapacity);
                     currentLoad += a.GetStatValue(StatDefOf.Mass);
                     foreach (var s in c.Props.slots)
                     {

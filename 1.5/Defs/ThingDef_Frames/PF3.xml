@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- PF3核心 -->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_PF3_Core</defName>
+    <label>PF-3 drgaoon</label>
+    <description>todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_PF3_Core</ThingDef>
+    </descriptionHyperlinks>
+    <thingCategories Inherit="false">
+      <li>DMS_Module_Core</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>8</Mass>
+    </statBases>
+    <equippedStatOffsets>
+			<WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+			<VEF_MassCarryCapacity>300</VEF_MassCarryCapacity>
+    </equippedStatOffsets>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_PF3_Core</EquipedThingDef>
+        <slot>Core</slot>
+        <disabledSlots>
+          <li>Head</li>
+          <li>MountLeft</li>
+          <li>MountRight</li>
+          <li>Attachment</li>
+        </disabledSlots>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonBasis</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Tungsteel>75</Tungsteel>
+      <Steel>250</Steel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <ComponentStamped>6</ComponentStamped>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelCore">
+    <defName>DMS_Apparel_PF3_Core</defName>
+    <label>PF-3 frame</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/PF3/apparel_south</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>10</Mass>
+      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.10</ArmorRating_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.1</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/PF3/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.5</scale>
+        <dataNorth>
+          <layer>70</layer>
+        </dataNorth>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_PF3_Core</ItemDef>
+        <slot>Core</slot>
+        <disabledSlots>
+          <li>Head</li>
+          <li>MountLeft</li>
+          <li>MountRight</li>
+          <li>Attachment</li>
+        </disabledSlots>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="WalkerGear.BuildingWreckage">
+        <building>MF_Building_Wreckage</building>
+      </li>
+      <li Class="WalkerGear.ApparelRenderOffsets">
+        <headData>
+          <dataWest>
+            <offset>(-0.29,0,0.44)</offset>
+          </dataWest>
+          <dataEast>
+            <offset>(0.29,0,0.44)</offset>
+          </dataEast>
+        </headData>
+        <rootData>
+          <defaultData>
+            <offset>(0,0,0.35)</offset>
+          </defaultData>
+        </rootData>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

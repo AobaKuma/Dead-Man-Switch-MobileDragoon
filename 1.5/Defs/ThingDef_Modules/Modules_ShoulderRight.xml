@@ -15,7 +15,6 @@
         <statBases>
             <MaxHitPoints>100</MaxHitPoints>
             <Mass>8</Mass>
-            <Flammability>0</Flammability>
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
@@ -160,7 +159,6 @@
         <statBases>
             <MaxHitPoints>100</MaxHitPoints>
             <Mass>8</Mass>
-            <Flammability>0</Flammability>
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>

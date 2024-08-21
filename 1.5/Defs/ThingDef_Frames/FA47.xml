@@ -17,7 +17,6 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Mass>8</Mass>
-      <Flammability>0</Flammability>
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -89,7 +88,7 @@
         </headData>
         <rootData>
           <defaultData>
-            <offset>(0,0,0.5)</offset>
+            <offset>(0,0,0.35)</offset>
           </defaultData>
         </rootData>
       </li>
@@ -112,7 +111,6 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Mass>8</Mass>
-      <Flammability>0</Flammability>
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">

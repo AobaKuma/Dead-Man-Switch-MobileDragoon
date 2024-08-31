@@ -59,6 +59,7 @@
         <modExtensions>
             <li Class="VFECore.ApparelDrawPosExtension">
                 <isUnifiedApparel>true</isUnifiedApparel>
+				<showBodyInBedAlways>true</showBodyInBedAlways>
             </li>
         </modExtensions>
     </ThingDef>

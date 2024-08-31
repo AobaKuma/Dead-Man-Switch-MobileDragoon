@@ -28,7 +28,7 @@
     <useHitPoints>true</useHitPoints>
     <size>(3,3)</size>
     <pathCost>100</pathCost>
-    <designationCategory>Misc</designationCategory>
+    <designationCategory>DMS_Category</designationCategory>
     <uiOrder>10</uiOrder>
     <passability>PassThroughOnly</passability>
     <hasInteractionCell>True</hasInteractionCell>
@@ -101,7 +101,7 @@
     <useHitPoints>true</useHitPoints>
     <size>(3,1)</size>
     <pathCost>100</pathCost>
-    <designationCategory>Misc</designationCategory>
+    <designationCategory>DMS_Category</designationCategory>
     <uiOrder>11</uiOrder>
     <passability>PassThroughOnly</passability>
     <hasInteractionCell>false</hasInteractionCell>

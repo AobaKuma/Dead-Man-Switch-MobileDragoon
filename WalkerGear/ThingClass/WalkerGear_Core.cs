@@ -1,8 +1,8 @@
 ﻿
+using NAudio.Wave;
 using RimWorld;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -44,17 +44,52 @@ namespace WalkerGear
 			}
 		}
 		public float HealthDamaged=>HealthMax-Health;
-        
+        public bool safetyDisabled = false;
         public BuildingWreckage BuildingWreckage=>def.GetModExtension<BuildingWreckage>();
         public override IEnumerable<Gizmo> GetWornGizmos()
-		{
-			foreach(Gizmo gizmo in base.GetWornGizmos())
-			{
-				yield return gizmo;
-			}
-			yield return new Gizmo_HealthPanel(this);
-		}
-		public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
+        {
+            foreach (Gizmo gizmo in base.GetWornGizmos())
+            {
+                yield return gizmo;
+            }
+            Command_Toggle toggle = new Command_Toggle
+            {
+                Order = -998f,
+                icon = safetyDisabled ? Resources.GetSafetyIcon : Resources.GetSafetyIcon_Disabled,
+                defaultLabel = "WG_SafetyLock".Translate(),
+                defaultDesc = "WG_SafetyLock_Desc".Translate(),
+                isActive = () => safetyDisabled,
+                toggleAction = delegate
+                {
+                    safetyDisabled = !safetyDisabled;
+                    if (safetyDisabled) Messages.Message("WG_SafetyDisabled", MessageTypeDefOf.CautionInput, false);
+                }
+            };
+            yield return toggle;
+
+            if (toggle.isActive())
+            {
+                Command_Action command = new Command_Action
+                {
+                    Order = -999f,
+                    defaultLabel = "WG_EmergencyEject".Translate(),
+                    defaultDesc = "WG_EmergencyEject_Desc".Translate(),
+                    icon = Resources.GetOutIcon,
+                    action = delegate
+                    {
+                        Eject();
+                    }
+                };
+                if (base.Wearer.Faction != Faction.OfPlayer || !base.Wearer.Drafted)
+                {
+                    command.Disable();
+                }
+                yield return command;
+            }
+            
+            yield return new Gizmo_HealthPanel(this);
+        }
+        public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
 		{
             if (!dinfo.Def.harmsHealth)
             {
@@ -144,8 +179,38 @@ namespace WalkerGear
 					modules.Add(a);
                 }
 			}
-		}
-		public void GearDestory()
+        }
+        public void Eject()
+        {
+            //把殖民者彈出去，然後就地自毀。
+            GenExplosion.DoExplosion(Wearer.Position, Wearer.Map, 5, DefDatabase<DamageDef>.GetNamed("Bomb"), null, 5);
+            Building building;
+            if (def.HasModExtension<BuildingWreckage>())
+            {
+                building = ThingMaker.MakeThing(def.GetModExtension<BuildingWreckage>().building) as Building;
+            }
+            else
+            {
+                building = (Building)ThingMaker.MakeThing(BuildingWreckage.building);
+            } 
+            building.SetFactionDirect(Wearer.Faction);
+            building.Rotation = Rot4.Random;
+
+            GenPlace.TryPlaceThing(building, Wearer.Position, Wearer.Map, ThingPlaceMode.Direct);
+
+            if (building is Building_Wreckage wreckage)
+            {
+                foreach (var m in modules)
+                {
+                    if (m == this) continue;
+                    Wearer.apparel.Remove((Apparel)m);
+                    m.HitPoints = 1;
+                    if (Rand.Bool) wreckage.moduleContainer.Add(MechUtility.Conversion(m));
+                }
+                Wearer.apparel.Remove(this);
+            }
+        }
+        public void GearDestory()
 		{
             GenExplosion.DoExplosion(Wearer.Position, Wearer.Map, 5, DefDatabase<DamageDef>.GetNamed("Bomb"), null, 5);
             Building building;
@@ -156,8 +221,8 @@ namespace WalkerGear
             else
                 building = (Building)ThingMaker.MakeThing(BuildingWreckage.building);
             building.SetFactionDirect(Wearer.Faction);
-            building.Rotation = Rot4.South;
-			
+            building.Rotation = Rot4.Random;
+
             GenPlace.TryPlaceThing(building, Wearer.Position, Wearer.Map, ThingPlaceMode.Direct);
             
             if (building is Building_Wreckage wreckage)
@@ -172,10 +237,7 @@ namespace WalkerGear
                     if (Rand.Bool) wreckage.moduleContainer.Add(MechUtility.Conversion(m));
                 }
                 Wearer.apparel.Remove(this);
-            }
-			
-            
-        }
+            }        }
         public override void ExposeData()
 		{
 			base.ExposeData();
@@ -194,11 +256,6 @@ namespace WalkerGear
 		public List<Thing> modules = new();
         
         
-    }
-
-    public class BuildingWreckage : DefModExtension
-    {
-        public ThingDef building;
     }
 }
 

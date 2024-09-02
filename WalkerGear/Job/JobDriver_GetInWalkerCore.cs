@@ -1,4 +1,5 @@
-﻿using RimWorld.Utility;
+﻿using RimWorld;
+using RimWorld.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,11 @@ namespace WalkerGear
         private const int wait = 200;
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
+            if (this.pawn.BodySize > 1.5)
+            {
+                Messages.Message("WG_TooBigForPilot".Translate(), MessageTypeDefOf.RejectInput, false);
+                return false;
+            }
             return this.pawn.Reserve(this.job.GetTarget(maintenanceBay), this.job, errorOnFailed: errorOnFailed);
         }
 
@@ -25,22 +31,22 @@ namespace WalkerGear
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.FailOnDespawnedNullOrForbidden(maintenanceBay);
-            
+
             yield return Toils_Goto.GotoThing(maintenanceBay, PathEndMode.InteractionCell);
-           Toil gearUp = Toils_General.WaitWith(TargetIndex.A, wait, true, true);
-            Action action= () => 
+            Toil gearUp = Toils_General.WaitWith(TargetIndex.A, wait, true, true);
+            Action action = () =>
             {
                 Pawn actor = this.pawn;
                 if (actor.CurJob.GetTarget(TargetIndex.A).Thing is Building_MaintenanceBay bay)
                 {
                     actor.Position = bay.Position;
                     bay.GearUp(actor);
-                    actor.drafter.Drafted=true;
+                    actor.drafter.Drafted = true;
                 }
 
             };
             gearUp.AddFinishAction(action);
-            
+
             yield return gearUp;
         }
     }

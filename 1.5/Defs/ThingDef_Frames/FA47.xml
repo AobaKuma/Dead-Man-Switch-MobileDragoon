@@ -52,11 +52,11 @@
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
       <ArmorRating_Heat>0.80</ArmorRating_Heat>
       <JumpRange MayRequire="ludeon.rimworld.royalty">9.9</JumpRange>
+      <MoveSpeed>7</MoveSpeed>
     </statBases>
     <equippedStatOffsets>
 			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
 			<VEF_MassCarryCapacity>480</VEF_MassCarryCapacity>
-      <MoveSpeed>0.5</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/FA47/apparel</wornGraphicPath>

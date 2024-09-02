@@ -50,9 +50,9 @@
       <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
       <ArmorRating_Heat>0.10</ArmorRating_Heat>
+      <MoveSpeed>6.2</MoveSpeed>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.2</MoveSpeed>
 			<WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
 			<VEF_MassCarryCapacity>575</VEF_MassCarryCapacity>
     </equippedStatOffsets>

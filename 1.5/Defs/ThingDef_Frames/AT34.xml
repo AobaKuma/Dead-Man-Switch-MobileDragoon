@@ -53,10 +53,8 @@
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
       <ArmorRating_Heat>0.10</ArmorRating_Heat>
+      <MoveSpeed>4.8</MoveSpeed>
     </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.1</MoveSpeed>
-    </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/AT34/apparel</wornGraphicPath>
       <drawData>

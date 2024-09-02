@@ -61,6 +61,7 @@
         </dataNorth>
         <dataWest>
           <offset>(-0.15,0,-0.10)</offset>
+          <layer>64</layer>
         </dataWest>
         <dataEast>
           <offset>(-0.80,0,0.8)</offset>
@@ -144,6 +145,7 @@
         </dataNorth>
         <dataWest>
           <offset>(-0.3,0,-0.20)</offset>
+          <layer>64</layer>
         </dataWest>
         <dataEast>
           <offset>(0.80,0,0.8)</offset>
@@ -219,6 +221,7 @@
         </dataNorth>
         <dataWest>
           <offset>(0.10,0,0.15)</offset>
+          <layer>64</layer>
         </dataWest>
         <dataEast>
           <offset>(-0.80,0,0.8)</offset>

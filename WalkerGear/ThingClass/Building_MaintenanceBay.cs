@@ -217,7 +217,7 @@ namespace WalkerGear
             tmpApparelList.Clear();
             if (pawn.equipment.Primary != null && !EquipmentUtility.CanEquip(pawn.equipment.Primary, pawn))
             {
-                Messages.Message("WG_WeaponDropped", pawn, MessageTypeDefOf.NeutralEvent, false);
+                Messages.Message("WG_WeaponDropped".Translate(), pawn, MessageTypeDefOf.NeutralEvent, false);
                 pawn.equipment.TryDropEquipment(pawn.equipment.Primary, out var weapon, pawn.Position, false);
             }
         }

@@ -3,7 +3,7 @@
   <!-- PF3核心 -->
   <ThingDef ParentName="DMS_ModuleItemBase">
     <defName>DMS_Module_PF3_Core</defName>
-    <label>PF-3 drgaoon</label>
+    <label>PF-3 powered frame</label>
     <description>todo.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PF3_Core</ThingDef>
@@ -49,7 +49,7 @@
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_PF3_Core</defName>
-    <label>PF-3 frame</label>
+    <label>PF-3 powered frame</label>
     <description>Todo.</description>
     <graphicData>
       <texPath>Things/Dragoon/PF3/apparel_south</texPath>
@@ -59,10 +59,8 @@
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
       <ArmorRating_Heat>0.10</ArmorRating_Heat>
+      <MoveSpeed>4.0</MoveSpeed>
     </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.1</MoveSpeed>
-    </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/PF3/apparel</wornGraphicPath>
       <drawData>
@@ -91,11 +89,14 @@
       <li Class="WalkerGear.ApparelRenderOffsets">
         <headData>
           <dataWest>
-            <offset>(-0.29,0,0.44)</offset>
+            <offset>(-0.35,0,0.35)</offset>
           </dataWest>
           <dataEast>
-            <offset>(0.29,0,0.44)</offset>
+            <offset>(0.35,0,0.35)</offset>
           </dataEast>
+          <dataSouth>
+            <offset>(0,0,0.30)</offset>
+          </dataSouth>
         </headData>
         <rootData>
           <defaultData>

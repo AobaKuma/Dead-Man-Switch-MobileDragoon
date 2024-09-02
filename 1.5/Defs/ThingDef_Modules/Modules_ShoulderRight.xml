@@ -60,11 +60,11 @@
                             <layer>0</layer>
                         </dataSouth>
                         <dataNorth>
-                            <offset>(0.50,0,0.45)</offset>
-                            <layer>20</layer>
+                            <offset>(0.50,0,0.35)</offset>
+                            <layer>75</layer>
                         </dataNorth>
                         <dataWest>
-                            <offset>(0.5,0,0.45)</offset>
+                            <offset>(0,0,0.6)</offset>
                             <layer>0</layer>
                         </dataWest>
                         <dataEast>
@@ -91,16 +91,16 @@
                             <layer>10</layer>
                         </dataSouth>
                         <dataNorth>
-                            <offset>(0.50,0,0.25)</offset>
-                            <layer>30</layer>
+                            <offset>(0.50,0,0.40)</offset>
+                            <layer>80</layer>
                         </dataNorth>
                         <dataWest>
-                            <offset>(0.75,0,0.5)</offset>
-                            <layer>10</layer>
+                            <offset>(-0.2,0,0.8)</offset>
+                            <layer>-15</layer>
                             <rotationOffset>-180</rotationOffset>
                         </dataWest>
                         <dataEast>
-                            <offset>(-1.0,0,0.15)</offset>
+                            <offset>(-1.0,0,0.25)</offset>
                         </dataEast>
                     </drawData>
                 </li>
@@ -108,17 +108,17 @@
         </apparel>
         <verbs>
             <li>
-                <verbClass>Verb_Shoot</verbClass>
-                <label>Gun</label>
-                <defaultProjectile>Bullet_MiniTurret</defaultProjectile>
-                <warmupTime>0</warmupTime>
-                <range>28.9</range>
-                <hasStandardCommand>true</hasStandardCommand>
-                <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-                <burstShotCount>1</burstShotCount>
-                <soundCast>GunShotA</soundCast>
-                <soundCastTail>GunTail_Light</soundCastTail>
-                <muzzleFlashScale>9</muzzleFlashScale>
+                <commandIcon>Things/Dragoon/TurretPack/TurretPack_MachineGun</commandIcon>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_Autopistol</defaultProjectile>
+				<warmupTime>0.5</warmupTime>
+				<range>15.9</range>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<burstShotCount>4</burstShotCount>
+				<soundCast>Shot_MachinePistol</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
             </li>
         </verbs>
         <comps>
@@ -130,7 +130,7 @@
                 <verbProps>
                     <li>
                         <label>Gun</label>
-                        <visualLabel>mini-turret gun</visualLabel>
+                        <visualLabel>Mounted SMG</visualLabel>
                         <description>A simple automatic gun made to be mounted on a shoulder.</description>
                         <canBeToggled>true</canBeToggled>
                         <comps>
@@ -204,11 +204,11 @@
                             <layer>0</layer>
                         </dataSouth>
                         <dataNorth>
-                            <offset>(0.50,0,0.45)</offset>
-                            <layer>20</layer>
+                            <offset>(0.50,0,0.35)</offset>
+                            <layer>75</layer>
                         </dataNorth>
                         <dataWest>
-                            <offset>(0.5,0,0.45)</offset>
+                            <offset>(0,0,0.6)</offset>
                             <layer>0</layer>
                         </dataWest>
                         <dataEast>
@@ -235,16 +235,16 @@
                             <layer>10</layer>
                         </dataSouth>
                         <dataNorth>
-                            <offset>(0.50,0,0.25)</offset>
-                            <layer>30</layer>
+                            <offset>(0.50,0,0.40)</offset>
+                            <layer>80</layer>
                         </dataNorth>
                         <dataWest>
-                            <offset>(0.75,0,0.5)</offset>
-                            <layer>10</layer>
+                            <offset>(-0.2,0,0.8)</offset>
+                            <layer>-15</layer>
                             <rotationOffset>-180</rotationOffset>
                         </dataWest>
                         <dataEast>
-                            <offset>(-0.9,0,0.2)</offset>
+                            <offset>(-0.9,0,0.25)</offset>
                         </dataEast>
                     </drawData>
                 </li>
@@ -252,15 +252,15 @@
         </apparel>
         <verbs>
             <li>
+                <commandIcon>Things/Dragoon/TurretPack/TurretPack_GAU</commandIcon>
                 <verbClass>Verb_Shoot</verbClass>
                 <label>Gun</label>
-                <defaultProjectile>DMS_Bullet_CIWS</defaultProjectile>
-                <forcedMissRadius>2</forcedMissRadius>
-                <warmupTime>0</warmupTime>
+                <defaultProjectile>DMS_Bullet_Kord</defaultProjectile>
+                <warmupTime>1.2</warmupTime>
                 <range>45</range>
                 <hasStandardCommand>true</hasStandardCommand>
                 <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-                <burstShotCount>1</burstShotCount>
+                <burstShotCount>6</burstShotCount>
                 <soundCast>GunShotA</soundCast>
                 <soundCastTail>GunTail_Light</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
@@ -275,8 +275,8 @@
                 <verbProps>
                     <li>
                         <label>Gun</label>
-                        <visualLabel>mini-turret gun</visualLabel>
-                        <description>A simple automatic gun made to be mounted on shoulder.</description>
+                        <visualLabel>Mounted GAU-19/A</visualLabel>
+                        <description>A multibarrel turret mounted on shoulder.</description>
                         <canBeToggled>true</canBeToggled>
                         <comps>
                             <li Class="WalkerGear.VerbCompPropertiesTurret">

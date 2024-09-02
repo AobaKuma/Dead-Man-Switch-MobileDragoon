@@ -106,7 +106,7 @@
     <Compile Include="HarmonyPatches\Pawn_EquipmentTracker_Patch.cs" />
     <Compile Include="Resources.cs" />
     <Compile Include="MVCF_VerbComp\VerbCompTurret.cs" />
-    <Compile Include="ThingClass\StatPart_BodySize.cs" />
+    <Compile Include="ThingClass\StatPart_CarryingCapacity.cs" />
     <Compile Include="ThingClass\StatPart_MoveSpeed.cs" />
     <Compile Include="ThingClass\WalkerGear_Core.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

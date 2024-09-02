@@ -26,11 +26,12 @@ namespace WalkerGear
         }
         private float GetValue(StatRequest req, WalkerGear_Core def)
         {
-            float baseStat = def.GetStatValue(StatDefOf.CarryingCapacity);
+            
+            float baseStat = def.GetStatValue(VFECore.VFEDefOf.VEF_MassCarryCapacity);
             IEnumerable<Apparel> enumerable = GetPawn(req).apparel?.WornApparel;
             foreach (Apparel item in enumerable ?? Enumerable.Empty<Apparel>())
             {
-                baseStat += item.def.equippedStatOffsets.GetStatOffsetFromList(StatDefOf.CarryingCapacity);
+                baseStat += item.def.equippedStatOffsets.GetStatOffsetFromList(VFECore.VFEDefOf.VEF_MassCarryCapacity);
             }
             return baseStat;
         }

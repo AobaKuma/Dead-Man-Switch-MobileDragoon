@@ -43,7 +43,7 @@ namespace WalkerGear
 				if (healthInt > HealthMax) healthInt = HealthMax;
 			}
 		}
-		public float HealthDamaged=>HealthMax-Health;
+        public float HealthDamaged => HealthMax - Health;
         public bool safetyDisabled = false;
         public BuildingWreckage BuildingWreckage=>def.GetModExtension<BuildingWreckage>();
         public override IEnumerable<Gizmo> GetWornGizmos()
@@ -54,8 +54,8 @@ namespace WalkerGear
             }
             Command_Toggle toggle = new Command_Toggle
             {
-                Order = -998f,
-                icon = safetyDisabled ? Resources.GetSafetyIcon : Resources.GetSafetyIcon_Disabled,
+                Order = -999f,
+                icon = safetyDisabled ? Resources.GetSafetyIcon_Disabled : Resources.GetSafetyIcon,
                 defaultLabel = "WG_SafetyLock".Translate(),
                 defaultDesc = "WG_SafetyLock_Desc".Translate(),
                 isActive = () => safetyDisabled,
@@ -71,7 +71,7 @@ namespace WalkerGear
             {
                 Command_Action command = new Command_Action
                 {
-                    Order = -999f,
+                    Order = -998f,
                     defaultLabel = "WG_EmergencyEject".Translate(),
                     defaultDesc = "WG_EmergencyEject_Desc".Translate(),
                     icon = Resources.GetOutIcon,

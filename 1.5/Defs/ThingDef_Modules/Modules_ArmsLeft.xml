@@ -40,9 +40,9 @@
     <statBases>
       <Mass>0</Mass>
       <EnergyShieldRechargeRate>0.75</EnergyShieldRechargeRate>
-      <EnergyShieldEnergyMax>0.5</EnergyShieldEnergyMax>
     </statBases>
     <equippedStatOffsets>
+      <EnergyShieldEnergyMax>50</EnergyShieldEnergyMax>
       <MoveSpeed>-0.12</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
@@ -203,7 +203,7 @@
       <Mass>8</Mass>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.1</MoveSpeed>
+      <MoveSpeed>-0.05</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/InfraredSensor/apparel</wornGraphicPath>

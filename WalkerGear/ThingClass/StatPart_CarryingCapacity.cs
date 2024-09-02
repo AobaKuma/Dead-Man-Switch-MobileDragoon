@@ -3,6 +3,7 @@ using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
+using VFECore;
 
 namespace WalkerGear
 {
@@ -12,7 +13,7 @@ namespace WalkerGear
         {
             if (IsWorking(req, out var def))
             {
-                return "WG_ArmorCapacity".Translate() + " {0}".Formatted(GetValue(req, def).ToString("0.##"));
+                return "WG_ArmorCapacity".Translate() + " {0}({1})".Formatted(GetBaseValue(def), GetValue(req, def).ToString());
             }
             return null;
         }
@@ -24,16 +25,23 @@ namespace WalkerGear
                 val = GetValue(req, def);
             }
         }
-        private float GetValue(StatRequest req, WalkerGear_Core def)
+        private float GetValue(StatRequest req, WalkerGear_Core core)
         {
-            
-            float baseStat = def.GetStatValue(VFECore.VFEDefOf.VEF_MassCarryCapacity);
+
+            float baseStat = core.GetStatValue(StatDefOf.CarryingCapacity);
+
+            Log.Message(core.def.defName);
+            Log.Message(core.GetStatValue(StatDefOf.CarryingCapacity));
             IEnumerable<Apparel> enumerable = GetPawn(req).apparel?.WornApparel;
             foreach (Apparel item in enumerable ?? Enumerable.Empty<Apparel>())
             {
-                baseStat += item.def.equippedStatOffsets.GetStatOffsetFromList(VFECore.VFEDefOf.VEF_MassCarryCapacity);
+                baseStat += item.def.equippedStatOffsets.GetStatValueFromList(StatDefOf.CarryingCapacity, 0);
             }
             return baseStat;
+        }
+        private float GetBaseValue(WalkerGear_Core core)
+        {
+            return core.def.statBases.GetStatValueFromList(StatDefOf.CarryingCapacity, 175);
         }
         private Pawn GetPawn(StatRequest req)
         {
@@ -44,9 +52,9 @@ namespace WalkerGear
             Log.Warning("Error: pawn not exist");
             return null;
         }
-        private bool IsWorking(StatRequest req, out WalkerGear_Core def)
+        private bool IsWorking(StatRequest req, out WalkerGear_Core core)
         {
-            def = null;
+            core = null;
             if (req.HasThing && req.Thing is Pawn pawn)
             {
                 IEnumerable<Apparel> enumerable = pawn.apparel?.WornApparel;
@@ -54,7 +62,7 @@ namespace WalkerGear
                 {
                     if (item is WalkerGear_Core walkerGear_Core)
                     {
-                        def = walkerGear_Core;
+                        core = walkerGear_Core;
                         return true;
                     }
                 }

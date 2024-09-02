@@ -16,12 +16,8 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <Mass>8</Mass>
+      <Mass>50</Mass>
     </statBases>
-    <equippedStatOffsets>
-			<WorkSpeedGlobal>0.25</WorkSpeedGlobal>
-			<VEF_MassCarryCapacity>300</VEF_MassCarryCapacity>
-    </equippedStatOffsets>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_PF3_Core</EquipedThingDef>
@@ -55,12 +51,16 @@
       <texPath>Things/Dragoon/PF3/apparel_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>10</Mass>
+      <Mass>50</Mass>
+			<CarryingCapacity>225</CarryingCapacity>
+      <MoveSpeed>4.0</MoveSpeed>
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
       <ArmorRating_Heat>0.10</ArmorRating_Heat>
-      <MoveSpeed>4.0</MoveSpeed>
     </statBases>
+    <equippedStatOffsets>
+			<WorkSpeedGlobal>0.10</WorkSpeedGlobal>
+    </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/PF3/apparel</wornGraphicPath>
       <drawData>

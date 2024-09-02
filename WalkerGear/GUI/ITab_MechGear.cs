@@ -268,7 +268,7 @@ namespace WalkerGear
             row.Label("Performance".Translate());
             row.Gap(int.MaxValue);
             float loadPercent = Mathf.Max(1f,currentLoad / massCapacity);
-            row.FillableBar(rect.width, 16f, loadPercent,$"{currentLoad.ToStringDecimalIfSmall() }/{massCapacity.ToStringDecimalIfSmall()}",WalkerGear_Core.fBarTex);
+            row.FillableBar(rect.width, 16f, loadPercent, $"{currentLoad} / {massCapacity}", WalkerGear_Core.fBarTex);
             //replace
             row.Label("OverallArmor".Translate());     
             foreach (StatDef statDef in toDraw)
@@ -317,8 +317,8 @@ namespace WalkerGear
         private static readonly Dictionary<SlotDef, Thing> occupiedSlots = new();
         private static readonly Dictionary<int, SlotDef> positionWSlot = new(7);
         private static readonly List<SlotDef> toRemove=new();
-        private static float massCapacity;
-        private static float currentLoad;
+        private float massCapacity;
+        private float currentLoad;
 
         public override void OnOpen()
         {
@@ -333,10 +333,10 @@ namespace WalkerGear
             currentLoad = 0;
             foreach (var a in Parent.DummyApparels.WornApparel)
             {
-                if (a.TryGetComp<CompWalkerComponent>(out var c))
+                massCapacity += a.GetStatValue(StatDefOf.CarryingCapacity) != StatDefOf.CarryingCapacity.defaultBaseValue ? a.GetStatValue(StatDefOf.CarryingCapacity) : 0;
+                currentLoad += a.GetStatValue(StatDefOf.Mass);
+                if (a.TryGetComp<CompWalkerComponent>(out CompWalkerComponent c))
                 {
-                    massCapacity += a.GetStatValue(StatDefOf.CarryingCapacity);
-                    currentLoad += a.GetStatValue(StatDefOf.Mass);
                     foreach (var s in c.Props.slots)
                     {
                         occupiedSlots[s] = a;

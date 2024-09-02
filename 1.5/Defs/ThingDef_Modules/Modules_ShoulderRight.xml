@@ -43,6 +43,7 @@
         <equippedStatOffsets>
             <MoveSpeed>-0.12</MoveSpeed>
         </equippedStatOffsets>
+        <tickerType>Normal</tickerType>
         <apparel>
             <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
             <renderNodeProperties>
@@ -100,7 +101,7 @@
                             <rotationOffset>-180</rotationOffset>
                         </dataWest>
                         <dataEast>
-                            <offset>(-1.0,0,0.25)</offset>
+                            <offset>(-0.9,0,0.25)</offset>
                         </dataEast>
                     </drawData>
                 </li>
@@ -110,12 +111,13 @@
             <li>
                 <commandIcon>Things/Dragoon/TurretPack/TurretPack_MachineGun</commandIcon>
 				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
+				<label>Gun</label>
+                <hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_Autopistol</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
 				<range>15.9</range>
-				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<burstShotCount>5</burstShotCount>
 				<soundCast>Shot_MachinePistol</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
@@ -179,7 +181,7 @@
         <label>GAU19/A Shoulder Mount</label>
         <description>Todo.</description>
         <graphicData>
-            <texPath>Things/Dragoon/TurretPack/TurretPack_MachineGun</texPath>
+            <texPath>Things/Dragoon/TurretPack/TurretPack_GAU</texPath>
         </graphicData>
         <statBases>
             <Mass>0</Mass>
@@ -187,6 +189,7 @@
         <equippedStatOffsets>
             <MoveSpeed>-0.12</MoveSpeed>
         </equippedStatOffsets>
+        <tickerType>Normal</tickerType>
         <apparel>
             <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
             <renderNodeProperties>
@@ -259,7 +262,7 @@
                 <warmupTime>1.2</warmupTime>
                 <range>45</range>
                 <hasStandardCommand>true</hasStandardCommand>
-                <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+                <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
                 <burstShotCount>6</burstShotCount>
                 <soundCast>GunShotA</soundCast>
                 <soundCastTail>GunTail_Light</soundCastTail>

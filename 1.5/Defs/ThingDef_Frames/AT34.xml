@@ -16,12 +16,8 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <Mass>8</Mass>
+      <Mass>80</Mass>
     </statBases>
-    <equippedStatOffsets>
-			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
-			<VEF_MassCarryCapacity>600</VEF_MassCarryCapacity>
-    </equippedStatOffsets>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_AT34_Core</EquipedThingDef>
@@ -49,12 +45,16 @@
       <texPath>Things/Dragoon/AT34/apparel_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>10</Mass>
+      <Mass>80</Mass>
+			<CarryingCapacity>300</CarryingCapacity>
+      <MoveSpeed>4.8</MoveSpeed>
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
       <ArmorRating_Heat>0.10</ArmorRating_Heat>
-      <MoveSpeed>4.8</MoveSpeed>
     </statBases>
+    <equippedStatOffsets>
+			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
+    </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/AT34/apparel</wornGraphicPath>
       <drawData>
@@ -107,7 +107,7 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <Mass>8</Mass>
+      <Mass>20</Mass>
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -136,7 +136,7 @@
       <texPath>Things/Dragoon/AT34/helmet_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>0</Mass>
+      <Mass>20</Mass>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.12</MoveSpeed>

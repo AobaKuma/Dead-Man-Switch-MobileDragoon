@@ -16,7 +16,7 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <Mass>8</Mass>
+      <Mass>80</Mass>
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -46,15 +46,15 @@
       <texPath>Things/Dragoon/PV8/apparel_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>10</Mass>
+      <Mass>80</Mass>
+			<CarryingCapacity>575</CarryingCapacity>
+      <MoveSpeed>6.2</MoveSpeed>
       <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
       <ArmorRating_Heat>0.10</ArmorRating_Heat>
-      <MoveSpeed>6.2</MoveSpeed>
     </statBases>
     <equippedStatOffsets>
 			<WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
-			<VEF_MassCarryCapacity>575</VEF_MassCarryCapacity>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/PV8/apparel</wornGraphicPath>
@@ -108,7 +108,7 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <Mass>8</Mass>
+      <Mass>35</Mass>
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -137,7 +137,7 @@
       <texPath>Things/Dragoon/PV8/helmet_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>0</Mass>
+      <Mass>35</Mass>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.12</MoveSpeed>

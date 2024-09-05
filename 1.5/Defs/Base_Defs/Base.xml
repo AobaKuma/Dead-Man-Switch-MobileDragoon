@@ -80,8 +80,13 @@
     </ThingDef>
     <ThingDef Name="DMS_ModuleApparelCore" ParentName="DMS_ModuleApparelBase" Abstract="True">
         <thingClass>WalkerGear.WalkerGear_Core</thingClass>
+        <equippedStatOffsets>
+            <MeleeDamageFactor>2</MeleeDamageFactor>
+            <StaggerDurationFactor>-0</StaggerDurationFactor>
+        </equippedStatOffsets>
         <apparel>
             <parentTagDef>WGApparelBody</parentTagDef>
+            <useDeflectMetalEffect>true</useDeflectMetalEffect>
             <renderSkipFlags>
                 <li>Body</li>
             </renderSkipFlags>

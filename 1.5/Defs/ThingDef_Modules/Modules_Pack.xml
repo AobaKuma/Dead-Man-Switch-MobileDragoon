@@ -271,4 +271,89 @@
     </comps>
   </ThingDef>
 
+   <!-- 增加攜帶量 -->
+   <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_PackCargo</defName>
+    <label>Cargo pack</label>
+    <description>todo</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_PackCargo</ThingDef>
+    </descriptionHyperlinks>
+    <thingCategories Inherit="false">
+      <li>DMS_Module_Pack</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>35</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_PackCargo</EquipedThingDef>
+        <slots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelAttachment">
+    <tickerType>Normal</tickerType>
+    <defName>DMS_Apparel_PackCargo</defName>
+    <label>Cargo pack</label>
+    <description>Todo.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/PackCargo/apparel_north</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>35</Mass>
+    </statBases>
+    <equippedStatOffsets>
+			<CarryingCapacity>120</CarryingCapacity>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/PackCargo/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.125</scale>
+        <defaultData>
+          <layer>16</layer>
+        </defaultData>
+        <dataSouth>
+          <layer>-2</layer>
+          <offset>(0,0,0.9)</offset>
+        </dataSouth>
+        <dataEast>
+          <layer>0</layer>
+          <offset>(-1.05,0,0.5)</offset>
+        </dataEast>
+        <dataWest>
+          <layer>0</layer>
+          <offset>(1.05,0,0.5)</offset>
+        </dataWest>
+        <dataNorth>
+          <layer>75</layer>
+          <offset>(0,0,0.15)</offset>
+        </dataNorth>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_PackCargo</ItemDef>
+        <slots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+
 </Defs>

@@ -83,6 +83,12 @@
           <dataEast>
             <offset>(0.29,0,0.44)</offset>
           </dataEast>
+          <dataSouth>
+            <offset>(0.00,0,0.40)</offset>
+          </dataSouth>
+          <dataNorth>
+            <offset>(0.00,0,0.40)</offset>
+          </dataNorth>
         </headData>
         <rootData>
           <defaultData>
@@ -147,14 +153,8 @@
       <drawData>
         <defaultData>
           <layer>20</layer>
-          <offset>(0,0,0.15)</offset>
+          <offset>(0,0,0.0)</offset>
         </defaultData>
-        <dataWest>
-          <offset>(-0.25,0,0.15)</offset>
-        </dataWest>
-        <dataEast>
-          <offset>(0.25,0,0.15)</offset>
-        </dataEast>
       </drawData>
     </apparel>
     <comps>

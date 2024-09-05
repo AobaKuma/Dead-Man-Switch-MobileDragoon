@@ -7,6 +7,24 @@ using VFECore;
 
 namespace WalkerGear
 {
+    public class PawnRenderNodeWorker_InhertHead : PawnRenderNodeWorker
+    {
+        public override bool ShouldListOnGraph(PawnRenderNode node, PawnDrawParms parms)
+        {
+            return parms.pawn.apparel.WornApparel.FirstOrDefault(a => a is WalkerGear_Core c) != null;
+        }
+        public override Vector3 OffsetFor(PawnRenderNode node, PawnDrawParms parms, out Vector3 pivot)
+        {
+            pivot = PivotFor(node, parms);
+            Apparel p = parms.pawn.apparel.WornApparel.FirstOrDefault(a => a is WalkerGear_Core c);
+            if (p != null && p.def.HasModExtension<ApparelRenderOffsets>())
+            {
+                var ext = p.def.GetModExtension<ApparelRenderOffsets>();
+                return ext.headData.OffsetForRot(parms.facing);
+            }
+            return parms.pawn.Drawer.renderer.BaseHeadOffsetAt(parms.facing);
+        }
+    }
     public class PawnRenderSubWorker_Offset : PawnRenderSubWorker
     {
         public override void TransformOffset(PawnRenderNode node, PawnDrawParms parms, ref Vector3 offset, ref Vector3 pivot)

@@ -19,7 +19,7 @@
                         <tagDef>WGApparelHead</tagDef>
                         <baseLayer>20</baseLayer>
                         <nodeClass>PawnRenderNode_Head</nodeClass>
-                        <workerClass>PawnRenderNodeWorker_Head</workerClass>
+                        <workerClass>WalkerGear.PawnRenderNodeWorker_InhertHead</workerClass>
                     </li>
                 </children>
             </li>

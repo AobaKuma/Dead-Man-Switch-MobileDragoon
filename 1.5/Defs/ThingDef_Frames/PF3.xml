@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
   <!-- PF3核心 -->
   <ThingDef ParentName="DMS_ModuleItemBase">
     <defName>DMS_Module_PF3_Core</defName>
@@ -23,7 +24,7 @@
         <EquipedThingDef>DMS_Apparel_PF3_Core</EquipedThingDef>
         <slot>Core</slot>
         <disabledSlots>
-          <li>Head</li>
+          <!-- <li>Head</li> -->
           <li>MountLeft</li>
           <li>MountRight</li>
           <li>Attachment</li>
@@ -75,7 +76,6 @@
         <ItemDef>DMS_Module_PF3_Core</ItemDef>
         <slot>Core</slot>
         <disabledSlots>
-          <li>Head</li>
           <li>MountLeft</li>
           <li>MountRight</li>
           <li>Attachment</li>
@@ -89,13 +89,13 @@
       <li Class="WalkerGear.ApparelRenderOffsets">
         <headData>
           <dataWest>
-            <offset>(-0.35,0,0.35)</offset>
+            <offset>(-0.4,0,0.35)</offset>
           </dataWest>
           <dataEast>
-            <offset>(0.35,0,0.35)</offset>
+            <offset>(0.4,0,0.35)</offset>
           </dataEast>
           <dataSouth>
-            <offset>(0,0,0.30)</offset>
+            <offset>(0,0,0.15)</offset>
           </dataSouth>
         </headData>
         <rootData>

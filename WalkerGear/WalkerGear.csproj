@@ -81,10 +81,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompLaunchExhaust.cs" />
+    <Compile Include="CompThrownFleckEmitter.cs" />
     <Compile Include="Comp\CompBuildingExtraRenderer.cs" />
     <Compile Include="Comp\PawnRenderSubWorker_Offset.cs" />
+    <Compile Include="Projectile_ArcSpread.cs" />
     <Compile Include="DefOf\ThingDefOf.cs" />
     <Compile Include="IHealthParms.cs" />
+    <Compile Include="Projectile_Parabola.cs" />
     <Compile Include="ThingClass\BuildingWreckage.cs" />
     <Compile Include="ThingClass\Building_MaintenanceBay.cs" />
     <Compile Include="ThingClass\Building_Wreckage.cs" />

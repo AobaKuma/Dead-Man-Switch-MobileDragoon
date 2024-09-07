@@ -12,7 +12,50 @@
             <workAmount>500</workAmount>
             <soundWorking>Recipe_Machining</soundWorking>
         </recipeMaker>
-    </ThingDef>    
+    </ThingDef>
+    
+    <ThingDef Name="DMS_ModuleItemHead" ParentName="DMS_ModuleItemBase" Abstract="True">
+        <thingCategories><li>DMS_Module_Helmet</li></thingCategories>
+        <graphicData>
+          <texPath>Things/Item/Module_H</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef Name="DMS_ModuleItemCore" ParentName="DMS_ModuleItemBase" Abstract="True">
+        <thingCategories><li>DMS_Module_Core</li></thingCategories>
+        <graphicData>
+          <texPath>Things/Item/Module</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef Name="DMS_ModuleItemAttachment" ParentName="DMS_ModuleItemBase" Abstract="True">
+        <thingCategories><li>DMS_Module_Pack</li></thingCategories>
+        <graphicData>
+          <texPath>Things/Item/Module_A</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef Name="DMS_ModuleItemMountRight" ParentName="DMS_ModuleItemBase" Abstract="True">
+        <thingCategories><li>DMS_Module_ShoulderRight</li></thingCategories>
+        <graphicData>
+          <texPath>Things/Item/Module_SR</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef Name="DMS_ModuleItemMountLeft" ParentName="DMS_ModuleItemBase" Abstract="True">
+        <thingCategories><li>DMS_Module_ShoulderLeft</li></thingCategories>
+        <graphicData>
+          <texPath>Things/Item/Module_SL</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef Name="DMS_ModuleItemArmLeft" ParentName="DMS_ModuleItemBase" Abstract="True">
+        <thingCategories><li>DMS_Module_Attachment</li></thingCategories>
+        <graphicData>
+          <texPath>Things/Item/Module_AL</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef Name="DMS_ModuleItemArmRight" ParentName="DMS_ModuleItemBase" Abstract="True">
+        <thingCategories><li>DMS_Module_Equipment</li></thingCategories>
+        <graphicData>
+          <texPath>Things/Item/Module_AR</texPath>
+        </graphicData>
+    </ThingDef>
     
     <!--衣服型態的龍騎兵裝備，理論上玩家不應該能獲取 -->
     <ThingDef Name="DMS_ModuleApparelBase" Abstract="True">

@@ -24,10 +24,13 @@ namespace WalkerGear
                 Messages.Message("WG_TooBigForPilot".Translate(), MessageTypeDefOf.RejectInput, false);
                 return false;
             }
+            else if (pawn.CurJob.GetTarget(TargetIndex.A).Thing is Building_MaintenanceBay bay && !bay.CanGear(pawn))
+            {
+                Messages.Message("WG_ApparelLayerTaken".Translate(), MessageTypeDefOf.RejectInput, false);
+                return false;
+            }
             return this.pawn.Reserve(this.job.GetTarget(maintenanceBay), this.job, errorOnFailed: errorOnFailed);
         }
-
-        //还在写
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.FailOnDespawnedNullOrForbidden(maintenanceBay);

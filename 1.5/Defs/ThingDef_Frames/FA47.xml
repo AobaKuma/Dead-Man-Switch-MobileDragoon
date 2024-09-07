@@ -1,19 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- F/A-47核心 -->
-  <ThingDef ParentName="DMS_ModuleItemBase">
+  <ThingDef ParentName="DMS_ModuleItemCore">
     <defName>DMS_Module_FA47_Core</defName>
     <label>F/A-47 frame</label>
     <description>todo.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_FA47_Core</ThingDef>
     </descriptionHyperlinks>
-    <thingCategories Inherit="false">
-      <li>DMS_Module_Core</li>
-    </thingCategories>
-    <graphicData>
-      <texPath>Things/Item/Module</texPath>
-    </graphicData>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Mass>80</Mass>
@@ -31,10 +25,11 @@
       </skillRequirements>
     </recipeMaker>
     <costList>
-      <Plasteel>200</Plasteel>
+      <Plasteel>300</Plasteel>
+      <Artifuscle>140</Artifuscle>
       <Tungsteel>125</Tungsteel>
-      <ComponentIndustrial>10</ComponentIndustrial>
       <ComponentStamped>12</ComponentStamped>
+      <ComponentIndustrial>10</ComponentIndustrial>
       <Neurocomputer>1</Neurocomputer>
     </costList>
   </ThingDef>
@@ -101,19 +96,13 @@
     </modExtensions>
   </ThingDef>
   <!-- F/A-47頭盔 -->
-  <ThingDef ParentName="DMS_ModuleItemBase">
+  <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_FA47_Helmet</defName>
     <label>F/A-47 helmet</label>
     <description>todo.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_FA47_Helmet</ThingDef>
     </descriptionHyperlinks>
-    <thingCategories Inherit="false">
-      <li>DMS_Module_Helmet</li>
-    </thingCategories>
-    <graphicData>
-      <texPath>Things/Item/Module</texPath>
-    </graphicData>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Mass>8</Mass>

@@ -1,16 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- (左)手脈衝盾 -->
-  <ThingDef ParentName="DMS_ModuleItemBase">
+  <ThingDef ParentName="DMS_ModuleItemArmLeft">
     <defName>DMS_Module_PulseShield</defName>
     <label>pulse shield</label>
     <description>todo.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PulseShield</ThingDef>
     </descriptionHyperlinks>
-    <graphicData>
-      <texPath>Things/Item/Module_AL</texPath>
-    </graphicData>
     <statBases>
       <Mass>8</Mass>
     </statBases>
@@ -85,7 +82,7 @@
   </ThingDef>
   
   <!-- (左)防彈盾 -->
-  <ThingDef ParentName="DMS_ModuleItemBase">
+  <ThingDef ParentName="DMS_ModuleItemArmLeft">
     <defName>DMS_Module_Shield</defName>
     <label>ballistic shield</label>
     <description>todo.</description>
@@ -93,9 +90,6 @@
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_Shield</ThingDef>
     </descriptionHyperlinks>
-    <graphicData>
-      <texPath>Things/Item/Module_AL</texPath>
-    </graphicData>
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
       <Mass>8</Mass>
@@ -162,7 +156,7 @@
   </ThingDef>
 
   <!-- (左)紅外傳感器 -->
-  <ThingDef ParentName="DMS_ModuleItemBase">
+  <ThingDef ParentName="DMS_ModuleItemArmLeft">
     <defName>DMS_Module_InfraredSensor</defName>
     <label>infrared sensor</label>
     <description>todo.</description>
@@ -170,9 +164,6 @@
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_InfraredSensor</ThingDef>
     </descriptionHyperlinks>
-    <graphicData>
-      <texPath>Things/Item/Module_AL</texPath>
-    </graphicData>
     <statBases>
       <Mass>8</Mass>
     </statBases>
@@ -239,16 +230,13 @@
   </ThingDef>
 
    <!-- (左)彈掛 -->
-   <ThingDef ParentName="DMS_ModuleItemBase">
+   <ThingDef ParentName="DMS_ModuleItemArmLeft">
     <defName>DMS_Module_CargoBox</defName>
     <label>cargo box</label>
     <description>todo.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_CargoBox</ThingDef>
     </descriptionHyperlinks>
-    <graphicData>
-      <texPath>Things/Item/Module_AL</texPath>
-    </graphicData>
     <statBases>
       <Mass>8</Mass>
     </statBases>

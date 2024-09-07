@@ -1,16 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- AT-34核心 -->
-  <ThingDef ParentName="DMS_ModuleItemBase">
+  <ThingDef ParentName="DMS_ModuleItemCore">
     <defName>DMS_Module_AT34_Core</defName>
     <label>AT-34 drgaoon</label>
     <description>todo.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_AT34_Core</ThingDef>
     </descriptionHyperlinks>
-    <thingCategories Inherit="false">
-      <li>DMS_Module_Core</li>
-    </thingCategories>
     <graphicData>
       <texPath>Things/Item/Module</texPath>
     </graphicData>
@@ -33,8 +30,9 @@
     <costList>
       <Tungsteel>175</Tungsteel>
       <Steel>250</Steel>
+      <ComponentStamped>12</ComponentStamped>
       <ComponentIndustrial>10</ComponentIndustrial>
-      <ComponentStamped>6</ComponentStamped>
+      <ComponentSpacer>1</ComponentSpacer>
     </costList>
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelCore">
@@ -47,7 +45,7 @@
     <statBases>
       <Mass>80</Mass>
 			<CarryingCapacity>300</CarryingCapacity>
-      <MoveSpeed>4.8</MoveSpeed>
+      <MoveSpeed>4.2</MoveSpeed>
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
       <ArmorRating_Heat>0.10</ArmorRating_Heat>

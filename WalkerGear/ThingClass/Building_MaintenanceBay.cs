@@ -145,6 +145,18 @@ namespace WalkerGear
             if (!HasGearCore) return "NoArmor".Translate().CapitalizeFirst();
             return true;
         }
+        public bool CanGear(Pawn pawn)
+        {
+            foreach (Apparel a in ModuleStorage)
+            {
+                foreach (var item in pawn.apparel.WornApparel)
+                {
+                    if (!ApparelUtility.CanWearTogether(item.def, a.def, pawn.RaceProps.body) && pawn.apparel.IsLocked(item))
+                        return false;
+                }
+            }
+            return true;
+        }
         public void GearUp(Pawn pawn)
         {
             if (cachePawn == null || !HasGearCore) return;

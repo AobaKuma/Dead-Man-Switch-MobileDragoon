@@ -1,48 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  
+
   <ThingDef ParentName="BaseGun" Name="DMS_BaseDragoonWeapon" Abstract="True">
     <soundInteract>DMS_EquipGear</soundInteract>
-		<thingCategories Inherit="False">
-			<li>AutomatroidWeapon</li>
-		</thingCategories>
-		<graphicData>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<statBases>
-			<MaxHitPoints>150</MaxHitPoints>
-			<WorkToMake>40000</WorkToMake>
-		</statBases>
-		<tradeTags>
-			<li>DMS_WeaponRanged</li>
-		</tradeTags>
-		<tools>
-			<li>
-				<label>stock</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>12</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-					<li>Poke</li>
-				</capacities>
-				<power>12</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<modExtensions/>
+    <thingCategories Inherit="False">
+      <li>AutomatroidWeapon</li>
+    </thingCategories>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToMake>40000</WorkToMake>
+    </statBases>
+    <tradeTags>
+      <li>DMS_WeaponRanged</li>
+    </tradeTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <modExtensions />
     <destroyOnDrop>true</destroyOnDrop>
     <tradeability>None</tradeability>
     <generateCommonality>0</generateCommonality>
     <generateAllowChance>0</generateAllowChance>
     <relicChance>0</relicChance>
     <comps>
-      <li><compClass>WalkerGear.CompApparelForcedWeapon</compClass></li>
+      <li>
+        <compClass>WalkerGear.CompApparelForcedWeapon</compClass>
+      </li>
     </comps>
   </ThingDef>
 
@@ -64,7 +66,7 @@
       <AccuracyShort>0.70</AccuracyShort>
       <AccuracyMedium>0.8</AccuracyMedium>
       <AccuracyLong>0.7</AccuracyLong>
-      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
       <Mass>30.50</Mass>
     </statBases>
     <equippedStatOffsets>
@@ -96,7 +98,7 @@
     </modExtensions>
   </ThingDef>
 
-  
+
   <ThingDef ParentName="DMS_BaseDragoonWeapon">
     <defName>DMS_Dragoon_Shotgun</defName>
     <label>Dragoon Shotgun</label>
@@ -109,24 +111,24 @@
     </weaponClasses>
     <graphicData>
       <texPath>Things/Weapons/DMS_Dragoon_Shotgun</texPath>
-      <drawSize>1.75</drawSize>
+      <drawSize>2</drawSize>
     </graphicData>
     <statBases>
-			<AccuracyTouch>0.95</AccuracyTouch> 	
-			<AccuracyShort>0.85</AccuracyShort>
-			<AccuracyMedium>0.35</AccuracyMedium>
-			<AccuracyLong>0.15</AccuracyLong>
-			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.35</AccuracyMedium>
+      <AccuracyLong>0.15</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
       <Mass>17.50</Mass>
     </statBases>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_AutocannonTurret</defaultProjectile>
-				<warmupTime>0.8</warmupTime>
-				<range>19.9</range>
-				<burstShotCount>1</burstShotCount>
+        <defaultProjectile>DMS_Bullet_DragoonShotgun</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>19.9</range>
+        <burstShotCount>1</burstShotCount>
         <soundCast>Shot_Autocannon</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>12</muzzleFlashScale>
@@ -143,21 +145,70 @@
       </li>
     </modExtensions>
   </ThingDef>
-	<ThingDef ParentName="BaseBullet">
-		<defName>DMS_Bullet_DragoonShotgun</defName>
-		<label>canister darts</label>
-		<graphicData>
-		<texPath>Things/Projectile/Bullet_Shotgun</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
-    <drawSize>2</drawSize>
-		</graphicData>
-		<projectile>
-			<damageDef>RangedStab</damageDef>
-			<damageAmountBase>40</damageAmountBase>
-			<stoppingPower>4</stoppingPower>
-			<speed>55</speed>
-			<armorPenetrationBase>0.55</armorPenetrationBase>
-		</projectile>
-	</ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>DMS_Bullet_DragoonShotgun</defName>
+    <thingClass>WalkerGear.Projectile_ArcSpread</thingClass>
+    <label>canister darts</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+      <stoppingPower>4</stoppingPower>
+      <speed>55</speed>
+      <armorPenetrationBase>0.55</armorPenetrationBase>
+    </projectile>
+    <comps>
+      <li Class="WalkerGear.CompProperties_LaunchExhaust" />
+    </comps>
+    <modExtensions>
+      <li Class="WalkerGear.RotationalArcSpreadExtension">
+        <projectile>Bullet_Shotgun</projectile>
+        <amount>5</amount>
+        <arc>3</arc>
+        <range>0~1</range>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>DMS_Bullet_DragoonRocket</defName>
+    <thingClass>WalkerGear.Projectile_Parabola</thingClass>
+    <label>rocket</label>
+    <graphicData>
+      <texPath>Things/Ammo/76mm9M311Missile/Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>2</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <arcHeightFactor>10</arcHeightFactor>
+      <explosionRadius>3</explosionRadius>
+      <damageAmountBase>40</damageAmountBase>
+      <stoppingPower>4</stoppingPower>
+      <speed>55</speed>
+      <armorPenetrationBase>0.55</armorPenetrationBase>
+      <flyOverhead>true</flyOverhead>
+    </projectile>
+    <comps>
+      <li Class="WalkerGear.CompProperties_LaunchExhaust"/>
+      
+      <li Class="WalkerGear.CompProperties_ProjectileFleckEmitter">
+        <fleck>BlastFlame</fleck>
+        <offsetMin>(-2,0,-2)</offsetMin>
+        <offsetMax>(2,0,2)</offsetMax>
+        <emissionInterval>0</emissionInterval>
+        <burstCount>5</burstCount>
+        <scale>2~4</scale>
+        <rotationRate>-30~30</rotationRate>
+        <colorA>(1,1,1,1)</colorA>
+        <colorB>(0.8,0.8,0.8,1)</colorB>
+      </li>
+    </comps>
+  </ThingDef>
 
 </Defs>

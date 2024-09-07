@@ -1,19 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- PV-8核心 -->
-  <ThingDef ParentName="DMS_ModuleItemBase">
+  <ThingDef ParentName="DMS_ModuleItemCore">
     <defName>DMS_Module_PV8_Core</defName>
     <label>PV-8 frame</label>
     <description>todo.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PV8_Core</ThingDef>
     </descriptionHyperlinks>
-    <thingCategories Inherit="false">
-      <li>DMS_Module_Core</li>
-    </thingCategories>
-    <graphicData>
-      <texPath>Things/Item/Module</texPath>
-    </graphicData>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Mass>80</Mass>
@@ -32,9 +26,10 @@
     </recipeMaker>
     <costList>
       <Tungsteel>375</Tungsteel>
-      <Steel>75</Steel>
-      <ComponentIndustrial>10</ComponentIndustrial>
+      <Artifuscle>200</Artifuscle>
+      <Steel>125</Steel>
       <ComponentStamped>12</ComponentStamped>
+      <ComponentIndustrial>10</ComponentIndustrial>
       <Neurocomputer>1</Neurocomputer>
     </costList>
   </ThingDef>
@@ -99,19 +94,13 @@
     </modExtensions>
   </ThingDef>
   <!-- PV-8頭盔 -->
-  <ThingDef ParentName="DMS_ModuleItemBase">
+  <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_PV8_Helmet</defName>
     <label>PV-8 helmet</label>
     <description>todo.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PV8_Helmet</ThingDef>
     </descriptionHyperlinks>
-    <thingCategories Inherit="false">
-      <li>DMS_Module_Helmet</li>
-    </thingCategories>
-    <graphicData>
-      <texPath>Things/Item/Module</texPath>
-    </graphicData>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Mass>35</Mass>

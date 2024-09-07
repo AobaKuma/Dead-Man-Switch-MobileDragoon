@@ -2,16 +2,13 @@
 <Defs>
 
     <!-- (右)肩部機槍 -->
-    <ThingDef ParentName="DMS_ModuleItemBase">
+    <ThingDef ParentName="DMS_ModuleItemMountRight">
         <defName>DMS_Module_TurretPackLight</defName>
         <label>LMG Shoulder Mount</label>
         <description>todo.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_TurretPackLight</ThingDef>
         </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Item/Module_SR</texPath>
-        </graphicData>
         <statBases>
             <MaxHitPoints>100</MaxHitPoints>
             <Mass>8</Mass>
@@ -148,16 +145,13 @@
     </ThingDef>
 
     <!-- (右)肩部機槍 (Kord)-->
-    <ThingDef ParentName="DMS_ModuleItemBase">
+    <ThingDef ParentName="DMS_ModuleItemMountRight">
         <defName>DMS_Module_TurretPackHeavy</defName>
         <label>Kord Shoulder Mount</label>
         <description>todo.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_TurretPackHeavy</ThingDef>
         </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Item/Module_SR</texPath>
-        </graphicData>
         <statBases>
             <MaxHitPoints>100</MaxHitPoints>
             <Mass>8</Mass>
@@ -297,16 +291,13 @@
     </ThingDef>
 
     <!-- (右)肩部機槍 (gau)-->
-    <ThingDef ParentName="DMS_ModuleItemBase">
+    <ThingDef ParentName="DMS_ModuleItemMountRight">
         <defName>DMS_Module_TurretPackGAU</defName>
         <label>GAU19/A Shoulder Mount</label>
         <description>todo.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_TurretPackGAU</ThingDef>
         </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Item/Module_SR</texPath>
-        </graphicData>
         <statBases>
             <MaxHitPoints>100</MaxHitPoints>
             <Mass>8</Mass>

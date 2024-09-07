@@ -2,7 +2,7 @@
 <Defs>
 
   <!-- (背)推進器 -->
-  <ThingDef ParentName="DMS_ModuleItemBase">
+  <ThingDef ParentName="DMS_ModuleItemAttachment">
     <defName>DMS_Module_JumpThruster</defName>
     <label>burst thruster</label>
     <description>todo</description>
@@ -10,12 +10,6 @@
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_JumpThruster</ThingDef>
     </descriptionHyperlinks>
-    <thingCategories Inherit="false">
-      <li>DMS_Module_Pack</li>
-    </thingCategories>
-    <graphicData>
-      <texPath>Things/Item/Module_A</texPath>
-    </graphicData>
     <statBases>
       <Mass>60</Mass>
     </statBases>
@@ -103,19 +97,13 @@
 
   <!-- (背)機控背包，這種大包會占用到右肩層 -->
   <!-- 穿戴者能夠給玩家機械師提供額外的控制範圍，以及一個範圍性的EMP技能 -->
-  <ThingDef ParentName="DMS_ModuleItemBase">
+  <ThingDef ParentName="DMS_ModuleItemAttachment">
     <defName>DMS_Module_PackControlRelay</defName>
     <label>relay pack</label>
     <description>todo.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackControlRelay</ThingDef>
     </descriptionHyperlinks>
-    <thingCategories Inherit="false">
-      <li>DMS_Module_Pack</li>
-    </thingCategories>
-    <graphicData>
-      <texPath>Things/Item/Module_A</texPath>
-    </graphicData>
     <statBases>
       <Mass>30</Mass>
     </statBases>
@@ -187,7 +175,7 @@
   </ThingDef>
 
   <!-- 增加建築與拆除速度 -->
-  <ThingDef ParentName="DMS_ModuleItemBase">
+  <ThingDef ParentName="DMS_ModuleItemAttachment">
     <defName>DMS_Module_PackEngineering</defName>
     <label>engineering pack</label>
     <description>todo</description>
@@ -195,12 +183,6 @@
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackEngineering</ThingDef>
     </descriptionHyperlinks>
-    <thingCategories Inherit="false">
-      <li>DMS_Module_Pack</li>
-    </thingCategories>
-    <graphicData>
-      <texPath>Things/Item/Module_A</texPath>
-    </graphicData>
     <statBases>
       <Mass>35</Mass>
     </statBases>
@@ -272,19 +254,13 @@
   </ThingDef>
 
    <!-- 增加攜帶量 -->
-   <ThingDef ParentName="DMS_ModuleItemBase">
+   <ThingDef ParentName="DMS_ModuleItemAttachment">
     <defName>DMS_Module_PackCargo</defName>
     <label>Cargo pack</label>
     <description>todo</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackCargo</ThingDef>
     </descriptionHyperlinks>
-    <thingCategories Inherit="false">
-      <li>DMS_Module_Pack</li>
-    </thingCategories>
-    <graphicData>
-      <texPath>Things/Item/Module_A</texPath>
-    </graphicData>
     <statBases>
       <Mass>35</Mass>
     </statBases>

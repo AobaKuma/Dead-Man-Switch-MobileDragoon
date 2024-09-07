@@ -1,18 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <!-- (左)4x反工事導彈 -->
-    <ThingDef ParentName="DMS_ModuleItemBase">
+    <ThingDef ParentName="DMS_ModuleItemMountLeft">
         <defName>DMS_Module_MissilePod</defName>
         <label>Missile Pod</label>
         <description>todo.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_MissilePod</ThingDef>
         </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Item/Module_SL</texPath>
-        </graphicData>
         <statBases>
-            <Mass>8</Mass>
+            <Mass>35</Mass>
         </statBases>
         <costList>
             <Steel>100</Steel>
@@ -33,7 +30,7 @@
             <texPath>Things/Dragoon/MissilePod/apparel_north</texPath>
         </graphicData>
         <statBases>
-            <Mass>0</Mass>
+            <Mass>35</Mass>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>-0.25</MoveSpeed>
@@ -105,18 +102,15 @@
     </ThingDef>
 
     <!-- (左)肩部蜂窩導彈(SRM) -->
-    <ThingDef ParentName="DMS_ModuleItemBase">
+    <ThingDef ParentName="DMS_ModuleItemMountLeft">
         <defName>DMS_Module_SwarmMissilePod</defName>
-        <label>Swarm Missile Pod</label>
+        <label>Swarm rocket Pod</label>
         <description>todo.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_SwarmMissilePod</ThingDef>
         </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Item/Module_SL</texPath>
-        </graphicData>
         <statBases>
-            <Mass>8</Mass>
+            <Mass>20</Mass>
         </statBases>
         <costList>
             <Steel>100</Steel>
@@ -131,13 +125,14 @@
     </ThingDef>
     <ThingDef ParentName="DMS_ModuleApparelMountLeft">
         <defName>DMS_Apparel_SwarmMissilePod</defName>
-        <label>Missile Pod</label>
+        <label>Swarm rocket Pod</label>
         <description>Todo.</description>
         <graphicData>
             <texPath>Things/Dragoon/MissilePodSwarm/apparel_north</texPath>
         </graphicData>
+        <tickerType>Normal</tickerType>
         <statBases>
-            <Mass>0</Mass>
+            <Mass>20</Mass>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>-0.2</MoveSpeed>
@@ -168,13 +163,15 @@
         </apparel>
         <verbs>
             <li>
-                <label>launch missile</label>
+                <label>launch rocket</label>
                 <verbClass>Verb_LaunchProjectileStatic</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
                 <commandIcon>UI/Ability/Missile</commandIcon>
-                <onlyManualCast>True</onlyManualCast>
-                <range>99.9</range>
-                <forcedMissRadius>1.9</forcedMissRadius>
+                <range>39.9</range>
+                <forcedMissRadius>3.9</forcedMissRadius>
+                <burstShotCount>3</burstShotCount>
+                <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                <consumeFuelPerShot>1</consumeFuelPerShot>
                 <warmupTime>2</warmupTime>
                 <noiseRadius>4</noiseRadius>
                 <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
@@ -186,19 +183,19 @@
                     <canTargetLocations>true</canTargetLocations>
                     <canTargetBuildings>true</canTargetBuildings>
                 </targetParams>
-                <defaultProjectile>Bullet_9M311V</defaultProjectile><!-- 投射物有待修改 -->
+                <defaultProjectile>Proj_Rocket</defaultProjectile>
                 <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
             </li>
         </verbs>
         <comps>
             <li Class="CompProperties_ApparelReloadable">
-                <maxCharges>4</maxCharges>
-                <ammoDef>Steel</ammoDef>
-                <ammoCountPerCharge>20</ammoCountPerCharge>
+                <maxCharges>14</maxCharges>
+                <ammoDef>Chemfuel</ammoDef>
+                <ammoCountPerCharge>25</ammoCountPerCharge>
                 <baseReloadTicks>60</baseReloadTicks>
                 <soundReload>Standard_Reload</soundReload>
                 <hotKey>Misc4</hotKey>
-                <chargeNoun>missile</chargeNoun>
+                <chargeNoun>rocket</chargeNoun>
                 <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
             </li>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -209,18 +206,15 @@
     </ThingDef>
 
     <!-- (左)肩部導彈(8连)-->
-    <ThingDef ParentName="DMS_ModuleItemBase">
+    <ThingDef ParentName="DMS_ModuleItemMountLeft">
         <defName>DMS_Module_MissilePodPlus</defName>
         <label>Missile Pod Plus</label>
         <description>todo.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_MissilePod</ThingDef>
         </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Item/Module_SL</texPath>
-        </graphicData>
         <statBases>
-            <Mass>8</Mass>
+            <Mass>65</Mass>
         </statBases>
         <costList>
             <Steel>100</Steel>
@@ -241,7 +235,7 @@
             <texPath>Things/Dragoon/MissilePod8/apparel_south</texPath>
         </graphicData>
         <statBases>
-            <Mass>0</Mass>
+            <Mass>65</Mass>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>-0.12</MoveSpeed>
@@ -311,5 +305,5 @@
             </li>
         </comps>
     </ThingDef>
-    
+
 </Defs>

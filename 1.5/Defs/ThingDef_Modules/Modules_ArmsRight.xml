@@ -10,7 +10,7 @@
       <ThingDef>DMS_Apparel_PileBunker</ThingDef>
     </descriptionHyperlinks>
     <graphicData>
-      <texPath>Things/Item/Module</texPath>
+      <texPath>Things/Item/Module_AR</texPath>
     </graphicData>
     <statBases>
       <Mass>20</Mass>
@@ -99,17 +99,17 @@
   <!-- (右)lmg-->
   <ThingDef ParentName="DMS_ModuleItemBase">
     <defName>DMS_Module_WeaponLmg</defName>
-    <label>LMG</label>
-    <description>todo.</description>
+    <label>Dragoon LMG</label>
+    <description>A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities.</description>
     <descriptionHyperlinks>
-      <ThingDef>DMS_Module_WeaponLmg</ThingDef>
+      <ThingDef>DMS_Dragoon_LMG</ThingDef>
     </descriptionHyperlinks>
     <graphicData>
-      <texPath>Things/Item/Module</texPath>
+      <texPath>Things/Item/Module_AR</texPath>
     </graphicData>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <Mass>24</Mass>
+      <Mass>30.50</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisites>
@@ -130,13 +130,16 @@
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelArmRight">
     <defName>DMS_Apparel_WeaponLmg</defName>
-    <label>LMG</label>
-    <description>Todo.</description>
+    <label>Dragoon LMG</label>
+    <description>A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Dragoon_LMG</ThingDef>
+    </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Weapons/DMS_Dragoon_LMG</texPath>
     </graphicData>
     <statBases>
-      <Mass>24</Mass>
+      <Mass>30.50</Mass>
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -145,6 +148,63 @@
       </li>
       <li Class="WalkerGear.CompProperties_ForceUseWeapon">
         <weapon>DMS_Dragoon_LMG</weapon>
+      </li>
+    </comps>
+  </ThingDef>
+
+  
+  <!-- (右)霰彈槍-->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_WeaponSG</defName>
+    <label>Dragoon Shotgun</label>
+    <description>A heavy-duty semi-automatic shotgun code-named "Dragon", this equipment was designed to provide dragoons with decent firepower in close range without taking up too much weight. it's capable of firing a white phosphorous canister called Dragonbreath to incinerate the enemy.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Dragoon_Shotgun</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Module_AR</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>24</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>DMS_MobileDragoon</li>
+        <li>DMS_EquipmentHeavy</li>
+      </researchPrerequisites>
+    </recipeMaker>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_WeaponSG</EquipedThingDef>
+        <slot>ArmRight</slot>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelArmRight">
+    <defName>DMS_Apparel_WeaponSG</defName>
+    <label>Dragoon Shotgun</label>
+    <description>A heavy-duty semi-automatic shotgun code-named "Dragon", this equipment was designed to provide dragoons with decent firepower in close range without taking up too much weight. it's capable of firing a white phosphorous canister called Dragonbreath to incinerate the enemy.</description> 
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Dragoon_Shotgun</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Weapons/DMS_Dragoon_Shotgun</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>24</Mass>
+    </statBases>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_WeaponSG</ItemDef>
+        <slot>ArmRight</slot>
+      </li>
+      <li Class="WalkerGear.CompProperties_ForceUseWeapon">
+        <weapon>DMS_Dragoon_Shotgun</weapon>
       </li>
     </comps>
   </ThingDef>

@@ -9,7 +9,7 @@
             <ThingDef>DMS_Apparel_MissilePod</ThingDef>
         </descriptionHyperlinks>
         <graphicData>
-            <texPath>Things/Item/Module</texPath>
+            <texPath>Things/Item/Module_SL</texPath>
         </graphicData>
         <statBases>
             <Mass>8</Mass>
@@ -113,7 +113,7 @@
             <ThingDef>DMS_Apparel_SwarmMissilePod</ThingDef>
         </descriptionHyperlinks>
         <graphicData>
-            <texPath>Things/Item/Module</texPath>
+            <texPath>Things/Item/Module_SL</texPath>
         </graphicData>
         <statBases>
             <Mass>8</Mass>
@@ -217,7 +217,7 @@
             <ThingDef>DMS_Apparel_MissilePod</ThingDef>
         </descriptionHyperlinks>
         <graphicData>
-            <texPath>Things/Item/Module</texPath>
+            <texPath>Things/Item/Module_SL</texPath>
         </graphicData>
         <statBases>
             <Mass>8</Mass>
@@ -311,4 +311,5 @@
             </li>
         </comps>
     </ThingDef>
+    
 </Defs>

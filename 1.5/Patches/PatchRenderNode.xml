@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/PawnRenderTreeDef[defName="Humanlike"]/root/children</xpath>
         <value>
@@ -24,7 +23,7 @@
                 </children>
             </li>
         </value>
-    </Operation>    
+    </Operation>
     <!-- add subworkerClasses field if it doesn't exist -->
     <Operation Class="PatchOperationConditional">
         <xpath>

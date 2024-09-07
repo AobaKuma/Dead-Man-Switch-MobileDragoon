@@ -29,9 +29,6 @@ namespace WalkerGear
         {
 
             float baseStat = core.GetStatValue(StatDefOf.CarryingCapacity);
-
-            Log.Message(core.def.defName);
-            Log.Message(core.GetStatValue(StatDefOf.CarryingCapacity));
             IEnumerable<Apparel> enumerable = GetPawn(req).apparel?.WornApparel;
             foreach (Apparel item in enumerable ?? Enumerable.Empty<Apparel>())
             {

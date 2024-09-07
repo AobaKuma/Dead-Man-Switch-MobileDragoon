@@ -23,7 +23,7 @@ namespace WalkerGear
 
         public Pawn ParentPawn => parent.Manager.Pawn;
         public LocalTargetInfo Target => currentTarget;
-        public VerbCompPropertiesTurret Props => (VerbCompPropertiesTurret)props;
+        public new VerbCompPropertiesTurret Props => (VerbCompPropertiesTurret)props;
         public override bool Independent => true;
         public override void CompTick()
         {

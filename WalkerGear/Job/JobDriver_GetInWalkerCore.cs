@@ -19,7 +19,7 @@ namespace WalkerGear
         private const int wait = 200;
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            if (this.pawn.BodySize > 1.5)
+            if (this.pawn.BodySize > 1.25)
             {
                 Messages.Message("WG_TooBigForPilot".Translate(), MessageTypeDefOf.RejectInput, false);
                 return false;

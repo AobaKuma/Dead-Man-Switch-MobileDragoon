@@ -49,31 +49,26 @@
   <ThingDef ParentName="DMS_BaseDragoonWeapon">
     <defName>DMS_Dragoon_LMG</defName>
     <label>Dragoon LMG</label>
-    <description>1111</description>
+    <description>A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities.</description>
     <weaponClasses>
       <li>RangedHeavy</li>
       <li>LongShots</li>
       <li>Ranged</li>
     </weaponClasses>
-    <weaponTags>
-      <li>DMS_MechWeaponHeavy</li>
-      <li>A_SuppressWeaponHeavy</li>
-    </weaponTags>
     <graphicData>
       <texPath>Things/Weapons/DMS_Dragoon_LMG</texPath>
-      <drawSize>3</drawSize>
+      <drawSize>2.75</drawSize>
     </graphicData>
     <statBases>
-      <WorkToMake>60000</WorkToMake>
       <AccuracyTouch>0.65</AccuracyTouch>
       <AccuracyShort>0.70</AccuracyShort>
       <AccuracyMedium>0.8</AccuracyMedium>
       <AccuracyLong>0.7</AccuracyLong>
-      <Mass>30.50</Mass>
       <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+      <Mass>30.50</Mass>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.2</MoveSpeed>
+      <MoveSpeed>-0.4</MoveSpeed>
     </equippedStatOffsets>
     <verbs>
       <li>
@@ -82,8 +77,8 @@
         <defaultProjectile>Bullet_AutocannonTurret</defaultProjectile>
         <warmupTime>3</warmupTime>
         <range>45</range>
-        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-        <burstShotCount>20</burstShotCount>
+        <ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+        <burstShotCount>9</burstShotCount>
         <soundCast>Shot_Autocannon</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>12</muzzleFlashScale>
@@ -100,5 +95,69 @@
       </li>
     </modExtensions>
   </ThingDef>
-  <!-- Gau-8減裝型 -->
+
+  
+  <ThingDef ParentName="DMS_BaseDragoonWeapon">
+    <defName>DMS_Dragoon_Shotgun</defName>
+    <label>Dragoon Shotgun</label>
+    <!-- 一種代號為龍的重型半自動霰彈槍，被設計用於提供龍騎兵裝備來在不佔用太大重量的前提下提供足夠的近距離火力，能夠發射一種名為龍息的白磷霰彈來點燃敵人。 -->
+    <description>A heavy-duty semi-automatic shotgun code-named "Dragon", this equipment was designed to provide dragoons with decent firepower in close range without taking up too much weight. it's capable of firing a white phosphorous canister called Dragonbreath to incinerate the enemy.</description>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+      <li>ShortShots</li>
+      <li>Ranged</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Things/Weapons/DMS_Dragoon_Shotgun</texPath>
+      <drawSize>1.75</drawSize>
+    </graphicData>
+    <statBases>
+			<AccuracyTouch>0.95</AccuracyTouch> 	
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.35</AccuracyMedium>
+			<AccuracyLong>0.15</AccuracyLong>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <Mass>17.50</Mass>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_AutocannonTurret</defaultProjectile>
+				<warmupTime>0.8</warmupTime>
+				<range>19.9</range>
+				<burstShotCount>1</burstShotCount>
+        <soundCast>Shot_Autocannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <modExtensions>
+      <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+        <def>MF_StandardMuzzleFalsh</def>
+        <drawSize>(0.75,0.75)</drawSize>
+        <offsets>
+          <li>(0.75,0)</li>
+        </offsets>
+        <isAlternately>true</isAlternately>
+      </li>
+    </modExtensions>
+  </ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>DMS_Bullet_DragoonShotgun</defName>
+		<label>canister darts</label>
+		<graphicData>
+		<texPath>Things/Projectile/Bullet_Shotgun</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+    <drawSize>2</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>RangedStab</damageDef>
+			<damageAmountBase>40</damageAmountBase>
+			<stoppingPower>4</stoppingPower>
+			<speed>55</speed>
+			<armorPenetrationBase>0.55</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
 </Defs>

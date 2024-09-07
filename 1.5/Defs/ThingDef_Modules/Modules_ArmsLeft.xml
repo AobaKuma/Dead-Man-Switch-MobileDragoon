@@ -9,7 +9,7 @@
       <ThingDef>DMS_Apparel_PulseShield</ThingDef>
     </descriptionHyperlinks>
     <graphicData>
-      <texPath>Things/Item/Module</texPath>
+      <texPath>Things/Item/Module_AL</texPath>
     </graphicData>
     <statBases>
       <Mass>8</Mass>
@@ -94,7 +94,7 @@
       <ThingDef>DMS_Apparel_Shield</ThingDef>
     </descriptionHyperlinks>
     <graphicData>
-      <texPath>Things/Item/Module</texPath>
+      <texPath>Things/Item/Module_AL</texPath>
     </graphicData>
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
@@ -171,7 +171,7 @@
       <ThingDef>DMS_Apparel_InfraredSensor</ThingDef>
     </descriptionHyperlinks>
     <graphicData>
-      <texPath>Things/Item/Module</texPath>
+      <texPath>Things/Item/Module_AL</texPath>
     </graphicData>
     <statBases>
       <Mass>8</Mass>
@@ -203,6 +203,7 @@
       <Mass>8</Mass>
     </statBases>
     <equippedStatOffsets>
+      <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
       <MoveSpeed>-0.05</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
@@ -246,7 +247,7 @@
       <ThingDef>DMS_Apparel_CargoBox</ThingDef>
     </descriptionHyperlinks>
     <graphicData>
-      <texPath>Things/Item/Module</texPath>
+      <texPath>Things/Item/Module_AL</texPath>
     </graphicData>
     <statBases>
       <Mass>8</Mass>
@@ -289,18 +290,18 @@
           <layer>20</layer>
         </defaultData>
         <dataSouth>
-          <offset>(0.75,0,0.20)</offset>
+          <offset>(0.65,0,0.05)</offset>
         </dataSouth>
         <dataNorth>
-          <offset>(-0.75,0,0.30)</offset>
+          <offset>(-0.60,0,0.15)</offset>
           <layer>0</layer>
         </dataNorth>
         <dataWest>
-          <offset>(0.10,0,0.15)</offset>
+          <offset>(0.0,0,-0.1)</offset>
           <layer>64</layer>
         </dataWest>
         <dataEast>
-          <offset>(-0.80,0,0.8)</offset>
+          <offset>(0.4,0,0.35)</offset>
           <layer>0</layer>
         </dataEast>
       </drawData>

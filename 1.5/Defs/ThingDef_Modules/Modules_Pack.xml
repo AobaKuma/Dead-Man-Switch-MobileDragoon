@@ -14,7 +14,7 @@
       <li>DMS_Module_Pack</li>
     </thingCategories>
     <graphicData>
-      <texPath>Things/Item/Module</texPath>
+      <texPath>Things/Item/Module_A</texPath>
     </graphicData>
     <statBases>
       <Mass>60</Mass>
@@ -114,7 +114,7 @@
       <li>DMS_Module_Pack</li>
     </thingCategories>
     <graphicData>
-      <texPath>Things/Item/Module</texPath>
+      <texPath>Things/Item/Module_A</texPath>
     </graphicData>
     <statBases>
       <Mass>30</Mass>
@@ -199,7 +199,7 @@
       <li>DMS_Module_Pack</li>
     </thingCategories>
     <graphicData>
-      <texPath>Things/Item/Module</texPath>
+      <texPath>Things/Item/Module_A</texPath>
     </graphicData>
     <statBases>
       <Mass>35</Mass>
@@ -283,7 +283,7 @@
       <li>DMS_Module_Pack</li>
     </thingCategories>
     <graphicData>
-      <texPath>Things/Item/Module</texPath>
+      <texPath>Things/Item/Module_A</texPath>
     </graphicData>
     <statBases>
       <Mass>35</Mass>

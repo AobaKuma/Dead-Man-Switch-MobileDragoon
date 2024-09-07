@@ -158,7 +158,10 @@ namespace WalkerGear
             }
             set
             {
-                Log.Message(value);
+                if (DebugSettings.godMode)
+                {
+                    Log.Message(value);
+                }
                 if (parent is Apparel)
                 {
                     hp= value;

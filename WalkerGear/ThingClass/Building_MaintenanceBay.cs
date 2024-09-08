@@ -14,7 +14,7 @@ namespace WalkerGear
     public partial class Building_MaintenanceBay : Building
     {
         //cached stuffs
-        
+
         [Unsaved(false)]
         private CompPowerTrader cachedPowerComp;
         //Properties
@@ -26,12 +26,12 @@ namespace WalkerGear
             }
         }
         public bool PowerOn => PowerTraderComp.PowerOn;
-        
+
         //methods override
         public override IEnumerable<Gizmo> GetGizmos()
         {
 
-            if (HasGearCore&&false)
+            if (HasGearCore && false)
             {
                 Command_Target command_GetIn = new()
                 {
@@ -57,9 +57,9 @@ namespace WalkerGear
         }
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
-            foreach(Apparel a in ModuleStorage)
+            foreach (Apparel a in ModuleStorage)
             {
-                GenPlace.TryPlaceThing(MechUtility.Conversion(a),Position,Map,ThingPlaceMode.Direct);
+                GenPlace.TryPlaceThing(MechUtility.Conversion(a), Position, Map, ThingPlaceMode.Direct);
             }
             Dummy.Destroy();
             base.Destroy(mode);
@@ -83,9 +83,9 @@ namespace WalkerGear
     public partial class Building_MaintenanceBay
     {
         public Rot4 direction = Rot4.South;//缓存Itab里pawn的方向
-        public bool HasGearCore => GetGearCore !=null;
+        public bool HasGearCore => GetGearCore != null;
 
-        public Apparel GetGearCore => DummyApparels.WornApparel.Find(a=>a is WalkerGear_Core);
+        public Apparel GetGearCore => DummyApparels.WornApparel.Find(a => a is WalkerGear_Core);
     }
     //穿脱龙骑兵
     public partial class Building_MaintenanceBay
@@ -157,7 +157,7 @@ namespace WalkerGear
             }
             return true;
         }
-        public void GearUp(Pawn pawn)
+        public virtual void GearUp(Pawn pawn)
         {
             if (cachePawn == null || !HasGearCore) return;
             foreach (Apparel a in ModuleStorage)
@@ -197,11 +197,11 @@ namespace WalkerGear
             if (core == null) return;
             List<float> values = new();
             //Log.Message(core.HealthDamaged);
-            if (core.HealthDamaged>0)
+            if (core.HealthDamaged > 0)
             {
                 Rand.SplitRandomly(core.HealthDamaged, tmpApparelList.Count, values);
             }
-            
+
 
             for (int j = 0; j < tmpApparelList.Count; j++)
             {
@@ -222,10 +222,10 @@ namespace WalkerGear
                         c.HP -= Mathf.FloorToInt(values[j]);
                     }
                 }
-                
+
                 DummyApparels.Wear(a);
             }
-            ITab_MechGear.needUpdateCache=true;
+            ITab_MechGear.needUpdateCache = true;
             tmpApparelList.Clear();
             if (pawn.equipment.Primary != null && !EquipmentUtility.CanEquip(pawn.equipment.Primary, pawn))
             {
@@ -256,10 +256,11 @@ namespace WalkerGear
                 pawnsInBuilding.Add(Dummy);
             }
         }
-        public Pawn Dummy{
+        public Pawn Dummy
+        {
             get
             {
-                if (cachePawn==null)
+                if (cachePawn == null)
                 {
                     cachePawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist);
                     pawnsInBuilding.Add(cachePawn);
@@ -270,17 +271,18 @@ namespace WalkerGear
                     {
                         Drafted = true
                     };
-                   
+
                 }
                 return cachePawn;
             }
         }
         public Pawn_ApparelTracker DummyApparels => Dummy?.apparel;
-        public List<Apparel> ModuleStorage {
+        public List<Apparel> ModuleStorage
+        {
             get
             {
                 List<Apparel> tmp = new();
-                foreach(Apparel a in DummyApparels.WornApparel)
+                foreach (Apparel a in DummyApparels.WornApparel)
                 {
                     if (a.HasComp<CompWalkerComponent>())
                         tmp.Add(a);

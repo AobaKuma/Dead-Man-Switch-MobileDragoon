@@ -247,7 +247,7 @@ namespace WalkerGear
             {
                 options.Add( new("Remove".Translate(t.LabelCap), () => RemoveModules(slot), MenuOptionPriority.High));
             }
-            var modules = GetAvailableModules(slot,slot==null||slot.isCoreFrame);
+            var modules = GetAvailableModules(slot, slot == null || slot.isCoreFrame);
             if (modules.EnumerableNullOrEmpty())
             {
                 options.Add(new("NoModuleForSlot", null));
@@ -353,23 +353,25 @@ namespace WalkerGear
                 yield break;
             }
 
-            foreach (var b in abf.LinkedFacilitiesListForReading)
+            foreach (Thing b in abf.LinkedFacilitiesListForReading)
             {
-                if (b is not Building_Storage s)
+                if (!b.Spawned || b is not Building_Storage s)
                 {
                     continue;
                 }
-                foreach (var t in s.GetSlotGroup()?.HeldThings)
+                if ((bool)(s.GetSlotGroup()?.HeldThings.Any()))
                 {
-                    if (!t.TryGetComp(out CompWalkerComponent c)) continue;
-
-                    if ((IsCore && c.Props.slots.Any(s => s.isCoreFrame)) || c.Props.slots.Contains(slotDef))
+                    foreach (Thing t in s.GetSlotGroup().HeldThings)
                     {
-                        yield return t;
+                        if (!t.TryGetComp(out CompWalkerComponent c)) continue;
+
+                        if ((IsCore && c.Props.slots.Any(s => s.isCoreFrame)) || c.Props.slots.Contains(slotDef))
+                        {
+                            yield return t;
+                        }
                     }
                 }
             }
-
         }
         private void RemoveModules(SlotDef slot,bool updateNow=true)
         {

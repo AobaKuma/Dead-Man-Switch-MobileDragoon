@@ -5,12 +5,12 @@
     <label>mobile dragoon</label>
     <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_Major</titleRequired>
     <combatPower>50</combatPower>
-    <apparelRequired Inherit="false">
+    <!-- <apparelRequired Inherit="false">
       <li>DMS_Apparel_PV8_Core</li>
       <li>DMS_Apparel_PV8_Helmet</li>
       <li>DMS_Apparel_InfraredSensor</li>
       <li>DMS_Apparel_MissilePod</li>
-    </apparelRequired>
+    </apparelRequired> -->
     <apparelTags>
       <li>IndustrialMilitaryBasic</li>
     </apparelTags>
@@ -46,5 +46,15 @@
         </colorGenerator>
       </li>
     </specificApparelRequirements>
+  <modExtensions>
+    <li Class="WalkerGear.ModExtForceApparelGen">
+      <apparels>
+        <li>DMS_Apparel_PV8_Core</li>
+        <li>DMS_Apparel_PV8_Helmet</li>
+        <li>DMS_Apparel_InfraredSensor</li>
+        <li>DMS_Apparel_MissilePod</li>
+      </apparels>
+    </li>
+  </modExtensions>
   </PawnKindDef>
 </Defs>

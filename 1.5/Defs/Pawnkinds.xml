@@ -48,6 +48,7 @@
     </specificApparelRequirements>
   <modExtensions>
     <li Class="WalkerGear.ModExtForceApparelGen">
+      <StructurePointRange>0.5~1.0</StructurePointRange>
       <apparels>
         <li>DMS_Apparel_PV8_Core</li>
         <li>DMS_Apparel_PV8_Helmet</li>

@@ -18,11 +18,21 @@ namespace WalkerGear
             {
                 return;
             }
+
+            WalkerGear_Core core = null;
             foreach (ThingDef apparelDef in modExt.apparels)
             {
                 Apparel apparel = (Apparel)ThingMaker.MakeThing(apparelDef);
                 pawn.apparel.Wear(apparel);
+                WalkerGear_Core core2 = apparel as WalkerGear_Core;
+                if (core2 != null)
+                {
+                    core = core2;
+                }
             }
+
+            core?.RefreshHP(true);
+            core.Health = core.HealthMax * modExt.StructurePointRange.RandomInRange;
         }
     }
 }

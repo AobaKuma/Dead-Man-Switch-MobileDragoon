@@ -69,7 +69,7 @@
       </li>
     </comps>
     <modExtensions>
-      <li Class="WalkerGear.BuildingWreckage">
+      <li Class="WalkerGear.BuildingWreckageExtension">
         <building>MF_Building_Wreckage</building>
       </li>
       <li Class="WalkerGear.ApparelRenderOffsets">

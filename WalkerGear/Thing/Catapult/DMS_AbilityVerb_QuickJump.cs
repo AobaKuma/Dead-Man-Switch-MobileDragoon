@@ -45,7 +45,30 @@ namespace WalkerGear
 
             return false;
         }
+        public static bool DoJump(Pawn pawn, Map targetMap, LocalTargetInfo actionTarget, LocalTargetInfo currentTarget, bool isLanding, bool isToMap)
+        {
+            pawn.Rotation = Rot4.South;
+            IntVec3 position = pawn.Position;
+            IntVec3 cell = currentTarget.Cell;
+            Map map = pawn.Map;
+            bool flag = Find.Selector.IsSelected(pawn);
+            DMS_PawnFlyer pawnFlyer = DMS_PawnFlyer.MakeFlyer(ThingDefOf.DMS_PawnFlyer, pawn, cell, actionTarget, targetMap, DefDatabase<EffecterDef>.GetNamed("JumpMechFlightEffect"), SoundDefOf.TabClose, isLanding, isToMap, true);
+            pawnFlyer.eBay = targetMap.listerBuildings.allBuildingsColonist.FirstOrDefault(o => o.GetType() == typeof(Building_EjectorBay));
 
+            if (pawnFlyer != null)
+            {
+                FleckMaker.ThrowDustPuff(position.ToVector3Shifted() + Gen.RandomHorizontalVector(0.5f), map, 2f);
+                GenSpawn.Spawn(pawnFlyer, cell, map);
+                if (flag)
+                {
+                    Find.Selector.Select(pawn, playSound: false, forceDesignatorDeselect: false);
+                }
+
+                return true;
+            }
+
+            return false;
+        }
         public static bool DoJump(Pawn pawn, Map targetMap, LocalTargetInfo actionTarget, LocalTargetInfo currentTarget, bool isLanding)
         {
             pawn.Rotation = Rot4.South;

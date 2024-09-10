@@ -6,6 +6,7 @@ using RimWorld;
 using System.Configuration;
 using Verse.Sound;
 using Mono.Unix.Native;
+using RimWorld.Planet;
 
 namespace WalkerGear
 {
@@ -15,7 +16,21 @@ namespace WalkerGear
 
         protected Vector3 startVec;
 
+        //发射源建筑		修改人：Anxie,日期：2024-09-09
+        public Thing eBay;
+
+        public static readonly Texture2D TargeterMouseAttachment = ContentFinder<Texture2D>.Get("UI/Overlays/LaunchableMouseAttachment");
+
+        public Pawn pawnStored;
+
+        //射程的接口		修改人：Anxie,日期：2024-09-09
+        public ModExtension_Flyer extension => this.def.GetModExtension<ModExtension_Flyer>();
+
+        //是否为着陆		修改人：Anxie,日期：2024-09-09
         public bool isLanding;
+
+        //是否为投射到大地图		修改人：Anxie,日期：2024-09-09
+        public bool isToMap;
 
         public IntVec3 destCell;
 
@@ -171,12 +186,29 @@ namespace WalkerGear
             {
                 return;
             }
+            if (isToMap)
+            {
+                //投射到大地图		修改人：Anxie,日期：2024-09-09
+                pawn.DeSpawn();
+                GenSpawn.Spawn(pawn, new IntVec3(1, 0, 1), destMap);
+                Caravan caravan = CaravanMaker.MakeCaravan(new List<Pawn> { pawn }, pawn.Faction, pawn.Map.Tile, addToWorldPawnsIfNotAlready: false);
+                pawn.ExitMap(allowedToJoinOrCreateCaravan: false, Rot4.North);
+                CameraJumper.TryJump(CameraJumper.GetWorldTarget(this));
+                Find.WorldSelector.ClearSelection();
+                int tile = this.Map.Tile;
+                pawnStored = pawn;
+                Find.WorldTargeter.BeginTargeting(ChoseWorldTarget, canTargetTiles: true, TargeterMouseAttachment, closeWorldTabWhenFinished: true, delegate
+                {
+                    GenDraw.DrawWorldRadiusRing(tile, extension.flightRange);
+                }, (GlobalTargetInfo target) => CompLaunchable.TargetingLabelGetter(target, tile, extension.flightRange, new List<IThingHolder> { (Building_EjectorBay)eBay }, TryLaunch, null));
+                return;
+            }
             if (!isLanding)
             {
                 pawn.DeSpawn();
                 GenSpawn.Spawn(pawn, new IntVec3(actionTarget.Cell.x, actionTarget.Cell.y, actionTarget.Cell.z + 25 < destMap.AllCells.MaxBy(o => o.z).z ? actionTarget.Cell.z + 25 : destMap.AllCells.MaxBy(o => o.z).z), destMap);
                 pawn.Rotation = Rot4.South;
-                DMS_AbilityVerb_QuickJump.DoJump(pawn, destMap, target, actionTarget.Cell, true);
+                DMS_AbilityVerb_QuickJump.DoJump(pawn, destMap, target, actionTarget.Cell, true, false);
                 return;
             }
             if (jobQueue != null)
@@ -209,7 +241,20 @@ namespace WalkerGear
                     compAbilityEffectOnJumpCompleted.OnJumpCompleted(startVec.ToIntVec3(), target);
                 }
             }
+        }
 
+        public void TryLaunch(int destinationTile, TransportPodsArrivalAction arrivalAction)
+        {
+            if (pawnStored != null && pawnStored.GetCaravan() != null)
+            {
+                pawnStored.GetCaravan().Tile = destinationTile;
+                //不知为何没有效果。。。		修改人：Anxie,日期：2024-09-09
+                CameraJumper.TryShowWorld();
+            }
+        }
+        public bool ChoseWorldTarget(GlobalTargetInfo target)
+        {
+            return CompLaunchable.ChoseWorldTarget(target, eBay.Map.Tile, new List<IThingHolder> { (Building_EjectorBay)eBay }, extension.flightRange, TryLaunch, null);
         }
 
         private void LandingEffects()
@@ -217,7 +262,6 @@ namespace WalkerGear
             soundLanding?.PlayOneShot(new TargetInfo(base.Position, base.Map));
             FleckMaker.ThrowDustPuff(DestinationPos + Gen.RandomHorizontalVector(0.5f), base.Map, 2f);
         }
-
         public override void Tick()
         {
             if (flightEffecter == null && flightEffecterDef != null)
@@ -307,7 +351,7 @@ namespace WalkerGear
             }
         }
 
-        public static DMS_PawnFlyer MakeFlyer(ThingDef flyingDef, Pawn pawn, IntVec3 destCell, LocalTargetInfo actionTarget, Map destMap, EffecterDef flightEffecterDef, SoundDef landingSound, bool isLanding, bool flyWithCarriedThing = false, Vector3? overrideStartVec = null, Ability triggeringAbility = null, LocalTargetInfo target = default(LocalTargetInfo))
+        public static DMS_PawnFlyer MakeFlyer(ThingDef flyingDef, Pawn pawn, IntVec3 destCell, LocalTargetInfo actionTarget, Map destMap, EffecterDef flightEffecterDef, SoundDef landingSound, bool isLanding, bool isToMap, bool flyWithCarriedThing = false, Vector3? overrideStartVec = null, Ability triggeringAbility = null, LocalTargetInfo target = default(LocalTargetInfo))
         {
             DMS_PawnFlyer pawnFlyer = (DMS_PawnFlyer)ThingMaker.MakeThing(flyingDef);
             pawnFlyer.startVec = overrideStartVec ?? pawn.TrueCenter();
@@ -315,6 +359,7 @@ namespace WalkerGear
             pawnFlyer.flightDistance = pawn.Position.DistanceTo(destCell);
             pawnFlyer.destCell = destCell;
             pawnFlyer.destMap = destMap;
+            pawnFlyer.isToMap = isToMap;
             pawnFlyer.actionTarget = actionTarget;
             pawnFlyer.isLanding = isLanding;
             Log.Warning("目的坐标：" + destCell.ToString());
@@ -388,5 +433,9 @@ namespace WalkerGear
             Scribe_Deep.Look(ref jobQueue, "jobQueue");
             Scribe_TargetInfo.Look(ref target, "target");
         }
+    }
+    public class ModExtension_Flyer : DefModExtension
+    {
+        public int flightRange;
     }
 }

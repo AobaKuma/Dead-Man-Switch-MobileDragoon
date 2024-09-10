@@ -108,6 +108,28 @@ namespace WalkerGear
 
             if (this.HasPawn)
             {
+                Command_Action command_Eject = new()
+                {
+                    defaultLabel = "Eject to map".Translate(),
+                    hotKey = KeyBindingDefOf.Misc1,
+                    action = () =>
+                    {
+                        Pawn p = StoragedPawn;
+                        innerContainer.Remove(StoragedPawn);
+                        Map destMap = Find.CurrentMap;
+                        GenDrop.TryDropSpawn(p, Position, Map, ThingPlaceMode.Direct, out var _);
+                        ReadyToEject = true;
+                        float z = p.Position.z;
+                        DMS_AbilityVerb_QuickJump.DoJump(p, destMap
+                            , new LocalTargetInfo(new IntVec3(p.Position.x, p.Position.y, (p.Position.z + 25) < destMap.AllCells.MaxBy(o => o.z).z ? (p.Position.z + 25) : destMap.AllCells.MaxBy(o => o.z).z))
+                            , new LocalTargetInfo(new IntVec3(p.Position.x, p.Position.y, (p.Position.z + 25) < destMap.AllCells.MaxBy(o => o.z).z ? (p.Position.z + 25) : destMap.AllCells.MaxBy(o => o.z).z))
+                            , true, true);
+                    }
+                };
+                yield return command_Eject;
+            }
+            if (this.HasPawn)
+            {
                 Command_Action command_Release = new()
                 {
                     defaultLabel = "Release".Translate(),

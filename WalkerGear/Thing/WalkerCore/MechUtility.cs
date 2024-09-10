@@ -8,6 +8,14 @@ namespace WalkerGear
 {
     public static class MechUtility
 	{
+        public static void WeaponDropCheck(Pawn pawn)
+        {
+            if (pawn.equipment.Primary != null && !EquipmentUtility.CanEquip(pawn.equipment.Primary, pawn))
+            {
+                Messages.Message("WG_WeaponDropped".Translate(), pawn, MessageTypeDefOf.NeutralEvent, false);
+                pawn.equipment.TryDropEquipment(pawn.equipment.Primary, out var weapon, pawn.Position, false);
+            }
+        }
         static MechData mechData = new();
         public static readonly Dictionary<QualityCategory, float> qualityToHPFactor = new() {
             {QualityCategory.Awful, 1f},

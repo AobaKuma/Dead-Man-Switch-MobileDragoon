@@ -9,7 +9,7 @@ using Verse;
 namespace WalkerGear
 {
     [StaticConstructorOnStartup]
-	public class WalkerGear_Core : Apparel,IHealthParms
+    public class WalkerGear_Core : Apparel, IHealthParms
     {
         #region IHealthParms
         public float HPPercent => Health / HealthMax;
@@ -27,23 +27,23 @@ namespace WalkerGear
         public Texture2D EmptyShieldBarTex => eBarTex;
         public static readonly Texture2D eBarTex = SolidColorMaterials.NewSolidColorTexture(Color.clear);
         #endregion
-        public float HealthMax => MaxHitPoints < combinedHealth?combinedHealth: MaxHitPoints;
-		public float Health
-		{
-			get
-			{
-				return healthInt == -1 ? healthInt = HealthMax : healthInt;
-			}
-			set
-			{
-				healthInt = value;
-				if (healthInt < 0) healthInt = 0;
-				if (healthInt > HealthMax) healthInt = HealthMax;
-			}
-		}
+        public float HealthMax => MaxHitPoints < combinedHealth ? combinedHealth : MaxHitPoints;
+        public float Health
+        {
+            get
+            {
+                return healthInt == -1 ? healthInt = HealthMax : healthInt;
+            }
+            set
+            {
+                healthInt = value;
+                if (healthInt < 0) healthInt = 0;
+                if (healthInt > HealthMax) healthInt = HealthMax;
+            }
+        }
         public float HealthDamaged => HealthMax - Health;
         public bool safetyDisabled = false;
-        public BuildingWreckageExtension BuildingWreckage=>def.GetModExtension<BuildingWreckageExtension>();
+        public BuildingWreckageExtension BuildingWreckage => def.GetModExtension<BuildingWreckageExtension>();
         public override IEnumerable<Gizmo> GetWornGizmos()
         {
             foreach (Gizmo gizmo in base.GetWornGizmos())
@@ -84,11 +84,11 @@ namespace WalkerGear
                 }
                 yield return command;
             }
-            
+
             yield return new Gizmo_HealthPanel(this);
         }
         public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
-		{
+        {
             if (!dinfo.Def.harmsHealth)
             {
                 return true;
@@ -97,14 +97,14 @@ namespace WalkerGear
             foreach (var a in Wearer.apparel.WornApparel)
             {
 
-                if (a!= this && a.TryGetComp(out CompShield c))
+                if (a != this && a.TryGetComp(out CompShield c))
                 {
                     //Log.Message("Shield: "+a.def);
                     c.PostPreApplyDamage(ref dinfo, out var absorbed);
                     if (absorbed) return true;
                 }
             }
-			
+
             if (Health <= 0)
             {
                 return false;
@@ -117,18 +117,18 @@ namespace WalkerGear
                 return false;
             }
             return true;
-		}
-		public float GetPostArmorDamage(DamageInfo dinfo)
-		{
+        }
+        public float GetPostArmorDamage(DamageInfo dinfo)
+        {
             float amount = dinfo.Amount;
             DamageDef damageDef = dinfo.Def;
             if (DebugSettings.godMode)
             {
-                Log.Message("Incoming DMG:"+amount);
+                Log.Message("Incoming DMG:" + amount);
             }
             if (damageDef.armorCategory != null)
             {
-                
+
                 StatDef armorRatingStat = damageDef.armorCategory.armorRatingStat;
                 if (DebugSettings.godMode) Log.Message($"DMG Reduced:{armorRatingStat} Pen {dinfo.ArmorPenetrationInt}, Def {this.GetStatValue(armorRatingStat)}");
                 ArmorUtility.ApplyArmor(ref amount, dinfo.ArmorPenetrationInt, this.GetStatValue(armorRatingStat), null, ref damageDef, Wearer, out _);
@@ -140,20 +140,20 @@ namespace WalkerGear
             dinfo.SetAmount(amount);
             return amount;
         }
-		public bool RefreshHP(bool setup=false)
-		{
-            if(setup)
+        public bool RefreshHP(bool setup = false)
+        {
+            if (setup)
             {
                 healthInt = -1f;
                 combinedHealth = -1f;
                 modules.Clear();
             }
-			CheckModules();
-			float hpmax=0f;
-            float hp=0f;
+            CheckModules();
+            float hpmax = 0f;
+            float hp = 0f;
             foreach (var t in modules)
             {
-                if (t.TryGetQuality(out QualityCategory qc) && t.TryGetComp<CompWalkerComponent>(out var wc)&&
+                if (t.TryGetQuality(out QualityCategory qc) && t.TryGetComp<CompWalkerComponent>(out var wc) &&
                     MechUtility.qualityToHPFactor.TryGetValue(qc, out float factor))
                 {
                     hpmax += wc.MaxHP;
@@ -163,20 +163,20 @@ namespace WalkerGear
                 hpmax += 100;
                 hp += 100;
             }
-			combinedHealth = hpmax;
+            combinedHealth = hpmax;
             if (setup) healthInt = hp;
             return true;
         }
-		public void CheckModules()
-		{
-			modules.Clear();
-			foreach(Apparel a in Wearer.apparel.WornApparel)
-			{
-				if (a.HasComp<CompWalkerComponent>())
-				{
-					modules.Add(a);
+        public void CheckModules()
+        {
+            modules.Clear();
+            foreach (Apparel a in Wearer.apparel.WornApparel)
+            {
+                if (a.HasComp<CompWalkerComponent>())
+                {
+                    modules.Add(a);
                 }
-			}
+            }
         }
         public void Eject()
         {
@@ -190,7 +190,7 @@ namespace WalkerGear
             else
             {
                 building = (Building)ThingMaker.MakeThing(BuildingWreckage.building);
-            } 
+            }
             building.SetFactionDirect(Wearer.Faction);
             building.Rotation = Rot4.Random;
 
@@ -205,11 +205,13 @@ namespace WalkerGear
                     m.HitPoints = 1;
                     if (Rand.Bool) wreckage.moduleContainer.Add(MechUtility.Conversion(m));
                 }
+                Pawn _p = Wearer;
                 Wearer.apparel.Remove(this);
+                MechUtility.WeaponDropCheck(_p);
             }
         }
         public void GearDestory()
-		{
+        {
             GenExplosion.DoExplosion(Wearer.Position, Wearer.Map, 5, DefDatabase<DamageDef>.GetNamed("Bomb"), null, 5);
             Building building;
             if (def.HasModExtension<BuildingWreckageExtension>())
@@ -222,38 +224,40 @@ namespace WalkerGear
             building.Rotation = Rot4.Random;
 
             GenPlace.TryPlaceThing(building, Wearer.Position, Wearer.Map, ThingPlaceMode.Direct);
-            
+
             if (building is Building_Wreckage wreckage)
             {
                 Wearer.DeSpawnOrDeselect();
                 wreckage.pawnContainer.Add(Wearer);
                 foreach (var m in modules)
                 {
-                    if (m==this) continue;
+                    if (m == this) continue;
                     Wearer.apparel.Remove((Apparel)m);
                     m.HitPoints = 1;
                     if (Rand.Bool) wreckage.moduleContainer.Add(MechUtility.Conversion(m));
                 }
+                Pawn _p = Wearer;
                 Wearer.apparel.Remove(this);
-            }        }
+                MechUtility.WeaponDropCheck(_p);
+            }
+        }
         public override void ExposeData()
-		{
-			base.ExposeData();
+        {
+            base.ExposeData();
             Scribe_Values.Look(ref combinedHealth, "healthMax", -1f);
-			Scribe_Values.Look(ref healthInt, "healthInt",-1f);
-			Scribe_Values.Look(ref colorInt, "colorInt",Color.white);
+            Scribe_Values.Look(ref healthInt, "healthInt", -1f);
+            Scribe_Values.Look(ref colorInt, "colorInt", Color.white);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 RefreshHP();
             }
-		}
-        
+        }
+
         public Color colorInt = Color.white;
-		private float combinedHealth=-1;
-		private float healthInt = -1;
-		public List<Thing> modules = new();
-        
-        
+        private float combinedHealth = -1;
+        private float healthInt = -1;
+        public List<Thing> modules = new();
+
+
     }
 }
-

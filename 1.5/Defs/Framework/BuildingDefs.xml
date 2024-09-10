@@ -252,13 +252,17 @@
   </JobDef>
 
   <!-- Flyer -->
-
   <ThingDef ParentName="PawnFlyerBase">
     <defName>DMS_PawnFlyer</defName>
     <thingClass>WalkerGear.DMS_PawnFlyer</thingClass>
     <pawnFlyer>
       <flightDurationMin>0.01</flightDurationMin>
-      <flightSpeed>20</flightSpeed>
+      <flightSpeed>55</flightSpeed>
     </pawnFlyer>
+    <modExtensions>
+      <li Class="WalkerGear.ModExtension_Flyer">
+        <flightRange>20</flightRange>
+      </li>
+    </modExtensions>
   </ThingDef>
 </Defs>

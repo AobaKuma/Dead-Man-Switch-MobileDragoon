@@ -86,8 +86,9 @@ namespace WalkerGear
             {
                 Command_Target command_Eject = new()
                 {
-                    defaultLabel = "Eject".Translate(),
+                    defaultLabel = "Throw".Translate(),
                     hotKey = KeyBindingDefOf.Misc1,
+                    icon = Resources.catapultThrow,
                     targetingParams = new TargetingParameters
                     {
                         canTargetLocations = true,
@@ -110,8 +111,9 @@ namespace WalkerGear
             {
                 Command_Action command_Eject = new()
                 {
-                    defaultLabel = "Eject to map".Translate(),
+                    defaultLabel = "Launch to map".Translate(),
                     hotKey = KeyBindingDefOf.Misc1,
+                    icon = Resources.catapultEject,
                     action = () =>
                     {
                         Pawn p = StoragedPawn;

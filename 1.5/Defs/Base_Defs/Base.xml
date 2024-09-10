@@ -125,7 +125,7 @@
         <thingClass>WalkerGear.WalkerGear_Core</thingClass>
         <equippedStatOffsets>
             <MeleeDamageFactor>2</MeleeDamageFactor>
-            <StaggerDurationFactor>-0</StaggerDurationFactor>
+            <StaggerDurationFactor>-0.9</StaggerDurationFactor>
         </equippedStatOffsets>
         <apparel>
             <parentTagDef>WGApparelBody</parentTagDef>

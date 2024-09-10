@@ -3,24 +3,48 @@
   "WorkspaceRootPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\thing\\walkercore\\walkergear_core.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:thing\\walkercore\\walkergear_core.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\thing\\mechbay\\itab_mechgear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:thing\\mechbay\\itab_mechgear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\thing\\catapult\\building_ejectorbay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:thing\\catapult\\building_ejectorbay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\defof\\slotdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:defof\\slotdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\thing\\walkercore\\mechutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:thing\\walkercore\\mechutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\thing\\catapult\\jobdriver_getinejector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:thing\\catapult\\jobdriver_getinejector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\thing\\mechbay\\building_maintenancebay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:thing\\mechbay\\building_maintenancebay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\extensions\\buildingwreckageextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:extensions\\buildingwreckageextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\harmonypatches\\pawngenerator_patch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:harmonypatches\\pawngenerator_patch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\module\\workgiver_modulemaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:module\\workgiver_modulemaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\thing\\catapult\\building_ejectorbay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:thing\\catapult\\building_ejectorbay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\thing\\catapult\\dms_pawnflyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:thing\\catapult\\dms_pawnflyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\thing\\walkercore\\walkergear_core.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:thing\\walkercore\\walkergear_core.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\thing\\walkercore\\mechutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:thing\\walkercore\\mechutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\thing\\catapult\\dms_abilityverb_quickjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,16 +59,8 @@
       "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:effects\\compthrownfleckemitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\extensions\\buildingwreckageextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:extensions\\buildingwreckageextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\stat\\statpart_carryingcapacity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:stat\\statpart_carryingcapacity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\module\\workgiver_modulemaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:module\\workgiver_modulemaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\thing\\walkercore\\ihealthparms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,16 +71,8 @@
       "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:harmonypatches\\pawnrender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\harmonypatches\\pawngenerator_patch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:harmonypatches\\pawngenerator_patch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\stat\\statpart_movespeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:stat\\statpart_movespeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\thing\\catapult\\jobdriver_getinejector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:thing\\catapult\\jobdriver_getinejector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\thing\\catapult\\catapultutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -97,10 +105,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\comp\\compcomponentstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:comp\\compcomponentstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\_dead-man-switch-mobiledragoon\\walkergear\\defof\\slotdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58BB9DFB-1B5C-4610-B6B0-D6FBB3ED21AB}|WalkerGear.csproj|solutionrelative:defof\\slotdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -110,24 +114,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "ITab_MechGear.cs",
+              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\MechBay\\ITab_MechGear.cs",
+              "RelativeDocumentMoniker": "Thing\\MechBay\\ITab_MechGear.cs",
+              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\MechBay\\ITab_MechGear.cs",
+              "RelativeToolTip": "Thing\\MechBay\\ITab_MechGear.cs",
+              "ViewState": "AgIAAGoBAAAAAAAAAAAEwHQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T17:32:00.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Building_EjectorBay.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\Catapult\\Building_EjectorBay.cs",
               "RelativeDocumentMoniker": "Thing\\Catapult\\Building_EjectorBay.cs",
               "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\Catapult\\Building_EjectorBay.cs",
               "RelativeToolTip": "Thing\\Catapult\\Building_EjectorBay.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAQwHoAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAmwHUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-10T04:55:58.502Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "WorkGiver_ModuleMaintenance.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Module\\WorkGiver_ModuleMaintenance.cs",
               "RelativeDocumentMoniker": "Module\\WorkGiver_ModuleMaintenance.cs",
@@ -135,11 +152,12 @@
               "RelativeToolTip": "Module\\WorkGiver_ModuleMaintenance.cs",
               "ViewState": "AgIAAFYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T03:34:43.326Z"
+              "WhenOpened": "2024-09-09T03:34:43.326Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "Resources.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Resources.cs",
               "RelativeDocumentMoniker": "Resources.cs",
@@ -147,24 +165,24 @@
               "RelativeToolTip": "Resources.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T03:29:15.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-09T03:29:15.199Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 5,
               "Title": "PawnGenerator_Patch.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\HarmonyPatches\\PawnGenerator_Patch.cs",
               "RelativeDocumentMoniker": "HarmonyPatches\\PawnGenerator_Patch.cs",
               "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\HarmonyPatches\\PawnGenerator_Patch.cs",
               "RelativeToolTip": "HarmonyPatches\\PawnGenerator_Patch.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T03:27:21.287Z"
+              "WhenOpened": "2024-09-09T03:27:21.287Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "MechUtility.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\WalkerCore\\MechUtility.cs",
               "RelativeDocumentMoniker": "Thing\\WalkerCore\\MechUtility.cs",
@@ -172,12 +190,11 @@
               "RelativeToolTip": "Thing\\WalkerCore\\MechUtility.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAQwBAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T03:26:30.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-09T03:26:30.355Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "BuildingWreckageExtension.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Extensions\\BuildingWreckageExtension.cs",
               "RelativeDocumentMoniker": "Extensions\\BuildingWreckageExtension.cs",
@@ -185,11 +202,12 @@
               "RelativeToolTip": "Extensions\\BuildingWreckageExtension.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T03:23:45.869Z"
+              "WhenOpened": "2024-09-09T03:23:45.869Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "CatapultUtility.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\Catapult\\CatapultUtility.cs",
               "RelativeDocumentMoniker": "Thing\\Catapult\\CatapultUtility.cs",
@@ -207,14 +225,14 @@
               "RelativeDocumentMoniker": "Thing\\MechBay\\Building_MaintenanceBay.cs",
               "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\MechBay\\Building_MaintenanceBay.cs",
               "RelativeToolTip": "Thing\\MechBay\\Building_MaintenanceBay.cs",
-              "ViewState": "AgIAANcAAAAAAAAAAAAAwOQAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAPgAAAAAAAAAAAAgwAQBAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-07T22:14:28.91Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 2,
               "Title": "JobDriver_GetInEjector.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\Catapult\\JobDriver_GetInEjector.cs",
               "RelativeDocumentMoniker": "Thing\\Catapult\\JobDriver_GetInEjector.cs",
@@ -222,11 +240,12 @@
               "RelativeToolTip": "Thing\\Catapult\\JobDriver_GetInEjector.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAUwBoAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T22:06:31.463Z"
+              "WhenOpened": "2024-09-07T22:06:31.463Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "DMS_AbilityVerb_QuickJump.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\Catapult\\DMS_AbilityVerb_QuickJump.cs",
               "RelativeDocumentMoniker": "Thing\\Catapult\\DMS_AbilityVerb_QuickJump.cs",
@@ -234,25 +253,24 @@
               "RelativeToolTip": "Thing\\Catapult\\DMS_AbilityVerb_QuickJump.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAowEYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T21:07:14.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-07T21:07:14.516Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "DMS_PawnFlyer.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\Catapult\\DMS_PawnFlyer.cs",
               "RelativeDocumentMoniker": "Thing\\Catapult\\DMS_PawnFlyer.cs",
               "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\Catapult\\DMS_PawnFlyer.cs",
               "RelativeToolTip": "Thing\\Catapult\\DMS_PawnFlyer.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowBcAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAkwAwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-07T16:12:02.651Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "JobDefOf.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\DefOf\\JobDefOf.cs",
               "RelativeDocumentMoniker": "DefOf\\JobDefOf.cs",
@@ -264,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "ThingDefOf.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\DefOf\\ThingDefOf.cs",
               "RelativeDocumentMoniker": "DefOf\\ThingDefOf.cs",
@@ -276,19 +294,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 1,
               "Title": "SlotDefOf.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\DefOf\\SlotDefOf.cs",
               "RelativeDocumentMoniker": "DefOf\\SlotDefOf.cs",
               "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\DefOf\\SlotDefOf.cs",
               "RelativeToolTip": "DefOf\\SlotDefOf.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T16:10:48.793Z"
+              "WhenOpened": "2024-09-07T16:10:48.793Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "CompThrownFleckEmitter.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Effects\\CompThrownFleckEmitter.cs",
               "RelativeDocumentMoniker": "Effects\\CompThrownFleckEmitter.cs",
@@ -300,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "HarmonyInit.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\HarmonyPatches\\HarmonyInit.cs",
               "RelativeDocumentMoniker": "HarmonyPatches\\HarmonyInit.cs",
@@ -312,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "StatPart_CarryingCapacity.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Stat\\StatPart_CarryingCapacity.cs",
               "RelativeDocumentMoniker": "Stat\\StatPart_CarryingCapacity.cs",
@@ -324,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "PawnRender.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\HarmonyPatches\\PawnRender.cs",
               "RelativeDocumentMoniker": "HarmonyPatches\\PawnRender.cs",
@@ -336,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "StatPart_MoveSpeed.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Stat\\StatPart_MoveSpeed.cs",
               "RelativeDocumentMoniker": "Stat\\StatPart_MoveSpeed.cs",
@@ -348,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "JobDriver_GetOffWalkerCore.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\MechBay\\JobDriver_GetOffWalkerCore.cs",
               "RelativeDocumentMoniker": "Thing\\MechBay\\JobDriver_GetOffWalkerCore.cs",
@@ -360,20 +379,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "WalkerGear_Core.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\WalkerCore\\WalkerGear_Core.cs",
               "RelativeDocumentMoniker": "Thing\\WalkerCore\\WalkerGear_Core.cs",
               "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\WalkerCore\\WalkerGear_Core.cs",
               "RelativeToolTip": "Thing\\WalkerCore\\WalkerGear_Core.cs",
-              "ViewState": "AgIAALMAAAAAAAAAAAAkwLwAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAowHsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T18:12:59.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T18:12:59.956Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "CompBuildingExtraRenderer.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Comp\\CompBuildingExtraRenderer.cs",
               "RelativeDocumentMoniker": "Comp\\CompBuildingExtraRenderer.cs",
@@ -385,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "CompComponentStorage.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Comp\\CompComponentStorage.cs",
               "RelativeDocumentMoniker": "Comp\\CompComponentStorage.cs",
@@ -397,7 +415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "Building_Wreckage.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\Wreckage\\Building_Wreckage.cs",
               "RelativeDocumentMoniker": "Thing\\Wreckage\\Building_Wreckage.cs",
@@ -409,7 +427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "IHealthParms.cs",
               "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\_Dead-Man-Switch-MobileDragoon\\WalkerGear\\Thing\\WalkerCore\\IHealthParms.cs",
               "RelativeDocumentMoniker": "Thing\\WalkerCore\\IHealthParms.cs",

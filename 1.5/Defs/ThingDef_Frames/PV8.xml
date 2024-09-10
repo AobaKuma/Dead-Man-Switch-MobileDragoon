@@ -47,6 +47,8 @@
       <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
       <ArmorRating_Heat>0.10</ArmorRating_Heat>
+			<Insulation_Cold>48</Insulation_Cold>
+			<Insulation_Heat>64</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
 			<WorkSpeedGlobal>-0.5</WorkSpeedGlobal>

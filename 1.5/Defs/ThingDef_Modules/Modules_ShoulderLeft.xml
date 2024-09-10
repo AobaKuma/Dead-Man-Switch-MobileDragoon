@@ -199,7 +199,7 @@
                 <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
             </li>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <ItemDef>DMS_Module_MissilePod</ItemDef>
+                <ItemDef>DMS_Module_SwarmMissilePod</ItemDef>
                 <slot>MountLeft</slot>
             </li>
         </comps>

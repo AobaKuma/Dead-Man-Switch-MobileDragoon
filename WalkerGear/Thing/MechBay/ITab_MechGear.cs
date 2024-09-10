@@ -130,16 +130,17 @@ namespace WalkerGear
             {
                 slot ??= positionWSlot[0].supportedSlots.Find(s => s.uiPriority == Order);
             }
-            using (new TextBlock(TextAnchor.MiddleCenter)) {
+            using (new TextBlock(TextAnchor.MiddleCenter))
+            {
                 Vector2 position = positions[Order];
-                Rect gizmoRect = new(position, GizmoSize* (Order>0?1f:2f));
+                Rect gizmoRect = new(position, GizmoSize * (Order > 0 ? 1f : 2f));
 
-                bool disabled= Order > 0 && (occupiedSlots[positionWSlot[0]]
+                bool disabled = Order > 0 && (occupiedSlots[positionWSlot[0]]
                         ?.TryGetComp<CompWalkerComponent>().Props.ItemDef?.GetCompProperties<CompProperties_WalkerComponent>()?.disabledSlots?.Contains(slot) ?? false);
                 Thing thing = null;
-                bool hasThing = slot != null&&occupiedSlots.TryGetValue(slot, out thing);
+                bool hasThing = slot != null && occupiedSlots.TryGetValue(slot, out thing);
                 //标签
-                if(slot != null)
+                if (slot != null)
                 {
                     string label = "";
                     if (hasThing)
@@ -151,38 +152,38 @@ namespace WalkerGear
                     label += $"{slot.label.Translate()}";
                     if (disabled)
                     {
-                        label += "("+"Disabled".Translate()+")";
+                        label += "(" + "Disabled".Translate() + ")";
                     }
                     Text.Font = GameFont.Small;
                     Vector2 labelSize = CalcSize(label);
                     Rect labelBlock = new(gizmoRect.x, gizmoRect.y - labelSize.y, gizmoRect.width, labelSize.y);
                     Widgets.LabelFit(labelBlock, label);
                 }
-            
-            
+
+
                 //灰边
                 {
                     Widgets.DrawBoxSolid(gizmoRect, grey);
                     gizmoRect = gizmoRect.ContractedBy(3f);
                 }
-            
+
                 //底色
                 {
                     Material material = disabled ? TexUI.GrayscaleGUI : null;
-                    GenUI.DrawTextureWithMaterial(gizmoRect,Command.BGTex,material);
+                    GenUI.DrawTextureWithMaterial(gizmoRect, Command.BGTex, material);
                 }
-                if(disabled) return;
-                Texture2D icon = hasThing && slot!=null ? new CachedTexture(occupiedSlots[slot].def.graphicData.texPath).Texture : EmptySlotIcon;
+                if (disabled) return;
+                Texture2D icon = hasThing && slot != null ? new CachedTexture(occupiedSlots[slot].def.graphicData.texPath).Texture : EmptySlotIcon;
 
-                GizmoInteraction(gizmoRect,icon,slot);
+                GizmoInteraction(gizmoRect, icon, slot);
                 Widgets.DrawHighlightIfMouseover(gizmoRect);
 
-                if(slot != null) return;
+                if (slot != null) return;
                 //部件名字
                 if (hasThing)
                 {
-                    Rect nameBlock = gizmoRect.BottomPart(1f/8f);
-                    nameBlock.y+=nameBlock.height-26f;
+                    Rect nameBlock = gizmoRect.BottomPart(1f / 8f);
+                    nameBlock.y += nameBlock.height - 26f;
                     nameBlock.height = 26f;
                     GUI.DrawTexture(nameBlock, TexUI.TextBGBlack);
                     Widgets.LabelFit(nameBlock, occupiedSlots[slot].LabelCap);
@@ -209,10 +210,10 @@ namespace WalkerGear
         }
         private void GizmoInteraction(Rect rect, Texture2D icon,SlotDef slot)
         {
-            if (slot!=null&&slot.isCoreFrame && Parent.HasGearCore)
+            if (slot != null && slot.isCoreFrame && Parent.HasGearCore)
             {
                 RenderTexture portrait = PortraitsCache.Get(Parent.Dummy, rect.size, Parent.direction, cameraOffset: new Vector3(0, 0, 0.6f), cameraZoom: 0.75f);
-                Widgets.DrawTextureFitted(rect,portrait,1f);
+                Widgets.DrawTextureFitted(rect, portrait, 1f);
             }
             else Widgets.DrawTextureFitted(rect, icon, 1f);
 
@@ -243,11 +244,13 @@ namespace WalkerGear
         private List<FloatMenuOption> GizmoFloatMenu(SlotDef slot)
         {
             List<FloatMenuOption> options = new();
-            if (slot != null&&occupiedSlots.TryGetValue(slot,out Thing t))
+            if (slot != null && occupiedSlots.TryGetValue(slot, out Thing t)) //如果slot有填模塊，額外顯示移除選項
             {
-                options.Add( new("Remove".Translate(t.LabelCap), () => RemoveModules(slot), MenuOptionPriority.High));
+                options.Add(new("Remove".Translate(t.LabelCap), () => RemoveModules(slot), MenuOptionPriority.High));
             }
-            var modules = GetAvailableModules(slot, slot == null || slot.isCoreFrame);
+
+            IEnumerable<Thing> modules = GetAvailableModules(slot, slot == null ||slot.isCoreFrame);
+
             if (modules.EnumerableNullOrEmpty())
             {
                 options.Add(new("NoModuleForSlot", null));
@@ -257,7 +260,7 @@ namespace WalkerGear
             {
                 string label = thing.LabelCap;
                 Action action = () => AddOrReplaceModule(thing);
-                options.Add(new(label,action));
+                options.Add(new(label, action));
             }
             return options;
         }
@@ -346,31 +349,49 @@ namespace WalkerGear
             }
             needUpdateCache = false;
         }
-        private IEnumerable<Thing> GetAvailableModules(SlotDef slotDef, bool IsCore=false)
+        private IEnumerable<Thing> GetAvailableModules(SlotDef slotDef, bool IsCore = false)
         {
+            if (slotDef == null)
+            {
+                Log.Warning("slotDef is null");
+            }
             if (!Parent.TryGetComp(out CompAffectedByFacilities abf))
             {
+                Log.Warning("CompAffectedByFacilities is null");
                 yield break;
             }
 
-            foreach (Thing b in abf.LinkedFacilitiesListForReading)
+            if (DebugSettings.godMode)
             {
-                if (!b.Spawned || b is not Building_Storage s)
-                {
-                    continue;
-                }
-                if ((bool)(s.GetSlotGroup()?.HeldThings.Any()))
-                {
-                    foreach (Thing t in s.GetSlotGroup().HeldThings)
-                    {
-                        if (!t.TryGetComp(out CompWalkerComponent c)) continue;
+                Log.Message("trying to get slot of: " + (IsCore ? "any" : slotDef.defName));
+            }
+            foreach (var b in abf.LinkedFacilitiesListForReading)
+            {
+                if (b is not Building_Storage s) continue;
+                if (s.GetSlotGroup().HeldThings.EnumerableNullOrEmpty()) continue;
+                if (DebugSettings.godMode) Log.Message("loading linked facility: " + s.def.defName);
 
-                        if ((IsCore && c.Props.slots.Any(s => s.isCoreFrame)) || c.Props.slots.Contains(slotDef))
+                foreach (var t in s.GetSlotGroup().HeldThings)
+                {
+                    if (!t.TryGetComp(out CompWalkerComponent c))
+                    {
+                        if (DebugSettings.godMode)
                         {
-                            yield return t;
+                            Log.Message(t.def.defName + " is not walker module of " + (IsCore ? "any" : slotDef.defName) + " skipping.");
                         }
+                        continue;
+                    }
+
+                    if ((IsCore && c.Props.slots.Any(s => s.isCoreFrame)) || c.Props.slots.Contains(slotDef))
+                    {
+                        if (DebugSettings.godMode)
+                        {
+                            Log.Message(t.def.defName + " is walker module of " + (IsCore ? "any" : slotDef.defName) + " added to list.");
+                        }
+                        yield return t;
                     }
                 }
+
             }
         }
         private void RemoveModules(SlotDef slot,bool updateNow=true)

@@ -10,6 +10,7 @@ using RimWorld.Planet;
 
 namespace WalkerGear
 {
+    [StaticConstructorOnStartup]
     public class DMS_PawnFlyer : PawnFlyer
     {
         public ThingOwner<Thing> innerContainer;

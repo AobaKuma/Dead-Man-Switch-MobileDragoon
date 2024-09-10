@@ -10,13 +10,16 @@ namespace WalkerGear
     {
         public static void Postfix(Pawn pawn, PawnGenerationRequest request)
         {
-            Log.Message("Force Apparel Gen");
             PawnKindDef def = request.KindDef;
             if (def == null) return;
             ModExtForceApparelGen modExt = def.GetModExtension<ModExtForceApparelGen>();
             if (modExt == null)
             {
                 return;
+            }
+            if (DebugSettings.godMode)
+            {
+                Log.Message("ModExtForceApparelGen loaded, Force Apparel Gen");
             }
 
             WalkerGear_Core core = null;

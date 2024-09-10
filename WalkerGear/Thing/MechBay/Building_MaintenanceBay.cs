@@ -258,11 +258,10 @@ namespace WalkerGear
             {
                 if (cachePawn == null)
                 {
-                    cachePawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist);
+                    cachePawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist);//生成
                     pawnsInBuilding.Add(cachePawn);
                     cachePawn.apparel.DestroyAll();
                     cachePawn.rotationInt = Rotation.Opposite;
-                    //cachePawn.apparel.Wear((Apparel)ThingMaker.MakeThing(ThingDefOf.Apparel_Dummy));
                     cachePawn.drafter = new(cachePawn)
                     {
                         Drafted = true

@@ -23,7 +23,7 @@ namespace WalkerGear
     static class Pawn_EquipmentTracker_TryDropEquipment
     {
         [HarmonyPrefix]
-        static bool TryDropEquipment(ThingWithComps eq, ref bool __result)
+        static bool TryDropEquipment(ThingWithComps eq, bool __result)
         {
             return eq.def.equipmentType != EquipmentType.Primary || !eq.HasComp<CompApparelForcedWeapon>() || (__result = false);
         }
@@ -44,7 +44,6 @@ namespace WalkerGear
         [HarmonyPrefix]
         static bool TryTransferEquipmentToContainer(ThingWithComps eq)
         {
-
             return eq.def.equipmentType != EquipmentType.Primary
                 || !eq.HasComp<CompApparelForcedWeapon>();
         }
@@ -58,7 +57,7 @@ namespace WalkerGear
     {
         static bool Prefix(Pawn pawn, out string cantReason)
         {
-            cantReason = "";
+            cantReason = null;
             if (pawn.equipment.Primary == null) return true;
             if (pawn.equipment.Primary.HasComp<CompApparelForcedWeapon>())
             {

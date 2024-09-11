@@ -6,9 +6,9 @@ namespace WalkerGear
 {
 
     [HarmonyPatch(typeof(PawnGenerator), "GenerateGearFor")]
-    internal static class PawnGenerator_Patch
+    static class PawnGenerator_Patch
     {
-        public static void Postfix(Pawn pawn, PawnGenerationRequest request)
+        static void Postfix(Pawn pawn, PawnGenerationRequest request)
         {
             PawnKindDef def = request.KindDef;
             if (def == null) return;

@@ -2,21 +2,24 @@
 using RimWorld;
 using System;
 using Verse;
+using Verse.AI;
 
 namespace WalkerGear
 {
-    [HarmonyPatch(typeof(CaptureUtility), nameof(CaptureUtility.CanArrest),
-        new Type[] { typeof(Pawn), typeof(Pawn), typeof(string) },
+    [HarmonyPatch(
+        typeof(CaptureUtility),
+        nameof(CaptureUtility.TryGetBed),
+        new Type[] { typeof(Pawn), typeof(Pawn), typeof(Thing) },
         new ArgumentType[] { ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Out })]
-    static class CaptureUtility_CanArrest
+    internal static class CaptureUtility_TryGetBed
     {
         [HarmonyPrefix]
-        static bool CanArrest(ref bool __result, Pawn victim, out string reason)
+        static bool TryGetBed(Pawn victim, ref bool __result)
         {
-            reason = "";
+            Log.Message("p2");
             if (MechUtility.PawnWearingWalkerCore(victim))
             {
-                reason = "WG_Disabled_VictimInWalkerCore";
+                Messages.Message("WG_Disabled_VictimInWalkerCore".Translate(), MessageTypeDefOf.RejectInput, false);
                 __result = false;
                 return false;
             }

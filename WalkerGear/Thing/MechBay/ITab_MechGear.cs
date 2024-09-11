@@ -334,7 +334,7 @@ namespace WalkerGear
             positionWSlot.Clear();
             massCapacity = 0;
             currentLoad = 0;
-            foreach (var a in Parent.DummyApparels.WornApparel)
+            foreach (Apparel a in Parent.DummyApparels.WornApparel)
             {
                 massCapacity += a.GetStatValue(StatDefOf.CarryingCapacity) != StatDefOf.CarryingCapacity.defaultBaseValue ? a.GetStatValue(StatDefOf.CarryingCapacity) : 0;
                 currentLoad += a.GetStatValue(StatDefOf.Mass);
@@ -377,21 +377,20 @@ namespace WalkerGear
                     {
                         if (DebugSettings.godMode)
                         {
-                            Log.Message(t.def.defName + " is not walker module of " + (IsCore ? "any" : slotDef.defName) + " skipping.");
+                            Log.Message(t.def.defName + " is not walker module of " + (slotDef == null ? "any" : slotDef.defName) + " skipping.");
                         }
                         continue;
                     }
 
-                    if ((IsCore && c.Props.slots.Any(s => s.isCoreFrame)) || c.Props.slots.Contains(slotDef))
+                    if ((IsCore && c.Props.slots.Any(s => s.isCoreFrame)) || (slotDef != null | c.Props.slots.Contains(slotDef)))
                     {
                         if (DebugSettings.godMode)
                         {
-                            Log.Message(t.def.defName + " is walker module of " + (IsCore ? "any" : slotDef.defName) + " added to list.");
+                            Log.Message(t.def.defName + " is walker module of " + (slotDef == null ? "any" : slotDef.defName) + " added to list.");
                         }
                         yield return t;
                     }
                 }
-
             }
         }
         private void RemoveModules(SlotDef slot,bool updateNow=true)

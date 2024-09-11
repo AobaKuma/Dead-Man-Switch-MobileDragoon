@@ -22,6 +22,20 @@
         <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
     </JobDef>
 
+    <JobDef>
+        <defName>WG_TakeToMaintenanceBay</defName>
+        <driverClass>WalkerGear.JobDriver_TakeToMaintenanceBay</driverClass>
+        <reportString>heading back to bay</reportString>
+        <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+    </JobDef>
+
+    <JobDef>
+        <defName>WG_DisassembleWalkerCore</defName>
+        <driverClass>WalkerGear.JobDriver_DisassembleWalkerCore</driverClass>
+        <reportString>disassembling</reportString>
+        <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+    </JobDef>
+
     <WorkGiverDef>
         <defName>WG_MaintainComponent</defName>
         <label>repair damaged things</label>
@@ -36,5 +50,4 @@
         <nonColonistsCanDo>true</nonColonistsCanDo>
         <canBeDoneByMechs>true</canBeDoneByMechs>
       </WorkGiverDef>
-    
 </Defs>

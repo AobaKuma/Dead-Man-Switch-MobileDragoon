@@ -81,11 +81,18 @@ namespace WalkerGear
                 };
                 if (!DebugSettings.godMode && (!base.Wearer.IsPlayerControlled || !base.Wearer.Drafted))
                 {
-                    command.Disable("WG_Disabled_NeedControlledAndDrafted");
+                    command.Disable("WG_Disabled_NeedControlledAndDrafted".Translate());
                 }
                 yield return command;
             }
             yield return new Gizmo_HealthPanel(this);
+        }
+        public override void PreApplyDamage(ref DamageInfo dinfo, out bool absorbed)
+        {
+            var _t = dinfo;
+            _t.SetAmount(GetPostArmorDamage(dinfo));
+            dinfo = _t;
+            base.PreApplyDamage(ref dinfo, out absorbed);
         }
         public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
         {
@@ -93,6 +100,8 @@ namespace WalkerGear
             {
                 return true;
             }
+            if(HPPercent <0.5f && Rand.Chance(0.5f)) return false;
+
             float dmg = GetPostArmorDamage(dinfo);
             foreach (var a in Wearer.apparel.WornApparel)
             {
@@ -234,7 +243,7 @@ namespace WalkerGear
                     if (m == this) continue;
                     Wearer.apparel.Remove((Apparel)m);
                     m.HitPoints = 1;
-                    if (Rand.Bool) wreckage.moduleContainer.Add(MechUtility.Conversion(m));
+                    if (Rand.Chance(0.25f)) wreckage.moduleContainer.Add(MechUtility.Conversion(m));
                 }
                 Pawn _p = Wearer;
                 Wearer.apparel.Remove(this);

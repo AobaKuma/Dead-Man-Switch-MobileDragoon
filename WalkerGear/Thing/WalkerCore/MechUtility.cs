@@ -45,7 +45,7 @@ namespace WalkerGear
         }
         public static bool PawnWearingWalkerCore(Pawn pawn)
         {
-            foreach (Apparel item in pawn.apparel.LockedApparel)
+            foreach (Apparel item in pawn.apparel?.WornApparel)
             {
                 if (item is WalkerGear_Core)
                 {
@@ -53,6 +53,116 @@ namespace WalkerGear
                 }
             }
             return false;
+        }
+        public static void WalkerCoreRemove(Pawn pawn)
+        {
+            for (int i = pawn.apparel.WornApparelCount - 1; i >= 0; i--)
+            {
+                var a = pawn.apparel.WornApparel[i];
+                if (a.HasComp<CompWalkerComponent>())
+                {
+                    pawn.apparel.Unlock(a);
+                    pawn.apparel.Remove(a);
+                }
+            }
+        }
+        public static List<Apparel> WalkerCoreApparelLists(Pawn pawn)
+        {
+            List<Apparel> tmpApparelList = new List<Apparel>();
+            for (int i = pawn.apparel.WornApparelCount - 1; i >= 0; i--)
+            {
+                var a = pawn.apparel.WornApparel[i];
+                if (a.HasComp<CompWalkerComponent>())
+                {
+                    tmpApparelList.Add(a);
+                }
+            }
+            WalkerGear_Core core = (WalkerGear_Core)tmpApparelList.Find((a) => a is WalkerGear_Core);
+            if (core == null) return null;
+            List<float> values = new();
+
+            //Log.Message(core.HealthDamaged);
+            if (core.HealthDamaged > 0)
+            {
+                Rand.SplitRandomly(core.HealthDamaged, tmpApparelList.Count, values);
+            }
+            List<Apparel> finalList = new List<Apparel>();
+
+            for (int j = 0; j < tmpApparelList.Count; j++)
+            {
+                var a = tmpApparelList[j];
+                var c = a.TryGetComp<CompWalkerComponent>();
+                if (!values.Empty())
+                {
+                    if (values[j] >= c.HP)
+                    {
+                        if (j < tmpApparelList.Count - 1)
+                        {
+                            values[j + 1] += values[j] - c.HP;
+                        }
+                        c.HP = 1;
+                    }
+                    else
+                    {
+                        c.HP -= Mathf.FloorToInt(values[j]);
+                    }
+                }
+                finalList.Add(a);
+            }
+            return finalList;
+        }
+        /// <summary>
+        /// 給屍體或倒地龍騎兵脫下模塊(並機率損壞的)方法
+        /// </summary>
+        /// <param name="pawnOrCorpse"></param>
+        public static void DissambleFrom(Thing pawnOrCorpse)
+        {
+            if (!pawnOrCorpse.Spawned) return;
+            Pawn pawn = null;
+            IntVec3 pos = IntVec3.Invalid;
+            Map map = null;
+
+            if (pawnOrCorpse is Pawn p)
+            {
+                pawn = p;
+                pos = p.Position;
+                map = pawn.Map;
+            }
+            else if (pawnOrCorpse is Corpse c)
+            {
+                pawn = c.InnerPawn;
+                pos = c.Position;
+                map = c.Map;
+            }
+
+            //檢查可用性
+            if (pawn == null || pos == IntVec3.Invalid || map == null)
+            {
+                Log.Error("Error on MechUltility, Data is Null");
+                return;
+            }
+            if (!PawnWearingWalkerCore(pawn)) return;
+
+            //生成拆除物。
+            var a = MechUtility.WalkerCoreApparelLists(pawn);
+            MechUtility.WalkerCoreRemove(pawn);
+            foreach (Apparel item in a)
+            {
+                if (Rand.Chance(0.7f))
+                {
+                    GenSpawn.Spawn(ThingMaker.MakeThing(RimWorld.ThingDefOf.ChunkSlagSteel), pos, map, WipeMode.VanishOrMoveAside);
+                }
+                else
+                if (Rand.Chance(0.25f))
+                {
+                    ;
+                    GenSpawn.Refund(GenSpawn.Spawn(item.Conversion(), pos, map, WipeMode.VanishOrMoveAside), map, new CellRect(pos.x, pos.y, 1, 1), false);
+                }
+                else
+                {
+                    GenSpawn.Spawn(item.Conversion(), pos, map, WipeMode.VanishOrMoveAside);
+                }
+            }
         }
 
         //添加的

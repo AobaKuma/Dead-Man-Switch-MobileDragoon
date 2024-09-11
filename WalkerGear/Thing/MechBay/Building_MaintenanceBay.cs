@@ -141,8 +141,8 @@ namespace WalkerGear
             {
                 return "NoPower".Translate().CapitalizeFirst();
             }
-            if (pawn.apparel.WornApparel.Any((a) => a is WalkerGear_Core)) return "AlreadyHasArmor".Translate().CapitalizeFirst();
-            if (!HasGearCore) return "NoArmor".Translate().CapitalizeFirst();
+            if (pawn.apparel.WornApparel.Any((a) => a is WalkerGear_Core)) return "WG_Disabled_AlreadyHasCoreFrame".Translate().CapitalizeFirst();
+            if (!HasGearCore) return "WG_Disabled_NoCoreFrame".Translate().CapitalizeFirst();
             return true;
         }
         public bool CanGear(Pawn pawn)
@@ -167,7 +167,6 @@ namespace WalkerGear
                     if (!ApparelUtility.CanWearTogether(item.def, a.def, pawn.RaceProps.body) && pawn.apparel.IsLocked(item))
                         return;
                 }
-
             }
             for (int i = ModuleStorage.Count - 1; i >= 0; i--)
             {
@@ -181,56 +180,15 @@ namespace WalkerGear
         {
             if (cachePawn == null) return;
             if (HasGearCore) return;
-            tmpApparelList.Clear();
-
-            for (int i = pawn.apparel.WornApparelCount - 1; i >= 0; i--)
+            List<Apparel> _temp = MechUtility.WalkerCoreApparelLists(pawn);
+            MechUtility.WalkerCoreRemove(pawn);
+            foreach (Apparel a in _temp)
             {
-                var a = pawn.apparel.WornApparel[i];
-                if (a.HasComp<CompWalkerComponent>())
-                {
-                    tmpApparelList.Add(a);
-                    pawn.apparel.Unlock(a);
-                    pawn.apparel.Remove(a);
-                }
-            }
-            WalkerGear_Core core = (WalkerGear_Core)tmpApparelList.Find((a) => a is WalkerGear_Core);
-            if (core == null) return;
-            List<float> values = new();
-            //Log.Message(core.HealthDamaged);
-            if (core.HealthDamaged > 0)
-            {
-                Rand.SplitRandomly(core.HealthDamaged, tmpApparelList.Count, values);
-            }
-
-
-            for (int j = 0; j < tmpApparelList.Count; j++)
-            {
-                var a = tmpApparelList[j];
-                var c = a.TryGetComp<CompWalkerComponent>();
-                if (!values.Empty())
-                {
-                    if (values[j] >= c.HP)
-                    {
-                        if (j < tmpApparelList.Count - 1)
-                        {
-                            values[j + 1] += values[j] - c.HP;
-                        }
-                        c.HP = 1;
-                    }
-                    else
-                    {
-                        c.HP -= Mathf.FloorToInt(values[j]);
-                    }
-                }
-
-                DummyApparels.Wear(a);
+                DummyApparels.Wear(a, false, true);
             }
             ITab_MechGear.needUpdateCache = true;
-            tmpApparelList.Clear();
             MechUtility.WeaponDropCheck(pawn);
         }
-
-        static readonly List<Apparel> tmpApparelList = new();
     }
     //渲染小人的
     public partial class Building_MaintenanceBay
@@ -279,8 +237,7 @@ namespace WalkerGear
                 List<Apparel> tmp = new();
                 foreach (Apparel a in DummyApparels.WornApparel)
                 {
-                    if (a.HasComp<CompWalkerComponent>())
-                        tmp.Add(a);
+                    if (a.HasComp<CompWalkerComponent>()) tmp.Add(a);
                 }
                 return tmp;
             }

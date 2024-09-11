@@ -4,8 +4,8 @@
   <!-- 维护坞 -->
   <ThingDef ParentName="BuildingBase">
     <defName>MF_Building_MaintenanceBay</defName>
-    <label>maintenance bay</label>
-    <description>A place for mecha suit storage and maintenance, it has a gantry that allows you to do mecha suit loadout modification but requires at least one connected module storage shelve.</description>
+    <label>maintenance Gantry</label>
+    <description>A place for mechsuit storage and maintenance, it has a gantry that allows you to do mechsuit loadout modification but requires at least one connected module storage shelve.</description>
     <thingClass>WalkerGear.Building_MaintenanceBay</thingClass>
     <graphicData>
       <texPath>Things/Building/MaintenanceBay_Bottom</texPath>
@@ -51,7 +51,6 @@
     <comps>
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
-          <li>ToolCabinet</li>
           <li>MF_Building_ComponentStorage</li>
         </linkableFacilities>
       </li>

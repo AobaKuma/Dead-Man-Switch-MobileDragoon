@@ -53,6 +53,7 @@ namespace WalkerGear
             Command_Toggle toggle = new Command_Toggle
             {
                 Order = -999f,
+                Disabled = this.Wearer.IsPlayerControlled || DebugSettings.godMode,
                 icon = safetyDisabled ? Resources.GetSafetyIcon_Disabled : Resources.GetSafetyIcon,
                 defaultLabel = "WG_SafetyLock".Translate(),
                 defaultDesc = "WG_SafetyLock_Desc".Translate(),
@@ -78,13 +79,12 @@ namespace WalkerGear
                         Eject();
                     }
                 };
-                if (base.Wearer.Faction != Faction.OfPlayer || !base.Wearer.Drafted)
+                if (!DebugSettings.godMode && (!base.Wearer.IsPlayerControlled || !base.Wearer.Drafted))
                 {
-                    command.Disable();
+                    command.Disable("WG_Disabled_NeedControlledAndDrafted");
                 }
                 yield return command;
             }
-
             yield return new Gizmo_HealthPanel(this);
         }
         public override bool CheckPreAbsorbDamage(DamageInfo dinfo)

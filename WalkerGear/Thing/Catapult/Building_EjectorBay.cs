@@ -32,7 +32,6 @@ namespace WalkerGear
         {
             if (this.HasPawn)
             {
-                Log.Message(StoragedPawn.Name);
                 return base.GetInspectString() + "\n" + "WG_PilotInBuilding".Translate() + StoragedPawn.Name;
             }
             else return base.GetInspectString();

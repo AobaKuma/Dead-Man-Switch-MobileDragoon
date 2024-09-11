@@ -54,6 +54,8 @@
     </statBases>
     <equippedStatOffsets>
 			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
+      <SM_BodySizeOffset MayRequire="redmattis.betterprerequisites">1</SM_BodySizeOffset>
+      <SM_Cosmetic_BodySizeOffset MayRequire="redmattis.betterprerequisites">-1</SM_Cosmetic_BodySizeOffset>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/AT34/apparel</wornGraphicPath>

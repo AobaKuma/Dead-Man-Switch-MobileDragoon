@@ -3,6 +3,7 @@ using RimWorld;
 using System;
 using UnityEngine;
 using Verse;
+using VFECore;
 
 namespace WalkerGear
 {
@@ -24,10 +25,7 @@ namespace WalkerGear
         [HarmonyPrefix]
         static bool TryDropEquipment(ThingWithComps eq, ref bool __result)
         {
-
-            return eq.def.equipmentType != EquipmentType.Primary
-                || !eq.HasComp<CompApparelForcedWeapon>()
-                || (__result = false);
+            return eq.def.equipmentType != EquipmentType.Primary || !eq.HasComp<CompApparelForcedWeapon>() || (__result = false);
         }
     }
     [HarmonyPatch(typeof(Pawn_EquipmentTracker), nameof(Pawn_EquipmentTracker.Remove))]
@@ -36,9 +34,7 @@ namespace WalkerGear
         [HarmonyPrefix]
         static bool Remove(ThingWithComps eq)
         {
-
-            return eq.def.equipmentType != EquipmentType.Primary
-                || !eq.TryGetComp<CompApparelForcedWeapon>(out var c) || c.NeedRemove;
+            return eq.def.equipmentType != EquipmentType.Primary || !eq.TryGetComp<CompApparelForcedWeapon>(out var c) || c.NeedRemove;
         }
     }
 
@@ -53,7 +49,11 @@ namespace WalkerGear
                 || !eq.HasComp<CompApparelForcedWeapon>();
         }
     }
-    [HarmonyPatch(typeof(EquipmentUtility), nameof(EquipmentUtility.CanEquip), new Type[] { typeof(Thing), typeof(Pawn), typeof(string), typeof(bool) }, new ArgumentType[] { ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Out, ArgumentType.Normal })]
+    [HarmonyPatch(
+        typeof(EquipmentUtility), 
+        nameof(EquipmentUtility.CanEquip), 
+        new Type[] { typeof(Thing), typeof(Pawn), typeof(string), typeof(bool) }, 
+        new ArgumentType[] { ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Out, ArgumentType.Normal })]
     static class EquipmentUtility_CanEquip
     {
         static bool Prefix(Pawn pawn, out string cantReason)

@@ -14,7 +14,6 @@ namespace WalkerGear
                 return this.job.targetA.Thing as Building;
             }
         }
-
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             return ReservationUtility.Reserve(this.pawn, this.Target, this.job, 1, -1, null, errorOnFailed);

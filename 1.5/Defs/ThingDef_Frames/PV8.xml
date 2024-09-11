@@ -51,7 +51,9 @@
 			<Insulation_Heat>64</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
-			<WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
+			<WorkSpeedGlobal>-0.35</WorkSpeedGlobal>
+      <SM_BodySizeOffset MayRequire="redmattis.betterprerequisites">1</SM_BodySizeOffset>
+      <SM_Cosmetic_BodySizeOffset MayRequire="redmattis.betterprerequisites">-1</SM_Cosmetic_BodySizeOffset>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/PV8/apparel</wornGraphicPath>

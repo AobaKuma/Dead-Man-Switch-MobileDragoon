@@ -45,6 +45,9 @@ namespace WalkerGear
         }
         public static bool PawnWearingWalkerCore(Pawn pawn)
         {
+            if (pawn == null) return false;
+            if (pawn.NonHumanlikeOrWildMan()) return false;
+
             foreach (Apparel item in pawn.apparel?.WornApparel)
             {
                 if (item is WalkerGear_Core)

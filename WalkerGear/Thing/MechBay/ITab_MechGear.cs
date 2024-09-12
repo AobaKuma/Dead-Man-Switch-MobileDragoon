@@ -16,7 +16,7 @@ namespace WalkerGear
             size = new Vector2(512f, 368f);
             labelKey = "TabMechGear".Translate();
         }
-        
+
         private const float side = 80f;
         private Vector2 GizmoSize => new(side, side);
         private readonly Color grey = new ColorInt(72, 82, 92).ToColor;
@@ -25,14 +25,15 @@ namespace WalkerGear
 
         protected override void FillTab()
         {
-            if (Parent!=lastBay) {
+            if (Parent != lastBay)
+            {
                 lastBay = Parent;
                 UpdateOccupiedSlotsCache();
             }
             if (needUpdateCache)
             {
                 UpdateOccupiedSlotsCache();
-            }   
+            }
             Text.Font = GameFont.Small;
             Rect rect = new(Vector2.zero, size);
             Rect inner = rect.ContractedBy(3f);
@@ -45,19 +46,19 @@ namespace WalkerGear
                 Anchor = TextAnchor.UpperLeft;
             }
 
-            //Draw S/L solution
-            if(false)
+            //Draw S/L solution 由於這個還沒做所以就沒裝了
+            if (false)
             {
                 Vector2 slPosition = new(14f, inner.y);
 
                 string text = "Save".Translate();
                 Vector2 size = CalcSize(text);
-                size.Scale(new(1.2f,1.2f));
+                size.Scale(new(1.2f, 1.2f));
                 Rect slgizmoRect = new(slPosition, size);
-                Widgets.ButtonText(slgizmoRect,text);
+                Widgets.ButtonText(slgizmoRect, text);
                 text = "Load".Translate();
                 slgizmoRect.x = slgizmoRect.xMax + 10f;
-                size=CalcSize(text);
+                size = CalcSize(text);
                 size.Scale(new(1.2f, 1.2f));
                 slgizmoRect.size = size;
                 Widgets.ButtonText(slgizmoRect, text);
@@ -72,7 +73,20 @@ namespace WalkerGear
             Draw_GizmoSlot(0);
             if (!Parent.HasGearCore)
             {
+                string text = "right click the slot to load core module from linked storage.";
+                Vector2 size = CalcSize(text);
+                Vector2 slPosition = new(14f, inner.y);
+                Rect slgizmoRect = new(slPosition, size);
+                Widgets.Label(slgizmoRect, text);
                 return;
+            }
+            else
+            {
+                string text = Parent.GetGearCore.Label.CapitalizeFirst();
+                Vector2 size = CalcSize(text);
+                Vector2 slPosition = new(14f, inner.y);
+                Rect slgizmoRect = new(slPosition, size);
+                Widgets.Label(slgizmoRect, text);
             }
             for (int i = 1; i < 7; ++i)
             {
@@ -82,8 +96,8 @@ namespace WalkerGear
             Vector2 position = positions[0];
             //stats
             {
-                position.x =170f - (side / 5f);
-                position.y = 56f+(side * 2 + 5f);
+                position.x = 170f - (side / 5f);
+                position.y = 56f + (side * 2 + 5f);
                 Vector2 box = GizmoSize * 2f;
                 box.x *= 1.1f;
                 box.y = size.y - position.y - 10f;
@@ -94,16 +108,16 @@ namespace WalkerGear
             //rotate&color
             Vector2 rotateGizmosBotLeft = new(340f, 216f);
             {
-                Vector2 smallGizmoSize = new(30f,30f);
-                    
+                Vector2 smallGizmoSize = new(30f, 30f);
+
                 for (int i = 1; i < 3; i++)
                 {
                     rotateGizmosBotLeft.y -= 30f;
-                    Rect gizmoRect = new(rotateGizmosBotLeft,smallGizmoSize);
+                    Rect gizmoRect = new(rotateGizmosBotLeft, smallGizmoSize);
                     switch (i)
                     {
                         case 0://染色
-                                
+
                             break;
                         case 1:
                             if (Widgets.ButtonImage(gizmoRect, Resources.rotateButton))
@@ -119,7 +133,7 @@ namespace WalkerGear
                     }
                 }
             }
-            
+
         }
 
         //Gizmo Components
@@ -190,25 +204,25 @@ namespace WalkerGear
                 }
             }
         }
-        private void GizmoHealthBar(Rect gizmoRect,SlotDef slot,float healthPerc)
+        private void GizmoHealthBar(Rect gizmoRect, SlotDef slot, float healthPerc)
         {
             bool leftBar = slot.uiPriority == 0 || slot.uiPriority > 3;
-            Rect bar = gizmoRect.LeftPart(1f/15f);
+            Rect bar = gizmoRect.LeftPart(1f / 15f);
             if (leftBar)
             {
-                bar.x = gizmoRect.x - 1.5f*bar.width;
+                bar.x = gizmoRect.x - 1.5f * bar.width;
             }
             else
             {
                 bar.x = gizmoRect.xMax + 0.5f * bar.width;
             }
-            Widgets.DrawBoxSolid(bar,Color.black);
-            bar.yMin+=bar.height*(1f-healthPerc);
+            Widgets.DrawBoxSolid(bar, Color.black);
+            bar.yMin += bar.height * (1f - healthPerc);
             //bar.height*=healthPerc;          
-            var hColor = healthPerc < 0.3f?Color.red:healthPerc<0.7f?Color.yellow:Color.green;
+            var hColor = healthPerc < 0.3f ? Color.red : healthPerc < 0.7f ? Color.yellow : Color.green;
             Widgets.DrawBoxSolid(bar, hColor);
         }
-        private void GizmoInteraction(Rect rect, Texture2D icon,SlotDef slot)
+        private void GizmoInteraction(Rect rect, Texture2D icon, SlotDef slot)
         {
             if (slot != null && slot.isCoreFrame && Parent.HasGearCore)
             {
@@ -218,12 +232,12 @@ namespace WalkerGear
             else Widgets.DrawTextureFitted(rect, icon, 1f);
 
             if (!Widgets.ButtonInvisible(rect, icon)) return;//没做完
-            
+
             switch (Event.current.button)
             {
                 case 0://左键
                     {
-                        if (slot==null) break;
+                        if (slot == null) break;
                         if (occupiedSlots.ContainsKey(slot))
                         {
                             Find.WindowStack.Add(new Dialog_InfoCard(occupiedSlots[slot]));
@@ -239,7 +253,7 @@ namespace WalkerGear
                         break;
                     }
             }
-            
+
         }
         private List<FloatMenuOption> GizmoFloatMenu(SlotDef slot)
         {
@@ -249,7 +263,7 @@ namespace WalkerGear
                 options.Add(new("Remove".Translate(t.LabelCap), () => RemoveModules(slot), MenuOptionPriority.High));
             }
 
-            IEnumerable<Thing> modules = GetAvailableModules(slot, slot == null ||slot.isCoreFrame);
+            IEnumerable<Thing> modules = GetAvailableModules(slot, slot == null || slot.isCoreFrame);
 
             if (modules.EnumerableNullOrEmpty())
             {
@@ -265,26 +279,26 @@ namespace WalkerGear
             return options;
         }
         //Stats Components
-        private void DrawStatEntries(Rect rect,Thing thing)
+        private void DrawStatEntries(Rect rect, Thing thing)
         {
-            WidgetRow row = new(rect.x,rect.y,UIDirection.RightThenDown,rect.width,gap:-8);
+            WidgetRow row = new(rect.x, rect.y, UIDirection.RightThenDown, rect.width, gap: -8);
             row.Label("Performance".Translate());
             row.Gap(int.MaxValue);
-            float loadPercent = Mathf.Max(1f,currentLoad / massCapacity);
+            float loadPercent = Mathf.Max(1f, currentLoad / massCapacity);
             row.FillableBar(rect.width, 16f, loadPercent, $"{currentLoad} / {massCapacity}", WalkerGear_Core.fBarTex);
             //replace
-            row.Label("OverallArmor".Translate());     
+            row.Label("OverallArmor".Translate());
             foreach (StatDef statDef in toDraw)
             {
                 float statValue = thing.GetStatValue(statDef);
                 if (statDef.showOnDefaultValue || statValue != statDef.defaultBaseValue)
                 {
                     row.Gap(int.MaxValue);
-                    var t=statDef.LabelCap;
-                    var v =statValue>4?statValue.ToStringDecimalIfSmall():statValue.ToStringPercent();
-                    
+                    var t = statDef.LabelCap;
+                    var v = statValue > 4 ? statValue.ToStringDecimalIfSmall() : statValue.ToStringPercent();
+
                     row.Label(t);
-                    row.Gap(rect.width-CalcSize(t + v).x-8f);
+                    row.Gap(rect.width - CalcSize(t + v).x - 8f);
                     row.Label(v);
                 }
             }
@@ -311,7 +325,7 @@ namespace WalkerGear
     //和维护坞连接
     public partial class ITab_MechGear
     {
-        public static bool needUpdateCache=false;
+        public static bool needUpdateCache = false;
         private Building_MaintenanceBay Parent
         {
             get => SelThing as Building_MaintenanceBay;
@@ -319,7 +333,7 @@ namespace WalkerGear
         private Building_MaintenanceBay lastBay;
         private static readonly Dictionary<SlotDef, Thing> occupiedSlots = new();
         private static readonly Dictionary<int, SlotDef> positionWSlot = new(7);
-        private static readonly List<SlotDef> toRemove=new();
+        private static readonly List<SlotDef> toRemove = new();
         private float massCapacity;
         private float currentLoad;
 
@@ -351,7 +365,7 @@ namespace WalkerGear
         }
         private IEnumerable<Thing> GetAvailableModules(SlotDef slotDef, bool IsCore = false)
         {
-            if (slotDef == null)
+            if ((DebugSettings.godMode) && slotDef == null)
             {
                 Log.Warning("slotDef is null");
             }
@@ -361,50 +375,37 @@ namespace WalkerGear
                 yield break;
             }
 
-            if (DebugSettings.godMode)
-            {
-                Log.Message("trying to get slot of: " + (IsCore ? "any" : slotDef.defName));
-            }
-            foreach (var b in abf.LinkedFacilitiesListForReading)
+            if (DebugSettings.godMode) Log.Message("trying to get slot of: " + (IsCore ? "any" : slotDef.defName));
+
+            foreach (Thing b in abf.LinkedFacilitiesListForReading)
             {
                 if (b is not Building_Storage s) continue;
                 if (s.GetSlotGroup().HeldThings.EnumerableNullOrEmpty()) continue;
                 if (DebugSettings.godMode) Log.Message("loading linked facility: " + s.def.defName);
 
-                foreach (var t in s.GetSlotGroup().HeldThings)
+                foreach (Thing module in s.GetSlotGroup().HeldThings)
                 {
-                    if (!t.TryGetComp(out CompWalkerComponent c))
-                    {
-                        if (DebugSettings.godMode)
-                        {
-                            Log.Message(t.def.defName + " is not walker module of " + (slotDef == null ? "any" : slotDef.defName) + " skipping.");
-                        }
-                        continue;
-                    }
+                    if (!module.TryGetComp(out CompWalkerComponent c)) continue;
+                    if (IsCore && c.Props.slots.Where(s => s.isCoreFrame).EnumerableNullOrEmpty()) continue;
+                    if (!IsCore && !c.Props.slots.Contains(slotDef)) continue;
 
-                    if ((IsCore && c.Props.slots.Any(s => s.isCoreFrame)) || (slotDef != null | c.Props.slots.Contains(slotDef)))
-                    {
-                        if (DebugSettings.godMode)
-                        {
-                            Log.Message(t.def.defName + " is walker module of " + (slotDef == null ? "any" : slotDef.defName) + " added to list.");
-                        }
-                        yield return t;
-                    }
+                    if (DebugSettings.godMode) Log.Message(module.def.defName + " is walker module of " + (slotDef == null ? "any" : slotDef.defName) + " added to list.");
+                    yield return module;
                 }
             }
         }
-        private void RemoveModules(SlotDef slot,bool updateNow=true)
+        private void RemoveModules(SlotDef slot, bool updateNow = true)
         {
             if (!occupiedSlots.ContainsKey(slot)) return;
             toRemove.Clear();
             GetSupportedSlotRecur(slot);
             foreach (var s in toRemove)
             {
-                if (occupiedSlots.TryGetValue(s,out var t))
+                if (occupiedSlots.TryGetValue(s, out var t))
                 {
                     Parent.RemoveModule(t);
                 }
-                
+
             }
             if (updateNow)
             {
@@ -416,7 +417,7 @@ namespace WalkerGear
             if (!thing.TryGetComp(out CompWalkerComponent c)) return;
             foreach (var s in c.Props.slots)
             {
-                RemoveModules(s,false);
+                RemoveModules(s, false);
             }
             Parent.Add(thing);
             UpdateOccupiedSlotsCache();

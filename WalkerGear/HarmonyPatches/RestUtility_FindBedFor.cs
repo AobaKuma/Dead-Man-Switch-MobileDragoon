@@ -15,9 +15,14 @@ namespace WalkerGear
         [HarmonyPostfix]
         static void Postfix(Thing th, ref bool __result)
         {
-            if (__result && th is Pawn pawn  && !pawn.NonHumanlikeOrWildMan())
+            if (!__result) return;
+            if (th is Pawn pawn && !pawn.NonHumanlikeOrWildMan())
             {
                 __result = !MechUtility.PawnWearingWalkerCore(pawn);
+            }
+            else if(th is Corpse corpse && !corpse.InnerPawn.NonHumanlikeOrWildMan())
+            {
+                __result = !MechUtility.PawnWearingWalkerCore(corpse.InnerPawn);
             }
         }
     }

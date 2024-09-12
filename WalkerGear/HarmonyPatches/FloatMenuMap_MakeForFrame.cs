@@ -24,7 +24,8 @@ namespace WalkerGear
                 {
                     if (thing4 is Pawn _targetPawn && MechUtility.PawnWearingWalkerCore(_targetPawn))
                     {
-                        if (!_targetPawn.Downed) return;
+                        if (!_targetPawn.Downed) return;//站著的龍騎兵沒法拆
+
                         if (_targetPawn.IsPlayerControlled)//自家控制的龍騎兵可以搬回維修塢(如果有的話)
                         {
                             Building_MaintenanceBay bay = (Building_MaintenanceBay)GenClosest.ClosestThingReachable(pawn.PositionHeld, pawn.MapHeld, ThingRequest.ForDef(ThingDefOf.MF_Building_MaintenanceBay), PathEndMode.InteractionCell, TraverseParms.For(pawn), 9999f, validator: c => c is Building_MaintenanceBay bay && !bay.HasGearCore);
@@ -52,7 +53,7 @@ namespace WalkerGear
                         ), pawn, _targetPawn));
 
                     }
-                    else if (thing4 is Corpse)
+                    else if (thing4 is Corpse c && MechUtility.PawnWearingWalkerCore(c.InnerPawn))
                     {
                         opts.Add(FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("WG_Job_DisassembleFrame".Translate(), delegate
                         {

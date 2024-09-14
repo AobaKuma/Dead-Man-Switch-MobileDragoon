@@ -3,7 +3,7 @@
   <!-- F/A-47核心 -->
   <ThingDef ParentName="DMS_ModuleItemCore">
     <defName>DMS_Module_FA47_Core</defName>
-    <label>F/A-47 frame</label>
+    <label>F/A-47 "Arsenal Angel" core module</label>
     <!-- 由殖民艦隊軌道軍使用的龍騎兵系統，作為一種具備外太空戰鬥能力的龍騎兵使用，使用塑鋼打造的全封閉外殼也使其能夠在星球地表上搭載推進系統進行短距離的亞軌道飛行。 -->
     <description>A Dragoon with outer space combat capabilities, used by the Colonial Fleet Orbital Cavalry. Its fully enclosed shell is made of plasteel. can carry a propulsion system capable of short-distance suborbital flights on the planet's surface.</description>
     <descriptionHyperlinks>
@@ -37,7 +37,7 @@
     <!-- F/A-47，能增加額外的跳躍距離 -->
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_FA47_Core</defName>
-    <label>F/A-47 frame</label>
+    <label>F/A-47 "Arsenal Angel" frame</label>
     <description>A Dragoon with outer space combat capabilities, used by the Colonial Fleet Orbital Cavalry. Its fully enclosed shell is made of plasteel. can carry a propulsion system capable of short-distance suborbital flights on the planet's surface.</description>
     <graphicData>
       <texPath>Things/Dragoon/PV8/apparel_south</texPath>
@@ -103,7 +103,7 @@
   <!-- F/A-47頭盔 -->
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_FA47_Helmet</defName>
-    <label>F/A-47 helmet</label>
+    <label>F/A-47 "Arsenal Angel" helmet</label>
     <description>todo.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_FA47_Helmet</ThingDef>
@@ -132,7 +132,7 @@
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_FA47_Helmet</defName>
-    <label>F/A-47 helmet</label>
+    <label>F/A-47 "Arsenal Angel" helmet</label>
     <description>Todo.</description>
     <graphicData>
       <texPath>Things/Dragoon/FA47/helmet_south</texPath>

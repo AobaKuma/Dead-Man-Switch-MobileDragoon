@@ -3,8 +3,8 @@
   <!-- PV-8核心 -->
   <ThingDef ParentName="DMS_ModuleItemCore">
     <defName>DMS_Module_PV8_Core</defName>
-    <label>PV-8 frame</label>
-    <description>todo.</description>
+    <label>PV-8 "Zyklop" frame module</label>
+    <description>A heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task force. This is probably the largest piece of infantry equipments deployed by the colonial fleet on surface of this planet. The extremely thick armor and powerful power system enable the ground garrison to maintain sufficient mobile firepower to deal with interference in the colonization project.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PV8_Core</ThingDef>
     </descriptionHyperlinks>
@@ -35,8 +35,8 @@
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_PV8_Core</defName>
-    <label>PV-8 frame</label>
-    <description>Todo.</description>
+    <label>PV-8 "Zyklop" frame</label>
+    <description>A heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task force. This is probably the largest piece of infantry equipments deployed by the colonial fleet on surface of this planet. The extremely thick armor and powerful power system enable the ground garrison to maintain sufficient mobile firepower to deal with interference in the colonization project.</description>
     <graphicData>
       <texPath>Things/Dragoon/PV8/apparel_south</texPath>
     </graphicData>
@@ -100,7 +100,7 @@
   <!-- PV-8頭盔 -->
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_PV8_Helmet</defName>
-    <label>PV-8 helmet</label>
+    <label>PV-8 "Zyklop" helmet</label>
     <description>todo.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PV8_Helmet</ThingDef>
@@ -130,7 +130,7 @@
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_PV8_Helmet</defName>
-    <label>PV-8 helmet</label>
+    <label>PV-8 "Zyklop" helmet</label>
     <description>Todo.</description>
     <graphicData>
       <texPath>Things/Dragoon/PV8/helmet_south</texPath>

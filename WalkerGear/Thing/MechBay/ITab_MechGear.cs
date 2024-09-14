@@ -354,7 +354,7 @@ namespace WalkerGear
                 currentLoad += a.GetStatValue(StatDefOf.Mass);
                 if (a.TryGetComp<CompWalkerComponent>(out CompWalkerComponent c))
                 {
-                    foreach (var s in c.Props.slots)
+                    foreach (SlotDef s in c.Props.slots)
                     {
                         occupiedSlots[s] = a;
                         positionWSlot[s.uiPriority] = s;

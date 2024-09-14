@@ -3,7 +3,7 @@
   <!-- AT-34核心 -->
   <ThingDef ParentName="DMS_ModuleItemCore">
     <defName>DMS_Module_AT34_Core</defName>
-    <label>AT-34 drgaoon</label>
+    <label>AT-34 "Yetta" core module</label>
     <description>todo.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_AT34_Core</ThingDef>
@@ -37,7 +37,7 @@
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_AT34_Core</defName>
-    <label>AT-34 frame</label>
+    <label>AT-34 "Yetta" frame</label>
     <description>Todo.</description>
     <graphicData>
       <texPath>Things/Dragoon/AT34/apparel_south</texPath>
@@ -102,7 +102,7 @@
   <!-- AT-34頭盔 -->
   <ThingDef ParentName="DMS_ModuleItemBase">
     <defName>DMS_Module_AT34_Helmet</defName>
-    <label>AT-34 helmet</label>
+    <label>AT-34 "Yetta" helmet</label>
     <description>todo.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_AT34_Helmet</ThingDef>
@@ -138,7 +138,7 @@
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_AT34_Helmet</defName>
-    <label>AT-34 helmet</label>
+    <label>AT-34 "Yetta" helmet</label>
     <description>Todo.</description>
     <graphicData>
       <texPath>Things/Dragoon/AT34/helmet_south</texPath>

@@ -175,6 +175,7 @@ namespace WalkerGear
                 pawn.apparel.Wear(a, true, locked: true);
             }
             pawn.apparel.WornApparel.Find((a) => a is WalkerGear_Core c && c.RefreshHP(true));
+            ITab_MechGear.needUpdateCache = true;
         }
         public void GearDown(Pawn pawn)
         {

@@ -4,8 +4,8 @@
   <!-- PF3核心 -->
   <ThingDef ParentName="DMS_ModuleItemCore">
     <defName>DMS_Module_PF3_Core</defName>
-    <label>PF-3 powered frame</label>
-    <description>todo.</description>
+    <label>PF-3 "Arbeiter" powered frame</label>
+    <description>An exoskeleton frame within 2 meters high, its technology can be traced back to the end of the 22nd century, when mass-production engineering exoskeleton frames were used to construct a space elevator system for the Project Skyway.\n\nAfter the advent of the space age, a large number of engineering frames and production equipment flowed into civilian and armed organizations.\n\nArbeiter has a left arm that can use human tools and a right arm is used to install tool modules and balance the weight, allowing modules to be replaced to meet most of the work missions.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PF3_Core</ThingDef>
     </descriptionHyperlinks>
@@ -18,7 +18,6 @@
         <EquipedThingDef>DMS_Apparel_PF3_Core</EquipedThingDef>
         <slot>Core</slot>
         <disabledSlots>
-          <!-- <li>Head</li> -->
           <li>MountLeft</li>
           <li>MountRight</li>
           <li>Attachment</li>
@@ -40,7 +39,7 @@
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_PF3_Core</defName>
-    <label>PF-3 powered frame</label>
+    <label>PF-3 "Arbeiter" powered frame</label>
     <description>Todo.</description>
     <graphicData>
       <texPath>Things/Dragoon/PF3/apparel_south</texPath>

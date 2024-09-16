@@ -179,6 +179,10 @@ namespace WalkerGear
         public void CheckModules()
         {
             modules.Clear();
+            Log.Message("Wearer: " + Wearer == null);
+            Log.Message("Wearer.apparel: " + Wearer.apparel == null);
+            Log.Message("Wearer.apparel.WornApparel: " + Wearer.apparel.WornApparel == null);
+ 
             foreach (Apparel a in Wearer.apparel.WornApparel)
             {
                 if (a.HasComp<CompWalkerComponent>())

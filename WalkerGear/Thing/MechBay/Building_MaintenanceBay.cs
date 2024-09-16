@@ -54,6 +54,7 @@ namespace WalkerGear
         {
             base.ExposeData();
             Scribe_Deep.Look(ref cachePawn, "cachedPawn");
+            SetItabCacheDirty();
         }
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
@@ -82,10 +83,133 @@ namespace WalkerGear
     //给Itab提供的功能
     public partial class Building_MaintenanceBay
     {
+        private bool isOccupiedSlotDirty = true;
+
+        private float massCapacity;
+        private float currentLoad;
+
+        private readonly List<SlotDef> toRemove = new();
+
+        public readonly Dictionary<SlotDef, Thing> occupiedSlots = new();
+        public readonly Dictionary<int, SlotDef> positionWSlot = new(7);
+
+        public float MassCapacity => massCapacity;
+        public float CurrentLoad => currentLoad;
+
         public Rot4 direction = Rot4.South;//缓存Itab里pawn的方向
         public bool HasGearCore => GetGearCore != null;
 
         public Apparel GetGearCore => DummyApparels.WornApparel.Find(a => a is WalkerGear_Core);
+
+        public void TryUpdateOccupiedSlotsCache(bool force = false)
+        {
+            if (!force && !isOccupiedSlotDirty)
+            {
+                return;
+            }
+
+            occupiedSlots.Clear();
+            positionWSlot.Clear();
+            massCapacity = 0;
+            currentLoad = 0;
+            foreach (Apparel a in DummyApparels.WornApparel)
+            {
+                massCapacity += a.GetStatValue(StatDefOf.CarryingCapacity) != StatDefOf.CarryingCapacity.defaultBaseValue ? a.GetStatValue(StatDefOf.CarryingCapacity) : 0;
+                currentLoad += a.GetStatValue(StatDefOf.Mass);
+                if (a.TryGetComp<CompWalkerComponent>(out CompWalkerComponent c))
+                {
+                    foreach (SlotDef s in c.Props.slots)
+                    {
+                        occupiedSlots[s] = a;
+                        positionWSlot[s.uiPriority] = s;
+                    }
+                }
+            }
+            isOccupiedSlotDirty = false;
+        }
+
+        public void RemoveModules(SlotDef slot, bool updateNow = true)
+        {
+            if (!occupiedSlots.ContainsKey(slot)) return;
+            toRemove.Clear();
+            GetSupportedSlotRecur(slot);
+            foreach (var s in toRemove)
+            {
+                if (occupiedSlots.TryGetValue(s, out var t))
+                {
+                    RemoveModule(t);
+                }
+
+            }
+            if (updateNow)
+            {
+                TryUpdateOccupiedSlotsCache(true);
+            }
+        }
+
+        public void AddOrReplaceModule(Thing thing)
+        {
+            if (!thing.TryGetComp(out CompWalkerComponent c)) return;
+            foreach (var s in c.Props.slots)
+            {
+                RemoveModules(s, false);
+            }
+            Add(thing);
+            TryUpdateOccupiedSlotsCache(true);
+        }
+
+        public IEnumerable<Thing> GetAvailableModules(SlotDef slotDef, bool IsCore = false)
+        {
+            if ((DebugSettings.godMode) && slotDef == null)
+            {
+                Log.Warning("slotDef is null");
+            }
+            
+            if (!this.TryGetComp(out CompAffectedByFacilities abf))
+            {
+                Log.Warning("CompAffectedByFacilities is null");
+                yield break;
+            }
+
+            if (DebugSettings.godMode) Log.Message("trying to get slot of: " + (IsCore ? "any" : slotDef.defName));
+
+            foreach (Thing b in abf.LinkedFacilitiesListForReading)
+            {
+                if (b is not Building_Storage s) continue;
+                if (s.GetSlotGroup().HeldThings.EnumerableNullOrEmpty()) continue;
+                if (DebugSettings.godMode) Log.Message("loading linked facility: " + s.def.defName);
+
+                foreach (Thing module in s.GetSlotGroup().HeldThings)
+                {
+                    if (!module.TryGetComp(out CompWalkerComponent c)) continue;
+                    if (IsCore && c.Props.slots.Where(s => s.isCoreFrame).EnumerableNullOrEmpty()) continue;
+                    if (!IsCore && !c.Props.slots.Contains(slotDef)) continue;
+
+                    if (DebugSettings.godMode) Log.Message(module.def.defName + " is walker module of " + (slotDef == null ? "any" : slotDef.defName) + " added to list.");
+                    yield return module;
+                }
+            }
+        }
+
+        private void GetSupportedSlotRecur(SlotDef slotDef)
+        {
+            if (!slotDef.supportedSlots.NullOrEmpty())
+            {
+                foreach (var s in slotDef.supportedSlots)
+                {
+                    GetSupportedSlotRecur(s);
+                }
+            }
+            toRemove.Add(slotDef);
+        }
+
+        private void SetItabCacheDirty()
+        {
+            isOccupiedSlotDirty = true;
+        }
+
+        
+
     }
     //穿脱龙骑兵
     public partial class Building_MaintenanceBay
@@ -175,7 +299,7 @@ namespace WalkerGear
                 pawn.apparel.Wear(a, true, locked: true);
             }
             pawn.apparel.WornApparel.Find((a) => a is WalkerGear_Core c && c.RefreshHP(true));
-            ITab_MechGear.needUpdateCache = true;
+            SetItabCacheDirty();
         }
         public void GearDown(Pawn pawn)
         {
@@ -187,7 +311,7 @@ namespace WalkerGear
             {
                 DummyApparels.Wear(a, false, true);
             }
-            ITab_MechGear.needUpdateCache = true;
+            SetItabCacheDirty();
             MechUtility.WeaponDropCheck(pawn);
         }
     }

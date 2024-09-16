@@ -25,15 +25,8 @@ namespace WalkerGear
 
         protected override void FillTab()
         {
-            if (Parent != lastBay)
-            {
-                lastBay = Parent;
-                UpdateOccupiedSlotsCache();
-            }
-            if (needUpdateCache)
-            {
-                UpdateOccupiedSlotsCache();
-            }
+            Parent.TryUpdateOccupiedSlotsCache();
+
             Text.Font = GameFont.Small;
             Rect rect = new(Vector2.zero, size);
             Rect inner = rect.ContractedBy(3f);
@@ -102,7 +95,7 @@ namespace WalkerGear
                 box.x *= 1.1f;
                 box.y = size.y - position.y - 10f;
                 Rect statBlock = new(position, box);
-                DrawStatEntries(statBlock, occupiedSlots[positionWSlot[0]]);
+                DrawStatEntries(statBlock, OccupiedSlots[PositionWSlot[0]]);
             }
 
             //rotate&color
@@ -139,20 +132,20 @@ namespace WalkerGear
         //Gizmo Components
         public void Draw_GizmoSlot(int Order)
         {
-            var slot = positionWSlot.TryGetValue(Order);
+            var slot = PositionWSlot.TryGetValue(Order);
             if (Order > 0)
             {
-                slot ??= positionWSlot[0].supportedSlots.Find(s => s.uiPriority == Order);
+                slot ??= PositionWSlot[0].supportedSlots.Find(s => s.uiPriority == Order);
             }
             using (new TextBlock(TextAnchor.MiddleCenter))
             {
                 Vector2 position = positions[Order];
                 Rect gizmoRect = new(position, GizmoSize * (Order > 0 ? 1f : 2f));
 
-                bool disabled = Order > 0 && (occupiedSlots[positionWSlot[0]]
+                bool disabled = Order > 0 && (OccupiedSlots[PositionWSlot[0]]
                         ?.TryGetComp<CompWalkerComponent>().Props.ItemDef?.GetCompProperties<CompProperties_WalkerComponent>()?.disabledSlots?.Contains(slot) ?? false);
                 Thing thing = null;
-                bool hasThing = slot != null && occupiedSlots.TryGetValue(slot, out thing);
+                bool hasThing = slot != null && OccupiedSlots.TryGetValue(slot, out thing);
                 //标签
                 if (slot != null)
                 {
@@ -187,7 +180,7 @@ namespace WalkerGear
                     GenUI.DrawTextureWithMaterial(gizmoRect, Command.BGTex, material);
                 }
                 if (disabled) return;
-                Texture2D icon = hasThing && slot != null ? new CachedTexture(occupiedSlots[slot].def.graphicData.texPath).Texture : EmptySlotIcon;
+                Texture2D icon = hasThing && slot != null ? new CachedTexture(OccupiedSlots[slot].def.graphicData.texPath).Texture : EmptySlotIcon;
 
                 GizmoInteraction(gizmoRect, icon, slot);
                 Widgets.DrawHighlightIfMouseover(gizmoRect);
@@ -200,7 +193,7 @@ namespace WalkerGear
                     nameBlock.y += nameBlock.height - 26f;
                     nameBlock.height = 26f;
                     GUI.DrawTexture(nameBlock, TexUI.TextBGBlack);
-                    Widgets.LabelFit(nameBlock, occupiedSlots[slot].LabelCap);
+                    Widgets.LabelFit(nameBlock, OccupiedSlots[slot].LabelCap);
                 }
             }
         }
@@ -238,9 +231,9 @@ namespace WalkerGear
                 case 0://左键
                     {
                         if (slot == null) break;
-                        if (occupiedSlots.ContainsKey(slot))
+                        if (OccupiedSlots.ContainsKey(slot))
                         {
-                            Find.WindowStack.Add(new Dialog_InfoCard(occupiedSlots[slot]));
+                            Find.WindowStack.Add(new Dialog_InfoCard(OccupiedSlots[slot]));
                         }
                         else Find.WindowStack.Add(new Dialog_InfoCard(slot));
                         break;
@@ -258,7 +251,7 @@ namespace WalkerGear
         private List<FloatMenuOption> GizmoFloatMenu(SlotDef slot)
         {
             List<FloatMenuOption> options = new();
-            if (slot != null && occupiedSlots.TryGetValue(slot, out Thing t)) //如果slot有填模塊，額外顯示移除選項
+            if (slot != null && OccupiedSlots.TryGetValue(slot, out Thing t)) //如果slot有填模塊，額外顯示移除選項
             {
                 options.Add(new("Remove".Translate(t.LabelCap), () => RemoveModules(slot), MenuOptionPriority.High));
             }
@@ -284,8 +277,8 @@ namespace WalkerGear
             WidgetRow row = new(rect.x, rect.y, UIDirection.RightThenDown, rect.width, gap: -8);
             row.Label("Performance".Translate());
             row.Gap(int.MaxValue);
-            float loadPercent = Mathf.Max(1f, currentLoad / massCapacity);
-            row.FillableBar(rect.width, 16f, loadPercent, $"{currentLoad} / {massCapacity}", WalkerGear_Core.fBarTex);
+            float loadPercent = Mathf.Max(1f, CurrentLoad / MassCapacity);
+            row.FillableBar(rect.width, 16f, loadPercent, $"{CurrentLoad} / {MassCapacity}", WalkerGear_Core.fBarTex);
             //replace
             row.Label("OverallArmor".Translate());
             foreach (StatDef statDef in toDraw)
@@ -325,113 +318,53 @@ namespace WalkerGear
     //和维护坞连接
     public partial class ITab_MechGear
     {
-        public static bool needUpdateCache = false;
         private Building_MaintenanceBay Parent
         {
             get => SelThing as Building_MaintenanceBay;
         }
-        private Building_MaintenanceBay lastBay;
-        private static readonly Dictionary<SlotDef, Thing> occupiedSlots = new();
-        private static readonly Dictionary<int, SlotDef> positionWSlot = new(7);
-        private static readonly List<SlotDef> toRemove = new();
-        private float massCapacity;
-        private float currentLoad;
+
+        private Dictionary<SlotDef, Thing> OccupiedSlots
+        {
+            get => Parent.occupiedSlots;
+        }
+
+        private Dictionary<int, SlotDef> PositionWSlot
+        {
+            get => Parent.positionWSlot;
+        }
+
+        private float CurrentLoad
+        {
+            get => Parent.CurrentLoad;
+        }
+
+        private float MassCapacity
+        {
+            get => Parent.MassCapacity;
+        }
+
+        private IEnumerable<Thing> GetAvailableModules(SlotDef slot, bool isCoreFrame)
+        {
+            return Parent.GetAvailableModules(slot, isCoreFrame);
+        }
+
+        private void AddOrReplaceModule(Thing thing)
+        {
+            Parent.AddOrReplaceModule(thing);
+        }
+
+        private void RemoveModules(SlotDef slot)
+        {
+            Parent.RemoveModules(slot);
+        }
 
         public override void OnOpen()
         {
             base.OnOpen();
-            UpdateOccupiedSlotsCache();
+            Parent.TryUpdateOccupiedSlotsCache();
         }
-        public void UpdateOccupiedSlotsCache()
-        {
-            occupiedSlots.Clear();
-            positionWSlot.Clear();
-            massCapacity = 0;
-            currentLoad = 0;
-            foreach (Apparel a in Parent.DummyApparels.WornApparel)
-            {
-                massCapacity += a.GetStatValue(StatDefOf.CarryingCapacity) != StatDefOf.CarryingCapacity.defaultBaseValue ? a.GetStatValue(StatDefOf.CarryingCapacity) : 0;
-                currentLoad += a.GetStatValue(StatDefOf.Mass);
-                if (a.TryGetComp<CompWalkerComponent>(out CompWalkerComponent c))
-                {
-                    foreach (SlotDef s in c.Props.slots)
-                    {
-                        occupiedSlots[s] = a;
-                        positionWSlot[s.uiPriority] = s;
-                    }
-                }
-            }
-            needUpdateCache = false;
-        }
-        private IEnumerable<Thing> GetAvailableModules(SlotDef slotDef, bool IsCore = false)
-        {
-            if ((DebugSettings.godMode) && slotDef == null)
-            {
-                Log.Warning("slotDef is null");
-            }
-            if (!Parent.TryGetComp(out CompAffectedByFacilities abf))
-            {
-                Log.Warning("CompAffectedByFacilities is null");
-                yield break;
-            }
 
-            if (DebugSettings.godMode) Log.Message("trying to get slot of: " + (IsCore ? "any" : slotDef.defName));
 
-            foreach (Thing b in abf.LinkedFacilitiesListForReading)
-            {
-                if (b is not Building_Storage s) continue;
-                if (s.GetSlotGroup().HeldThings.EnumerableNullOrEmpty()) continue;
-                if (DebugSettings.godMode) Log.Message("loading linked facility: " + s.def.defName);
 
-                foreach (Thing module in s.GetSlotGroup().HeldThings)
-                {
-                    if (!module.TryGetComp(out CompWalkerComponent c)) continue;
-                    if (IsCore && c.Props.slots.Where(s => s.isCoreFrame).EnumerableNullOrEmpty()) continue;
-                    if (!IsCore && !c.Props.slots.Contains(slotDef)) continue;
-
-                    if (DebugSettings.godMode) Log.Message(module.def.defName + " is walker module of " + (slotDef == null ? "any" : slotDef.defName) + " added to list.");
-                    yield return module;
-                }
-            }
-        }
-        private void RemoveModules(SlotDef slot, bool updateNow = true)
-        {
-            if (!occupiedSlots.ContainsKey(slot)) return;
-            toRemove.Clear();
-            GetSupportedSlotRecur(slot);
-            foreach (var s in toRemove)
-            {
-                if (occupiedSlots.TryGetValue(s, out var t))
-                {
-                    Parent.RemoveModule(t);
-                }
-
-            }
-            if (updateNow)
-            {
-                UpdateOccupiedSlotsCache();
-            }
-        }
-        private void AddOrReplaceModule(Thing thing)
-        {
-            if (!thing.TryGetComp(out CompWalkerComponent c)) return;
-            foreach (var s in c.Props.slots)
-            {
-                RemoveModules(s, false);
-            }
-            Parent.Add(thing);
-            UpdateOccupiedSlotsCache();
-        }
-        private static void GetSupportedSlotRecur(SlotDef slotDef)
-        {
-            if (!slotDef.supportedSlots.NullOrEmpty())
-            {
-                foreach (var s in slotDef.supportedSlots)
-                {
-                    GetSupportedSlotRecur(s);
-                }
-            }
-            toRemove.Add(slotDef);
-        }
     }
 }

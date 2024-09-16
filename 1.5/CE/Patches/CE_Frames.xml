@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+    <!--AT-34 Core-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Core"]/statBases</xpath>
+        <value>
+            <Bulk>275</Bulk>
+            <WornBulk>35</WornBulk>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Core"]/equippedStatOffsets</xpath>
+        <value>
+            <CarryBulk>300</CarryBulk>
+            <CarryWeight>450</CarryWeight>
+            <Suppressability>-1</Suppressability>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Core"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>21</ArmorRating_Sharp>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Core"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>48</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+    <!--AT-34 Helmet-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Helmet"]/statBases</xpath>
+        <value>
+            <Bulk>25</Bulk>
+            <WornBulk>16</WornBulk>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>21</ArmorRating_Sharp>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>48</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+    <!--PV-8 Core-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Core"]/statBases</xpath>
+        <value>
+            <Bulk>275</Bulk>
+            <WornBulk>35</WornBulk>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Core"]/equippedStatOffsets</xpath>
+        <value>
+            <CarryBulk>300</CarryBulk>
+            <CarryWeight>450</CarryWeight>
+            <Suppressability>-1</Suppressability>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Core"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>21</ArmorRating_Sharp>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Core"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>48</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+    <!--PV-8 Helmet-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Helmet"]/statBases</xpath>
+        <value>
+            <Bulk>25</Bulk>
+            <WornBulk>16</WornBulk>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>21</ArmorRating_Sharp>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>48</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+    <!--PF-3 Core-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PF3_Core"]/statBases</xpath>
+        <value>
+            <Bulk>175</Bulk>
+            <WornBulk>35</WornBulk>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PF3_Core"]/equippedStatOffsets</xpath>
+        <value>
+            <CarryBulk>200</CarryBulk>
+            <CarryWeight>200</CarryWeight>
+            <Suppressability>-1</Suppressability>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PF3_Core"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>15</ArmorRating_Sharp>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PF3_Core"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>31</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+    <!--FA-47 Core-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_FA47_Core"]/statBases</xpath>
+        <value>
+            <Bulk>275</Bulk>
+            <WornBulk>35</WornBulk>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_FA47_Core"]/equippedStatOffsets</xpath>
+        <value>
+            <CarryBulk>300</CarryBulk>
+            <CarryWeight>500</CarryWeight>
+            <Suppressability>-1</Suppressability>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_FA47_Core"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>32</ArmorRating_Sharp>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_FA47_Core"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>88</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+    <!--FA-47 Helmet-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_FA47_Helmet"]/statBases</xpath>
+        <value>
+            <Bulk>25</Bulk>
+            <WornBulk>16</WornBulk>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_FA47_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>32</ArmorRating_Sharp>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_FA47_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>88</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+</Patch>

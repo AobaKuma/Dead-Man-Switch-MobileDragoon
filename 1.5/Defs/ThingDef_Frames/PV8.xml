@@ -137,6 +137,9 @@
     </graphicData>
     <statBases>
       <Mass>35</Mass>
+      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.10</ArmorRating_Heat>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.12</MoveSpeed>

@@ -19,7 +19,9 @@ namespace WalkerGear
         {
             if (CanOpen)
             {
-                GenDrop.TryDropSpawn(pawnContainer.FirstOrDefault(), Position, Map, ThingPlaceMode.Direct, out var _);
+                Pawn p = pawnContainer.FirstOrDefault() as Pawn;
+                MechUtility.WeaponDropCheck(p);
+                GenDrop.TryDropSpawn(p, Position, Map, ThingPlaceMode.Direct, out var _);
                 pawnContainer.Clear();
             }          
         }
@@ -29,9 +31,14 @@ namespace WalkerGear
             {
                 for (int i = moduleContainer.Count - 1; i >= 0; --i)
                 {
+                    if (Rand.Bool)
+                    {
+                        Thing slug = ThingMaker.MakeThing(RimWorld.ThingDefOf.ChunkSlagSteel);
+                        GenDrop.TryDropSpawn(slug, Position, Map, ThingPlaceMode.Near, out var _);
+                    }
+                    moduleContainer[i].HitPoints = (int)(MaxHitPoints * Rand.Range(0.15f, 0.5f));
                     GenDrop.TryDropSpawn(moduleContainer[i], Position, Map, ThingPlaceMode.Near, out var _);
                 }
-                if (CanOpen) GenDrop.TryDropSpawn(pawnContainer.FirstOrDefault(), Position, Map, ThingPlaceMode.Direct, out var _);
             }
             else
             {
@@ -40,8 +47,8 @@ namespace WalkerGear
                     Thing slug = ThingMaker.MakeThing(RimWorld.ThingDefOf.ChunkSlagSteel);
                     GenDrop.TryDropSpawn(slug, Position, Map, ThingPlaceMode.Direct, out var _);
                 }
-                if (CanOpen) GenDrop.TryDropSpawn(pawnContainer.FirstOrDefault(), Position, Map, ThingPlaceMode.Direct, out var _);
             }
+            if (CanOpen) GenDrop.TryDropSpawn(pawnContainer.FirstOrDefault(), Position, Map, ThingPlaceMode.Direct, out var _);
             base.Destroy(mode);
         }
         public override void Tick()

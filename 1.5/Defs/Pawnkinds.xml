@@ -9,10 +9,13 @@
       <li>IndustrialMilitaryBasic</li>
     </apparelTags>
     <apparelMoney>200~500</apparelMoney>
-    <weaponMoney>200~1000</weaponMoney>
+    <weaponMoney>1300~2000</weaponMoney>
     <weaponTags>
       <li>DMS_MechWeaponHeavy</li>
     </weaponTags>
+    <techHediffsRequired>
+      <li>DMS_SensoryFilter</li>
+    </techHediffsRequired>
     <skills>
       <li>
         <skill>Shooting</skill>
@@ -55,6 +58,15 @@
     </apparelTags>
     <apparelMoney>2000~5000</apparelMoney>
     <weaponMoney>2000~10000</weaponMoney>
+    <weaponTags>
+      <li>DMS_MechWeaponHeavy</li>
+      <li>DMS_DragoonGun</li>
+    </weaponTags>
+    <techHediffsRequired>
+      <li>DMS_SensoryFilter</li>
+      <li>DMS_NutrientPort</li>
+      <li>DMS_ProstheticEye</li>
+    </techHediffsRequired>
     <skills>
       <li>
         <skill>Shooting</skill>
@@ -89,7 +101,6 @@
           <li>DMS_Apparel_PV8_Core</li>
           <li>DMS_Apparel_PV8_Helmet</li>
           <li>DMS_Apparel_Shield</li>
-          <li>DMS_Apparel_WeaponLmg</li>
         </apparels>
       </li>
     </modExtensions>
@@ -110,6 +121,11 @@
       <li>DMS_DragoonGun</li>
       <li>Gun_Recoilless</li>
     </weaponTags>
+    <techHediffsRequired>
+      <li>DMS_SensoryFilter</li>
+      <li>DMS_NutrientPort</li>
+      <li>DMS_ProstheticEye</li>
+    </techHediffsRequired>
     <skills>
       <li>
         <skill>Shooting</skill>
@@ -160,6 +176,11 @@
     </apparelTags>
     <apparelMoney>2000~5000</apparelMoney>
     <weaponMoney>2000~10000</weaponMoney>
+    <techHediffsRequired>
+      <li>DMS_SensoryFilter</li>
+      <li>DMS_NutrientPort</li>
+      <li>DMS_ProstheticEye</li>
+    </techHediffsRequired>
     <weaponTags>
       <li>H_Gatling127mm</li>
       <li>H_Gatling20mm</li>

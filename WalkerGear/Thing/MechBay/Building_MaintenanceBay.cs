@@ -160,19 +160,11 @@ namespace WalkerGear
 
         public IEnumerable<Thing> GetAvailableModules(SlotDef slotDef, bool IsCore = false)
         {
-            if ((DebugSettings.godMode) && slotDef == null)
-            {
-                Log.Warning("slotDef is null");
-            }
-            
             if (!this.TryGetComp(out CompAffectedByFacilities abf))
             {
                 Log.Warning("CompAffectedByFacilities is null");
                 yield break;
             }
-
-            //if (DebugSettings.godMode) Log.Message("trying to get slot of: " + (IsCore ? "any" : slotDef.defName));
-
             foreach (Thing b in abf.LinkedFacilitiesListForReading)
             {
                 if (b is not Building_Storage s) continue;
@@ -182,9 +174,14 @@ namespace WalkerGear
                 foreach (Thing module in s.GetSlotGroup().HeldThings)
                 {
                     if (!module.TryGetComp(out CompWalkerComponent c)) continue;
-                    if (IsCore && c.Props.slots.Where(s => s.isCoreFrame).EnumerableNullOrEmpty()) continue;
-                    if (!IsCore && !c.Props.slots.Contains(slotDef)) continue;
-
+                    if (IsCore)
+                    {
+                        if (!c.Props.slots.Where(s => s.isCoreFrame).Any()) continue;
+                    }
+                    else
+                    {
+                        if (!c.Props.slots.Contains(slotDef)) continue;
+                    }
                     //if (DebugSettings.godMode) Log.Message(module.def.defName + " is walker module of " + (slotDef == null ? "any" : slotDef.defName) + " added to list.");
                     yield return module;
                 }

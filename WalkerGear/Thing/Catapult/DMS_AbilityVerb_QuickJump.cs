@@ -45,6 +45,17 @@ namespace WalkerGear
 
             return false;
         }
+
+        /// <summary>
+        /// 进行跳跃
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <param name="targetMap">目标地图</param>
+        /// <param name="actionTarget">目标（行为的）</param>
+        /// <param name="currentTarget">目标</param>
+        /// <param name="isLanding">是否为着陆</param>
+        /// <param name="isToMap">是否为投射到大地图</param>
+        /// <returns></returns>
         public static bool DoJump(Pawn pawn, Map targetMap, LocalTargetInfo actionTarget, LocalTargetInfo currentTarget, bool isLanding, bool isToMap)
         {
             pawn.Rotation = Rot4.South;

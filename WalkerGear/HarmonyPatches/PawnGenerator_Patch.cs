@@ -1,5 +1,8 @@
 using HarmonyLib;
 using RimWorld;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 using Verse;
 
 namespace WalkerGear
@@ -13,27 +16,24 @@ namespace WalkerGear
             PawnKindDef def = request.KindDef;
             if (def == null) return;
             ModExtForceApparelGen modExt = def.GetModExtension<ModExtForceApparelGen>();
-            if (modExt == null)
-            {
-                return;
-            }
-            if (DebugSettings.godMode)
-            {
-                Log.Message("ModExtForceApparelGen loaded, Force Apparel Gen");
-            }
-
+            if (modExt == null) return;
+            if (DebugSettings.godMode) Log.Message("ModExtForceApparelGen loaded, Force Apparel Gen");
             WalkerGear_Core core = null;
+
             foreach (ThingDef apparelDef in modExt.apparels)
             {
                 Apparel apparel = (Apparel)ThingMaker.MakeThing(apparelDef);
+                Color color = pawn.kindDef.specificApparelRequirements.Where(req => req.GetColor() != Color.white).First().GetColor();
+                if (color!= null)
+                {
+                    apparel.SetColor(color);
+                }
                 pawn.apparel.Wear(apparel);
-                WalkerGear_Core core2 = apparel as WalkerGear_Core;
-                if (core2 != null)
+                if (apparel is WalkerGear_Core core2)
                 {
                     core = core2;
                 }
             }
-
             core?.RefreshHP(true);
             core.Health = core.HealthMax * modExt.StructurePointRange.RandomInRange;
         }

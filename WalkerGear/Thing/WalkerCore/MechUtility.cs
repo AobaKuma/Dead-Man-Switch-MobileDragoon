@@ -10,10 +10,18 @@ namespace WalkerGear
 	{
         public static void WeaponDropCheck(Pawn pawn)
         {
+            if (pawn == null) return;
             if (pawn.equipment.Primary != null && !EquipmentUtility.CanEquip(pawn.equipment.Primary, pawn))
             {
                 Messages.Message("WG_WeaponDropped".Translate(), pawn, MessageTypeDefOf.NeutralEvent, false);
-                pawn.equipment.TryDropEquipment(pawn.equipment.Primary, out var weapon, pawn.Position, false);
+                if (pawn.Map == null)
+                {
+                    pawn.equipment.DestroyEquipment(pawn.equipment.Primary);
+                }
+                else
+                {
+                    pawn.equipment.TryDropEquipment(pawn.equipment.Primary, out var weapon, pawn.Position, false);
+                }
             }
         }
         static MechData mechData = new();

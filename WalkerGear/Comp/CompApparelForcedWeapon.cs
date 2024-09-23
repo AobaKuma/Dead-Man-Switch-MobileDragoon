@@ -79,7 +79,6 @@ namespace WalkerGear
                 return weapon;
             }
         }
-        private Apparel Apparel => (Apparel)parent;
         private bool NeedRemoveWeapon
         {
             get { return Weapon.TryGetComp<CompApparelForcedWeapon>().NeedRemove; }

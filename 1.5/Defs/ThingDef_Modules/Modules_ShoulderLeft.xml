@@ -180,7 +180,7 @@
                 <burstShotCount>3</burstShotCount>
                 <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
                 <consumeFuelPerShot>1</consumeFuelPerShot>
-                <warmupTime>2</warmupTime>
+                <warmupTime>0.5</warmupTime>
                 <noiseRadius>4</noiseRadius>
                 <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
                 <soundCast>RocketswarmLauncher_Fire</soundCast>

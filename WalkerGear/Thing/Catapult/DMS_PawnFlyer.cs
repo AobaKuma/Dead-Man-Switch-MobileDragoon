@@ -7,6 +7,10 @@ using System.Configuration;
 using Verse.Sound;
 using Mono.Unix.Native;
 using RimWorld.Planet;
+using System;
+using Verse.Noise;
+using System.Runtime.Remoting.Messaging;
+using System.Linq;
 
 namespace WalkerGear
 {
@@ -198,10 +202,10 @@ namespace WalkerGear
                 Find.WorldSelector.ClearSelection();
                 int tile = this.Map.Tile;
                 pawnStored = pawn;
-                Find.WorldTargeter.BeginTargeting(ChoseWorldTarget, canTargetTiles: true, TargeterMouseAttachment, closeWorldTabWhenFinished: true, delegate
+                Find.WorldTargeter.BeginTargeting(ChoseWorldTarget, canTargetTiles: true, TargeterMouseAttachment, closeWorldTabWhenFinished: false, delegate
                 {
                     GenDraw.DrawWorldRadiusRing(tile, extension.flightRange);
-                }, (GlobalTargetInfo target) => CompLaunchable.TargetingLabelGetter(target, tile, extension.flightRange, new List<IThingHolder> { (Building_EjectorBay)eBay }, TryLaunch, null));
+                }, (GlobalTargetInfo target) => TargetingLabelGetter(target, tile, extension.flightRange, new List<IThingHolder> { (Building_EjectorBay)eBay }, TryLaunch, null));
                 return;
             }
             if (!isLanding)
@@ -244,25 +248,205 @@ namespace WalkerGear
             }
         }
 
+        /// <summary>
+        /// 发射到大地图
+        /// </summary>
+        /// <param name="destinationTile"></param>
+        /// <param name="arrivalAction"></param>
         public void TryLaunch(int destinationTile, TransportPodsArrivalAction arrivalAction)
         {
             if (pawnStored != null && pawnStored.GetCaravan() != null)
             {
-                pawnStored.GetCaravan().Tile = destinationTile;
-                //不知为何没有效果。。。		修改人：Anxie,日期：2024-09-09
-                CameraJumper.TryShowWorld();
+                if (!Find.World.worldObjects.AnySiteAt(destinationTile) && !Find.World.worldObjects.AnySettlementBaseAtOrAdjacent(destinationTile))
+                {
+                    pawnStored.GetCaravan().Tile = destinationTile;
+                }
+                //设施
+                else if (Find.World.worldObjects.AnySiteAt(destinationTile))
+                {
+                    Site site = (Site)Find.World.worldObjects.AllWorldObjects.FirstOrDefault(o => o.Tile == destinationTile);
+                    if (pawnStored.GetCaravan() != null)
+                    {
+                        bool num = !site.HasMap;
+                        Map orGenerateMap = null;
+                        LongEventHandler.SetCurrentEventText("GenerateSubMap".Translate());
+                        DeepProfiler.Start("Generate map");
+                        LongEventHandler.QueueLongEvent(() =>
+                        {
+                            orGenerateMap = GetOrGenerateMapUtility.GetOrGenerateMap(site.Tile, site.def);
+                            TaggedString letterLabel = "LetterLabelCaravanEnteredEnemyBase".Translate();
+                            TaggedString letterText = "LetterTransportPodsLandedInEnemyBase".Translate(site.Label).CapitalizeFirst();
+                            SettlementUtility.AffectRelationsOnAttacked(site, ref letterText);
+                            if (num)
+                            {
+                                GetOrGenerateMapUtility.UnfogMapFromEdge(orGenerateMap);
+                                Find.TickManager.Notify_GeneratedPotentiallyHostileMap();
+                                PawnRelationUtility.Notify_PawnsSeenByPlayer_Letter(orGenerateMap.mapPawns.AllPawns, ref letterLabel, ref letterText, "LetterRelatedPawnsInMapWherePlayerLanded".Translate(Faction.OfPlayer.def.pawnsPlural), informEvenIfSeenBefore: true);
+                                CaravanEnterMapUtility.Enter(pawnStored.GetCaravan(), orGenerateMap, CaravanEnterMode.Center, CaravanDropInventoryMode.DoNotDrop);
+
+                                GenExplosion.DoExplosion(pawnStored.Position, orGenerateMap, 10, DefDatabase<DamageDef>.GetNamed("Bomb"), null, 50);
+
+                                CameraJumper.TryJump(pawnStored);
+                            }
+                        }, "GeneratingMap".Translate(), true, (Exception x) => { Log.Message("Generatem Map Error:" + x.ToString()); });
+                    }
+                }
+                //基地
+                else if (Find.World.worldObjects.AnySettlementBaseAtOrAdjacent(destinationTile)&& Find.World.worldObjects.AllWorldObjects.FirstOrDefault(o => o.Tile == destinationTile).Faction.GoodwillWith(Faction.OfPlayer)>0)
+                {
+                    Settlement site = (Settlement)Find.World.worldObjects.AllWorldObjects.FirstOrDefault(o => o.Tile == destinationTile);
+                    if (pawnStored.GetCaravan() != null)
+                    {
+                        bool num = !site.HasMap;
+                        Map orGenerateMap = null;
+                        LongEventHandler.SetCurrentEventText("GenerateSubMap".Translate());
+                        DeepProfiler.Start("Generate map");
+                        LongEventHandler.QueueLongEvent(() =>
+                        {
+                            orGenerateMap = GetOrGenerateMapUtility.GetOrGenerateMap(site.Tile, site.def);
+                            TaggedString letterLabel = "LetterLabelCaravanEnteredEnemyBase".Translate();
+                            TaggedString letterText = "LetterTransportPodsLandedInEnemyBase".Translate(site.Label).CapitalizeFirst();
+                            SettlementUtility.AffectRelationsOnAttacked(site, ref letterText);
+                            if (num)
+                            {
+                                GetOrGenerateMapUtility.UnfogMapFromEdge(orGenerateMap);
+                                Find.TickManager.Notify_GeneratedPotentiallyHostileMap();
+                                PawnRelationUtility.Notify_PawnsSeenByPlayer_Letter(orGenerateMap.mapPawns.AllPawns, ref letterLabel, ref letterText, "LetterRelatedPawnsInMapWherePlayerLanded".Translate(Faction.OfPlayer.def.pawnsPlural), informEvenIfSeenBefore: true);
+                                CaravanEnterMapUtility.Enter(pawnStored.GetCaravan(), orGenerateMap, CaravanEnterMode.Center, CaravanDropInventoryMode.DoNotDrop);
+
+                                GenExplosion.DoExplosion(pawnStored.Position, orGenerateMap, 10, DefDatabase<DamageDef>.GetNamed("Bomb"), null, 50);
+
+                                CameraJumper.TryJump(pawnStored);
+                            }
+                        }, "GeneratingMap".Translate(), true, (Exception x) => { Log.Message("Generatem Map Error:" + x.ToString()); });
+                    }
+                }
             }
         }
-        public bool ChoseWorldTarget(GlobalTargetInfo target)
-        {
-            return CompLaunchable.ChoseWorldTarget(target, eBay.Map.Tile, new List<IThingHolder> { (Building_EjectorBay)eBay }, extension.flightRange, TryLaunch, null);
-        }
+
 
         private void LandingEffects()
         {
             soundLanding?.PlayOneShot(new TargetInfo(base.Position, base.Map));
             FleckMaker.ThrowDustPuff(DestinationPos + Gen.RandomHorizontalVector(0.5f), base.Map, 2f);
         }
+        /// <summary>
+        /// 选择目标
+        /// </summary>
+        public static bool ChoseWorldTarget(GlobalTargetInfo target, int tile, IEnumerable<IThingHolder> pods, int maxLaunchDistance, Action<int, TransportPodsArrivalAction> launchAction, CompLaunchable launchable)
+        {
+            if (!target.IsValid)
+            {
+                Messages.Message("MessageTransportPodsDestinationIsInvalid".Translate(), MessageTypeDefOf.RejectInput, historical: false);
+                return false;
+            }
+
+            int num = Find.WorldGrid.TraversalDistanceBetween(tile, target.Tile);
+            if (maxLaunchDistance > 0 && num > maxLaunchDistance)
+            {
+                Messages.Message("TransportPodDestinationBeyondMaximumRange".Translate(), MessageTypeDefOf.RejectInput, historical: false);
+                return false;
+            }
+
+            IEnumerable<FloatMenuOption> source = GetOptionsForTile(target.Tile, pods, launchAction);
+            if (!source.Any())
+            {
+                if (Find.World.Impassable(target.Tile))
+                {
+                    Messages.Message("MessageTransportPodsDestinationIsInvalid".Translate(), MessageTypeDefOf.RejectInput, historical: false);
+                    return false;
+                }
+
+                launchAction(target.Tile, null);
+                return true;
+            }
+
+            if (source.Count() == 1)
+            {
+                if (!source.First().Disabled)
+                {
+                    source.First().action();
+                    return true;
+                }
+
+                return false;
+            }
+
+            Find.WindowStack.Add(new FloatMenu(source.ToList()));
+            return false;
+        }
+        /// <summary>
+        /// 着陆的浮动菜单
+        /// </summary>
+        /// <param name="target"></param>
+        /// <param name="tile"></param>
+        /// <param name="maxLaunchDistance"></param>
+        /// <param name="pods"></param>
+        /// <param name="launchAction"></param>
+        /// <param name="launchable"></param>
+        /// <returns></returns>
+        public static string TargetingLabelGetter(GlobalTargetInfo target, int tile, int maxLaunchDistance, IEnumerable<IThingHolder> pods, Action<int, TransportPodsArrivalAction> launchAction, CompLaunchable launchable)
+        {
+            if (!target.IsValid)
+            {
+                return null;
+            }
+
+            int num = Find.WorldGrid.TraversalDistanceBetween(tile, target.Tile);
+            if (maxLaunchDistance > 0 && num > maxLaunchDistance)
+            {
+                GUI.color = ColorLibrary.RedReadable;
+                return "TransportPodDestinationBeyondMaximumRange".Translate();
+            }
+
+            IEnumerable<FloatMenuOption> source = GetOptionsForTile(target.Tile, pods, launchAction);
+            if (!source.Any())
+            {
+                return string.Empty;
+            }
+
+            if (source.Count() == 1)
+            {
+                if (source.First().Disabled)
+                {
+                    GUI.color = ColorLibrary.RedReadable;
+                }
+
+                return source.First().Label;
+            }
+
+            if (target.WorldObject is MapParent mapParent)
+            {
+                return "ClickToSeeAvailableOrders_WorldObject".Translate(mapParent.LabelCap);
+            }
+
+            return "ClickToSeeAvailableOrders_Empty".Translate();
+        }
+        public bool ChoseWorldTarget(GlobalTargetInfo target)
+        {
+            return ChoseWorldTarget(target, eBay.Map.Tile, new List<IThingHolder> { (Building_EjectorBay)eBay }, extension.flightRange, TryLaunch, null);
+        }
+        /// <summary>
+        /// 按目标分配情况
+        /// </summary>
+        /// <param name="tile"></param>
+        /// <param name="pods"></param>
+        /// <param name="launchAction"></param>
+        /// <returns></returns>
+        public static IEnumerable<FloatMenuOption> GetOptionsForTile(int tile, IEnumerable<IThingHolder> pods, Action<int, TransportPodsArrivalAction> launchAction)
+        {
+            bool anything = false;
+
+            if (!anything && !Find.World.Impassable(tile))
+            {
+                yield return new FloatMenuOption("DMS_EjectToTile".Translate(), delegate
+                {
+                    launchAction(tile, null);
+                });
+            }
+        }
+
+
         public override void Tick()
         {
             if (flightEffecter == null && flightEffecterDef != null)
@@ -363,7 +547,6 @@ namespace WalkerGear
             pawnFlyer.isToMap = isToMap;
             pawnFlyer.actionTarget = actionTarget;
             pawnFlyer.isLanding = isLanding;
-            Log.Warning("目的坐标：" + destCell.ToString());
             pawnFlyer.pawnWasDrafted = pawn.Drafted;
             pawnFlyer.flightEffecterDef = flightEffecterDef;
             pawnFlyer.soundLanding = landingSound;

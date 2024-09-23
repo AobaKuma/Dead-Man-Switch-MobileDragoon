@@ -53,7 +53,7 @@ namespace WalkerGear
             Command_Toggle toggle = new Command_Toggle
             {
                 Order = -999f,
-                Disabled = this.Wearer.IsPlayerControlled || DebugSettings.godMode,
+                Disabled = !this.Wearer.HomeFaction.IsPlayer || !DebugSettings.godMode,
                 icon = safetyDisabled ? Resources.GetSafetyIcon_Disabled : Resources.GetSafetyIcon,
                 defaultLabel = "WG_SafetyLock".Translate(),
                 defaultDesc = "WG_SafetyLock_Desc".Translate(),

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- 硬的要命的"防波堤"一體化 -->
-  <ThingDef ParentName="DMS_ModuleItemBase">
+  <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_Groyne_Helmet</defName>
     <label>"Groyne" helmet</label>
     <description>todo.</description>
@@ -74,7 +74,7 @@
   </ThingDef>
 
   <!-- 海盜用的民用機改裝頭盔 -->
-  <ThingDef ParentName="DMS_ModuleItemBase">
+  <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_Stahlhelm_Helmet</defName>
     <label>"Stahlhelm" helmet</label>
     <description>todo.</description>

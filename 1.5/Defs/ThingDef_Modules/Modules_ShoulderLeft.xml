@@ -43,7 +43,7 @@
             <drawData>
                 <scale>0.75</scale>
                 <defaultData>
-                    <layer>20</layer>
+                    <layer>30</layer>
                 </defaultData>
                 <dataSouth>
                     <offset>(0.95,0,0.9)</offset>
@@ -55,6 +55,7 @@
                 </dataNorth>
                 <dataWest>
                     <offset>(0.75,0,0.55)</offset>
+                    <layer>80</layer>
                 </dataWest>
                 <dataEast>
                     <offset>(-0.55,0,0.95)</offset>
@@ -148,11 +149,11 @@
             <drawData>
                 <scale>0.75</scale>
                 <defaultData>
-                    <layer>20</layer>
+                    <layer>30</layer>
                 </defaultData>
                 <dataSouth>
                     <offset>(0.95,0,0.9)</offset>
-                    <layer>10</layer>
+                    <layer>30</layer>
                 </dataSouth>
                 <dataNorth>
                     <offset>(-0.95,0,0.95)</offset>
@@ -160,6 +161,7 @@
                 </dataNorth>
                 <dataWest>
                     <offset>(0.75,0,0.55)</offset>
+                    <layer>80</layer>
                 </dataWest>
                 <dataEast>
                     <offset>(-0.15,0,1.1)</offset>
@@ -254,7 +256,7 @@
             <drawData>
                 <scale>0.75</scale>
                 <defaultData>
-                    <layer>20</layer>
+                    <layer>30</layer>
                 </defaultData>
                 <dataSouth>
                     <offset>(0.95,0,0.9)</offset>
@@ -266,6 +268,7 @@
                 </dataNorth>
                 <dataWest>
                     <offset>(0.75,0,0.55)</offset>
+                    <layer>80</layer>
                 </dataWest>
                 <dataEast>
                     <offset>(-0.55,0,0.95)</offset>

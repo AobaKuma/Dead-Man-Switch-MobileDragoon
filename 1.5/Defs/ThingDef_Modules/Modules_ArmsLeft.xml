@@ -122,8 +122,9 @@
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.15</MoveSpeed>
-      <ConstructionSpeedFactor>0.2</ConstructionSpeedFactor>
-      <ConstructSuccessChance>0.5</ConstructSuccessChance>
+      <ConstructSuccessChance>0.25</ConstructSuccessChance>
+      <PlantWorkSpeed>0.5</PlantWorkSpeed>
+      <ConstructionSpeedFactor>0.75</ConstructionSpeedFactor>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/WorkArm/apparel</wornGraphicPath>
@@ -137,7 +138,7 @@
         </dataSouth>
         <dataNorth>
           <offset>(-0.80,0,0.45)</offset>
-          <layer>75</layer>
+          <layer>73</layer>
         </dataNorth>
         <dataWest>
           <offset>(0.35,0,0.20)</offset>

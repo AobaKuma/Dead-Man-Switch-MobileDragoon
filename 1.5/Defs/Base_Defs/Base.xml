@@ -98,7 +98,7 @@
         <smeltable>false</smeltable>
         <thingCategories Inherit="false"/>
         <thingSetMakerTags Inherit="false"/>
-        <tradeTags />
+        <tradeTags/>
         <comps>
             <li Class="CompProperties_Forbiddable" />
             <li Class="CompProperties_Styleable" />
@@ -119,6 +119,9 @@
 
     <ThingDef Name="DMS_ModuleApparelHead" ParentName="DMS_ModuleApparelBase" Abstract="True">
         <apparel>
+            <tags>
+                <li>DMS_DragoonHelmet</li>
+            </tags>
             <bodyPartGroups>
                 <li>UpperHead</li>
             </bodyPartGroups>
@@ -138,6 +141,9 @@
             <StaggerDurationFactor>-0.9</StaggerDurationFactor>
         </equippedStatOffsets>
         <apparel>
+            <tags>
+                <li>DMS_DragoonArmour</li>
+            </tags>
             <parentTagDef>WGApparelBody</parentTagDef>
             <useDeflectMetalEffect>true</useDeflectMetalEffect>
             <renderSkipFlags>

@@ -103,7 +103,7 @@
     </modExtensions>
   </ThingDef>
   <!-- AT-34頭盔 -->
-  <ThingDef ParentName="DMS_ModuleItemBase">
+  <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_AT34_Helmet</defName>
     <label>AT-34 "Yetta" helmet</label>
     <description>todo.</description>

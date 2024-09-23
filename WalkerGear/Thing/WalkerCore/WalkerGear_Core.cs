@@ -61,7 +61,7 @@ namespace WalkerGear
                 toggleAction = delegate
                 {
                     safetyDisabled = !safetyDisabled;
-                    if (safetyDisabled) Messages.Message("WG_SafetyDisabled", MessageTypeDefOf.CautionInput, false);
+                    //if (safetyDisabled) Messages.Message("WG_SafetyDisabled", MessageTypeDefOf.CautionInput, false);
                 }
             };
             yield return toggle;
@@ -90,7 +90,7 @@ namespace WalkerGear
         public override void PreApplyDamage(ref DamageInfo dinfo, out bool absorbed)
         {
             var _t = dinfo;
-            _t.SetAmount(GetPostArmorDamage(dinfo));
+            _t.SetAmount(GetPostArmorDamage(ref dinfo));
             dinfo = _t;
             base.PreApplyDamage(ref dinfo, out absorbed);
         }
@@ -102,10 +102,9 @@ namespace WalkerGear
             }
             if(HPPercent <0.5f && Rand.Chance(0.5f)) return false;
 
-            float dmg = GetPostArmorDamage(dinfo);
+            float dmg = GetPostArmorDamage(ref dinfo);
             foreach (var a in Wearer.apparel.WornApparel)
             {
-
                 if (a != this && a.TryGetComp(out CompShield c))
                 {
                     //Log.Message("Shield: "+a.def);
@@ -127,7 +126,7 @@ namespace WalkerGear
             }
             return true;
         }
-        public float GetPostArmorDamage(DamageInfo dinfo)
+        public float GetPostArmorDamage(ref DamageInfo dinfo)
         {
             float amount = dinfo.Amount;
             DamageDef damageDef = dinfo.Def;

@@ -39,6 +39,9 @@
     <defName>DMS_Apparel_AT34_Core</defName>
     <label>AT-34 "Yetta" frame</label>
     <description>Todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_AT34_Core</ThingDef>
+    </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Dragoon/AT34/apparel_south</texPath>
     </graphicData>
@@ -140,6 +143,9 @@
     <defName>DMS_Apparel_AT34_Helmet</defName>
     <label>AT-34 "Yetta" helmet</label>
     <description>Todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_AT34_Helmet</ThingDef>
+    </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Dragoon/AT34/helmet_south</texPath>
     </graphicData>

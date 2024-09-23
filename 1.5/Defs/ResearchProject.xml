@@ -39,10 +39,8 @@ DMS_MobileDragoonModule
     <techLevel>Industrial</techLevel>
     <hiddenPrerequisites>
       <li>DMS_MobileDragoonBasis</li>
-    </hiddenPrerequisites>
-    <prerequisites>
       <li>DMS_Prosthetic</li>
-    </prerequisites>
+    </hiddenPrerequisites>
     <researchViewX>4.00</researchViewX>
     <researchViewY>2.00</researchViewY>
 
@@ -61,7 +59,7 @@ DMS_MobileDragoonModule
     <baseCost>2000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
-      <li>DMS_MobileDragoonBasis</li>
+      <li>DMS_MobileDragoon</li>
     </prerequisites>
     <researchViewX>5.00</researchViewX>
     <researchViewY>1.60</researchViewY>

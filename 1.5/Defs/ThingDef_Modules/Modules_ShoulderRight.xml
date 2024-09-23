@@ -303,7 +303,7 @@
             <Mass>8</Mass>
         </statBases>
         <recipeMaker>
-            <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+            <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
         </recipeMaker>
         <costList>
             <Steel>100</Steel>

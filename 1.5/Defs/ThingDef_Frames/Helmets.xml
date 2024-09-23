@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 硬的要命的"防波堤"一體化 -->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_Groyne_Helmet</defName>
+    <label>"Groyne" helmet</label>
+    <description>todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_Groyne_Helmet</ThingDef>
+    </descriptionHyperlinks>
+    <thingCategories Inherit="false">
+      <li>DMS_Module_Helmet</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>20</Mass>
+    </statBases>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_Groyne_Helmet</EquipedThingDef>
+        <slot>Head</slot>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Tungsteel>30</Tungsteel>
+      <Steel>50</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentStamped>1</ComponentStamped>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelHead">
+    <defName>DMS_Apparel_Groyne_Helmet</defName>
+    <label>"Groyne" helmet</label>
+    <description>Todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_Groyne_Helmet</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Dragoon/Groyne/helmet_south</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>50</Mass>
+      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.80</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.40</ArmorRating_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.3</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/Groyne/helmet</wornGraphicPath>
+      <drawData>
+        <defaultData>
+          <layer>20</layer>
+          <offset>(0,0,0)</offset>
+        </defaultData>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_Groyne_Helmet</ItemDef>
+        <slot>Head</slot>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- 海盜用的民用機改裝頭盔 -->
+  <ThingDef ParentName="DMS_ModuleItemBase">
+    <defName>DMS_Module_Stahlhelm_Helmet</defName>
+    <label>"Stahlhelm" helmet</label>
+    <description>todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_Stahlhelm_Helmet</ThingDef>
+    </descriptionHyperlinks>
+    <thingCategories Inherit="false">
+      <li>DMS_Module_Helmet</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Module</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>20</Mass>
+    </statBases>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_Stahlhelm_Helmet</EquipedThingDef>
+        <slot>Head</slot>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Tungsteel>30</Tungsteel>
+      <Steel>50</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentStamped>1</ComponentStamped>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelHead">
+    <defName>DMS_Apparel_Stahlhelm_Helmet</defName>
+    <label>"Stahlhelm" helmet</label>
+    <description>Todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_Stahlhelm_Helmet</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Dragoon/Stahlhelm/helmet_south</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>50</Mass>
+      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.80</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.40</ArmorRating_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.3</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/Stahlhelm/helmet</wornGraphicPath>
+      <drawData>
+        <defaultData>
+          <layer>20</layer>
+          <offset>(0,0,0)</offset>
+        </defaultData>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_Stahlhelm_Helmet</ItemDef>
+        <slot>Head</slot>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

@@ -11,7 +11,7 @@ namespace WalkerGear
 {
     public class Building_Wreckage : Building, IOpenable
     {
-        public bool CanOpen => pawnContainer.Count>0;
+        public bool CanOpen => !pawnContainer.NullOrEmpty();
 
         public int OpenTicks => 100;
 
@@ -31,9 +31,7 @@ namespace WalkerGear
                 {
                     GenDrop.TryDropSpawn(moduleContainer[i], Position, Map, ThingPlaceMode.Near, out var _);
                 }
-                if(CanOpen)
-                    GenDrop.TryDropSpawn(pawnContainer.FirstOrDefault(), Position, Map, ThingPlaceMode.Direct, out var _);
-
+                if (CanOpen) GenDrop.TryDropSpawn(pawnContainer.FirstOrDefault(), Position, Map, ThingPlaceMode.Direct, out var _);
             }
             else
             {
@@ -42,8 +40,7 @@ namespace WalkerGear
                     Thing slug = ThingMaker.MakeThing(RimWorld.ThingDefOf.ChunkSlagSteel);
                     GenDrop.TryDropSpawn(slug, Position, Map, ThingPlaceMode.Direct, out var _);
                 }
-                if (CanOpen)
-                    GenDrop.TryDropSpawn(pawnContainer.FirstOrDefault(), Position, Map, ThingPlaceMode.Direct, out var _);
+                if (CanOpen) GenDrop.TryDropSpawn(pawnContainer.FirstOrDefault(), Position, Map, ThingPlaceMode.Direct, out var _);
             }
             base.Destroy(mode);
         }

@@ -202,7 +202,7 @@
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,-2)</interactionCellOffset>
     <researchPrerequisites>
-      <li>DMS_MobileDragoonAdvanced</li>
+      <li>DMS_MobileDragoonElite</li>
     </researchPrerequisites>
     <surfaceType>Item</surfaceType>
     <comps>

@@ -171,13 +171,13 @@ namespace WalkerGear
                 yield break;
             }
 
-            if (DebugSettings.godMode) Log.Message("trying to get slot of: " + (IsCore ? "any" : slotDef.defName));
+            //if (DebugSettings.godMode) Log.Message("trying to get slot of: " + (IsCore ? "any" : slotDef.defName));
 
             foreach (Thing b in abf.LinkedFacilitiesListForReading)
             {
                 if (b is not Building_Storage s) continue;
                 if (s.GetSlotGroup().HeldThings.EnumerableNullOrEmpty()) continue;
-                if (DebugSettings.godMode) Log.Message("loading linked facility: " + s.def.defName);
+                //if (DebugSettings.godMode) Log.Message("loading linked facility: " + s.def.defName);
 
                 foreach (Thing module in s.GetSlotGroup().HeldThings)
                 {
@@ -185,7 +185,7 @@ namespace WalkerGear
                     if (IsCore && c.Props.slots.Where(s => s.isCoreFrame).EnumerableNullOrEmpty()) continue;
                     if (!IsCore && !c.Props.slots.Contains(slotDef)) continue;
 
-                    if (DebugSettings.godMode) Log.Message(module.def.defName + " is walker module of " + (slotDef == null ? "any" : slotDef.defName) + " added to list.");
+                    //if (DebugSettings.godMode) Log.Message(module.def.defName + " is walker module of " + (slotDef == null ? "any" : slotDef.defName) + " added to list.");
                     yield return module;
                 }
             }
@@ -202,14 +202,10 @@ namespace WalkerGear
             }
             toRemove.Add(slotDef);
         }
-
         private void SetItabCacheDirty()
         {
             isOccupiedSlotDirty = true;
         }
-
-        
-
     }
     //穿脱龙骑兵
     public partial class Building_MaintenanceBay

@@ -20,7 +20,7 @@
       </li>
     </comps>
     <recipeMaker>
-      <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
+      <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
       <skillRequirements>
         <Crafting>12</Crafting>
       </skillRequirements>
@@ -119,7 +119,7 @@
       </li>
     </comps>
     <recipeMaker>
-      <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
+      <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
       <skillRequirements>
         <Crafting>12</Crafting>
       </skillRequirements>

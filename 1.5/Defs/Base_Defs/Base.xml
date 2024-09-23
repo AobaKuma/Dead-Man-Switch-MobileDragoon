@@ -19,6 +19,7 @@
             <effectWorking>Repair</effectWorking>
             <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
             <workAmount>500</workAmount>
+            <workSkill>Crafting</workSkill>
             <soundWorking>Recipe_Machining</soundWorking>
         </recipeMaker>
     </ThingDef>

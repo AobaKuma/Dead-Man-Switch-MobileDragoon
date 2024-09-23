@@ -14,7 +14,7 @@
       <Mass>60</Mass>
     </statBases>
     <recipeMaker>
-      <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
+      <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
     </recipeMaker>
     <costList>
       <Steel>100</Steel>

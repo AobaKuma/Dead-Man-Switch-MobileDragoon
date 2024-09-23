@@ -8,6 +8,9 @@
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_MissilePod</ThingDef>
         </descriptionHyperlinks>
+        <recipeMaker>
+            <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
+        </recipeMaker>
         <statBases>
             <Mass>35</Mass>
         </statBases>
@@ -109,6 +112,9 @@
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_SwarmMissilePod</ThingDef>
         </descriptionHyperlinks>
+        <recipeMaker>
+            <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+        </recipeMaker>
         <statBases>
             <Mass>20</Mass>
         </statBases>
@@ -213,6 +219,9 @@
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_MissilePod</ThingDef>
         </descriptionHyperlinks>
+        <recipeMaker>
+            <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
+        </recipeMaker>
         <statBases>
             <Mass>65</Mass>
         </statBases>

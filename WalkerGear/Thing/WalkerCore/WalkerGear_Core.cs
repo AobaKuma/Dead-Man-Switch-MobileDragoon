@@ -1,10 +1,12 @@
 ﻿
+using Mono.Unix.Native;
 using NAudio.Wave;
 using RimWorld;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
+using static HarmonyLib.Code;
 
 namespace WalkerGear
 {
@@ -53,7 +55,7 @@ namespace WalkerGear
             Command_Toggle toggle = new Command_Toggle
             {
                 Order = -999f,
-                Disabled = !this.Wearer.HomeFaction.IsPlayer || !DebugSettings.godMode,
+                Disabled = !this.Wearer.HomeFaction.IsPlayer,
                 icon = safetyDisabled ? Resources.GetSafetyIcon_Disabled : Resources.GetSafetyIcon,
                 defaultLabel = "WG_SafetyLock".Translate(),
                 defaultDesc = "WG_SafetyLock_Desc".Translate(),
@@ -89,7 +91,7 @@ namespace WalkerGear
         }
         public override void PreApplyDamage(ref DamageInfo dinfo, out bool absorbed)
         {
-            var _t = dinfo;
+            DamageInfo _t = dinfo;
             _t.SetAmount(GetPostArmorDamage(ref dinfo));
             dinfo = _t;
             base.PreApplyDamage(ref dinfo, out absorbed);
@@ -103,6 +105,10 @@ namespace WalkerGear
             if(HPPercent <0.5f && Rand.Chance(0.5f)) return false;
 
             float dmg = GetPostArmorDamage(ref dinfo);
+            if (dmg <= 0)
+            {
+                EffecterDefOf.Deflect_Metal_Bullet.SpawnMaintained(Wearer.Position, Wearer.MapHeld, 1f);
+            }
             foreach (var a in Wearer.apparel.WornApparel)
             {
                 if (a != this && a.TryGetComp(out CompShield c))

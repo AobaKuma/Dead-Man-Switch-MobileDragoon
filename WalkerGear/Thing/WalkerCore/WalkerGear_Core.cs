@@ -102,7 +102,7 @@ namespace WalkerGear
             {
                 return true;
             }
-            if(HPPercent <0.5f && Rand.Chance(0.5f)) return false;
+            if(HPPercent <0.5f && Rand.Chance(0.25f)) return false;
 
             float dmg = GetPostArmorDamage(ref dinfo);
             if (dmg <= 0)

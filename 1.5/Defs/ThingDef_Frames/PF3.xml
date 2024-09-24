@@ -16,7 +16,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_PF3_Core</EquipedThingDef>
-        <slot>Core</slot>
+        <slots>
+          <li>Core</li>
+        </slots>
         <disabledSlots>
           <li>MountLeft</li>
           <li>MountRight</li>
@@ -71,7 +73,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_PF3_Core</ItemDef>
-        <slot>Core</slot>
+        <slots>
+          <li>Core</li>
+        </slots>
         <disabledSlots>
           <li>MountLeft</li>
           <li>MountRight</li>

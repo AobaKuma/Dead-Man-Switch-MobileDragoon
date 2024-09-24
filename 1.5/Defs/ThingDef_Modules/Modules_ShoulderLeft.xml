@@ -21,7 +21,9 @@
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <EquipedThingDef>DMS_Apparel_MissilePod</EquipedThingDef>
-                <slot>MountLeft</slot>
+                <slots>
+          <li>MountLeft</li>
+        </slots>
             </li>
         </comps>
     </ThingDef>
@@ -100,7 +102,9 @@
             </li>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <ItemDef>DMS_Module_MissilePod</ItemDef>
-                <slot>MountLeft</slot>
+                <slots>
+                    <li>MountLeft</li>
+                </slots>
             </li>
         </comps>
     </ThingDef>
@@ -126,7 +130,9 @@
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <EquipedThingDef>DMS_Apparel_SwarmMissilePod</EquipedThingDef>
-                <slot>MountLeft</slot>
+                <slots>
+          <li>MountLeft</li>
+        </slots>
             </li>
         </comps>
     </ThingDef>
@@ -208,7 +214,9 @@
             </li>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <ItemDef>DMS_Module_SwarmMissilePod</ItemDef>
-                <slot>MountLeft</slot>
+                <slots>
+          <li>MountLeft</li>
+        </slots>
             </li>
         </comps>
     </ThingDef>
@@ -234,7 +242,9 @@
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <EquipedThingDef>DMS_Apparel_MissilePodPlus</EquipedThingDef>
-                <slot>MountLeft</slot>
+                <slots>
+          <li>MountLeft</li>
+        </slots>
             </li>
         </comps>
     </ThingDef>
@@ -313,7 +323,9 @@
             </li>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <ItemDef>DMS_Module_MissilePodPlus</ItemDef>
-                <slot>MountLeft</slot>
+                <slots>
+          <li>MountLeft</li>
+        </slots>
             </li>
         </comps>
     </ThingDef>

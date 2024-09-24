@@ -23,7 +23,9 @@
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <EquipedThingDef>DMS_Apparel_TurretPackLight</EquipedThingDef>
-                <slot>MountRight</slot>
+                <slots>
+                    <li>MountRight</li>
+                </slots>
             </li>
         </comps>
     </ThingDef>
@@ -107,23 +109,25 @@
         <verbs>
             <li>
                 <commandIcon>Things/Dragoon/TurretPack/TurretPack_MachineGun</commandIcon>
-				<verbClass>Verb_Shoot</verbClass>
-				<label>Gun</label>
+                <verbClass>Verb_Shoot</verbClass>
+                <label>Gun</label>
                 <hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_Autopistol</defaultProjectile>
-				<warmupTime>0.5</warmupTime>
-				<range>15.9</range>
-				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-				<burstShotCount>5</burstShotCount>
-				<soundCast>Shot_MachinePistol</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
+                <defaultProjectile>Bullet_Autopistol</defaultProjectile>
+                <warmupTime>0.5</warmupTime>
+                <range>15.9</range>
+                <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                <burstShotCount>5</burstShotCount>
+                <soundCast>Shot_MachinePistol</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
             </li>
         </verbs>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <ItemDef>DMS_Module_TurretPackLight</ItemDef>
-                <slot>MountRight</slot>
+                <slots>
+                    <li>MountRight</li>
+                </slots>
             </li>
             <li Class="MVCF.Comps.CompProperties_VerbGiver">
                 <verbProps>
@@ -166,7 +170,9 @@
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <EquipedThingDef>DMS_Apparel_TurretPackHeavy</EquipedThingDef>
-                <slot>MountRight</slot>
+                <slots>
+                    <li>MountRight</li>
+                </slots>
             </li>
         </comps>
     </ThingDef>
@@ -269,7 +275,9 @@
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <ItemDef>DMS_Module_TurretPackHeavy</ItemDef>
-                <slot>MountRight</slot>
+                <slots>
+                    <li>MountRight</li>
+                </slots>
             </li>
             <li Class="MVCF.Comps.CompProperties_VerbGiver">
                 <verbProps>
@@ -312,7 +320,9 @@
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <EquipedThingDef>DMS_Apparel_TurretPackGAU</EquipedThingDef>
-                <slot>MountRight</slot>
+                <slots>
+                    <li>MountRight</li>
+                </slots>
             </li>
         </comps>
     </ThingDef>
@@ -412,7 +422,9 @@
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <ItemDef>DMS_Module_TurretPackGAU</ItemDef>
-                <slot>MountRight</slot>
+                <slots>
+                    <li>MountRight</li>
+                </slots>
             </li>
             <li Class="MVCF.Comps.CompProperties_VerbGiver">
                 <verbProps>

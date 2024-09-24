@@ -22,7 +22,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_PileBunker</EquipedThingDef>
-        <slot>ArmRight</slot>
+        <slots>
+          <li>ArmRight</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>
@@ -69,7 +71,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_PileBunker</ItemDef>
-        <slot>ArmRight</slot>
+        <slots>
+          <li>ArmRight</li>
+        </slots>
       </li>
     </comps>
 		<tools>
@@ -121,7 +125,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_WeaponLmg</EquipedThingDef>
-        <slot>ArmRight</slot>
+        <slots>
+          <li>ArmRight</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>
@@ -141,7 +147,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_WeaponLmg</ItemDef>
-        <slot>ArmRight</slot>
+        <slots>
+          <li>ArmRight</li>
+        </slots>
       </li>
       <li Class="WalkerGear.CompProperties_ForceUseWeapon">
         <weapon>DMS_Dragoon_LMG</weapon>
@@ -174,7 +182,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_WeaponSG</EquipedThingDef>
-        <slot>ArmRight</slot>
+        <slots>
+          <li>ArmRight</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>
@@ -194,7 +204,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_WeaponSG</ItemDef>
-        <slot>ArmRight</slot>
+        <slots>
+          <li>ArmRight</li>
+        </slots>
       </li>
       <li Class="WalkerGear.CompProperties_ForceUseWeapon">
         <weapon>DMS_Dragoon_Shotgun</weapon>

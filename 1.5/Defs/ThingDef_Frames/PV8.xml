@@ -15,7 +15,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_PV8_Core</EquipedThingDef>
-        <slot>Core</slot>
+        <slots>
+          <li>Core</li>
+        </slots>
       </li>
     </comps>
     <recipeMaker>
@@ -67,7 +69,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_PV8_Core</ItemDef>
-        <slot>Core</slot>
+        <slots>
+          <li>Core</li>
+        </slots>
       </li>
     </comps>
     <modExtensions>
@@ -112,7 +116,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_PV8_Helmet</EquipedThingDef>
-        <slot>Head</slot>
+        <slots>
+          <li>Head</li>
+        </slots>
       </li>
     </comps>    
     <recipeMaker>
@@ -156,7 +162,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_PV8_Helmet</ItemDef>
-        <slot>Head</slot>
+        <slots>
+          <li>Head</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>

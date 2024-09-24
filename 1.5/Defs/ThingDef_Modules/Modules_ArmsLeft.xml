@@ -22,7 +22,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_PulseShield</EquipedThingDef>
-        <slot>ArmLeft</slot>
+        <slots>
+          <li>ArmLeft</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>
@@ -69,7 +71,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_PulseShield</ItemDef>
-        <slot>ArmLeft</slot>
+        <slots>
+          <li>ArmLeft</li>
+        </slots>
       </li>
       <li Class="CompProperties_Shield">
         <blocksRangedWeapons>false</blocksRangedWeapons>
@@ -104,7 +108,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_WorkArm</EquipedThingDef>
-        <slot>ArmLeft</slot>
+        <slots>
+          <li>ArmLeft</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>
@@ -153,7 +159,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_WorkArm</ItemDef>
-        <slot>ArmLeft</slot>
+        <slots>
+          <li>ArmLeft</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>
@@ -181,7 +189,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_Shield</EquipedThingDef>
-        <slot>ArmLeft</slot>
+        <slots>
+          <li>ArmLeft</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>
@@ -227,7 +237,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_Shield</ItemDef>
-        <slot>ArmLeft</slot>
+        <slots>
+          <li>ArmLeft</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>
@@ -255,7 +267,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_InfraredSensor</EquipedThingDef>
-        <slot>ArmLeft</slot>
+        <slots>
+          <li>ArmLeft</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>
@@ -301,7 +315,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_InfraredSensor</ItemDef>
-        <slot>ArmLeft</slot>
+        <slots>
+          <li>ArmLeft</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>
@@ -328,7 +344,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_CargoBox</EquipedThingDef>
-        <slot>ArmLeft</slot>
+        <slots>
+          <li>ArmLeft</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>
@@ -374,7 +392,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_CargoBox</ItemDef>
-        <slot>ArmLeft</slot>
+        <slots>
+          <li>ArmLeft</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>

@@ -21,7 +21,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_Groyne_Helmet</EquipedThingDef>
-        <slot>Head</slot>
+        <slots>
+          <li>Head</li>
+        </slots>
       </li>
     </comps>
     <recipeMaker>
@@ -68,7 +70,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_Groyne_Helmet</ItemDef>
-        <slot>Head</slot>
+        <slots>
+          <li>Head</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>
@@ -94,7 +98,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_Stahlhelm_Helmet</EquipedThingDef>
-        <slot>Head</slot>
+        <slots>
+          <li>Head</li>
+        </slots>
       </li>
     </comps>
     <recipeMaker>
@@ -141,7 +147,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_Stahlhelm_Helmet</ItemDef>
-        <slot>Head</slot>
+        <slots>
+          <li>Head</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>

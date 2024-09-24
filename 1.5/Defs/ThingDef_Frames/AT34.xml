@@ -18,7 +18,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_AT34_Core</EquipedThingDef>
-        <slot>Core</slot>
+        <slots>
+          <li>Core</li>
+        </slots>
       </li>
     </comps>
     <recipeMaker>
@@ -72,7 +74,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_AT34_Core</ItemDef>
-        <slot>Core</slot>
+        <slots>
+          <li>Core</li>
+        </slots>
       </li>
     </comps>
     <modExtensions>
@@ -123,7 +127,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_AT34_Helmet</EquipedThingDef>
-        <slot>Head</slot>
+        <slots>
+          <li>Head</li>
+        </slots>
       </li>
     </comps>
     <recipeMaker>
@@ -170,7 +176,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_AT34_Helmet</ItemDef>
-        <slot>Head</slot>
+        <slots>
+          <li>Head</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>

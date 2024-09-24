@@ -23,7 +23,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <EquipedThingDef>DMS_Apparel_JumpThruster</EquipedThingDef>
-        <slot>Attachment</slot>
+        <slots>
+          <li>Attachment</li>
+        </slots>
       </li>
     </comps>
   </ThingDef>
@@ -60,7 +62,9 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_JumpThruster</ItemDef>
-        <slot>Attachment</slot>
+        <slots>
+          <li>Attachment</li>
+        </slots>
       </li>
       <li Class="CompProperties_ApparelReloadable">
         <maxCharges>10</maxCharges>

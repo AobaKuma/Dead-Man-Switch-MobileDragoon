@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 namespace WalkerGear
@@ -41,7 +42,7 @@ namespace WalkerGear
         }
         public override string GetStatDrawEntryLabel(StatDef stat, float value, ToStringNumberSense numberSense, StatRequest optionalReq, bool finalized = true)
         {
-            return optionalReq.Thing.TryGetComp<CompWalkerComponent>().Props.slot.LabelCap;
+            return optionalReq.Thing.TryGetComp<CompWalkerComponent>().Props.slots.First().LabelCap;
         }
     }
 }

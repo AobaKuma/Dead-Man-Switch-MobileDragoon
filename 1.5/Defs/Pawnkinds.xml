@@ -2,7 +2,7 @@
 <Defs>
   <PawnKindDef ParentName="DMS_SoldierBase">
     <defName>DMS_Squad_ArmyDragoon_Trainee</defName>
-    <label>dragoon trainee</label>
+    <label>Yetta trainee</label>
     <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_Corporal</titleRequired>
     <combatPower>150</combatPower>
     <apparelTags>
@@ -31,7 +31,13 @@
         <colorGenerator Class="ColorGenerator_Options">
           <options>
             <li>
-              <only>(200, 112, 20)</only>
+              <only>(90, 100, 90)</only>
+            </li>
+            <li>
+              <only>(85, 100, 95)</only>
+            </li>
+            <li>
+              <only>(95, 100, 85)</only>
             </li>
           </options>
         </colorGenerator>
@@ -42,16 +48,41 @@
         <StructurePointRange>0.85~1.0</StructurePointRange>
         <apparels>
           <li>DMS_Apparel_AT34_Core</li>
-          <li>DMS_Apparel_AT34_Helmet</li>
+          <li>DMS_Apparel_Groyne_Helmet</li>
         </apparels>
+        <chanceApparels>
+          <li>
+            <chance>0.25</chance>
+            <apparel>DMS_Apparel_CargoBox</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_PackFrame</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_InfraredSensor</apparel>
+          </li>
+        </chanceApparels>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(200, 112, 20)</only>
+            </li>
+            <li>
+              <only>(200, 112, 20)</only>
+            </li>
+          </options>
+        </colorGenerator>
       </li>
+      <li Class="WalkerGear.ModExtension_NoIdeoApparel"/>
     </modExtensions>
   </PawnKindDef>
 
   <PawnKindDef ParentName="DMS_SoldierBase">
-    <defName>DMS_Squad_ArmyDragoon_LMG</defName>
+    <defName>DMS_Squad_ArmyDragoon</defName>
     <label>Zyklop pagoda</label>
-    <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_Major</titleRequired>
+    <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_PreSergeant</titleRequired>
     <combatPower>150</combatPower>
     <apparelTags>
       <li>IndustrialMilitaryBasic</li>
@@ -99,17 +130,45 @@
         <StructurePointRange>0.85~1.0</StructurePointRange>
         <apparels>
           <li>DMS_Apparel_PV8_Core</li>
-          <li>DMS_Apparel_PV8_Helmet</li>
-          <li>DMS_Apparel_Shield</li>
+          <li>DMS_Apparel_Groyne_Helmet</li>
+          <li>DMS_Apparel_PackCargo</li>
         </apparels>
+        <chanceApparels>
+          <li>
+            <chance>0.25</chance>
+            <apparel>DMS_Apparel_CargoBox</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_Shield</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_InfraredSensor</apparel>
+          </li>
+        </chanceApparels>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(90, 100, 90)</only>
+            </li>
+            <li>
+              <only>(85, 100, 95)</only>
+            </li>
+            <li>
+              <only>(95, 100, 85)</only>
+            </li>
+          </options>
+        </colorGenerator>
       </li>
+      <li Class="WalkerGear.ModExtension_NoIdeoApparel"/>
     </modExtensions>
   </PawnKindDef>
 
   <PawnKindDef ParentName="DMS_SoldierBase">
     <defName>DMS_Squad_ArmyDragoon_Explosive</defName>
     <label>Zyklop colossi</label>
-    <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_Major</titleRequired>
+    <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_PreSergeant</titleRequired>
     <combatPower>150</combatPower>
     <apparelTags>
       <li>IndustrialMilitaryBasic</li>
@@ -160,16 +219,43 @@
           <li>DMS_Apparel_PV8_Core</li>
           <li>DMS_Apparel_PV8_Helmet</li>
           <li>DMS_Apparel_CargoBox</li>
-          <li>DMS_Apparel_SwarmMissilePod</li>
         </apparels>
+        <chanceApparels>
+          <li>
+            <chance>0.25</chance>
+            <apparel>DMS_Apparel_SwarmMissilePod</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_MissilePod</apparel>
+          </li>
+          <li>
+            <chance>0.05</chance>
+            <apparel>DMS_Apparel_MissilePodPlus</apparel>
+          </li>
+        </chanceApparels>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(90, 100, 90)</only>
+            </li>
+            <li>
+              <only>(85, 100, 95)</only>
+            </li>
+            <li>
+              <only>(95, 100, 85)</only>
+            </li>
+          </options>
+        </colorGenerator>
       </li>
+      <li Class="WalkerGear.ModExtension_NoIdeoApparel"/>
     </modExtensions>
   </PawnKindDef>
 
   <PawnKindDef ParentName="DMS_SoldierBase">
     <defName>DMS_Squad_ArmyDragoon_Gatling</defName>
     <label>Zyklop tornado</label>
-    <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_Major</titleRequired>
+    <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_Sergeant</titleRequired>
     <combatPower>150</combatPower>
     <apparelTags>
       <li>IndustrialMilitaryBasic</li>
@@ -220,16 +306,44 @@
           <li>DMS_Apparel_PV8_Core</li>
           <li>DMS_Apparel_PV8_Helmet</li>
           <li>DMS_Apparel_InfraredSensor</li>
-          <li>DMS_Apparel_PackCargo</li>
+          <li>DMS_Apparel_PackFrame</li>
         </apparels>
+        <chanceApparels>
+          <li>
+            <chance>0.25</chance>
+            <apparel>DMS_Apparel_MissilePodPlus</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_PulseShield</apparel>
+          </li>
+          <li>
+            <chance>0.05</chance>
+            <apparel>DMS_Apparel_FA47_Helmet</apparel>
+          </li>
+        </chanceApparels>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(90, 100, 90)</only>
+            </li>
+            <li>
+              <only>(85, 100, 95)</only>
+            </li>
+            <li>
+              <only>(95, 100, 85)</only>
+            </li>
+          </options>
+        </colorGenerator>
       </li>
+      <li Class="WalkerGear.ModExtension_NoIdeoApparel"/>
     </modExtensions>
   </PawnKindDef>
 
   <PawnKindDef ParentName="GuardBase">
     <defName>DMS_Dragoon_Outlander</defName>
     <label>town dragoon</label>
-    <combatPower>120</combatPower>
+    <combatPower>300</combatPower>
     <isFighter>true</isFighter>
     <gearHealthRange>0.8~2</gearHealthRange>
     <apparelTags>
@@ -258,14 +372,80 @@
         <apparels>
           <li>DMS_Apparel_AT34_Core</li>
         </apparels>
+        <chanceApparels>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_SwarmMissilePod</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_CargoBox</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_PileBunker</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_WorkArm</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_Groyne_Helmet</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_AT34_Helmet</apparel>
+          </li>
+        </chanceApparels>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(0.7, 0.7, 0.7)</only>
+            </li>
+            <li>
+              <only>(0.5, 0.5, 0.5)</only>
+            </li>
+            <li>
+              <only>(0.6, 0.6, 0.6)</only>
+            </li>
+            <li>
+              <only>(104, 120, 119)</only> <!-- drab dark blue -->
+            </li>
+            <li>
+              <only>(119, 145, 121)</only> <!-- drab light green -->
+            </li>
+            <li>
+              <only>(106, 120, 104)</only> <!-- drab dark green -->
+            </li>
+            <li>
+              <only>(140, 140, 119)</only> <!-- tan -->
+            </li>
+            <li>
+              <only>(99, 87, 67)</only> <!-- muted brown -->
+            </li>
+            <li>
+              <only>(128, 116, 84)</only> <!-- light brown -->
+            </li>
+            <li>
+              <only>(107, 94, 64)</only> <!-- mid brown -->
+            </li>
+            <li>
+              <only>(77, 66, 45)</only> <!-- dark brown -->
+            </li>
+          </options>
+        </colorGenerator>
       </li>
+      <li Class="WalkerGear.ModExtension_NoIdeoApparel"/>
     </modExtensions>
   </PawnKindDef>
 
   <PawnKindDef ParentName="GuardBase">
     <defName>DMS_Dragoon_Pirate</defName>
+    <defaultFactionType>Pirate</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
     <label>pirate dragoon</label>
-    <combatPower>120</combatPower>
+    <combatPower>300</combatPower>
     <isFighter>true</isFighter>
     <gearHealthRange>0.8~2</gearHealthRange>
     <apparelTags>
@@ -288,24 +468,53 @@
     </techHediffsTags>
     <initialWillRange>1~3</initialWillRange>
     <initialResistanceRange>15~24</initialResistanceRange>
-    <specificApparelRequirements>
-      <li>
-        <colorGenerator Class="ColorGenerator_Options">
-          <options>
-            <li>
-              <only>(147, 64, 67)</only>
-            </li>
-          </options>
-        </colorGenerator>
-      </li>
-    </specificApparelRequirements>
     <modExtensions>
       <li Class="WalkerGear.ModExtForceApparelGen">
         <StructurePointRange>0.6~0.8</StructurePointRange>
         <apparels>
           <li>DMS_Apparel_AT34_Core</li>
         </apparels>
+        <chanceApparels>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_SwarmMissilePod</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_CargoBox</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_PileBunker</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_WorkArm</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_Groyne_Helmet</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_AT34_Helmet</apparel>
+          </li>
+        </chanceApparels>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(135, 105, 105)</only>
+            </li>
+            <li>
+              <only>(105, 77, 77)</only>
+            </li>
+            <li>
+              <only>(77, 77, 77)</only>
+            </li>
+          </options>
+        </colorGenerator>
       </li>
+      <li Class="WalkerGear.ModExtension_NoIdeoApparel"/>
     </modExtensions>
   </PawnKindDef>
 </Defs>

@@ -102,13 +102,6 @@ namespace WalkerGear
             {
                 return true;
             }
-            if(HPPercent <0.5f && Rand.Chance(0.25f)) return false;
-
-            float dmg = GetPostArmorDamage(ref dinfo);
-            if (dmg <= 0)
-            {
-                EffecterDefOf.Deflect_Metal_Bullet.SpawnMaintained(Wearer.Position, Wearer.MapHeld, 1f);
-            }
             foreach (var a in Wearer.apparel.WornApparel)
             {
                 if (a != this && a.TryGetComp(out CompShield c))
@@ -117,6 +110,23 @@ namespace WalkerGear
                     c.PostPreApplyDamage(ref dinfo, out var absorbed);
                     if (absorbed) return true;
                 }
+            }
+
+            if (HPPercent < 0.5f && Rand.Chance(0.25f)) return false;
+
+            float dmg = GetPostArmorDamage(ref dinfo);
+            if (dmg <= 0)
+            {
+                EffecterDefOf.Deflect_Metal_Bullet.SpawnAttached(Wearer, Wearer.MapHeld, 1f);
+            }
+            else
+            { 
+                EffecterDefOf.DamageDiminished_Metal.SpawnAttached(Wearer, Wearer.MapHeld, 1f);
+                if (HPPercent < 0.5f && Rand.Chance(0.25f))
+                {
+                    FleckMaker.ThrowMicroSparks(Wearer.DrawPos, Wearer.Map);
+                    GenPlace.TryPlaceThing(ThingMaker.MakeThing(RimWorld.ThingDefOf.Filth_Fuel), Wearer.Position, Wearer.Map, ThingPlaceMode.Near);
+                } 
             }
 
             if (Health <= 0)
@@ -136,21 +146,15 @@ namespace WalkerGear
         {
             float amount = dinfo.Amount;
             DamageDef damageDef = dinfo.Def;
-            if (DebugSettings.godMode)
-            {
-                Log.Message("Incoming DMG:" + amount);
-            }
+            // if (DebugSettings.godMode) Log.Message("Incoming DMG:" + amount);
             if (damageDef.armorCategory != null)
             {
 
                 StatDef armorRatingStat = damageDef.armorCategory.armorRatingStat;
-                if (DebugSettings.godMode) Log.Message($"DMG Reduced:{armorRatingStat} Pen {dinfo.ArmorPenetrationInt}, Def {this.GetStatValue(armorRatingStat)}");
+                //if (DebugSettings.godMode) Log.Message($"DMG Reduced:{armorRatingStat} Pen {dinfo.ArmorPenetrationInt}, Def {this.GetStatValue(armorRatingStat)}");
                 ArmorUtility.ApplyArmor(ref amount, dinfo.ArmorPenetrationInt, this.GetStatValue(armorRatingStat), null, ref damageDef, Wearer, out _);
             }
-            if (DebugSettings.godMode)
-            {
-                Log.Message("DMG Taken:" + amount);
-            }
+            // if (DebugSettings.godMode) Log.Message("DMG Taken:" + amount);
             dinfo.SetAmount(amount);
             return amount;
         }
@@ -184,10 +188,12 @@ namespace WalkerGear
         public void CheckModules()
         {
             modules.Clear();
-            Log.Message("Wearer: " + Wearer == null);
-            Log.Message("Wearer.apparel: " + Wearer.apparel == null);
-            Log.Message("Wearer.apparel.WornApparel: " + Wearer.apparel.WornApparel == null);
- 
+            if (DebugSettings.godMode)
+            {
+                Log.Message("Wearer: " + Wearer == null);
+                Log.Message("Wearer.apparel: " + Wearer.apparel == null);
+                Log.Message("Wearer.apparel.WornApparel: " + Wearer.apparel.WornApparel == null);
+            }
             foreach (Apparel a in Wearer.apparel.WornApparel)
             {
                 if (a.HasComp<CompWalkerComponent>())

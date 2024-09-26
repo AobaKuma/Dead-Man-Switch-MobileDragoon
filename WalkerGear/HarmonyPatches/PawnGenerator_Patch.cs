@@ -20,23 +20,27 @@ namespace WalkerGear
             if (DebugSettings.godMode) Log.Message("ModExtForceApparelGen loaded, Force Apparel Gen");
             WalkerGear_Core core = null;
 
+            Color? color = null;
+            if (modExt.colorGenerator != null) color = modExt.colorGenerator?.NewRandomizedColor();
+
             foreach (ThingDef apparelDef in modExt.apparels)
             {
                 Apparel apparel = (Apparel)ThingMaker.MakeThing(apparelDef);
-                Color color = pawn.kindDef.specificApparelRequirements.Where(req => req.GetColor() != Color.white).First().GetColor();
-                if (color!= null)
-                {
-                    apparel.SetColor(color);
-                }
-                pawn.apparel.Wear(apparel);
-                if (apparel is WalkerGear_Core core2)
-                {
-                    core = core2;
-                }
+                if (color != null) apparel.SetColor((Color)color);
+
+                pawn.apparel.Wear(apparel,false,true);
+                if (apparel is WalkerGear_Core core2) core = core2;
+            }
+            foreach (ApparelChance item in modExt.chanceApparels)
+            {
+                if (!Rand.Chance(item.chance))continue;
+                Apparel apparel = (Apparel)ThingMaker.MakeThing(item.apparel);
+                if (color != null) apparel.SetColor((Color)color);
+                pawn.apparel.Wear(apparel,false,true);
+                if (apparel is WalkerGear_Core core2) core = core2;
             }
             core?.RefreshHP(true);
             core.Health = core.HealthMax * modExt.StructurePointRange.RandomInRange;
         }
     }
 }
-

@@ -161,6 +161,9 @@
     <altitudeLayer>Building</altitudeLayer>
     <useHitPoints>true</useHitPoints>
     <size>(2,2)</size>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+    </statBases>
     <pathCost>100</pathCost>
     <passability>PassThroughOnly</passability>
     <surfaceType>Item</surfaceType>

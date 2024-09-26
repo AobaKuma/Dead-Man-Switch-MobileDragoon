@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Verse;
 using Verse.AI;
+using static UnityEngine.GridBrushBase;
 
 namespace WalkerGear
 {
@@ -14,6 +15,7 @@ namespace WalkerGear
                 return this.job.targetA.Thing as Building;
             }
         }
+        private Building_MaintenanceBay Building => (Building_MaintenanceBay)job.GetTarget(TargetIndex.A).Thing;
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             return ReservationUtility.Reserve(this.pawn, this.Target, this.job, 1, -1, null, errorOnFailed);
@@ -23,15 +25,16 @@ namespace WalkerGear
         {
             yield return Toils_Goto.GotoCell(this.Target.Position, PathEndMode.OnCell);
             yield return Toils_General.Wait(30, TargetIndex.None);
-            yield return new Toil
+            Toil gearDown = new()
             {
-                initAction = delegate ()
+                initAction = () =>
                 {
-                    pawn.GetWalkerCore(out WalkerGear_Core Core);
-                    //Core.GetOut();
-                },
-                defaultCompleteMode = ToilCompleteMode.Instant
+                    Pawn actor = this.GetActor();
+                    Building.GearDown(actor);
+                    pawn.drafter.Drafted = false;
+                }
             };
+            yield return gearDown;
             yield break;
         }
     }

@@ -30,6 +30,13 @@
     </JobDef>
 
     <JobDef>
+        <defName>WG_ReturnToBay</defName>
+        <driverClass>WalkerGear.JobDriver_ReturnToBay</driverClass>
+        <reportString>heading back to bay</reportString>
+        <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+    </JobDef>
+
+    <JobDef>
         <defName>WG_DisassembleWalkerCore</defName>
         <driverClass>WalkerGear.JobDriver_DisassembleWalkerCore</driverClass>
         <reportString>disassembling</reportString>
@@ -40,8 +47,8 @@
         <defName>WG_MaintainComponent</defName>
         <label>repair damaged things</label>
         <giverClass>WalkerGear.WorkGiver_ModuleMaintenance</giverClass>
-        <workType>Construction</workType>
-        <priorityInType>50</priorityInType>
+        <workType>Crafting</workType>
+        <priorityInType>500</priorityInType>
         <verb>repair</verb>
         <gerund>repairing</gerund>
         <requiredCapacities>

@@ -47,7 +47,6 @@
       </li>
     </comps>
   </ThingDef>
-
   <ThingDef ParentName="DMS_BaseDragoonWeapon">
     <defName>DMS_Dragoon_LMG</defName>
     <label>Dragoon LMG</label>
@@ -98,8 +97,7 @@
     </modExtensions>
   </ThingDef>
 
-
-  <ThingDef ParentName="DMS_BaseDragoonWeapon">
+  <ThingDef ParentName="DMS_AutomatroidHeavyGun">
     <defName>DMS_Dragoon_Shotgun</defName>
     <label>Dragoon Shotgun</label>
     <!-- 一種代號為龍的重型半自動霰彈槍，被設計用於提供龍騎兵裝備來在不佔用太大重量的前提下提供足夠的近距離火力，能夠發射一種名為龍息的白磷霰彈來點燃敵人。 -->
@@ -113,12 +111,14 @@
       <texPath>Things/Weapons/DMS_Dragoon_Shotgun</texPath>
       <drawSize>2</drawSize>
     </graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
     <statBases>
       <AccuracyTouch>0.95</AccuracyTouch>
       <AccuracyShort>0.85</AccuracyShort>
       <AccuracyMedium>0.35</AccuracyMedium>
       <AccuracyLong>0.15</AccuracyLong>
       <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+			<WorkToMake>30000</WorkToMake>
       <Mass>17.50</Mass>
     </statBases>
     <verbs>
@@ -134,6 +134,10 @@
         <muzzleFlashScale>12</muzzleFlashScale>
       </li>
     </verbs>
+		<costList>
+			<Tungsteel>85</Tungsteel>
+			<ComponentStamped>3</ComponentStamped>		
+		</costList>	
     <modExtensions>
       <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
         <def>MF_StandardMuzzleFalsh</def>
@@ -143,6 +147,9 @@
         </offsets>
         <isAlternately>true</isAlternately>
       </li>
+			<li Class="DMS.HeavyEquippableExtension">
+				<EquippableDef>BulkyAutomatroid</EquippableDef>
+			</li>
     </modExtensions>
   </ThingDef>
   <ThingDef ParentName="BaseBullet">

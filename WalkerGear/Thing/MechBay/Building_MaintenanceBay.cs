@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
+using Mono.Unix.Native;
 using RimWorld;
 using UnityEngine;
 using Verse;
 using Verse.AI;
+using Verse.Noise;
 
 
 namespace WalkerGear
@@ -70,7 +72,27 @@ namespace WalkerGear
             if (cachePawn == null) return;
             if (DummyApparels.Contains(t))
             {
-                GenPlace.TryPlaceThing(MechUtility.Conversion(t), Position, Map, ThingPlaceMode.Direct);
+                if (!this.TryGetComp(out CompAffectedByFacilities abf))
+                {
+                    Log.Warning("CompAffectedByFacilities is null");
+                    return;
+                }
+                Thing moduleItem = MechUtility.Conversion(t);
+                foreach (Thing b in abf.LinkedFacilitiesListForReading)
+                {
+                    if (b is not Building_Storage s) continue;
+                    if (!s.Accepts(moduleItem)) continue;
+                    foreach (IntVec3 cell in GenAdj.CellsOccupiedBy(s))
+                    {
+                        List<Thing> cellThings = cell.GetThingList(s.Map);
+                        if (cellThings.Where(thing => thing != s).EnumerableNullOrEmpty())
+                        {
+                            GenPlace.TryPlaceThing(moduleItem, cell, Map, ThingPlaceMode.Direct);
+                            return;
+                        }
+                    }
+                }
+                GenPlace.TryPlaceThing(moduleItem, InteractionCell, Map, ThingPlaceMode.Direct);
             }
         }
         public void Add(Thing t)
@@ -169,7 +191,6 @@ namespace WalkerGear
             {
                 if (b is not Building_Storage s) continue;
                 if (s.GetSlotGroup().HeldThings.EnumerableNullOrEmpty()) continue;
-                //if (DebugSettings.godMode) Log.Message("loading linked facility: " + s.def.defName);
 
                 foreach (Thing module in s.GetSlotGroup().HeldThings)
                 {

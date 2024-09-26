@@ -2,8 +2,8 @@
 <Patch>
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/DMS.HeavyEquippableDef[
-            defName="HeavyAutomatroid"      or 
-            defName="StandardAutomatroid"   or 
+            defName="BulkyAutomatroid" or
+            defName="StandardAutomatroid" or
             defName="LightAutomatroid"
             ]/EquippableWithApparel</xpath>
         <value>
@@ -12,14 +12,20 @@
     </Operation>
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/DMS.HeavyEquippableDef[
-            defName="UltraHeavyAutomatroid" or 
-            defName="HeavyAutomatroid"      or 
+            defName="HeavyAutomatroid" or
+            defName="BulkyAutomatroid" or
             defName="StandardAutomatroid"
             ]/EquippableWithApparel</xpath>
         <value>
             <li>DMS_Apparel_AT34_Core</li>
             <li>DMS_Apparel_PV8_Core</li>
             <li>DMS_Apparel_FA47_Core</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/DMS.HeavyEquippableDef[defName="UltraHeavyAutomatroid"]/EquippableWithApparel</xpath>
+        <value>
+            <li>DMS_Apparel_PackFrame</li>
         </value>
     </Operation>
 </Patch>

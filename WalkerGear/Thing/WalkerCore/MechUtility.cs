@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
+using static Unity.Burst.Intrinsics.X86.Avx;
 
 namespace WalkerGear
 {
     public static class MechUtility
-	{
+    {
         public static void WeaponDropCheck(Pawn pawn)
         {
             if (pawn == null) return;
@@ -159,19 +160,17 @@ namespace WalkerGear
             MechUtility.WalkerCoreRemove(pawn);
             foreach (Apparel item in a)
             {
-                if (Rand.Chance(0.7f))
+                if (Rand.Chance(0.5f))
                 {
-                    GenSpawn.Spawn(ThingMaker.MakeThing(RimWorld.ThingDefOf.ChunkSlagSteel), pos, map, WipeMode.VanishOrMoveAside);
+                    GenPlace.TryPlaceThing(ThingMaker.MakeThing(RimWorld.ThingDefOf.ChunkSlagSteel), pos, map, ThingPlaceMode.Near);
                 }
-                else
-                if (Rand.Chance(0.25f))
+                else if (Rand.Chance(0.5f))
                 {
-                    ;
                     GenSpawn.Refund(GenSpawn.Spawn(item.Conversion(), pos, map, WipeMode.VanishOrMoveAside), map, new CellRect(pos.x, pos.y, 1, 1), false);
                 }
                 else
                 {
-                    GenSpawn.Spawn(item.Conversion(), pos, map, WipeMode.VanishOrMoveAside);
+                    GenPlace.TryPlaceThing(item.Conversion(), pos, map, ThingPlaceMode.Near);
                 }
             }
         }
@@ -186,7 +185,7 @@ namespace WalkerGear
             if (comp.parent.def.IsApparel)
             {
                 Thing item = ThingMaker.MakeThing(comp.Props.ItemDef);
-                mechData.GetDataFromMech(item); 
+                mechData.GetDataFromMech(item);
                 outcome = item;
             }
             else
@@ -195,11 +194,9 @@ namespace WalkerGear
                 mechData.SetDataToMech(mech);
                 outcome = mech;
             }
-            
             source.Destroy();
             return outcome;
         }
-
     }
 
     public class MechData

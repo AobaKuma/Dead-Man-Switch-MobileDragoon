@@ -337,9 +337,8 @@
       <researchPrerequisite>DMS_MobileDragoonBasis</researchPrerequisite>
     </recipeMaker>
     <costList>
-      <Steel>100</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
-      <ComponentSpacer>1</ComponentSpacer>
+      <Steel>75</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -363,7 +362,7 @@
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.05</MoveSpeed>
-      <RangedCooldownFactor>0.85</RangedCooldownFactor>
+      <RangedCooldownFactor>-0.05</RangedCooldownFactor>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/CargoBox/apparel</wornGraphicPath>

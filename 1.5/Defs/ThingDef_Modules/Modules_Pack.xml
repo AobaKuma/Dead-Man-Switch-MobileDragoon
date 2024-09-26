@@ -248,7 +248,7 @@
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
-        <ItemDef>DMS_Module_PackControlRelay</ItemDef>
+        <ItemDef>DMS_Module_PackEngineering</ItemDef>
         <slots>
           <li>Attachment</li>
           <li>MountRight</li>
@@ -328,6 +328,88 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_PackCargo</ItemDef>
+        <slots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+   <!-- 解鎖超重型裝備的使用 -->
+   <ThingDef ParentName="DMS_ModuleItemAttachment">
+    <defName>DMS_Module_PackFrame</defName>
+    <label>hydraulic frame pack</label>
+    <description>todo</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_PackFrame</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <Mass>35</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_PackFrame</EquipedThingDef>
+        <slots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelAttachment">
+    <tickerType>Normal</tickerType>
+    <defName>DMS_Apparel_PackFrame</defName>
+    <label>hydraulic frame pack</label>
+    <description>Todo.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PackFrame</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Modifications/HydraulicFrame/render_south</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>35</Mass>
+    </statBases>
+    <equippedStatOffsets>
+			<CarryingCapacity>100</CarryingCapacity>
+      <MoveSpeed>-0.25</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Modifications/HydraulicFrame/render</wornGraphicPath>
+      <drawData>
+        <scale>1.7</scale>
+        <defaultData>
+          <layer>-1</layer>
+        </defaultData>
+        <dataEast>
+          <offset>(-0.20,0,0.15)</offset>
+          <rotationOffset>45</rotationOffset>
+        </dataEast>
+        <dataWest>
+          <offset>(0.20,0,0.15)</offset>
+          <rotationOffset>-45</rotationOffset>
+        </dataWest>
+        <dataNorth>
+          <offset>(0,0,0.75)</offset>
+          <layer>75</layer>
+        </dataNorth>
+        <dataSouth>
+          <offset>(0,0,0.25)</offset>
+        </dataSouth>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_PackFrame</ItemDef>
         <slots>
           <li>Attachment</li>
           <li>MountRight</li>

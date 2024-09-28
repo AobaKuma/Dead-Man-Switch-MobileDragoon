@@ -15,89 +15,54 @@
     </ThingDef>
     
     <ThingDef Name="DMS_ModuleItemHead" ParentName="DMS_ModuleItemBase" Abstract="True">
-        <thingCategories><li>DMS_Module_Helmet</li></thingCategories>
+        <thingCategories Inherit="False"><li>DMS_Module_Helmet</li></thingCategories>
         <graphicData>
           <texPath>Things/Item/Module_H</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef Name="DMS_ModuleItemCore" ParentName="DMS_ModuleItemBase" Abstract="True">
-        <thingCategories><li>DMS_Module_Core</li></thingCategories>
+        <thingCategories Inherit="False"><li>DMS_Module_Core</li></thingCategories>
         <graphicData>
           <texPath>Things/Item/Module</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef Name="DMS_ModuleItemAttachment" ParentName="DMS_ModuleItemBase" Abstract="True">
-        <thingCategories><li>DMS_Module_Pack</li></thingCategories>
+        <thingCategories Inherit="False"><li>DMS_Module_Pack</li></thingCategories>
         <graphicData>
           <texPath>Things/Item/Module_A</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef Name="DMS_ModuleItemMountRight" ParentName="DMS_ModuleItemBase" Abstract="True">
-        <thingCategories><li>DMS_Module_ShoulderRight</li></thingCategories>
+        <thingCategories Inherit="False"><li>DMS_Module_ShoulderRight</li></thingCategories>
         <graphicData>
           <texPath>Things/Item/Module_SR</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef Name="DMS_ModuleItemMountLeft" ParentName="DMS_ModuleItemBase" Abstract="True">
-        <thingCategories><li>DMS_Module_ShoulderLeft</li></thingCategories>
+        <thingCategories Inherit="False"><li>DMS_Module_ShoulderLeft</li></thingCategories>
         <graphicData>
           <texPath>Things/Item/Module_SL</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef Name="DMS_ModuleItemArmLeft" ParentName="DMS_ModuleItemBase" Abstract="True">
-        <thingCategories><li>DMS_Module_Attachment</li></thingCategories>
+        <thingCategories Inherit="False"><li>DMS_Module_Attachment</li></thingCategories>
         <graphicData>
           <texPath>Things/Item/Module_AL</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef Name="DMS_ModuleItemArmRight" ParentName="DMS_ModuleItemBase" Abstract="True">
-        <thingCategories><li>DMS_Module_Equipment</li></thingCategories>
+        <thingCategories Inherit="False"><li>DMS_Module_Equipment</li></thingCategories>
         <graphicData>
           <texPath>Things/Item/Module_AR</texPath>
         </graphicData>
     </ThingDef>
     
+
+
     <!--衣服型態的龍騎兵裝備，理論上玩家不應該能獲取 -->
-    <ThingDef Name="DMS_ModuleApparelBase" Abstract="True">
-        <thingClass>Apparel</thingClass>
-        <category>Item</category>
-        <destroyOnDrop>true</destroyOnDrop>
-        <tradeability>None</tradeability>
-        <generateCommonality>0</generateCommonality>
-        <generateAllowChance>0</generateAllowChance>
-        <drawerType>MapMeshOnly</drawerType>
-        <selectable>True</selectable>
-        <pathCost>14</pathCost>
-        <useHitPoints>false</useHitPoints>
-        <techLevel>Industrial</techLevel>
-        <graphicData>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>1.00</drawSize>
-        </graphicData>
-        <drawGUIOverlay>true</drawGUIOverlay>
-        <statBases>
-            <MaxHitPoints>100</MaxHitPoints>
-            <Flammability>0.0</Flammability>
-            <Beauty>-3</Beauty>
-            <Mass>10</Mass>
-        </statBases>
-        <altitudeLayer>Item</altitudeLayer>
-        <alwaysHaulable>True</alwaysHaulable>
-        <tickerType>Never</tickerType>
-        <burnableByRecipe>false</burnableByRecipe>
-        <smeltable>false</smeltable>
-        <thingCategories Inherit="false"/>
-        <thingSetMakerTags Inherit="false"/>
-        <tradeTags/>
+    <ThingDef Name="DMS_ModuleApparelBase" ParentName="ModuleApparelBase" Abstract="True">
         <comps>
-            <li Class="CompProperties_Forbiddable" />
             <li Class="CompProperties_Styleable" />
-            <li>
-                <compClass>CompColorable</compClass>
-            </li>
-            <li>
-                <compClass>CompQuality</compClass>
-            </li>
         </comps>
         <modExtensions>
             <li Class="VFECore.ApparelDrawPosExtension">

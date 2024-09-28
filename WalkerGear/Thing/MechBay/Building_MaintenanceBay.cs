@@ -37,7 +37,7 @@ namespace WalkerGear
             {
                 Command_Target command_GetIn = new()
                 {
-                    defaultLabel = "Get In".Translate(),
+                    defaultLabel = "WG_GetIn".Translate(),
                     targetingParams = TargetingParameters.ForPawns(),
                     action = (tar) =>
                     {
@@ -123,17 +123,27 @@ namespace WalkerGear
 
         public Apparel GetGearCore => DummyApparels.WornApparel.Find(a => a is WalkerGear_Core);
 
+        public List<CompWalkerComponent> GetwalkerComponents()
+        {
+            if (ComponentsCache==null)
+            {
+                TryUpdateOccupiedSlotsCache(true);
+            }
+            return ComponentsCache;
+        }
+        private List<CompWalkerComponent> ComponentsCache;
+
         public void TryUpdateOccupiedSlotsCache(bool force = false)
         {
             if (!force && !isOccupiedSlotDirty)
             {
                 return;
             }
-
             occupiedSlots.Clear();
             positionWSlot.Clear();
             massCapacity = 0;
             currentLoad = 0;
+            List<CompWalkerComponent> li = new List<CompWalkerComponent>();
             foreach (Apparel a in DummyApparels.WornApparel)
             {
                 massCapacity += a.GetStatValue(StatDefOf.CarryingCapacity) != StatDefOf.CarryingCapacity.defaultBaseValue ? a.GetStatValue(StatDefOf.CarryingCapacity) : 0;
@@ -145,14 +155,17 @@ namespace WalkerGear
                         occupiedSlots[s] = a;
                         positionWSlot[s.uiPriority] = s;
                     }
+                    li.Add(c);
                 }
             }
+            ComponentsCache = li;
             isOccupiedSlotDirty = false;
         }
-
         public void RemoveModules(SlotDef slot, bool updateNow = true)
         {
             if (!occupiedSlots.ContainsKey(slot)) return;
+            if (slot.isCoreFrame)
+
             toRemove.Clear();
             GetSupportedSlotRecur(slot);
             foreach (var s in toRemove)
@@ -172,9 +185,16 @@ namespace WalkerGear
         public void AddOrReplaceModule(Thing thing)
         {
             if (!thing.TryGetComp(out CompWalkerComponent c)) return;
-            foreach (var s in c.Props.slots)
+            if (c.Props.slots.Where(s => s.isCoreFrame).Any() && GetGearCore!=null)
             {
-                RemoveModules(s, false);
+                RemoveModules(GetGearCore.GetComp<CompWalkerComponent>().Props.slots.Where(l => l.isCoreFrame).First());
+            }
+            else
+            {
+                foreach (var s in c.Props.slots)
+                {
+                    RemoveModules(s, false);
+                }
             }
             Add(thing);
             TryUpdateOccupiedSlotsCache(true);

@@ -64,6 +64,7 @@ namespace WalkerGear
             }
 
             Draw_GizmoSlot(0);
+
             if (!Parent.HasGearCore)
             {
                 string text = "right click the slot to load core module from linked storage.";
@@ -81,10 +82,17 @@ namespace WalkerGear
                 Rect slgizmoRect = new(slPosition, size);
                 Widgets.Label(slgizmoRect, text);
             }
-            for (int i = 1; i < 7; ++i)
+            foreach (CompWalkerComponent slots in Parent.GetwalkerComponents()) //這樣寫主要是為了子模塊提供槽位的狀況。
             {
-                Draw_GizmoSlot(i);
+                foreach (SlotDef item in slots.Props.slots)
+                {
+                    foreach (var item2 in item.supportedSlots)
+                    {
+                        Draw_GizmoSlot(item2.uiPriority);
+                    }
+                }
             }
+                
 
             Vector2 position = positions[0];
             //stats
@@ -253,7 +261,10 @@ namespace WalkerGear
             List<FloatMenuOption> options = new();
             if (slot != null && OccupiedSlots.TryGetValue(slot, out Thing t)) //如果slot有填模塊，額外顯示移除選項
             {
-                options.Add(new("Remove".Translate(t.LabelCap), () => RemoveModules(slot), MenuOptionPriority.High));
+                options.Add(new("Remove".Translate(t.LabelCap), () =>
+                {
+                    RemoveModules(slot);
+                }, MenuOptionPriority.High));
             }
 
             IEnumerable<Thing> modules = GetAvailableModules(slot, slot == null || slot.isCoreFrame);

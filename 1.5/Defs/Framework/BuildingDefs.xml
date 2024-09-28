@@ -52,6 +52,9 @@
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
           <li>MF_Building_ComponentStorage</li>
+          <li>ToolCabinet</li>
+          <li>MF_Building_ScaffoldStair</li>
+          <li>MF_Building_Scaffold</li>
         </linkableFacilities>
       </li>
       <li Class="CompProperties_ReportWorkSpeed">
@@ -63,7 +66,7 @@
             <texPath>Things/Building/MaintenanceBay_Top</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>(4,4)</drawSize>
-            <drawOffset>(0,0.8,0)</drawOffset>
+            <drawOffset>(0,0.005,0)</drawOffset>
           </li>
         </extraGraphic>
       </li>
@@ -84,6 +87,7 @@
     <graphicData>
       <texPath>Things/Building/ModulePlatform</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
+      <drawOffset>(0,0.002,0)</drawOffset>
       <drawSize>(4,4)</drawSize>
     </graphicData>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
@@ -148,6 +152,116 @@
     </placeWorkers>
   </ThingDef>
 
+  <DesignatorDropdownGroupDef>
+    <defName>WG_BaseScaffold</defName>
+    <label>scaffold</label>
+  </DesignatorDropdownGroupDef>
+
+  <ThingDef ParentName="BuildingBase" Name="WG_BaseScaffold" Abstract="True">
+    <thingClass>Building</thingClass>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <designatorDropdown>WG_BaseScaffold</designatorDropdown>
+    <canOverlapZones>false</canOverlapZones>
+    <altitudeLayer>Building</altitudeLayer>
+    <tickerType>Rare</tickerType>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <statBases>
+      <Mass>20</Mass>
+      <WorkToBuild>4000</WorkToBuild>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+    </costList>
+    <staticSunShadowHeight>1</staticSunShadowHeight>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <useHitPoints>true</useHitPoints>
+    <size>(2,1)</size>
+    <pathCost>200</pathCost>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <designationCategory>DMS_Category</designationCategory>
+    <uiOrder>12</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <hasInteractionCell>false</hasInteractionCell>
+    <researchPrerequisites>
+      <li>DMS_MobileDragoonBasis</li>
+    </researchPrerequisites>
+    <building>
+      <relatedBuildCommands>
+        <li>MF_Building_MaintenanceBay</li>
+      </relatedBuildCommands>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="WG_BaseScaffold">
+    <defName>MF_Building_Scaffold</defName>
+    <label>scaffold</label>
+    <!-- 用於在機甲整備期間能方便進行維修與拆解的金屬腳手架，能有效的降低安裝與拆解的工作時間。每個整備架能夠連接最大四個腳手架 -->
+    <description>Metal scaffolding used to facilitate maintenance and disassembly during mecha maintenance, which can effectively reduce the work time of installation and disassembly. Each rack can be connected to up to 4 scaffolds.</description>
+    <uiIconPath>Things/Building/Scaffold_icon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/Scaffold</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawOffset>(0,0.003,0.345)</drawOffset>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <maxSimultaneous>4</maxSimultaneous>
+        <statOffsets>
+          <WorkTableWorkSpeedFactor>0.05</WorkTableWorkSpeedFactor>
+        </statOffsets>
+      </li>
+      <li Class="WalkerGear.CompProperties_BuildingExtraRenderer">
+        <extraGraphic>
+          <li>
+            <texPath>Things/Building/Scaffold_b</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(4,4)</drawSize>
+            <drawOffset>(0,-0.0025,0.345)</drawOffset>
+          </li>
+        </extraGraphic>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="WG_BaseScaffold">
+    <defName>MF_Building_ScaffoldStair</defName>
+    <label>scaffold stair</label>
+    <!-- 用於在機甲整備期間能方便進行維修與拆解的金屬腳手架，能有效的降低安裝與拆解的工作時間。每個整備架能夠連接最大四個腳手架 -->
+    <description>Metal scaffolding used to facilitate maintenance and disassembly during mecha maintenance, which can effectively reduce the work time of installation and disassembly. Each rack can be connected to up to 4 scaffolds.</description>
+    <uiIconPath>Things/Building/ScaffoldStair_icon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/ScaffoldStair</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawOffset>(0,0.003,0.345)</drawOffset>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <maxSimultaneous>4</maxSimultaneous>
+        <statOffsets>
+          <WorkTableWorkSpeedFactor>0.05</WorkTableWorkSpeedFactor>
+        </statOffsets>
+      </li>
+      <li Class="WalkerGear.CompProperties_BuildingExtraRenderer">
+        <extraGraphic>
+          <li>
+            <texPath>Things/Building/ScaffoldStair_b</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(4,4)</drawSize>
+            <drawOffset>(0,-0.0025,0.345)</drawOffset>  
+          </li>
+        </extraGraphic>
+      </li>
+    </comps>
+  </ThingDef>
+
   <ThingDef ParentName="BuildingBase">
     <defName>MF_Building_Wreckage</defName>
     <label>wreckage</label>
@@ -168,7 +282,6 @@
     <passability>PassThroughOnly</passability>
     <surfaceType>Item</surfaceType>
   </ThingDef>
-
 
   <!-- 彈射塢 -->
   <ThingDef ParentName="BuildingBase">

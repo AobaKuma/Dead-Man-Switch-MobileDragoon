@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<StatDef>
-		<defName>MF_Stat_Module</defName>
-		<label>module slot</label>
-		<workerClass>WalkerGear.StatWorker_Module</workerClass>
-		<description>todo.</description>
-		<category>BasicsImportant</category>
-		<defaultBaseValue>0</defaultBaseValue>
-		<minValue>-1</minValue>
-	</StatDef>
     <!-- 物品型態的龍騎兵裝備 -->
     <ThingDef Name="DMS_ModuleItemBase" ParentName="ModuleItemBase" Abstract="True">
         <recipeMaker>
@@ -126,7 +116,7 @@
                 <li>UpperHead</li>
             </bodyPartGroups>
             <layers>
-                <li>Overhead</li>
+                <li>WG_WalkerGearLayer</li>
             </layers>
             <parentTagDef>WGApparelHead</parentTagDef>
             <renderSkipFlags>
@@ -154,6 +144,8 @@
                 <li>Neck</li>
                 <li>Shoulders</li>
                 <li>Arms</li>
+                <li>Feet</li>
+                <li>Hands</li>
             </bodyPartGroups>
             <layers>
                 <li>Shell</li>
@@ -191,7 +183,7 @@
                 <li>Waist</li>
             </bodyPartGroups>
             <layers>
-                <li>Shell</li>
+                <li>WG_WalkerGearLayer</li>
             </layers>
         </apparel>
     </ThingDef>
@@ -205,7 +197,7 @@
                 <li>Shoulders</li>
             </bodyPartGroups>
             <layers>
-                <li>Overhead</li>
+                <li>WG_WalkerGearLayer</li>
             </layers>
             <parentTagDef>WGApparelBody</parentTagDef>
         </apparel>
@@ -220,7 +212,7 @@
                 <li>Neck</li>
             </bodyPartGroups>
             <layers>
-                <li>Overhead</li>
+                <li>WG_WalkerGearLayer</li>
             </layers>
             <parentTagDef>WGApparelBody</parentTagDef>
         </apparel>
@@ -232,10 +224,10 @@
         </thingCategories>
         <apparel>
             <bodyPartGroups>
-                <li>Arms</li>
+                <li>LeftHand</li>
             </bodyPartGroups>
             <layers>
-                <li>Overhead</li>
+                <li>WG_WalkerGearLayer</li>
             </layers>
             <parentTagDef>WGApparelBody</parentTagDef>
         </apparel>
@@ -247,10 +239,10 @@
         </thingCategories>
         <apparel>
           <bodyPartGroups>
-            <li>Waist</li>
+            <li>RightHand</li>
           </bodyPartGroups>
           <layers>
-            <li>Overhead</li>
+            <li>WG_WalkerGearLayer</li>
           </layers>
           <parentTagDef>WGApparelBody</parentTagDef>
         </apparel>

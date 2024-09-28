@@ -440,9 +440,8 @@
     </modExtensions>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="GuardBase">
+  <PawnKindDef ParentName="MercenaryBase">
     <defName>DMS_Dragoon_Pirate</defName>
-    <defaultFactionType>Pirate</defaultFactionType>
     <aiAvoidCover>true</aiAvoidCover>
     <label>pirate dragoon</label>
     <combatPower>300</combatPower>

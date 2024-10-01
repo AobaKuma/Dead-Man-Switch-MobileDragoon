@@ -22,8 +22,8 @@
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <EquipedThingDef>DMS_Apparel_MissilePod</EquipedThingDef>
                 <slots>
-          <li>MountLeft</li>
-        </slots>
+                    <li>MountLeft</li>
+                </slots>
             </li>
         </comps>
     </ThingDef>
@@ -131,8 +131,8 @@
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <EquipedThingDef>DMS_Apparel_SwarmMissilePod</EquipedThingDef>
                 <slots>
-          <li>MountLeft</li>
-        </slots>
+                    <li>MountLeft</li>
+                </slots>
             </li>
         </comps>
     </ThingDef>
@@ -215,8 +215,8 @@
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <ItemDef>DMS_Module_SwarmMissilePod</ItemDef>
                 <slots>
-          <li>MountLeft</li>
-        </slots>
+                    <li>MountLeft</li>
+                </slots>
             </li>
         </comps>
     </ThingDef>
@@ -243,8 +243,8 @@
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <EquipedThingDef>DMS_Apparel_MissilePodPlus</EquipedThingDef>
                 <slots>
-          <li>MountLeft</li>
-        </slots>
+                    <li>MountLeft</li>
+                </slots>
             </li>
         </comps>
     </ThingDef>
@@ -324,8 +324,8 @@
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <ItemDef>DMS_Module_MissilePodPlus</ItemDef>
                 <slots>
-          <li>MountLeft</li>
-        </slots>
+                    <li>MountLeft</li>
+                </slots>
             </li>
         </comps>
     </ThingDef>

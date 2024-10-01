@@ -19,7 +19,6 @@ namespace WalkerGear
             return this.pawn.Reserve(Target, this.job, errorOnFailed: errorOnFailed);
         }
 
-        //还在写
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.FailOnDespawnedNullOrForbidden(target);

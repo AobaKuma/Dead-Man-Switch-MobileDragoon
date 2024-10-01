@@ -11,17 +11,22 @@
       <texPath>Things/Building/ParkingSpot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(3,3)</drawSize>
+      <drawOffset>(0,-0.01,0)</drawOffset>
     </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
     <rotatable>true</rotatable>
     <stealable>false</stealable>
     <blockLight>false</blockLight>
     <blockWind>false</blockWind>
+    <surfaceType>Item</surfaceType>
     <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
     <thingClass>WalkerGear.Building_ParkingSpot</thingClass>
     <tickerType>Rare</tickerType>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <useHitPoints>false</useHitPoints>
+    <interactionCellOffset>(0,0,0)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
     <size>(3,3)</size>
     <designationCategory>DMS_Category</designationCategory>
     <passability>Standable</passability>
@@ -76,6 +81,7 @@
     </costList>
     <scatterableOnMapGen>false</scatterableOnMapGen>
     <useHitPoints>true</useHitPoints>
+    <fillPercent>0.35</fillPercent>
     <size>(3,3)</size>
     <pathCost>100</pathCost>
     <designationCategory>DMS_Category</designationCategory>
@@ -156,6 +162,7 @@
     <useHitPoints>true</useHitPoints>
     <size>(3,1)</size>
     <pathCost>100</pathCost>
+    <fillPercent>0.15</fillPercent>
     <designationCategory>DMS_Category</designationCategory>
     <uiOrder>11</uiOrder>
     <passability>PassThroughOnly</passability>
@@ -224,6 +231,7 @@
     <costList>
       <Steel>100</Steel>
     </costList>
+    <fillPercent>0.35</fillPercent>
     <staticSunShadowHeight>1</staticSunShadowHeight>
     <scatterableOnMapGen>false</scatterableOnMapGen>
     <useHitPoints>true</useHitPoints>
@@ -241,7 +249,9 @@
       <li>DMS_MobileDragoonBasis</li>
     </researchPrerequisites>
     <building>
+      <paintable>true</paintable>
       <relatedBuildCommands>
+        <li>MF_Building_ParkingSpot</li>
         <li>MF_Building_MaintenanceBay</li>
       </relatedBuildCommands>
     </building>

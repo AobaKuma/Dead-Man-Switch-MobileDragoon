@@ -26,7 +26,6 @@ namespace WalkerGear
             return false;
         }
 
-        //还在写
         protected override IEnumerable<Toil> MakeNewToils()
         {
             yield return Toils_Goto.GotoThing(TakeeInd, PathEndMode.Touch).FailOnDespawnedOrNull(TakeeInd).FailOnDespawnedOrNull(BuildingInd);

@@ -22,7 +22,12 @@ namespace WalkerGear
         }
         protected override string GetAssignmentGizmoDesc()
         {
-            return "CommandMeditationSpotSetOwnerDesc".Translate();
+            return "WG_AssignPilot".Translate();
+        }
+        public override void TryAssignPawn(Pawn pawn)
+        {
+            assignedPawns.Clear();
+            base.TryAssignPawn(pawn);
         }
     }
 

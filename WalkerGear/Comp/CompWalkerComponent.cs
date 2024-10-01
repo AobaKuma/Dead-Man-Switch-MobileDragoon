@@ -1,8 +1,10 @@
-﻿using RimWorld;
+﻿using Reloading;
+using RimWorld;
 using RimWorld.QuestGen;
 using RimWorld.Utility;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -12,6 +14,13 @@ namespace WalkerGear
 {
     public class CompWalkerComponent : ThingComp, IReloadableComp
     {
+        public CompProperties_WalkerComponent Props
+        {
+            get
+            {
+                return props as CompProperties_WalkerComponent;
+            }
+        }
         public override void PostExposeData()
         {
             base.PostExposeData();
@@ -25,26 +34,7 @@ namespace WalkerGear
         public bool NeedMaintenance => NeedAmmo || NeedRepair;
         public bool NeedAmmo => hasReloadableProps && remainingCharges < MaxCharges;
         public bool NeedRepair => parent.HitPoints < parent.MaxHitPoints;
-        public CompProperties_WalkerComponent Props
-        {
-            get
-            {
-                return props as CompProperties_WalkerComponent;
-            }
-        }
         public List<SlotDef> Slots => Props.slots;
-        public List<int> TakenUI
-        {
-            get
-            {
-                List<int> list = new List<int>();
-                foreach (SlotDef slot in Slots)
-                {
-                    list.Add(slot.uiPriority);
-                }
-                return list;
-            }
-        }
 
         public ThingDef AmmoDef => ammoDef;
         public int MaxCharges => maxCharges;
@@ -73,7 +63,6 @@ namespace WalkerGear
             }
             return RemainingCharges != MaxCharges;
         }
-
         public int MinAmmoNeeded(bool allowForcedReload)
         {
             if (!NeedsReload(allowForcedReload))
@@ -99,7 +88,6 @@ namespace WalkerGear
             }
             return ammoCountPerCharge * (MaxCharges - RemainingCharges);
         }
-
         public int MaxAmmoAmount()
         {
             if (ammoDef == null)
@@ -211,6 +199,16 @@ namespace WalkerGear
         public int maxCharges;
         private int hp = -1;
         private int maxhp = -1;
+
+        public override string CompInspectStringExtra()
+        {
+            string s = base.CompInspectStringExtra();
+            if (hasReloadableProps)
+            {
+                s += "\n" + LabelRemaining;
+            }
+            return s;
+        }
     }
     public class CompProperties_WalkerComponent : CompProperties
     {

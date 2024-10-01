@@ -64,7 +64,7 @@
         </dataWest>
         <dataEast>
           <offset>(-0.80,0,0.8)</offset>
-          <layer>0</layer>
+          <layer>-1</layer>
         </dataEast>
       </drawData>
     </apparel>
@@ -152,7 +152,7 @@
         </dataWest>
         <dataEast>
           <offset>(0.25,0,0.4)</offset>
-          <layer>0</layer>
+          <layer>-1</layer>
         </dataEast>
       </drawData>
     </apparel>
@@ -230,7 +230,7 @@
         </dataWest>
         <dataEast>
           <offset>(0.80,0,0.8)</offset>
-          <layer>0</layer>
+          <layer>-1</layer>
         </dataEast>
       </drawData>
     </apparel>
@@ -308,7 +308,7 @@
         </dataWest>
         <dataEast>
           <offset>(-0.80,0,0.8)</offset>
-          <layer>0</layer>
+          <layer>-1</layer>
         </dataEast>
       </drawData>
     </apparel>
@@ -384,7 +384,7 @@
         </dataWest>
         <dataEast>
           <offset>(0.4,0,0.35)</offset>
-          <layer>0</layer>
+          <layer>-1</layer>
         </dataEast>
       </drawData>
     </apparel>

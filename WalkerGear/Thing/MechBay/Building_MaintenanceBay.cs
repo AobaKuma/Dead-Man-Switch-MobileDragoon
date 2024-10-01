@@ -11,7 +11,10 @@ using Verse.Noise;
 
 namespace WalkerGear
 {
-
+    public interface IMechParkable
+    {
+        public bool CanPark(WalkerGear_Core core);
+    }
     [StaticConstructorOnStartup]
     public partial class Building_MaintenanceBay : Building
     {
@@ -33,7 +36,7 @@ namespace WalkerGear
         public override IEnumerable<Gizmo> GetGizmos()
         {
 
-            if (HasGearCore && false)
+            if (HasGearCore && this.Faction.IsPlayer)
             {
                 Command_Target command_GetIn = new()
                 {

@@ -1,6 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <PawnKindDef ParentName="DMS_SoldierBase">
+  <PawnKindDef ParentName="DMS_SoldierBase" Name="DMS_DragoonBase" Abstract="True">
+    <aiAvoidCover>true</aiAvoidCover>
+    <isFighter>true</isFighter>
+    <allowRoyalApparelRequirements>false</allowRoyalApparelRequirements>
+    <allowRoyalRoomRequirements>false</allowRoyalRoomRequirements>
+    <canStrip>false</canStrip>
+    <modExtensions>
+      <li Class="WalkerGear.ModExtension_NoIdeoApparel"/>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="DMS_DragoonBase">
     <defName>DMS_Squad_ArmyDragoon_Trainee</defName>
     <label>Yetta trainee</label>
     <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_Corporal</titleRequired>
@@ -75,11 +86,10 @@
           </options>
         </colorGenerator>
       </li>
-      <li Class="WalkerGear.ModExtension_NoIdeoApparel"/>
     </modExtensions>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="DMS_SoldierBase">
+  <PawnKindDef ParentName="DMS_DragoonBase">
     <defName>DMS_Squad_ArmyDragoon</defName>
     <label>Zyklop pagoda</label>
     <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_PreSergeant</titleRequired>
@@ -161,11 +171,10 @@
           </options>
         </colorGenerator>
       </li>
-      <li Class="WalkerGear.ModExtension_NoIdeoApparel"/>
     </modExtensions>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="DMS_SoldierBase">
+  <PawnKindDef ParentName="DMS_DragoonBase">
     <defName>DMS_Squad_ArmyDragoon_Explosive</defName>
     <label>Zyklop colossi</label>
     <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_PreSergeant</titleRequired>
@@ -248,11 +257,10 @@
           </options>
         </colorGenerator>
       </li>
-      <li Class="WalkerGear.ModExtension_NoIdeoApparel"/>
     </modExtensions>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="DMS_SoldierBase">
+  <PawnKindDef ParentName="DMS_DragoonBase">
     <defName>DMS_Squad_ArmyDragoon_Gatling</defName>
     <label>Zyklop tornado</label>
     <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_Sergeant</titleRequired>
@@ -336,14 +344,14 @@
           </options>
         </colorGenerator>
       </li>
-      <li Class="WalkerGear.ModExtension_NoIdeoApparel"/>
     </modExtensions>
   </PawnKindDef>
 
   <PawnKindDef ParentName="GuardBase">
     <defName>DMS_Dragoon_Outlander</defName>
     <label>town dragoon</label>
-    <combatPower>300</combatPower>
+    <combatPower>150</combatPower>
+    <aiAvoidCover>true</aiAvoidCover>
     <isFighter>true</isFighter>
     <gearHealthRange>0.8~2</gearHealthRange>
     <apparelTags>
@@ -442,9 +450,9 @@
 
   <PawnKindDef ParentName="MercenaryBase">
     <defName>DMS_Dragoon_Pirate</defName>
-    <aiAvoidCover>true</aiAvoidCover>
     <label>pirate dragoon</label>
-    <combatPower>300</combatPower>
+    <combatPower>150</combatPower>
+    <aiAvoidCover>true</aiAvoidCover>
     <isFighter>true</isFighter>
     <gearHealthRange>0.8~2</gearHealthRange>
     <apparelTags>

@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+  <!-- 停泊點 -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>MF_Building_ParkingSpot</defName>
+    <label>dock point</label>
+    <!-- 用於小型機體臨時停泊的地點，如果機體設計上能夠臨時下機，駕駛員就可以在這裡離開機體並休息或接受治療，但由於缺乏相關設備因此在這裡無法進行模塊整備與維修，並且重新登機的時間也比較長。 -->
+    <description>A point designated for temporary parking the frame. suppose the frame is designed to be able to disembark temporarily. the pilot can leave the frame here and rest or receive treatment. However, due to the lack of relevant equipment, it can not unload the module for maintenance or repair and requires a longer boarding time.</description>
+    <graphicData>
+      <texPath>Things/Building/ParkingSpot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <rotatable>true</rotatable>
+    <stealable>false</stealable>
+    <blockLight>false</blockLight>
+    <blockWind>false</blockWind>
+    <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+    <thingClass>WalkerGear.Building_ParkingSpot</thingClass>
+    <tickerType>Rare</tickerType>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <size>(3,3)</size>
+    <designationCategory>DMS_Category</designationCategory>
+    <passability>Standable</passability>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>MF_Building_ScaffoldStair</li>
+          <li>MF_Building_Scaffold</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>WalkerGear.CompAssignableToPawn_Parking</compClass>
+      </li>
+    </comps>
+    <building>
+      <relatedBuildCommands>
+        <li>MF_Building_ScaffoldStair</li>
+        <li>MF_Building_Scaffold</li>
+      </relatedBuildCommands>
+    </building>
+    <researchPrerequisites>
+      <li>DMS_MobileDragoonBasis</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+  </ThingDef>
+
   <!-- 维护坞 -->
   <ThingDef ParentName="BuildingBase">
     <defName>MF_Building_MaintenanceBay</defName>
@@ -46,6 +96,8 @@
       </buildingTags>
       <relatedBuildCommands>
         <li>MF_Building_ComponentStorage</li>
+        <li>MF_Building_ScaffoldStair</li>
+        <li>MF_Building_Scaffold</li>
       </relatedBuildCommands>
     </building>
     <comps>

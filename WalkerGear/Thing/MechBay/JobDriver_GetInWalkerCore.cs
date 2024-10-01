@@ -13,23 +13,51 @@ namespace WalkerGear
     public class JobDriver_GetInWalkerCore : JobDriver
     {
         private const TargetIndex maintenanceBay = TargetIndex.A;
+        protected Building_MaintenanceBay bay => this.job.GetTarget(maintenanceBay).Thing as Building_MaintenanceBay;
         protected const int wait = 200;
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            if (this.pawn.BodySize > 1.25)
+
+            if (!bay.CanGear(pawn))
             {
-                Messages.Message("WG_TooBigForPilot".Translate(), MessageTypeDefOf.RejectInput, false);
+                Messages.Message("WG_ApparelLayerTaken".Translate(GetActor().Name.ToString()), MessageTypeDefOf.RejectInput, false);
                 return false;
             }
-            if (pawn.CurJob.GetTarget(TargetIndex.A).Thing is Building_MaintenanceBay bay && !bay.CanGear(pawn))
+
+            if (bay.GetGearCore.def.HasModExtension<ModExtWalkerCore>())
             {
-                Messages.Message("WG_ApparelLayerTaken".Translate(), MessageTypeDefOf.RejectInput, false);
-                return false;
+                ModExtWalkerCore mod = bay.GetGearCore.def.GetModExtension<ModExtWalkerCore>();
+                if (mod.RequireAdult && !pawn.DevelopmentalStage.Adult())
+                {
+                    Messages.Message("WG_TooYoungToPilot".Translate(GetActor().Name.ToString()), MessageTypeDefOf.RejectInput, false);
+                    return false;
+                }
+                if (pawn.BodySize > mod.BodySizeCap)
+                {
+                    Messages.Message("WG_TooBigForPilot".Translate(GetActor().Name.ToString()), MessageTypeDefOf.RejectInput, false);
+                    return false;
+                }
+                if (mod.RequiredApparelTag != null)
+                {
+                    if (!GetActor().apparel.WornApparel.Where(p => p.def.apparel.tags.Contains(mod.RequiredApparelTag)).Any())
+                    {
+                        Messages.Message("WG_RequirePilotSuit".Translate(GetActor().Name.ToString()), MessageTypeDefOf.RejectInput, false);
+                        return false;
+                    }
+                }
+                if (mod.RequiredBionicTag != null)
+                {
+                    Messages.Message("WG_TooYoungToPilot".Translate(GetActor().Name.ToString()), MessageTypeDefOf.RejectInput, false);
+                    return false;
+                }
             }
-            if (!pawn.DevelopmentalStage.Adult())
+            else
             {
-                Messages.Message("WG_TooYoungToPilot".Translate(), MessageTypeDefOf.RejectInput, false);
-                return false;
+                if (this.pawn.BodySize > 1.25)
+                {
+                    Messages.Message("WG_TooBigForPilot".Translate(GetActor().Label), MessageTypeDefOf.RejectInput, false);
+                    return false;
+                }
             }
             return this.pawn.Reserve(this.job.GetTarget(maintenanceBay), this.job, errorOnFailed: errorOnFailed);
         }

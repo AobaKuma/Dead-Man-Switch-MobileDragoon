@@ -61,7 +61,7 @@ namespace WalkerGear
             if (pawn.equipment.Primary == null) return true;
             if (pawn.equipment.Primary.HasComp<CompApparelForcedWeapon>())
             {
-                cantReason += "HasMechWeapon".Translate();
+                cantReason += "WG_HasMechWeapon".Translate();
                 return false;
             }
             return true;

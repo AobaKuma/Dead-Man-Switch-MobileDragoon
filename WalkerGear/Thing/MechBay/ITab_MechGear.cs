@@ -14,7 +14,7 @@ namespace WalkerGear
         public ITab_MechGear()
         {
             size = new Vector2(512f, 368f);
-            labelKey = "TabMechGear".Translate();
+            labelKey = "WG_TabMechGear".Translate();
         }
 
         private const float side = 80f;
@@ -33,7 +33,7 @@ namespace WalkerGear
             //Draw Title
             {
                 Anchor = TextAnchor.UpperRight;
-                string title = "MechSolution".Translate();
+                string title = "WG_MechSolution".Translate();
                 var titleSize = CalcSize(title);
                 Widgets.LabelFit(new(new(inner.xMax - titleSize.x - 20f, inner.y), titleSize), title);
                 Anchor = TextAnchor.UpperLeft;
@@ -271,7 +271,7 @@ namespace WalkerGear
 
             if (modules.EnumerableNullOrEmpty())
             {
-                options.Add(new("NoModuleForSlot", null));
+                options.Add(new("WG_NoModuleForSlot".Translate(), null));
                 return options;
             }
             foreach (var thing in modules)
@@ -286,12 +286,12 @@ namespace WalkerGear
         private void DrawStatEntries(Rect rect, Thing thing)
         {
             WidgetRow row = new(rect.x, rect.y, UIDirection.RightThenDown, rect.width, gap: -8);
-            row.Label("Performance".Translate());
+            row.Label("WG_Performance".Translate());
             row.Gap(int.MaxValue);
             float loadPercent = Mathf.Max(1f, CurrentLoad / MassCapacity);
             row.FillableBar(rect.width, 16f, loadPercent, $"{CurrentLoad} / {MassCapacity}", WalkerGear_Core.fBarTex);
             //replace
-            row.Label("OverallArmor".Translate());
+            row.Label("WG_OverallArmor".Translate());
             foreach (StatDef statDef in toDraw)
             {
                 float statValue = thing.GetStatValue(statDef);

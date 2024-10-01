@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
-using Mono.Unix.Native;
 using RimWorld;
 using UnityEngine;
 using Verse;
 using Verse.AI;
 using Verse.Noise;
+
 
 
 namespace WalkerGear
@@ -132,7 +132,6 @@ namespace WalkerGear
             return ComponentsCache;
         }
         private List<CompWalkerComponent> ComponentsCache;
-
         public void TryUpdateOccupiedSlotsCache(bool force = false)
         {
             if (!force && !isOccupiedSlotDirty)
@@ -164,8 +163,6 @@ namespace WalkerGear
         public void RemoveModules(SlotDef slot, bool updateNow = true)
         {
             if (!occupiedSlots.ContainsKey(slot)) return;
-            if (slot.isCoreFrame)
-
             toRemove.Clear();
             GetSupportedSlotRecur(slot);
             foreach (var s in toRemove)
@@ -184,20 +181,26 @@ namespace WalkerGear
 
         public void AddOrReplaceModule(Thing thing)
         {
-            if (!thing.TryGetComp(out CompWalkerComponent c)) return;
-            if (c.Props.slots.Where(s => s.isCoreFrame).Any() && GetGearCore!=null)
+            if (!thing.TryGetComp(out CompWalkerComponent comp)) return;
+            if (comp.Props.slots.Where(slot => slot.isCoreFrame).Any() && GetGearCore != null)
             {
-                RemoveModules(GetGearCore.GetComp<CompWalkerComponent>().Props.slots.Where(l => l.isCoreFrame).First());
-            }
-            else
-            {
-                foreach (var s in c.Props.slots)
-                {
-                    RemoveModules(s, false);
-                }
+                //如果這個要裝上的模塊是CoreFrame
+                ClearAllModules();
             }
             Add(thing);
             TryUpdateOccupiedSlotsCache(true);
+        }
+        public void ClearAllModules()
+        {
+            var comp = GetGearCore.GetComp<CompWalkerComponent>();
+            RemoveModules(GetGearCore.GetComp<CompWalkerComponent>().Props.slots.Where(l => l.isCoreFrame).First());
+            foreach (var slot in comp.Props.slots)
+            {
+                foreach (var s in slot.supportedSlots)
+                {
+                    RemoveModules(s, true);
+                }
+            }
         }
 
         public IEnumerable<Thing> GetAvailableModules(SlotDef slotDef, bool IsCore = false)
@@ -299,7 +302,7 @@ namespace WalkerGear
             {
                 return "NoPower".Translate().CapitalizeFirst();
             }
-            if (pawn.apparel.WornApparel.Any((a) => a is WalkerGear_Core)) return "WG_Disabled_AlreadyHasCoreFrame".Translate().CapitalizeFirst();
+            if (pawn.apparel.WornApparel.Any((a) => a is WalkerGear_Core)) return "WG_Disabled_AlreadyHasCoreFrame".Translate(pawn.Name.ToString()).CapitalizeFirst();
             if (!HasGearCore) return "WG_Disabled_NoCoreFrame".Translate().CapitalizeFirst();
             return true;
         }

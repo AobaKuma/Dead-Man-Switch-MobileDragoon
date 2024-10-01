@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.QuestGen;
 using RimWorld.Utility;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,20 @@ namespace WalkerGear
                 return props as CompProperties_WalkerComponent;
             }
         }
+        public List<SlotDef> Slots => Props.slots;
+        public List<int> TakenUI
+        {
+            get
+            {
+                List<int> list = new List<int>();
+                foreach (SlotDef slot in Slots)
+                {
+                    list.Add(slot.uiPriority);
+                }
+                return list;
+            }
+        }
+
         public ThingDef AmmoDef => ammoDef;
         public int MaxCharges => maxCharges;
         public int RemainingCharges
@@ -161,10 +176,6 @@ namespace WalkerGear
             }
             set
             {
-                if (DebugSettings.godMode)
-                {
-                    Log.Message(value);
-                }
                 if (parent is Apparel)
                 {
                     hp = value;
@@ -217,6 +228,19 @@ namespace WalkerGear
             if (slots.NullOrEmpty())
             {
                 return base.ConfigErrors(parentDef).Append("No proper slot");
+            }
+
+            List<int> list = new List<int>();
+            foreach (SlotDef slot in slots)
+            {
+                if (list.Contains(slot.uiPriority))
+                {
+                    return base.ConfigErrors(parentDef).Append("Defined slots are using duplicated uiPriority");
+                }
+                else
+                {
+                    list.Add(slot.uiPriority);
+                }
             }
             return base.ConfigErrors(parentDef);
         }

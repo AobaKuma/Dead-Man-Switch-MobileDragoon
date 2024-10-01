@@ -439,7 +439,7 @@ namespace WalkerGear
 
             if (!anything && !Find.World.Impassable(tile))
             {
-                yield return new FloatMenuOption("DMS_EjectToTile".Translate(), delegate
+                yield return new FloatMenuOption("WG_EjectToTile".Translate(), delegate
                 {
                     launchAction(tile, null);
                 });

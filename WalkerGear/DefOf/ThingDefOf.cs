@@ -11,5 +11,4 @@ namespace WalkerGear
 		public static ThingDef MF_Building_Wreckage;
         public static ThingDef DMS_PawnFlyer;
     }
-
 }

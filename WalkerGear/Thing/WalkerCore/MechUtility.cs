@@ -14,7 +14,7 @@ namespace WalkerGear
             if (pawn == null) return;
             if (pawn.equipment.Primary != null && !EquipmentUtility.CanEquip(pawn.equipment.Primary, pawn))
             {
-                Messages.Message("WG_WeaponDropped".Translate(), pawn, MessageTypeDefOf.NeutralEvent, false);
+                Messages.Message("WG_WeaponDropped".Translate(pawn.Name.ToString()), pawn, MessageTypeDefOf.NeutralEvent, false);
                 if (pawn.Map == null)
                 {
                     pawn.equipment.DestroyEquipment(pawn.equipment.Primary);

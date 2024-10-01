@@ -1,14 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  DMS_MobileDragoon
-
-DMS_MobileDragoonAdvanced
-
-DMS_MobileDragoonElite
-
-DMS_MobileDragoonModule
-
-
   <ResearchProjectDef ParentName="DMS_BaseTech">
     <defName>DMS_MobileDragoonBasis</defName>
     <!-- PF基本上就是只有左右手跟頭盔的小型龍騎兵 -->

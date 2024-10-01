@@ -16,13 +16,13 @@ namespace WalkerGear
         #region IHealthParms
         public float HPPercent => Health / HealthMax;
 
-        public string PanelName => "StructurePoint".Translate();
+        public string PanelName => "WG_StructurePoint".Translate();
 
         public string LabelHPPart => Health.ToString("F1");
 
         public string LabelMaxHPPart => HealthMax.ToString("F0");
 
-        public string Tooltips => "StructurePoint.Tooltip".Translate();
+        public string Tooltips => "WG_StructurePoint.Tooltip".Translate();
 
         public Texture2D FullShieldBarTex => fBarTex;
         public static readonly Texture2D fBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.2f, 0.2f, 0.24f));
@@ -44,48 +44,12 @@ namespace WalkerGear
             }
         }
         public float HealthDamaged => HealthMax - Health;
-        public bool safetyDisabled = false;
         public BuildingWreckageExtension BuildingWreckage => def.GetModExtension<BuildingWreckageExtension>();
         public override IEnumerable<Gizmo> GetWornGizmos()
         {
             foreach (Gizmo gizmo in base.GetWornGizmos())
             {
                 yield return gizmo;
-            }
-            Command_Toggle toggle = new Command_Toggle
-            {
-                Order = -999f,
-                Disabled = !this.Wearer.HomeFaction.IsPlayer,
-                icon = safetyDisabled ? Resources.GetSafetyIcon_Disabled : Resources.GetSafetyIcon,
-                defaultLabel = "WG_SafetyLock".Translate(),
-                defaultDesc = "WG_SafetyLock_Desc".Translate(),
-                isActive = () => safetyDisabled,
-                toggleAction = delegate
-                {
-                    safetyDisabled = !safetyDisabled;
-                    //if (safetyDisabled) Messages.Message("WG_SafetyDisabled", MessageTypeDefOf.CautionInput, false);
-                }
-            };
-            yield return toggle;
-
-            if (toggle.isActive())
-            {
-                Command_Action command = new Command_Action
-                {
-                    Order = -998f,
-                    defaultLabel = "WG_EmergencyEject".Translate(),
-                    defaultDesc = "WG_EmergencyEject_Desc".Translate(),
-                    icon = Resources.GetOutIcon,
-                    action = delegate
-                    {
-                        Eject();
-                    }
-                };
-                if (!DebugSettings.godMode && (!base.Wearer.IsPlayerControlled || !base.Wearer.Drafted))
-                {
-                    command.Disable("WG_Disabled_NeedControlledAndDrafted".Translate());
-                }
-                yield return command;
             }
             yield return new Gizmo_HealthPanel(this);
         }
@@ -120,13 +84,13 @@ namespace WalkerGear
                 EffecterDefOf.Deflect_Metal_Bullet.SpawnAttached(Wearer, Wearer.MapHeld, 1f);
             }
             else
-            { 
+            {
                 EffecterDefOf.DamageDiminished_Metal.SpawnAttached(Wearer, Wearer.MapHeld, 1f);
                 if (HPPercent < 0.5f && Rand.Chance(0.25f))
                 {
                     FleckMaker.ThrowMicroSparks(Wearer.DrawPos, Wearer.Map);
                     GenPlace.TryPlaceThing(ThingMaker.MakeThing(RimWorld.ThingDefOf.Filth_Fuel), Wearer.Position, Wearer.Map, ThingPlaceMode.Near);
-                } 
+                }
             }
 
             if (Health <= 0)
@@ -188,12 +152,6 @@ namespace WalkerGear
         public void CheckModules()
         {
             modules.Clear();
-            if (DebugSettings.godMode)
-            {
-                Log.Message("Wearer: " + Wearer == null);
-                Log.Message("Wearer.apparel: " + Wearer.apparel == null);
-                Log.Message("Wearer.apparel.WornApparel: " + Wearer.apparel.WornApparel == null);
-            }
             foreach (Apparel a in Wearer.apparel.WornApparel)
             {
                 if (a.HasComp<CompWalkerComponent>())
@@ -282,6 +240,13 @@ namespace WalkerGear
         private float healthInt = -1;
         public List<Thing> modules = new();
 
+    }
 
+    public class ModExtWalkerCore : DefModExtension
+    {
+        public float BodySizeCap = 1.25f;
+        public string RequiredApparelTag = null;
+        public string RequiredBionicTag = null;
+        public bool RequireAdult = false;
     }
 }

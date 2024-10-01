@@ -45,9 +45,9 @@ namespace WalkerGear
                         return false;
                     }
                 }
-                if (mod.RequiredBionicTag != null)
+                if (mod.RequiredHediff != null && !GetActor().health.hediffSet.HasHediff(mod.RequiredHediff))
                 {
-                    Messages.Message("WG_TooYoungToPilot".Translate(GetActor().Name.ToString()), MessageTypeDefOf.RejectInput, false);
+                    Messages.Message("WG_RequireBionic".Translate(GetActor().Name.ToString()), MessageTypeDefOf.RejectInput, false);
                     return false;
                 }
             }

@@ -241,12 +241,4 @@ namespace WalkerGear
         public List<Thing> modules = new();
 
     }
-
-    public class ModExtWalkerCore : DefModExtension
-    {
-        public float BodySizeCap = 1.25f;
-        public string RequiredApparelTag = null;
-        public string RequiredBionicTag = null;
-        public bool RequireAdult = false;
-    }
 }

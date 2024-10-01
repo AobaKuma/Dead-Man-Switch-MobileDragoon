@@ -15,14 +15,13 @@ namespace WalkerGear
         {
             this.FailOnDespawnedOrNull(maintenanceBay);
             yield return Toils_Goto.GotoThing(maintenanceBay, PathEndMode.Touch);
-
             yield return Toils_General.Wait(200);
             yield return new Toil()
             {
                 initAction = () =>
                 {
                     Building_EjectorBay ejectorBay = Ejector;
-                    pawn.CurJob.Clear(); 
+                    pawn.CurJob.Clear();
                     pawn.DeSpawnOrDeselect();
                     ejectorBay.GetDirectlyHeldThings().TryAddOrTransfer(pawn);
                 }

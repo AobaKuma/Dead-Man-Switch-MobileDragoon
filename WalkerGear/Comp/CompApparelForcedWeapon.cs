@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using HarmonyLib;
+using RimWorld;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,8 +37,13 @@ namespace WalkerGear
         {
             base.Notify_Equipped(pawn);
             NeedRemoveWeapon = false;
-
-            pawn.equipment.MakeRoomFor(Weapon);
+            //pawn.equipment.MakeRoomFor(Weapon);
+            if (pawn.equipment.Primary != null)
+            {
+                ThingWithComps i = pawn.equipment.Primary;
+                pawn.equipment.Remove(i);
+                pawn.inventory.TryAddAndUnforbid(i);
+            }
             pawn.equipment.AddEquipment(Weapon);
             weaponStorage = null;
         }
@@ -47,6 +53,19 @@ namespace WalkerGear
             NeedRemoveWeapon = true;
             pawn.equipment.Remove(Weapon);
             weaponStorage = Weapon;
+
+            var things = pawn.inventory?.GetDirectlyHeldThings().Where(t => t.def.equipmentType == EquipmentType.Primary);
+            if (!things.EnumerableNullOrEmpty())
+            {
+                foreach (Thing t in things)
+                {
+                    ThingWithComps thing = t as ThingWithComps;
+                    if (!EquipmentUtility.CanEquip(thing, pawn)) continue;
+                    pawn.inventory.innerContainer.Remove(thing);
+                    pawn.equipment.AddEquipment(thing);
+                }
+                
+            }
         }
         public override void PostExposeData()
         {
@@ -65,7 +84,7 @@ namespace WalkerGear
                     {
                         return this.weapon = weaponStorage;
                     }
-                    var weapon = Props.weapon;
+                    ThingDef weapon = Props.weapon;
                     if (Props.weapon != null && Props.weapon.HasComp<CompApparelForcedWeapon>())
                     {
                         this.weapon = ThingMaker.MakeThing(weapon) as ThingWithComps;

@@ -30,15 +30,4 @@ namespace WalkerGear
             base.TryAssignPawn(pawn);
         }
     }
-
-    /// <summary>
-    /// 透過TickLong來檢測Pawn是否該停機或上機。
-    /// </summary>
-    public class Building_ParkingSpot : Building_MaintenanceBay
-    {
-        public override void Tick()
-        {
-            base.Tick();
-        }
-    }
 }

@@ -82,6 +82,7 @@ namespace WalkerGear
                 Rect slgizmoRect = new(slPosition, size);
                 Widgets.Label(slgizmoRect, text);
             }
+
             foreach (CompWalkerComponent slots in Parent.GetwalkerComponents()) //這樣寫主要是為了子模塊提供槽位的狀況。
             {
                 foreach (SlotDef item in slots.Props.slots)
@@ -92,7 +93,6 @@ namespace WalkerGear
                     }
                 }
             }
-                
 
             Vector2 position = positions[0];
             //stats

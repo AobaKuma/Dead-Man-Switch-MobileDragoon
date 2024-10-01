@@ -47,6 +47,6 @@
 
   <WG_HasMechWeapon>holding module weapon</WG_HasMechWeapon>
 
-  <WG_Disabled_VictimInWalkerCore>the injured is kepted in a frame.</WG_Disabled_VictimInWalkerCore>
+  <WG_Disabled_VictimInWalkerCore>Cannot rescue: the injured is kepted in a frame.</WG_Disabled_VictimInWalkerCore>
 
 </LanguageData>

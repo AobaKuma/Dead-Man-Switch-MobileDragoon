@@ -11,10 +11,6 @@ using Verse.Noise;
 
 namespace WalkerGear
 {
-    public interface IMechParkable
-    {
-        public bool CanPark(WalkerGear_Core core);
-    }
     [StaticConstructorOnStartup]
     public partial class Building_MaintenanceBay : Building
     {
@@ -36,7 +32,7 @@ namespace WalkerGear
         public override IEnumerable<Gizmo> GetGizmos()
         {
 
-            if (HasGearCore && this.Faction.IsPlayer)
+            if (HasGearCore && Faction.IsPlayer)
             {
                 Command_Target command_GetIn = new()
                 {
@@ -44,7 +40,7 @@ namespace WalkerGear
                     targetingParams = TargetingParameters.ForPawns(),
                     action = (tar) =>
                     {
-                        if (tar.Pawn == null || !CanAcceptPawn(tar.Pawn)) return;
+                        if (tar.Pawn == null || !CanAcceptPawn(tar.Pawn) || tar.Pawn.Downed) return;
                         tar.Pawn.jobs.StartJob(JobMaker.MakeJob(JobDefOf.WG_GetInWalkerCore, this));
                     }
                 };
@@ -54,12 +50,6 @@ namespace WalkerGear
             {
                 yield return gizmo;
             }
-        }
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Deep.Look(ref cachePawn, "cachedPawn");
-            SetItabCacheDirty();
         }
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
@@ -103,6 +93,12 @@ namespace WalkerGear
             if (cachePawn == null) return;
             Apparel a = MechUtility.Conversion(t) as Apparel;
             DummyApparels.Wear(a);
+        }
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Deep.Look(ref cachePawn, "cachedPawn");
+            SetItabCacheDirty();
         }
     }
     //给Itab提供的功能

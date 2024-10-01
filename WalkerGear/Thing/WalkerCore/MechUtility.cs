@@ -1,14 +1,32 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using UnityEngine;
 using Verse;
+using Verse.AI;
 using static Unity.Burst.Intrinsics.X86.Avx;
 
 namespace WalkerGear
 {
+    [StaticConstructorOnStartup]
     public static class MechUtility
     {
+        public static List<ThingDef> bays;
+        public static List<ThingDef> cores;
+        static MechUtility()
+        {
+            List<ThingDef> defs = new();
+            bays = DefDatabase<ThingDef>.AllDefs.Where((ThingDef def) => def.thingClass.IsSubclassOf(typeof(Building_MaintenanceBay)) || def.thingClass == typeof(WalkerGear_Core)).ToList();
+            cores = DefDatabase<ThingDef>.AllDefs.Where((ThingDef def) => def.thingClass.IsSubclassOf(typeof(WalkerGear_Core)) || def.thingClass == typeof(WalkerGear_Core)).ToList();
+        }
+        public static Thing GetClosestBay(Pawn pawn)
+        {
+            IEnumerable<Building_MaintenanceBay> bays = pawn.MapHeld.listerBuildings.AllBuildingsColonistOfClass<Building_MaintenanceBay>();
+
+            if (!bays.Any()) return null;
+            return GenClosest.ClosestThing_Global_Reachable(pawn.PositionHeld, pawn.MapHeld, bays, PathEndMode.InteractionCell, TraverseParms.For(pawn), 9999f, validator: c => !(c as Building_MaintenanceBay).HasGearCore);
+        }
         public static void WeaponDropCheck(Pawn pawn)
         {
             if (pawn == null) return;
@@ -35,34 +53,24 @@ namespace WalkerGear
             {QualityCategory.Masterwork,3f},
             {QualityCategory.Legendary,3.6f }
         };
-        public static bool GetWalkerCore(this Pawn pawn, out WalkerGear_Core core)
-        {
-            Pawn_ApparelTracker apparel = pawn.apparel;
-            IEnumerable<Apparel> enumerable = apparel?.WornApparel;
-            foreach (Apparel apparel2 in (enumerable ?? Enumerable.Empty<Apparel>()))
-            {
-                WalkerGear_Core apparelCore = apparel2 as WalkerGear_Core;
-                bool flag = apparelCore != null;
-                if (flag)
-                {
-                    core = apparelCore;
-                    return true;
-                }
-            }
-            core = null;
-            return false;
-        }
         public static bool PawnWearingWalkerCore(Pawn pawn)
         {
             if (pawn == null) return false;
             if (pawn.NonHumanlikeOrWildMan()) return false;
 
-            foreach (Apparel item in pawn.apparel?.WornApparel)
+            if (pawn.apparel.WornApparel.ContainsAny(c => cores.Contains(c.def))) return true;
+            return false;
+        }
+        public static bool GetWalkerCore(this Pawn pawn, out WalkerGear_Core core)
+        {
+            core = null;
+            if (!PawnWearingWalkerCore(pawn)) return false;
+
+            IEnumerable<Apparel> A = pawn.apparel?.WornApparel?.Where(c => cores.Contains(c.def));
+            if (!A.EnumerableNullOrEmpty())
             {
-                if (item is WalkerGear_Core)
-                {
-                    return true;
-                }
+                core = A.First() as WalkerGear_Core;
+                return true;
             }
             return false;
         }

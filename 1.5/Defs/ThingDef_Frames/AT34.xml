@@ -163,6 +163,7 @@
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.12</MoveSpeed>
+      <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/AT34/helmet</wornGraphicPath>

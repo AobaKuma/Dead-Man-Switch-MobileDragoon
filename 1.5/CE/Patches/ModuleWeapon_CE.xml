@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--=====Patch tools=====-->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[@Name="DMS_BaseDragoonWeapon"]/tools</xpath>
+                <value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>stock</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>24</power>
+                            <cooldownTime>3.05</cooldownTime>
+                            <chanceFactor>0.7</chanceFactor>
+                            <armorPenetrationBlunt>5.850</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>barrel</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>16</power>
+                            <cooldownTime>2.55</cooldownTime>
+                            <armorPenetrationBlunt>3.680</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>muzzle</label>
+                            <capacities>
+                                <li>Poke</li>
+                            </capacities>
+                            <power>24</power>
+                            <cooldownTime>2.85</cooldownTime>
+                            <chanceFactor>1.5</chanceFactor>
+                            <armorPenetrationBlunt>5.850</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                        </li>
+                    </tools>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[@Name="DMS_BaseDragoonWeapon"]/statBases</xpath>
+                <value>
+                    <ToughnessRating>12</ToughnessRating>
+                </value>
+            </li>
+
+            <!--Remove speed penalty-->
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/ThingDef[defName="DMS_Dragoon_LMG"]/equippedStatOffsets/MoveSpeed</xpath>
+            </li>
+
+            <!--===== Draggon L(?)MG =====-->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>DMS_Dragoon_LMG</defName>
+                <statBases>
+                    <Mass>89</Mass>
+                    <Bulk>58.43</Bulk>
+                    <SwayFactor>3.12</SwayFactor>
+                    <ShotSpread>0.04</ShotSpread>
+                    <SightsEfficiency>1</SightsEfficiency>
+                    <RangedWeapon_Cooldown>1.85</RangedWeapon_Cooldown>
+                </statBases>
+                <Properties>
+                    <recoilAmount>1.87</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Bullet_20x102mmNATO_AP</defaultProjectile>
+                    <burstShotCount>10</burstShotCount>
+                    <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                    <warmupTime>2.1</warmupTime>
+                    <range>78</range>
+                    <soundCast>DMS_MachineGunHeavy_Shot</soundCast>
+                    <soundCastTail>GunTail_Heavy</soundCastTail>
+                    <muzzleFlashScale>20</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>120</magazineSize>
+                    <reloadTime>12</reloadTime>
+                    <ammoSet>AmmoSet_20x102mmNATO</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aiUseBurstMode>TRUE</aiUseBurstMode>
+                    <aiAimMode>AimedShot</aiAimMode>
+                    <aimedBurstShotCount>5</aimedBurstShotCount>
+                    <noSingleShot>true</noSingleShot>
+                </FireModes>
+                <weaponTags>
+                    <li>CE_AI_Suppressive</li>
+                </weaponTags>
+            </li>
+
+            <!--===== Dragoon Shotgun =====-->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>DMS_Dragoon_Shotgun</defName>
+                <statBases>
+                    <Mass>34.50</Mass>
+                    <Bulk>23.25</Bulk>
+                    <SwayFactor>2.24</SwayFactor>
+                    <ShotSpread>0.17</ShotSpread>
+                    <SightsEfficiency>1.0</SightsEfficiency>
+                    <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+                </statBases>
+                <Properties>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Bullet_40x102mm_Buck</defaultProjectile>
+                    <warmupTime>0.6</warmupTime>
+                    <range>25</range>
+                    <soundCast>Shot_Shotgun</soundCast>
+                    <soundCastTail>GunTail_Heavy</soundCastTail>
+                    <muzzleFlashScale>12</muzzleFlashScale>
+                    <recoilAmount>3.23</recoilAmount>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>6</magazineSize>
+                    <reloadOneAtATime>true</reloadOneAtATime>
+                    <reloadTime>1.2</reloadTime>
+                    <ammoSet>AmmoSet_40x102mm</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aiAimMode>Snapshot</aiAimMode>
+                </FireModes>
+                <weaponTags>
+                    <li>CE_AI_AssaultWeapon</li>
+                </weaponTags>
+            </li>
+
+        </operations>
+    </Operation>
+</Patch>

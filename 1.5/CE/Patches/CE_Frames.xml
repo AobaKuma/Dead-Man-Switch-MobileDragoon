@@ -2,6 +2,55 @@
 
 <Patch>
 
+    <!--Base-->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[@Name="DMS_ModuleApparelCore"]/tools</xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>left mechanical fist</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>24</power>
+                    <cooldownTime>1.96</cooldownTime>
+                    <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                    <armorPenetrationBlunt>12.756</armorPenetrationBlunt>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>right mechanical fist</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>24</power>
+                    <cooldownTime>1.96</cooldownTime>
+                    <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                    <armorPenetrationBlunt>12.756</armorPenetrationBlunt>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>left mechanical leg</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>18</power>
+                    <cooldownTime>2.87</cooldownTime>
+                    <linkedBodyPartsGroup>Legs</linkedBodyPartsGroup>
+                    <armorPenetrationBlunt>9.372</armorPenetrationBlunt>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>right mechanical leg</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>18</power>
+                    <cooldownTime>2.87</cooldownTime>
+                    <linkedBodyPartsGroup>Legs</linkedBodyPartsGroup>
+                    <armorPenetrationBlunt>9.372</armorPenetrationBlunt>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
     <!--AT-34 Core-->
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Core"]/statBases</xpath>
@@ -30,6 +79,12 @@
             <ArmorRating_Blunt>48</ArmorRating_Blunt>
         </value>
     </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Core"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.60</ArmorRating_Heat>
+        </value>
+    </Operation>
 
     <!--AT-34 Helmet-->
     <Operation Class="PatchOperationAdd">
@@ -39,6 +94,14 @@
             <WornBulk>16</WornBulk>
         </value>
     </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Helmet"]/equippedStatOffsets</xpath>
+        <value>
+            <SmokeSensitivity>-1</SmokeSensitivity>
+        </value>
+    </Operation>
+
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Helmet"]/statBases/ArmorRating_Sharp</xpath>
         <value>
@@ -49,6 +112,12 @@
         <xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Helmet"]/statBases/ArmorRating_Blunt</xpath>
         <value>
             <ArmorRating_Blunt>48</ArmorRating_Blunt>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Helmet"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.60</ArmorRating_Heat>
         </value>
     </Operation>
 
@@ -80,6 +149,12 @@
             <ArmorRating_Blunt>48</ArmorRating_Blunt>
         </value>
     </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Core"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.60</ArmorRating_Heat>
+        </value>
+    </Operation>
 
     <!--PV-8 Helmet-->
     <Operation Class="PatchOperationAdd">
@@ -89,6 +164,14 @@
             <WornBulk>16</WornBulk>
         </value>
     </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Helmet"]/equippedStatOffsets</xpath>
+        <value>
+            <SmokeSensitivity>-1</SmokeSensitivity>
+        </value>
+    </Operation>
+
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Helmet"]/statBases/ArmorRating_Sharp</xpath>
         <value>
@@ -99,6 +182,12 @@
         <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Helmet"]/statBases/ArmorRating_Blunt</xpath>
         <value>
             <ArmorRating_Blunt>48</ArmorRating_Blunt>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Helmet"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.60</ArmorRating_Heat>
         </value>
     </Operation>
 
@@ -130,6 +219,12 @@
             <ArmorRating_Blunt>31</ArmorRating_Blunt>
         </value>
     </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PF3_Core"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.20</ArmorRating_Heat>
+        </value>
+    </Operation>
 
     <!--FA-47 Core-->
     <Operation Class="PatchOperationAdd">
@@ -159,6 +254,13 @@
             <ArmorRating_Blunt>88</ArmorRating_Blunt>
         </value>
     </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_FA47_Core"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.90</ArmorRating_Heat>
+        </value>
+    </Operation>
+
 
     <!--FA-47 Helmet-->
     <Operation Class="PatchOperationAdd">
@@ -168,6 +270,14 @@
             <WornBulk>16</WornBulk>
         </value>
     </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_FA47_Helmet"]/equippedStatOffsets</xpath>
+        <value>
+            <SmokeSensitivity>-1</SmokeSensitivity>
+        </value>
+    </Operation>
+
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_FA47_Helmet"]/statBases/ArmorRating_Sharp</xpath>
         <value>
@@ -180,5 +290,82 @@
             <ArmorRating_Blunt>88</ArmorRating_Blunt>
         </value>
     </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_FA47_Helmet"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.90</ArmorRating_Heat>
+        </value>
+    </Operation>
+
+    <!--Groyne Helmet-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_Groyne_Helmet"]/statBases</xpath>
+        <value>
+            <Bulk>40</Bulk>
+            <WornBulk>21</WornBulk>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_Groyne_Helmet"]/equippedStatOffsets</xpath>
+        <value>
+            <SmokeSensitivity>-0.8</SmokeSensitivity>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_Groyne_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>28</ArmorRating_Sharp>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_Groyne_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>62</ArmorRating_Blunt>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_Groyne_Helmet"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.35</ArmorRating_Heat>
+        </value>
+    </Operation>
+
+    <!--Stahlhelm Helmet-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_Stahlhelm_Helmet"]/statBases</xpath>
+        <value>
+            <Bulk>25</Bulk>
+            <WornBulk>16</WornBulk>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_Stahlhelm_Helmet"]/equippedStatOffsets</xpath>
+        <value>
+            <SmokeSensitivity>-1</SmokeSensitivity>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_Stahlhelm_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>16</ArmorRating_Sharp>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_Stahlhelm_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>36</ArmorRating_Blunt>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_Stahlhelm_Helmet"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.20</ArmorRating_Heat>
+        </value>
+    </Operation>
+
 
 </Patch>

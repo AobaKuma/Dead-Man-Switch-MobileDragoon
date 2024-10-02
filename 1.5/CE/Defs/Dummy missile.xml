@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="BaseWeaponTurret">
+        <defName>Swarmmissile_EnableAmmo</defName>
+        <label>Swarm missile</label>
+        <description>swarm missile enable</description>
+        <techLevel>Industrial</techLevel>
+        <graphicData>
+            <texPath>UI/Icons/ThingCategories/CaliberRocket</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <statBases>
+            <Mass>10000</Mass>
+            <MarketValue>99999</MarketValue>
+        </statBases>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_57mmRocket_HE</defaultProjectile>
+                <warmupTime>1.5</warmupTime>
+                <range>75</range>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>13</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>10</magazineSize>
+                <reloadTime>9.2</reloadTime>
+                <ammoSet>AmmoSet_57mmRocket_direct</ammoSet>
+            </li>
+        </comps>
+        <relicChance>0</relicChance>
+    </ThingDef>
+
+
+</Defs>

@@ -16,7 +16,7 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <Mass>20</Mass>
+      <Mass>50</Mass>
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -57,6 +57,7 @@
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.3</MoveSpeed>
+      <ToxicEnvironmentResistance>0.75</ToxicEnvironmentResistance>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/Groyne/helmet</wornGraphicPath>
@@ -93,7 +94,7 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <Mass>20</Mass>
+      <Mass>35</Mass>
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -127,13 +128,14 @@
       <texPath>Things/Dragoon/Stahlhelm/helmet_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>50</Mass>
+      <Mass>35</Mass>
       <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.80</ArmorRating_Blunt>
       <ArmorRating_Heat>0.40</ArmorRating_Heat>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.3</MoveSpeed>
+      <ToxicEnvironmentResistance>0.6</ToxicEnvironmentResistance>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/Stahlhelm/helmet</wornGraphicPath>

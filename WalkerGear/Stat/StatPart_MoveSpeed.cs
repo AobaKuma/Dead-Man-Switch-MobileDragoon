@@ -7,11 +7,26 @@ namespace WalkerGear
 {
     public class StatPart_MoveSpeed : StatPart
     {
+        private Dictionary<Thing, float> AffectedModules = new Dictionary<Thing, float>();
+        private float GetBaseValue(WalkerGear_Core core) => core.GetStatValue(StatDefOf.MoveSpeed);
         public override string ExplanationPart(StatRequest req)
         {
-            if (IsWorking(req, out var def))
+            if (IsWorking(req, out WalkerGear_Core core))
             {
-                return "WG_ArmorSpeed".Translate() + " {0} c/s".Formatted(GetValue(req, def).ToString("0.##"));
+                string line = "\n\n" + "WG_PilotingFrame".Translate();
+                line += "\n" + "WG_ArmorSpeed".Translate() + " {0} c/s".Formatted(GetBaseValue(core).ToString("0.##"));
+                if (!AffectedModules.NullOrEmpty())
+                {
+                    foreach (var pair in AffectedModules)
+                    {
+                        line += "\n    " + pair.Key.LabelCap + ": " + " {0} c/s".Formatted(pair.Value.ToString("0.##"));
+                    }
+                }
+                if (core.Overload)
+                {
+                    line += "\n\n" + "WG_Overload".Translate() + "\n    " + StatDefOf.MoveSpeed.LabelCap + " x50%";
+                }
+                return line;
             }
             return null;
         }
@@ -23,14 +38,22 @@ namespace WalkerGear
                 val = GetValue(req, def);
             }
         }
-        private float GetValue(StatRequest req, WalkerGear_Core def)
+        private float GetValue(StatRequest req, WalkerGear_Core core)
         {
-            float baseStat = def.GetStatValue(StatDefOf.MoveSpeed);
-            IEnumerable<Apparel> enumerable = GetPawn(req).apparel?.WornApparel;
-            foreach (Apparel item in enumerable ?? Enumerable.Empty<Apparel>())
+            AffectedModules.Clear();
+            float baseStat = core.GetStatValue(StatDefOf.MoveSpeed);
+            foreach (Apparel item in core.modules.Cast<Apparel>())
             {
-                baseStat += item.def.equippedStatOffsets.GetStatOffsetFromList(StatDefOf.MoveSpeed);
+                //額外攜帶量
+                float v = item.def.equippedStatOffsets.GetStatOffsetFromList(StatDefOf.MoveSpeed);
+                if (v != 0)
+                {
+                    AffectedModules.Add(item, v);
+                    baseStat += v;
+                }
             }
+            if (core.Overload) return baseStat * 0.5f;
+
             return baseStat;
         }
         private Pawn GetPawn(StatRequest req)
@@ -42,20 +65,12 @@ namespace WalkerGear
             Log.Warning("Error: pawn not exist");
             return null;
         }
-        private bool IsWorking(StatRequest req, out WalkerGear_Core def)
+        private bool IsWorking(StatRequest req, out WalkerGear_Core core)
         {
-            def = null;
+            core = null;
             if (req.HasThing && req.Thing is Pawn pawn)
             {
-                IEnumerable<Apparel> enumerable = pawn.apparel?.WornApparel;
-                foreach (Apparel item in enumerable ?? Enumerable.Empty<Apparel>())
-                {
-                    if (item is WalkerGear_Core walkerGear_Core)
-                    {
-                        def = walkerGear_Core;
-                        return true;
-                    }
-                }
+                return MechUtility.GetWalkerCore(pawn, out core);
             }
             return false;
         }

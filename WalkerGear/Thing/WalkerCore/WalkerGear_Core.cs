@@ -16,7 +16,7 @@ namespace WalkerGear
         #region IHealthParms
         public float HPPercent => Health / HealthMax;
 
-        public string PanelName => "WG_StructurePoint".Translate();
+        public string PanelName => Wearer?.Name.ToStringShort + "\n" + "WG_StructurePoint".Translate();
 
         public string LabelHPPart => Health.ToString("F1");
 
@@ -45,6 +45,7 @@ namespace WalkerGear
         }
         public float HealthDamaged => HealthMax - Health;
         public BuildingWreckageExtension BuildingWreckage => def.GetModExtension<BuildingWreckageExtension>();
+
         public override IEnumerable<Gizmo> GetWornGizmos()
         {
             foreach (Gizmo gizmo in base.GetWornGizmos())
@@ -75,7 +76,10 @@ namespace WalkerGear
                     if (absorbed) return true;
                 }
             }
-
+            if (Rand.Chance(0.1f))
+            {
+                Health -= dinfo.Amount / 2f; return true;
+            }
             if (HPPercent < 0.5f && Rand.Chance(0.25f)) return false;
 
             float dmg = GetPostArmorDamage(ref dinfo);
@@ -229,6 +233,9 @@ namespace WalkerGear
             Scribe_Values.Look(ref combinedHealth, "healthMax", -1f);
             Scribe_Values.Look(ref healthInt, "healthInt", -1f);
             Scribe_Values.Look(ref colorInt, "colorInt", Color.white);
+            Scribe_Values.Look(ref totalCapacity, "totalCapacity", -1f);
+            Scribe_Values.Look(ref capacity, "capacity", -1f);
+            Scribe_Values.Look(ref deadWeight, "deadWeight", -1f);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 RefreshHP();
@@ -240,5 +247,21 @@ namespace WalkerGear
         private float healthInt = -1;
         public List<Thing> modules = new();
 
+
+        public bool Overload => this.capacity < this.deadWeight;
+        public float TotalCapacity { get { return totalCapacity; } protected set { } }
+        public float Capacity { get { return capacity; } protected set { } }
+        public float DeadWeight { get { return deadWeight; } protected set { } }
+
+        protected float totalCapacity;
+        protected float capacity;
+        protected float deadWeight;
+
+        public void ResetStats(float totalCapacity, float capacity, float deadWeight)
+        {
+            this.deadWeight = deadWeight;
+            this.totalCapacity = totalCapacity;
+            this.capacity = capacity;
+        }
     }
 }

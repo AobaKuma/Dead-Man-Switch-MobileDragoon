@@ -11,6 +11,7 @@
       <ThingDef>DMS_Apparel_JumpThruster</ThingDef>
     </descriptionHyperlinks>
     <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
       <Mass>60</Mass>
     </statBases>
     <recipeMaker>
@@ -38,6 +39,7 @@
       <texPath>Things/Dragoon/BurstThruster/apparel_south</texPath>
     </graphicData>
     <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
       <Mass>60</Mass>
       <JumpRange>14.9</JumpRange>
     </statBases>
@@ -109,7 +111,8 @@
       <ThingDef>DMS_Apparel_PackControlRelay</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <Mass>30</Mass>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>100</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonModule</researchPrerequisite>
@@ -137,7 +140,8 @@
       <texPath>Things/Dragoon/PackControlRelay/apparel_north</texPath>
     </graphicData>
     <statBases>
-      <Mass>30</Mass>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>100</Mass>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.2</MoveSpeed>
@@ -188,7 +192,8 @@
       <ThingDef>DMS_Apparel_PackEngineering</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <Mass>35</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>110</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
@@ -216,7 +221,8 @@
       <texPath>Things/Dragoon/PackEngineering/apparel_north</texPath>
     </graphicData>
     <statBases>
-      <Mass>35</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>110</Mass>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.2</MoveSpeed>
@@ -266,7 +272,8 @@
       <ThingDef>DMS_Apparel_PackCargo</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <Mass>35</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>50</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
@@ -294,7 +301,8 @@
       <texPath>Things/Dragoon/PackCargo/apparel_north</texPath>
     </graphicData>
     <statBases>
-      <Mass>35</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>50</Mass>
     </statBases>
     <equippedStatOffsets>
 			<CarryingCapacity>120</CarryingCapacity>
@@ -346,7 +354,8 @@
       <ThingDef>DMS_Apparel_PackFrame</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <Mass>35</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>80</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
@@ -377,7 +386,8 @@
       <texPath>Things/Modifications/HydraulicFrame/render_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>35</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>80</Mass>
     </statBases>
     <equippedStatOffsets>
 			<CarryingCapacity>100</CarryingCapacity>

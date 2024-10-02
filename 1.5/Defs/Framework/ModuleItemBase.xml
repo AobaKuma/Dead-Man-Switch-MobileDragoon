@@ -65,13 +65,20 @@
         <drawSize>1.00</drawSize>
     </graphicData>
     <drawGUIOverlay>true</drawGUIOverlay>
+    <apparel>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+      <anyTechLevelCanUseForWarmth>false</anyTechLevelCanUseForWarmth>
+      <blocksAddedPartWoundGraphics>true</blocksAddedPartWoundGraphics>
+    </apparel>
     <statBases>
         <MaxHitPoints>100</MaxHitPoints>
         <Flammability>0.0</Flammability>
-        <Mass>10</Mass>
+        <Mass>0</Mass>
     </statBases>
     <altitudeLayer>Item</altitudeLayer>
-    <alwaysHaulable>True</alwaysHaulable>
+    <alwaysHaulable>false</alwaysHaulable>
     <tickerType>Never</tickerType>
     <burnableByRecipe>false</burnableByRecipe>
     <smeltable>false</smeltable>

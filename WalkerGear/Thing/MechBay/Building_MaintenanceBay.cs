@@ -2,7 +2,9 @@
 using System.Linq;
 using HarmonyLib;
 using RimWorld;
+using Steamworks;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using Verse;
 using Verse.AI;
 using Verse.Noise;
@@ -62,6 +64,7 @@ namespace WalkerGear
         }
         public void RemoveModule(Thing t)
         {
+            if (t == null) return;
             if (cachePawn == null) return;
             if (DummyApparels.Contains(t))
             {
@@ -92,7 +95,18 @@ namespace WalkerGear
         {
             if (cachePawn == null) return;
             Apparel a = MechUtility.Conversion(t) as Apparel;
+            foreach (SlotDef b in a.GetComp<CompWalkerComponent>().Slots)
+            {
+                UnloadAtSlot(b.uiPriority);
+            }
             DummyApparels.Wear(a);
+        }
+        public void UnloadAtSlot(int ui)
+        {
+            if (!positionWSlot.ContainsKey(ui)) return;
+            if (!occupiedSlots.ContainsKey(positionWSlot[ui])) return;
+
+            RemoveModule(occupiedSlots[positionWSlot[ui]]);
         }
         public override void ExposeData()
         {
@@ -142,20 +156,21 @@ namespace WalkerGear
             massCapacity = 0;
             currentLoad = 0;
             List<CompWalkerComponent> li = new List<CompWalkerComponent>();
-            foreach (Apparel a in DummyApparels.WornApparel)
+            foreach (Apparel a in DummyApparels?.WornApparel?.Where(t=>t.IsModule()))
             {
+                CompWalkerComponent comp = a.GetComp<CompWalkerComponent>();
                 massCapacity += a.GetStatValue(StatDefOf.CarryingCapacity) != StatDefOf.CarryingCapacity.defaultBaseValue ? a.GetStatValue(StatDefOf.CarryingCapacity) : 0;
                 currentLoad += a.GetStatValue(StatDefOf.Mass);
-                if (a.TryGetComp<CompWalkerComponent>(out CompWalkerComponent c))
+
+                foreach (SlotDef s in comp.Props.slots)
                 {
-                    foreach (SlotDef s in c.Props.slots)
-                    {
-                        occupiedSlots[s] = a;
-                        positionWSlot[s.uiPriority] = s;
-                    }
-                    li.Add(c);
+                    occupiedSlots[s] = a;
+                    positionWSlot[s.uiPriority] = s;
                 }
+                li.Add(comp);
             }
+
+            if (Dummy.GetWalkerCore(out WalkerGear_Core core)) core.RefreshHP(true);
             ComponentsCache = li;
             isOccupiedSlotDirty = false;
         }
@@ -183,7 +198,7 @@ namespace WalkerGear
             if (!thing.TryGetComp(out CompWalkerComponent comp)) return;
             if (comp.Props.slots.Where(slot => slot.isCoreFrame).Any() && GetGearCore != null)
             {
-                //如果這個要裝上的模塊是CoreFrame
+                //如果這個要裝上的模塊是CoreFrame，清空所有。
                 ClearAllModules();
             }
             Add(thing);
@@ -334,7 +349,7 @@ namespace WalkerGear
                 DummyApparels.Remove(a);
                 pawn.apparel.Wear(a, true, locked: true);
             }
-            pawn.apparel.WornApparel.Find((a) => a is WalkerGear_Core c && c.RefreshHP(true));
+            MechUtility.InitFrameDataCache(pawn); //負重數值更新
             SetItabCacheDirty();
         }
         public void GearDown(Pawn pawn)

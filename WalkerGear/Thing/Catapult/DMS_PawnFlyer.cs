@@ -286,43 +286,21 @@ namespace WalkerGear
                             Find.TickManager.Notify_GeneratedPotentiallyHostileMap();
                             PawnRelationUtility.Notify_PawnsSeenByPlayer_Letter(orGenerateMap.mapPawns.AllPawns, ref letterLabel, ref letterText, "LetterRelatedPawnsInMapWherePlayerLanded".Translate(Faction.OfPlayer.def.pawnsPlural), informEvenIfSeenBefore: true);
                             CaravanEnterMapUtility.Enter(pawnStored.GetCaravan(), orGenerateMap, CaravanEnterMode.Center, CaravanDropInventoryMode.DoNotDrop);
-
-                            GenExplosion.DoExplosion(pawnStored.Position, pawnStored.Map, 8, DefDatabase<DamageDef>.GetNamed("Bomb"), null, 50, -1, null, null, null, null, null, 0, 1, null, false, null, 0, 1, 0, false, null, new List<Thing> { pawnStored }, null, true, 1, 1);
-
                             CameraJumper.TryJump(pawnStored);
+                            pawnStored.DeSpawn();
+                            Messages.Message(new Message("请选择着陆地点", MessageTypeDefOf.PositiveEvent));
+
+                            Find.Targeter.BeginTargeting(TargetingParameters.ForCell(), null, delegate (LocalTargetInfo target)
+                            {
+                                SkyfallerMaker.SpawnSkyfaller(RimWorld.ThingDefOf.MeteoriteIncoming, pawnStored, target.Cell, Find.CurrentMap);
+                                //GenExplosion.DoExplosion(pawnStored.Position, orGenerateMap, 10, DefDatabase<DamageDef>.GetNamed("Bomb"), null, 50);
+                                pawnStored.SetPositionDirect(target.Cell);
+                                CameraJumper.TryJump(pawnStored);
+                            }, null, TargeterMouseAttachment);
                         }
                     }, "GeneratingMap".Translate(), true, (Exception x) => { Log.Message("Generatem Map Error:" + x.ToString()); });
                 }
             }
-            //else if (Find.World.worldObjects.AnySettlementAt(destinationTile))
-            //{
-            //    Settlement site = (Settlement)Find.World.worldObjects.AllWorldObjects.FirstOrDefault(o => o.Tile == destinationTile);
-            //    if (pawnStored.GetCaravan() != null)
-            //    {
-            //        bool num = !site.HasMap;
-            //        Map orGenerateMap = null;
-            //        LongEventHandler.SetCurrentEventText("GenerateSubMap".Translate());
-            //        DeepProfiler.Start("Generate map");
-            //        LongEventHandler.QueueLongEvent(() =>
-            //        {
-            //            orGenerateMap = GetOrGenerateMapUtility.GetOrGenerateMap(site.Tile, site.def);
-            //            TaggedString letterLabel = "LetterLabelCaravanEnteredEnemyBase".Translate();
-            //            TaggedString letterText = "LetterTransportPodsLandedInEnemyBase".Translate(site.Label).CapitalizeFirst();
-            //            SettlementUtility.AffectRelationsOnAttacked(site, ref letterText);
-            //            if (num)
-            //            {
-            //                GetOrGenerateMapUtility.UnfogMapFromEdge(orGenerateMap);
-            //                Find.TickManager.Notify_GeneratedPotentiallyHostileMap();
-            //                PawnRelationUtility.Notify_PawnsSeenByPlayer_Letter(orGenerateMap.mapPawns.AllPawns, ref letterLabel, ref letterText, "LetterRelatedPawnsInMapWherePlayerLanded".Translate(Faction.OfPlayer.def.pawnsPlural), informEvenIfSeenBefore: true);
-            //                CaravanEnterMapUtility.Enter(pawnStored.GetCaravan(), orGenerateMap, CaravanEnterMode.Center, CaravanDropInventoryMode.DoNotDrop);
-
-            //                GenExplosion.DoExplosion(pawnStored.Position, orGenerateMap, 10, DefDatabase<DamageDef>.GetNamed("Bomb"), null, 50);
-
-            //                CameraJumper.TryJump(pawnStored);
-            //            }
-            //        }, "GeneratingMap".Translate(), true, (Exception x) => { Log.Message("Generatem Map Error:" + x.ToString()); });
-            //    }
-            //}
             else if (Find.World.worldObjects.AnySettlementAt(destinationTile))
             {
                 Settlement site = (Settlement)Find.World.worldObjects.AllWorldObjects.FirstOrDefault(o => o.Tile == destinationTile);
@@ -346,6 +324,7 @@ namespace WalkerGear
                             CaravanEnterMapUtility.Enter(pawnStored.GetCaravan(), orGenerateMap, CaravanEnterMode.Center, CaravanDropInventoryMode.DoNotDrop);
                             CameraJumper.TryJump(pawnStored);
                             pawnStored.DeSpawn();
+                            Messages.Message(new Message("请选择着陆地点", MessageTypeDefOf.PositiveEvent));
 
                             Find.Targeter.BeginTargeting(TargetingParameters.ForCell(), null, delegate (LocalTargetInfo target)
                             {
@@ -480,14 +459,14 @@ namespace WalkerGear
         {
             if (!Find.World.Impassable(tile) && pawnStored.GetCaravan() != null)
             {
-                yield return new FloatMenuOption("DMS_EjectToTile".Translate(), delegate
+                yield return new FloatMenuOption("WG_EjectToTile".Translate(), delegate
                 {
                     TryLaunch(tile, null);
                 });
             }
             if (Find.World.worldObjects.AnySettlementBaseAtOrAdjacent(tile) || Find.World.worldObjects.AnySiteAt(tile))
             {
-                yield return new FloatMenuOption("DMS_EjectToBase".Translate(), delegate
+                yield return new FloatMenuOption("WG_EjectToBase".Translate(), delegate
                 {
                     TryLaunchToSiteOrSettleMent(tile, null);
                 });

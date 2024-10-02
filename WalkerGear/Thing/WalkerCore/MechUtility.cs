@@ -16,7 +16,6 @@ namespace WalkerGear
         public static List<ThingDef> cores;
         static MechUtility()
         {
-            List<ThingDef> defs = new();
             bays = DefDatabase<ThingDef>.AllDefs.Where((ThingDef def) => def.thingClass.IsSubclassOf(typeof(Building_MaintenanceBay)) || def.thingClass == typeof(WalkerGear_Core)).ToList();
             cores = DefDatabase<ThingDef>.AllDefs.Where((ThingDef def) => def.thingClass.IsSubclassOf(typeof(WalkerGear_Core)) || def.thingClass == typeof(WalkerGear_Core)).ToList();
         }
@@ -45,13 +44,13 @@ namespace WalkerGear
         }
         static MechData mechData = new();
         public static readonly Dictionary<QualityCategory, float> qualityToHPFactor = new() {
-            {QualityCategory.Awful, 1f},
-            {QualityCategory.Poor,1.6f },
-            {QualityCategory.Normal,2f},
-            {QualityCategory.Good,2.3f},
-            {QualityCategory.Excellent,2.6f},
-            {QualityCategory.Masterwork,3f},
-            {QualityCategory.Legendary,3.6f }
+            {QualityCategory.Awful, 0.5f},
+            {QualityCategory.Poor,0.75f },
+            {QualityCategory.Normal,1f},
+            {QualityCategory.Good,1.25f},
+            {QualityCategory.Excellent,1.5f},
+            {QualityCategory.Masterwork,1.75f},
+            {QualityCategory.Legendary,2f }
         };
         public static bool PawnWearingWalkerCore(Pawn pawn)
         {
@@ -182,28 +181,55 @@ namespace WalkerGear
                 }
             }
         }
-
+        public static bool IsModule(this Thing source) => source.TryGetComp(out CompWalkerComponent _t);
+        public static bool IsModule(this Thing source, out CompWalkerComponent comp) => source.TryGetComp(out comp);
         //添加的
-        public static Thing Conversion(this Thing source)
+        public static Thing PeakConverted(this CompWalkerComponent source)
         {
-            if (!source.TryGetComp(out CompWalkerComponent comp)) return null;
-            mechData.Init(source);
+            return source == null ? null : ThingMaker.MakeThing(source.Props.ItemDef, source.parent.Stuff);
+        }
+        public static Thing Conversion(this Thing source) => source.IsModule(out CompWalkerComponent m) ? m.Conversion() : null;
+        public static Thing Conversion(this CompWalkerComponent source)
+        {
+            if (source == null) return null;
+            mechData.Init(source.parent);
             Thing outcome;
 
-            if (comp.parent.def.IsApparel)
+            if (source.parent.def.IsApparel)
             {
-                Thing item = ThingMaker.MakeThing(comp.Props.ItemDef);
+                Thing item = ThingMaker.MakeThing(source.Props.ItemDef);
                 mechData.GetDataFromMech(item);
                 outcome = item;
             }
             else
             {
-                Thing mech = ThingMaker.MakeThing(comp.Props.EquipedThingDef);
+                Thing mech = ThingMaker.MakeThing(source.Props.EquipedThingDef);
                 mechData.SetDataToMech(mech);
                 outcome = mech;
             }
-            source.Destroy();
+            source.parent.Destroy();
             return outcome;
+        }
+
+        public static void InitFrameDataCache(Pawn pawn)
+        {
+            float massCapacity = 0;
+            float currentLoad = 0;
+            pawn.apparel.WornApparel.Find((a) => a is WalkerGear_Core c && c.RefreshHP(true)); //這行很重要，否則模塊血量不會刷新
+
+            List<CompWalkerComponent> li = new List<CompWalkerComponent>();
+            foreach (Apparel a in pawn.apparel.WornApparel.Where(t => t.IsModule()))
+            {
+                var comp = a.GetComp<CompWalkerComponent>();
+                massCapacity += a.GetStatValue(StatDefOf.CarryingCapacity) != StatDefOf.CarryingCapacity.defaultBaseValue ? a.GetStatValue(StatDefOf.CarryingCapacity) : 0;
+                currentLoad += a.GetStatValue(StatDefOf.Mass);
+
+                li.Add(comp);
+            }
+            if (pawn.GetWalkerCore(out var core))
+            {
+                core.ResetStats(massCapacity, massCapacity, currentLoad);
+            }
         }
     }
 
@@ -252,7 +278,6 @@ namespace WalkerGear
         }
         public void SetDataToMech( Thing mech) {
             
-
             if (mech.TryGetComp<CompQuality>(out CompQuality compQuality)) compQuality.SetQuality(quality, null);
 
             mech.SetColor(color);

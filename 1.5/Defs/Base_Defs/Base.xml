@@ -192,7 +192,7 @@
         </thingCategories>
         <apparel>
             <bodyPartGroups>
-                <li>LeftHand</li>
+                <li>LeftArm</li>
             </bodyPartGroups>
             <layers>
                 <li>WG_WalkerGearLayer</li>
@@ -207,7 +207,7 @@
         </thingCategories>
         <apparel>
           <bodyPartGroups>
-            <li>RightHand</li>
+            <li>RightArm</li>
           </bodyPartGroups>
           <layers>
             <li>WG_WalkerGearLayer</li>

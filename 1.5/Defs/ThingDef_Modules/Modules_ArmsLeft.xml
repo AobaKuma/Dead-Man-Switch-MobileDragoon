@@ -9,6 +9,7 @@
       <ThingDef>DMS_Apparel_PulseShield</ThingDef>
     </descriptionHyperlinks>
     <statBases>
+      <MaxHitPoints>15</MaxHitPoints>
       <Mass>8</Mass>
     </statBases>
     <recipeMaker>
@@ -37,7 +38,8 @@
       <texPath>Things/Dragoon/PulseShield/apparel_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>0</Mass>
+      <MaxHitPoints>15</MaxHitPoints>
+      <Mass>8</Mass>
       <EnergyShieldRechargeRate>0.75</EnergyShieldRechargeRate>
     </statBases>
     <equippedStatOffsets>
@@ -95,8 +97,8 @@
       <ThingDef>DMS_Apparel_Shield</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <MaxHitPoints>300</MaxHitPoints>
-      <Mass>8</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Mass>30</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
@@ -123,8 +125,8 @@
     </graphicData>
     <tickerType>Normal</tickerType>
     <statBases>
-      <MaxHitPoints>300</MaxHitPoints>
-      <Mass>0</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Mass>30</Mass>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.15</MoveSpeed>
@@ -176,8 +178,8 @@
       <ThingDef>DMS_Apparel_Shield</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <MaxHitPoints>300</MaxHitPoints>
-      <Mass>8</Mass>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>80</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
@@ -204,8 +206,8 @@
     </graphicData>
     <tickerType>Normal</tickerType>
     <statBases>
-      <MaxHitPoints>300</MaxHitPoints>
-      <Mass>0</Mass>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>80</Mass>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.12</MoveSpeed>
@@ -254,6 +256,7 @@
       <ThingDef>DMS_Apparel_InfraredSensor</ThingDef>
     </descriptionHyperlinks>
     <statBases>
+      <MaxHitPoints>5</MaxHitPoints>
       <Mass>8</Mass>
     </statBases>
     <recipeMaker>
@@ -282,6 +285,7 @@
       <texPath>Things/Dragoon/InfraredSensor/apparel_south</texPath>
     </graphicData>
     <statBases>
+      <MaxHitPoints>5</MaxHitPoints>
       <Mass>8</Mass>
     </statBases>
     <equippedStatOffsets>
@@ -331,7 +335,8 @@
       <ThingDef>DMS_Apparel_CargoBox</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <Mass>8</Mass>
+      <MaxHitPoints>5</MaxHitPoints>
+      <Mass>20</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonBasis</researchPrerequisite>
@@ -358,7 +363,8 @@
       <texPath>Things/Dragoon/CargoBox/apparel_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>8</Mass>
+      <MaxHitPoints>5</MaxHitPoints>
+      <Mass>20</Mass>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.05</MoveSpeed>

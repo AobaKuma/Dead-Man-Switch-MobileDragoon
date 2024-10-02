@@ -52,11 +52,6 @@
                 </value>
             </li>
 
-            <!--Remove speed penalty-->
-            <li Class="PatchOperationRemove">
-                <xpath>Defs/ThingDef[defName="DMS_Dragoon_LMG"]/equippedStatOffsets/MoveSpeed</xpath>
-            </li>
-
             <!--===== Draggon L(?)MG =====-->
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_Dragoon_LMG</defName>

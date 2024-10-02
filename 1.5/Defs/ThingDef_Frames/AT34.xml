@@ -49,7 +49,7 @@
     </graphicData>
     <statBases>
       <Mass>80</Mass>
-			<CarryingCapacity>300</CarryingCapacity>
+			<CarryingCapacity>250</CarryingCapacity>
       <MoveSpeed>4.2</MoveSpeed>
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
@@ -121,8 +121,8 @@
       <texPath>Things/Item/Module</texPath>
     </graphicData>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Mass>20</Mass>
+      <MaxHitPoints>48</MaxHitPoints>
+      <Mass>24</Mass>
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -156,13 +156,11 @@
       <texPath>Things/Dragoon/AT34/helmet_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>20</Mass>
-      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.10</ArmorRating_Heat>
+      <MaxHitPoints>48</MaxHitPoints>
+      <Mass>24</Mass>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.12</MoveSpeed>
+      <MoveSpeed>-0.15</MoveSpeed>
       <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
     </equippedStatOffsets>
     <apparel>

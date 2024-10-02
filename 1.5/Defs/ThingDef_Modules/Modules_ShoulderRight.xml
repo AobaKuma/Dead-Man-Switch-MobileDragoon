@@ -10,8 +10,8 @@
             <ThingDef>DMS_Apparel_TurretPackLight</ThingDef>
         </descriptionHyperlinks>
         <statBases>
-            <MaxHitPoints>100</MaxHitPoints>
-            <Mass>8</Mass>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Mass>30</Mass>
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
@@ -37,7 +37,8 @@
             <texPath>Things/Dragoon/TurretPack/TurretPack_MachineGun</texPath>
         </graphicData>
         <statBases>
-            <Mass>0</Mass>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Mass>30</Mass>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>-0.12</MoveSpeed>
@@ -158,7 +159,7 @@
         </descriptionHyperlinks>
         <statBases>
             <MaxHitPoints>100</MaxHitPoints>
-            <Mass>8</Mass>
+            <Mass>50</Mass>
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
@@ -184,7 +185,8 @@
             <texPath>Things/Dragoon/TurretPack/TurretPack_Kord</texPath>
         </graphicData>
         <statBases>
-            <Mass>0</Mass>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>50</Mass>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>-0.12</MoveSpeed>
@@ -257,7 +259,7 @@
                 <commandIcon>Things/Dragoon/TurretPack/TurretPack_Kord</commandIcon>
                 <verbClass>Verb_Shoot</verbClass>
                 <label>Gun</label>
-                <hasStandardCommand>true</hasStandardCommand>
+                <hasStandardCommand>false</hasStandardCommand>
                 <defaultProjectile>DMS_Bullet_Kord</defaultProjectile>
                 <requireLineOfSight>true</requireLineOfSight>
                 <warmupTime>1.5</warmupTime>
@@ -307,8 +309,8 @@
             <ThingDef>DMS_Apparel_TurretPackGAU</ThingDef>
         </descriptionHyperlinks>
         <statBases>
-            <MaxHitPoints>100</MaxHitPoints>
-            <Mass>8</Mass>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Mass>100</Mass>
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
@@ -334,7 +336,8 @@
             <texPath>Things/Dragoon/TurretPack/TurretPack_GAU</texPath>
         </graphicData>
         <statBases>
-            <Mass>0</Mass>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Mass>100</Mass>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>-0.12</MoveSpeed>

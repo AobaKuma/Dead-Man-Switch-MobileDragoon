@@ -93,7 +93,7 @@
       <texPath>Things/Item/Module</texPath>
     </graphicData>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>30</MaxHitPoints>
       <Mass>35</Mass>
     </statBases>
     <comps>
@@ -128,13 +128,11 @@
       <texPath>Things/Dragoon/Stahlhelm/helmet_south</texPath>
     </graphicData>
     <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
       <Mass>35</Mass>
-      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.80</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.40</ArmorRating_Heat>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.3</MoveSpeed>
+      <MoveSpeed>-0.1</MoveSpeed>
       <ToxicEnvironmentResistance>0.6</ToxicEnvironmentResistance>
     </equippedStatOffsets>
     <apparel>

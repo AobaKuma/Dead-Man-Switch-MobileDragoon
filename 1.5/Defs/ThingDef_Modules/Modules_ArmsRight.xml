@@ -10,7 +10,8 @@
       <ThingDef>DMS_Apparel_PileBunker</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <Mass>20</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Mass>30</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonBasis</researchPrerequisite>
@@ -37,7 +38,8 @@
       <texPath>Things/Dragoon/PileBunker/apparel_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>20</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Mass>30</Mass>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.15</MoveSpeed>
@@ -109,8 +111,8 @@
       <ThingDef>DMS_Dragoon_LMG</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Mass>30.50</Mass>
+      <MaxHitPoints>20</MaxHitPoints>
+      <Mass>40</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisites>
@@ -142,8 +144,12 @@
       <texPath>Things/Weapons/DMS_Dragoon_LMG</texPath>
     </graphicData>
     <statBases>
-      <Mass>30.50</Mass>
+      <MaxHitPoints>20</MaxHitPoints>
+      <Mass>40</Mass>
     </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.4</MoveSpeed>
+    </equippedStatOffsets>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_WeaponLmg</ItemDef>

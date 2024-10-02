@@ -66,11 +66,8 @@
       <AccuracyMedium>0.8</AccuracyMedium>
       <AccuracyLong>0.7</AccuracyLong>
       <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
-      <Mass>30.50</Mass>
+      <Mass>0</Mass>
     </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.4</MoveSpeed>
-    </equippedStatOffsets>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>

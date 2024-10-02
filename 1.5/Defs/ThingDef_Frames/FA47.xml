@@ -46,12 +46,12 @@
     </graphicData>
     <statBases>
       <Mass>80</Mass>
+			<CarryingCapacity>275</CarryingCapacity>
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
       <ArmorRating_Heat>0.80</ArmorRating_Heat>
       <JumpRange MayRequire="ludeon.rimworld.royalty">9.9</JumpRange>
       <MoveSpeed>7</MoveSpeed>
-			<CarryingCapacity>480</CarryingCapacity>
 			<Insulation_Cold>104</Insulation_Cold>
 			<Insulation_Heat>128</Insulation_Heat>
     </statBases>
@@ -113,8 +113,8 @@
       <ThingDef>DMS_Apparel_FA47_Helmet</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Mass>8</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Mass>18</Mass>
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -144,13 +144,14 @@
       <texPath>Things/Dragoon/FA47/helmet_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>0</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Mass>18</Mass>
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
       <ArmorRating_Heat>0.80</ArmorRating_Heat>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.12</MoveSpeed>
+      <MoveSpeed>-0.2</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/FA47/helmet</wornGraphicPath>
@@ -164,7 +165,7 @@
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_FA47_Helmet</ItemDef>
-                <slots>
+        <slots>
           <li>Head</li>
         </slots>
       </li>

@@ -26,10 +26,13 @@
   <WG_EmergencyEject_Desc>A disposable escape device that uses solid-propelled rockets to catapult the pilot to a designated location within range.the frame will be destroyed.</WG_EmergencyEject_Desc>
 
   <WG_EjectToTile>travel to world map</WG_EjectToTile>
+  <WG_EjectToTile>drop raid to faction base</WG_EjectToTile>
   <WG_PilotInBuilding>pilot:</WG_PilotInBuilding>
   <WG_Occupied>occupied</WG_Occupied>
   <WG_RequireMechsuit>require piloting frame</WG_RequireMechsuit>
 
+  <WG_PilotingFrame>Piloting Walker frame</WG_PilotingFrame>
+  <WG_Finalized>Finalized </WG_Finalized>
   <WG_Stats_TakingSlotsOf>will taking the slot of:</WG_Stats_TakingSlotsOf>
   <WG_Stats_DisableSlotsOf>will disable the slot of:</WG_Stats_DisableSlotsOf>
 
@@ -38,15 +41,20 @@
 
   <WG_TabMechGear>Gantry</WG_TabMechGear>
   <WG_MechSolution>Frame customization</WG_MechSolution>
+  <WG_Overload>[CAUTION OVERLOAD]</WG_Overload>
 
   <WG_Performance>payload capacity</WG_Performance>
-  <WG_OverallArmor>Frame armor</WG_OverallArmor>
+  <WG_OverallArmor>Structure points</WG_OverallArmor>
 
-  <WG_ArmorSpeed>frame moving speed</WG_ArmorSpeed>
-  <WG_ArmorCapacity>Frame payload capacity</WG_ArmorCapacity>
+  <WG_ArmorSpeed>Frame moving speed:</WG_ArmorSpeed>
+  <WG_ArmorDeadWeight>Frame self weight:</WG_ArmorDeadWeight>
+  <WG_ArmorCapacity>Frame payload capacity:</WG_ArmorCapacity>
 
   <WG_HasMechWeapon>holding module weapon</WG_HasMechWeapon>
 
   <WG_Disabled_VictimInWalkerCore>Cannot rescue: the injured is kepted in a frame.</WG_Disabled_VictimInWalkerCore>
+
+  <WG_Sharp_CE>mm RHA</WG_Sharp_CE>
+  <WG_Blunt_CE>MPA</WG_Blunt_CE>
 
 </LanguageData>

@@ -12,6 +12,7 @@
             <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
         </recipeMaker>
         <statBases>
+            <MaxHitPoints>20</MaxHitPoints>
             <Mass>35</Mass>
         </statBases>
         <costList>
@@ -35,6 +36,7 @@
             <texPath>Things/Dragoon/MissilePod/apparel_north</texPath>
         </graphicData>
         <statBases>
+            <MaxHitPoints>20</MaxHitPoints>
             <Mass>35</Mass>
         </statBases>
         <equippedStatOffsets>
@@ -121,6 +123,7 @@
             <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
         </recipeMaker>
         <statBases>
+            <MaxHitPoints>10</MaxHitPoints>
             <Mass>20</Mass>
         </statBases>
         <costList>
@@ -145,6 +148,7 @@
         </graphicData>
         <tickerType>Normal</tickerType>
         <statBases>
+            <MaxHitPoints>10</MaxHitPoints>
             <Mass>20</Mass>
         </statBases>
         <equippedStatOffsets>
@@ -233,6 +237,7 @@
             <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
         </recipeMaker>
         <statBases>
+            <MaxHitPoints>25</MaxHitPoints>
             <Mass>65</Mass>
         </statBases>
         <costList>
@@ -256,6 +261,7 @@
             <texPath>Things/Dragoon/MissilePod8/apparel_south</texPath>
         </graphicData>
         <statBases>
+            <MaxHitPoints>25</MaxHitPoints>
             <Mass>65</Mass>
         </statBases>
         <equippedStatOffsets>

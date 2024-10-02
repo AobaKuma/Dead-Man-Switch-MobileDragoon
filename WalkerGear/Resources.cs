@@ -6,6 +6,9 @@ namespace WalkerGear
     [StaticConstructorOnStartup]
     public static class Resources
     {
+        public static readonly Texture2D BarBG = SolidColorMaterials.NewSolidColorTexture(new Color(0.1f, 0.1f, 0.1f));
+        public static readonly Texture2D BarOL = SolidColorMaterials.NewSolidColorTexture(new Color(0.8f, 0.1f, 0.1f));
+
         //安全裝置的Icon
         public static readonly Texture2D GetSafetyIcon_Disabled = ContentFinder<Texture2D>.Get("UI/Safety_Disabled");
         public static readonly Texture2D GetSafetyIcon = ContentFinder<Texture2D>.Get("UI/Safety");

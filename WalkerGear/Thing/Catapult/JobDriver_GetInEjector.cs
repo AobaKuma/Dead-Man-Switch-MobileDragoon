@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
@@ -26,6 +27,10 @@ namespace WalkerGear
                     ejectorBay.GetDirectlyHeldThings().TryAddOrTransfer(pawn);
                 }
             };
+        }
+        public override bool TryMakePreToilReservations(bool errorOnFailed)
+        {
+            return this.pawn.Reserve(this.job.GetTarget(maintenanceBay), this.job, errorOnFailed: errorOnFailed);
         }
     }
 }

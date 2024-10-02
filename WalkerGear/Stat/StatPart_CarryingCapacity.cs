@@ -8,18 +8,35 @@ namespace WalkerGear
 {
     public class StatPart_CarryingCapacity : StatPart
     {
+        private Dictionary<Thing, float> TakenMass = new Dictionary<Thing, float>();
+        private Dictionary<Thing, float> AddonMass = new Dictionary<Thing, float>();
         public override string ExplanationPart(StatRequest req)
         {
-            if (IsWorking(req, out var def))
+            if (IsWorking(req, core: out WalkerGear_Core core))
             {
-                return "WG_ArmorCapacity".Translate() + " {0}({1})".Formatted(GetBaseValue(def), GetValue(req, def).ToString());
+                string line = "\n\n" + "WG_PilotingFrame".Translate();
+
+                line += "\n\n" + "WG_ArmorDeadWeight".Translate() + " " + core.DeadWeight.ToStringMass();
+                if (TakenMass.NullOrEmpty()) return line;
+                foreach (var pair in TakenMass)
+                {
+                    line += "\n    " + pair.Key.LabelShort + ": " + pair.Value.ToStringMass();
+                }
+
+                line += "\n\n" + "WG_ArmorCapacity".Translate() + " {0}".Formatted(core.Capacity.ToStringMass());
+                if (AddonMass.NullOrEmpty()) return line;
+                foreach (var p in AddonMass)
+                {
+                    line += "\n    " + p.Key.LabelShort + ": +" + p.Value.ToStringMass();
+                }
+                return line;
             }
             return null;
         }
 
         public override void TransformValue(StatRequest req, ref float val)
         {
-            if (IsWorking(req, out var def))
+            if (IsWorking(req, out WalkerGear_Core def))
             {
                 val = GetValue(req, def);
             }
@@ -27,17 +44,26 @@ namespace WalkerGear
         private float GetValue(StatRequest req, WalkerGear_Core core)
         {
 
-            float baseStat = core.GetStatValue(StatDefOf.CarryingCapacity);
-            IEnumerable<Apparel> enumerable = GetPawn(req).apparel?.WornApparel;
-            foreach (Apparel item in enumerable ?? Enumerable.Empty<Apparel>())
+            TakenMass.Clear();
+            AddonMass.Clear();
+            foreach (Apparel item in core.modules.Cast<Apparel>())
             {
-                baseStat += item.def.equippedStatOffsets.GetStatValueFromList(StatDefOf.CarryingCapacity, 0);
+                //額外攜帶量
+                float v = item.def.statBases.GetStatValueFromList(StatDefOf.CarryingCapacity, 0);
+                if (v != 0)
+                {
+                    AddonMass.Add(item, v);
+                }
+
+                Thing module = item.GetComp<CompWalkerComponent>().PeakConverted();
+                //質量(會在佔用質量的同時增加同等攜帶量)
+                v = module != null ? module.GetStatValue(StatDefOf.Mass) : 0;
+                if (v != 0)
+                {
+                    TakenMass.Add(item, v);
+                }
             }
-            return baseStat;
-        }
-        private float GetBaseValue(WalkerGear_Core core)
-        {
-            return core.def.statBases.GetStatValueFromList(StatDefOf.CarryingCapacity, 175);
+            return core.TotalCapacity;
         }
         private Pawn GetPawn(StatRequest req)
         {
@@ -53,18 +79,9 @@ namespace WalkerGear
             core = null;
             if (req.HasThing && req.Thing is Pawn pawn)
             {
-                IEnumerable<Apparel> enumerable = pawn.apparel?.WornApparel;
-                foreach (Apparel item in enumerable ?? Enumerable.Empty<Apparel>())
-                {
-                    if (item is WalkerGear_Core walkerGear_Core)
-                    {
-                        core = walkerGear_Core;
-                        return true;
-                    }
-                }
+                return MechUtility.GetWalkerCore(pawn, out core);
             }
             return false;
         }
     }
 }
-

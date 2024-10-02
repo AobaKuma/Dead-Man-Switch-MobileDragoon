@@ -22,7 +22,6 @@ namespace WalkerGear
         private readonly Color grey = new ColorInt(72, 82, 92).ToColor;
 
         private static readonly Texture2D EmptySlotIcon = Command.BGTex;
-
         protected override void FillTab()
         {
             Parent.TryUpdateOccupiedSlotsCache();
@@ -100,7 +99,7 @@ namespace WalkerGear
                 position.x = 170f - (side / 5f);
                 position.y = 56f + (side * 2 + 5f);
                 Vector2 box = GizmoSize * 2f;
-                box.x *= 1.1f;
+                box.x *= 1.2f;
                 box.y = size.y - position.y - 10f;
                 Rect statBlock = new(position, box);
                 DrawStatEntries(statBlock, OccupiedSlots[PositionWSlot[0]]);
@@ -162,7 +161,7 @@ namespace WalkerGear
                     {
                         var c = thing.TryGetComp<CompWalkerComponent>();
                         //血条
-                        GizmoHealthBar(gizmoRect, slot, c.HP / (float)c.MaxHP);
+                        GizmoHealthBar(gizmoRect, slot, ((float)c.HP / (float)c.MaxHP));
                     }
                     label += $"{slot.label.Translate()}";
                     if (disabled)
@@ -218,7 +217,7 @@ namespace WalkerGear
                 bar.x = gizmoRect.xMax + 0.5f * bar.width;
             }
             Widgets.DrawBoxSolid(bar, Color.black);
-            bar.yMin += bar.height * (1f - healthPerc);
+            bar.yMin += bar.height * Mathf.Min(1, 1f - healthPerc);
             //bar.height*=healthPerc;          
             var hColor = healthPerc < 0.3f ? Color.red : healthPerc < 0.7f ? Color.yellow : Color.green;
             Widgets.DrawBoxSolid(bar, hColor);
@@ -285,26 +284,56 @@ namespace WalkerGear
         //Stats Components
         private void DrawStatEntries(Rect rect, Thing thing)
         {
-            WidgetRow row = new(rect.x, rect.y, UIDirection.RightThenDown, rect.width, gap: -8);
-            row.Label("WG_Performance".Translate());
+            WidgetRow row = new(rect.x, rect.y, UIDirection.RightThenDown, rect.width, gap: -4);
+            row.Label("WG_Performance".Translate().CapitalizeFirst());
             row.Gap(int.MaxValue);
-            float loadPercent = Mathf.Max(1f, CurrentLoad / MassCapacity);
-            row.FillableBar(rect.width, 16f, loadPercent, $"{CurrentLoad} / {MassCapacity}", WalkerGear_Core.fBarTex);
-            //replace
+            float loadPercent = CurrentLoad / MassCapacity;
+            if (loadPercent >= 1)
+            {
+                row.FillableBar(rect.width, 16f, 1, $"{CurrentLoad} / {MassCapacity}" + " " + "WG_Overload".Translate(), Resources.BarOL, Resources.BarBG);
+            }
+            else
+            {
+                row.FillableBar(rect.width, 16f, loadPercent, $"{CurrentLoad} / {MassCapacity}", WalkerGear_Core.fBarTex, Resources.BarBG);
+            }
+
             row.Label("WG_OverallArmor".Translate());
+            string structrueInt = (Parent.GetGearCore as WalkerGear_Core)?.LabelHPPart.ToString();
+            row.Gap(rect.width - CalcSize("WG_OverallArmor".Translate() + structrueInt).x - 8f);
+            row.Label(structrueInt);
+
             foreach (StatDef statDef in toDraw)
             {
                 float statValue = thing.GetStatValue(statDef);
-                if (statDef.showOnDefaultValue || statValue != statDef.defaultBaseValue)
-                {
-                    row.Gap(int.MaxValue);
-                    var t = statDef.LabelCap;
-                    var v = statValue > 4 ? statValue.ToStringDecimalIfSmall() : statValue.ToStringPercent();
+                row.Gap(int.MaxValue);
+                TaggedString t = statDef.LabelCap;
+                string v = "";
 
-                    row.Label(t);
-                    row.Gap(rect.width - CalcSize(t + v).x - 8f);
-                    row.Label(v);
+                if (ModLister.GetActiveModWithIdentifier("ceteam.combatextended", true) != null)
+                {
+                    v = statValue.ToStringDecimalIfSmall();
+                    if (statDef == StatDefOf.ArmorRating_Sharp)
+                    {
+                        v += "WG_Sharp_CE".Translate();
+                    }
+                    else if (statDef == StatDefOf.ArmorRating_Blunt)
+                    {
+                        v += " " + "WG_Blunt_CE".Translate();
+                    }
                 }
+                else if (statDef == StatDefOf.MoveSpeed)
+                {
+                    if (!Parent.Dummy.GetWalkerCore(out var core)) continue;
+                    Log.Message("speed");
+                    v += "{0} c/s".Formatted(Parent.GetStatValueForPawn(statDef, Parent.Dummy, true).ToString("0.##"));
+                }
+                else
+                {
+                    v = statValue > 4 ? statValue.ToStringDecimalIfSmall() : (statValue.ToStringPercent());
+                }
+                row.Label(t);
+                row.Gap(rect.width - CalcSize(t + v).x - 8f);
+                row.Label(v);
             }
         }
 
@@ -321,6 +350,7 @@ namespace WalkerGear
         };
         private static readonly List<StatDef> toDraw = new()
         {
+            StatDefOf.MoveSpeed,
             StatDefOf.ArmorRating_Sharp,
             StatDefOf.ArmorRating_Blunt,
             StatDefOf.ArmorRating_Heat
@@ -374,8 +404,5 @@ namespace WalkerGear
             base.OnOpen();
             Parent.TryUpdateOccupiedSlotsCache();
         }
-
-
-
     }
 }

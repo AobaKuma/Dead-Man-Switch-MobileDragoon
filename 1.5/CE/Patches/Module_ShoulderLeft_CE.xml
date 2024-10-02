@@ -20,10 +20,6 @@
                 </value>
             </li>
 
-            <li Class="PatchOperationRemove">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePod"]/equippedStatOffsets/MoveSpeed</xpath>
-            </li>
-
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePod"]/verbs</xpath>
                 <value>
@@ -70,7 +66,6 @@
                 </value>
             </li>
 
-
             <!--Swarm Misslile pod-->
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Module_SwarmMissilePod"]/statBases/Mass</xpath>
@@ -80,17 +75,12 @@
                 </value>
             </li>
 
-            <li Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_SwarmMissilePod"]/statBases/Mass</xpath>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_SwarmMissilePod"]/statBases</xpath>
                 <value>
-                    <Mass>55</Mass>
                     <Bulk>36</Bulk>
                     <WornBulk>12</WornBulk>
                 </value>
-            </li>
-
-            <li Class="PatchOperationRemove">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_SwarmMissilePod"]/equippedStatOffsets/MoveSpeed</xpath>
             </li>
 
             <li Class="PatchOperationReplace">
@@ -159,10 +149,6 @@
                 </value>
             </li>
 
-            <li Class="PatchOperationRemove">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePodPlus"]/equippedStatOffsets/MoveSpeed</xpath>
-            </li>
-
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePodPlus"]/verbs</xpath>
                 <value>
@@ -174,11 +160,12 @@
                             <commandIcon>UI/Ability/Missile</commandIcon>
                             <onlyManualCast>True</onlyManualCast>
                             <warmupTime>1.5</warmupTime>
-                            <noiseRadius>4</noiseRadius>
+                            <!-- <noiseRadius>4</noiseRadius> -->
                             <range>85.9</range>
                             <minRange>5</minRange>
                             <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
                             <soundCast>RocketswarmLauncher_Fire</soundCast>
+                            <!-- <forcedMissRadius>1.9</forcedMissRadius> -->
                             <soundCastTail>GunTail_Medium</soundCastTail>
                             <muzzleFlashScale>14</muzzleFlashScale>
                             <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
@@ -208,9 +195,6 @@
                     </li>
                 </value>
             </li>
-
-
-
         </operations>
     </Operation>
 </Patch>

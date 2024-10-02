@@ -11,7 +11,7 @@
     </descriptionHyperlinks>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <Mass>50</Mass>
+      <Mass>80</Mass>
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -47,8 +47,8 @@
       <texPath>Things/Dragoon/PF3/apparel_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>50</Mass>
-			<CarryingCapacity>225</CarryingCapacity>
+      <Mass>80</Mass>
+			<CarryingCapacity>150</CarryingCapacity>
       <MoveSpeed>4.0</MoveSpeed>
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>

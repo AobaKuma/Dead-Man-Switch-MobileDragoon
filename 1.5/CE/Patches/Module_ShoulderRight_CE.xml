@@ -11,27 +11,9 @@
                     <Bulk>19</Bulk>
                 </value>
             </li>
-<!--
             <li Class="PatchOperationAdd">
-                <xpath>Defs/ThingDef[defName="DMS_Module_TurretPackLight"]/comps</xpath>
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackLight"]/statBases</xpath>
                 <value>
-                    <li Class="CompProperties_Reloadable">
-                        <maxCharges>500</maxCharges>
-                        <ammoDef>Ammo_556x45mmNATO_FMJ</ammoDef>
-                        <ammoCountPerCharge>1</ammoCountPerCharge>
-                        <baseReloadTicks>90</baseReloadTicks>
-                        <soundReload>Standard_Reload</soundReload>
-                        <hotKey>Misc4</hotKey>
-                        <chargeNoun>5.56x45mm NATO FMJ</chargeNoun>
-                        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-                    </li>
-                </value>
-            </li>-->
-
-            <li Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackLight"]/statBases/Mass</xpath>
-                <value>
-                    <Mass>15</Mass>
                     <Bulk>19</Bulk>
                     <WornBulk>6</WornBulk>
                     <SightsEfficiency>1</SightsEfficiency>
@@ -39,10 +21,6 @@
 			        <SwayFactor>1.25</SwayFactor>
 			        <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
                 </value>
-            </li>
-
-            <li Class="PatchOperationRemove">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackLight"]/equippedStatOffsets/MoveSpeed</xpath>
             </li>
 
             <li Class="PatchOperationReplace">
@@ -59,6 +37,7 @@
                             <warmupTime>1.3</warmupTime>
                             <range>55</range>
                             <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                            <consumeFuelPerShot>1</consumeFuelPerShot>
 				            <burstShotCount>10</burstShotCount>
                             <soundCast>Shot_AssaultRifle</soundCast>
                             <soundCastTail>GunTail_Medium</soundCastTail>
@@ -99,10 +78,9 @@
                 </value>
             </li>
 
-            <li Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackHeavy"]/statBases/Mass</xpath>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackHeavy"]/statBases</xpath>
                 <value>
-                    <Mass>32</Mass>
                     <Bulk>27</Bulk>
                     <WornBulk>9</WornBulk>
                     <SwayFactor>1.66</SwayFactor>
@@ -130,6 +108,7 @@
                             <warmupTime>1.4</warmupTime>
                             <range>75</range>
                             <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+                            <consumeFuelPerShot>1</consumeFuelPerShot>
 				            <burstShotCount>8</burstShotCount>
                             <soundCast>Shot_Autocannon</soundCast>
                             <soundCastTail>GunTail_Heavy</soundCastTail>
@@ -170,10 +149,9 @@
                 </value>
             </li>
 
-            <li Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackGAU"]/statBases/Mass</xpath>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackGAU"]/statBases</xpath>
                 <value>
-                    <Mass>51</Mass>
                     <Bulk>34</Bulk>
                     <WornBulk>12</WornBulk>
                     <SwayFactor>1.62</SwayFactor>
@@ -181,10 +159,6 @@
                     <SightsEfficiency>1</SightsEfficiency>
                     <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
                 </value>
-            </li>
-
-            <li Class="PatchOperationRemove">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackGAU"]/equippedStatOffsets/MoveSpeed</xpath>
             </li>
 
             <li Class="PatchOperationReplace">
@@ -201,6 +175,7 @@
                             <warmupTime>1</warmupTime>
                             <range>75</range>
                             <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                            <consumeFuelPerShot>1</consumeFuelPerShot>
 				            <burstShotCount>15</burstShotCount>
                             <soundCast>GunShotA</soundCast>
                             <soundCastTail>GunTail_Heavy</soundCastTail>
@@ -229,8 +204,6 @@
                     </li>
                 </value>
             </li>
-
-
 
         </operations>
     </Operation>

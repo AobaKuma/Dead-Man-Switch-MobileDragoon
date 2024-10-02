@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--LMG Turret-->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Module_TurretPackLight"]/statBases/Mass</xpath>
+                <value>
+                    <Mass>15</Mass>
+                    <Bulk>19</Bulk>
+                </value>
+            </li>
+<!--
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Module_TurretPackLight"]/comps</xpath>
+                <value>
+                    <li Class="CompProperties_Reloadable">
+                        <maxCharges>500</maxCharges>
+                        <ammoDef>Ammo_556x45mmNATO_FMJ</ammoDef>
+                        <ammoCountPerCharge>1</ammoCountPerCharge>
+                        <baseReloadTicks>90</baseReloadTicks>
+                        <soundReload>Standard_Reload</soundReload>
+                        <hotKey>Misc4</hotKey>
+                        <chargeNoun>5.56x45mm NATO FMJ</chargeNoun>
+                        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+                    </li>
+                </value>
+            </li>-->
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackLight"]/statBases/Mass</xpath>
+                <value>
+                    <Mass>15</Mass>
+                    <Bulk>19</Bulk>
+                    <WornBulk>6</WornBulk>
+                    <SightsEfficiency>1</SightsEfficiency>
+			        <ShotSpread>0.06</ShotSpread>
+			        <SwayFactor>1.25</SwayFactor>
+			        <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+                </value>
+            </li>
+
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackLight"]/equippedStatOffsets/MoveSpeed</xpath>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackLight"]/verbs</xpath>
+                <value>
+                    <verbs>
+                        <li Class="CombatExtended.VerbPropertiesCE">
+                            <label>Gun</label>
+                            <recoilAmount>1.25</recoilAmount>
+				            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				            <hasStandardCommand>true</hasStandardCommand>
+				            <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+                            <commandIcon>Things/Dragoon/TurretPack/TurretPack_MachineGun</commandIcon>
+                            <warmupTime>1.3</warmupTime>
+                            <range>55</range>
+                            <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				            <burstShotCount>10</burstShotCount>
+                            <soundCast>Shot_AssaultRifle</soundCast>
+                            <soundCastTail>GunTail_Medium</soundCastTail>
+                            <muzzleFlashScale>9</muzzleFlashScale>
+                            <targetParams>
+                                <canTargetLocations>true</canTargetLocations>
+                            </targetParams>
+                            <recoilPattern>Mounted</recoilPattern>
+                        </li>
+                    </verbs>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackLight"]/comps</xpath>
+                <value>
+                    <li Class="CompProperties_ApparelReloadable">
+                        <maxCharges>500</maxCharges>
+                        <ammoDef>Ammo_556x45mmNATO_FMJ</ammoDef>
+                        <ammoCountPerCharge>1</ammoCountPerCharge>
+                        <baseReloadTicks>90</baseReloadTicks>
+                        <soundReload>Standard_Reload</soundReload>
+                        <hotKey>Misc4</hotKey>
+                        <chargeNoun>5.56x45mm NATO FMJ</chargeNoun>
+                        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+                    </li>
+                </value>
+            </li>
+
+
+
+            <!--Kord Turret-->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Module_TurretPackHeavy"]/statBases/Mass</xpath>
+                <value>
+                    <Mass>32</Mass>
+                    <Bulk>27</Bulk>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackHeavy"]/statBases/Mass</xpath>
+                <value>
+                    <Mass>32</Mass>
+                    <Bulk>27</Bulk>
+                    <WornBulk>9</WornBulk>
+                    <SwayFactor>1.66</SwayFactor>
+                    <ShotSpread>0.06</ShotSpread>
+                    <SightsEfficiency>1</SightsEfficiency>
+                    <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+                </value>
+            </li>
+
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackHeavy"]/equippedStatOffsets/MoveSpeed</xpath>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackHeavy"]/verbs</xpath>
+                <value>
+                    <verbs>
+                        <li Class="CombatExtended.VerbPropertiesCE">
+                            <label>Gun</label>
+                            <recoilAmount>1.46</recoilAmount>
+				            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				            <hasStandardCommand>true</hasStandardCommand>
+				            <defaultProjectile>Bullet_127x108mm_FMJ</defaultProjectile>
+                            <commandIcon>Things/Dragoon/TurretPack/TurretPack_Kord</commandIcon>
+                            <warmupTime>1.4</warmupTime>
+                            <range>75</range>
+                            <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				            <burstShotCount>8</burstShotCount>
+                            <soundCast>Shot_Autocannon</soundCast>
+                            <soundCastTail>GunTail_Heavy</soundCastTail>
+                            <muzzleFlashScale>12</muzzleFlashScale>
+                            <targetParams>
+                                <canTargetLocations>true</canTargetLocations>
+                            </targetParams>
+                            <recoilPattern>Mounted</recoilPattern>
+                        </li>
+                    </verbs>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackHeavy"]/comps</xpath>
+                <value>
+                    <li Class="CompProperties_ApparelReloadable">
+                        <maxCharges>300</maxCharges>
+                        <ammoDef>Ammo_127x108mm_FMJ</ammoDef>
+                        <ammoCountPerCharge>1</ammoCountPerCharge>
+                        <baseReloadTicks>110</baseReloadTicks>
+                        <soundReload>Standard_Reload</soundReload>
+                        <hotKey>Misc4</hotKey>
+                        <chargeNoun>12.7x108mm Soviet FMJ</chargeNoun>
+                        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+                    </li>
+                </value>
+            </li>
+
+
+
+            <!--GAU Turret-->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Module_TurretPackGAU"]/statBases/Mass</xpath>
+                <value>
+                    <Mass>51</Mass>
+                    <Bulk>34</Bulk>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackGAU"]/statBases/Mass</xpath>
+                <value>
+                    <Mass>51</Mass>
+                    <Bulk>34</Bulk>
+                    <WornBulk>12</WornBulk>
+                    <SwayFactor>1.62</SwayFactor>
+                    <ShotSpread>0.05</ShotSpread>
+                    <SightsEfficiency>1</SightsEfficiency>
+                    <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
+                </value>
+            </li>
+
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackGAU"]/equippedStatOffsets/MoveSpeed</xpath>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackGAU"]/verbs</xpath>
+                <value>
+                    <verbs>
+                        <li Class="CombatExtended.VerbPropertiesCE">
+                            <label>Gun</label>
+                            <recoilAmount>1.31</recoilAmount>
+				            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				            <hasStandardCommand>true</hasStandardCommand>
+				            <defaultProjectile>Bullet_50BMG_FMJ</defaultProjectile>
+                            <commandIcon>Things/Dragoon/TurretPack/TurretPack_GAU</commandIcon>
+                            <warmupTime>1</warmupTime>
+                            <range>75</range>
+                            <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				            <burstShotCount>15</burstShotCount>
+                            <soundCast>GunShotA</soundCast>
+                            <soundCastTail>GunTail_Heavy</soundCastTail>
+                            <muzzleFlashScale>12</muzzleFlashScale>
+                            <targetParams>
+                                <canTargetLocations>true</canTargetLocations>
+                            </targetParams>
+                            <recoilPattern>Mounted</recoilPattern>
+                        </li>
+                    </verbs>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackGAU"]/comps</xpath>
+                <value>
+                    <li Class="CompProperties_ApparelReloadable">
+                        <maxCharges>420</maxCharges>
+                        <ammoDef>Ammo_50BMG_FMJ</ammoDef>
+                        <ammoCountPerCharge>1</ammoCountPerCharge>
+                        <baseReloadTicks>150</baseReloadTicks>
+                        <soundReload>Standard_Reload</soundReload>
+                        <hotKey>Misc4</hotKey>
+                        <chargeNoun>.50BMG FMJ</chargeNoun>
+                        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+                    </li>
+                </value>
+            </li>
+
+
+
+        </operations>
+    </Operation>
+</Patch>

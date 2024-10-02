@@ -92,9 +92,12 @@
     <ThingDef Name="DMS_ModuleApparelCore" ParentName="DMS_ModuleApparelBase" Abstract="True">
         <thingClass>WalkerGear.WalkerGear_Core</thingClass>
         <equippedStatOffsets>
-            <MeleeDamageFactor>2</MeleeDamageFactor>
+            <MeleeDamageFactor>1.25</MeleeDamageFactor>
             <StaggerDurationFactor>-0.9</StaggerDurationFactor>
         </equippedStatOffsets>
+        <statBases>
+            <Flammability>0</Flammability>
+        </statBases>
         <apparel>
             <tags>
                 <li>DMS_DragoonArmour</li>

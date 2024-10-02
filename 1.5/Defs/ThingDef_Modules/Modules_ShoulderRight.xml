@@ -112,12 +112,12 @@
                 <verbClass>Verb_Shoot</verbClass>
                 <label>Gun</label>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>Bullet_Autopistol</defaultProjectile>
+                <defaultProjectile>Bullet_AssaultRifle</defaultProjectile>
                 <warmupTime>0.5</warmupTime>
                 <range>15.9</range>
                 <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
                 <burstShotCount>5</burstShotCount>
-                <soundCast>Shot_MachinePistol</soundCast>
+                <soundCast>Shot_AssaultRifle</soundCast>
                 <soundCastTail>GunTail_Medium</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
             </li>
@@ -133,7 +133,7 @@
                 <verbProps>
                     <li>
                         <label>Gun</label>
-                        <visualLabel>Mounted SMG</visualLabel>
+                        <visualLabel>Mounted LMG</visualLabel>
                         <description>A simple automatic gun made to be mounted on a shoulder.</description>
                         <canBeToggled>true</canBeToggled>
                         <comps>

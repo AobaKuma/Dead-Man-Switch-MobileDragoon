@@ -85,7 +85,7 @@
                     <canTargetLocations>true</canTargetLocations>
                     <canTargetBuildings>true</canTargetBuildings>
                 </targetParams>
-                <defaultProjectile>Bullet_9M311V</defaultProjectile><!-- 投射物有待修改 -->
+                <defaultProjectile>Bullet_Rocket</defaultProjectile><!-- 投射物有待修改 -->
                 <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
             </li>
         </verbs>
@@ -93,7 +93,7 @@
             <li Class="CompProperties_ApparelReloadable">
                 <maxCharges>4</maxCharges>
                 <ammoDef>Steel</ammoDef>
-                <ammoCountPerCharge>20</ammoCountPerCharge>
+                <ammoCountPerCharge>50</ammoCountPerCharge>
                 <baseReloadTicks>60</baseReloadTicks>
                 <soundReload>Standard_Reload</soundReload>
                 <hotKey>Misc4</hotKey>
@@ -113,7 +113,7 @@
     <ThingDef ParentName="DMS_ModuleItemMountLeft">
         <defName>DMS_Module_SwarmMissilePod</defName>
         <label>Swarm rocket Pod</label>
-        <description>todo.</description>
+        <description>Rocket pod contains multiple HE rockets, can use its high fire rate to cover an large area.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_SwarmMissilePod</ThingDef>
         </descriptionHyperlinks>
@@ -306,7 +306,7 @@
                     <canTargetLocations>true</canTargetLocations>
                     <canTargetBuildings>true</canTargetBuildings>
                 </targetParams>
-                <defaultProjectile>Bullet_9M311V</defaultProjectile>
+                <defaultProjectile>Bullet_Rocket</defaultProjectile>
                 <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
             </li>
         </verbs>
@@ -314,7 +314,7 @@
             <li Class="CompProperties_ApparelReloadable">
                 <maxCharges>8</maxCharges>
                 <ammoDef>Steel</ammoDef>
-                <ammoCountPerCharge>25</ammoCountPerCharge>
+                <ammoCountPerCharge>50</ammoCountPerCharge>
                 <baseReloadTicks>60</baseReloadTicks>
                 <soundReload>Standard_Reload</soundReload>
                 <hotKey>Misc4</hotKey>

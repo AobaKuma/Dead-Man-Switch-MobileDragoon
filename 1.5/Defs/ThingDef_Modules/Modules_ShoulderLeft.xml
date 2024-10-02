@@ -22,7 +22,7 @@
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <EquipedThingDef>DMS_Apparel_MissilePod</EquipedThingDef>
                 <slots>
-                 <li>MountLeft</li>
+                    <li>MountLeft</li>
                 </slots>
             </li>
         </comps>

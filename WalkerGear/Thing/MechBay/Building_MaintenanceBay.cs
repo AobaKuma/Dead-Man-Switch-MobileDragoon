@@ -159,7 +159,7 @@ namespace WalkerGear
             foreach (Apparel a in DummyApparels?.WornApparel?.Where(t=>t.IsModule()))
             {
                 CompWalkerComponent comp = a.GetComp<CompWalkerComponent>();
-                massCapacity += a.GetStatValue(StatDefOf.CarryingCapacity) != StatDefOf.CarryingCapacity.defaultBaseValue ? a.GetStatValue(StatDefOf.CarryingCapacity) : 0;
+                massCapacity += a.def.equippedStatOffsets.GetStatOffsetFromList(StatDefOf.CarryingCapacity);
                 currentLoad += a.GetStatValue(StatDefOf.Mass);
 
                 foreach (SlotDef s in comp.Props.slots)

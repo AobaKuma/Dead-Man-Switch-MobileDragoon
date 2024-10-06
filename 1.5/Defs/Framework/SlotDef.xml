@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-	<StatDef>
-		<defName>MF_Stat_Module</defName>
-		<label>module slot</label>
-		<workerClass>WalkerGear.StatWorker_Module</workerClass>
-		<description>todo.</description>
-		<category>BasicsImportant</category>
-		<defaultBaseValue>0</defaultBaseValue>
-		<minValue>-1</minValue>
-	</StatDef>
   
   <WalkerGear.SlotDef Name="BaseSlot" Abstract="true">
     <description>...</description>
@@ -67,7 +58,5 @@
     <label>Left Arm</label>
     <uiPriority>6</uiPriority>
   </WalkerGear.SlotDef>
-
-
   
 </Defs>

@@ -96,12 +96,6 @@ namespace WalkerGear
                     GenPlace.TryPlaceThing(ThingMaker.MakeThing(RimWorld.ThingDefOf.Filth_Fuel), Wearer.Position, Wearer.Map, ThingPlaceMode.Near);
                 }
             }
-
-            if (Health <= 0)
-            {
-                return false;
-            }
-
             Health -= dmg;
             if (Health <= 0)
             {
@@ -126,6 +120,17 @@ namespace WalkerGear
             dinfo.SetAmount(amount);
             return amount;
         }
+        public void CheckModules()
+        {
+            modules.Clear();
+            foreach (Apparel a in Wearer.apparel.WornApparel)
+            {
+                if (a.HasComp<CompWalkerComponent>())
+                {
+                    modules.Add(a);
+                }
+            }
+        }
         public bool RefreshHP(bool setup = false)
         {
             if (setup)
@@ -137,7 +142,7 @@ namespace WalkerGear
             CheckModules();
             float hpmax = 0f;
             float hp = 0f;
-            foreach (var t in modules)
+            foreach (Thing t in modules)
             {
                 if (t.TryGetQuality(out QualityCategory qc) && t.TryGetComp<CompWalkerComponent>(out var wc) &&
                     MechUtility.qualityToHPFactor.TryGetValue(qc, out float factor))
@@ -152,17 +157,6 @@ namespace WalkerGear
             combinedHealth = hpmax;
             if (setup) healthInt = hp;
             return true;
-        }
-        public void CheckModules()
-        {
-            modules.Clear();
-            foreach (Apparel a in Wearer.apparel.WornApparel)
-            {
-                if (a.HasComp<CompWalkerComponent>())
-                {
-                    modules.Add(a);
-                }
-            }
         }
         public void Eject()
         {

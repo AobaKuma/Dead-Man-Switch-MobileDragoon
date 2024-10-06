@@ -65,10 +65,10 @@ namespace WalkerGear
             core = null;
             if (!PawnWearingWalkerCore(pawn)) return false;
 
-            IEnumerable<Apparel> A = pawn.apparel?.WornApparel?.Where(c => cores.Contains(c.def));
-            if (!A.EnumerableNullOrEmpty())
+            IEnumerable<Apparel> apparel = pawn.apparel?.WornApparel?.Where(c => cores.Contains(c.def));
+            if (!apparel.EnumerableNullOrEmpty())
             {
-                core = A.First() as WalkerGear_Core;
+                core = apparel.First() as WalkerGear_Core;
                 return true;
             }
             return false;
@@ -82,6 +82,7 @@ namespace WalkerGear
                 {
                     pawn.apparel.Unlock(a);
                     pawn.apparel.Remove(a);
+                    pawn.apparel.Notify_ApparelRemoved(a);
                 }
             }
         }
@@ -221,7 +222,7 @@ namespace WalkerGear
             foreach (Apparel a in pawn.apparel.WornApparel.Where(t => t.IsModule()))
             {
                 var comp = a.GetComp<CompWalkerComponent>();
-                massCapacity += a.GetStatValue(StatDefOf.CarryingCapacity) != StatDefOf.CarryingCapacity.defaultBaseValue ? a.GetStatValue(StatDefOf.CarryingCapacity) : 0;
+                massCapacity += a.def.equippedStatOffsets.GetStatOffsetFromList(StatDefOf.CarryingCapacity);
                 currentLoad += a.GetStatValue(StatDefOf.Mass);
 
                 li.Add(comp);

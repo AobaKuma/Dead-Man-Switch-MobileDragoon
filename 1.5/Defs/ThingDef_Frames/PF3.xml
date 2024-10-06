@@ -48,7 +48,6 @@
     </graphicData>
     <statBases>
       <Mass>80</Mass>
-			<CarryingCapacity>150</CarryingCapacity>
       <MoveSpeed>4.0</MoveSpeed>
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
@@ -57,6 +56,7 @@
 			<Insulation_Heat>20</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
+			<CarryingCapacity>150</CarryingCapacity>
 			<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
       <SM_BodySizeOffset MayRequire="redmattis.betterprerequisites">0.75</SM_BodySizeOffset>
       <SM_Cosmetic_BodySizeOffset MayRequire="redmattis.betterprerequisites">-0.75</SM_Cosmetic_BodySizeOffset>

@@ -39,6 +39,7 @@ namespace WalkerGear
                 pawn.apparel.Wear(apparel,false,true);
                 if (apparel is WalkerGear_Core core2) core = core2;
             }
+
             core?.RefreshHP(true);
             core.Health = core.HealthMax * modExt.StructurePointRange.RandomInRange;
         }

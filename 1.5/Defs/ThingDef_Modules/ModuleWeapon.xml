@@ -10,7 +10,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MaxHitPoints>150</MaxHitPoints>
+      <MaxHitPoints>10</MaxHitPoints>
       <WorkToMake>40000</WorkToMake>
     </statBases>
     <tradeTags>

@@ -78,10 +78,10 @@
                 <li>DMS_DragoonHelmet</li>
             </tags>
             <bodyPartGroups>
-                <li>UpperHead</li>
+                <li>Neck</li>
             </bodyPartGroups>
             <layers>
-                <li>WG_WalkerGearLayer</li>
+                <li>WG_WalkerGearLayer_Core</li>
             </layers>
             <parentTagDef>WGApparelHead</parentTagDef>
             <renderSkipFlags>
@@ -109,14 +109,10 @@
             </renderSkipFlags>
             <bodyPartGroups>
                 <li>Torso</li>
-                <li>Neck</li>
-                <li>Shoulders</li>
-                <li>Arms</li>
-                <li>Feet</li>
-                <li>Hands</li>
             </bodyPartGroups>
             <layers>
                 <li>Shell</li>
+                <li>WG_WalkerGearLayer_Core</li>
             </layers>
         </apparel>
 		<tools>
@@ -149,9 +145,10 @@
             <parentTagDef>WGApparelBody</parentTagDef>
             <bodyPartGroups>
                 <li>Waist</li>
+                <li>Neck</li>
             </bodyPartGroups>
             <layers>
-                <li>WG_WalkerGearLayer</li>
+                <li>WG_WalkerGearLayer_Utility</li>
             </layers>
         </apparel>
     </ThingDef>
@@ -163,9 +160,10 @@
         <apparel>
             <bodyPartGroups>
                 <li>Shoulders</li>
+                <li>Legs</li>
             </bodyPartGroups>
             <layers>
-                <li>WG_WalkerGearLayer</li>
+                <li>WG_WalkerGearLayer_Utility</li>
             </layers>
             <parentTagDef>WGApparelBody</parentTagDef>
         </apparel>
@@ -177,10 +175,10 @@
         </thingCategories>
         <apparel>
             <bodyPartGroups>
-                <li>Neck</li>
+                <li>Torso</li>
             </bodyPartGroups>
             <layers>
-                <li>WG_WalkerGearLayer</li>
+                <li>WG_WalkerGearLayer_Utility</li>
             </layers>
             <parentTagDef>WGApparelBody</parentTagDef>
         </apparel>
@@ -192,7 +190,7 @@
         </thingCategories>
         <apparel>
             <bodyPartGroups>
-                <li>LeftArm</li>
+                <li>Torso</li>
             </bodyPartGroups>
             <layers>
                 <li>WG_WalkerGearLayer</li>
@@ -206,9 +204,10 @@
             <li>DMS_Module_Equipment</li>
         </thingCategories>
         <apparel>
-          <bodyPartGroups>
-            <li>RightArm</li>
-          </bodyPartGroups>
+            <bodyPartGroups>
+                <li>Shoulders</li>
+                <li>Legs</li>
+            </bodyPartGroups>
           <layers>
             <li>WG_WalkerGearLayer</li>
           </layers>

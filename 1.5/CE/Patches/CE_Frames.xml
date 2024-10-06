@@ -64,6 +64,7 @@
         <value>
             <CarryBulk>300</CarryBulk>
             <Suppressability>-1</Suppressability>
+            <ShootingAccuracyPawn>1</ShootingAccuracyPawn>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
@@ -97,7 +98,9 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Helmet"]/equippedStatOffsets</xpath>
         <value>
+            <NightVisionEfficiency>0.4</NightVisionEfficiency>
             <SmokeSensitivity>-1</SmokeSensitivity>
+            <AimingAccuracy>0.4</AimingAccuracy>
         </value>
     </Operation>
 
@@ -114,6 +117,7 @@
         <value>
             <CarryBulk>300</CarryBulk>
             <Suppressability>-1</Suppressability>
+            <ShootingAccuracyPawn>1</ShootingAccuracyPawn>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
@@ -147,7 +151,9 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Helmet"]/equippedStatOffsets</xpath>
         <value>
+            <NightVisionEfficiency>0.65</NightVisionEfficiency>
             <SmokeSensitivity>-1</SmokeSensitivity>
+            <AimingAccuracy>0.4</AimingAccuracy>
         </value>
     </Operation>
 
@@ -198,6 +204,7 @@
         <value>
             <CarryBulk>300</CarryBulk>
             <Suppressability>-1</Suppressability>
+            <ShootingAccuracyPawn>1.6</ShootingAccuracyPawn>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
@@ -232,6 +239,8 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_FA47_Helmet"]/equippedStatOffsets</xpath>
         <value>
+            <NightVisionEfficiency>0.8</NightVisionEfficiency>
+            <AimingAccuracy>0.75</AimingAccuracy>
             <SmokeSensitivity>-1</SmokeSensitivity>
         </value>
     </Operation>
@@ -244,7 +253,6 @@
             <WornBulk>21</WornBulk>
         </value>
     </Operation>
-
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_Groyne_Helmet"]/equippedStatOffsets</xpath>
         <value>
@@ -264,6 +272,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_Stahlhelm_Helmet"]/equippedStatOffsets</xpath>
         <value>
+            <AimingAccuracy>0.25</AimingAccuracy>
             <SmokeSensitivity>-1</SmokeSensitivity>
         </value>
     </Operation>

@@ -56,15 +56,6 @@ namespace WalkerGear
 
             return baseStat;
         }
-        private Pawn GetPawn(StatRequest req)
-        {
-            if (req.Thing is Pawn p)
-            {
-                return p;
-            }
-            Log.Warning("Error: pawn not exist");
-            return null;
-        }
         private bool IsWorking(StatRequest req, out WalkerGear_Core core)
         {
             core = null;

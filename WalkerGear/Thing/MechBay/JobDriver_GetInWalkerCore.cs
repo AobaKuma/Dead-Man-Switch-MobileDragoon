@@ -58,6 +58,11 @@ namespace WalkerGear
                     Messages.Message("WG_TooBigForPilot".Translate(GetActor().Label), MessageTypeDefOf.RejectInput, false);
                     return false;
                 }
+                if (!pawn.DevelopmentalStage.Adult())
+                {
+                    Messages.Message("WG_TooYoungToPilot".Translate(GetActor().Name.ToString()), MessageTypeDefOf.RejectInput, false);
+                    return false;
+                }
             }
             return this.pawn.Reserve(this.job.GetTarget(maintenanceBay), this.job, errorOnFailed: errorOnFailed);
         }

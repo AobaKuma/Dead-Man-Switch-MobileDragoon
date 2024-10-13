@@ -1,5 +1,94 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+    <!-- (右)中繼天線 -->
+    <ThingDef ParentName="DMS_ModuleItemMountRight">
+        <defName>DMS_Module_RelayAntenna</defName>
+        <label>Relay Antenna</label>
+        <description>An antenna module that expands the control range for friendly mechanics. Although the control range is relatively limited, it is enough to allow mechanics to coordinate infantry around the frame.</description>
+        <descriptionHyperlinks>
+            <ThingDef>DMS_Apparel_RelayAntenna</ThingDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MaxHitPoints>25</MaxHitPoints>
+            <Mass>15</Mass>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+        </recipeMaker>
+        <costList>
+            <Steel>100</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <EquipedThingDef>DMS_Apparel_RelayAntenna</EquipedThingDef>
+                <slots>
+                    <li>MountRight</li>
+                </slots>
+            </li>
+        </comps>
+    </ThingDef>
+    <ThingDef ParentName="DMS_ModuleApparelMountRight">
+        <defName>DMS_Apparel_RelayAntenna</defName>
+        <label>Relay Antenna</label>
+        <description>An antenna module that expands the control range for friendly mechanics. Although the control range is relatively limited, it is enough to allow mechanics to coordinate infantry around the frame.</description>
+        <descriptionHyperlinks>
+            <ThingDef>DMS_Module_RelayAntenna</ThingDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Dragoon/RelayAntenna/apparel_south</texPath>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>25</MaxHitPoints>
+            <Mass>15</Mass>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.1</MoveSpeed>
+        </equippedStatOffsets>
+        <apparel>
+            <wornGraphicPath>Things/Dragoon/RelayAntenna/apparel</wornGraphicPath>
+            <renderNodeProperties>
+                <li>
+                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
+                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
+                    <parentTagDef>WGApparelBody</parentTagDef>
+                    <drawData>
+                        <scale>1.125</scale>
+                        <defaultData>
+                            <layer>20</layer>
+                        </defaultData>
+                        <dataSouth>
+                            <offset>(-0.90,0,0.90)</offset>
+                            <layer>0</layer>
+                        </dataSouth>
+                        <dataNorth>
+                            <offset>(0.90,0,0.50)</offset>
+                            <layer>75</layer>
+                        </dataNorth>
+                        <dataWest>
+                            <offset>(0.50,0,0.9)</offset>
+                            <layer>0</layer>
+                        </dataWest>
+                        <dataEast>
+                            <offset>(-0.90,0,0.65)</offset>
+                            <layer>0</layer>
+                        </dataEast>
+                    </drawData>
+                </li>
+            </renderNodeProperties>
+        </apparel>
+        <comps>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <ItemDef>DMS_Module_RelayAntenna</ItemDef>
+                <slots>
+                    <li>MountRight</li>
+                </slots>
+            </li>
+            <li Class="DMS.CompProperties_SubRelay">
+                <relayRange>10</relayRange>
+            </li>
+        </comps>
+    </ThingDef>
 
     <!-- (右)肩部機槍 -->
     <ThingDef ParentName="DMS_ModuleItemMountRight">

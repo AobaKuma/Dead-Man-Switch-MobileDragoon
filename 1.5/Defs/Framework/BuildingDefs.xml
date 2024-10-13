@@ -325,6 +325,7 @@
     </comps>
   </ThingDef>
 
+  <!-- 殘骸 -->
   <ThingDef ParentName="BuildingBase">
     <defName>MF_Building_Wreckage</defName>
     <label>wreckage</label>
@@ -337,6 +338,9 @@
     <canOverlapZones>false</canOverlapZones>
     <altitudeLayer>Building</altitudeLayer>
     <useHitPoints>true</useHitPoints>
+    <building>
+      <repairable>false</repairable>
+    </building>
     <size>(2,2)</size>
     <statBases>
       <MaxHitPoints>500</MaxHitPoints>

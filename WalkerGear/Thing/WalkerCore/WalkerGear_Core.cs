@@ -208,7 +208,7 @@ namespace WalkerGear
             if (building is Building_Wreckage wreckage)
             {
                 Wearer.DeSpawnOrDeselect();
-                wreckage.pawnContainer.Add(Wearer);
+                wreckage.SetContained(Wearer);
                 foreach (var m in modules)
                 {
                     if (m == this) continue;

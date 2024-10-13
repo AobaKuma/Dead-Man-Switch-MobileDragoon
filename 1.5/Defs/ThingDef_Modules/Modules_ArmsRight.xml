@@ -4,7 +4,7 @@
   <ThingDef ParentName="DMS_ModuleItemArmRight">
     <defName>DMS_Module_PileBunker</defName>
     <label>pile bunker</label>
-    <description>todo</description>
+    <description>An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent.</description>
     <!-- <description>一種安裝於龍騎兵機體上的工程模塊，由於其工作效率極高因此也經常被用來拆除建築時使用，讓那些訓練機能在一定程度上能做點別的事情。</description> -->
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PileBunker</ThingDef>
@@ -16,6 +16,13 @@
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonBasis</researchPrerequisite>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>50</Steel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
@@ -32,11 +39,14 @@
   <ThingDef ParentName="DMS_ModuleApparelArmRight">
     <defName>DMS_Apparel_PileBunker</defName>
     <label>pile bunker</label>
-    <description>Todo.</description>
+    <description>An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent.</description>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Dragoon/PileBunker/apparel_south</texPath>
-    </graphicData>
+    </graphicData>    
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PileBunker</ThingDef>
+    </descriptionHyperlinks>
     <statBases>
       <MaxHitPoints>60</MaxHitPoints>
       <Mass>30</Mass>
@@ -120,6 +130,13 @@
         <li>DMS_EquipmentHeavy</li>
       </researchPrerequisites>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>50</Steel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>

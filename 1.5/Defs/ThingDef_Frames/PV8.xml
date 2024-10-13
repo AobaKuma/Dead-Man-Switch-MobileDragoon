@@ -4,7 +4,7 @@
   <ThingDef ParentName="DMS_ModuleItemCore">
     <defName>DMS_Module_PV8_Core</defName>
     <label>PV-8 "Zyklop" frame module</label>
-    <description>A heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task force. This is probably the largest piece of infantry equipments deployed by the colonial fleet on surface of this planet. The extremely thick armor and powerful power system enable the ground garrison to maintain sufficient mobile firepower to deal with interference in the colonization project.</description>
+    <description>These heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task force. Probably the largest piece of infantry equipments deployed by the colonial fleet on surface of this planet. Their extremely thick armor and powerful power system allowing ground garrison to maintain sufficient mobile firepower to deal with interference in the colonization.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PV8_Core</ThingDef>
     </descriptionHyperlinks>
@@ -26,6 +26,18 @@
         <Crafting>8</Crafting>
       </skillRequirements>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>75</Steel>
+      <Tungsteel>170</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <Tungsteel>200</Tungsteel>
+      <Artifuscle>110</Artifuscle>
+      <Steel>75</Steel>
+      <ChunkSlagSteel>3</ChunkSlagSteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <ComponentStamped>4</ComponentStamped>
+    </butcherProducts>
     <costList>
       <Tungsteel>375</Tungsteel>
       <Artifuscle>200</Artifuscle>
@@ -42,6 +54,9 @@
     <graphicData>
       <texPath>Things/Dragoon/PV8/apparel_south</texPath>
     </graphicData>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PV8_Core</ThingDef>
+    </descriptionHyperlinks>
     <statBases>
       <Mass>80</Mass>
       <MoveSpeed>6.2</MoveSpeed>
@@ -105,7 +120,7 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_PV8_Helmet</defName>
     <label>PV-8 "Zyklop" helmet</label>
-    <description>todo.</description>
+    <description>A heavy-duty helmet that uses small optical probes arranged in a distributed manner as sensors in order to prevent damage from frontal hits from large-caliber weapons.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PV8_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -127,6 +142,17 @@
         <Crafting>8</Crafting>
       </skillRequirements>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>45</Steel>
+      <Tungsteel>30</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <Tungsteel>40</Tungsteel>
+      <Steel>10</Steel>
+      <ChunkSlagSteel>2</ChunkSlagSteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <ComponentStamped>3</ComponentStamped>
+    </butcherProducts>
     <costList>
       <Tungsteel>50</Tungsteel>
       <Steel>40</Steel>
@@ -137,10 +163,13 @@
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_PV8_Helmet</defName>
     <label>PV-8 "Zyklop" helmet</label>
-    <description>Todo.</description>
+    <description>A heavy-duty helmet that uses small optical probes arranged in a distributed manner as sensors in order to prevent damage from frontal hits from large-caliber weapons.</description>
     <graphicData>
       <texPath>Things/Dragoon/PV8/helmet_south</texPath>
     </graphicData>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PV8_Helmet</ThingDef>
+    </descriptionHyperlinks>
     <statBases>
       <MaxHitPoints>80</MaxHitPoints>
       <Mass>40</Mass>

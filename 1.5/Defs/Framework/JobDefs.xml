@@ -57,4 +57,5 @@
         <nonColonistsCanDo>true</nonColonistsCanDo>
         <canBeDoneByMechs>true</canBeDoneByMechs>
       </WorkGiverDef>
+      
 </Defs>

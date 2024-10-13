@@ -4,7 +4,7 @@
   <ThingDef ParentName="DMS_ModuleItemCore">
     <defName>DMS_Module_AT34_Core</defName>
     <label>AT-34 "Yetta" core module</label>
-    <description>todo.</description>
+    <description>A power armor frame that was exported to the entire rimworld as a training and civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become the largest individual equipment that can be used by local armed forces in the rimworld except armored vehicles. However, providing adequate maintenance and parts for this equipment without proper industrialization would have become extremely difficult without trade with the colonial fleet.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_AT34_Core</ThingDef>
     </descriptionHyperlinks>
@@ -29,6 +29,15 @@
         <Crafting>4</Crafting>
       </skillRequirements>
     </recipeMaker>
+    <smeltProducts>
+      <Tungsteel>100</Tungsteel>
+      <Steel>200</Steel>
+    </smeltProducts>
+    <butcherProducts>
+      <ComponentStamped>4</ComponentStamped>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <ChunkSlagSteel>8</ChunkSlagSteel>
+    </butcherProducts>
     <costList>
       <Tungsteel>175</Tungsteel>
       <Steel>250</Steel>
@@ -40,7 +49,7 @@
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_AT34_Core</defName>
     <label>AT-34 "Yetta" frame</label>
-    <description>Todo.</description>
+    <description>A power armor frame that was exported to the entire rimworld as a training and civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become the largest individual equipment that can be used by local armed forces in the rimworld except armored vehicles. However, providing adequate maintenance and parts for this equipment without proper industrialization would have become extremely difficult without trade with the colonial fleet.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_AT34_Core</ThingDef>
     </descriptionHyperlinks>
@@ -110,7 +119,7 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_AT34_Helmet</defName>
     <label>AT-34 "Yetta" helmet</label>
-    <description>todo.</description>
+    <description>An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_AT34_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -138,6 +147,15 @@
         <Crafting>4</Crafting>
       </skillRequirements>
     </recipeMaker>
+    <smeltProducts>
+      <Tungsteel>15</Tungsteel>
+      <Steel>40</Steel>
+    </smeltProducts>
+    <butcherProducts>
+      <ComponentStamped>1</ComponentStamped>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ChunkSlagSteel>2</ChunkSlagSteel>
+    </butcherProducts>
     <costList>
       <Tungsteel>30</Tungsteel>
       <Steel>50</Steel>
@@ -148,7 +166,7 @@
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_AT34_Helmet</defName>
     <label>AT-34 "Yetta" helmet</label>
-    <description>Todo.</description>
+    <description>An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_AT34_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -160,6 +178,7 @@
       <Mass>24</Mass>
     </statBases>
     <equippedStatOffsets>
+			<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
       <MoveSpeed>-0.15</MoveSpeed>
       <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
     </equippedStatOffsets>

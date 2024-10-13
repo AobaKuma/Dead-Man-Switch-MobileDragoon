@@ -3,12 +3,10 @@ using RimWorld;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
-using static HarmonyLib.Code;
 using Verse.AI;
 
 namespace WalkerGear
 {
-    //TBD
 
     [StaticConstructorOnStartup]
     [HarmonyPatch(typeof(FloatMenuMakerMap), "AddHumanlikeOrders")]

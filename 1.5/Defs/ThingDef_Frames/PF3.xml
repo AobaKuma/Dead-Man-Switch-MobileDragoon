@@ -32,6 +32,17 @@
         <Crafting>4</Crafting>
       </skillRequirements>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>125</Steel>
+      <Tungsteel>40</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <Tungsteel>60</Tungsteel>
+      <Steel>125</Steel>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <ComponentStamped>3</ComponentStamped>
+    </butcherProducts>
     <costList>
       <Tungsteel>75</Tungsteel>
       <Steel>250</Steel>
@@ -42,10 +53,13 @@
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_PF3_Core</defName>
     <label>PF-3 "Arbeiter" powered frame</label>
-    <description>Todo.</description>
+    <description>An exoskeleton frame within 2 meters high, its technology can be traced back to the end of the 22nd century, when mass-production engineering exoskeleton frames were used to construct a space elevator system for the Project Skyway.\n\nAfter the advent of the space age, a large number of engineering frames and production equipment flowed into civilian and armed organizations.\n\nArbeiter has a left arm that can use human tools and a right arm is used to install tool modules and balance the weight, allowing modules to be replaced to meet most of the work missions.</description>
     <graphicData>
       <texPath>Things/Dragoon/PF3/apparel_south</texPath>
     </graphicData>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PF3_Core</ThingDef>
+    </descriptionHyperlinks>
     <statBases>
       <Mass>80</Mass>
       <MoveSpeed>4.0</MoveSpeed>

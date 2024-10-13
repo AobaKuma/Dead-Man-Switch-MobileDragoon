@@ -4,7 +4,7 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_Groyne_Helmet</defName>
     <label>"Groyne" helmet</label>
-    <description>todo.</description>
+    <description>An armored cover that provides driver protection without adequate optical manufacturing processes. It is bulky but does provide some durability.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_Groyne_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -32,9 +32,16 @@
         <Crafting>4</Crafting>
       </skillRequirements>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>75</Steel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentStamped>1</ComponentStamped>
+    </butcherProducts>
     <costList>
-      <Tungsteel>30</Tungsteel>
-      <Steel>50</Steel>
+      <Steel>150</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
       <ComponentStamped>1</ComponentStamped>
     </costList>
@@ -42,7 +49,7 @@
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_Groyne_Helmet</defName>
     <label>"Groyne" helmet</label>
-    <description>Todo.</description>
+    <description>An armored cover that provides driver protection without adequate optical manufacturing processes. It is bulky but does provide some durability.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_Groyne_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -79,7 +86,7 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_Stahlhelm_Helmet</defName>
     <label>"Stahlhelm" helmet</label>
-    <description>todo.</description>
+    <description>a civil frame module used for welding. But In fact, large quantities of them were flowing into the arms market and underwent certain bulletproof modifications.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_Stahlhelm_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -107,6 +114,15 @@
         <Crafting>4</Crafting>
       </skillRequirements>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>35</Steel>
+      <Tungsteel>25</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <Tungsteel>10</Tungsteel>
+      <ChunkSlagSteel>2</ChunkSlagSteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </butcherProducts>
     <costList>
       <Tungsteel>30</Tungsteel>
       <Steel>50</Steel>
@@ -117,7 +133,7 @@
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_Stahlhelm_Helmet</defName>
     <label>"Stahlhelm" helmet</label>
-    <description>Todo.</description>
+    <description>a civil frame module used for welding. But In fact, large quantities of them were flowing into the arms market and underwent certain bulletproof modifications.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_Stahlhelm_Helmet</ThingDef>
     </descriptionHyperlinks>

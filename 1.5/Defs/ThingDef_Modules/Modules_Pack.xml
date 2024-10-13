@@ -5,7 +5,7 @@
   <ThingDef ParentName="DMS_ModuleItemAttachment">
     <defName>DMS_Module_JumpThruster</defName>
     <label>burst thruster</label>
-    <description>todo</description>
+    <description>A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult.</description>
     <!-- <description>龍騎兵使用的重型推進器，由四具噴氣引擎驅動整個機體進行短距離飛行，也能夠在消耗大量燃料的狀況下進行較長距離的空中突擊。</description> -->
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_JumpThruster</ThingDef>
@@ -17,6 +17,13 @@
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>50</Steel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
@@ -34,10 +41,13 @@
     <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_JumpThruster</defName>
     <label>burst thruster</label>
-    <description>Todo.</description>
+    <description>A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult.</description>
     <graphicData>
       <texPath>Things/Dragoon/BurstThruster/apparel_south</texPath>
-    </graphicData>
+    </graphicData>    
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_JumpThruster</ThingDef>
+    </descriptionHyperlinks>
     <statBases>
       <MaxHitPoints>75</MaxHitPoints>
       <Mass>60</Mass>
@@ -106,7 +116,8 @@
   <ThingDef ParentName="DMS_ModuleItemAttachment">
     <defName>DMS_Module_PackControlRelay</defName>
     <label>relay pack</label>
-    <description>todo.</description>
+    <!-- 一種用於輔助機械師駕駛員進行機械控制的重型背包，能透過有效的協調來為機械師增加帶寬。 -->
+    <description>A heavy-duty backpack designed to assist mechanitor pilot in mech control. can increase bandwidth through its coordination.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackControlRelay</ThingDef>
     </descriptionHyperlinks>
@@ -117,6 +128,13 @@
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonModule</researchPrerequisite>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>50</Steel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
@@ -131,11 +149,12 @@
       </li>
     </comps>
   </ThingDef>
+
   <ThingDef ParentName="DMS_ModuleApparelAttachment">
     <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_PackControlRelay</defName>
     <label>relay pack</label>
-    <description>Todo.</description>
+    <description>A heavy-duty backpack designed to assist the mechanitor pilot in mech control can increase bandwidth for the mechanitor through effective coordination.</description>
     <graphicData>
       <texPath>Things/Dragoon/PackControlRelay/apparel_north</texPath>
     </graphicData>
@@ -144,6 +163,7 @@
       <Mass>100</Mass>
     </statBases>
     <equippedStatOffsets>
+      <MechBandwidth MayRequire="ludeon.rimworld.biotech">8</MechBandwidth>
       <MoveSpeed>-0.2</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
@@ -186,7 +206,7 @@
   <ThingDef ParentName="DMS_ModuleItemAttachment">
     <defName>DMS_Module_PackEngineering</defName>
     <label>engineering pack</label>
-    <description>todo</description>
+    <description>The module which mounted on the Back of the frame. Having a pair of robotic arms to perform logistical work such as construction, maintenance, transportation, and processing.</description>
     <!-- <description>安裝於龍騎兵框架上的工程用模塊，具有一對輔助機械臂來進行建築、維修、搬運與加工等後勤工作。</description> -->
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackEngineering</ThingDef>
@@ -198,6 +218,13 @@
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>50</Steel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
@@ -216,16 +243,20 @@
     <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_PackEngineering</defName>
     <label>engineering pack</label>
-    <description>Todo.</description>
+    <description>The module which mounted on the Back of the frame. Having a pair of robotic arms to perform logistical work such as construction, maintenance, transportation, and processing.</description>
     <graphicData>
       <texPath>Things/Dragoon/PackEngineering/apparel_north</texPath>
-    </graphicData>
+    </graphicData>    
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PackEngineering</ThingDef>
+    </descriptionHyperlinks>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
       <Mass>110</Mass>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.2</MoveSpeed>
+			<WorkSpeedGlobal>0.10</WorkSpeedGlobal>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/PackEngineering/apparel</wornGraphicPath>
@@ -264,10 +295,10 @@
   </ThingDef>
 
    <!-- 增加攜帶量 -->
-   <ThingDef ParentName="DMS_ModuleItemAttachment">
+  <ThingDef ParentName="DMS_ModuleItemAttachment">
     <defName>DMS_Module_PackCargo</defName>
     <label>Cargo pack</label>
-    <description>todo</description>
+    <description>A pack module with cargo spaces and additional drive unit, let the frame to carry more payloads.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackCargo</ThingDef>
     </descriptionHyperlinks>
@@ -278,6 +309,13 @@
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>50</Steel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
@@ -296,7 +334,10 @@
     <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_PackCargo</defName>
     <label>Cargo pack</label>
-    <description>Todo.</description>
+    <description>A pack module with cargo spaces and additional drive unit, let the frame to carry more payloads.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PackCargo</ThingDef>
+    </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Dragoon/PackCargo/apparel_north</texPath>
     </graphicData>
@@ -344,12 +385,11 @@
     </comps>
   </ThingDef>
 
-
    <!-- 解鎖超重型裝備的使用 -->
-   <ThingDef ParentName="DMS_ModuleItemAttachment">
+  <ThingDef ParentName="DMS_ModuleItemAttachment">
     <defName>DMS_Module_PackFrame</defName>
     <label>hydraulic frame pack</label>
-    <description>todo</description>
+    <description>An exoskeleton system for the frame that allows the use of heavier heavy equipment without changing the design itself.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackFrame</ThingDef>
     </descriptionHyperlinks>
@@ -360,6 +400,13 @@
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>50</Steel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
@@ -378,7 +425,7 @@
     <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_PackFrame</defName>
     <label>hydraulic frame pack</label>
-    <description>Todo.</description>
+    <description>An exoskeleton system for the frame that allows the use of heavier heavy equipment without changing the design itself.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_PackFrame</ThingDef>
     </descriptionHyperlinks>

@@ -9,21 +9,11 @@ using Verse;
 
 namespace WalkerGear
 {
-    public class Building_Wreckage : Building, IOpenable
+    public class Building_Wreckage : Building_Casket
     {
-        public bool CanOpen => !pawnContainer.NullOrEmpty();
-
-        public int OpenTicks => 100;
-
-        public void Open()
+        public void SetContained(Thing thing)
         {
-            if (CanOpen)
-            {
-                Pawn p = pawnContainer.FirstOrDefault() as Pawn;
-                MechUtility.WeaponDropCheck(p);
-                GenDrop.TryDropSpawn(p, Position, Map, ThingPlaceMode.Direct, out var _);
-                pawnContainer.Clear();
-            }          
+            this.innerContainer.TryAdd(thing);
         }
         public override void Destroy(DestroyMode mode)
         {
@@ -40,7 +30,7 @@ namespace WalkerGear
                     GenDrop.TryDropSpawn(moduleContainer[i], Position, Map, ThingPlaceMode.Near, out var _);
                 }
             }
-            else
+            else if (mode ==DestroyMode.KillFinalize)
             {
                 for (int i = moduleContainer.Count - 1; i >= 0; i--)
                 {
@@ -48,19 +38,20 @@ namespace WalkerGear
                     GenDrop.TryDropSpawn(slug, Position, Map, ThingPlaceMode.Direct, out var _);
                 }
             }
-            if (CanOpen) GenDrop.TryDropSpawn(pawnContainer.FirstOrDefault(), Position, Map, ThingPlaceMode.Direct, out var _);
             base.Destroy(mode);
-        }
-        public override void Tick()
-        {
-            base.Tick();
-            pawnContainer.FirstOrDefault().Tick();
         }
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Collections.Look(ref moduleContainer, "moduleContainer", LookMode.Deep);
-            Scribe_Collections.Look(ref pawnContainer, "pawnContainer", LookMode.Deep);
+        }
+        public override void Tick()
+        {
+            if (HasAnyContents)
+            {
+                ContainedThing.Tick();
+            }
+            base.Tick();
         }
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
@@ -68,12 +59,9 @@ namespace WalkerGear
             base.SpawnSetup(map, respawningAfterLoad);
             if (!respawningAfterLoad)
             {
-                pawnContainer = new();
                 moduleContainer = new();
             }
-           
         }
-        public List<Pawn> pawnContainer;
         public List<Thing> moduleContainer;
     }
 }

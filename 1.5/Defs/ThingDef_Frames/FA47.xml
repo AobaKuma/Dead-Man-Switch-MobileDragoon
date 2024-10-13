@@ -27,6 +27,17 @@
         <Crafting>12</Crafting>
       </skillRequirements>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>45</Steel>
+      <Tungsteel>75</Tungsteel>
+      <Plasteel>120</Plasteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ComponentStamped>4</ComponentStamped>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <ChunkSlagSteel>5</ChunkSlagSteel>
+      <Artifuscle>75</Artifuscle>
+    </butcherProducts>
     <costList>
       <Plasteel>300</Plasteel>
       <Artifuscle>140</Artifuscle>
@@ -44,6 +55,9 @@
     <graphicData>
       <texPath>Things/Dragoon/PV8/apparel_south</texPath>
     </graphicData>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_FA47_Core</ThingDef>
+    </descriptionHyperlinks>
     <statBases>
       <Mass>80</Mass>
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
@@ -108,7 +122,7 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_FA47_Helmet</defName>
     <label>F/A-47 "Arsenal Angel" helmet</label>
-    <description>todo.</description>
+    <description>A complex synthetic caliber sensor module used by colonial fleets on dragoons used in space operations, It can effectively track high-speed moving enemies and assist pilot in aiming.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_FA47_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -130,6 +144,15 @@
         <Crafting>12</Crafting>
       </skillRequirements>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>15</Steel>
+      <Plasteel>25</Plasteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ComponentStamped>2</ComponentStamped>
+      <ComponentSpacer>1</ComponentSpacer>
+      <Plasteel>35</Plasteel>
+    </butcherProducts>
     <costList>
       <Plasteel>75</Plasteel>
       <ComponentSpacer>2</ComponentSpacer>
@@ -139,15 +162,19 @@
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_FA47_Helmet</defName>
     <label>F/A-47 "Arsenal Angel" helmet</label>
-    <description>Todo.</description>
+    <description>A complex synthetic caliber sensor module used by colonial fleets on dragoons used in space operations, It can effectively track high-speed moving enemies and assist pilot in aiming.</description>
     <graphicData>
       <texPath>Things/Dragoon/FA47/helmet_south</texPath>
     </graphicData>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_FA47_Helmet</ThingDef>
+    </descriptionHyperlinks>
     <statBases>
       <MaxHitPoints>60</MaxHitPoints>
       <Mass>18</Mass>
     </statBases>
     <equippedStatOffsets>
+      <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
       <MoveSpeed>-0.2</MoveSpeed>
     </equippedStatOffsets>
     <apparel>

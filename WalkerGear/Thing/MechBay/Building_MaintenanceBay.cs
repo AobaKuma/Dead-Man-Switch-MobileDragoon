@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
 using RimWorld;
@@ -13,6 +14,41 @@ using Verse.Noise;
 
 namespace WalkerGear
 {
+    public partial class Building_MaintenanceBay : Building
+    {
+        public bool CanRepair =>Faction.IsPlayer && def.inspectorTabs.Contains(typeof(ITab_MechGear));//臨時停機點不能修。
+        public bool NeedRepair //只要有一個需要修，那就能修。
+        {
+            get
+            {
+                if (!(Spawned && CanRepair && HasGearCore)) return false;
+                if (ModuleStorage.NullOrEmpty()) return false;
+                foreach (Apparel item in ModuleStorage)
+                {
+                    var comp = item.GetComp<CompWalkerComponent>();
+                    if (comp == null) continue;
+                    if (comp.HP < comp.MaxHP)
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
+
+        internal void Repair()
+        {
+            foreach (Apparel item in ModuleStorage)
+            {
+                var comp = item.GetComp<CompWalkerComponent>();
+                if (comp == null) continue;
+                if (comp.HP < comp.MaxHP)
+                {
+                    comp.HP++;
+                }
+            }
+        }
+    }
     [StaticConstructorOnStartup]
     public partial class Building_MaintenanceBay : Building
     {
@@ -400,7 +436,6 @@ namespace WalkerGear
                     {
                         Drafted = true
                     };
-
                 }
                 return cachePawn;
             }
@@ -410,12 +445,8 @@ namespace WalkerGear
         {
             get
             {
-                List<Apparel> tmp = new();
-                foreach (Apparel a in DummyApparels.WornApparel)
-                {
-                    if (a.HasComp<CompWalkerComponent>()) tmp.Add(a);
-                }
-                return tmp;
+                new List<Apparel>().AddRange(DummyApparels.WornApparel.Where(a => a.HasComp<CompWalkerComponent>()));
+                return new List<Apparel>();
             }
         }
         public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)

@@ -14,7 +14,7 @@
         <reportString>entering mecha suit</reportString>
         <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
     </JobDef>
-    
+
     <JobDef>
         <defName>WG_GetOffWalkerCore</defName>
         <driverClass>WalkerGear.JobDriver_GetOffWalkerCore</driverClass>
@@ -43,6 +43,30 @@
         <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
     </JobDef>
 
+    <!-- <WorkGiverDef>
+        <defName>WG_RepairAtGantry</defName>
+        <label>repair module at gantry</label>
+        <giverClass>WalkerGear.WorkGiver_RepairAtGantry</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>400</priorityInType>
+        <verb>repair</verb>
+        <gerund>repairing</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <nonColonistsCanDo>true</nonColonistsCanDo>
+        <canBeDoneByMechs>true</canBeDoneByMechs>
+    </WorkGiverDef>
+
+    <JobDef>
+        <defName>WG_RepairAtGantry</defName>
+        <driverClass>WalkerGear.JobDriver_RepairAtGantry</driverClass>
+        <reportString>repairing TargetA.</reportString>
+        <suspendable>false</suspendable>
+        <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+    </JobDef> -->
+
+
     <WorkGiverDef>
         <defName>WG_MaintainComponent</defName>
         <label>repair damaged things</label>
@@ -52,10 +76,10 @@
         <verb>repair</verb>
         <gerund>repairing</gerund>
         <requiredCapacities>
-          <li>Manipulation</li>
+            <li>Manipulation</li>
         </requiredCapacities>
         <nonColonistsCanDo>true</nonColonistsCanDo>
         <canBeDoneByMechs>true</canBeDoneByMechs>
-      </WorkGiverDef>
-      
+    </WorkGiverDef>
+
 </Defs>

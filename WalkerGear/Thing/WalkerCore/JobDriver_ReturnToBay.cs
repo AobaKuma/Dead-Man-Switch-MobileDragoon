@@ -1,5 +1,4 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Verse;
 using Verse.AI;
 using static UnityEngine.GridBrushBase;
@@ -20,7 +19,6 @@ namespace WalkerGear
         {
             return ReservationUtility.Reserve(this.pawn, this.Target, this.job, 1, -1, null, errorOnFailed);
         }
-
         protected override IEnumerable<Toil> MakeNewToils()
         {
             yield return Toils_Goto.GotoCell(this.Target.Position, PathEndMode.OnCell);

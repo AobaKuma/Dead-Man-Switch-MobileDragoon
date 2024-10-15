@@ -14,6 +14,10 @@
       <drawSize>(3,3)</drawSize>
       <drawOffset>(0,-0.01,0)</drawOffset>
     </graphicData>
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+      <WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
+    </statBases>
     <drawerType>MapMeshAndRealTime</drawerType>
     <rotatable>true</rotatable>
     <stealable>false</stealable>

@@ -324,7 +324,6 @@ namespace WalkerGear
                 else if (statDef == StatDefOf.MoveSpeed)
                 {
                     if (!Parent.Dummy.GetWalkerCore(out var core)) continue;
-                    Log.Message("speed");
                     v += "{0} c/s".Formatted(Parent.GetStatValueForPawn(statDef, Parent.Dummy, true).ToString("0.##"));
                 }
                 else

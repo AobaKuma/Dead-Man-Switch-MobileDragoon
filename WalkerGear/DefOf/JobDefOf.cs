@@ -21,6 +21,11 @@ namespace WalkerGear
         public static JobDef WG_RepairComponent;
 
         /// <summary>
+        /// 維修整備架上的組件
+        /// </summary>
+        public static JobDef WG_RepairAtGantry;
+
+        /// <summary>
         /// 右鍵選擇後 移動到維護塢並登上Walker
         /// </summary>
         public static JobDef WG_GetInWalkerCore;

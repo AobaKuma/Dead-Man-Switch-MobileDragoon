@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
 using RimWorld;
@@ -13,6 +14,55 @@ using Verse.Noise;
 
 namespace WalkerGear
 {
+    public partial class Building_MaintenanceBay : Building
+    {
+        protected CompAffectedByFacilities cacheByFacilities = null;
+        public CompAffectedByFacilities compAffectedBy
+        {
+            get
+            {
+                if (cacheByFacilities == null && this.TryGetComp<CompAffectedByFacilities>(out cacheByFacilities))
+                {
+                    return cacheByFacilities;
+                }
+                return cacheByFacilities;
+            }
+        }
+        public bool CanRepair => Faction.IsPlayer && def.inspectorTabs.Contains(typeof(ITab_MechGear)) && autoRepair;//臨時停機點不能修。
+        public bool NeedRepair //只要有一個需要修，那就能修。
+        {
+            get
+            {
+                if (!(Spawned && CanRepair && HasGearCore)) return false;
+                if (ModuleStorage.NullOrEmpty()) return false;
+                foreach (Apparel item in ModuleStorage)
+                {
+                    var comp = item.GetComp<CompWalkerComponent>();
+                    if (comp == null) continue;
+                    if (comp.HP < comp.MaxHP)
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
+        protected bool autoRepair = true;
+
+        internal void Repair()
+        {
+            foreach (Apparel item in ModuleStorage)
+            {
+                var comp = item.GetComp<CompWalkerComponent>();
+                if (comp == null) continue;
+                if (comp.HP < comp.MaxHP)
+                {
+                    comp.HP++;
+                    return;
+                }
+            }
+        }
+    }
     [StaticConstructorOnStartup]
     public partial class Building_MaintenanceBay : Building
     {
@@ -47,6 +97,19 @@ namespace WalkerGear
                     }
                 };
                 yield return command_GetIn;
+
+                Command_Toggle toggle_autoRepair = new()
+                {
+                    icon = Resources.WG_AutoRepair,
+                    defaultLabel = "WG_AutoRepair".Translate(),
+                    defaultDesc = "WG_AutoRepair_Desc".Translate(),
+                    isActive = () => autoRepair,
+                    toggleAction = delegate
+                    {
+                        autoRepair = !autoRepair;
+                    }
+                };
+                yield return toggle_autoRepair;
             }
             foreach (Gizmo gizmo in base.GetGizmos())
             {
@@ -112,6 +175,7 @@ namespace WalkerGear
         {
             base.ExposeData();
             Scribe_Deep.Look(ref cachePawn, "cachedPawn");
+            Scribe_Values.Look(ref autoRepair, "autoRepair");
             SetItabCacheDirty();
         }
     }
@@ -138,7 +202,7 @@ namespace WalkerGear
 
         public List<CompWalkerComponent> GetwalkerComponents()
         {
-            if (ComponentsCache==null)
+            if (ComponentsCache == null)
             {
                 TryUpdateOccupiedSlotsCache(true);
             }
@@ -156,7 +220,7 @@ namespace WalkerGear
             massCapacity = 0;
             currentLoad = 0;
             List<CompWalkerComponent> li = new List<CompWalkerComponent>();
-            foreach (Apparel a in DummyApparels?.WornApparel?.Where(t=>t.IsModule()))
+            foreach (Apparel a in DummyApparels?.WornApparel?.Where(t => t.IsModule()))
             {
                 CompWalkerComponent comp = a.GetComp<CompWalkerComponent>();
                 massCapacity += a.def.equippedStatOffsets.GetStatOffsetFromList(StatDefOf.CarryingCapacity);
@@ -400,7 +464,6 @@ namespace WalkerGear
                     {
                         Drafted = true
                     };
-
                 }
                 return cachePawn;
             }
@@ -411,10 +474,7 @@ namespace WalkerGear
             get
             {
                 List<Apparel> tmp = new();
-                foreach (Apparel a in DummyApparels.WornApparel)
-                {
-                    if (a.HasComp<CompWalkerComponent>()) tmp.Add(a);
-                }
+                tmp.AddRange(DummyApparels.WornApparel.Where(a => a.HasComp<CompWalkerComponent>()));
                 return tmp;
             }
         }

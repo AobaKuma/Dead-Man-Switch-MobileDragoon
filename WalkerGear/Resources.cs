@@ -23,5 +23,8 @@ namespace WalkerGear
         public static readonly Texture2D catapultThrow = ContentFinder<Texture2D>.Get("UI/CatapultThrow");
         public static readonly Texture2D catapultEject = ContentFinder<Texture2D>.Get("UI/CatapultEject");
 
+        //整備架的Icon
+        public static readonly Texture2D WG_GetInWalker = ContentFinder<Texture2D>.Get("UI/GetInWalker");
+        public static readonly Texture2D WG_AutoRepair = ContentFinder<Texture2D>.Get("UI/AutoRepair");
     }
 }

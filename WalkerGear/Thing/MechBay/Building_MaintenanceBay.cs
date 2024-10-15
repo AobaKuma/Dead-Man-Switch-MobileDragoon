@@ -16,7 +16,19 @@ namespace WalkerGear
 {
     public partial class Building_MaintenanceBay : Building
     {
-        public bool CanRepair =>Faction.IsPlayer && def.inspectorTabs.Contains(typeof(ITab_MechGear));//臨時停機點不能修。
+        protected CompAffectedByFacilities cacheByFacilities = null;
+        public CompAffectedByFacilities compAffectedBy
+        {
+            get
+            {
+                if (cacheByFacilities == null && this.TryGetComp<CompAffectedByFacilities>(out cacheByFacilities))
+                {
+                    return cacheByFacilities;
+                }
+                return cacheByFacilities;
+            }
+        }
+        public bool CanRepair => Faction.IsPlayer && def.inspectorTabs.Contains(typeof(ITab_MechGear)) && autoRepair;//臨時停機點不能修。
         public bool NeedRepair //只要有一個需要修，那就能修。
         {
             get
@@ -35,6 +47,7 @@ namespace WalkerGear
                 return false;
             }
         }
+        protected bool autoRepair = true;
 
         internal void Repair()
         {
@@ -45,6 +58,7 @@ namespace WalkerGear
                 if (comp.HP < comp.MaxHP)
                 {
                     comp.HP++;
+                    return;
                 }
             }
         }
@@ -83,6 +97,19 @@ namespace WalkerGear
                     }
                 };
                 yield return command_GetIn;
+
+                Command_Toggle toggle_autoRepair = new()
+                {
+                    icon = Resources.WG_AutoRepair,
+                    defaultLabel = "WG_AutoRepair".Translate(),
+                    defaultDesc = "WG_AutoRepair_Desc".Translate(),
+                    isActive = () => autoRepair,
+                    toggleAction = delegate
+                    {
+                        autoRepair = !autoRepair;
+                    }
+                };
+                yield return toggle_autoRepair;
             }
             foreach (Gizmo gizmo in base.GetGizmos())
             {
@@ -148,6 +175,7 @@ namespace WalkerGear
         {
             base.ExposeData();
             Scribe_Deep.Look(ref cachePawn, "cachedPawn");
+            Scribe_Values.Look(ref autoRepair, "autoRepair");
             SetItabCacheDirty();
         }
     }
@@ -174,7 +202,7 @@ namespace WalkerGear
 
         public List<CompWalkerComponent> GetwalkerComponents()
         {
-            if (ComponentsCache==null)
+            if (ComponentsCache == null)
             {
                 TryUpdateOccupiedSlotsCache(true);
             }
@@ -192,7 +220,7 @@ namespace WalkerGear
             massCapacity = 0;
             currentLoad = 0;
             List<CompWalkerComponent> li = new List<CompWalkerComponent>();
-            foreach (Apparel a in DummyApparels?.WornApparel?.Where(t=>t.IsModule()))
+            foreach (Apparel a in DummyApparels?.WornApparel?.Where(t => t.IsModule()))
             {
                 CompWalkerComponent comp = a.GetComp<CompWalkerComponent>();
                 massCapacity += a.def.equippedStatOffsets.GetStatOffsetFromList(StatDefOf.CarryingCapacity);
@@ -445,8 +473,9 @@ namespace WalkerGear
         {
             get
             {
-                new List<Apparel>().AddRange(DummyApparels.WornApparel.Where(a => a.HasComp<CompWalkerComponent>()));
-                return new List<Apparel>();
+                List<Apparel> tmp = new();
+                tmp.AddRange(DummyApparels.WornApparel.Where(a => a.HasComp<CompWalkerComponent>()));
+                return tmp;
             }
         }
         public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)

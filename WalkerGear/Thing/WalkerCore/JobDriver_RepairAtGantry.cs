@@ -34,21 +34,22 @@ namespace WalkerGear
             repair.tickAction = delegate
             {
                 Pawn actor = repair.actor;
-                if (!Gantry.NeedRepair)
+                if (Gantry.NeedRepair)
                 {
-                    actor.records.Increment(RecordDefOf.ThingsRepaired);
-                    actor.jobs.EndCurrentJob(JobCondition.Succeeded);
-                }
-                actor.skills?.Learn(SkillDefOf.Construction, 0.05f);
-                actor.rotationTracker.FaceTarget(actor.CurJob.GetTarget(TargetIndex.A));
+                    actor.skills?.Learn(SkillDefOf.Crafting, 0.05f);
+                    actor.rotationTracker.FaceTarget(actor.CurJob.GetTarget(TargetIndex.A));
 
-                float num = actor.GetStatValue(StatDefOf.WorkSpeedGlobal) * 1.7f;
-                ticksToNextRepair -= num;
-                if (ticksToNextRepair <= 0f)
-                {
-                    ticksToNextRepair += 20f;
-                    Gantry.Repair();
+                    float num = actor.GetStatValue(StatDefOf.WorkSpeedGlobal) * Gantry.GetStatValue(StatDefOf.WorkTableEfficiencyFactor, true, 1);
+                    ticksToNextRepair -= num;
+                    if (ticksToNextRepair <= 0f)
+                    {
+                        ticksToNextRepair += 100f;
+                        Gantry.Repair();
+                    }
+                    return;
                 }
+                actor.records?.Increment(RecordDefOf.ThingsRepaired);
+                actor.jobs?.EndCurrentJob(JobCondition.Succeeded);
             };
             repair.FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch);
             repair.WithEffect(EffecterDefOf.MechRepairing, TargetIndex.A);

@@ -57,4 +57,7 @@
   <WG_Sharp_CE>mm RHA</WG_Sharp_CE>
   <WG_Blunt_CE>MPA</WG_Blunt_CE>
 
+  <WG_AutoRepair>auto repair</WG_AutoRepair>
+  <WG_AutoRepair_Desc>toggle if pawn should automatically repair damaged frame in this gantry.</WG_AutoRepair_Desc>
+
 </LanguageData>

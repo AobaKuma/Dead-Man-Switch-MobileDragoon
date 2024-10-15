@@ -9,7 +9,7 @@ namespace WalkerGear
     public class JobDriver_RepairAtGantry : JobDriver
     {
         protected float ticksToNextRepair;
-        protected Building_MaintenanceBay Gantry => (base.TargetThingA as Building_MaintenanceBay);
+        protected Building_MaintenanceBay Gantry => (Target as Building_MaintenanceBay);
         protected Thing Target
         {
             get
@@ -19,7 +19,7 @@ namespace WalkerGear
         }
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            return ReservationUtility.Reserve(this.pawn, this.Target, this.job, 1, -1, null, errorOnFailed);
+            return this.pawn.Reserve(this.job.GetTarget(TargetIndex.A), this.job, errorOnFailed: errorOnFailed);
         }
 
         protected override IEnumerable<Toil> MakeNewToils()
@@ -34,6 +34,11 @@ namespace WalkerGear
             repair.tickAction = delegate
             {
                 Pawn actor = repair.actor;
+                if (!Gantry.NeedRepair)
+                {
+                    actor.records.Increment(RecordDefOf.ThingsRepaired);
+                    actor.jobs.EndCurrentJob(JobCondition.Succeeded);
+                }
                 actor.skills?.Learn(SkillDefOf.Construction, 0.05f);
                 actor.rotationTracker.FaceTarget(actor.CurJob.GetTarget(TargetIndex.A));
 
@@ -43,11 +48,6 @@ namespace WalkerGear
                 {
                     ticksToNextRepair += 20f;
                     Gantry.Repair();
-                    if (!Gantry.NeedRepair)
-                    {
-                        actor.records.Increment(RecordDefOf.ThingsRepaired);
-                        actor.jobs.EndCurrentJob(JobCondition.Succeeded);
-                    }
                 }
             };
             repair.FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch);

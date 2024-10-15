@@ -20,15 +20,27 @@ namespace WalkerGear
         }
         public virtual bool NeedRepair(Thing t)
         {
-            Log.Message(t is Building_MaintenanceBay x && x.NeedRepair);
             return t is Building_MaintenanceBay bay && bay.NeedRepair;
+        }
+        public override Danger MaxPathDanger(Pawn pawn)
+        {
+            return Danger.Deadly;
         }
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
+            if(!(t is Building_MaintenanceBay)) return false;
+
+            if (!pawn.CanReserve(t, 1, -1, null, forced))
+            {
+                return false;
+            }
+            if (!pawn.CanReach(t, PathEndMode, MaxPathDanger(pawn)))
+            {
+                return false;
+            }
             if (CanRepair(t) && NeedRepair(t))
             {
-                Log.Message("CanRepair&N");
                 return true;
             }
             return false;

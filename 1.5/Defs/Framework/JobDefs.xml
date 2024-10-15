@@ -43,7 +43,7 @@
         <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
     </JobDef>
 
-    <!-- <WorkGiverDef>
+    <WorkGiverDef>
         <defName>WG_RepairAtGantry</defName>
         <label>repair module at gantry</label>
         <giverClass>WalkerGear.WorkGiver_RepairAtGantry</giverClass>
@@ -54,6 +54,7 @@
         <requiredCapacities>
             <li>Manipulation</li>
         </requiredCapacities>
+        <directOrderable>true</directOrderable>
         <nonColonistsCanDo>true</nonColonistsCanDo>
         <canBeDoneByMechs>true</canBeDoneByMechs>
     </WorkGiverDef>
@@ -62,9 +63,9 @@
         <defName>WG_RepairAtGantry</defName>
         <driverClass>WalkerGear.JobDriver_RepairAtGantry</driverClass>
         <reportString>repairing TargetA.</reportString>
-        <suspendable>false</suspendable>
+        <suspendable>true</suspendable>
         <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
-    </JobDef> -->
+    </JobDef>
 
 
     <WorkGiverDef>

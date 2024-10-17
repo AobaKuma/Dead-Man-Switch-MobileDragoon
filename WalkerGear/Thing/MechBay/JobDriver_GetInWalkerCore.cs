@@ -10,9 +10,33 @@ using Verse.AI;
 
 namespace WalkerGear
 {
+    public class JobDriver_GetInWalkerCore_Drafted : JobDriver_GetInWalkerCore
+    {
+        protected override IEnumerable<Toil> MakeNewToils()
+        {
+            this.FailOnDespawnedNullOrForbidden(maintenanceBay);
+
+            yield return Toils_Goto.GotoThing(maintenanceBay, PathEndMode.InteractionCell);
+            yield return Toils_General.WaitWith(TargetIndex.A, wait, true, true);
+            Toil gearUp = new()
+            {
+                initAction = () =>
+                {
+                    Pawn actor = this.pawn;
+                    if (actor.CurJob.GetTarget(TargetIndex.A).Thing is Building_MaintenanceBay bay)
+                    {
+                        actor.Position = bay.Position;
+                        bay.GearUp(actor);
+                        actor.drafter.Drafted = true;
+                    }
+                }
+            };
+            yield return gearUp;
+        }
+    }
     public class JobDriver_GetInWalkerCore : JobDriver
     {
-        private const TargetIndex maintenanceBay = TargetIndex.A;
+        protected const TargetIndex maintenanceBay = TargetIndex.A;
         protected Building_MaintenanceBay bay => this.job.GetTarget(maintenanceBay).Thing as Building_MaintenanceBay;
         protected const int wait = 200;
         public override bool TryMakePreToilReservations(bool errorOnFailed)
@@ -81,7 +105,7 @@ namespace WalkerGear
                     {
                         actor.Position = bay.Position;
                         bay.GearUp(actor);
-                        actor.drafter.Drafted = true;
+                        actor.drafter.Drafted = false;
                     }
                 }
             };

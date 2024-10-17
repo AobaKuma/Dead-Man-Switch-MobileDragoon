@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.BaseGen;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -12,20 +13,42 @@ namespace WalkerGear
     [StaticConstructorOnStartup]
     public static class MechUtility
     {
-        public static List<ThingDef> bays;
-        public static List<ThingDef> cores;
+        public static List<ThingDef> bayDefs;
+        public static List<ThingDef> coreDefs;
         static MechUtility()
         {
-            bays = DefDatabase<ThingDef>.AllDefs.Where((ThingDef def) => def.thingClass.IsSubclassOf(typeof(Building_MaintenanceBay)) || def.thingClass == typeof(WalkerGear_Core)).ToList();
-            cores = DefDatabase<ThingDef>.AllDefs.Where((ThingDef def) => def.thingClass.IsSubclassOf(typeof(WalkerGear_Core)) || def.thingClass == typeof(WalkerGear_Core)).ToList();
+            bayDefs = DefDatabase<ThingDef>.AllDefs.Where((ThingDef def) => def.thingClass.IsSubclassOf(typeof(Building_MaintenanceBay)) || def.thingClass == typeof(WalkerGear_Core)).ToList();
+            coreDefs = DefDatabase<ThingDef>.AllDefs.Where((ThingDef def) => def.thingClass.IsSubclassOf(typeof(WalkerGear_Core)) || def.thingClass == typeof(WalkerGear_Core)).ToList();
         }
-        public static Thing GetClosestBay(Pawn pawn)
-        {
-            IEnumerable<Building_MaintenanceBay> bays = pawn.MapHeld.listerBuildings.AllBuildingsColonistOfClass<Building_MaintenanceBay>();
 
+        public static List<Building_MaintenanceBay> GetBaysFromMap(Map map) { return map.listerBuildings.AllBuildingsColonistOfClass<Building_MaintenanceBay>().ToList(); }
+        public static Thing GetClosestEmptyBay(Pawn pawn, bool AssignedPriority = true)
+        {
+            IEnumerable<Building_MaintenanceBay> bays = GetBaysFromMap(pawn.Map);
             if (!bays.Any()) return null;
-            return GenClosest.ClosestThing_Global_Reachable(pawn.PositionHeld, pawn.MapHeld, bays, PathEndMode.InteractionCell, TraverseParms.For(pawn), 9999f, validator: c => !(c as Building_MaintenanceBay).HasGearCore);
+
+            if (AssignedPriority)
+            {
+                var AssignedBays = bays.Where(b => b.TryGetComp<CompAssignableToPawn_Parking>(out var comp) && comp.AssignedPawns.Contains(pawn) && !b.HasGearCore);
+                if (AssignedBays.Any())
+                {
+                    return GenClosest.ClosestThing_Global_Reachable(pawn.PositionHeld, pawn.MapHeld, AssignedBays, PathEndMode.InteractionCell, TraverseParms.For(pawn), 9999f);
+                }
+            }
+            return GenClosest.ClosestThing_Global_Reachable(pawn.PositionHeld, pawn.MapHeld, bays, PathEndMode.InteractionCell, TraverseParms.For(pawn), 9999f, validator: c => !(c as Building_MaintenanceBay).HasGearCore && pawn.CanReserveAndReach(c, PathEndMode.InteractionCell, Danger.Deadly));
         }
+
+        public static Thing GetClosestCoreForPawn(Pawn pawn)
+        {
+            IEnumerable<Building_MaintenanceBay> bays = GetBaysFromMap(pawn.Map);
+            if (!bays.Any()) return null;
+
+            var AssignedBays = bays.Where(b => b.TryGetComp<CompAssignableToPawn_Parking>(out var comp) && comp.AssignedPawns.Contains(pawn) && b.HasGearCore);
+            if (!AssignedBays.Any()) return null;
+
+            return GenClosest.ClosestThing_Global_Reachable(pawn.PositionHeld, pawn.MapHeld, bays, PathEndMode.InteractionCell, TraverseParms.For(pawn), 9999f, validator: c => (c as Building_MaintenanceBay).CanGear(pawn) && pawn.CanReserveAndReach(c, PathEndMode.InteractionCell, Danger.Deadly));
+        }
+
         public static void WeaponDropCheck(Pawn pawn)
         {
             if (pawn == null) return;
@@ -57,7 +80,7 @@ namespace WalkerGear
             if (pawn == null) return false;
             if (pawn.NonHumanlikeOrWildMan()) return false;
 
-            if (pawn.apparel.WornApparel.ContainsAny(c => cores.Contains(c.def))) return true;
+            if (pawn.apparel.WornApparel.ContainsAny(c => coreDefs.Contains(c.def))) return true;
             return false;
         }
         public static bool GetWalkerCore(this Pawn pawn, out WalkerGear_Core core)
@@ -65,7 +88,7 @@ namespace WalkerGear
             core = null;
             if (!PawnWearingWalkerCore(pawn)) return false;
 
-            IEnumerable<Apparel> apparel = pawn.apparel?.WornApparel?.Where(c => cores.Contains(c.def));
+            IEnumerable<Apparel> apparel = pawn.apparel?.WornApparel?.Where(c => coreDefs.Contains(c.def));
             if (!apparel.EnumerableNullOrEmpty())
             {
                 core = apparel.First() as WalkerGear_Core;
@@ -230,6 +253,24 @@ namespace WalkerGear
             if (pawn.GetWalkerCore(out var core))
             {
                 core.ResetStats(massCapacity, massCapacity, currentLoad);
+            }
+        }
+
+
+        public static void TryMakeJob_GearOn(Pawn pawn)
+        {
+            Thing bay = GetClosestCoreForPawn(pawn);
+            if (bay != null)
+            {
+                pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(JobDefOf.WG_GetInWalkerCore_NonDrafted, bay), JobTag.ChangingApparel);
+            }
+        }
+        public static void TryMakeJob_GearOff(Pawn pawn)
+        {
+            Thing bay = GetClosestEmptyBay(pawn);
+            if (bay != null)
+            {
+                pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(JobDefOf.WG_GetOffWalkerCore, bay), JobTag.ChangingApparel);
             }
         }
     }

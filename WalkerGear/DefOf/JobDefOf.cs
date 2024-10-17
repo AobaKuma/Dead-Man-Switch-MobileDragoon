@@ -29,6 +29,7 @@ namespace WalkerGear
         /// 右鍵選擇後 移動到維護塢並登上Walker
         /// </summary>
         public static JobDef WG_GetInWalkerCore;
+        public static JobDef WG_GetInWalkerCore_NonDrafted;
         /// <summary>
         /// 右鍵選擇後 移動到維護塢並離開Walker
         /// </summary>

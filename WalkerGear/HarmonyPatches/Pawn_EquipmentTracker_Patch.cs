@@ -19,6 +19,7 @@ namespace WalkerGear
                    || !__instance.Primary.HasComp<CompApparelForcedWeapon>();
         }
     }
+
     [HarmonyPatch(typeof(Pawn_EquipmentTracker), nameof(Pawn_EquipmentTracker.TryDropEquipment))]
     static class Pawn_EquipmentTracker_TryDropEquipment
     {
@@ -28,6 +29,7 @@ namespace WalkerGear
             return eq.def.equipmentType != EquipmentType.Primary || !eq.HasComp<CompApparelForcedWeapon>() || (__result = false);
         }
     }
+
     [HarmonyPatch(typeof(Pawn_EquipmentTracker), nameof(Pawn_EquipmentTracker.Remove))]
     static class Pawn_EquipmentTracker_Remove
     {

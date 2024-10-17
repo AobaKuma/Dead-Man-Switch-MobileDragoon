@@ -28,15 +28,15 @@ namespace WalkerGear
                 Apparel apparel = (Apparel)ThingMaker.MakeThing(apparelDef);
                 if (color != null) apparel.SetColor((Color)color);
 
-                pawn.apparel.Wear(apparel,false,true);
+                pawn.apparel.Wear(apparel, false, true);
                 if (apparel is WalkerGear_Core core2) core = core2;
             }
             foreach (ApparelChance item in modExt.chanceApparels)
             {
-                if (!Rand.Chance(item.chance))continue;
+                if (!Rand.Chance(item.chance)) continue;
                 Apparel apparel = (Apparel)ThingMaker.MakeThing(item.apparel);
                 if (color != null) apparel.SetColor((Color)color);
-                pawn.apparel.Wear(apparel,false,true);
+                pawn.apparel.Wear(apparel, false, true);
                 if (apparel is WalkerGear_Core core2) core = core2;
             }
 

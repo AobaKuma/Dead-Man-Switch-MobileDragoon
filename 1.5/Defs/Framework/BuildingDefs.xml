@@ -120,6 +120,11 @@
           <li>MF_Building_Scaffold</li>
         </linkableFacilities>
       </li>
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>WalkerGear.CompAssignableToPawn_Parking</compClass>
+        <maxAssignedPawnsCount>1</maxAssignedPawnsCount>
+      </li>
       <li Class="CompProperties_ReportWorkSpeed">
         <workSpeedStat>WorkTableWorkSpeedFactor</workSpeedStat>
       </li>

@@ -25,7 +25,7 @@ namespace WalkerGear
 
                     if (_targetPawn.IsPlayerControlled)//自家控制的龍騎兵可以搬回維修塢(如果有的話)
                     {
-                        Thing bay = MechUtility.GetClosestBay(pawn);
+                        Thing bay = MechUtility.GetClosestEmptyBay(pawn);
                         if (bay != null)
                         {
                             opts.Add(FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("WG_Job_TakeToMaintenanceBay".Translate(), delegate

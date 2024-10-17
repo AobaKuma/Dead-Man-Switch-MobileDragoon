@@ -30,8 +30,7 @@ namespace WalkerGear
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
             if (t is not Building_MaintenanceBay) return false;
-
-            if (!pawn.CanReserve(t, 1, -1, null, forced))
+            if (!CanRepair(t))
             {
                 return false;
             }
@@ -39,11 +38,15 @@ namespace WalkerGear
             {
                 return false;
             }
-            if (CanRepair(t) && NeedRepair(t))
+            if (!pawn.CanReserve(t, 1, -1, null, forced))
             {
-                return true;
+                return false;
             }
-            return false;
+            if (!NeedRepair(t))
+            {
+                return false;
+            }
+            return true;
         }
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {

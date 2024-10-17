@@ -28,12 +28,12 @@ namespace WalkerGear
                 return cacheByFacilities;
             }
         }
-        public bool CanRepair => Faction.IsPlayer && def.inspectorTabs.Contains(typeof(ITab_MechGear)) && autoRepair;//臨時停機點不能修。
+        public bool CanRepair => this.Faction.IsPlayer && this.GetInspectTabs().Where(tab=>tab is ITab_MechGear).Any() && autoRepair;//臨時停機點不能修。
         public bool NeedRepair //只要有一個需要修，那就能修。
         {
             get
             {
-                if (!(Spawned && CanRepair && HasGearCore)) return false;
+                if (!(Spawned && this.CanRepair && HasGearCore)) return false;
                 if (ModuleStorage.NullOrEmpty()) return false;
                 foreach (Apparel item in ModuleStorage)
                 {

@@ -25,6 +25,7 @@ namespace WalkerGear
             else if (timeAssignmentDef != RimWorld.TimeAssignmentDefOf.Anything && MechUtility.PawnWearingWalkerCore(pawn)) //沒有設置的狀況會自己下機。
             {
                 MechUtility.TryMakeJob_GearOff(pawn);
+                __result = 9f;
             }
             return true;
         }

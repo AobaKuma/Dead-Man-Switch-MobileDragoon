@@ -198,7 +198,7 @@ namespace WalkerGear
         public Rot4 direction = Rot4.South;//缓存Itab里pawn的方向
         public bool HasGearCore => GetGearCore != null;
 
-        public Apparel GetGearCore => DummyApparels.WornApparel.Find(a => a is WalkerGear_Core);
+        public Apparel GetGearCore => DummyApparels?.WornApparel?.Find(a => a is WalkerGear_Core);
 
         public List<CompWalkerComponent> GetwalkerComponents()
         {

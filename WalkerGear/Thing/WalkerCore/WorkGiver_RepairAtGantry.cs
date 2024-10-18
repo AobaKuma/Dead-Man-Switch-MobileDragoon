@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Verse;
 using Verse.AI;
@@ -26,19 +27,23 @@ namespace WalkerGear
         {
             return Danger.Deadly;
         }
+        public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
+        {
+            return pawn.Map.listerBuildings.AllBuildingsColonistOfClass<Building_MaintenanceBay>();
+        }
+
+        public override bool ShouldSkip(Pawn pawn, bool forced = false)
+        {
+            return pawn.Map.listerBuildings.AllBuildingsColonistOfClass<Building_MaintenanceBay>().EnumerableNullOrEmpty();
+        }
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            if (t is not Building_MaintenanceBay) return false;
             if (!CanRepair(t))
             {
                 return false;
             }
-            if (!pawn.CanReach(t, PathEndMode, MaxPathDanger(pawn)))
-            {
-                return false;
-            }
-            if (!pawn.CanReserve(t, 1, -1, null, forced))
+            if (!pawn.CanReserve(t, 2, -1, null, forced))
             {
                 return false;
             }
@@ -46,11 +51,15 @@ namespace WalkerGear
             {
                 return false;
             }
+            if (!pawn.CanReach(t, PathEndMode, MaxPathDanger(pawn)))
+            {
+                return false;
+            }
             return true;
         }
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            return JobMaker.MakeJob(JobDefOf.WG_RepairAtGantry);
+            return JobMaker.MakeJob(JobDefOf.WG_RepairAtGantry, t);
         }
     }
 }

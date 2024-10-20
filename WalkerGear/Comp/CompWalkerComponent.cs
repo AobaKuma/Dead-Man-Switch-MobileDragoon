@@ -46,7 +46,7 @@ namespace WalkerGear
         public int NeedAmmoCount => (MaxCharges - RemainingCharges) * ammoCountPerCharge;
         public Thing ReloadableThing => parent;
         public int BaseReloadTicks => baseReloadTicks;
-        public string LabelRemaining => string.Format("{0} / {1}", RemainingCharges, MaxCharges);
+        public string LabelRemaining => string.Format("{0}/{1} {2}", RemainingCharges, MaxCharges, ammoDef.label);
         public bool NeedsReload(bool allowForceReload)
         {
             if (ammoDef == null)
@@ -205,7 +205,7 @@ namespace WalkerGear
             string s = base.CompInspectStringExtra();
             if (hasReloadableProps)
             {
-                s += "\n" + LabelRemaining;
+                s += LabelRemaining;
             }
             return s;
         }

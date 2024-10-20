@@ -444,8 +444,8 @@
 
   <!-- Flyer -->
   <ThingDef ParentName="PawnFlyerBase">
-    <defName>DMS_PawnFlyer</defName>
-    <thingClass>WalkerGear.DMS_PawnFlyer</thingClass>
+    <defName>WG_PawnFlyer</defName>
+    <thingClass>WalkerGear.WG_PawnFlyer</thingClass>
     <pawnFlyer>
       <flightDurationMin>0.01</flightDurationMin>
       <flightSpeed>55</flightSpeed>

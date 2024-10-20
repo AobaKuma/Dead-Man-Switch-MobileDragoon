@@ -12,7 +12,7 @@ using Verse.Sound;
 
 namespace WalkerGear
 {
-    public class CompWalkerComponent : ThingComp, IReloadableComp
+    public class CompWalkerComponent : ThingComp
     {
         public CompProperties_WalkerComponent Props
         {
@@ -21,20 +21,15 @@ namespace WalkerGear
                 return props as CompProperties_WalkerComponent;
             }
         }
-        public override void PostExposeData()
-        {
-            base.PostExposeData();
-            Scribe_Values.Look<int>(ref remainingCharges, "remainingCharges", -999);
-            Scribe_Values.Look(ref hp, "hp", -1);
-            if (Scribe.mode == LoadSaveMode.PostLoadInit && remainingCharges == -999)
-            {
-                remainingCharges = 0;
-            }
-        }
         public bool NeedMaintenance => NeedAmmo || NeedRepair;
         public bool NeedAmmo => hasReloadableProps && remainingCharges < MaxCharges;
         public bool NeedRepair => parent.HitPoints < parent.MaxHitPoints;
         public List<SlotDef> Slots => Props.slots;
+
+        public CompRefuelable compRefuelable = null;
+        public CompApparelReloadable compApparelReloadable = null;
+
+        public Thing holdedThing = null;
 
         public ThingDef AmmoDef => ammoDef;
         public int MaxCharges => maxCharges;
@@ -43,6 +38,7 @@ namespace WalkerGear
             get => remainingCharges;
             set => remainingCharges = value;
         }
+
         public int NeedAmmoCount => (MaxCharges - RemainingCharges) * ammoCountPerCharge;
         public Thing ReloadableThing => parent;
         public int BaseReloadTicks => baseReloadTicks;
@@ -63,75 +59,6 @@ namespace WalkerGear
             }
             return RemainingCharges != MaxCharges;
         }
-        public int MinAmmoNeeded(bool allowForcedReload)
-        {
-            if (!NeedsReload(allowForcedReload))
-            {
-                return 0;
-            }
-            if (ammoCountToRefill != 0)
-            {
-                return ammoCountToRefill;
-            }
-            return ammoCountPerCharge;
-        }
-
-        public int MaxAmmoNeeded(bool allowForcedReload)
-        {
-            if (!NeedsReload(allowForcedReload))
-            {
-                return 0;
-            }
-            if (ammoCountToRefill != 0)
-            {
-                return ammoCountToRefill;
-            }
-            return ammoCountPerCharge * (MaxCharges - RemainingCharges);
-        }
-        public int MaxAmmoAmount()
-        {
-            if (ammoDef == null)
-            {
-                return 0;
-            }
-            if (ammoCountToRefill == 0)
-            {
-                return ammoCountPerCharge * MaxCharges;
-            }
-            return ammoCountToRefill;
-        }
-
-        public void ReloadFrom(Thing ammo)
-        {
-            if (!NeedsReload(true))
-            {
-                return;
-            }
-            if (ammoCountToRefill != 0)
-            {
-                if (ammo.stackCount < ammoCountToRefill)
-                {
-                    return;
-                }
-                ammo.SplitOff(ammoCountToRefill).Destroy(DestroyMode.Vanish);
-                RemainingCharges = MaxCharges;
-            }
-            else
-            {
-                if (ammo.stackCount < ammoCountPerCharge)
-                {
-                    return;
-                }
-                int num = Mathf.Clamp(ammo.stackCount / ammoCountPerCharge, 0, MaxCharges - RemainingCharges);
-                ammo.SplitOff(num * ammoCountPerCharge).Destroy(DestroyMode.Vanish);
-                RemainingCharges += num;
-            }
-            soundReload?.PlayOneShot(new TargetInfo(parent.PositionHeld, parent.MapHeld, false));
-        }
-
-        public string DisabledReason(int minNeeded, int maxNeeded) => "";
-
-        public bool CanBeUsed(out string reason) { reason = ""; return false; }
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
@@ -208,6 +135,17 @@ namespace WalkerGear
                 s += LabelRemaining;
             }
             return s;
+        }
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_Values.Look<int>(ref remainingCharges, "remainingCharges", -999);
+            Scribe_Values.Look(ref hp, "hp", -1);
+            Scribe_Values.Look(ref baseReloadTicks, "baseReloadTicks", 0);
+            if (Scribe.mode == LoadSaveMode.PostLoadInit && remainingCharges == -999)
+            {
+                remainingCharges = 0;
+            }
         }
     }
     public class CompProperties_WalkerComponent : CompProperties

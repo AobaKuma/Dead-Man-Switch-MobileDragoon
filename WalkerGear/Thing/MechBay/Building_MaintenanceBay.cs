@@ -120,6 +120,7 @@ namespace WalkerGear
         {
             foreach (Apparel a in ModuleStorage)
             {
+                DummyApparels.Remove(a);
                 GenPlace.TryPlaceThing(MechUtility.Conversion(a), Position, Map, ThingPlaceMode.Direct);
             }
             Dummy.Destroy();
@@ -136,6 +137,7 @@ namespace WalkerGear
                     Log.Warning("CompAffectedByFacilities is null");
                     return;
                 }
+                DummyApparels.Remove(t as Apparel);
                 Thing moduleItem = MechUtility.Conversion(t);
                 foreach (Thing b in abf.LinkedFacilitiesListForReading)
                 {

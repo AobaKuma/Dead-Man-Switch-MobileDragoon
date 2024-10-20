@@ -28,7 +28,7 @@ namespace WalkerGear
             toilWait.tickAction = () =>
             {
                 Log.Message(Bay.Rotation);
-                GetActor().rotationTracker.FaceCell(Bay.Position + Bay.rotationInt.FacingCell);
+                GetActor().rotationTracker.FaceCell(GetActor().Position + Bay.Rotation.FacingCell);
             };
             yield return toilWait;
             Toil gearDown = new()

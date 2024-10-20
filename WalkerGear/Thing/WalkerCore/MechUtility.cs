@@ -210,7 +210,7 @@ namespace WalkerGear
         //添加的
         public static Thing PeakConverted(this CompWalkerComponent source)
         {
-            return source == null ? null : ThingMaker.MakeThing(source.Props.ItemDef, source.parent.Stuff);
+            return source?.holdedThing;
         }
         public static Thing Conversion(this Thing source) => source.IsModule(out CompWalkerComponent m) ? m.Conversion() : null;
         public static Thing Conversion(this CompWalkerComponent source)
@@ -219,19 +219,31 @@ namespace WalkerGear
             mechData.Init(source.parent);
             Thing outcome;
 
-            if (source.parent.def.IsApparel)
+            if (source.holdedThing != null)
             {
-                Thing item = ThingMaker.MakeThing(source.Props.ItemDef);
-                mechData.GetDataFromMech(item);
-                outcome = item;
+                outcome = source.holdedThing;
+                mechData.GetDataFromMech(outcome);
             }
             else
             {
-                Thing mech = ThingMaker.MakeThing(source.Props.EquipedThingDef);
-                mechData.SetDataToMech(mech);
-                outcome = mech;
+                if (source.parent.def.IsApparel)
+                {
+                    Thing item = ThingMaker.MakeThing(source.Props.ItemDef);
+                    mechData.GetDataFromMech(item);
+                    outcome = item;
+                }
+                else
+                {
+                    Thing mech = ThingMaker.MakeThing(source.Props.EquipedThingDef);
+                    mechData.SetDataToMech(mech);
+                    outcome = mech;
+                }
             }
-            source.parent.Destroy();
+            if (outcome.TryGetComp<CompWalkerComponent>(out var comp))
+            {
+                comp.holdedThing = source.parent;
+            }
+            if (source.parent.Spawned) source.parent.DeSpawn();
             return outcome;
         }
 
@@ -309,7 +321,8 @@ namespace WalkerGear
                 if (remainingCharges < 0) remainingCharges = 0;
             }
         }
-        public void GetDataFromMech( Thing item) {
+        public void GetDataFromMech(Thing item) 
+        {
             if (item.TryGetComp<CompQuality>(out CompQuality compQuality)) compQuality.SetQuality(quality, null);
             item.SetColor(color);
             if (item.TryGetComp<CompWalkerComponent>(out var comp))

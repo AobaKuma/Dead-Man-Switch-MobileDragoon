@@ -80,7 +80,7 @@
       <drawData>
         <scale>1.5</scale>
         <dataNorth>
-          <layer>70</layer>
+          <layer>5</layer>
         </dataNorth>
       </drawData>
     </apparel>
@@ -113,6 +113,9 @@
             <offset>(0,0,0.15)</offset>
           </dataSouth>
         </headData>
+        <headHideFor>
+          <li>0</li>
+        </headHideFor>
         <rootData>
           <defaultData>
             <offset>(0,0,0.35)</offset>

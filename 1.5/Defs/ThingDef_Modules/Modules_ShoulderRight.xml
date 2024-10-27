@@ -13,7 +13,7 @@
             <Mass>15</Mass>
         </statBases>
         <recipeMaker>
-            <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+            <researchPrerequisite>DMS_MobileDragoonModule</researchPrerequisite>
         </recipeMaker>
         <costList>
             <Steel>100</Steel>
@@ -536,4 +536,5 @@
             </li>
         </comps>
     </ThingDef>
+    
 </Defs>

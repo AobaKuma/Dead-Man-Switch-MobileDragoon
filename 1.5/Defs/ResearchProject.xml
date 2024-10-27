@@ -1,40 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <ResearchProjectDef ParentName="DMS_BaseTech">
-    <defName>DMS_MobileDragoonBasis</defName>
-    <!-- PF基本上就是只有左右手跟頭盔的小型龍騎兵 -->
-    <label>powered frame</label>
-    <description>A primitive and bulky heavy-duty exoskeleton. Although such large wearable exoskeletons have been repeatedly invented since the 22nd century, their design and technical foundations are basically interoperable.\n\nThe application environment of powered frame at the military are close to small mechas or some genetically modified large humanoid soldiers, but its degree of automation is low and requires the driver to use full body control, and relies on specialized maintenance platform to put on and take off</description>
-    <baseCost>1200</baseCost>
-    <techLevel>Industrial</techLevel>
-    <prerequisites>
-      <li>DMS_Material</li>
-    </prerequisites>
-    <researchViewX>2.00</researchViewX>
-    <researchViewY>2.00</researchViewY>
-    <techprintCount>1</techprintCount>
-    <techprintCommonality>1</techprintCommonality>
-    <techprintMarketValue>1000</techprintMarketValue>
-    <heldByFactionCategoryTags>
-      <li>Pirate</li>
-      <li>Outlander</li>
-      <li>DMS</li>
-    </heldByFactionCategoryTags>
-  </ResearchProjectDef>
-
-  <ResearchProjectDef ParentName="DMS_BaseTech">
     <defName>DMS_MobileDragoon</defName>
     <label>mobile dragoon</label>
     <description>A military-duty exoskeleton technology used by colonial fleets. Due to their active colonization activities in rimworlds, these type of technology is also mastered by most former colonial worlds and some space pirates. Dragoons are generally used for armored reconnaissance missions on urban battlefields with poor road conditions, and having multiple modular mount for various needs.</description>
     <baseCost>2000</baseCost>
     <techLevel>Industrial</techLevel>
     <hiddenPrerequisites>
-      <li>DMS_MobileDragoonBasis</li>
+      <li>WG_HeavyExoskeleton</li>
       <li>DMS_Prosthetic</li>
     </hiddenPrerequisites>
     <researchViewX>4.00</researchViewX>
     <researchViewY>2.00</researchViewY>
-
     <techprintCount>2</techprintCount>
     <techprintCommonality>0.5</techprintCommonality>
     <techprintMarketValue>1500</techprintMarketValue>

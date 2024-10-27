@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-
   <!-- 停泊點 -->
   <ThingDef ParentName="BuildingBase">
     <defName>MF_Building_ParkingSpot</defName>
@@ -54,7 +53,7 @@
       </relatedBuildCommands>
     </building>
     <researchPrerequisites>
-      <li>DMS_MobileDragoonBasis</li>
+      <li>WG_HeavyExoskeleton</li>
     </researchPrerequisites>
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>
@@ -95,7 +94,7 @@
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,-2)</interactionCellOffset>
     <researchPrerequisites>
-      <li>DMS_MobileDragoonBasis</li>
+      <li>WG_HeavyExoskeleton</li>
     </researchPrerequisites>
     <surfaceType>Item</surfaceType>
     <inspectorTabs>
@@ -178,7 +177,7 @@
     <passability>PassThroughOnly</passability>
     <hasInteractionCell>false</hasInteractionCell>
     <researchPrerequisites>
-      <li>DMS_MobileDragoonBasis</li>
+      <li>WG_HeavyExoskeleton</li>
     </researchPrerequisites>
     <surfaceType>Item</surfaceType>
     <inspectorTabs>
@@ -256,7 +255,7 @@
     <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
     <hasInteractionCell>false</hasInteractionCell>
     <researchPrerequisites>
-      <li>DMS_MobileDragoonBasis</li>
+      <li>WG_HeavyExoskeleton</li>
     </researchPrerequisites>
     <building>
       <paintable>true</paintable>

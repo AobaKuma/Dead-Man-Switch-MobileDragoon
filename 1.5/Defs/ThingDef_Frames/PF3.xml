@@ -27,7 +27,7 @@
       </li>
     </comps>
     <recipeMaker>
-      <researchPrerequisite>DMS_MobileDragoonBasis</researchPrerequisite>
+      <researchPrerequisite>WG_HeavyExoskeleton</researchPrerequisite>
       <skillRequirements>
         <Crafting>4</Crafting>
       </skillRequirements>

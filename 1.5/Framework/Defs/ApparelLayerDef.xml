@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-
     <!-- for uiPriority 0 and 2 -->
     <ApparelLayerDef>
         <defName>WG_WalkerGearLayer_Core</defName>

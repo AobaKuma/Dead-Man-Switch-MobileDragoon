@@ -8,15 +8,21 @@
 	<packageId>Aoba.DeadManSwitch.MobileDragoon</packageId>
     <modDependencies>
         <li>
+			<packageId>aoba.exosuit.framework</packageId>
+			<displayName>Exosuit Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3352894993</steamWorkshopUrl>
+		</li>
+        <li>
 			<packageId>Aoba.DeadManSwitch.Core</packageId>
 			<displayName>Dead Man's Switch</displayName>
 			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1854607105</steamWorkshopUrl>
 		</li>
 	</modDependencies>
 	<loadAfter>
+		<li>aoba.exosuit.framework</li>
     	<li>Aoba.DeadManSwitch.Core</li>
   	</loadAfter>
 	<description>
-		Mobile dragoon is classified as an ultra-heavy armor exoskeleton. It is another branch of the development of power armor technology in the mid-World.
+		Mobile dragoon is classified as an ultra-heavy armor exoskeleton. It is another branch of the development of power armor technology in MidWorld.
     </description>
 </ModMetaData>

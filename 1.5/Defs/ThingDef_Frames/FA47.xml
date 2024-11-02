@@ -55,6 +55,7 @@
     <graphicData>
       <texPath>Things/Dragoon/PV8/apparel_south</texPath>
     </graphicData>
+	<tickerType>Normal</tickerType>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_FA47_Core</ThingDef>
     </descriptionHyperlinks>

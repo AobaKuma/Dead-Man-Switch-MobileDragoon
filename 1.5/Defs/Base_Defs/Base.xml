@@ -61,8 +61,10 @@
 
     <!--衣服型態的龍騎兵裝備，理論上玩家不應該能獲取 -->
     <ThingDef Name="DMS_ModuleApparelBase" ParentName="ModuleApparelBase" Abstract="True">
+	    <tickerType>Normal</tickerType>
         <comps>
             <li Class="CompProperties_Styleable" />
+			<li Class="WalkerGear.CompProperties_SleepCover" />
         </comps>
         <modExtensions>
             <li Class="VFECore.ApparelDrawPosExtension">

@@ -10,14 +10,16 @@
         </descriptionHyperlinks>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
+			<workAmount>22500</workAmount>
         </recipeMaker>
         <statBases>
             <MaxHitPoints>20</MaxHitPoints>
             <Mass>35</Mass>
         </statBases>
         <costList>
-            <Steel>100</Steel>
-            <ComponentIndustrial>2</ComponentIndustrial>
+            <Steel>200</Steel>
+			<Tungsteel>40</Tungsteel>
+            <ComponentIndustrial>4</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -121,14 +123,16 @@
         </descriptionHyperlinks>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+			<workAmount>22500</workAmount>
         </recipeMaker>
         <statBases>
             <MaxHitPoints>10</MaxHitPoints>
             <Mass>20</Mass>
         </statBases>
         <costList>
-            <Steel>100</Steel>
-            <ComponentIndustrial>2</ComponentIndustrial>
+            <Steel>180</Steel>
+			<Tungsteel>30</Tungsteel>
+            <ComponentIndustrial>3</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -235,14 +239,16 @@
         </descriptionHyperlinks>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
+			<workAmount>22500</workAmount>
         </recipeMaker>
         <statBases>
             <MaxHitPoints>25</MaxHitPoints>
             <Mass>65</Mass>
         </statBases>
         <costList>
-            <Steel>100</Steel>
-            <ComponentIndustrial>2</ComponentIndustrial>
+            <Steel>360</Steel>
+			<Tungsteel>60</Tungsteel>
+            <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">

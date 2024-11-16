@@ -56,7 +56,7 @@
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_Dragoon_LMG</defName>
                 <statBases>
-                    <Mass>89</Mass>
+                    <Mass>0</Mass>
                     <Bulk>58.43</Bulk>
                     <SwayFactor>3.12</SwayFactor>
                     <ShotSpread>0.04</ShotSpread>

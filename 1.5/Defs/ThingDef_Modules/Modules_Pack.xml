@@ -16,17 +16,20 @@
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
+	  <workAmount>30000</workAmount>
     </recipeMaker>
     <smeltProducts>
-      <Steel>50</Steel>
+      <Steel>60</Steel>
+	  <Tungsteel>20</Tungsteel>
     </smeltProducts>
     <butcherProducts>
-      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ChunkSlagSteel>3</ChunkSlagSteel>
       <ComponentIndustrial>1</ComponentIndustrial>
     </butcherProducts>
     <costList>
-      <Steel>100</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>125</Steel>
+	  <Tungsteel>50</Tungsteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -127,17 +130,21 @@
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonModule</researchPrerequisite>
+	  <workAmount>30000</workAmount>
     </recipeMaker>
     <smeltProducts>
-      <Steel>50</Steel>
+      <Steel>100</Steel>
+	  <Tungsteel>40</Tungsteel>
     </smeltProducts>
     <butcherProducts>
       <ChunkSlagSteel>4</ChunkSlagSteel>
-      <ComponentIndustrial>1</ComponentIndustrial>
+      <ComponentStamped>1</ComponentStamped>
     </butcherProducts>
     <costList>
-      <Steel>100</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>200</Steel>
+	  <Tungsteel>75</Tungsteel>
+      <ComponentStamped>5</ComponentStamped>
+	  <ComponentTransmitter>1</ComponentTransmitter>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -219,15 +226,15 @@
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
     </recipeMaker>
     <smeltProducts>
-      <Steel>50</Steel>
+      <Steel>80</Steel>
     </smeltProducts>
     <butcherProducts>
-      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ChunkSlagSteel>3</ChunkSlagSteel>
       <ComponentIndustrial>1</ComponentIndustrial>
     </butcherProducts>
     <costList>
-      <Steel>100</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>150</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -310,15 +317,16 @@
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
     </recipeMaker>
     <smeltProducts>
-      <Steel>50</Steel>
+      <Steel>100</Steel>
+	  <Tungsteel>10</Tungsteel>
     </smeltProducts>
     <butcherProducts>
       <ChunkSlagSteel>4</ChunkSlagSteel>
-      <ComponentIndustrial>1</ComponentIndustrial>
+      <ComponentStamped>1</ComponentStamped>
     </butcherProducts>
     <costList>
-      <Steel>100</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>200</Steel>
+      <ComponentStamped>4</ComponentStamped>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -399,17 +407,20 @@
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+	  <workAmount>30000</workAmount>
     </recipeMaker>
     <smeltProducts>
-      <Steel>50</Steel>
+      <Steel>120</Steel>
+	  <Tungsteel>40</Tungsteel>
     </smeltProducts>
     <butcherProducts>
-      <ChunkSlagSteel>4</ChunkSlagSteel>
-      <ComponentIndustrial>1</ComponentIndustrial>
+      <ChunkSlagSteel>5</ChunkSlagSteel>
+      <ComponentStamped>2</ComponentStamped>
     </butcherProducts>
     <costList>
-      <Steel>100</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>250</Steel>
+	  <Tungsteel>120</Tungsteel>
+      <ComponentStamped>5</ComponentStamped>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">

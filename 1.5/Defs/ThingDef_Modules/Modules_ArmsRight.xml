@@ -17,15 +17,17 @@
       <researchPrerequisite>WG_HeavyExoskeleton</researchPrerequisite>
     </recipeMaker>
     <smeltProducts>
-      <Steel>50</Steel>
+      <Steel>60</Steel>
+	  <Tungsteel>40</Tungsteel>
     </smeltProducts>
     <butcherProducts>
-      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ChunkSlagSteel>3</ChunkSlagSteel>
       <ComponentIndustrial>1</ComponentIndustrial>
     </butcherProducts>
     <costList>
-      <Steel>100</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>125</Steel>
+	  <Tungsteel>75</Tungsteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -129,17 +131,19 @@
         <li>DMS_MobileDragoon</li>
         <li>DMS_EquipmentHeavy</li>
       </researchPrerequisites>
+	  <workAmount>75000</workAmount>
     </recipeMaker>
     <smeltProducts>
-      <Steel>50</Steel>
+      <Steel>60</Steel>
+	  <Tungsteel>20</Tungsteel>
     </smeltProducts>
     <butcherProducts>
-      <ChunkSlagSteel>4</ChunkSlagSteel>
-      <ComponentIndustrial>1</ComponentIndustrial>
+      <ChunkSlagSteel>3</ChunkSlagSteel>
+      <ComponentStamped>1</ComponentStamped>
     </butcherProducts>
     <costList>
-      <Steel>100</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Tungsteel>120</Tungsteel>
+	  <ComponentStamped>5</ComponentStamped>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -179,4 +183,5 @@
       </li>
     </comps>
   </ThingDef>
+  
 </Defs>

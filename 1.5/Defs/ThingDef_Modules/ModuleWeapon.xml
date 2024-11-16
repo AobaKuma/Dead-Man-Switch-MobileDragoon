@@ -93,7 +93,7 @@
       </li>
     </modExtensions>
   </ThingDef>
-
+  
   <ThingDef ParentName="DMS_AutomatroidHeavyGun">
     <defName>DMS_Dragoon_Shotgun</defName>
     <label>Dragoon Shotgun</label>

@@ -14,10 +14,11 @@
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoonModule</researchPrerequisite>
+			<workAmount>30000</workAmount>
         </recipeMaker>
         <costList>
-            <Steel>100</Steel>
-            <ComponentIndustrial>2</ComponentIndustrial>
+            <Steel>160</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -104,10 +105,13 @@
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+			<workAmount>30000</workAmount>
         </recipeMaker>
         <costList>
             <Steel>100</Steel>
-            <ComponentIndustrial>2</ComponentIndustrial>
+			<Tungsteel>75</Tungsteel>
+			<ComponentStamped>5</ComponentStamped>
+            <ComponentIndustrial>5</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -252,10 +256,13 @@
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+			<workAmount>30000</workAmount>
         </recipeMaker>
         <costList>
             <Steel>100</Steel>
-            <ComponentIndustrial>2</ComponentIndustrial>
+            <Tungsteel>100</Tungsteel>
+			<ComponentStamped>5</ComponentStamped>
+			<ComponentIndustrial>5</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -403,10 +410,13 @@
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
+			<workAmount>30000</workAmount>
         </recipeMaker>
         <costList>
             <Steel>100</Steel>
-            <ComponentIndustrial>2</ComponentIndustrial>
+			<Tungsteel>120</Tungsteel>
+			<ComponentStamped>8</ComponentStamped>
+			<ComponentIndustrial>5</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">

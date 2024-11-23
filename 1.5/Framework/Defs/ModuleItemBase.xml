@@ -5,13 +5,14 @@
     <category>Item</category>
     <drawerType>MapMeshOnly</drawerType>
     <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <storedConceptLearnOpportunity>WG_ModuleItem</storedConceptLearnOpportunity>
     <useHitPoints>true</useHitPoints>
     <selectable>true</selectable>
     <altitudeLayer>Item</altitudeLayer>
     <soundInteract>Metal_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
     <stackLimit>1</stackLimit>
-    <healthAffectsPrice>true</healthAffectsPrice>
+    <healthAffectsPrice>false</healthAffectsPrice>
     <intricate>true</intricate>
     <alwaysHaulable>true</alwaysHaulable>
     <drawGUIOverlay>true</drawGUIOverlay>
@@ -33,6 +34,10 @@
       <Flammability>0.0</Flammability>
       <Beauty>-3</Beauty>
     </statBases>
+    <recipeMaker>
+      <workSkill>Crafting</workSkill>
+      <workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+    </recipeMaker>
     <tickerType>Never</tickerType>
     <burnableByRecipe>false</burnableByRecipe>
     <smeltable>true</smeltable>

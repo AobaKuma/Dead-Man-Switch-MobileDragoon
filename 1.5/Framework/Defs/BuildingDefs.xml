@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+
   <!-- 停泊點 -->
   <ThingDef ParentName="BuildingBase">
     <defName>MF_Building_ParkingSpot</defName>
@@ -31,7 +32,7 @@
     <interactionCellOffset>(0,0,0)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
     <size>(3,3)</size>
-    <designationCategory>DMS_Category</designationCategory>
+    <designationCategory>Misc</designationCategory>
     <passability>Standable</passability>
     <comps>
       <li Class="CompProperties_AffectedByFacilities">
@@ -51,6 +52,7 @@
         <li>MF_Building_ScaffoldStair</li>
         <li>MF_Building_Scaffold</li>
       </relatedBuildCommands>
+      <spawnedConceptLearnOpportunity>WG_ParkingSpot</spawnedConceptLearnOpportunity>
     </building>
     <researchPrerequisites>
       <li>WG_HeavyExoskeleton</li>
@@ -88,7 +90,7 @@
     <fillPercent>0.35</fillPercent>
     <size>(3,3)</size>
     <pathCost>100</pathCost>
-    <designationCategory>DMS_Category</designationCategory>
+    <designationCategory>Misc</designationCategory>
     <uiOrder>10</uiOrder>
     <passability>PassThroughOnly</passability>
     <hasInteractionCell>True</hasInteractionCell>
@@ -101,6 +103,7 @@
       <li>WalkerGear.ITab_MechGear</li>
     </inspectorTabs>
     <building>
+      <spawnedConceptLearnOpportunity>WG_Frame_PilotSchedule</spawnedConceptLearnOpportunity>
       <buildingTags>
         <li>Production</li>
       </buildingTags>
@@ -120,9 +123,9 @@
         </linkableFacilities>
       </li>
       <li Class="CompProperties_AssignableToPawn">
-        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <drawAssignmentOverlay>true</drawAssignmentOverlay>
         <compClass>WalkerGear.CompAssignableToPawn_Parking</compClass>
-        <maxAssignedPawnsCount>1</maxAssignedPawnsCount>
+        <maxAssignedPawnsCount>3</maxAssignedPawnsCount>
       </li>
       <li Class="CompProperties_ReportWorkSpeed">
         <workSpeedStat>WorkTableWorkSpeedFactor</workSpeedStat>
@@ -172,7 +175,7 @@
     <size>(3,1)</size>
     <pathCost>100</pathCost>
     <fillPercent>0.15</fillPercent>
-    <designationCategory>DMS_Category</designationCategory>
+    <designationCategory>Misc</designationCategory>
     <uiOrder>11</uiOrder>
     <passability>PassThroughOnly</passability>
     <hasInteractionCell>false</hasInteractionCell>
@@ -206,6 +209,7 @@
       <relatedBuildCommands>
         <li>MF_Building_MaintenanceBay</li>
       </relatedBuildCommands>
+      <spawnedConceptLearnOpportunity>WG_Module_Repair</spawnedConceptLearnOpportunity>
     </building>
     <comps>
       <li Class="CompProperties_Facility">
@@ -249,7 +253,7 @@
     <thingCategories>
       <li>BuildingsMisc</li>
     </thingCategories>
-    <designationCategory>DMS_Category</designationCategory>
+    <designationCategory>Misc</designationCategory>
     <uiOrder>12</uiOrder>
     <passability>PassThroughOnly</passability>
     <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
@@ -285,7 +289,7 @@
       <li Class="CompProperties_Facility">
         <maxSimultaneous>4</maxSimultaneous>
         <statOffsets>
-          <WorkTableWorkSpeedFactor>0.05</WorkTableWorkSpeedFactor>
+          <WorkTableWorkSpeedFactor>0.1</WorkTableWorkSpeedFactor>
         </statOffsets>
       </li>
       <li Class="WalkerGear.CompProperties_BuildingExtraRenderer">
@@ -317,7 +321,7 @@
       <li Class="CompProperties_Facility">
         <maxSimultaneous>4</maxSimultaneous>
         <statOffsets>
-          <WorkTableWorkSpeedFactor>0.05</WorkTableWorkSpeedFactor>
+          <WorkTableWorkSpeedFactor>0.1</WorkTableWorkSpeedFactor>
         </statOffsets>
       </li>
       <li Class="WalkerGear.CompProperties_BuildingExtraRenderer">
@@ -348,6 +352,7 @@
     <useHitPoints>true</useHitPoints>
     <building>
       <repairable>false</repairable>
+      <spawnedConceptLearnOpportunity>WG_Frame_Wreckage</spawnedConceptLearnOpportunity>
     </building>
     <size>(2,2)</size>
     <statBases>
@@ -357,89 +362,6 @@
     <passability>PassThroughOnly</passability>
     <surfaceType>Item</surfaceType>
   </ThingDef>
-
-  <!-- 彈射塢 -->
-  <ThingDef ParentName="BuildingBase">
-    <defName>MF_Building_EjectorBay</defName>
-    <label>Catapult</label>
-    <description>A special place for mecha suit storage and maintenance with auxiliary rocket, It can eject mecha suit with manipulator to far-away place.</description>
-    <thingClass>WalkerGear.Building_EjectorBay</thingClass>
-    <tickerType>Normal</tickerType>
-    <graphicData>
-      <texPath>Things/Building/Catapult_Bay_Bottom</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(4,4)</drawSize>
-    </graphicData>
-    <uiIconPath>Things/Building/Catapult_Bay</uiIconPath>
-    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-    <canOverlapZones>false</canOverlapZones>
-    <drawerType>MapMeshAndRealTime</drawerType>
-    <altitudeLayer>Building</altitudeLayer>
-    <statBases>
-      <WorkToBuild>3600</WorkToBuild>
-      <MaxHitPoints>200</MaxHitPoints>
-    </statBases>
-    <costList>
-      <Steel>200</Steel>
-    </costList>
-    <scatterableOnMapGen>false</scatterableOnMapGen>
-    <useHitPoints>true</useHitPoints>
-    <size>(3,3)</size>
-    <pathCost>100</pathCost>
-    <designationCategory>DMS_Category</designationCategory>
-    <uiOrder>11</uiOrder>
-    <containedPawnsSelectable>true</containedPawnsSelectable>
-    <passability>PassThroughOnly</passability>
-    <hasInteractionCell>True</hasInteractionCell>
-    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
-    <researchPrerequisites>
-      <li>DMS_MobileDragoonElite</li>
-    </researchPrerequisites>
-    <surfaceType>Item</surfaceType>
-    <comps>
-      <li Class= "CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <showPowerNeededIfOff>true</showPowerNeededIfOff>
-        <shortCircuitInRain>false</shortCircuitInRain>
-        <basePowerConsumption>500</basePowerConsumption>
-        <transmitsPower>true</transmitsPower>
-      </li>
-      <li Class="WalkerGear.CompProperties_BuildingExtraRenderer">
-        <extraGraphic>
-          <li>
-            <texPath>Things/Building/Base_Top</texPath>
-            <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>(4,4)</drawSize>
-            <drawOffset>(0,0.8,0)</drawOffset>
-          </li>
-          <li>
-            <texPath>Things/Building/Catapult_Top_Below</texPath>
-            <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>(4,4)</drawSize>
-            <drawOffset>(0,1.03,1)</drawOffset>
-          </li>
-          <li>
-            <texPath>Things/Building/Catapult_Top</texPath>
-            <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>(4,4)</drawSize>
-            <drawOffset>(0,1.035,1)</drawOffset>
-          </li>
-        </extraGraphic>
-      </li>
-    </comps>
-    <placeWorkers>
-      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
-    </placeWorkers>
-  </ThingDef>
-
-  <!-- 進入彈射 -->
-
-  <JobDef>
-    <defName>WG_GetInEjector</defName>
-    <driverClass>WalkerGear.JobDriver_GetInEjector</driverClass>
-    <reportString>entering jector</reportString>
-    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
-  </JobDef>
 
   <!-- Flyer -->
   <ThingDef ParentName="PawnFlyerBase">

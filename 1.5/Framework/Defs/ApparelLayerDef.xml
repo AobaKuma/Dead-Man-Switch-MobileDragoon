@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-    <!-- for uiPriority 0 and 2 -->
+    <!-- for uiPriority 0 -->
     <ApparelLayerDef>
         <defName>WG_WalkerGearLayer_Core</defName>
         <label>core modules</label>
@@ -18,6 +18,4 @@
         <label>utility modules</label>
         <drawOrder>900</drawOrder>
     </ApparelLayerDef>
-    
-    
 </Defs>

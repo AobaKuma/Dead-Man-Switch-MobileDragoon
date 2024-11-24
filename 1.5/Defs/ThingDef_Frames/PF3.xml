@@ -31,24 +31,22 @@
       <skillRequirements>
         <Crafting>4</Crafting>
       </skillRequirements>
-	  <workAmount>36000</workAmount>
+	    <workAmount>36000</workAmount>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
     </recipeMaker>
     <smeltProducts>
-      <Steel>125</Steel>
-      <Tungsteel>40</Tungsteel>
+      <Steel>200</Steel>
     </smeltProducts>
     <butcherProducts>
-      <Tungsteel>60</Tungsteel>
       <Steel>125</Steel>
       <ChunkSlagSteel>4</ChunkSlagSteel>
       <ComponentIndustrial>5</ComponentIndustrial>
-      <ComponentStamped>3</ComponentStamped>
     </butcherProducts>
     <costList>
-      <Tungsteel>75</Tungsteel>
-      <Steel>250</Steel>
-      <ComponentIndustrial>10</ComponentIndustrial>
-      <ComponentStamped>6</ComponentStamped>
+      <Steel>275</Steel>
+      <ComponentIndustrial>15</ComponentIndustrial>
     </costList>
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelCore">

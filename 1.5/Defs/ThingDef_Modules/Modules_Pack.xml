@@ -16,7 +16,7 @@
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
-	  <workAmount>30000</workAmount>
+	    <workAmount>30000</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Steel>60</Steel>
@@ -124,13 +124,17 @@
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackControlRelay</ThingDef>
     </descriptionHyperlinks>
+    <thingCategories>
+      <li>DMS_Module_Multi</li>
+      <li>DMS_Module_ShoulderRight</li>
+    </thingCategories>
     <statBases>
       <MaxHitPoints>80</MaxHitPoints>
       <Mass>100</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonModule</researchPrerequisite>
-	  <workAmount>30000</workAmount>
+	    <workAmount>30000</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Steel>100</Steel>
@@ -218,6 +222,10 @@
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackEngineering</ThingDef>
     </descriptionHyperlinks>
+    <thingCategories>
+      <li>DMS_Module_Multi</li>
+      <li>DMS_Module_ShoulderRight</li>
+    </thingCategories>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
       <Mass>110</Mass>
@@ -309,6 +317,10 @@
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackCargo</ThingDef>
     </descriptionHyperlinks>
+    <thingCategories>
+      <li>DMS_Module_Multi</li>
+      <li>DMS_Module_ShoulderRight</li>
+    </thingCategories>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
       <Mass>50</Mass>
@@ -401,13 +413,17 @@
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackFrame</ThingDef>
     </descriptionHyperlinks>
+    <thingCategories>
+      <li>DMS_Module_Multi</li>
+      <li>DMS_Module_ShoulderRight</li>
+    </thingCategories>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Mass>80</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
-	  <workAmount>30000</workAmount>
+	    <workAmount>30000</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Steel>120</Steel>

@@ -35,7 +35,7 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
-    <modExtensions />
+    <modExtensions/>
     <destroyOnDrop>true</destroyOnDrop>
     <tradeability>None</tradeability>
     <generateCommonality>0</generateCommonality>
@@ -47,6 +47,7 @@
       </li>
     </comps>
   </ThingDef>
+
   <ThingDef ParentName="DMS_BaseDragoonWeapon">
     <defName>DMS_Dragoon_LMG</defName>
     <label>Dragoon LMG</label>

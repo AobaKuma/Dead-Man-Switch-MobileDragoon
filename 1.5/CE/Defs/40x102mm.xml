@@ -300,10 +300,10 @@
 		<products>
 			<Ammo_40x102mm_ElectroSlug>100</Ammo_40x102mm_ElectroSlug>
 		</products>
+		<workAmount>10700</workAmount>
 		<skillRequirements>
 			<Crafting>5</Crafting>
 		</skillRequirements>
-		<workAmount>10700</workAmount>
 	</RecipeDef>
 
 </Defs>

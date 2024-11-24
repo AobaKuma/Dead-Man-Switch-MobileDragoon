@@ -1,5 +1,98 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+  <!-- (左右)雙手大劍 -->
+  <ThingDef ParentName="DMS_ModuleItemArmRight">
+    <defName>DMS_Module_CombatSword</defName>
+    <label>Combat Sword</label>
+    <description>A great sword used by dragoon, it is a heavy combat weapon specially designed to fight large creatures and machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications.</description>
+    <!-- 一種由龍騎兵使用的雙手大劍，是專門設計用於與大型生物及機械體戰鬥的重型格鬥武器並兼具了開山刀與破甲錘的功能。 其本身的重量使得即便是用來清掃輕型步兵與防禦工事也有十分步錯的效果。 -->
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_CombatSword</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Mass>45</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>WG_HeavyExoskeleton</researchPrerequisite>
+    </recipeMaker>
+    <smeltProducts>
+      <Steel>30</Steel>
+      <Tungsteel>60</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+    </butcherProducts>
+    <costList>
+      <Steel>75</Steel>
+      <Tungsteel>125</Tungsteel>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_CombatSword</EquipedThingDef>
+        <slots>
+          <li>ArmRight</li>
+          <li>ArmLeft</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelArmRight">
+    <defName>DMS_Apparel_CombatSword</defName>
+    <label>Combat Sword</label>
+    <description>A great sword used by dragoon, it is a heavy combat weapon specially designed to fight large creatures and machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Weapons/CombatSword</texPath>
+    </graphicData>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_CombatSword</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Mass>45</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.3</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/ModuleArm/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.5</scale>
+        <defaultData>
+          <layer>0</layer>
+        </defaultData>
+        <dataSouth>
+          <offset>(-0.85,0,0.10)</offset>
+        </dataSouth>
+        <dataNorth>
+          <offset>(0.75,0,0.0)</offset>
+          <layer>72</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(-0.40,0,0.5)</offset>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.05,0,-0.2)</offset>
+          <layer>10</layer>
+        </dataEast>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_CombatSword</ItemDef>
+        <slots>
+          <li>ArmRight</li>
+          <li>ArmLeft</li>
+        </slots>
+      </li>
+      <li Class="WalkerGear.CompProperties_ForceUseWeapon">
+        <weapon>DMS_Dragoon_Sword</weapon>
+      </li>
+    </comps>
+  </ThingDef>
+
   <!-- (右)打樁機 -->
   <ThingDef ParentName="DMS_ModuleItemArmRight">
     <defName>DMS_Module_PileBunker</defName>
@@ -18,7 +111,7 @@
     </recipeMaker>
     <smeltProducts>
       <Steel>60</Steel>
-	  <Tungsteel>40</Tungsteel>
+      <Tungsteel>40</Tungsteel>
     </smeltProducts>
     <butcherProducts>
       <ChunkSlagSteel>3</ChunkSlagSteel>
@@ -26,7 +119,7 @@
     </butcherProducts>
     <costList>
       <Steel>125</Steel>
-	  <Tungsteel>75</Tungsteel>
+      <Tungsteel>75</Tungsteel>
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <comps>
@@ -45,7 +138,7 @@
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Dragoon/PileBunker/apparel_south</texPath>
-    </graphicData>    
+    </graphicData>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_PileBunker</ThingDef>
     </descriptionHyperlinks>
@@ -90,28 +183,28 @@
         </slots>
       </li>
     </comps>
-		<tools>
-			<li>
-				<label>tungsteel pile</label>
-				<capacities>
-					<li>Poke</li>
-				</capacities>
-				<power>100</power>
+    <tools>
+      <li>
+        <label>tungsteel pile</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>100</power>
         <armorPenetration>2.0</armorPenetration>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <chanceFactor>1.8</chanceFactor>
-				<cooldownTime>4.5</cooldownTime>
-			</li>
-			<li>
-				<label>mechanical tool</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>18</power>
+        <cooldownTime>4.5</cooldownTime>
+      </li>
+      <li>
+        <label>mechanical tool</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>18</power>
         <armorPenetration>0.5</armorPenetration>
-				<cooldownTime>1</cooldownTime>
-			</li>
-		</tools>
+        <cooldownTime>1</cooldownTime>
+      </li>
+    </tools>
   </ThingDef>
 
   <!-- (右)lmg-->
@@ -131,11 +224,11 @@
         <li>DMS_MobileDragoon</li>
         <li>DMS_EquipmentHeavy</li>
       </researchPrerequisites>
-	  <workAmount>75000</workAmount>
+      <workAmount>75000</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Steel>60</Steel>
-	  <Tungsteel>20</Tungsteel>
+      <Tungsteel>20</Tungsteel>
     </smeltProducts>
     <butcherProducts>
       <ChunkSlagSteel>3</ChunkSlagSteel>
@@ -143,7 +236,7 @@
     </butcherProducts>
     <costList>
       <Tungsteel>120</Tungsteel>
-	  <ComponentStamped>5</ComponentStamped>
+      <ComponentStamped>5</ComponentStamped>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -183,5 +276,5 @@
       </li>
     </comps>
   </ThingDef>
-  
+
 </Defs>

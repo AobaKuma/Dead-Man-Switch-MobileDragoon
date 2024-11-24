@@ -31,7 +31,7 @@
       <skillRequirements>
         <Crafting>4</Crafting>
       </skillRequirements>
-	  <workAmount>22500</workAmount>
+	    <workAmount>22500</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Steel>75</Steel>

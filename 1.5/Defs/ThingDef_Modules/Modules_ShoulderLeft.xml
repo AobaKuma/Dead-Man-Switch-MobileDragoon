@@ -1,5 +1,121 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+    <!-- (左)煙霧發射器 -->
+    <ThingDef ParentName="DMS_ModuleItemMountLeft">
+        <defName>DMS_Module_SomkeLauncher</defName>
+        <label>Somke launcher</label>
+        <description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</description>
+        <!-- 一種構造簡單的遙控發射裝置，能夠裝填煙霧砲彈並提供準確的掩護。 -->
+        <descriptionHyperlinks>
+            <ThingDef>DMS_Apparel_SomkeLauncher</ThingDef>
+        </descriptionHyperlinks>
+        <recipeMaker>
+            <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+			<workAmount>15000</workAmount>
+        </recipeMaker>
+        <statBases>
+            <MaxHitPoints>20</MaxHitPoints>
+            <Mass>35</Mass>
+        </statBases>
+        <costList>
+            <Steel>150</Steel>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <EquipedThingDef>DMS_Apparel_SomkeLauncher</EquipedThingDef>
+                <slots>
+                    <li>MountLeft</li>
+                </slots>
+            </li>
+        </comps>
+    </ThingDef>
+    <ThingDef ParentName="DMS_ModuleApparelMountLeft">
+        <defName>DMS_Apparel_SomkeLauncher</defName>
+        <label>Somke launcher</label>
+        <description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</description>
+        <descriptionHyperlinks>
+            <ThingDef>DMS_Module_SomkeLauncher</ThingDef>
+        </descriptionHyperlinks><graphicData>
+            <texPath>Things/Dragoon/SomkeLauncher/apparel_south</texPath>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>20</MaxHitPoints>
+            <Mass>35</Mass>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.25</MoveSpeed>
+        </equippedStatOffsets>
+        <apparel>
+            <wornGraphicPath>Things/Dragoon/SomkeLauncher/apparel</wornGraphicPath>
+            <drawData>
+                <scale>0.75</scale>
+                <defaultData>
+                    <layer>30</layer>
+                </defaultData>
+                <dataSouth>
+                    <offset>(1,0,0.75)</offset>
+                    <layer>0</layer>
+                </dataSouth>
+                <dataNorth>
+                    <offset>(-1,0,0.55)</offset>
+                    <layer>80</layer>
+                </dataNorth>
+                <dataWest>
+                    <offset>(0.75,0,0.45)</offset>
+                    <layer>80</layer>
+                </dataWest>
+                <dataEast>
+                    <offset>(0.1,0,0.75)</offset>
+                    <layer>-2</layer>
+                </dataEast>
+            </drawData>
+        </apparel>
+        <verbs>
+            <li>
+                <label>launch smoke shell</label>
+                <verbClass>Verb_LaunchProjectileStatic</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <onlyManualCast>True</onlyManualCast>
+                <range>59.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>RocketswarmLauncher_Fire</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>14</muzzleFlashScale>
+                <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+                <requireLineOfSight>false</requireLineOfSight>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                    <canTargetBuildings>true</canTargetBuildings>
+                </targetParams>
+                <defaultProjectile>Bullet_Shell_Smoke</defaultProjectile><!-- 投射物有待修改 -->
+                <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_ApparelReloadable">
+                <maxCharges>5</maxCharges>
+                <ammoDef>Shell_Smoke</ammoDef>
+                <ammoCountPerCharge>1</ammoCountPerCharge>
+                <baseReloadTicks>60</baseReloadTicks>
+                <soundReload>Standard_Reload</soundReload>
+                <hotKey>Misc4</hotKey>
+                <chargeNoun>smoke shell</chargeNoun>
+                <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+            </li>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <ItemDef>DMS_Module_SomkeLauncher</ItemDef>
+                <slots>
+                    <li>MountLeft</li>
+                </slots>
+            </li>
+        </comps>
+    </ThingDef>
+
     <!-- (左)4x反工事導彈 -->
     <ThingDef ParentName="DMS_ModuleItemMountLeft">
         <defName>DMS_Module_MissilePod</defName>
@@ -35,7 +151,7 @@
         <label>Demolish Missile Pod</label>
         <description>Todo.</description>
         <graphicData>
-            <texPath>Things/Dragoon/MissilePod/apparel_north</texPath>
+            <texPath>Things/Dragoon/MissilePod/apparel_south</texPath>
         </graphicData>
         <statBases>
             <MaxHitPoints>20</MaxHitPoints>
@@ -148,7 +264,7 @@
         <label>Swarm rocket Pod</label>
         <description>Todo.</description>
         <graphicData>
-            <texPath>Things/Dragoon/MissilePodSwarm/apparel_north</texPath>
+            <texPath>Things/Dragoon/MissilePodSwarm/apparel_south</texPath>
         </graphicData>
         <tickerType>Normal</tickerType>
         <statBases>

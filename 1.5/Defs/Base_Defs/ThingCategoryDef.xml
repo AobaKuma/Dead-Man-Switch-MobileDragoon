@@ -49,4 +49,10 @@
     <label>left shoulder module</label>
     <parent>DMS_Module</parent>
   </ThingCategoryDef>
+  
+  <ThingCategoryDef>
+    <defName>DMS_Module_Multi</defName>
+    <label>multi slot module</label>
+    <parent>DMS_Module</parent>
+  </ThingCategoryDef>
 </Defs>

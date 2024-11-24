@@ -15,7 +15,7 @@
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonModule</researchPrerequisite>
-	  <workAmount>40000</workAmount>
+	    <workAmount>40000</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Steel>60</Steel>
@@ -205,7 +205,7 @@
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
-	  <workAmount>30000</workAmount>
+	    <workAmount>30000</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Steel>120</Steel>
@@ -293,7 +293,7 @@
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
-	  <workAmount>22500</workAmount>
+	    <workAmount>22500</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Steel>60</Steel>

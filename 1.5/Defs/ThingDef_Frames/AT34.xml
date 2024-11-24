@@ -28,6 +28,7 @@
       <skillRequirements>
         <Crafting>4</Crafting>
       </skillRequirements>
+	  <workAmount>48000</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Tungsteel>100</Tungsteel>
@@ -149,6 +150,7 @@
       <skillRequirements>
         <Crafting>4</Crafting>
       </skillRequirements>
+	  <workAmount>18000</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Tungsteel>15</Tungsteel>

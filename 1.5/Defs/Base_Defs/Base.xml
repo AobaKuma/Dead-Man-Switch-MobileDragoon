@@ -8,7 +8,7 @@
             </recipeUsers>
             <effectWorking>Repair</effectWorking>
             <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
-            <workAmount>500</workAmount>
+            <workAmount>15000</workAmount>
             <workSkill>Crafting</workSkill>
             <soundWorking>Recipe_Machining</soundWorking>
         </recipeMaker>

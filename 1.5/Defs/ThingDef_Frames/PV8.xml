@@ -24,6 +24,7 @@
       <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
       <skillRequirements>
         <Crafting>8</Crafting>
+		<workAmount>80000</workAmount>
       </skillRequirements>
     </recipeMaker>
     <smeltProducts>
@@ -143,6 +144,7 @@
       <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
       <skillRequirements>
         <Crafting>8</Crafting>
+		<workAmount>30000</workAmount>
       </skillRequirements>
     </recipeMaker>
     <smeltProducts>

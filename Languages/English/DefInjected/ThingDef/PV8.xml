@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: PV-8 "Zyklop" frame -->
+  <DMS_Apparel_PV8_Core.label>PV-8 "Zyklop" frame</DMS_Apparel_PV8_Core.label>
+  <!-- EN: A heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task force. This is probably the largest piece of infantry equipments deployed by the colonial fleet on surface of this planet. The extremely thick armor and powerful power system enable the ground garrison to maintain sufficient mobile firepower to deal with interference in the colonization project. -->
+  <DMS_Apparel_PV8_Core.description>A heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task force. This is probably the largest piece of infantry equipments deployed by the colonial fleet on surface of this planet. The extremely thick armor and powerful power system enable the ground garrison to maintain sufficient mobile firepower to deal with interference in the colonization project.</DMS_Apparel_PV8_Core.description>
+  <!-- EN: mechanical fist -->
+  <DMS_Apparel_PV8_Core.tools.mechanical_fist.label>mechanical fist</DMS_Apparel_PV8_Core.tools.mechanical_fist.label>
+  <!-- EN: mechanical leg -->
+  <DMS_Apparel_PV8_Core.tools.mechanical_leg.label>mechanical leg</DMS_Apparel_PV8_Core.tools.mechanical_leg.label>
+  
+  <!-- EN: PV-8 "Zyklop" helmet -->
+  <DMS_Apparel_PV8_Helmet.label>PV-8 "Zyklop" helmet</DMS_Apparel_PV8_Helmet.label>
+  <!-- EN: A heavy-duty helmet that uses small optical probes arranged in a distributed manner as sensors in order to prevent damage from frontal hits from large-caliber weapons. -->
+  <DMS_Apparel_PV8_Helmet.description>A heavy-duty helmet that uses small optical probes arranged in a distributed manner as sensors in order to prevent damage from frontal hits from large-caliber weapons.</DMS_Apparel_PV8_Helmet.description>
+  
+  <!-- EN: PV-8 "Zyklop" frame module -->
+  <DMS_Module_PV8_Core.label>PV-8 "Zyklop" frame module</DMS_Module_PV8_Core.label>
+  <!-- EN: These heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task force. Probably the largest piece of infantry equipments deployed by the colonial fleet on surface of this planet. Their extremely thick armor and powerful power system allowing ground garrison to maintain sufficient mobile firepower to deal with interference in the colonization. -->
+  <DMS_Module_PV8_Core.description>These heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task force. Probably the largest piece of infantry equipments deployed by the colonial fleet on surface of this planet. Their extremely thick armor and powerful power system allowing ground garrison to maintain sufficient mobile firepower to deal with interference in the colonization.</DMS_Module_PV8_Core.description>
+  
+  <!-- EN: PV-8 "Zyklop" helmet -->
+  <DMS_Module_PV8_Helmet.label>PV-8 "Zyklop" helmet</DMS_Module_PV8_Helmet.label>
+  <!-- EN: A heavy-duty helmet that uses small optical probes arranged in a distributed manner as sensors in order to prevent damage from frontal hits from large-caliber weapons. -->
+  <DMS_Module_PV8_Helmet.description>A heavy-duty helmet that uses small optical probes arranged in a distributed manner as sensors in order to prevent damage from frontal hits from large-caliber weapons.</DMS_Module_PV8_Helmet.description>
+  
+</LanguageData>

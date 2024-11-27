@@ -95,7 +95,7 @@
     <ThingDef ParentName="DMS_ModuleItemMountRight">
         <defName>DMS_Module_TurretPackLight</defName>
         <label>LMG Shoulder Mount</label>
-        <description>todo.</description>
+        <description>A shoulder-mounted remote-controlled machine gun.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_TurretPackLight</ThingDef>
         </descriptionHyperlinks>
@@ -125,7 +125,7 @@
     <ThingDef ParentName="DMS_ModuleApparelMountRight">
         <defName>DMS_Apparel_TurretPackLight</defName>
         <label>LMG Shoulder Mount</label>
-        <description>Todo.</description>
+        <description>A shoulder-mounted remote-controlled machine gun.</description>
         <graphicData>
             <texPath>Things/Dragoon/TurretPack/TurretPack_MachineGun</texPath>
         </graphicData>
@@ -246,7 +246,7 @@
     <ThingDef ParentName="DMS_ModuleItemMountRight">
         <defName>DMS_Module_TurretPackHeavy</defName>
         <label>Kord Shoulder Mount</label>
-        <description>todo.</description>
+        <description>A shoulder-mounted remote-controlled machine gun.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_TurretPackHeavy</ThingDef>
         </descriptionHyperlinks>
@@ -276,7 +276,7 @@
     <ThingDef ParentName="DMS_ModuleApparelMountRight">
         <defName>DMS_Apparel_TurretPackHeavy</defName>
         <label>Kord Shoulder Mount</label>
-        <description>Todo.</description>
+        <description>A shoulder-mounted remote-controlled machine gun.</description>
         <graphicData>
             <texPath>Things/Dragoon/TurretPack/TurretPack_Kord</texPath>
         </graphicData>
@@ -400,7 +400,7 @@
     <ThingDef ParentName="DMS_ModuleItemMountRight">
         <defName>DMS_Module_TurretPackGAU</defName>
         <label>GAU19/A Shoulder Mount</label>
-        <description>todo.</description>
+        <description>A shoulder-mounted remote-controlled machine gun.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_TurretPackGAU</ThingDef>
         </descriptionHyperlinks>
@@ -430,7 +430,7 @@
     <ThingDef ParentName="DMS_ModuleApparelMountRight">
         <defName>DMS_Apparel_TurretPackGAU</defName>
         <label>GAU19/A Shoulder Mount</label>
-        <description>Todo.</description>
+        <description>A shoulder-mounted remote-controlled machine gun.</description>
         <graphicData>
             <texPath>Things/Dragoon/TurretPack/TurretPack_GAU</texPath>
         </graphicData>

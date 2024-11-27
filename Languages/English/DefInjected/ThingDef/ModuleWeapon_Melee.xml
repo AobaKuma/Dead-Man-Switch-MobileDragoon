@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Dragoon Combat Sword -->
+  <DMS_Dragoon_Sword.label>Dragoon Combat Sword</DMS_Dragoon_Sword.label>
+  <!-- EN: A two-handed great sword used by dragoon, it is specially designed to fight against large creatures and war machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications. -->
+  <DMS_Dragoon_Sword.description>A two-handed great sword used by dragoon, it is specially designed to fight against large creatures and war machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications.</DMS_Dragoon_Sword.description>
+  <!-- EN: poke -->
+  <DMS_Dragoon_Sword.tools.poke.label>poke</DMS_Dragoon_Sword.tools.poke.label>
+  <!-- EN: sweep -->
+  <DMS_Dragoon_Sword.tools.sweep.label>sweep</DMS_Dragoon_Sword.tools.sweep.label>
+  <!-- EN: stock -->
+  <DMS_Dragoon_Sword.tools.stock.label>stock</DMS_Dragoon_Sword.tools.stock.label>
+  
+</LanguageData>

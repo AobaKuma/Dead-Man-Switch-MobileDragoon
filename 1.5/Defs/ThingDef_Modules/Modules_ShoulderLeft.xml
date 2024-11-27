@@ -120,7 +120,7 @@
     <ThingDef ParentName="DMS_ModuleItemMountLeft">
         <defName>DMS_Module_MissilePod</defName>
         <label>Missile Pod</label>
-        <description>todo.</description>
+        <description>A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_MissilePod</ThingDef>
         </descriptionHyperlinks>
@@ -149,7 +149,7 @@
     <ThingDef ParentName="DMS_ModuleApparelMountLeft">
         <defName>DMS_Apparel_MissilePod</defName>
         <label>Demolish Missile Pod</label>
-        <description>Todo.</description>
+        <description>A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use.</description>
         <graphicData>
             <texPath>Things/Dragoon/MissilePod/apparel_south</texPath>
         </graphicData>
@@ -262,7 +262,7 @@
     <ThingDef ParentName="DMS_ModuleApparelMountLeft">
         <defName>DMS_Apparel_SwarmMissilePod</defName>
         <label>Swarm rocket Pod</label>
-        <description>Todo.</description>
+        <description>A Rocket pod module that contains multiple high-explosive rocket rounds, can use its high fire rate to cover an large area.</description>
         <graphicData>
             <texPath>Things/Dragoon/MissilePodSwarm/apparel_south</texPath>
         </graphicData>
@@ -349,7 +349,7 @@
     <ThingDef ParentName="DMS_ModuleItemMountLeft">
         <defName>DMS_Module_MissilePodPlus</defName>
         <label>Missile Pod Plus</label>
-        <description>todo.</description>
+        <description>A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_MissilePod</ThingDef>
         </descriptionHyperlinks>
@@ -378,7 +378,7 @@
     <ThingDef ParentName="DMS_ModuleApparelMountLeft">
         <defName>DMS_Apparel_MissilePodPlus</defName>
         <label>Missile Pod Plus</label>
-        <description>Todo.</description>
+        <description>A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles.</description>
         <graphicData>
             <texPath>Things/Dragoon/MissilePod8/apparel_south</texPath>
         </graphicData>

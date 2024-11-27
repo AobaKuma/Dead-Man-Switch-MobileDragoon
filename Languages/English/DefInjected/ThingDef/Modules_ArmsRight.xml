@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Combat Sword -->
+  <DMS_Apparel_CombatSword.label>Combat Sword</DMS_Apparel_CombatSword.label>
+  <!-- EN: A great sword used by dragoon, it is a heavy combat weapon specially designed to fight large creatures and machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications. -->
+  <DMS_Apparel_CombatSword.description>A great sword used by dragoon, it is a heavy combat weapon specially designed to fight large creatures and machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications.</DMS_Apparel_CombatSword.description>
+  
+  <!-- EN: pile bunker -->
+  <DMS_Apparel_PileBunker.label>pile bunker</DMS_Apparel_PileBunker.label>
+  <!-- EN: An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent. -->
+  <DMS_Apparel_PileBunker.description>An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent.</DMS_Apparel_PileBunker.description>
+  <!-- EN: tungsteel pile -->
+  <DMS_Apparel_PileBunker.tools.tungsteel_pile.label>tungsteel pile</DMS_Apparel_PileBunker.tools.tungsteel_pile.label>
+  <!-- EN: mechanical tool -->
+  <DMS_Apparel_PileBunker.tools.mechanical_tool.label>mechanical tool</DMS_Apparel_PileBunker.tools.mechanical_tool.label>
+  
+  <!-- EN: Dragoon LMG -->
+  <DMS_Apparel_WeaponLmg.label>Dragoon LMG</DMS_Apparel_WeaponLmg.label>
+  <!-- EN: A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities. -->
+  <DMS_Apparel_WeaponLmg.description>A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities.</DMS_Apparel_WeaponLmg.description>
+  
+  <!-- EN: Combat Sword -->
+  <DMS_Module_CombatSword.label>Combat Sword</DMS_Module_CombatSword.label>
+  <!-- EN: A great sword used by dragoon, it is a heavy combat weapon specially designed to fight large creatures and machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications. -->
+  <DMS_Module_CombatSword.description>A great sword used by dragoon, it is a heavy combat weapon specially designed to fight large creatures and machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications.</DMS_Module_CombatSword.description>
+  
+  <!-- EN: pile bunker -->
+  <DMS_Module_PileBunker.label>pile bunker</DMS_Module_PileBunker.label>
+  <!-- EN: An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent. -->
+  <DMS_Module_PileBunker.description>An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent.</DMS_Module_PileBunker.description>
+  
+  <!-- EN: Dragoon LMG -->
+  <DMS_Module_WeaponLmg.label>Dragoon LMG</DMS_Module_WeaponLmg.label>
+  <!-- EN: A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities. -->
+  <DMS_Module_WeaponLmg.description>A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities.</DMS_Module_WeaponLmg.description>
+  
+</LanguageData>

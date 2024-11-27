@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: mobile dragoon -->
+  <DMS_MobileDragoon.label>Mobile dragoon</DMS_MobileDragoon.label>
+  <!-- EN: A military-duty exoskeleton technology used by colonial fleets. Due to their active colonization activities in rimworlds, these type of technology is also mastered by most former colonial worlds and some space pirates. Dragoons are generally used for armored reconnaissance missions on urban battlefields with poor road conditions, and having multiple modular mount for various needs. -->
+  <DMS_MobileDragoon.description>A military-duty exoskeleton technology used by colonial fleets. Due to their active colonization activities in rimworlds, these type of technology is also mastered by most former colonial worlds and some space pirates. Dragoons are generally used for armored reconnaissance missions on urban battlefields with poor road conditions, and having multiple modular mount for various needs.</DMS_MobileDragoon.description>
+  
+  <!-- EN: main battle dragoon -->
+  <DMS_MobileDragoonAdvanced.label>Main battle dragoon</DMS_MobileDragoonAdvanced.label>
+  <!-- EN: unlocks the production of the PV-8 "Zyklop" Dragoon frame for the Colonial Fleet Mobile Armoured Regiment. -->
+  <DMS_MobileDragoonAdvanced.description>unlocks the production of the PV-8 "Zyklop" Dragoon frame for the Colonial Fleet Mobile Armoured Regiment.</DMS_MobileDragoonAdvanced.description>
+  
+  <!-- EN: Advanced Dragoon Engineering -->
+  <DMS_MobileDragoonElite.label>Advanced Dragoon Engineering</DMS_MobileDragoonElite.label>
+  <!-- EN: unlocks the production of the F/A-47 "Arsenal Angel" Dragoon frame for the Colonial Fleet Orbital Trooper Regiment. -->
+  <DMS_MobileDragoonElite.description>unlocks the production of the F/A-47 "Arsenal Angel" Dragoon frame for the Colonial Fleet Orbital Trooper Regiment.</DMS_MobileDragoonElite.description>
+
+  <!-- EN: Electronic modules -->
+  <DMS_MobileDragoonModule.label>Electronic modules</DMS_MobileDragoonModule.label>
+  <!-- EN: unlock the production fo electronic communications/sensing modules for dragoon. -->
+  <DMS_MobileDragoonModule.description>unlock the production fo electronic communications/sensing modules for dragoon.</DMS_MobileDragoonModule.description>
+
+</LanguageData>

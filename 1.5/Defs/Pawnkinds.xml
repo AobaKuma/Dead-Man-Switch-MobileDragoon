@@ -261,6 +261,80 @@
   </PawnKindDef>
 
   <PawnKindDef ParentName="DMS_DragoonBase">
+    <defName>DMS_Squad_ArmyDragoon_Claymore</defName>
+    <label>Zyklop Claymore</label>
+    <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_Sergeant</titleRequired>
+    <combatPower>150</combatPower>
+    <apparelTags>
+      <li>IndustrialMilitaryBasic</li>
+    </apparelTags>
+    <apparelMoney>2000~5000</apparelMoney>
+    <weaponMoney>2000~10000</weaponMoney>
+    <techHediffsRequired>
+      <li>DMS_SensoryFilter</li>
+      <li>DMS_NutrientPort</li>
+      <li>DMS_ProstheticEye</li>
+    </techHediffsRequired>
+    <weaponTags/>
+    <skills>
+      <li>
+        <skill>Melee</skill>
+        <range>8~18</range>
+      </li>
+    </skills>
+    <specificApparelRequirements>
+      <li>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(90, 100, 90)</only>
+            </li>
+            <li>
+              <only>(85, 100, 95)</only>
+            </li>
+            <li>
+              <only>(95, 100, 85)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+    </specificApparelRequirements>
+    <modExtensions>
+      <li Class="WalkerGear.ModExtForceApparelGen">
+        <StructurePointRange>0.85~1.0</StructurePointRange>
+        <apparels>
+          <li>DMS_Apparel_PV8_Core</li>
+          <li>DMS_Apparel_PV8_Helmet</li>
+          <li>DMS_Apparel_CombatSword</li>
+        </apparels>
+        <chanceApparels>
+          <li>
+            <chance>0.25</chance>
+            <apparel>DMS_Apparel_SomkeLauncher</apparel>
+          </li>
+          <li>
+            <chance>0.05</chance>
+            <apparel>DMS_Apparel_FA47_Helmet</apparel>
+          </li>
+        </chanceApparels>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(90, 100, 90)</only>
+            </li>
+            <li>
+              <only>(85, 100, 95)</only>
+            </li>
+            <li>
+              <only>(95, 100, 85)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="DMS_DragoonBase">
     <defName>DMS_Squad_ArmyDragoon_Gatling</defName>
     <label>Zyklop tornado</label>
     <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_Sergeant</titleRequired>

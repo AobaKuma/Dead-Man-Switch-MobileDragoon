@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: payload cabinet -->
+  <DMS_Apparel_CargoBox.label>payload cabinet</DMS_Apparel_CargoBox.label>
+  <!-- EN: An attached metal rack capable of storing payloads on a walker frame. -->
+  <DMS_Apparel_CargoBox.description>An attached metal rack capable of storing payloads on a walker frame.</DMS_Apparel_CargoBox.description>
+  
+  <!-- EN: infrared sensor -->
+  <DMS_Apparel_InfraredSensor.label>infrared sensor</DMS_Apparel_InfraredSensor.label>
+  <!-- EN: An additional external optical sensor provides some night operation capabilities without modifying the frame itself, and provides aiming assistance. -->
+  <DMS_Apparel_InfraredSensor.description>An additional external optical sensor provides some night operation capabilities without modifying the frame itself, and provides aiming assistance.</DMS_Apparel_InfraredSensor.description>
+  
+  <!-- EN: pulse shield -->
+  <DMS_Apparel_PulseShield.label>pulse shield</DMS_Apparel_PulseShield.label>
+  <!-- EN: A miniaturized shield module used on a small scale in the colonial fleet. Its fast charging speed allows it to completely absorb low-caliber projectiles bursts or intercept a fatal projectile. -->
+  <DMS_Apparel_PulseShield.description>A miniaturized shield module used on a small scale in the colonial fleet. Its fast charging speed allows it to completely absorb low-caliber projectiles bursts or intercept a fatal projectile.</DMS_Apparel_PulseShield.description>
+  
+  <!-- EN: solid shield -->
+  <DMS_Apparel_Shield.label>solid shield</DMS_Apparel_Shield.label>
+  <!-- EN: A composite armor shield mounted on the dragoon frame. Although it is a bit heavy, it can effectively resist the damage caused by large-caliber fragments and anti-material rifle bullets. -->
+  <DMS_Apparel_Shield.description>A composite armor shield mounted on the dragoon frame. Although it is a bit heavy, it can effectively resist the damage caused by large-caliber fragments and anti-material rifle bullets.</DMS_Apparel_Shield.description>
+  
+  <!-- EN: work arm -->
+  <DMS_Apparel_WorkArm.label>work arm</DMS_Apparel_WorkArm.label>
+  <!-- EN: A module hung on the left arm of the frame, contains a eletric motor clamp and positioning device, which can achieve the same dexterity as a human hand to a certain extent. -->
+  <DMS_Apparel_WorkArm.description>A module hung on the left arm of the frame, contains a eletric motor clamp and positioning device, which can achieve the same dexterity as a human hand to a certain extent.</DMS_Apparel_WorkArm.description>
+  
+  <!-- EN: payload cabinet -->
+  <DMS_Module_CargoBox.label>payload cabinet</DMS_Module_CargoBox.label>
+  <!-- EN: An attached metal rack capable of storing payloads on a walker frame. -->
+  <DMS_Module_CargoBox.description>An attached metal rack capable of storing payloads on a walker frame.</DMS_Module_CargoBox.description>
+  
+  <!-- EN: infrared sensor -->
+  <DMS_Module_InfraredSensor.label>infrared sensor</DMS_Module_InfraredSensor.label>
+  <!-- EN: An additional external optical sensor provides some night operation capabilities without modifying the frame itself, and provides aiming assistance. -->
+  <DMS_Module_InfraredSensor.description>An additional external optical sensor provides some night operation capabilities without modifying the frame itself, and provides aiming assistance.</DMS_Module_InfraredSensor.description>
+  
+  <!-- EN: pulse shield -->
+  <DMS_Module_PulseShield.label>pulse shield</DMS_Module_PulseShield.label>
+  <!-- EN: A miniaturized pulse shield module used in the colonial fleet, only used on a fairly small scale due to cost considerations. Its fast charging speed allows it to completely absorb low-caliber projectiles bursts or intercept a fatal projectile. -->
+  <DMS_Module_PulseShield.description>A miniaturized pulse shield module used in the colonial fleet, only used on a fairly small scale due to cost considerations. Its fast charging speed allows it to completely absorb low-caliber projectiles bursts or intercept a fatal projectile.</DMS_Module_PulseShield.description>
+  
+  <!-- EN: ballistic shield -->
+  <DMS_Module_Shield.label>ballistic shield</DMS_Module_Shield.label>
+  <!-- EN: A composite armor shield mounted on the dragoon frame. Although it is a bit heavy, it can effectively resist the damage caused by large-caliber fragments and anti-material rifle bullets. -->
+  <DMS_Module_Shield.description>A composite armor shield mounted on the dragoon frame. Although it is a bit heavy, it can effectively resist the damage caused by large-caliber fragments and anti-material rifle bullets.</DMS_Module_Shield.description>
+  
+  <!-- EN: work arm -->
+  <DMS_Module_WorkArm.label>work arm</DMS_Module_WorkArm.label>
+  <!-- EN: A module hung on the left arm of the frame, contains a eletric motor clamp and positioning device, which can achieve the same dexterity as a human hand to a certain extent. -->
+  <DMS_Module_WorkArm.description>A module hung on the left arm of the frame, contains a eletric motor clamp and positioning device, which can achieve the same dexterity as a human hand to a certain extent.</DMS_Module_WorkArm.description>
+  
+</LanguageData>

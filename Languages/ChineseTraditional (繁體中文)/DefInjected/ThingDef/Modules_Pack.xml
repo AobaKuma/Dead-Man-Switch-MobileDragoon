@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: burst thruster -->
+  <DMS_Apparel_JumpThruster.label>TODO</DMS_Apparel_JumpThruster.label>
+  <!-- EN: A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult. -->
+  <DMS_Apparel_JumpThruster.description>TODO</DMS_Apparel_JumpThruster.description>
+  <!-- EN: jump -->
+  <DMS_Apparel_JumpThruster.comps.CompApparelReloadable.chargeNoun>TODO</DMS_Apparel_JumpThruster.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_JumpThruster.comps.CompApparelReloadable.cooldownGerund>TODO</DMS_Apparel_JumpThruster.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: jump -->
+  <DMS_Apparel_JumpThruster.verbs.jump.label>TODO</DMS_Apparel_JumpThruster.verbs.jump.label>
+  
+  <!-- EN: Cargo pack -->
+  <DMS_Apparel_PackCargo.label>TODO</DMS_Apparel_PackCargo.label>
+  <!-- EN: A pack module with cargo spaces and additional drive unit, let the frame to carry more payloads. -->
+  <DMS_Apparel_PackCargo.description>TODO</DMS_Apparel_PackCargo.description>
+  
+  <!-- EN: relay pack -->
+  <DMS_Apparel_PackControlRelay.label>TODO</DMS_Apparel_PackControlRelay.label>
+  <!-- EN: A heavy-duty backpack designed to assist the mechanitor pilot in mech control can increase bandwidth for the mechanitor through effective coordination. -->
+  <DMS_Apparel_PackControlRelay.description>TODO</DMS_Apparel_PackControlRelay.description>
+  
+  <!-- EN: engineering pack -->
+  <DMS_Apparel_PackEngineering.label>TODO</DMS_Apparel_PackEngineering.label>
+  <!-- EN: The module which mounted on the Back of the frame. Having a pair of robotic arms to perform logistical work such as construction, maintenance, transportation, and processing. -->
+  <DMS_Apparel_PackEngineering.description>TODO</DMS_Apparel_PackEngineering.description>
+  
+  <!-- EN: hydraulic frame pack -->
+  <DMS_Apparel_PackFrame.label>TODO</DMS_Apparel_PackFrame.label>
+  <!-- EN: An exoskeleton system for the frame that allows the use of heavier heavy equipment without changing the design itself. -->
+  <DMS_Apparel_PackFrame.description>TODO</DMS_Apparel_PackFrame.description>
+  
+  <!-- EN: burst thruster -->
+  <DMS_Module_JumpThruster.label>TODO</DMS_Module_JumpThruster.label>
+  <!-- EN: A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult. -->
+  <DMS_Module_JumpThruster.description>TODO</DMS_Module_JumpThruster.description>
+  
+  <!-- EN: Cargo pack -->
+  <DMS_Module_PackCargo.label>TODO</DMS_Module_PackCargo.label>
+  <!-- EN: A pack module with cargo spaces and additional drive unit, let the frame to carry more payloads. -->
+  <DMS_Module_PackCargo.description>TODO</DMS_Module_PackCargo.description>
+  
+  <!-- EN: relay pack -->
+  <DMS_Module_PackControlRelay.label>TODO</DMS_Module_PackControlRelay.label>
+  <!-- EN: A heavy-duty backpack designed to assist mechanitor pilot in mech control. can increase bandwidth through its coordination. -->
+  <DMS_Module_PackControlRelay.description>TODO</DMS_Module_PackControlRelay.description>
+  
+  <!-- EN: engineering pack -->
+  <DMS_Module_PackEngineering.label>TODO</DMS_Module_PackEngineering.label>
+  <!-- EN: The module which mounted on the Back of the frame. Having a pair of robotic arms to perform logistical work such as construction, maintenance, transportation, and processing. -->
+  <DMS_Module_PackEngineering.description>TODO</DMS_Module_PackEngineering.description>
+  
+  <!-- EN: hydraulic frame pack -->
+  <DMS_Module_PackFrame.label>TODO</DMS_Module_PackFrame.label>
+  <!-- EN: An exoskeleton system for the frame that allows the use of heavier heavy equipment without changing the design itself. -->
+  <DMS_Module_PackFrame.description>TODO</DMS_Module_PackFrame.description>
+  
+</LanguageData>

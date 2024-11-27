@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Demolish Missile Pod -->
+  <DMS_Apparel_MissilePod.label>TODO</DMS_Apparel_MissilePod.label>
+  <!-- EN: A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use. -->
+  <DMS_Apparel_MissilePod.description>TODO</DMS_Apparel_MissilePod.description>
+  <!-- EN: missile -->
+  <DMS_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>TODO</DMS_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_MissilePod.comps.CompApparelReloadable.cooldownGerund>TODO</DMS_Apparel_MissilePod.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: launch missile -->
+  <DMS_Apparel_MissilePod.verbs.launch_missile.label>TODO</DMS_Apparel_MissilePod.verbs.launch_missile.label>
+  
+  <!-- EN: Missile Pod Plus -->
+  <DMS_Apparel_MissilePodPlus.label>TODO</DMS_Apparel_MissilePodPlus.label>
+  <!-- EN: A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles. -->
+  <DMS_Apparel_MissilePodPlus.description>TODO</DMS_Apparel_MissilePodPlus.description>
+  <!-- EN: missile -->
+  <DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.chargeNoun>TODO</DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.cooldownGerund>TODO</DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: launch missile -->
+  <DMS_Apparel_MissilePodPlus.verbs.launch_missile.label>TODO</DMS_Apparel_MissilePodPlus.verbs.launch_missile.label>
+  
+  <!-- EN: Somke launcher -->
+  <DMS_Apparel_SomkeLauncher.label>TODO</DMS_Apparel_SomkeLauncher.label>
+  <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
+  <DMS_Apparel_SomkeLauncher.description>TODO</DMS_Apparel_SomkeLauncher.description>
+  <!-- EN: smoke shell -->
+  <DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.chargeNoun>TODO</DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.cooldownGerund>TODO</DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: launch smoke shell -->
+  <DMS_Apparel_SomkeLauncher.verbs.launch_smoke_shell.label>TODO</DMS_Apparel_SomkeLauncher.verbs.launch_smoke_shell.label>
+  
+  <!-- EN: Swarm rocket Pod -->
+  <DMS_Apparel_SwarmMissilePod.label>TODO</DMS_Apparel_SwarmMissilePod.label>
+  <!-- EN: A Rocket pod module that contains multiple high-explosive rocket rounds, can use its high fire rate to cover an large area. -->
+  <DMS_Apparel_SwarmMissilePod.description>TODO</DMS_Apparel_SwarmMissilePod.description>
+  <!-- EN: rocket -->
+  <DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.chargeNoun>TODO</DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.cooldownGerund>TODO</DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: launch rocket -->
+  <DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>TODO</DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>
+  
+  <!-- EN: Missile Pod -->
+  <DMS_Module_MissilePod.label>TODO</DMS_Module_MissilePod.label>
+  <!-- EN: A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use. -->
+  <DMS_Module_MissilePod.description>TODO</DMS_Module_MissilePod.description>
+  
+  <!-- EN: Missile Pod Plus -->
+  <DMS_Module_MissilePodPlus.label>TODO</DMS_Module_MissilePodPlus.label>
+  <!-- EN: A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles. -->
+  <DMS_Module_MissilePodPlus.description>TODO</DMS_Module_MissilePodPlus.description>
+  
+  <!-- EN: Somke launcher -->
+  <DMS_Module_SomkeLauncher.label>TODO</DMS_Module_SomkeLauncher.label>
+  <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
+  <DMS_Module_SomkeLauncher.description>TODO</DMS_Module_SomkeLauncher.description>
+  
+  <!-- EN: Swarm rocket Pod -->
+  <DMS_Module_SwarmMissilePod.label>TODO</DMS_Module_SwarmMissilePod.label>
+  <!-- EN: Rocket pod contains multiple HE rockets, can use its high fire rate to cover an large area. -->
+  <DMS_Module_SwarmMissilePod.description>TODO</DMS_Module_SwarmMissilePod.description>
+  
+</LanguageData>

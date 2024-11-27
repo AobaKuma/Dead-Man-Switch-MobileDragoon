@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Combat Sword -->
+  <DMS_Apparel_CombatSword.label>龍騎兵格鬥劍</DMS_Apparel_CombatSword.label>
+  <!-- EN: A great sword used by dragoon, it is a heavy combat weapon specially designed to fight large creatures and machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications. -->
+  <DMS_Apparel_CombatSword.description>一種由龍騎兵使用的雙手大劍，是專門設計用於與大型生物及機械體戰鬥的重型格鬥武器並兼具了開山刀與破甲錘的功能。 其本身的重量使得即便是用來清掃輕型步兵與防禦工事也有十分不錯的效果。</DMS_Apparel_CombatSword.description>
+  
+  <!-- EN: pile bunker -->
+  <DMS_Apparel_PileBunker.label>氣動樁</DMS_Apparel_PileBunker.label>
+  <!-- EN: An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent. -->
+  <DMS_Apparel_PileBunker.description>一種安裝於龍騎兵機體上的工程模塊，由於其工作效率極高因此也經常被用來拆除建築時使用，讓那些訓練機能在一定程度上能做點別的事情。</DMS_Apparel_PileBunker.description>
+  <!-- EN: tungsteel pile -->
+  <DMS_Apparel_PileBunker.tools.tungsteel_pile.label>鎢鋼樁</DMS_Apparel_PileBunker.tools.tungsteel_pile.label>
+  <!-- EN: mechanical tool -->
+  <DMS_Apparel_PileBunker.tools.mechanical_tool.label>機械工具</DMS_Apparel_PileBunker.tools.mechanical_tool.label>
+  
+  <!-- EN: Dragoon LMG -->
+  <DMS_Apparel_WeaponLmg.label>龍騎兵輕機槍</DMS_Apparel_WeaponLmg.label>
+  <!-- EN: A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities. -->
+  <DMS_Apparel_WeaponLmg.description>相對於龍騎兵大小的輕機槍，但對人類來說基本上就是致命的大口徑機炮，利用大型彈鼓來提供足夠的火力連續性和壓制能力。</DMS_Apparel_WeaponLmg.description>
+  
+  <!-- EN: Combat Sword -->
+  <DMS_Module_CombatSword.label>龍騎兵格鬥劍模塊</DMS_Module_CombatSword.label>
+  <!-- EN: A great sword used by dragoon, it is a heavy combat weapon specially designed to fight large creatures and machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications. -->
+  <DMS_Module_CombatSword.description>一種由龍騎兵使用的雙手大劍，是專門設計用於與大型生物及機械體戰鬥的重型格鬥武器並兼具了開山刀與破甲錘的功能。 其本身的重量使得即便是用來清掃輕型步兵與防禦工事也有十分不錯的效果。</DMS_Module_CombatSword.description>
+  
+  <!-- EN: pile bunker -->
+  <DMS_Module_PileBunker.label>氣動樁模塊</DMS_Module_PileBunker.label>
+  <!-- EN: An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent. -->
+  <DMS_Module_PileBunker.description>一種安裝於龍騎兵機體上的工程模塊，由於其工作效率極高因此也經常被用來拆除建築時使用，讓那些訓練機能在一定程度上能做點別的事情。</DMS_Module_PileBunker.description>
+  
+  <!-- EN: Dragoon LMG -->
+  <DMS_Module_WeaponLmg.label>龍騎兵輕機槍模塊</DMS_Module_WeaponLmg.label>
+  <!-- EN: A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities. -->
+  <DMS_Module_WeaponLmg.description>相對於龍騎兵大小的輕機槍，但對人類來說基本上就是致命的大口徑機炮，利用大型彈鼓來提供足夠的火力連續性和壓制能力。</DMS_Module_WeaponLmg.description>
+  
+</LanguageData>

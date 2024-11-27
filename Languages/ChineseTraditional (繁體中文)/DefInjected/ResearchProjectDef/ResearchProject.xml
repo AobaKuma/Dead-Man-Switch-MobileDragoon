@@ -1,12 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: walker frame -->
-  <WG_HeavyExoskeleton.label>步行框架</WG_HeavyExoskeleton.label>
-  <!-- EN: A primitive and bulky heavy-duty exoskeleton. Although such large wearable exoskeletons have been repeatedly invented since the 22nd century, their design and technical foundations are interoperable.\n\nThe application environment of powered frames in the military is close to small mechas or some genetically modified large humanoid soldiers. Still, its degree of automation is low and requires pilot to use full body control, and relies on a specialized maintenance platform to put on and take off. -->
-  <WG_HeavyExoskeleton.description>一種原始且笨重的大型外骨骼。雖然這種大型穿戴式外骨骼自22世紀以來便不斷的被重複發明，但大體上的設計和技術基礎都能夠互通。 \n\n步行框架在軍隊中的應用環境接近小型機甲或一些基因改造大型人形士兵。但其自動化程度較低，需要駕駛員全身控制並依靠專門的維修平台進行登機與整備。</WG_HeavyExoskeleton.description>
-  <WG_HeavyExoskeleton.generalRules.rulesStrings>
-    
-  </WG_HeavyExoskeleton.generalRules.rulesStrings>
+  <!-- EN: mobile dragoon -->
+  <DMS_MobileDragoon.label>機動龍騎兵</DMS_MobileDragoon.label>
+  <!-- EN: A military-duty exoskeleton technology used by colonial fleets. Due to their active colonization activities in rimworlds, these type of technology is also mastered by most former colonial worlds and some space pirates. Dragoons are generally used for armored reconnaissance missions on urban battlefields with poor road conditions, and having multiple modular mount for various needs. -->
+  <DMS_MobileDragoon.description>殖民艦隊所廣泛使用的重型外骨骼技術。由於他們在邊緣世界的活躍殖民活動因此大多數前殖民世界和一些太空海盜也掌握了此類技術。龍騎兵一般用於在路況較差的城市戰場上執行裝甲偵察或在治安戰任務中提供火力支援，並有多種模組化掛載以滿足執行各類任務的需求。</DMS_MobileDragoon.description>
+  
+  <!-- EN: main battle dragoon -->
+  <DMS_MobileDragoonAdvanced.label>主戰龍騎兵</DMS_MobileDragoonAdvanced.label>
+  <!-- EN: unlocks the production of the PV-8 "Zyklop" Dragoon frame for the Colonial Fleet Mobile Armoured Regiment. -->
+  <DMS_MobileDragoonAdvanced.description>解鎖殖民艦隊機動裝甲團 PV-8 "獨眼巨人"龍騎兵框架的生產技術。</DMS_MobileDragoonAdvanced.description>
+  
+  <!-- EN: Advanced Dragoon Engineering -->
+  <DMS_MobileDragoonElite.label>先進龍騎兵</DMS_MobileDragoonElite.label>
+  <!-- EN: unlocks the production of the F/A-47 "Arsenal Angel" Dragoon frame for the Colonial Fleet Orbital Trooper Regiment. -->
+  <DMS_MobileDragoonElite.description>解鎖殖民艦隊軌道騎兵團 F/A-47 "武庫天使" 龍騎兵框架的生產技術。</DMS_MobileDragoonElite.description>
+  
+  <!-- EN: electronic modules -->
+  <DMS_MobileDragoonModule.label>精密電子模塊</DMS_MobileDragoonModule.label>
+  <!-- EN: unlock the production fo electronic communications/sensing modules for dragoon. -->
+  <DMS_MobileDragoonModule.description>解鎖龍騎兵電子通訊/感測模塊的生產。</DMS_MobileDragoonModule.description>
   
 </LanguageData>

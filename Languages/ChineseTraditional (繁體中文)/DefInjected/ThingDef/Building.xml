@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Catapult -->
+  <MF_Building_EjectorBay.label>彈射器</MF_Building_EjectorBay.label>
+  <!-- EN: A special place for mecha suit storage and maintenance with auxiliary rocket, It can eject mecha suit with manipulator to far-away place. -->
+  <MF_Building_EjectorBay.description>一種用於快速部屬龍騎兵的大型彈射裝置。</MF_Building_EjectorBay.description>
+  
+</LanguageData>

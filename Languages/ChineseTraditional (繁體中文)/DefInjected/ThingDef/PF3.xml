@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: PF-3 "Arbeiter" powered frame -->
+  <DMS_Apparel_PF3_Core.label>TODO</DMS_Apparel_PF3_Core.label>
+  <!-- EN: An exoskeleton frame within 2 meters high, its technology can be traced back to the end of the 22nd century, when mass-production engineering exoskeleton frames were used to construct a space elevator system for the Project Skyway.\n\nAfter the advent of the space age, a large number of engineering frames and production equipment flowed into civilian and armed organizations.\n\nArbeiter has a left arm that can use human tools and a right arm is used to install tool modules and balance the weight, allowing modules to be replaced to meet most of the work missions. -->
+  <DMS_Apparel_PF3_Core.description>TODO</DMS_Apparel_PF3_Core.description>
+  <!-- EN: mechanical fist -->
+  <DMS_Apparel_PF3_Core.tools.mechanical_fist.label>TODO</DMS_Apparel_PF3_Core.tools.mechanical_fist.label>
+  <!-- EN: mechanical leg -->
+  <DMS_Apparel_PF3_Core.tools.mechanical_leg.label>TODO</DMS_Apparel_PF3_Core.tools.mechanical_leg.label>
+  
+  <!-- EN: PF-3 "Arbeiter" powered frame -->
+  <DMS_Module_PF3_Core.label>TODO</DMS_Module_PF3_Core.label>
+  <!-- EN: An exoskeleton frame within 2 meters high, its technology can be traced back to the end of the 22nd century, when mass-production engineering exoskeleton frames were used to construct a space elevator system for the Project Skyway.\n\nAfter the advent of the space age, a large number of engineering frames and production equipment flowed into civilian and armed organizations.\n\nArbeiter has a left arm that can use human tools and a right arm is used to install tool modules and balance the weight, allowing modules to be replaced to meet most of the work missions. -->
+  <DMS_Module_PF3_Core.description>TODO</DMS_Module_PF3_Core.description>
+  
+</LanguageData>

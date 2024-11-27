@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: rocket -->
+  <DMS_Bullet_DragoonRocket.label>火箭彈</DMS_Bullet_DragoonRocket.label>
+  
+  <!-- EN: canister darts -->
+  <DMS_Bullet_DragoonShotgun.label>霰鏢彈</DMS_Bullet_DragoonShotgun.label>
+  
+  <!-- EN: Dragoon LMG -->
+  <DMS_Dragoon_LMG.label>龍騎兵輕機槍</DMS_Dragoon_LMG.label>
+  <!-- EN: A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities. -->
+  <DMS_Dragoon_LMG.description>相對於龍騎兵大小的輕機槍，但對人類來說基本上就是致命的大口徑機炮，利用大型彈鼓來提供足夠的火力連續性和壓制能力。</DMS_Dragoon_LMG.description>
+  <!-- EN: stock -->
+  <DMS_Dragoon_LMG.tools.stock.label>槍托</DMS_Dragoon_LMG.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_Dragoon_LMG.tools.barrel.label>槍管</DMS_Dragoon_LMG.tools.barrel.label>
+  
+  <!-- EN: Dragoon Shotgun -->
+  <DMS_Dragoon_Shotgun.label>龍騎兵霰彈槍</DMS_Dragoon_Shotgun.label>
+  <!-- EN: A heavy-duty semi-automatic shotgun code-named "Dragon", this equipment was designed to provide dragoons with decent firepower in close range without taking up too much weight. it's capable of firing a white phosphorous canister called Dragonbreath to incinerate the enemy. -->
+  <DMS_Dragoon_Shotgun.description>一種代號為「龍」的重型半自動霰彈槍，該裝備旨在為龍騎兵提供近距離格鬥火力，同時又不會佔用太多重量。它能夠發射一種名為「龍息」的霰鏢彈來掃蕩敵人。</DMS_Dragoon_Shotgun.description>
+  <!-- EN: stock -->
+  <DMS_Dragoon_Shotgun.tools.stock.label>槍托</DMS_Dragoon_Shotgun.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_Dragoon_Shotgun.tools.barrel.label>槍管</DMS_Dragoon_Shotgun.tools.barrel.label>
+  
+</LanguageData>

@@ -8,7 +8,7 @@
   
   <!-- EN: GAU19/A Shoulder Mount -->
   <DMS_Apparel_TurretPackGAU.label>GAU19/A Shoulder Mount</DMS_Apparel_TurretPackGAU.label>
-  
+  <!-- EN: A shoulder-mounted remote-controlled machine gun. -->
   <DMS_Apparel_TurretPackGAU.description>A shoulder-mounted remote-controlled machine gun.</DMS_Apparel_TurretPackGAU.description>
   <!-- EN: A multibarrel turret mounted on shoulder. -->
   <DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.description>A multibarrel turret mounted on shoulder.</DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.description>
@@ -19,7 +19,7 @@
   
   <!-- EN: Kord Shoulder Mount -->
   <DMS_Apparel_TurretPackHeavy.label>Kord Shoulder Mount</DMS_Apparel_TurretPackHeavy.label>
-  
+  <!-- EN: A shoulder-mounted remote-controlled machine gun. -->
   <DMS_Apparel_TurretPackHeavy.description>A shoulder-mounted remote-controlled machine gun.</DMS_Apparel_TurretPackHeavy.description>
   <!-- EN: A HMG turret mounted on shoulder. -->
   <DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.description>A HMG turret mounted on shoulder.</DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.description>
@@ -30,7 +30,7 @@
   
   <!-- EN: LMG Shoulder Mount -->
   <DMS_Apparel_TurretPackLight.label>LMG Shoulder Mount</DMS_Apparel_TurretPackLight.label>
-  
+  <!-- EN: A shoulder-mounted remote-controlled machine gun. -->
   <DMS_Apparel_TurretPackLight.description>A shoulder-mounted remote-controlled machine gun.</DMS_Apparel_TurretPackLight.description>
   <!-- EN: A simple automatic gun made to be mounted on a shoulder. -->
   <DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.description>A simple automatic gun made to be mounted on a shoulder.</DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.description>
@@ -46,17 +46,17 @@
   
   <!-- EN: GAU19/A Shoulder Mount -->
   <DMS_Module_TurretPackGAU.label>GAU19/A Shoulder Mount</DMS_Module_TurretPackGAU.label>
-  
+  <!-- EN: A shoulder-mounted remote-controlled machine gun. -->
   <DMS_Module_TurretPackGAU.description>A shoulder-mounted remote-controlled machine gun.</DMS_Module_TurretPackGAU.description>
   
   <!-- EN: Kord Shoulder Mount -->
   <DMS_Module_TurretPackHeavy.label>Kord Shoulder Mount</DMS_Module_TurretPackHeavy.label>
-  
+  <!-- EN: A shoulder-mounted remote-controlled machine gun. -->
   <DMS_Module_TurretPackHeavy.description>A shoulder-mounted remote-controlled machine gun.</DMS_Module_TurretPackHeavy.description>
   
   <!-- EN: LMG Shoulder Mount -->
   <DMS_Module_TurretPackLight.label>LMG Shoulder Mount</DMS_Module_TurretPackLight.label>
-  
+  <!-- EN: A shoulder-mounted remote-controlled machine gun. -->
   <DMS_Module_TurretPackLight.description>A shoulder-mounted remote-controlled machine gun.</DMS_Module_TurretPackLight.description>
   
 </LanguageData>

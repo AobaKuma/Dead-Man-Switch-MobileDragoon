@@ -1,10 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: Dragoon Combat Sword -->
-  <DMS_Dragoon_Sword.label>Dragoon Combat Sword</DMS_Dragoon_Sword.label>
-  <!-- EN: A two-handed great sword used by dragoon, it is specially designed to fight against large creatures and war machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications. -->
-  <DMS_Dragoon_Sword.description>A two-handed great sword used by dragoon, it is specially designed to fight against large creatures and war machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications.</DMS_Dragoon_Sword.description>
+  <!-- EN: Dragoon Tomahawk -->
+  <DMS_Dragoon_Axe.label>Dragoon Tomahawk</DMS_Dragoon_Axe.label>
+  <!-- EN: A lightweight one-handed axe used by Dragoons, designed for close combat between other exosuits or clearing passages in tight environments. Unlike Claymore, Dragoons doesn't require additional modules to hold a Tomahawk. Therefore it can be carried as a sidearm. -->
+  <DMS_Dragoon_Axe.description>A lightweight one-handed axe used by Dragoons, designed for close combat between other exosuits or clearing passages in tight environments. Unlike Claymore, Dragoons doesn't require additional modules to hold a Tomahawk. Therefore it can be carried as a sidearm.</DMS_Dragoon_Axe.description>
+  <!-- EN: poke -->
+  <DMS_Dragoon_Axe.tools.poke.label>poke</DMS_Dragoon_Axe.tools.poke.label>
+  <!-- EN: sweep -->
+  <DMS_Dragoon_Axe.tools.sweep.label>sweep</DMS_Dragoon_Axe.tools.sweep.label>
+  <!-- EN: stock -->
+  <DMS_Dragoon_Axe.tools.stock.label>stock</DMS_Dragoon_Axe.tools.stock.label>
+  
+  <!-- EN: Dragoon Claymore -->
+  <DMS_Dragoon_Sword.label>Dragoon Claymore</DMS_Dragoon_Sword.label>
+  <!-- EN: A two-handed great sword used by Dragoons, it is specially designed to fight against large creatures and war machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications. -->
+  <DMS_Dragoon_Sword.description>A two-handed great sword used by Dragoons, it is specially designed to fight against large creatures and war machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications.</DMS_Dragoon_Sword.description>
   <!-- EN: poke -->
   <DMS_Dragoon_Sword.tools.poke.label>poke</DMS_Dragoon_Sword.tools.poke.label>
   <!-- EN: sweep -->

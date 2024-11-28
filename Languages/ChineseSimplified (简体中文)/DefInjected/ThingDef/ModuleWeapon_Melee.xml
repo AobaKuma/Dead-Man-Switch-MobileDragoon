@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+
+    <!-- EN: Dragoon Tomahawk -->
+  <DMS_Dragoon_Axe.label>龙骑兵战斧</DMS_Dragoon_Axe.label>
+  <!-- EN: A lightweight one-handed axe used by Dragoons, designed for close combat between other exosuits or clearing passages in tight environments. Unlike Claymore, Dragoons doesn't require additional modules to hold a Tomahawk. Therefore it can be carried as a sidearm. -->
+  <DMS_Dragoon_Axe.description>一种龙骑兵所使用的轻型手斧，被设计用于机甲间的近距离格斗以及在狭窄的环境中清出通道。不同于纯粹用于战斗的大剑，格斗斧并不需要加装额外的动力骨骼来握持。因此它可以被作为副武器携带。</DMS_Dragoon_Axe.description>
+  <!-- EN: poke -->
+  <DMS_Dragoon_Axe.tools.poke.label>斧尖</DMS_Dragoon_Axe.tools.poke.label>
+  <!-- EN: sweep -->
+  <DMS_Dragoon_Axe.tools.sweep.label>斧柄</DMS_Dragoon_Axe.tools.sweep.label>
+  <!-- EN: stock -->
+  <DMS_Dragoon_Axe.tools.stock.label>斧柄</DMS_Dragoon_Axe.tools.stock.label>
   
-  <!-- EN: Dragoon Combat Sword -->
-  <DMS_Dragoon_Sword.label>龙骑兵格斗剑</DMS_Dragoon_Sword.label>
-  <!-- EN: A two-handed great sword used by dragoon, it is specially designed to fight against large creatures and war machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications. -->
-  <DMS_Dragoon_Sword.description>一种由龙骑兵使用的双手大剑，是专门设计用於与大型生物及机械体战斗的重型格斗武器并兼具了开山刀与破甲锤的功能。 其本身的重量使得即便是用来清扫轻型步兵与防御工事也有十分不错的效果。</DMS_Dragoon_Sword.description>
+  <!-- EN: Dragoon Claymore -->
+  <DMS_Dragoon_Sword.label>龙骑兵大剑</DMS_Dragoon_Sword.label>
+  <!-- EN: A two-handed great sword used by Dragoons, it is specially designed to fight against large creatures and war machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications. -->
+  <DMS_Dragoon_Sword.description>一种由龙骑兵使用的双手大剑，是专门设计用于与大型生物及机械体战斗的重型格斗武器并兼具了开山刀与破甲锤的功能。 其本身的重量使得即便是用来清扫轻型步兵与防御工事也有十分不错的效果。</DMS_Dragoon_Sword.description>
   <!-- EN: poke -->
   <DMS_Dragoon_Sword.tools.poke.label>剑尖</DMS_Dragoon_Sword.tools.poke.label>
   <!-- EN: sweep -->

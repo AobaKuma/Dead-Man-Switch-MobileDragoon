@@ -321,6 +321,7 @@
     <label>infrared sensor</label>
     <description>An additional external optical sensor provides some night operation capabilities without modifying the frame itself, and provides aiming assistance.</description>
     <graphicData>
+      <shaderType>CutoutComplex</shaderType>
       <texPath>Things/Dragoon/InfraredSensor/apparel_south</texPath>
     </graphicData>    
     <descriptionHyperlinks>
@@ -410,6 +411,7 @@
     <label>payload cabinet</label>
     <description>An attached metal rack capable of storing payloads on a walker frame.</description>
     <graphicData>
+      <shaderType>CutoutComplex</shaderType>
       <texPath>Things/Dragoon/CargoBox/apparel_south</texPath>
     </graphicData>
     <tickerType>Normal</tickerType>

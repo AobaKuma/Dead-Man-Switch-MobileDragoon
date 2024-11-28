@@ -15,6 +15,8 @@
   <DMS_Dragoon_LMG.tools.stock.label>槍托</DMS_Dragoon_LMG.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_Dragoon_LMG.tools.barrel.label>槍管</DMS_Dragoon_LMG.tools.barrel.label>
+  <!-- EN: Dragoon LMG -->
+  <DMS_Dragoon_LMG.verbs.Verb_Shoot.label>龍騎兵輕機槍</DMS_Dragoon_LMG.verbs.Verb_Shoot.label>
   
   <!-- EN: Dragoon Shotgun -->
   <DMS_Dragoon_Shotgun.label>龍騎兵霰彈槍</DMS_Dragoon_Shotgun.label>
@@ -24,5 +26,7 @@
   <DMS_Dragoon_Shotgun.tools.stock.label>槍托</DMS_Dragoon_Shotgun.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_Dragoon_Shotgun.tools.barrel.label>槍管</DMS_Dragoon_Shotgun.tools.barrel.label>
+  <!-- EN: Dragoon Shotgun -->
+  <DMS_Dragoon_Shotgun.verbs.Verb_Shoot.label>龍騎兵霰彈槍</DMS_Dragoon_Shotgun.verbs.Verb_Shoot.label>
   
 </LanguageData>

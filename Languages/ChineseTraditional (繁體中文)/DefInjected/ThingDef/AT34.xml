@@ -5,20 +5,24 @@
   <DMS_Apparel_AT34_Core.label>AT34 "耶塔" 核心</DMS_Apparel_AT34_Core.label>
   <!-- EN: A power armor frame that was exported to the entire rimworld as a training and civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become the largest individual equipment that can be used by local armed forces in the rimworld except armored vehicles. However, providing adequate maintenance and parts for this equipment without proper industrialization would have become extremely difficult without trade with the colonial fleet. -->
   <DMS_Apparel_AT34_Core.description>以用於訓練和民用目的出口到邊緣世界的重型動力框架。然而與它名義上的用途不同的是，耶塔在某種程度上已經成為了邊緣世界當地武裝除了裝甲車之外可以使用的最大單兵裝備。然而在沒有適當工業化的情況下為這型裝備提供足夠的維護和零件是極其困難的。</DMS_Apparel_AT34_Core.description>
+  <!-- EN: mechanical fist -->
+  <DMS_Apparel_AT34_Core.tools.mechanical_fist.label>機械拳</DMS_Apparel_AT34_Core.tools.mechanical_fist.label>
+  <!-- EN: mechanical leg -->
+  <DMS_Apparel_AT34_Core.tools.mechanical_leg.label>機械腿</DMS_Apparel_AT34_Core.tools.mechanical_leg.label>
   
   <!-- EN: AT-34 "Yetta" helmet -->
   <DMS_Apparel_AT34_Helmet.label>AT34 "耶塔" 頭部</DMS_Apparel_AT34_Helmet.label>
   <!-- EN: An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD. -->
-  <DMS_Apparel_AT34_Helmet.description>一種安裝在龍騎兵頭部的簡易集成光學傳感器，旨在透過預先編程的雷達追蹤系統和 HUD 來提高框架的工作性能。</DMS_Apparel_AT34_Helmet.description>
+  <DMS_Apparel_AT34_Helmet.description>一種安裝在龍騎兵頭部的簡易集成光學感測器，旨在透過預先編程的雷達追蹤系統和 HUD 來提高框架的工作性能。</DMS_Apparel_AT34_Helmet.description>
   
   <!-- EN: AT-34 "Yetta" core module -->
-  <DMS_Module_AT34_Core.label>AT34 "耶塔" 核心模塊</DMS_Module_AT34_Core.label>
+  <DMS_Module_AT34_Core.label>AT34 "耶塔" 核心模組</DMS_Module_AT34_Core.label>
   <!-- EN: A power armor frame that was exported to the entire rimworld as a training and civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become the largest individual equipment that can be used by local armed forces in the rimworld except armored vehicles. However, providing adequate maintenance and parts for this equipment without proper industrialization would have become extremely difficult without trade with the colonial fleet. -->
   <DMS_Module_AT34_Core.description>以用於訓練和民用目的出口到邊緣世界的重型動力框架。然而與它名義上的用途不同的是，耶塔在某種程度上已經成為了邊緣世界當地武裝除了裝甲車之外可以使用的最大單兵裝備。然而在沒有適當工業化的情況下為這型裝備提供足夠的維護和零件是極其困難的。</DMS_Module_AT34_Core.description>
   
   <!-- EN: AT-34 "Yetta" helmet -->
-  <DMS_Module_AT34_Helmet.label>AT34 "耶塔" 頭部模塊</DMS_Module_AT34_Helmet.label>
+  <DMS_Module_AT34_Helmet.label>AT34 "耶塔" 頭部模組</DMS_Module_AT34_Helmet.label>
   <!-- EN: An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD. -->
-  <DMS_Module_AT34_Helmet.description>一種安裝在龍騎兵頭部的簡易集成光學傳感器，旨在透過預先編程的雷達追蹤系統和 HUD 來提高框架的工作性能。</DMS_Module_AT34_Helmet.description>
+  <DMS_Module_AT34_Helmet.description>一種安裝在龍騎兵頭部的簡易集成光學感測器，旨在透過預先編程的雷達追蹤系統和 HUD 來提高框架的工作性能。</DMS_Module_AT34_Helmet.description>
   
 </LanguageData>

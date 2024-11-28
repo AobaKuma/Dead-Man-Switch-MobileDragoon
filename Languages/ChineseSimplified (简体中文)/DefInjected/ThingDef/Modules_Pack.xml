@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: burst thruster -->
+  <DMS_Apparel_JumpThruster.label>脉冲推进器</DMS_Apparel_JumpThruster.label>
+  <!-- EN: A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult. -->
+  <DMS_Apparel_JumpThruster.description>由4台喷气发动机驱动的重型推进器。它允许龙骑兵进行短距离飞行，并且可以在弹射器的协助下进行较长距离的空中突击。</DMS_Apparel_JumpThruster.description>
+  <!-- EN: jump -->
+  <DMS_Apparel_JumpThruster.comps.CompApparelReloadable.chargeNoun>跳跃</DMS_Apparel_JumpThruster.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_JumpThruster.comps.CompApparelReloadable.cooldownGerund>冷却中</DMS_Apparel_JumpThruster.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: jump -->
+  <DMS_Apparel_JumpThruster.verbs.jump.label>跳跃</DMS_Apparel_JumpThruster.verbs.jump.label>
+  
+  <!-- EN: Cargo pack -->
+  <DMS_Apparel_PackCargo.label>货运组件</DMS_Apparel_PackCargo.label>
+  <!-- EN: A pack module with cargo spaces and additional drive unit, let the frame to carry more payloads. -->
+  <DMS_Apparel_PackCargo.description>带有货物空间和额外驱动单元的包装模组，使框架能够承载更多的有效载荷。</DMS_Apparel_PackCargo.description>
+  
+  <!-- EN: relay pack -->
+  <DMS_Apparel_PackControlRelay.label>中继背包</DMS_Apparel_PackControlRelay.label>
+  <!-- EN: A heavy-duty backpack designed to assist the mechanitor pilot in mech control can increase bandwidth for the mechanitor through effective coordination. -->
+  <DMS_Apparel_PackControlRelay.description>设计用於协助机械师驾驶员控制机械装置的重型背包可以透过有效的调率来增加机械师的频宽。</DMS_Apparel_PackControlRelay.description>
+  
+  <!-- EN: engineering pack -->
+  <DMS_Apparel_PackEngineering.label>工程背包</DMS_Apparel_PackEngineering.label>
+  <!-- EN: The module which mounted on the Back of the frame. Having a pair of robotic arms to perform logistical work such as construction, maintenance, transportation, and processing. -->
+  <DMS_Apparel_PackEngineering.description>安装在框架背面的模组。有一对机械臂来执行建筑、维护、运输和加工等後勤工作。</DMS_Apparel_PackEngineering.description>
+  
+  <!-- EN: hydraulic frame pack -->
+  <DMS_Apparel_PackFrame.label>液压框架</DMS_Apparel_PackFrame.label>
+  <!-- EN: An exoskeleton system for the frame that allows the use of heavier heavy equipment without changing the design itself. -->
+  <DMS_Apparel_PackFrame.description>一种用於框架的外骨骼系统，允许在不改变设计本身的情况下使用较重的重型设备。</DMS_Apparel_PackFrame.description>
+  
+  <!-- EN: burst thruster -->
+  <DMS_Module_JumpThruster.label>脉冲推进器模组</DMS_Module_JumpThruster.label>
+  <!-- EN: A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult. -->
+  <DMS_Module_JumpThruster.description>由4台喷气发动机驱动的重型推进器。它允许龙骑兵进行短距离飞行，并且可以在弹射器的协助下进行较长距离的空中突击。</DMS_Module_JumpThruster.description>
+  
+  <!-- EN: Cargo pack -->
+  <DMS_Module_PackCargo.label>货运背包模组</DMS_Module_PackCargo.label>
+  <!-- EN: A pack module with cargo spaces and additional drive unit, let the frame to carry more payloads. -->
+  <DMS_Module_PackCargo.description>带有货物空间和额外驱动单元的包装模组，使框架能够承载更多的有效载荷。</DMS_Module_PackCargo.description>
+  
+  <!-- EN: relay pack -->
+  <DMS_Module_PackControlRelay.label>中继背包模组</DMS_Module_PackControlRelay.label>
+  <!-- EN: A heavy-duty backpack designed to assist mechanitor pilot in mech control. can increase bandwidth through its coordination. -->
+  <DMS_Module_PackControlRelay.description>设计用於协助机械师驾驶员控制机械装置的重型背包可以透过有效的调率来增加机械师的频宽。</DMS_Module_PackControlRelay.description>
+  
+  <!-- EN: engineering pack -->
+  <DMS_Module_PackEngineering.label>工程背包模组</DMS_Module_PackEngineering.label>
+  <!-- EN: The module which mounted on the Back of the frame. Having a pair of robotic arms to perform logistical work such as construction, maintenance, transportation, and processing. -->
+  <DMS_Module_PackEngineering.description>安装在框架背面的模组。有一对机械臂来执行建筑、维护、运输和加工等後勤工作。</DMS_Module_PackEngineering.description>
+  
+  <!-- EN: hydraulic frame pack -->
+  <DMS_Module_PackFrame.label>液压框架模组</DMS_Module_PackFrame.label>
+  <!-- EN: An exoskeleton system for the frame that allows the use of heavier heavy equipment without changing the design itself. -->
+  <DMS_Module_PackFrame.description>一种用於框架的外骨骼系统，允许在不改变框架本身设计的情况下使用较重的重型设备。</DMS_Module_PackFrame.description>
+  
+</LanguageData>

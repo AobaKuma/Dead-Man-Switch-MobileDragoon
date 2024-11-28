@@ -2,17 +2,17 @@
 <LanguageData>
   
   <!-- EN: PF-3 "Arbeiter" powered frame -->
-  <DMS_Apparel_PF3_Core.label>TODO</DMS_Apparel_PF3_Core.label>
+  <DMS_Apparel_PF3_Core.label>PF-3 "勞動者" 動力框架核心</DMS_Apparel_PF3_Core.label>
   <!-- EN: An exoskeleton frame within 2 meters high, its technology can be traced back to the end of the 22nd century, when mass-production engineering exoskeleton frames were used to construct a space elevator system for the Project Skyway.\n\nAfter the advent of the space age, a large number of engineering frames and production equipment flowed into civilian and armed organizations.\n\nArbeiter has a left arm that can use human tools and a right arm is used to install tool modules and balance the weight, allowing modules to be replaced to meet most of the work missions. -->
-  <DMS_Apparel_PF3_Core.description>TODO</DMS_Apparel_PF3_Core.description>
+  <DMS_Apparel_PF3_Core.description>直立高度在2~3公尺左右的外骨骼框架。其技術可以追溯到22世紀末，當時量產的工程外骨骼框架被用於在天路計劃中建設太空電梯設施。\n\n在隨後的太空殖民時代，大量的生產與維護設備流入民間與非法武裝組織。 \n\nPF-3能夠靈活替換模組以滿足大部分工作任務，左臂可以使用人類工具，右臂用於安裝輔助模組並平衡重量。</DMS_Apparel_PF3_Core.description>
   <!-- EN: mechanical fist -->
-  <DMS_Apparel_PF3_Core.tools.mechanical_fist.label>TODO</DMS_Apparel_PF3_Core.tools.mechanical_fist.label>
+  <DMS_Apparel_PF3_Core.tools.mechanical_fist.label>機械拳</DMS_Apparel_PF3_Core.tools.mechanical_fist.label>
   <!-- EN: mechanical leg -->
-  <DMS_Apparel_PF3_Core.tools.mechanical_leg.label>TODO</DMS_Apparel_PF3_Core.tools.mechanical_leg.label>
+  <DMS_Apparel_PF3_Core.tools.mechanical_leg.label>機械腿</DMS_Apparel_PF3_Core.tools.mechanical_leg.label>
   
   <!-- EN: PF-3 "Arbeiter" powered frame -->
-  <DMS_Module_PF3_Core.label>TODO</DMS_Module_PF3_Core.label>
+  <DMS_Module_PF3_Core.label>PF-3 "勞動者" 動力框架核心模組</DMS_Module_PF3_Core.label>
   <!-- EN: An exoskeleton frame within 2 meters high, its technology can be traced back to the end of the 22nd century, when mass-production engineering exoskeleton frames were used to construct a space elevator system for the Project Skyway.\n\nAfter the advent of the space age, a large number of engineering frames and production equipment flowed into civilian and armed organizations.\n\nArbeiter has a left arm that can use human tools and a right arm is used to install tool modules and balance the weight, allowing modules to be replaced to meet most of the work missions. -->
-  <DMS_Module_PF3_Core.description>TODO</DMS_Module_PF3_Core.description>
+  <DMS_Module_PF3_Core.description>直立高度在2~3公尺左右的外骨骼框架。其技術可以追溯到22世紀末，當時量產的工程外骨骼框架被用於在天路計劃中建設太空電梯設施。\n\n在隨後的太空殖民時代，大量的生產與維護設備流入民間與非法武裝組織。 \n\nPF-3能夠靈活替換模組以滿足大部分工作任務，左臂可以使用人類工具，右臂用於安裝輔助模組並平衡重量。</DMS_Module_PF3_Core.description>
   
 </LanguageData>

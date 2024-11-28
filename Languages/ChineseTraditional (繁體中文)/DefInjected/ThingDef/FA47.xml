@@ -5,20 +5,24 @@
   <DMS_Apparel_FA47_Core.label>F/A-47 "武庫天使" 核心</DMS_Apparel_FA47_Core.label>
   <!-- EN: A Dragoon with outer space combat capabilities, used by the Colonial Fleet Orbital Cavalry. Its fully enclosed shell is made of plasteel. can carry a propulsion system capable of short-distance suborbital flights on the planet's surface. -->
   <DMS_Apparel_FA47_Core.description>由殖民艦隊軌道騎兵使用的龍騎兵系統，由全封閉的塑鋼外殼製成使其具有在外太空作戰的能力。可以裝備在行星表面進行短距離亞軌道飛行的推進系統。</DMS_Apparel_FA47_Core.description>
+  <!-- EN: mechanical fist -->
+  <DMS_Apparel_FA47_Core.tools.mechanical_fist.label>機械拳</DMS_Apparel_FA47_Core.tools.mechanical_fist.label>
+  <!-- EN: mechanical leg -->
+  <DMS_Apparel_FA47_Core.tools.mechanical_leg.label>機械腿</DMS_Apparel_FA47_Core.tools.mechanical_leg.label>
   
   <!-- EN: F/A-47 "Arsenal Angel" helmet -->
   <DMS_Apparel_FA47_Helmet.label>F/A-47 "武庫天使" 頭部</DMS_Apparel_FA47_Helmet.label>
   <!-- EN: A complex synthetic caliber sensor module used by colonial fleets on dragoons used in space operations, It can effectively track high-speed moving enemies and assist pilot in aiming. -->
-  <DMS_Apparel_FA47_Helmet.description>由殖民艦隊裝備並使用的合成口徑感測器模塊。它可以有效追蹤高速移動的敵人並協助飛行員瞄準。</DMS_Apparel_FA47_Helmet.description>
+  <DMS_Apparel_FA47_Helmet.description>由殖民艦隊裝備並使用的合成口徑感測器模組。它可以有效追蹤高速移動的敵人並協助飛行員瞄準。</DMS_Apparel_FA47_Helmet.description>
   
   <!-- EN: F/A-47 "Arsenal Angel" core module -->
-  <DMS_Module_FA47_Core.label>F/A-47 "武庫天使" 核心模塊</DMS_Module_FA47_Core.label>
+  <DMS_Module_FA47_Core.label>F/A-47 "武庫天使" 核心模組</DMS_Module_FA47_Core.label>
   <!-- EN: A Dragoon with outer space combat capabilities, used by the Colonial Fleet Orbital Cavalry. Its fully enclosed shell is made of plasteel. can carry a propulsion system capable of short-distance suborbital flights on the planet's surface. -->
   <DMS_Module_FA47_Core.description>由殖民艦隊軌道騎兵使用的龍騎兵系統，由全封閉的塑鋼外殼製成使其具有在外太空作戰的能力。可以裝備在行星表面進行短距離亞軌道飛行的推進系統。</DMS_Module_FA47_Core.description>
   
   <!-- EN: F/A-47 "Arsenal Angel" helmet -->
-  <DMS_Module_FA47_Helmet.label>F/A-47 "武庫天使" 頭部模塊</DMS_Module_FA47_Helmet.label>
+  <DMS_Module_FA47_Helmet.label>F/A-47 "武庫天使" 頭部模組</DMS_Module_FA47_Helmet.label>
   <!-- EN: A complex synthetic caliber sensor module used by colonial fleets on dragoons used in space operations, It can effectively track high-speed moving enemies and assist pilot in aiming. -->
-  <DMS_Module_FA47_Helmet.description>由殖民艦隊裝備並使用的合成口徑感測器模塊。它可以有效追蹤高速移動的敵人並協助飛行員瞄準。</DMS_Module_FA47_Helmet.description>
+  <DMS_Module_FA47_Helmet.description>由殖民艦隊裝備並使用的合成口徑感測器模組。它可以有效追蹤高速移動的敵人並協助飛行員瞄準。</DMS_Module_FA47_Helmet.description>
   
 </LanguageData>

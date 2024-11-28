@@ -437,6 +437,7 @@
     <weaponTags>
       <li>GunHeavy</li>
       <li>Minigun</li>
+      <li>Dragoon_Melee</li>
     </weaponTags>
     <weaponMoney>1500~3000</weaponMoney>
     <techHediffsChance>0.04</techHediffsChance>
@@ -495,9 +496,6 @@
               <only>(104, 120, 119)</only> <!-- drab dark blue -->
             </li>
             <li>
-              <only>(119, 145, 121)</only> <!-- drab light green -->
-            </li>
-            <li>
               <only>(106, 120, 104)</only> <!-- drab dark green -->
             </li>
             <li>
@@ -538,6 +536,7 @@
     <weaponTags>
       <li>GunHeavy</li>
       <li>Minigun</li>
+      <li>Dragoon_Melee</li>
     </weaponTags>
     <weaponMoney>1500~3000</weaponMoney>
     <techHediffsChance>0.04</techHediffsChance>

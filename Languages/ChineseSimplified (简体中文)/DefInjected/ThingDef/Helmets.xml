@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: "Groyne" helmet -->
+  <DMS_Apparel_Groyne_Helmet.label>"防波堤" 头部</DMS_Apparel_Groyne_Helmet.label>
+  <!-- EN: An armored cover that provides driver protection without adequate optical manufacturing processes. It is bulky but does provide some durability. -->
+  <DMS_Apparel_Groyne_Helmet.description>无需任何先进技术即可提供防护的重型装甲罩。体积庞大且笨重但十分耐用。</DMS_Apparel_Groyne_Helmet.description>
+  
+  <!-- EN: "Stahlhelm" helmet -->
+  <DMS_Apparel_Stahlhelm_Helmet.label>"钢盔" 头部</DMS_Apparel_Stahlhelm_Helmet.label>
+  <!-- EN: a civil frame module used for welding. But In fact, large quantities of them were flowing into the arms market and underwent certain bulletproof modifications. -->
+  <DMS_Apparel_Stahlhelm_Helmet.description>一种原先用於焊接作业的防护面罩。但事实上这类模块大量流入了地下军火市场并在海盗手上进行了一定的防弹改装。</DMS_Apparel_Stahlhelm_Helmet.description>
+  
+  <!-- EN: "Groyne" helmet -->
+  <DMS_Module_Groyne_Helmet.label>"防波堤" 头部模块</DMS_Module_Groyne_Helmet.label>
+  <!-- EN: An armored cover that provides driver protection without adequate optical manufacturing processes. It is bulky but does provide some durability. -->
+  <DMS_Module_Groyne_Helmet.description>无需任何先进技术即可提供防护的重型装甲罩。体积庞大且笨重但十分耐用。</DMS_Module_Groyne_Helmet.description>
+  
+  <!-- EN: "Stahlhelm" helmet -->
+  <DMS_Module_Stahlhelm_Helmet.label>"钢盔" 头部模块</DMS_Module_Stahlhelm_Helmet.label>
+  <!-- EN: a civil frame module used for welding. But In fact, large quantities of them were flowing into the arms market and underwent certain bulletproof modifications. -->
+  <DMS_Module_Stahlhelm_Helmet.description>一种原先用於焊接作业的防护面罩。但事实上这类模块大量流入了地下军火市场并在海盗手上进行了一定的防弹改装。</DMS_Module_Stahlhelm_Helmet.description>
+  
+</LanguageData>

@@ -2,59 +2,59 @@
 <LanguageData>
   
   <!-- EN: burst thruster -->
-  <DMS_Apparel_JumpThruster.label>TODO</DMS_Apparel_JumpThruster.label>
+  <DMS_Apparel_JumpThruster.label>脈衝推進器</DMS_Apparel_JumpThruster.label>
   <!-- EN: A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult. -->
-  <DMS_Apparel_JumpThruster.description>TODO</DMS_Apparel_JumpThruster.description>
+  <DMS_Apparel_JumpThruster.description>由4台噴氣發動機驅動的重型推進器。它允許龍騎兵進行短距離飛行，並且可以在彈射器的協助下進行較長距離的空中突擊。</DMS_Apparel_JumpThruster.description>
   <!-- EN: jump -->
-  <DMS_Apparel_JumpThruster.comps.CompApparelReloadable.chargeNoun>TODO</DMS_Apparel_JumpThruster.comps.CompApparelReloadable.chargeNoun>
+  <DMS_Apparel_JumpThruster.comps.CompApparelReloadable.chargeNoun>跳躍</DMS_Apparel_JumpThruster.comps.CompApparelReloadable.chargeNoun>
   <!-- EN: on cooldown -->
-  <DMS_Apparel_JumpThruster.comps.CompApparelReloadable.cooldownGerund>TODO</DMS_Apparel_JumpThruster.comps.CompApparelReloadable.cooldownGerund>
+  <DMS_Apparel_JumpThruster.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMS_Apparel_JumpThruster.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: jump -->
-  <DMS_Apparel_JumpThruster.verbs.jump.label>TODO</DMS_Apparel_JumpThruster.verbs.jump.label>
+  <DMS_Apparel_JumpThruster.verbs.jump.label>跳躍</DMS_Apparel_JumpThruster.verbs.jump.label>
   
   <!-- EN: Cargo pack -->
-  <DMS_Apparel_PackCargo.label>TODO</DMS_Apparel_PackCargo.label>
+  <DMS_Apparel_PackCargo.label>貨運組件</DMS_Apparel_PackCargo.label>
   <!-- EN: A pack module with cargo spaces and additional drive unit, let the frame to carry more payloads. -->
-  <DMS_Apparel_PackCargo.description>TODO</DMS_Apparel_PackCargo.description>
+  <DMS_Apparel_PackCargo.description>帶有貨物空間和額外驅動單元的包裝模組，使框架能夠承載更多的有效載荷。</DMS_Apparel_PackCargo.description>
   
   <!-- EN: relay pack -->
-  <DMS_Apparel_PackControlRelay.label>TODO</DMS_Apparel_PackControlRelay.label>
+  <DMS_Apparel_PackControlRelay.label>中繼背包</DMS_Apparel_PackControlRelay.label>
   <!-- EN: A heavy-duty backpack designed to assist the mechanitor pilot in mech control can increase bandwidth for the mechanitor through effective coordination. -->
-  <DMS_Apparel_PackControlRelay.description>TODO</DMS_Apparel_PackControlRelay.description>
+  <DMS_Apparel_PackControlRelay.description>設計用於協助機械師駕駛員控制機械裝置的重型背包可以透過有效的調率來增加機械師的頻寬。</DMS_Apparel_PackControlRelay.description>
   
   <!-- EN: engineering pack -->
-  <DMS_Apparel_PackEngineering.label>TODO</DMS_Apparel_PackEngineering.label>
+  <DMS_Apparel_PackEngineering.label>工程背包</DMS_Apparel_PackEngineering.label>
   <!-- EN: The module which mounted on the Back of the frame. Having a pair of robotic arms to perform logistical work such as construction, maintenance, transportation, and processing. -->
-  <DMS_Apparel_PackEngineering.description>TODO</DMS_Apparel_PackEngineering.description>
+  <DMS_Apparel_PackEngineering.description>安裝在框架背面的模組。有一對機械臂來執行建築、維護、運輸和加工等後勤工作。</DMS_Apparel_PackEngineering.description>
   
   <!-- EN: hydraulic frame pack -->
-  <DMS_Apparel_PackFrame.label>TODO</DMS_Apparel_PackFrame.label>
+  <DMS_Apparel_PackFrame.label>液壓框架</DMS_Apparel_PackFrame.label>
   <!-- EN: An exoskeleton system for the frame that allows the use of heavier heavy equipment without changing the design itself. -->
-  <DMS_Apparel_PackFrame.description>TODO</DMS_Apparel_PackFrame.description>
+  <DMS_Apparel_PackFrame.description>一種用於框架的外骨骼系統，允許在不改變設計本身的情況下使用較重的重型設備。</DMS_Apparel_PackFrame.description>
   
   <!-- EN: burst thruster -->
-  <DMS_Module_JumpThruster.label>TODO</DMS_Module_JumpThruster.label>
+  <DMS_Module_JumpThruster.label>脈衝推進器模組</DMS_Module_JumpThruster.label>
   <!-- EN: A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult. -->
-  <DMS_Module_JumpThruster.description>TODO</DMS_Module_JumpThruster.description>
+  <DMS_Module_JumpThruster.description>由4台噴氣發動機驅動的重型推進器。它允許龍騎兵進行短距離飛行，並且可以在彈射器的協助下進行較長距離的空中突擊。</DMS_Module_JumpThruster.description>
   
   <!-- EN: Cargo pack -->
-  <DMS_Module_PackCargo.label>TODO</DMS_Module_PackCargo.label>
+  <DMS_Module_PackCargo.label>貨運背包模組</DMS_Module_PackCargo.label>
   <!-- EN: A pack module with cargo spaces and additional drive unit, let the frame to carry more payloads. -->
-  <DMS_Module_PackCargo.description>TODO</DMS_Module_PackCargo.description>
+  <DMS_Module_PackCargo.description>帶有貨物空間和額外驅動單元的包裝模組，使框架能夠承載更多的有效載荷。</DMS_Module_PackCargo.description>
   
   <!-- EN: relay pack -->
-  <DMS_Module_PackControlRelay.label>TODO</DMS_Module_PackControlRelay.label>
+  <DMS_Module_PackControlRelay.label>中繼背包模組</DMS_Module_PackControlRelay.label>
   <!-- EN: A heavy-duty backpack designed to assist mechanitor pilot in mech control. can increase bandwidth through its coordination. -->
-  <DMS_Module_PackControlRelay.description>TODO</DMS_Module_PackControlRelay.description>
+  <DMS_Module_PackControlRelay.description>設計用於協助機械師駕駛員控制機械裝置的重型背包可以透過有效的調率來增加機械師的頻寬。</DMS_Module_PackControlRelay.description>
   
   <!-- EN: engineering pack -->
-  <DMS_Module_PackEngineering.label>TODO</DMS_Module_PackEngineering.label>
+  <DMS_Module_PackEngineering.label>工程背包模組</DMS_Module_PackEngineering.label>
   <!-- EN: The module which mounted on the Back of the frame. Having a pair of robotic arms to perform logistical work such as construction, maintenance, transportation, and processing. -->
-  <DMS_Module_PackEngineering.description>TODO</DMS_Module_PackEngineering.description>
+  <DMS_Module_PackEngineering.description>安裝在框架背面的模組。有一對機械臂來執行建築、維護、運輸和加工等後勤工作。</DMS_Module_PackEngineering.description>
   
   <!-- EN: hydraulic frame pack -->
-  <DMS_Module_PackFrame.label>TODO</DMS_Module_PackFrame.label>
+  <DMS_Module_PackFrame.label>液壓框架模組</DMS_Module_PackFrame.label>
   <!-- EN: An exoskeleton system for the frame that allows the use of heavier heavy equipment without changing the design itself. -->
-  <DMS_Module_PackFrame.description>TODO</DMS_Module_PackFrame.description>
+  <DMS_Module_PackFrame.description>一種用於框架的外骨骼系統，允許在不改變框架本身設計的情況下使用較重的重型設備。</DMS_Module_PackFrame.description>
   
 </LanguageData>

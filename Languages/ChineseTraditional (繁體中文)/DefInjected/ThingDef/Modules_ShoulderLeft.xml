@@ -2,67 +2,67 @@
 <LanguageData>
   
   <!-- EN: Demolish Missile Pod -->
-  <DMS_Apparel_MissilePod.label>TODO</DMS_Apparel_MissilePod.label>
+  <DMS_Apparel_MissilePod.label>拆除者導彈艙</DMS_Apparel_MissilePod.label>
   <!-- EN: A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use. -->
-  <DMS_Apparel_MissilePod.description>TODO</DMS_Apparel_MissilePod.description>
+  <DMS_Apparel_MissilePod.description>一種導彈吊艙模組，附加在各種武器平台上，能夠裝載和發射四枚紅外制導導彈用於反防禦工事。</DMS_Apparel_MissilePod.description>
   <!-- EN: missile -->
-  <DMS_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>TODO</DMS_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>
+  <DMS_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>導彈</DMS_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>
   <!-- EN: on cooldown -->
-  <DMS_Apparel_MissilePod.comps.CompApparelReloadable.cooldownGerund>TODO</DMS_Apparel_MissilePod.comps.CompApparelReloadable.cooldownGerund>
+  <DMS_Apparel_MissilePod.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMS_Apparel_MissilePod.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: launch missile -->
-  <DMS_Apparel_MissilePod.verbs.launch_missile.label>TODO</DMS_Apparel_MissilePod.verbs.launch_missile.label>
+  <DMS_Apparel_MissilePod.verbs.launch_missile.label>發射導彈</DMS_Apparel_MissilePod.verbs.launch_missile.label>
   
   <!-- EN: Missile Pod Plus -->
-  <DMS_Apparel_MissilePodPlus.label>TODO</DMS_Apparel_MissilePodPlus.label>
+  <DMS_Apparel_MissilePodPlus.label>雙倍型拆除者導彈艙</DMS_Apparel_MissilePodPlus.label>
   <!-- EN: A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles. -->
-  <DMS_Apparel_MissilePodPlus.description>TODO</DMS_Apparel_MissilePodPlus.description>
+  <DMS_Apparel_MissilePodPlus.description>一種安裝在各種武器平台上的導彈吊艙模組，重量更重，但能夠裝載雙倍數量的導彈。</DMS_Apparel_MissilePodPlus.description>
   <!-- EN: missile -->
-  <DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.chargeNoun>TODO</DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.chargeNoun>
+  <DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.chargeNoun>導彈</DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.chargeNoun>
   <!-- EN: on cooldown -->
-  <DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.cooldownGerund>TODO</DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.cooldownGerund>
+  <DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: launch missile -->
-  <DMS_Apparel_MissilePodPlus.verbs.launch_missile.label>TODO</DMS_Apparel_MissilePodPlus.verbs.launch_missile.label>
-  
+  <DMS_Apparel_MissilePodPlus.verbs.launch_missile.label>發射導彈</DMS_Apparel_MissilePodPlus.verbs.launch_missile.label>
+
   <!-- EN: Somke launcher -->
-  <DMS_Apparel_SomkeLauncher.label>TODO</DMS_Apparel_SomkeLauncher.label>
+  <DMS_Apparel_SomkeLauncher.label>煙霧發射器</DMS_Apparel_SomkeLauncher.label>
   <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
-  <DMS_Apparel_SomkeLauncher.description>TODO</DMS_Apparel_SomkeLauncher.description>
+  <DMS_Apparel_SomkeLauncher.description>一種簡單的遙控發射器，能夠裝載煙霧彈並提供精確的掩護。</DMS_Apparel_SomkeLauncher.description>
   <!-- EN: smoke shell -->
-  <DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.chargeNoun>TODO</DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.chargeNoun>
+  <DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.chargeNoun>煙霧彈</DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.chargeNoun>
   <!-- EN: on cooldown -->
-  <DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.cooldownGerund>TODO</DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.cooldownGerund>
+  <DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: launch smoke shell -->
-  <DMS_Apparel_SomkeLauncher.verbs.launch_smoke_shell.label>TODO</DMS_Apparel_SomkeLauncher.verbs.launch_smoke_shell.label>
+  <DMS_Apparel_SomkeLauncher.verbs.launch_smoke_shell.label>發射煙霧彈</DMS_Apparel_SomkeLauncher.verbs.launch_smoke_shell.label>
   
   <!-- EN: Swarm rocket Pod -->
-  <DMS_Apparel_SwarmMissilePod.label>TODO</DMS_Apparel_SwarmMissilePod.label>
+  <DMS_Apparel_SwarmMissilePod.label>集群火箭艙</DMS_Apparel_SwarmMissilePod.label>
   <!-- EN: A Rocket pod module that contains multiple high-explosive rocket rounds, can use its high fire rate to cover an large area. -->
-  <DMS_Apparel_SwarmMissilePod.description>TODO</DMS_Apparel_SwarmMissilePod.description>
+  <DMS_Apparel_SwarmMissilePod.description>包含多枚高爆火箭彈的火箭吊艙模組，可以利用其高射速覆蓋大面積區域。</DMS_Apparel_SwarmMissilePod.description>
   <!-- EN: rocket -->
-  <DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.chargeNoun>TODO</DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.chargeNoun>
+  <DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.chargeNoun>火箭</DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.chargeNoun>
   <!-- EN: on cooldown -->
-  <DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.cooldownGerund>TODO</DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.cooldownGerund>
+  <DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: launch rocket -->
-  <DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>TODO</DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>
+  <DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>發射火箭</DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>
   
-  <!-- EN: Missile Pod -->
-  <DMS_Module_MissilePod.label>TODO</DMS_Module_MissilePod.label>
-  <!-- EN: A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use. -->
-  <DMS_Module_MissilePod.description>TODO</DMS_Module_MissilePod.description>
-  
-  <!-- EN: Missile Pod Plus -->
-  <DMS_Module_MissilePodPlus.label>TODO</DMS_Module_MissilePodPlus.label>
+  <!-- EN: Demolisher Pod -->
+  <DMS_Module_MissilePod.label>拆除者導彈艙模組</DMS_Module_MissilePod.label>
   <!-- EN: A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles. -->
-  <DMS_Module_MissilePodPlus.description>TODO</DMS_Module_MissilePodPlus.description>
+  <DMS_Module_MissilePod.description>一種導彈吊艙模組，附加在各種武器平台上，能夠裝載和發射四枚紅外制導導彈用於反防禦工事。</DMS_Module_MissilePod.description>
   
-  <!-- EN: Somke launcher -->
-  <DMS_Module_SomkeLauncher.label>TODO</DMS_Module_SomkeLauncher.label>
+  <!-- EN: Demolisher 2M-Pod -->
+  <DMS_Module_MissilePodPlus.label>雙倍型拆除者導彈艙模組</DMS_Module_MissilePodPlus.label>
   <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
-  <DMS_Module_SomkeLauncher.description>TODO</DMS_Module_SomkeLauncher.description>
+  <DMS_Module_MissilePodPlus.description>一種安裝在各種武器平台上的導彈吊艙模組，重量更重，但能夠裝載雙倍數量的導彈。</DMS_Module_MissilePodPlus.description>
+
+  <!-- EN: Somke launcher -->
+  <DMS_Module_SomkeLauncher.label>煙霧發射器模組</DMS_Module_SomkeLauncher.label>
+  <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
+  <DMS_Module_SomkeLauncher.description>一種簡單的遙控發射器，能夠裝載煙霧彈並提供精確的掩護。</DMS_Module_SomkeLauncher.description>
   
   <!-- EN: Swarm rocket Pod -->
-  <DMS_Module_SwarmMissilePod.label>TODO</DMS_Module_SwarmMissilePod.label>
+  <DMS_Module_SwarmMissilePod.label>集群火箭艙模組</DMS_Module_SwarmMissilePod.label>
   <!-- EN: Rocket pod contains multiple HE rockets, can use its high fire rate to cover an large area. -->
-  <DMS_Module_SwarmMissilePod.description>TODO</DMS_Module_SwarmMissilePod.description>
+  <DMS_Module_SwarmMissilePod.description>火箭艙內裝有多枚高爆火箭，可以利用其高射速覆蓋大片區域。</DMS_Module_SwarmMissilePod.description>
   
 </LanguageData>

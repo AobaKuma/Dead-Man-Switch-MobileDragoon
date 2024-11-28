@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: walker module -->
-  <MF_Module.label>框架模块</MF_Module.label>
+  <!-- EN: mobile dragoon module -->
+  <DMS_Module.label>龙骑兵模块</DMS_Module.label>
+  
+  <!-- EN: attachment module -->
+  <DMS_Module_Attachment.label>辅助模块</DMS_Module_Attachment.label>
+  
+  <!-- EN: core module -->
+  <DMS_Module_Core.label>核心模块</DMS_Module_Core.label>
+  
+  <!-- EN: equipment module -->
+  <DMS_Module_Equipment.label>装备模块</DMS_Module_Equipment.label>
+  
+  <!-- EN: helmet module -->
+  <DMS_Module_Helmet.label>头部模块</DMS_Module_Helmet.label>
+  
+  <!-- EN: multi slot module -->
+  <DMS_Module_Multi.label>复合栏位模块</DMS_Module_Multi.label>
+  
+  <!-- EN: pack module -->
+  <DMS_Module_Pack.label>背包模块</DMS_Module_Pack.label>
+  
+  <!-- EN: left shoulder module -->
+  <DMS_Module_ShoulderLeft.label>左肩模块</DMS_Module_ShoulderLeft.label>
+  
+  <!-- EN: right shoulder module -->
+  <DMS_Module_ShoulderRight.label>右肩模块</DMS_Module_ShoulderRight.label>
   
 </LanguageData>

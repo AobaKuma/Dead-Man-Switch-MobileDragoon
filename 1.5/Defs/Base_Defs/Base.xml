@@ -12,64 +12,102 @@
             <workSkill>Crafting</workSkill>
             <soundWorking>Recipe_Machining</soundWorking>
         </recipeMaker>
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <only>(0.7, 0.7, 0.7)</only>
+                </li>
+                <li>
+                    <only>(0.5, 0.5, 0.5)</only>
+                </li>
+                <li>
+                    <only>(0.6, 0.6, 0.6)</only>
+                </li>
+                <li>
+                    <only>(104, 120, 119)</only> <!-- drab dark blue -->
+                </li>
+                <li>
+                    <only>(106, 120, 104)</only> <!-- drab dark green -->
+                </li>
+                <li>
+                    <only>(128, 116, 84)</only> <!-- light brown -->
+                </li>
+                <li>
+                    <only>(107, 94, 64)</only> <!-- mid brown -->
+                </li>
+            </options>
+        </colorGenerator>
     </ThingDef>
-    
+
     <ThingDef Name="DMS_ModuleItemHead" ParentName="DMS_ModuleItemBase" Abstract="True">
-        <thingCategories Inherit="False"><li>DMS_Module_Helmet</li></thingCategories>
+        <thingCategories Inherit="False">
+            <li>DMS_Module_Helmet</li>
+        </thingCategories>
         <graphicData>
-          <texPath>Things/Item/Module_H</texPath>
+            <texPath>Things/Item/Module_H</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef Name="DMS_ModuleItemCore" ParentName="DMS_ModuleItemBase" Abstract="True">
-        <thingCategories Inherit="False"><li>DMS_Module_Core</li></thingCategories>
+        <thingCategories Inherit="False">
+            <li>DMS_Module_Core</li>
+        </thingCategories>
         <graphicData>
-          <texPath>Things/Item/Module</texPath>
+            <texPath>Things/Item/Module</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef Name="DMS_ModuleItemAttachment" ParentName="DMS_ModuleItemBase" Abstract="True">
-        <thingCategories Inherit="False"><li>DMS_Module_Pack</li></thingCategories>
+        <thingCategories Inherit="False">
+            <li>DMS_Module_Pack</li>
+        </thingCategories>
         <graphicData>
-          <texPath>Things/Item/Module_A</texPath>
+            <texPath>Things/Item/Module_A</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef Name="DMS_ModuleItemMountRight" ParentName="DMS_ModuleItemBase" Abstract="True">
-        <thingCategories Inherit="False"><li>DMS_Module_ShoulderRight</li></thingCategories>
+        <thingCategories Inherit="False">
+            <li>DMS_Module_ShoulderRight</li>
+        </thingCategories>
         <graphicData>
-          <texPath>Things/Item/Module_SR</texPath>
+            <texPath>Things/Item/Module_SR</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef Name="DMS_ModuleItemMountLeft" ParentName="DMS_ModuleItemBase" Abstract="True">
-        <thingCategories Inherit="False"><li>DMS_Module_ShoulderLeft</li></thingCategories>
+        <thingCategories Inherit="False">
+            <li>DMS_Module_ShoulderLeft</li>
+        </thingCategories>
         <graphicData>
-          <texPath>Things/Item/Module_SL</texPath>
+            <texPath>Things/Item/Module_SL</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef Name="DMS_ModuleItemArmLeft" ParentName="DMS_ModuleItemBase" Abstract="True">
-        <thingCategories Inherit="False"><li>DMS_Module_Attachment</li></thingCategories>
+        <thingCategories Inherit="False">
+            <li>DMS_Module_Attachment</li>
+        </thingCategories>
         <graphicData>
-          <texPath>Things/Item/Module_AL</texPath>
+            <texPath>Things/Item/Module_AL</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef Name="DMS_ModuleItemArmRight" ParentName="DMS_ModuleItemBase" Abstract="True">
-        <thingCategories Inherit="False"><li>DMS_Module_Equipment</li></thingCategories>
+        <thingCategories Inherit="False">
+            <li>DMS_Module_Equipment</li>
+        </thingCategories>
         <graphicData>
-          <texPath>Things/Item/Module_AR</texPath>
+            <texPath>Things/Item/Module_AR</texPath>
         </graphicData>
     </ThingDef>
-    
 
 
     <!--衣服型態的龍騎兵裝備，理論上玩家不應該能獲取 -->
     <ThingDef Name="DMS_ModuleApparelBase" ParentName="ModuleApparelBase" Abstract="True">
-	    <tickerType>Normal</tickerType>
+        <tickerType>Normal</tickerType>
         <comps>
             <li Class="CompProperties_Styleable" />
-			<li Class="WalkerGear.CompProperties_SleepCover" />
+            <li Class="WalkerGear.CompProperties_SleepCover" />
         </comps>
         <modExtensions>
             <li Class="VFECore.ApparelDrawPosExtension">
                 <isUnifiedApparel>true</isUnifiedApparel>
-				<showBodyInBedAlways>true</showBodyInBedAlways>
+                <showBodyInBedAlways>true</showBodyInBedAlways>
             </li>
         </modExtensions>
     </ThingDef>
@@ -117,26 +155,26 @@
                 <li>WG_WalkerGearLayer_Core</li>
             </layers>
         </apparel>
-		<tools>
-			<li>
-				<label>mechanical fist</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>24</power>
+        <tools>
+            <li>
+                <label>mechanical fist</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>24</power>
                 <armorPenetration>0.8</armorPenetration>
-				<cooldownTime>0.5</cooldownTime>
-			</li>
-			<li>
-				<label>mechanical leg</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>18</power>
+                <cooldownTime>0.5</cooldownTime>
+            </li>
+            <li>
+                <label>mechanical leg</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>18</power>
                 <armorPenetration>0.5</armorPenetration>
-				<cooldownTime>1</cooldownTime>
-			</li>
-		</tools>
+                <cooldownTime>1</cooldownTime>
+            </li>
+        </tools>
     </ThingDef>
 
     <ThingDef Name="DMS_ModuleApparelAttachment" ParentName="DMS_ModuleApparelBase" Abstract="True">
@@ -210,11 +248,10 @@
                 <li>Shoulders</li>
                 <li>Legs</li>
             </bodyPartGroups>
-          <layers>
-            <li>WG_WalkerGearLayer</li>
-          </layers>
-          <parentTagDef>WGApparelBody</parentTagDef>
+            <layers>
+                <li>WG_WalkerGearLayer</li>
+            </layers>
+            <parentTagDef>WGApparelBody</parentTagDef>
         </apparel>
-      </ThingDef>
-    
+    </ThingDef>
 </Defs>

@@ -2,8 +2,8 @@
 <LanguageData>
   
   <!-- EN: Demolish Missile Pod -->
-  <DMS_Apparel_MissilePod.label>Demolisher Pod</DMS_Apparel_MissilePod.label>
-  
+  <DMS_Apparel_MissilePod.label>Demolish Missile Pod</DMS_Apparel_MissilePod.label>
+  <!-- EN: A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use. -->
   <DMS_Apparel_MissilePod.description>A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use.</DMS_Apparel_MissilePod.description>
   <!-- EN: missile -->
   <DMS_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>missile</DMS_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>
@@ -13,8 +13,8 @@
   <DMS_Apparel_MissilePod.verbs.launch_missile.label>launch missile</DMS_Apparel_MissilePod.verbs.launch_missile.label>
   
   <!-- EN: Missile Pod Plus -->
-  <DMS_Apparel_MissilePodPlus.label>Demolisher 2M-Pod</DMS_Apparel_MissilePodPlus.label>
-  
+  <DMS_Apparel_MissilePodPlus.label>Missile Pod Plus</DMS_Apparel_MissilePodPlus.label>
+  <!-- EN: A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles. -->
   <DMS_Apparel_MissilePodPlus.description>A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles.</DMS_Apparel_MissilePodPlus.description>
   <!-- EN: missile -->
   <DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.chargeNoun>missile</DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.chargeNoun>
@@ -36,7 +36,7 @@
   
   <!-- EN: Swarm rocket Pod -->
   <DMS_Apparel_SwarmMissilePod.label>Swarm rocket Pod</DMS_Apparel_SwarmMissilePod.label>
-  
+  <!-- EN: A Rocket pod module that contains multiple high-explosive rocket rounds, can use its high fire rate to cover an large area. -->
   <DMS_Apparel_SwarmMissilePod.description>A Rocket pod module that contains multiple high-explosive rocket rounds, can use its high fire rate to cover an large area.</DMS_Apparel_SwarmMissilePod.description>
   <!-- EN: rocket -->
   <DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.chargeNoun>rocket</DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.chargeNoun>
@@ -46,13 +46,13 @@
   <DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>launch rocket</DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>
   
   <!-- EN: Missile Pod -->
-  <DMS_Module_MissilePod.label>Demolisher Pod</DMS_Module_MissilePod.label>
-  
+  <DMS_Module_MissilePod.label>Missile Pod</DMS_Module_MissilePod.label>
+  <!-- EN: A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use. -->
   <DMS_Module_MissilePod.description>A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use.</DMS_Module_MissilePod.description>
   
   <!-- EN: Missile Pod Plus -->
-  <DMS_Module_MissilePodPlus.label>Demolisher 2M-Pod</DMS_Module_MissilePodPlus.label>
-  
+  <DMS_Module_MissilePodPlus.label>Missile Pod Plus</DMS_Module_MissilePodPlus.label>
+  <!-- EN: A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles. -->
   <DMS_Module_MissilePodPlus.description>A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles.</DMS_Module_MissilePodPlus.description>
   
   <!-- EN: Somke launcher -->
@@ -63,6 +63,6 @@
   <!-- EN: Swarm rocket Pod -->
   <DMS_Module_SwarmMissilePod.label>Swarm rocket Pod</DMS_Module_SwarmMissilePod.label>
   <!-- EN: Rocket pod contains multiple HE rockets, can use its high fire rate to cover an large area. -->
-  <DMS_Module_SwarmMissilePod.description>A Rocket pod module that contains multiple high-explosive rocket rounds, can use its high fire rate to cover an large area.</DMS_Module_SwarmMissilePod.description>
+  <DMS_Module_SwarmMissilePod.description>Rocket pod contains multiple HE rockets, can use its high fire rate to cover an large area.</DMS_Module_SwarmMissilePod.description>
   
 </LanguageData>

@@ -2,7 +2,7 @@
 <Defs>
 
   <!-- (背)推進器 -->
-  <ThingDef ParentName="DMS_ModuleItemAttachment">
+  <ThingDef ParentName="DMS_ModuleItemAttachment" MayRequire="ludeon.rimworld.royalty">
     <defName>DMS_Module_JumpThruster</defName>
     <label>burst thruster</label>
     <description>A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult.</description>
@@ -40,7 +40,7 @@
       </li>
     </comps>
   </ThingDef>
-  <ThingDef ParentName="DMS_ModuleApparelAttachment">
+  <ThingDef ParentName="DMS_ModuleApparelAttachment" MayRequire="ludeon.rimworld.royalty">
     <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_JumpThruster</defName>
     <label>burst thruster</label>

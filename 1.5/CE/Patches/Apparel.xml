@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--=====Patch tools=====-->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_PilotSuit"]/statBases/StuffEffectMultiplierArmor</xpath>
+				<value>
+					<StuffEffectMultiplierArmor>8.5</StuffEffectMultiplierArmor>
+					<Bulk>20</Bulk>
+					<WornBulk>10</WornBulk>
+				</value>
+            </li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="DMS_Apparel_PilotSuit"]/equippedStatOffsets</xpath>
+				<value>
+					<CarryBulk>20</CarryBulk>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="DMS_Apparel_PilotSuit"]/statBases/Mass</xpath>
+				<value>
+					<Mass>15</Mass>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>
+					Defs/ThingDef[defName="DMS_Apparel_PilotSuit"]/stuffCategories</xpath>
+				<value>
+					<stuffCategories>
+						<li>Steeled</li>
+					</stuffCategories>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/ThingDef[defName="DMS_Apparel_PilotSuit"]</xpath>
+				<value>
+					<li Class="CombatExtended.PartialArmorExt">
+						<stats>
+							<li>
+								<ArmorRating_Sharp>0.60</ArmorRating_Sharp>
+								<parts>
+									<li>Neck</li>
+									<li>Shoulder</li>
+								</parts>
+							</li>
+							<li>
+								<ArmorRating_Blunt>0.60</ArmorRating_Blunt>
+								<parts>
+									<li>Neck</li>
+									<li>Shoulder</li>
+								</parts>
+							</li>
+						</stats>
+					</li>
+				</value>
+			</li>
+        </operations>
+    </Operation>
+</Patch>

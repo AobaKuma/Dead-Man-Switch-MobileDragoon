@@ -28,7 +28,7 @@
   <!-- EN: pile bunker -->
   <DMS_Module_PileBunker.label>气动桩模块</DMS_Module_PileBunker.label>
   <!-- EN: An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent. -->
-  <DMS_Module_PileBunker.description>一种安装於龙骑兵机体上的工程模块，由於其工作效率极高因此也经常被用来拆除建筑时使用，让那些训练机能在一定程度上能做点别的事情。</DMS_Module_PileBunker.description>
+  <DMS_Module_PileBunker.description>一种安装於龙骑兵机体上的工程模块，能用来击碎岩石也可以在钻井过程中提供辅助。由於其工作效率极高因此也经常被用来拆除建筑时使用，让那些训练机能在一定程度上能做点别的事情。</DMS_Module_PileBunker.description>
   
   <!-- EN: Dragoon LMG -->
   <DMS_Module_WeaponLmg.label>龙骑兵轻机枪模块</DMS_Module_WeaponLmg.label>

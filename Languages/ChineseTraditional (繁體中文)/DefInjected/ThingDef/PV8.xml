@@ -5,9 +5,6 @@
   <DMS_Apparel_PV8_Core.label>PV-8 "獨眼巨人" 核心</DMS_Apparel_PV8_Core.label>
   <!-- EN: A heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task force. This is probably the largest piece of infantry equipments deployed by the colonial fleet on surface of this planet. The extremely thick armor and powerful power system enable the ground garrison to maintain sufficient mobile firepower to deal with interference in the colonization project. -->
   <DMS_Apparel_PV8_Core.description>殖民艦隊陸軍特遣隊使用的重型武裝動力裝甲或所謂的「龍騎兵」。這可能是殖民艦隊在這個星球表面部署的最大型步兵裝備了。極厚的裝甲和強大的動力系統使得地面駐軍能夠保持充足的機動火力來應對殖民工程中的干擾。</DMS_Apparel_PV8_Core.description>
-  <DMS_Apparel_PV8_Core.tools.mechanical_fist.label>機械拳</DMS_Apparel_PV8_Core.tools.mechanical_fist.label>
-  <!-- EN: mechanical leg -->
-  <DMS_Apparel_PV8_Core.tools.mechanical_leg.label>機械腿</DMS_Apparel_PV8_Core.tools.mechanical_leg.label>
   
   <!-- EN: PV-8 "Zyklop" helmet -->
   <DMS_Apparel_PV8_Helmet.label>PV-8 "獨眼巨人" 頭部</DMS_Apparel_PV8_Helmet.label>

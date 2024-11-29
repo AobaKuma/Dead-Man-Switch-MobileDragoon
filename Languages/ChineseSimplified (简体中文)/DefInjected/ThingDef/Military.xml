@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Pilot Suit -->
+  <DMS_Apparel_PilotSuit.label>机甲驾驶服</DMS_Apparel_PilotSuit.label>
+  <!-- EN: A driving suit designed for exosuit pilots. It has excellent bulletproof performance with adequate cushioning lining and composite bulletproof sheets. Also with environmental protection capabilities against nuclear or bio-weapons. But most pilots would rather wear a bulletproof vest than wear this when driving an exoskeleton because it's inconvenient and very stuffy. -->
+  <DMS_Apparel_PilotSuit.description>专为外骨骼机甲驾驶员设计的连身驾驶服。有足够的缓冲内衬和复合防弹片带来优异的防弹性能与抗冲击能力。也具有针对核武或生物武器的环境保护能力。但大多数飞行员在驾驶外骨骼时宁愿穿着防弹背心也不愿穿这套不方便且十分闷热的衣服。</DMS_Apparel_PilotSuit.description>
+  
+</LanguageData>

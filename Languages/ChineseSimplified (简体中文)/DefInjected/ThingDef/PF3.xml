@@ -4,15 +4,15 @@
   <!-- EN: PF-3 "Arbeiter" powered frame -->
   <DMS_Apparel_PF3_Core.label>PF-3 "劳动者" 动力框架核心</DMS_Apparel_PF3_Core.label>
   <!-- EN: An exoskeleton frame within 2 meters high, its technology can be traced back to the end of the 22nd century, when mass-production engineering exoskeleton frames were used to construct a space elevator system for the Project Skyway.\n\nAfter the advent of the space age, a large number of engineering frames and production equipment flowed into civilian and armed organizations.\n\nArbeiter has a left arm that can use human tools and a right arm is used to install tool modules and balance the weight, allowing modules to be replaced to meet most of the work missions. -->
-  <DMS_Apparel_PF3_Core.description>直立高度在2~3公尺左右的外骨骼框架。其技术可以追溯到22世纪末，当时量产的工程外骨骼框架被用於在天路计划中建设太空电梯设施。\n\n在随後的太空殖民时代，大量的生产与维护设备流入民间与非法武装组织。 \n\nPF-3能够灵活替换模组以满足大部分工作任务，左臂可以使用人类工具，右臂用於安装辅助模组并平衡重量。</DMS_Apparel_PF3_Core.description>
+  <DMS_Apparel_PF3_Core.description>直立高度在2~3公尺左右的外骨骼框架。其技术可以追溯到22世纪末，当时量产的工程外骨骼框架被用於在天路计划中建设太空电梯设施。\n\n在随後的太空殖民时代，大量的生产与维护设备流入民间与非法武装组织。 \n\nPF-3能够灵活替换模块以满足大部分工作任务，左臂可以使用人类工具，右臂用於安装辅助模块并平衡重量。</DMS_Apparel_PF3_Core.description>
   <!-- EN: mechanical fist -->
   <DMS_Apparel_PF3_Core.tools.mechanical_fist.label>机械拳</DMS_Apparel_PF3_Core.tools.mechanical_fist.label>
   <!-- EN: mechanical leg -->
   <DMS_Apparel_PF3_Core.tools.mechanical_leg.label>机械腿</DMS_Apparel_PF3_Core.tools.mechanical_leg.label>
   
   <!-- EN: PF-3 "Arbeiter" powered frame -->
-  <DMS_Module_PF3_Core.label>PF-3 "劳动者" 动力框架核心模组</DMS_Module_PF3_Core.label>
+  <DMS_Module_PF3_Core.label>PF-3 "劳动者" 动力框架核心模块</DMS_Module_PF3_Core.label>
   <!-- EN: An exoskeleton frame within 2 meters high, its technology can be traced back to the end of the 22nd century, when mass-production engineering exoskeleton frames were used to construct a space elevator system for the Project Skyway.\n\nAfter the advent of the space age, a large number of engineering frames and production equipment flowed into civilian and armed organizations.\n\nArbeiter has a left arm that can use human tools and a right arm is used to install tool modules and balance the weight, allowing modules to be replaced to meet most of the work missions. -->
-  <DMS_Module_PF3_Core.description>直立高度在2~3公尺左右的外骨骼框架。其技术可以追溯到22世纪末，当时量产的工程外骨骼框架被用於在天路计划中建设太空电梯设施。\n\n在随後的太空殖民时代，大量的生产与维护设备流入民间与非法武装组织。 \n\nPF-3能够灵活替换模组以满足大部分工作任务，左臂可以使用人类工具，右臂用於安装辅助模组并平衡重量。</DMS_Module_PF3_Core.description>
+  <DMS_Module_PF3_Core.description>直立高度在2~3公尺左右的外骨骼框架。其技术可以追溯到22世纪末，当时量产的工程外骨骼框架被用於在天路计划中建设太空电梯设施。\n\n在随後的太空殖民时代，大量的生产与维护设备流入民间与非法武装组织。 \n\nPF-3能够灵活替换模块以满足大部分工作任务，左臂可以使用人类工具，右臂用於安装辅助模块并平衡重量。</DMS_Module_PF3_Core.description>
   
 </LanguageData>

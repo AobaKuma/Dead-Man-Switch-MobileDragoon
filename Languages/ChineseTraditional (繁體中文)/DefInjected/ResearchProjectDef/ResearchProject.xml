@@ -17,8 +17,8 @@
   <DMS_MobileDragoonElite.description>解鎖殖民艦隊軌道騎兵團 F/A-47 "武庫天使" 龍騎兵框架的生產技術。</DMS_MobileDragoonElite.description>
   
   <!-- EN: electronic modules -->
-  <DMS_MobileDragoonModule.label>精密電子模塊</DMS_MobileDragoonModule.label>
+  <DMS_MobileDragoonModule.label>精密電子模組</DMS_MobileDragoonModule.label>
   <!-- EN: unlock the production fo electronic communications/sensing modules for dragoon. -->
-  <DMS_MobileDragoonModule.description>解鎖龍騎兵電子通訊/感測模塊的生產。</DMS_MobileDragoonModule.description>
+  <DMS_MobileDragoonModule.description>解鎖龍騎兵電子通訊/感測模組的生產。</DMS_MobileDragoonModule.description>
   
 </LanguageData>

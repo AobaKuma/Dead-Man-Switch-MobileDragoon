@@ -4,6 +4,6 @@
   <!-- EN: Catapult -->
   <MF_Building_EjectorBay.label>弹射器</MF_Building_EjectorBay.label>
   <!-- EN: A special place for mecha suit storage and maintenance with auxiliary rocket, It can eject mecha suit with manipulator to far-away place. -->
-  <MF_Building_EjectorBay.description>一种用於快速部属龙骑兵的大型弹射装置。</MF_Building_EjectorBay.description>
+  <MF_Building_EjectorBay.description>一种用於快速部属龙骑兵的大型电磁弹射装置，理论上可以配合专门的龙骑兵推进器来使其具有更远的投射距离。</MF_Building_EjectorBay.description>
   
 </LanguageData>

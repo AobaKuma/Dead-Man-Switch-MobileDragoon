@@ -4,7 +4,7 @@
   <!-- EN: payload cabinet -->
   <DMS_Apparel_CargoBox.label>載荷掛架</DMS_Apparel_CargoBox.label>
   <!-- EN: An attached metal rack capable of storing payloads on a walker frame. -->
-  <DMS_Apparel_CargoBox.description>一個安裝在框架左胸位置的貨架模塊，方便在工作時取用工具或物資。</DMS_Apparel_CargoBox.description>
+  <DMS_Apparel_CargoBox.description>一個安裝在框架左胸位置的貨架模組，方便在工作時取用工具或物資。</DMS_Apparel_CargoBox.description>
   
   <!-- EN: infrared sensor -->
   <DMS_Apparel_InfraredSensor.label>紅外傳感器</DMS_Apparel_InfraredSensor.label>
@@ -14,7 +14,7 @@
   <!-- EN: pulse shield -->
   <DMS_Apparel_PulseShield.label>能量盾</DMS_Apparel_PulseShield.label>
   <!-- EN: A miniaturized shield module used on a small scale in the colonial fleet. Its fast charging speed allows it to completely absorb low-caliber projectiles bursts or intercept a fatal projectile. -->
-  <DMS_Apparel_PulseShield.description>在殖民艦隊中應用的小型化護盾模塊，因為成本的考量而只有相當小規模的裝備，快速的充電速度使其能夠完全吸收低口徑的彈頭或攔截致命的彈頭。</DMS_Apparel_PulseShield.description>
+  <DMS_Apparel_PulseShield.description>在殖民艦隊中應用的小型化護盾模組，因為成本的考量而只有相當小規模的裝備，快速的充電速度使其能夠完全吸收低口徑的彈頭或攔截致命的彈頭。</DMS_Apparel_PulseShield.description>
   
   <!-- EN: solid shield -->
   <DMS_Apparel_Shield.label>防彈盾</DMS_Apparel_Shield.label>
@@ -24,31 +24,31 @@
   <!-- EN: work arm -->
   <DMS_Apparel_WorkArm.label>輔助工作臂</DMS_Apparel_WorkArm.label>
   <!-- EN: A module hung on the left arm of the frame, contains a eletric motor clamp and positioning device, which can achieve the same dexterity as a human hand to a certain extent. -->
-  <DMS_Apparel_WorkArm.description>一種掛在框架左臂的作業用模塊，包含一套複雜的夾具系統與定位儀，能在一定程度上做到如同人手一樣的靈活。</DMS_Apparel_WorkArm.description>
+  <DMS_Apparel_WorkArm.description>一種掛在框架左臂的作業用模組，包含一套複雜的夾具系統與定位儀，能在一定程度上做到如同人手一樣的靈活。</DMS_Apparel_WorkArm.description>
   
   <!-- EN: payload cabinet -->
-  <DMS_Module_CargoBox.label>載荷掛架模塊</DMS_Module_CargoBox.label>
+  <DMS_Module_CargoBox.label>載荷掛架模組</DMS_Module_CargoBox.label>
   <!-- EN: An attached metal rack capable of storing payloads on a walker frame. -->
-  <DMS_Module_CargoBox.description>一個安裝在框架左胸位置的貨架模塊，方便在工作時取用工具或物資。</DMS_Module_CargoBox.description>
+  <DMS_Module_CargoBox.description>一個安裝在框架左胸位置的貨架模組，方便在工作時取用工具或物資。</DMS_Module_CargoBox.description>
   
   <!-- EN: infrared sensor -->
-  <DMS_Module_InfraredSensor.label>紅外傳感器模塊</DMS_Module_InfraredSensor.label>
+  <DMS_Module_InfraredSensor.label>紅外傳感器模組</DMS_Module_InfraredSensor.label>
   <!-- EN: An additional external optical sensor provides some night operation capabilities without modifying the frame itself, and provides aiming assistance. -->
   <DMS_Module_InfraredSensor.description>一種附加的外部光學傳感器，在不改造框架本身的前提下提供了一定的夜間作業能力，並提供瞄準輔助。</DMS_Module_InfraredSensor.description>
   
   <!-- EN: pulse shield -->
-  <DMS_Module_PulseShield.label>能量盾模塊</DMS_Module_PulseShield.label>
+  <DMS_Module_PulseShield.label>能量盾模組</DMS_Module_PulseShield.label>
   <!-- EN: A miniaturized pulse shield module used in the colonial fleet, only used on a fairly small scale due to cost considerations. Its fast charging speed allows it to completely absorb low-caliber projectiles bursts or intercept a fatal projectile. -->
-  <DMS_Module_PulseShield.description>在殖民艦隊中應用的小型化護盾模塊，因為成本的考量而只有相當小規模的裝備，快速的充電速度使其能夠完全吸收低口徑的彈頭或攔截致命的彈頭。</DMS_Module_PulseShield.description>
+  <DMS_Module_PulseShield.description>在殖民艦隊中應用的小型化護盾模組，因為成本的考量而只有相當小規模的裝備，快速的充電速度使其能夠完全吸收低口徑的彈頭或攔截致命的彈頭。</DMS_Module_PulseShield.description>
   
   <!-- EN: ballistic shield -->
-  <DMS_Module_Shield.label>防彈盾模塊</DMS_Module_Shield.label>
+  <DMS_Module_Shield.label>防彈盾模組</DMS_Module_Shield.label>
   <!-- EN: A composite armor shield mounted on the dragoon frame. Although it is a bit heavy, it can effectively resist the damage caused by large-caliber fragments and anti-material rifle bullets. -->
   <DMS_Module_Shield.description>一面安裝在龍騎兵框架上的複合裝甲防彈盾牌，雖然有些沉重但能夠有效的抵擋大口徑破片與反器材步槍彈對於本體的傷害。</DMS_Module_Shield.description>
   
   <!-- EN: work arm -->
-  <DMS_Module_WorkArm.label>輔助工作臂模塊</DMS_Module_WorkArm.label>
+  <DMS_Module_WorkArm.label>輔助工作臂模組</DMS_Module_WorkArm.label>
   <!-- EN: A module hung on the left arm of the frame, contains a eletric motor clamp and positioning device, which can achieve the same dexterity as a human hand to a certain extent. -->
-  <DMS_Module_WorkArm.description>一種掛在框架左臂的作業用模塊，包含一套複雜的夾具系統與定位儀，能在一定程度上做到如同人手一樣的靈活。</DMS_Module_WorkArm.description>
+  <DMS_Module_WorkArm.description>一種掛在框架左臂的作業用模組，包含一套複雜的夾具系統與定位儀，能在一定程度上做到如同人手一樣的靈活。</DMS_Module_WorkArm.description>
   
 </LanguageData>

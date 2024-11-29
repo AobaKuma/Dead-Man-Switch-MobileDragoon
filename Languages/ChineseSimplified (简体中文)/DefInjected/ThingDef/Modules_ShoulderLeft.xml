@@ -4,7 +4,7 @@
   <!-- EN: Demolish Missile Pod -->
   <DMS_Apparel_MissilePod.label>拆除者导弹舱</DMS_Apparel_MissilePod.label>
   <!-- EN: A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use. -->
-  <DMS_Apparel_MissilePod.description>一种导弹吊舱模组，附加在各种武器平台上，能够装载和发射四枚红外制导导弹用於反防御工事。</DMS_Apparel_MissilePod.description>
+  <DMS_Apparel_MissilePod.description>一种导弹吊舱模块，附加在各种武器平台上，能够装载和发射四枚红外制导导弹用於反防御工事。</DMS_Apparel_MissilePod.description>
   <!-- EN: missile -->
   <DMS_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>导弹</DMS_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>
   <!-- EN: on cooldown -->
@@ -15,7 +15,7 @@
   <!-- EN: Missile Pod Plus -->
   <DMS_Apparel_MissilePodPlus.label>双倍型拆除者导弹舱</DMS_Apparel_MissilePodPlus.label>
   <!-- EN: A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles. -->
-  <DMS_Apparel_MissilePodPlus.description>一种安装在各种武器平台上的导弹吊舱模组，重量更重，但能够装载双倍数量的导弹。</DMS_Apparel_MissilePodPlus.description>
+  <DMS_Apparel_MissilePodPlus.description>一种安装在各种武器平台上的导弹吊舱模块，重量更重，但能够装载双倍数量的导弹。</DMS_Apparel_MissilePodPlus.description>
   <!-- EN: missile -->
   <DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.chargeNoun>导弹</DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.chargeNoun>
   <!-- EN: on cooldown -->
@@ -37,7 +37,7 @@
   <!-- EN: Swarm rocket Pod -->
   <DMS_Apparel_SwarmMissilePod.label>集群火箭舱</DMS_Apparel_SwarmMissilePod.label>
   <!-- EN: A Rocket pod module that contains multiple high-explosive rocket rounds, can use its high fire rate to cover an large area. -->
-  <DMS_Apparel_SwarmMissilePod.description>包含多枚高爆火箭弹的火箭吊舱模组，可以利用其高射速覆盖大面积区域。</DMS_Apparel_SwarmMissilePod.description>
+  <DMS_Apparel_SwarmMissilePod.description>包含多枚高爆火箭弹的火箭吊舱模块，可以利用其高射速覆盖大面积区域。</DMS_Apparel_SwarmMissilePod.description>
   <!-- EN: rocket -->
   <DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.chargeNoun>火箭</DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.chargeNoun>
   <!-- EN: on cooldown -->
@@ -46,22 +46,22 @@
   <DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>发射火箭</DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>
   
   <!-- EN: Demolisher Pod -->
-  <DMS_Module_MissilePod.label>拆除者导弹舱模组</DMS_Module_MissilePod.label>
+  <DMS_Module_MissilePod.label>拆除者导弹舱模块</DMS_Module_MissilePod.label>
   <!-- EN: A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles. -->
-  <DMS_Module_MissilePod.description>一种导弹吊舱模组，附加在各种武器平台上，能够装载和发射四枚红外制导导弹用於反防御工事。</DMS_Module_MissilePod.description>
+  <DMS_Module_MissilePod.description>一种导弹吊舱模块，附加在各种武器平台上，能够装载和发射四枚红外制导导弹用於反防御工事。</DMS_Module_MissilePod.description>
   
   <!-- EN: Demolisher 2M-Pod -->
-  <DMS_Module_MissilePodPlus.label>双倍型拆除者导弹舱模组</DMS_Module_MissilePodPlus.label>
+  <DMS_Module_MissilePodPlus.label>双倍型拆除者导弹舱模块</DMS_Module_MissilePodPlus.label>
   <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
-  <DMS_Module_MissilePodPlus.description>一种安装在各种武器平台上的导弹吊舱模组，重量更重，但能够装载双倍数量的导弹。</DMS_Module_MissilePodPlus.description>
+  <DMS_Module_MissilePodPlus.description>一种安装在各种武器平台上的导弹吊舱模块，重量更重，但能够装载双倍数量的导弹。</DMS_Module_MissilePodPlus.description>
 
   <!-- EN: Somke launcher -->
-  <DMS_Module_SomkeLauncher.label>烟雾发射器模组</DMS_Module_SomkeLauncher.label>
+  <DMS_Module_SomkeLauncher.label>烟雾发射器模块</DMS_Module_SomkeLauncher.label>
   <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
   <DMS_Module_SomkeLauncher.description>一种简单的遥控发射器，能够装载烟雾弹并提供精确的掩护。</DMS_Module_SomkeLauncher.description>
   
   <!-- EN: Swarm rocket Pod -->
-  <DMS_Module_SwarmMissilePod.label>集群火箭舱模组</DMS_Module_SwarmMissilePod.label>
+  <DMS_Module_SwarmMissilePod.label>集群火箭舱模块</DMS_Module_SwarmMissilePod.label>
   <!-- EN: Rocket pod contains multiple HE rockets, can use its high fire rate to cover an large area. -->
   <DMS_Module_SwarmMissilePod.description>火箭舱内装有多枚高爆火箭，可以利用其高射速覆盖大片区域。</DMS_Module_SwarmMissilePod.description>
   

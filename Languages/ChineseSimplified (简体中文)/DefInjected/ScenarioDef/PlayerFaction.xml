@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: The Veteran -->
+  <DMSMD_Scenario.label>老兵</DMSMD_Scenario.label>
+  <!-- EN: A legendary pilot decides to retire and start a different story. -->
+  <DMSMD_Scenario.description>一位传奇龙骑兵驾驶员最後的故事</DMSMD_Scenario.description>
+  <!-- EN: You have been an officer in the Colonial Orbital Marines for thirty years...but actually hundreds of years. Traveling through countless stars and participating in wars end up becoming a living legend with your mobile dragoon.\n\nComrades who joined in the same period as you were no longer there, died on the battlefield, from old age, or chose to stay in those colonial worlds during the colonization again and again.\nAnd you, still driving your old-generation dragoons. Even if you know that the old will eventually leave and the new will come, you still feel reluctant to leave this mobile dragoon that has been with you for several years.\n\nEverything may become obsolete in the innovations of time and technology. but whatever how no longer useful they were, they are still solid proof that you have come from the past to the present. the proof that you came from that harsh era. the proof that the past exists.\n\nFinally, you decide to retire, at least leave a different story for this weapon, not only war, and death, and soon the approval report for your application is issued. -->
+  <DMSMD_Scenario.scenario.description>你已经在殖民地轨道陆战队中担任了认知上寥寥数十年...但实际早有数百年的军人，跨越无数的星晨与残酷的战争经历使你成为了一位被人所传颂的传奇龙骑兵驾驶员。
+
+和你同期加入的战友们大多已经不在了，有的战死沙场，有的年老身亡，有的在殖民时期选择留在那些被殖民世界。
+而你，依然驾驶着你的老一代龙骑兵。即使知道旧的终将离去，新的终将来临，你还是舍不得离开这辆陪伴你数年的机动龙骑。
+
+一切都可能在时间和技术的创新中变得过时。但无论它们多麽不再有用也仍然是遗留自你过去的时代。是你曾经存在的证明，来自那个残酷的时代的证明。
+
+
+最後，你决定退休，至少给自己的夥伴留下最後一个不同的故事，不只是战争，还有死亡，很快你申请的批准报告就出炉了。，而很快同意申请的批准报告便发了下来。</DMSMD_Scenario.scenario.description>
+  <!-- EN: The Veteran -->
+  <DMSMD_Scenario.scenario.name>老兵</DMSMD_Scenario.scenario.name>
+  <!-- EN: A decommissioned old base -->
+  <DMSMD_Scenario.scenario.parts.VFEC_AddStartingStructure.structureLabel>一个除役的旧基地</DMSMD_Scenario.scenario.parts.VFEC_AddStartingStructure.structureLabel>
+  <!-- EN: "Thank you for your efforts along the way Sir!, Just tell us if you need anything."\n\nOut of respect for you a legendary pilot, the Colonial Fleet Command allows you to take away this mobile dragoon that has been with you for almost half of your life and assigns you a decommissioned old base, willing helper from your platoon, as well as a place to be developed in this land, a piece of land completely owned by you.\n\nlook outside, the orbital pod is leaving a trail of red. this old base is the beginning of your new life. and of course... your enemies won't pass up this opportunity either. -->
+  <DMSMD_Scenario.scenario.parts.GameStartDialog.text>"感谢您这一路上的付出!长官。如果有甚麽需要，在停留时我们还能够帮上点什麽。"
+
+出於对一位传奇驾驶员的尊重，殖民舰队陆军司令部允许你带走这架几乎伴随着你大半人生的龙骑兵机体，分配给了你一座除役的作战基地，一位愿意跟随你的年轻御械士，以及在这片待开发的殖民世界能有着一块由完全自己所控制的土地。
+
+
+两颗空投仓在星球的大气层划岀两道红色的弧线，旧基地是新生活的开始
+
+当然的...你过去的仇敌们也并不会放弃这个机会。</DMSMD_Scenario.scenario.parts.GameStartDialog.text>
+  <!-- EN: A legendary pilot decides to retire and start a different story. -->
+  <DMSMD_Scenario.scenario.summary>一位传奇龙骑兵驾驶员最後的故事</DMSMD_Scenario.scenario.summary>
+  
+</LanguageData>

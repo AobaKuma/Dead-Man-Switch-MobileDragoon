@@ -9,7 +9,7 @@
   <!-- EN: PV-8 "Zyklop" helmet -->
   <DMS_Apparel_PV8_Helmet.label>PV-8 "独眼巨人" 头部</DMS_Apparel_PV8_Helmet.label>
   <!-- EN: A heavy-duty helmet that uses small optical probes arranged in a distributed manner as sensors in order to prevent damage from frontal hits from large-caliber weapons. -->
-  <DMS_Apparel_PV8_Helmet.description>一种重型头盔，使用分布式排列的小型光学探头作为感测器，以防止大口径武器正面命中造成的损坏。</DMS_Apparel_PV8_Helmet.description>
+  <DMS_Apparel_PV8_Helmet.description>一种重型头盔，使用分布式排列的小型光学探头作为传感器，以防止大口径武器正面命中造成的损坏。</DMS_Apparel_PV8_Helmet.description>
   
   <!-- EN: PV-8 "Zyklop" frame module -->
   <DMS_Module_PV8_Core.label>PV-8 "独眼巨人" 核心模块</DMS_Module_PV8_Core.label>
@@ -19,6 +19,6 @@
   <!-- EN: PV-8 "Zyklop" helmet -->
   <DMS_Module_PV8_Helmet.label>PV-8 "独眼巨人" 头部模块</DMS_Module_PV8_Helmet.label>
   <!-- EN: A heavy-duty helmet that uses small optical probes arranged in a distributed manner as sensors in order to prevent damage from frontal hits from large-caliber weapons. -->
-  <DMS_Module_PV8_Helmet.description>一种重型头盔，使用分布式排列的小型光学探头作为感测器，以防止大口径武器正面命中造成的损坏。</DMS_Module_PV8_Helmet.description>
+  <DMS_Module_PV8_Helmet.description>一种重型头盔，使用分布式排列的小型光学探头作为传感器，以防止大口径武器正面命中造成的损坏。</DMS_Module_PV8_Helmet.description>
   
 </LanguageData>

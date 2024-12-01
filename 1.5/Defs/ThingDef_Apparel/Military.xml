@@ -12,6 +12,7 @@
 				<Crafting>5</Crafting>
 			</skillRequirements>
 			<displayPriority>230</displayPriority>
+			
 			<defaultIngredientFilter>
 				<disallowedThingDefs>
 					<li>Silver</li>
@@ -34,6 +35,7 @@
 			<StuffEffectMultiplierInsulation_Heat>-0.5</StuffEffectMultiplierInsulation_Heat>
 			<EquipDelay>15</EquipDelay>
 		</statBases>
+		<defaultStuff>Steel</defaultStuff>
 		<stuffCategories>
 			<li>Metallic</li>
 		</stuffCategories>
@@ -67,6 +69,7 @@
 			</layers>
 			<tags>
 				<li>DMS_Pilot</li>
+				<li>DMS_Tactical</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>Soldier</li>

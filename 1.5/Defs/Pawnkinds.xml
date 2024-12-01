@@ -1,5 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <PawnKindDef>
+    <defName>DMS_LastPilot</defName>
+    <label>Veteran</label>
+    <race>Human</race>
+    <combatPower>85</combatPower>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <backstoryCategories>
+      <li>FleetChild</li>
+      <li>Mili_Expert</li>
+    </backstoryCategories>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <minGenerationAge>50</minGenerationAge>
+    <titleRequired MayRequire="Ludeon.RimWorld.Royalty">DMS_Major</titleRequired>
+    <defaultFactionType>DMS_Army</defaultFactionType>
+    <apparelRequired>
+      <li>DMS_Apparel_PilotSuit</li>
+      <li>DMS_Apparel_Beret</li>
+      <li>DMS_Apparel_BionicSuit</li>
+    </apparelRequired>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+    <weaponMoney>900~1200</weaponMoney>
+    <weaponTags>
+      <li>A_PDW</li>
+    </weaponTags>
+    <forceWeaponQuality>Masterwork</forceWeaponQuality>
+    <techHediffsMoney>9999~9999</techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsRequired>
+      <li>Painstopper</li>
+    </techHediffsRequired>
+    <biocodeWeaponChance>1</biocodeWeaponChance>
+    <combatEnhancingDrugsChance>0.5</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
+    <initialWillRange>0</initialWillRange>
+    <initialResistanceRange>0~1</initialResistanceRange>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+      <li>Crafting</li>
+      <li>Shooting</li>
+    </requiredWorkTags>
+    <disallowedTraits>
+      <li>BodyPurist</li>
+      <li>Wimp</li>
+      <li>Cannibal</li>
+    </disallowedTraits>
+    <disallowedTraitsWithDegree>
+      <PsychicSensitivity>-1</PsychicSensitivity>
+      <PsychicSensitivity>-2</PsychicSensitivity>
+    </disallowedTraitsWithDegree>
+    <modExtensions>
+      <li Class="DMS.DefaultTilteFactionExtension">
+        <faction>DMS_Army</faction>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
   <PawnKindDef ParentName="DMS_SoldierBase" Name="DMS_DragoonBase" Abstract="True">
     <aiAvoidCover>true</aiAvoidCover>
     <isFighter>true</isFighter>

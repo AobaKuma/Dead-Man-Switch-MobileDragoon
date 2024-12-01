@@ -22,7 +22,5 @@
 		<li>aoba.exosuit.framework</li>
     	<li>Aoba.DeadManSwitch.Core</li>
   	</loadAfter>
-	<description>
-		Mobile dragoon is classified as an ultra-heavy armor exoskeleton. It is another branch of the development of power armor technology in MidWorld.
-    </description>
+	<description>Mobile dragoon, classified as an ultra-heavy armor exosuit. It is another branch of the development of power armor technology in MidWorld.</description>
 </ModMetaData>

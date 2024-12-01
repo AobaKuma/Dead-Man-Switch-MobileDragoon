@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 40x102mm shell (Bean) -->
+  <Ammo_40x102mm_Beanbag.label>40x102毫米霰弹(豆袋)</Ammo_40x102mm_Beanbag.label>
+  <!-- EN: Large 40mm shotgun caliber specifically designed for Dragoon shotgun.
+\n\nBeanbag:
+\nNon-lethal rubber round originally designed for riot control. Accurate over short ranges only. Designed to temporarily incapacitate a target, it does not cause bleeding or damage to internal organs.
+\n\n使用者: -->
+  <Ammo_40x102mm_Beanbag.description>专为龙骑兵霰弹枪设计的40毫米大口径霰弹。</Ammo_40x102mm_Beanbag.description>
+  
+  <!-- EN: 40x102mm shell (Buck) -->
+  <Ammo_40x102mm_Buck.label>40x102毫米霰弹(鹿弹)</Ammo_40x102mm_Buck.label>
+  <!-- EN: Large 40mm shotgun caliber specifically designed for Dragoon shotgun.
+\n\nBuckshot:
+\nFilled with several buckshot pellets which spread in a tight pattern.
+\n\n使用者: -->
+  <Ammo_40x102mm_Buck.description>专为龙骑兵霰弹枪设计的40毫米大口径霰弹。</Ammo_40x102mm_Buck.description>
+  
+  <!-- EN: 40x102mm shell (EMP) -->
+  <Ammo_40x102mm_ElectroSlug.label>40x102毫米霰弹(EMP)</Ammo_40x102mm_ElectroSlug.label>
+  <!-- EN: Large 40mm shotgun caliber specifically designed for Dragoon shotgun.
+\n\nEMP:
+\nDesigned to combat mechanoids, the projectile is accurate over short range only and delivers an electro-magnetic pulse on impact, temporarily disabling electronics.
+\n\n使用者: -->
+  <Ammo_40x102mm_ElectroSlug.description>专为龙骑兵霰弹枪设计的40毫米大口径霰弹。</Ammo_40x102mm_ElectroSlug.description>
+  
+  <!-- EN: 40x102mm shell (Slug) -->
+  <Ammo_40x102mm_Slug.label>40x102毫米霰弹(独头弹)</Ammo_40x102mm_Slug.label>
+  <Ammo_40x102mm_Slug.description>专为龙骑兵霰弹枪设计的40毫米大口径霰弹。</Ammo_40x102mm_Slug.description>
+  
+  <!-- EN: Beanbag -->
+  <Bullet_40x102mm_Beanbag.label>豆袋弹</Bullet_40x102mm_Beanbag.label>
+  
+  <!-- EN: buckshot pellet -->
+  <Bullet_40x102mm_Buck.label>霰弹弹丸</Bullet_40x102mm_Buck.label>
+  
+  <!-- EN: EMP slug -->
+  <Bullet_40x102mm_ElectroSlug.label>EMP弹</Bullet_40x102mm_ElectroSlug.label>
+  
+  <!-- EN: shotgun slug -->
+  <Bullet_40x102mm_Slug.label>独头弹</Bullet_40x102mm_Slug.label>
+  
+</LanguageData>

@@ -14,6 +14,10 @@
   <DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.description>一种安装於框架肩部的遥控机枪</DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.description>
   <!-- EN: Mounted GAU-19/A -->
   <DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.visualLabel>GAU19/A</DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <!-- EN: .50BMG FMJ -->
+  <DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.chargeNoun>.50BMG FMJ</DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.cooldownGerund>冷却中</DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: Gun -->
   <DMS_Apparel_TurretPackGAU.verbs.Gun.label>GAU19/A</DMS_Apparel_TurretPackGAU.verbs.Gun.label>
   
@@ -25,6 +29,10 @@
   <DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.description>一种安装於框架肩部的遥控机枪</DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.description>
   <!-- EN: Mounted Kord -->
   <DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.visualLabel>猎手</DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <!-- EN: 12.7x108mm Soviet FMJ -->
+  <DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.chargeNoun>12.7x108mm Soviet FMJ</DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.cooldownGerund>冷却中</DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: Gun -->
   <DMS_Apparel_TurretPackHeavy.verbs.Gun.label>猎手</DMS_Apparel_TurretPackHeavy.verbs.Gun.label>
   
@@ -36,6 +44,10 @@
   <DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.description>一种安装於框架肩部的遥控机枪</DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.description>
   <!-- EN: Mounted LMG -->
   <DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.visualLabel>轻机枪</DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <!-- EN: 5.56x45mm NATO FMJ -->
+  <DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.chargeNoun>5.56x45mm NATO FMJ</DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.cooldownGerund>冷却中</DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: Gun -->
   <DMS_Apparel_TurretPackLight.verbs.Gun.label>轻机枪</DMS_Apparel_TurretPackLight.verbs.Gun.label>
   

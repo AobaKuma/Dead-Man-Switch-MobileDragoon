@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-    <!-- EN: Dragoon Tomahawk -->
+  
+  <!-- EN: Dragoon Tomahawk -->
   <DMS_Dragoon_Axe.label>龍騎兵戰斧</DMS_Dragoon_Axe.label>
   <!-- EN: A lightweight one-handed axe used by Dragoons, designed for close combat between other exosuits or clearing passages in tight environments. Unlike Claymore, Dragoons doesn't require additional modules to hold a Tomahawk. Therefore it can be carried as a sidearm. -->
   <DMS_Dragoon_Axe.description>一種龍騎兵所使用的輕型手斧，被設計用於機甲間的近距離格鬥以及在狹窄的環境中清出通道。不同於純粹用於戰鬥的大劍，格鬥斧並不需要加裝額外的動力骨骼來握持。因此它可以被作為副武器攜帶。</DMS_Dragoon_Axe.description>
@@ -21,4 +22,5 @@
   <DMS_Dragoon_Sword.tools.sweep.label>橫掃</DMS_Dragoon_Sword.tools.sweep.label>
   <!-- EN: stock -->
   <DMS_Dragoon_Sword.tools.stock.label>劍柄</DMS_Dragoon_Sword.tools.stock.label>
+  
 </LanguageData>

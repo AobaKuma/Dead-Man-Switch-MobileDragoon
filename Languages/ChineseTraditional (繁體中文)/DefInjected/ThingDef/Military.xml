@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: Pilot Suit -->
+  <!-- EN: EFP suit -->
   <DMS_Apparel_PilotSuit.label>機甲駕駛服</DMS_Apparel_PilotSuit.label>
-  <!-- EN: A driving suit designed for exosuit pilots. It has excellent bulletproof performance with adequate cushioning lining and composite bulletproof sheets. Also with environmental protection capabilities against nuclear or bio-weapons. But most pilots would rather wear a bulletproof vest than wear this when driving an exoskeleton because it's inconvenient and very stuffy. -->
+  <!-- EN: EFP suit stands for Exo-Frame Pilot jumpsuit. An armoured suit designed for exosuit pilots. It has excellent bulletproof performance with adequate cushioning lining and composite bulletproof sheets. Also with environmental protection capabilities against nuclear or bio-weapons. But most pilots would rather wear a bulletproof vest than wear this when driving an exoskeleton because it's inconvenient and very stuffy. -->
   <DMS_Apparel_PilotSuit.description>專為外骨骼機甲駕駛員設計的連身駕駛服。有足夠的緩衝內襯和復合防彈片帶來優異的防彈性能與抗衝擊能力。也具有針對核武或生物武器的環境保護能力。但大多數飛行員在駕駛外骨骼時寧願穿著防彈背心也不願穿這套不方便且十分悶熱的衣服。</DMS_Apparel_PilotSuit.description>
   
 </LanguageData>

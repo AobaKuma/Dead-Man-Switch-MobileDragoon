@@ -22,7 +22,7 @@
   <DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.cooldownGerund>冷却中</DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: launch missile -->
   <DMS_Apparel_MissilePodPlus.verbs.launch_missile.label>发射导弹</DMS_Apparel_MissilePodPlus.verbs.launch_missile.label>
-
+  
   <!-- EN: Somke launcher -->
   <DMS_Apparel_SomkeLauncher.label>烟雾发射器</DMS_Apparel_SomkeLauncher.label>
   <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
@@ -45,16 +45,16 @@
   <!-- EN: launch rocket -->
   <DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>发射火箭</DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>
   
-  <!-- EN: Demolisher Pod -->
+  <!-- EN: Missile Pod -->
   <DMS_Module_MissilePod.label>拆除者导弹舱模块</DMS_Module_MissilePod.label>
-  <!-- EN: A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles. -->
+  <!-- EN: A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use. -->
   <DMS_Module_MissilePod.description>一种导弹吊舱模块，附加在各种武器平台上，能够装载和发射四枚红外制导导弹用於反防御工事。</DMS_Module_MissilePod.description>
   
-  <!-- EN: Demolisher 2M-Pod -->
+  <!-- EN: Missile Pod Plus -->
   <DMS_Module_MissilePodPlus.label>双倍型拆除者导弹舱模块</DMS_Module_MissilePodPlus.label>
-  <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
+  <!-- EN: A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles. -->
   <DMS_Module_MissilePodPlus.description>一种安装在各种武器平台上的导弹吊舱模块，重量更重，但能够装载双倍数量的导弹。</DMS_Module_MissilePodPlus.description>
-
+  
   <!-- EN: Somke launcher -->
   <DMS_Module_SomkeLauncher.label>烟雾发射器模块</DMS_Module_SomkeLauncher.label>
   <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->

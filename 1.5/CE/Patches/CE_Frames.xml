@@ -277,4 +277,58 @@
         </value>
     </Operation>
 
+    <!--PV-4 Core-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV4_Core"]/statBases</xpath>
+        <value>
+            <Bulk>412</Bulk>
+            <WornBulk>52</WornBulk>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV4_Core"]/equippedStatOffsets</xpath>
+        <value>
+            <CarryBulk>450</CarryBulk>
+            <Suppressability>-1.2</Suppressability>
+            <ShootingAccuracyPawn>1.2</ShootingAccuracyPawn>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV4_Core"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>45</ArmorRating_Sharp>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV4_Core"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>72</ArmorRating_Blunt>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV4_Core"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>1.1</ArmorRating_Heat>
+        </value>
+    </Operation>
+
+    <!--PV-4 Helmet-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV4_Helmet"]/statBases</xpath>
+        <value>
+            <Bulk>37</Bulk>
+            <WornBulk>24</WornBulk>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Apparel_PV4_Helmet"]/equippedStatOffsets</xpath>
+        <value>
+            <NightVisionEfficiency>0.975</NightVisionEfficiency>
+            <SmokeSensitivity>-1</SmokeSensitivity>
+            <AimingAccuracy>0.7</AimingAccuracy>
+        </value>
+    </Operation>
+
+
 </Patch>

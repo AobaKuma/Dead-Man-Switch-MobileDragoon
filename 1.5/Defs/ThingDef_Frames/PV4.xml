@@ -116,7 +116,7 @@
         </rootData>
       </li>
       <li Class="WalkerGear.ModExtWalkerCore">
-        <minArmorBreakdownThreshold>0.05</minArmorBreakdownThreshold>
+        <minArmorBreakdownThreshold>0.1</minArmorBreakdownThreshold>
         <RequiredApparelTag>DMS_Pilot</RequiredApparelTag>
       </li>
     </modExtensions>

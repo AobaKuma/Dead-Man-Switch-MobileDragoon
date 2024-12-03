@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Factions Expanded - Pirates</li>
+    </mods>
+    <match Class="PatchOperationConditional">
+      <xpath>*/ThingDef[@Name="VFEP_BaseWarcasketGun" or
+        @Name="VFEP_BaseMeleeWeapon_Warcasket"]/modExtensions/li[@Class =
+        "HeavyWeapons.HeavyWeapon"]/supportedArmors</xpath>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>*/ThingDef[@Name="VFEP_BaseWarcasketGun" or
+          @Name="VFEP_BaseMeleeWeapon_Warcasket"]/modExtensions/li[@Class =
+          "HeavyWeapons.HeavyWeapon"]</xpath>
+        <value>
+          <supportedArmors/>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Factions Expanded - Pirates</li>
+    </mods>
+    <match Class="PatchOperationConditional">
+      <xpath>*/ThingDef[@Name="VFEP_BaseWarcasketGun" or
+        @Name="VFEP_BaseMeleeWeapon_Warcasket"]/modExtensions/li[@Class =
+        "HeavyWeapons.HeavyWeapon"]/supportedArmors</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>*/ThingDef[@Name="VFEP_BaseWarcasketGun" or
+          @Name="VFEP_BaseMeleeWeapon_Warcasket"]/modExtensions/li[@Class =
+          "HeavyWeapons.HeavyWeapon"]/supportedArmors</xpath>
+        <value>
+            <li>DMS_Apparel_PF3_Core</li>
+            <li>DMS_Apparel_AT34_Core</li>
+            <li>DMS_Apparel_PV4_Core</li>
+            <li>DMS_Apparel_PV8_Core</li>
+            <li>DMS_Apparel_FA47_Core</li>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded - Heavy Weapons</li>
+    </mods>
+    <match Class="PatchOperationConditional">
+      <xpath>*/ThingDef[@ParentName="BaseHumanMakeableGun"]/modExtensions/li[@Class =
+        "HeavyWeapons.HeavyWeapon"]/supportedArmors</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>*/ThingDef[@ParentName="BaseHumanMakeableGun"]/modExtensions/li[@Class =
+          "HeavyWeapons.HeavyWeapon"]/supportedArmors</xpath>
+        <value>
+            <li>DMS_Apparel_PF3_Core</li>
+            <li>DMS_Apparel_AT34_Core</li>
+            <li>DMS_Apparel_PV4_Core</li>
+            <li>DMS_Apparel_PV8_Core</li>
+            <li>DMS_Apparel_FA47_Core</li>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+</Patch>

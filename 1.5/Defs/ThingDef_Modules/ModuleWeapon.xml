@@ -95,6 +95,54 @@
     </modExtensions>
   </ThingDef>
   
+
+  <ThingDef ParentName="DMS_BaseDragoonWeapon">
+    <defName>DMS_Dragoon_DMR</defName>
+    <label>Dragoon DMR</label>
+    <description>A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon.</description>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+      <li>LongShots</li>
+      <li>Ranged</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Things/Weapons/DMS_Dragoon_DMR</texPath>
+      <drawSize>2.75</drawSize>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.40</AccuracyTouch>
+      <AccuracyShort>0.77</AccuracyShort>
+      <AccuracyMedium>0.9</AccuracyMedium>
+      <AccuracyLong>0.72</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <Mass>0</Mass>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_TurretSniper</defaultProjectile>
+        <warmupTime>2.8</warmupTime>
+        <range>60</range>
+        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+        <burstShotCount>2</burstShotCount>
+        <soundCast>Shot_TurretSniper</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <modExtensions>
+      <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+        <def>MF_StandardMuzzleFalsh</def>
+        <drawSize>(0.75,0.75)</drawSize>
+        <offsets>
+          <li>(0.75,0)</li>
+        </offsets>
+        <isAlternately>true</isAlternately>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
   <ThingDef ParentName="DMS_AutomatroidHeavyGun">
     <defName>DMS_Dragoon_Shotgun</defName>
     <label>Dragoon Shotgun</label>

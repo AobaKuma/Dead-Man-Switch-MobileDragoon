@@ -14,12 +14,12 @@
   <DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.description>一種安裝於框架肩部的遙控機槍</DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.description>
   <!-- EN: Mounted GAU-19/A -->
   <DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.visualLabel>GAU19/A</DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <!-- EN: .50BMG FMJ -->
+  <DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.chargeNoun>.50BMG FMJ</DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: Gun -->
   <DMS_Apparel_TurretPackGAU.verbs.Gun.label>GAU19/A</DMS_Apparel_TurretPackGAU.verbs.Gun.label>
-  
-  <!-- UNUSED -->
-  <DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.chargeNoun>.50BMG FMJ</DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.chargeNoun>
-  <DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.cooldownGerund>
   
   <!-- EN: Kord Shoulder Mount -->
   <DMS_Apparel_TurretPackHeavy.label>獵手肩炮</DMS_Apparel_TurretPackHeavy.label>
@@ -29,12 +29,12 @@
   <DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.description>一種安裝於框架肩部的遙控機槍</DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.description>
   <!-- EN: Mounted Kord -->
   <DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.visualLabel>獵手</DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <!-- EN: 12.7x108mm Soviet FMJ -->
+  <DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.chargeNoun>12.7x108mm Soviet FMJ</DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: Gun -->
   <DMS_Apparel_TurretPackHeavy.verbs.Gun.label>獵手</DMS_Apparel_TurretPackHeavy.verbs.Gun.label>
-  
-  <!-- UNUSED -->
-  <DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.chargeNoun>12.7x108mm Soviet FMJ</DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.chargeNoun>
-  <DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.cooldownGerund>
   
   <!-- EN: LMG Shoulder Mount -->
   <DMS_Apparel_TurretPackLight.label>輕機槍肩炮</DMS_Apparel_TurretPackLight.label>
@@ -44,15 +44,15 @@
   <DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.description>一種安裝於框架肩部的遙控機槍</DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.description>
   <!-- EN: Mounted LMG -->
   <DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.visualLabel>輕機槍</DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <!-- EN: 5.56x45mm NATO FMJ -->
+  <DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.chargeNoun>5.56x45mm NATO FMJ</DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: Gun -->
   <DMS_Apparel_TurretPackLight.verbs.Gun.label>輕機槍</DMS_Apparel_TurretPackLight.verbs.Gun.label>
   
-  <!-- UNUSED -->
-  <DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.chargeNoun>5.56x45mm NATO FMJ</DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.chargeNoun>
-  <DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.cooldownGerund>
-  
   <!-- EN: Relay Antenna -->
-  <DMS_Module_RelayAntenna.label>中繼天線</DMS_Module_RelayAntenna.label>
+  <DMS_Module_RelayAntenna.label>中繼天線模組</DMS_Module_RelayAntenna.label>
   <!-- EN: An antenna module that expands the control range for friendly mechanics. Although the control range is relatively limited, it is enough to allow mechanics to coordinate infantry around the frame. -->
   <DMS_Module_RelayAntenna.description>一種可以擴展友方機械師控制範圍的天線模組。雖然控制範圍比較有限但足以讓機械師協調框架周圍上的機兵。</DMS_Module_RelayAntenna.description>
   

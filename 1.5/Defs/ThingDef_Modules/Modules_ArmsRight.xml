@@ -277,4 +277,76 @@
     </comps>
   </ThingDef>
 
+  
+  <!-- (右)DMR-->
+  <ThingDef ParentName="DMS_ModuleItemArmRight">
+    <defName>DMS_Module_WeaponDMR</defName>
+    <label>Dragoon DMR</label>
+    <description>A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Dragoon_DMR</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <Mass>60</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>DMS_MobileDragoonModule</li>
+        <li>DMS_EquipmentHeavy</li>
+      </researchPrerequisites>
+      <workAmount>105000</workAmount>
+    </recipeMaker>
+    <smeltProducts>
+      <Steel>90</Steel>
+      <Tungsteel>30</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentStamped>3</ComponentStamped>
+    </butcherProducts>
+    <costList>
+      <Tungsteel>200</Tungsteel>
+      <ComponentStamped>6</ComponentStamped>
+      <ComponentFireControl>1</ComponentFireControl>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>DMS_Apparel_WeaponDMR</EquipedThingDef>
+        <slots>
+          <li>ArmRight</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelArmRight">
+    <defName>DMS_Apparel_WeaponDMR</defName>
+    <label>Dragoon DMR</label>
+    <description>A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Dragoon_DMR</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Weapons/DMS_Dragoon_DMR</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <Mass>65</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.5</MoveSpeed>
+    </equippedStatOffsets>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>DMS_Module_WeaponDMR</ItemDef>
+        <slots>
+          <li>ArmRight</li>
+        </slots>
+      </li>
+      <li Class="WalkerGear.CompProperties_ForceUseWeapon">
+        <weapon>DMS_Dragoon_DMR</weapon>
+      </li>
+    </comps>
+  </ThingDef>
+
 </Defs>

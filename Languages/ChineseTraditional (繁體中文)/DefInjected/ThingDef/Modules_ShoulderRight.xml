@@ -19,7 +19,7 @@
   <!-- EN: on cooldown -->
   <DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: Gun -->
-  <DMS_Apparel_TurretPackGAU.verbs.Gun.label>GAU19/A</DMS_Apparel_TurretPackGAU.verbs.Gun.label>
+  <!-- <DMS_Apparel_TurretPackGAU.verbs.Gun.label>Gun</DMS_Apparel_TurretPackGAU.verbs.Gun.label> DO NOT TRANSLATE -->
   
   <!-- EN: Kord Shoulder Mount -->
   <DMS_Apparel_TurretPackHeavy.label>獵手肩炮</DMS_Apparel_TurretPackHeavy.label>
@@ -34,7 +34,7 @@
   <!-- EN: on cooldown -->
   <DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: Gun -->
-  <DMS_Apparel_TurretPackHeavy.verbs.Gun.label>獵手</DMS_Apparel_TurretPackHeavy.verbs.Gun.label>
+  <!-- <DMS_Apparel_TurretPackHeavy.verbs.Gun.label>Gun</DMS_Apparel_TurretPackHeavy.verbs.Gun.label> DO NOT TRANSLATE -->  
   
   <!-- EN: LMG Shoulder Mount -->
   <DMS_Apparel_TurretPackLight.label>輕機槍肩炮</DMS_Apparel_TurretPackLight.label>
@@ -48,8 +48,8 @@
   <DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.chargeNoun>5.56x45mm NATO FMJ</DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.chargeNoun>
   <!-- EN: on cooldown -->
   <DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.cooldownGerund>
-  <!-- EN: Gun -->
-  <DMS_Apparel_TurretPackLight.verbs.Gun.label>輕機槍</DMS_Apparel_TurretPackLight.verbs.Gun.label>
+
+  <!-- <DMS_Apparel_TurretPackLight.verbs.Gun.label>Gun</DMS_Apparel_TurretPackLight.verbs.Gun.label> DO NOT TRANSLATE -->
   
   <!-- EN: Relay Antenna -->
   <DMS_Module_RelayAntenna.label>中繼天線模組</DMS_Module_RelayAntenna.label>

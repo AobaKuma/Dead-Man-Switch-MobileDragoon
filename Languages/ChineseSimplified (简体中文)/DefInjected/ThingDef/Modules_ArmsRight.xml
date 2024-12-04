@@ -15,6 +15,11 @@
   <!-- EN: mechanical tool -->
   <DMS_Apparel_PileBunker.tools.mechanical_tool.label>机械工具</DMS_Apparel_PileBunker.tools.mechanical_tool.label>
   
+  <!-- EN: Dragoon DMR -->
+  <DMS_Apparel_WeaponDMR.label>龙骑兵射手步枪</DMS_Apparel_WeaponDMR.label>
+  <!-- EN: A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon. -->
+  <DMS_Apparel_WeaponDMR.description>相对於龙骑兵大小的射手步枪，但对人类来说基本上就是致命的大口径机炮，其设计为透过一个电子合成成像的测距仪与火控计算机来使其作为一件大型武器而言具有可观的射击精准度。</DMS_Apparel_WeaponDMR.description>
+  
   <!-- EN: Dragoon LMG -->
   <DMS_Apparel_WeaponLmg.label>龙骑兵轻机枪</DMS_Apparel_WeaponLmg.label>
   <!-- EN: A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities. -->
@@ -29,6 +34,11 @@
   <DMS_Module_PileBunker.label>气动桩模块</DMS_Module_PileBunker.label>
   <!-- EN: An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent. -->
   <DMS_Module_PileBunker.description>一种安装於龙骑兵机体上的工程模块，能用来击碎岩石也可以在钻井过程中提供辅助。由於其工作效率极高因此也经常被用来拆除建筑时使用，让那些训练机能在一定程度上能做点别的事情。</DMS_Module_PileBunker.description>
+  
+  <!-- EN: Dragoon DMR -->
+  <DMS_Module_WeaponDMR.label>龙骑兵射手步枪模块</DMS_Module_WeaponDMR.label>
+  <!-- EN: A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon. -->
+  <DMS_Module_WeaponDMR.description>相对於龙骑兵大小的射手步枪，但对人类来说基本上就是致命的大口径机炮，其设计为透过一个电子合成成像的测距仪与火控计算机来使其作为一件大型武器而言具有可观的射击精准度。</DMS_Module_WeaponDMR.description>
   
   <!-- EN: Dragoon LMG -->
   <DMS_Module_WeaponLmg.label>龙骑兵轻机枪模块</DMS_Module_WeaponLmg.label>

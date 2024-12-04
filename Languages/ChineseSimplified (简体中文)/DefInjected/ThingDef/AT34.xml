@@ -9,7 +9,7 @@
   <!-- EN: AT-34 "Yetta" helmet -->
   <DMS_Apparel_AT34_Helmet.label>AT34 "耶塔" 头部</DMS_Apparel_AT34_Helmet.label>
   <!-- EN: An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD. -->
-  <DMS_Apparel_AT34_Helmet.description>一种安装在龙骑兵头部的简易集成光学传感器，旨在透过预先编程的雷达追踪系统和 HUD 来提高框架的工作性能。</DMS_Apparel_AT34_Helmet.description>
+  <DMS_Apparel_AT34_Helmet.description>一种安装在龙骑兵头部的简易集成光学感测器，旨在透过预先编程的雷达追踪系统和 HUD 来提高框架的工作性能。</DMS_Apparel_AT34_Helmet.description>
   
   <!-- EN: AT-34 "Yetta" core module -->
   <DMS_Module_AT34_Core.label>AT34 "耶塔" 核心模块</DMS_Module_AT34_Core.label>
@@ -19,6 +19,6 @@
   <!-- EN: AT-34 "Yetta" helmet -->
   <DMS_Module_AT34_Helmet.label>AT34 "耶塔" 头部模块</DMS_Module_AT34_Helmet.label>
   <!-- EN: An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD. -->
-  <DMS_Module_AT34_Helmet.description>一种安装在龙骑兵头部的简易集成光学传感器，旨在透过预先编程的雷达追踪系统和 HUD 来提高框架的工作性能。</DMS_Module_AT34_Helmet.description>
+  <DMS_Module_AT34_Helmet.description>一种安装在龙骑兵头部的简易集成光学感测器，旨在透过预先编程的雷达追踪系统和 HUD 来提高框架的工作性能。</DMS_Module_AT34_Helmet.description>
   
 </LanguageData>

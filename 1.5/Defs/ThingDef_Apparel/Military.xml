@@ -6,7 +6,7 @@
 		<description>EFP suit stands for Exo-Frame Pilot jumpsuit. An armoured suit designed for exosuit pilots. It has excellent bulletproof performance with adequate cushioning lining and composite bulletproof sheets. Also with environmental protection capabilities against nuclear or bio-weapons. But most pilots would rather wear a bulletproof vest than wear this when driving an exoskeleton because it's inconvenient and very stuffy.</description>
 		<techLevel>Industrial</techLevel>
 		<recipeMaker>
-			<researchPrerequisite>FlakArmor</researchPrerequisite>
+			<researchPrerequisite>WG_HeavyExoskeleton</researchPrerequisite>
 			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
 			<skillRequirements>
 				<Crafting>5</Crafting>
@@ -23,7 +23,7 @@
 		<graphicData>
 			<texPath>Things/Apparel/PilotSuit/apparel_icon</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.75</drawSize>
+			<drawSize>1.1</drawSize>
 		</graphicData>
 		<statBases>
 			<WorkToMake>12000</WorkToMake>

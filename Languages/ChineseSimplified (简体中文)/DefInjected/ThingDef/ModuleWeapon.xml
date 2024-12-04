@@ -7,6 +7,19 @@
   <!-- EN: canister darts -->
   <DMS_Bullet_DragoonShotgun.label>霰镖弹</DMS_Bullet_DragoonShotgun.label>
   
+  <!-- EN: Dragoon DMR -->
+  <DMS_Dragoon_DMR.label>TODO</DMS_Dragoon_DMR.label>
+  <!-- EN: A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon. -->
+  <DMS_Dragoon_DMR.description>TODO</DMS_Dragoon_DMR.description>
+  <!-- EN: stock -->
+  <DMS_Dragoon_DMR.tools.stock.label>TODO</DMS_Dragoon_DMR.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_Dragoon_DMR.tools.barrel.label>TODO</DMS_Dragoon_DMR.tools.barrel.label>
+  <!-- EN: muzzle -->
+  <DMS_Dragoon_DMR.tools.muzzle.label>TODO</DMS_Dragoon_DMR.tools.muzzle.label>
+  <!-- EN: Dragoon DMR -->
+  <DMS_Dragoon_DMR.verbs.Verb_ShootCE.label>TODO</DMS_Dragoon_DMR.verbs.Verb_ShootCE.label>
+  
   <!-- EN: Dragoon LMG -->
   <DMS_Dragoon_LMG.label>龙骑兵轻机枪</DMS_Dragoon_LMG.label>
   <!-- EN: A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities. -->
@@ -15,11 +28,13 @@
   <DMS_Dragoon_LMG.tools.stock.label>枪托</DMS_Dragoon_LMG.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_Dragoon_LMG.tools.barrel.label>枪管</DMS_Dragoon_LMG.tools.barrel.label>
+  <!-- EN: muzzle -->
+  <DMS_Dragoon_LMG.tools.muzzle.label>枪口</DMS_Dragoon_LMG.tools.muzzle.label>
   <!-- EN: Dragoon LMG -->
-  <DMS_Dragoon_LMG.verbs.Verb_Shoot.label>龙骑兵轻机枪</DMS_Dragoon_LMG.verbs.Verb_Shoot.label>
+  <DMS_Dragoon_LMG.verbs.Verb_ShootCE.label>TODO</DMS_Dragoon_LMG.verbs.Verb_ShootCE.label>
   
   <!-- UNUSED -->
-  <DMS_Dragoon_LMG.tools.muzzle.label>枪口</DMS_Dragoon_LMG.tools.muzzle.label>
+  <DMS_Dragoon_LMG.verbs.Verb_Shoot.label>龙骑兵轻机枪</DMS_Dragoon_LMG.verbs.Verb_Shoot.label>
   
   <!-- EN: Dragoon Shotgun -->
   <DMS_Dragoon_Shotgun.label>龙骑兵霰弹枪</DMS_Dragoon_Shotgun.label>
@@ -28,13 +43,17 @@
   <!-- EN: stock -->
   <DMS_Dragoon_Shotgun.tools.stock.label>枪托</DMS_Dragoon_Shotgun.tools.stock.label>
   <!-- EN: barrel -->
-  <DMS_Dragoon_Shotgun.tools.barrel.label>枪管</DMS_Dragoon_Shotgun.tools.barrel.label>
+  <DMS_Dragoon_Shotgun.tools.barrel-0.label>枪管</DMS_Dragoon_Shotgun.tools.barrel-0.label>
+  <!-- EN: muzzle -->
+  <DMS_Dragoon_Shotgun.tools.muzzle-0.label>枪口</DMS_Dragoon_Shotgun.tools.muzzle-0.label>
+  <!-- EN: barrel -->
+  <DMS_Dragoon_Shotgun.tools.barrel-1.label>枪管</DMS_Dragoon_Shotgun.tools.barrel-1.label>
+  <!-- EN: muzzle -->
+  <DMS_Dragoon_Shotgun.tools.muzzle-1.label>枪口</DMS_Dragoon_Shotgun.tools.muzzle-1.label>
   <!-- EN: Dragoon Shotgun -->
-  <DMS_Dragoon_Shotgun.verbs.Verb_Shoot.label>龙骑兵霰弹枪</DMS_Dragoon_Shotgun.verbs.Verb_Shoot.label>
+  <DMS_Dragoon_Shotgun.verbs.Verb_ShootCE.label>TODO</DMS_Dragoon_Shotgun.verbs.Verb_ShootCE.label>
   
   <!-- UNUSED -->
-  <DMS_Dragoon_Shotgun.tools.muzzle-0.label>枪口</DMS_Dragoon_Shotgun.tools.muzzle-0.label>
-  <DMS_Dragoon_Shotgun.tools.barrel-1.label>枪管</DMS_Dragoon_Shotgun.tools.barrel-1.label>
-  <DMS_Dragoon_Shotgun.tools.muzzle-1.label>枪口</DMS_Dragoon_Shotgun.tools.muzzle-1.label>
+  <DMS_Dragoon_Shotgun.verbs.Verb_Shoot.label>龙骑兵霰弹枪</DMS_Dragoon_Shotgun.verbs.Verb_Shoot.label>
   
 </LanguageData>

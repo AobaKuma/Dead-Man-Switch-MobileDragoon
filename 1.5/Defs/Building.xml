@@ -4,7 +4,7 @@
     <ThingDef ParentName="BuildingBase">
       <defName>MF_Building_EjectorBay</defName>
       <label>Catapult</label>
-      <description>A special place for mecha suit storage and maintenance with auxiliary rocket, It can eject mecha suit with manipulator to far-away place.</description>
+      <description>A special launcher to deploy mobile dragoon instantly, which can eject an exosuit to a far-away distance.</description>
       <thingClass>WalkerGear.Building_EjectorBay</thingClass>
       <tickerType>Normal</tickerType>
       <graphicData>
@@ -22,7 +22,10 @@
         <MaxHitPoints>200</MaxHitPoints>
       </statBases>
       <costList>
-        <Steel>200</Steel>
+        <ComponentStamped>4</ComponentStamped>
+        <ComponentIndustrial>10</ComponentIndustrial>
+        <Tungsteel>125</Tungsteel>
+        <Steel>220</Steel>
       </costList>
       <scatterableOnMapGen>false</scatterableOnMapGen>
       <useHitPoints>true</useHitPoints>

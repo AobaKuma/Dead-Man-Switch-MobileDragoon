@@ -14,11 +14,9 @@
   <DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.description>一种安装於框架肩部的遥控机枪</DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.description>
   <!-- EN: Mounted GAU-19/A -->
   <DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.visualLabel>GAU19/A</DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.visualLabel>
-  <!-- EN: Gun -->
-  <DMS_Apparel_TurretPackGAU.verbs.Gun.label>GAU19/A</DMS_Apparel_TurretPackGAU.verbs.Gun.label>
-  
-  <!-- UNUSED -->
+  <!-- EN: .50BMG FMJ -->
   <DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.chargeNoun>.50BMG FMJ</DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
   <DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.cooldownGerund>冷却中</DMS_Apparel_TurretPackGAU.comps.CompApparelReloadable.cooldownGerund>
   
   <!-- EN: Kord Shoulder Mount -->
@@ -29,11 +27,9 @@
   <DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.description>一种安装於框架肩部的遥控机枪</DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.description>
   <!-- EN: Mounted Kord -->
   <DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.visualLabel>猎手</DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.visualLabel>
-  <!-- EN: Gun -->
-  <DMS_Apparel_TurretPackHeavy.verbs.Gun.label>猎手</DMS_Apparel_TurretPackHeavy.verbs.Gun.label>
-  
-  <!-- UNUSED -->
+  <!-- EN: 12.7x108mm Soviet FMJ -->
   <DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.chargeNoun>12.7x108mm Soviet FMJ</DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
   <DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.cooldownGerund>冷却中</DMS_Apparel_TurretPackHeavy.comps.CompApparelReloadable.cooldownGerund>
   
   <!-- EN: LMG Shoulder Mount -->
@@ -44,15 +40,13 @@
   <DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.description>一种安装於框架肩部的遥控机枪</DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.description>
   <!-- EN: Mounted LMG -->
   <DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.visualLabel>轻机枪</DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.visualLabel>
-  <!-- EN: Gun -->
-  <DMS_Apparel_TurretPackLight.verbs.Gun.label>轻机枪</DMS_Apparel_TurretPackLight.verbs.Gun.label>
-  
-  <!-- UNUSED -->
+  <!-- EN: 5.56x45mm NATO FMJ -->
   <DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.chargeNoun>5.56x45mm NATO FMJ</DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
   <DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.cooldownGerund>冷却中</DMS_Apparel_TurretPackLight.comps.CompApparelReloadable.cooldownGerund>
   
   <!-- EN: Relay Antenna -->
-  <DMS_Module_RelayAntenna.label>中继天线</DMS_Module_RelayAntenna.label>
+  <DMS_Module_RelayAntenna.label>中继天线模块</DMS_Module_RelayAntenna.label>
   <!-- EN: An antenna module that expands the control range for friendly mechanics. Although the control range is relatively limited, it is enough to allow mechanics to coordinate infantry around the frame. -->
   <DMS_Module_RelayAntenna.description>一种可以扩展友方机械师控制范围的天线模块。虽然控制范围比较有限但足以让机械师协调框架周围上的机兵。</DMS_Module_RelayAntenna.description>
   

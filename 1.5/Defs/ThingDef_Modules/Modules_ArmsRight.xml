@@ -15,7 +15,7 @@
       <Mass>45</Mass>
     </statBases>
     <recipeMaker>
-      <researchPrerequisite>WG_HeavyExoskeleton</researchPrerequisite>
+      <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
     </recipeMaker>
     <smeltProducts>
       <Steel>30</Steel>

@@ -45,31 +45,31 @@ Finally, you decide to retire, at least leave a different story for this weapon,
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>DMS_Module_PV4_Core</thingDef>
-          <quality>Legendary</quality>
+          			<quality>Legendary</quality>
 					<count>1</count>
 				</li>
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>DMS_Module_PV4_Helmet</thingDef>
-          <quality>Legendary</quality>
+          			<quality>Legendary</quality>
 					<count>1</count>
 				</li>
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>DMS_Module_RelayAntenna</thingDef>
-          <quality>Legendary</quality>
+          			<quality>Legendary</quality>
 					<count>1</count>
 				</li>
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>DMS_Dragoon_Shotgun</thingDef>
-          <quality>Legendary</quality>
+          			<quality>Legendary</quality>
 					<count>1</count>
 				</li>
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>DMS_Dragoon_Axe</thingDef>
-          <quality>Legendary</quality>
+          			<quality>Legendary</quality>
 					<count>1</count>
 				</li>
 				<li Class="ScenPart_StartingThing_Defined">
@@ -107,10 +107,17 @@ Finally, you decide to retire, at least leave a different story for this weapon,
 					<thingDef>ComponentSpacer</thingDef>
 					<count>4</count>
 				</li>
+
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>DMS_Apparel_PilotSuit</thingDef>
+          			<stuff>Plasteel</stuff>
+					<count>1</count>
+				</li>
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>DMS_Apparel_ArrayHelmet</thingDef>
-          <stuff>Plasteel</stuff>
+          			<stuff>Plasteel</stuff>
 					<count>1</count>
 				</li>
         <li Class="ScenPart_StartingMech">

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- 判斷Har種族是否有服裝白名單，有白名單時將機動龍騎裝備加進去，使其能正常使用，不會直接消失。 -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/AlienRace.ThingDef_AlienRace[.]/alienRace/raceRestriction/whiteApparelList</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[.]/alienRace/raceRestriction/whiteApparelList</xpath>
+			<value>
+				<li>DMS_Apparel_PilotSuit</li><!-- 机甲驾驶服，非人類身形會破圖，不過要使用PV4需要穿著 -->
+				<li>DMS_Apparel_AT34_Core</li><!-- AT34 "耶塔" 核心 -->
+				<li>DMS_Apparel_AT34_Helmet</li>
+				<li>DMS_Apparel_FA47_Core</li><!-- F/A-47 "武库天使" 核心 -->
+				<li>DMS_Apparel_FA47_Helmet</li>
+				<li>DMS_Apparel_PF3_Core</li><!-- PF-3 "劳动者" 动力框架核心 -->
+				<li>DMS_Apparel_PV4_Core</li><!-- PV-4 "老夥伴" 核心 -->
+				<li>DMS_Apparel_PV4_Helmet</li>
+				<li>DMS_Apparel_PV8_Core</li><!-- PV-8 "独眼巨人" 核心 -->
+				<li>DMS_Apparel_PV8_Helmet</li>
+				<li>DMS_Apparel_Groyne_Helmet</li><!-- "防波堤" 头部 -->
+				<li>DMS_Apparel_Stahlhelm_Helmet</li><!-- "钢盔" 头部 -->
+				<!-- ArmsLeft -->
+				<li>DMS_Apparel_CargoBox</li>
+				<li>DMS_Apparel_InfraredSensor</li>
+				<li>DMS_Apparel_PulseShield</li>
+				<li>DMS_Apparel_Shield</li>
+				<li>DMS_Apparel_WorkArm</li>
+				<!-- Modules_ArmsRight -->
+				<li>DMS_Apparel_CombatSword</li>
+				<li>DMS_Apparel_PileBunker</li>
+				<li>DMS_Apparel_WeaponDMR</li>
+				<li>DMS_Apparel_WeaponLmg</li>
+				<!-- Modules_Pack -->
+				<li MayRequire="ludeon.rimworld.royalty">DMS_Apparel_JumpThruster</li>
+				<li>DMS_Apparel_PackCargo</li>
+				<li>DMS_Apparel_PackControlRelay</li>
+				<li>DMS_Apparel_PackEngineering</li>
+				<li>DMS_Apparel_PackFrame</li>
+				<!-- Modules_ShoulderLeft -->
+				<li>DMS_Apparel_MissilePod</li>
+				<li>DMS_Apparel_MissilePodPlus</li>
+				<li>DMS_Apparel_SomkeLauncher</li>
+				<li>DMS_Apparel_SwarmMissilePod</li>
+				<!-- Modules_ShoulderLeft -->
+				<li>DMS_Apparel_RelayAntenna</li>
+				<li>DMS_Apparel_TurretPackGAU</li>
+				<li>DMS_Apparel_TurretPackHeavy</li>
+				<li>DMS_Apparel_TurretPackLight</li>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

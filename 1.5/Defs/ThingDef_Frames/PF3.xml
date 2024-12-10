@@ -73,6 +73,7 @@
 			<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
       <SM_BodySizeOffset MayRequire="redmattis.betterprerequisites">0.75</SM_BodySizeOffset>
       <SM_Cosmetic_BodySizeOffset MayRequire="redmattis.betterprerequisites">-0.75</SM_Cosmetic_BodySizeOffset>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/PF3/apparel</wornGraphicPath>

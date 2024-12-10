@@ -5,7 +5,7 @@
 
             <li Class="PatchOperationAdd">
                 <xpath>
-                    Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+                    Defs/FactionDef[@Name="PirateBandBase" or @ParentName="PirateBandBase"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
                 <value>
                     <DMS_Dragoon_Pirate>1</DMS_Dragoon_Pirate>
                 </value>

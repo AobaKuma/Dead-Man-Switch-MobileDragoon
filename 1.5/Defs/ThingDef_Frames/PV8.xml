@@ -9,7 +9,7 @@
       <ThingDef>DMS_Apparel_PV8_Core</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>259</MaxHitPoints>
       <Mass>80</Mass>
     </statBases>
     <comps>
@@ -72,6 +72,7 @@
 			<WorkSpeedGlobal>-0.35</WorkSpeedGlobal>
       <SM_BodySizeOffset MayRequire="redmattis.betterprerequisites">1</SM_BodySizeOffset>
       <SM_Cosmetic_BodySizeOffset MayRequire="redmattis.betterprerequisites">-1</SM_Cosmetic_BodySizeOffset>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/PV8/apparel</wornGraphicPath>
@@ -181,6 +182,8 @@
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.2</MoveSpeed>
+      <HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/PV8/helmet</wornGraphicPath>
@@ -190,6 +193,9 @@
           <offset>(0,0,0.0)</offset>
         </defaultData>
       </drawData>
+      <tags>
+        <li>EVA</li>
+      </tags>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">

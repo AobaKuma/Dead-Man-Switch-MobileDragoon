@@ -123,19 +123,19 @@
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Core"]/statBases/ArmorRating_Sharp</xpath>
         <value>
-            <ArmorRating_Sharp>21</ArmorRating_Sharp>
+            <ArmorRating_Sharp>47</ArmorRating_Sharp>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Core"]/statBases/ArmorRating_Blunt</xpath>
         <value>
-            <ArmorRating_Blunt>48</ArmorRating_Blunt>
+            <ArmorRating_Blunt>61</ArmorRating_Blunt>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Core"]/statBases/ArmorRating_Heat</xpath>
         <value>
-            <ArmorRating_Heat>0.60</ArmorRating_Heat>
+            <ArmorRating_Heat>0.90</ArmorRating_Heat>
         </value>
     </Operation>
 
@@ -222,7 +222,7 @@
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_FA47_Core"]/statBases/ArmorRating_Heat</xpath>
         <value>
-            <ArmorRating_Heat>0.90</ArmorRating_Heat>
+            <ArmorRating_Heat>1.20</ArmorRating_Heat>
         </value>
     </Operation>
 

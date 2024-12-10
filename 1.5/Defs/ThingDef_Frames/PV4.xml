@@ -10,7 +10,7 @@
       <ThingDef>DMS_Apparel_PV4_Core</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>175</MaxHitPoints>
       <Mass>80</Mass>
     </statBases>
     <comps>
@@ -69,6 +69,7 @@
 			<MentalBreakThreshold>-0.5</MentalBreakThreshold>
       <SM_BodySizeOffset MayRequire="redmattis.betterprerequisites">1</SM_BodySizeOffset>
       <SM_Cosmetic_BodySizeOffset MayRequire="redmattis.betterprerequisites">-1</SM_Cosmetic_BodySizeOffset>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/PV4/apparel</wornGraphicPath>
@@ -131,7 +132,7 @@
       <ThingDef>DMS_Apparel_PV4_Helmet</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <MaxHitPoints>150</MaxHitPoints>
+      <MaxHitPoints>100</MaxHitPoints>
       <Mass>40</Mass>
     </statBases>
     <comps>
@@ -179,6 +180,8 @@
       <PsychicSensitivity>-0.75</PsychicSensitivity>
       <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
       <MoveSpeed>-0.35</MoveSpeed>
+      <HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/PV4/helmet</wornGraphicPath>
@@ -188,6 +191,9 @@
           <offset>(0,0,0.0)</offset>
         </defaultData>
       </drawData>
+      <tags>
+        <li>EVA</li>
+      </tags>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">

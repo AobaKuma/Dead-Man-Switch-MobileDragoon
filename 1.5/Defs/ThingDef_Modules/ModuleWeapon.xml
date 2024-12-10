@@ -172,9 +172,10 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>DMS_Bullet_DragoonShotgun</defaultProjectile>
+				<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+				<burstShotCount>5</burstShotCount>
         <warmupTime>0.8</warmupTime>
         <range>19.9</range>
-        <burstShotCount>1</burstShotCount>
         <soundCast>Shot_Autocannon</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>12</muzzleFlashScale>
@@ -182,8 +183,11 @@
     </verbs>
 		<costList>
 			<Tungsteel>85</Tungsteel>
-			<ComponentStamped>3</ComponentStamped>		
-		</costList>	
+			<ComponentStamped>3</ComponentStamped>
+		</costList>
+    <weaponTags>
+      <li>DMS_Dragoon_SG</li>
+    </weaponTags>
     <modExtensions>
       <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
         <def>MF_StandardMuzzleFalsh</def>
@@ -198,32 +202,33 @@
 			</li>
     </modExtensions>
   </ThingDef>
+
   <ThingDef ParentName="BaseBullet">
     <defName>DMS_Bullet_DragoonShotgun</defName>
-    <thingClass>WalkerGear.Projectile_ArcSpread</thingClass>
+    <!-- <thingClass>WalkerGear.Projectile_ArcSpread</thingClass> -->
     <label>canister darts</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Shotgun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>2</drawSize>
+      <drawSize>1.5</drawSize>
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>40</damageAmountBase>
-      <stoppingPower>4</stoppingPower>
-      <speed>55</speed>
+      <damageAmountBase>35</damageAmountBase>
+      <stoppingPower>2</stoppingPower>
+      <speed>75</speed>
       <armorPenetrationBase>0.55</armorPenetrationBase>
     </projectile>
     <comps>
       <li Class="WalkerGear.CompProperties_LaunchExhaust" />
     </comps>
     <modExtensions>
-      <li Class="WalkerGear.RotationalArcSpreadExtension">
+      <!-- <li Class="WalkerGear.RotationalArcSpreadExtension">
         <projectile>Bullet_Shotgun</projectile>
         <amount>5</amount>
         <arc>3</arc>
         <range>0~1</range>
-      </li>
+      </li> -->
     </modExtensions>
   </ThingDef>
 

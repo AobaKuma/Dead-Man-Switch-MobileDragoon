@@ -58,6 +58,7 @@
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.2</MoveSpeed>
+      <VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/BurstThruster/apparel</wornGraphicPath>

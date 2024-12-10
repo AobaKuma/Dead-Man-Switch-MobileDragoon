@@ -17,7 +17,8 @@
                             <power>24</power>
                             <cooldownTime>3.05</cooldownTime>
                             <chanceFactor>0.7</chanceFactor>
-                            <armorPenetrationBlunt>5.850</armorPenetrationBlunt>
+                            <armorPenetrationSharp>27.56</armorPenetrationSharp>
+                            <armorPenetrationBlunt>15.850</armorPenetrationBlunt>
                             <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
                         </li>
                         <li Class="CombatExtended.ToolCE">
@@ -27,7 +28,8 @@
                             </capacities>
                             <power>16</power>
                             <cooldownTime>2.55</cooldownTime>
-                            <armorPenetrationBlunt>3.680</armorPenetrationBlunt>
+                            <armorPenetrationSharp>14.8</armorPenetrationSharp>
+                            <armorPenetrationBlunt>10.680</armorPenetrationBlunt>
                             <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
                         </li>
                         <li Class="CombatExtended.ToolCE">
@@ -38,8 +40,87 @@
                             <power>24</power>
                             <cooldownTime>2.85</cooldownTime>
                             <chanceFactor>1.5</chanceFactor>
-                            <armorPenetrationBlunt>5.850</armorPenetrationBlunt>
+                            <armorPenetrationSharp>17.8</armorPenetrationSharp>
+                            <armorPenetrationBlunt>15.850</armorPenetrationBlunt>
                             <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                        </li>
+                    </tools>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Dragoon_Axe"]/tools</xpath>
+                <value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>stock</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>24</power>
+                            <cooldownTime>1</cooldownTime>
+                            <chanceFactor>0.7</chanceFactor>
+                            <armorPenetrationSharp>14.8</armorPenetrationSharp>
+                            <armorPenetrationBlunt>15.850</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>sweep</label>
+                            <capacities>
+                                <li>WG_HeavySweep</li>
+                            </capacities>
+                            <power>16</power>
+                            <cooldownTime>2.55</cooldownTime>
+                            <armorPenetrationSharp>20.78</armorPenetrationSharp>
+                            <armorPenetrationBlunt>21.680</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>poke</label>
+                            <capacities>
+                                <li>Poke</li>
+                            </capacities>
+                            <power>40</power>
+                            <cooldownTime>2.85</cooldownTime>
+                            <chanceFactor>2</chanceFactor>
+                            <armorPenetrationSharp>30.1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>15.850</armorPenetrationBlunt>
+                        </li>
+                    </tools>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Dragoon_Sword"]/tools</xpath>
+                <value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>stock</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>24</power>
+                            <cooldownTime>1</cooldownTime>
+                            <chanceFactor>0.7</chanceFactor>
+                            <armorPenetrationSharp>13.5</armorPenetrationSharp>
+                            <armorPenetrationBlunt>8.850</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>sweep</label>
+                            <capacities>
+                                <li>WG_HeavySweep</li>
+                            </capacities>
+                            <power>16</power>
+                            <cooldownTime>2.55</cooldownTime>
+                            <armorPenetrationSharp>26.9</armorPenetrationSharp>
+                            <armorPenetrationBlunt>13.680</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>poke</label>
+                            <capacities>
+                                <li>Poke</li>
+                            </capacities>
+                            <power>40</power>
+                            <cooldownTime>2.85</cooldownTime>
+                            <chanceFactor>2</chanceFactor>
+                            <armorPenetrationSharp>40.4</armorPenetrationSharp>
+                            <armorPenetrationBlunt>30.850</armorPenetrationBlunt>
                         </li>
                     </tools>
                 </value>
@@ -150,6 +231,8 @@
                     <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                     <hasStandardCommand>true</hasStandardCommand>
                     <defaultProjectile>Bullet_40x102mm_Buck</defaultProjectile>
+                    <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+                    <burstShotCount>1</burstShotCount>
                     <warmupTime>0.6</warmupTime>
                     <range>25</range>
                     <soundCast>Shot_Shotgun</soundCast>

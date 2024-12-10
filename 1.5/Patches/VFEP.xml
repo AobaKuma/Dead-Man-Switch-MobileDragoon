@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Pirates</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>*/ThingDef[@Name="VFEP_BaseWarcasketGun"]/modExtensions/li[@Class =
+                        "HeavyWeapons.HeavyWeapon"]/supportedArmors</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>*/ThingDef[@Name="VFEP_BaseWarcasketGun"]/modExtensions/li[@Class =
+                            "HeavyWeapons.HeavyWeapon"]/supportedArmors</xpath>
+                        <value>
+                            <li>DMS_Apparel_AT34_Core</li>
+                            <li>DMS_Apparel_PV4_Core</li>
+                            <li>DMS_Apparel_PV8_Core</li>
+                            <li>DMS_Apparel_FA47_Core</li>
+                            <li>DMS_Apparel_PF3_Core</li>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>*/ThingDef[@Name="VFEP_BaseWarcasketGun"]/modExtensions/li[@Class =
+                            "HeavyWeapons.HeavyWeapon"]</xpath>
+                        <value>
+                            <supportedArmors>
+                                <li>DMS_Apparel_AT34_Core</li>
+                                <li>DMS_Apparel_PV4_Core</li>
+                                <li>DMS_Apparel_PV8_Core</li>
+                                <li>DMS_Apparel_FA47_Core</li>
+                                <li>DMS_Apparel_PF3_Core</li>
+                            </supportedArmors>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>*/PawnKindDef[defName="DMS_Dragoon_Outlander" or defName="DMS_Dragoon_Pirate"]/weaponTags</xpath>
+                    <value>
+                        <li>WarcasketAll</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

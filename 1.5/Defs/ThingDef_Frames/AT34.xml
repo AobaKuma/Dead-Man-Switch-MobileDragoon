@@ -12,7 +12,7 @@
       <texPath>Things/Item/Module</texPath>
     </graphicData>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>150</MaxHitPoints>
       <Mass>80</Mass>
     </statBases>
     <comps>
@@ -186,6 +186,8 @@
 			<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
       <MoveSpeed>-0.15</MoveSpeed>
       <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+      <HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/AT34/helmet</wornGraphicPath>
@@ -195,6 +197,9 @@
           <offset>(0,0,0)</offset>
         </defaultData>
       </drawData>
+      <tags>
+        <li>EVA</li>
+      </tags>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">

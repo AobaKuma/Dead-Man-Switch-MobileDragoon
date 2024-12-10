@@ -10,7 +10,7 @@
       <ThingDef>DMS_Apparel_FA47_Core</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>200</MaxHitPoints>
       <Mass>80</Mass>
     </statBases>
     <comps>
@@ -75,6 +75,8 @@
 			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
       <SM_BodySizeOffset MayRequire="redmattis.betterprerequisites">1</SM_BodySizeOffset>
       <SM_Cosmetic_BodySizeOffset MayRequire="redmattis.betterprerequisites">-1</SM_Cosmetic_BodySizeOffset>
+      <VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.8</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/FA47/apparel</wornGraphicPath>
@@ -182,6 +184,8 @@
     <equippedStatOffsets>
       <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
       <MoveSpeed>-0.2</MoveSpeed>
+      <HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/FA47/helmet</wornGraphicPath>
@@ -191,6 +195,9 @@
           <offset>(0,0,0.0)</offset>
         </defaultData>
       </drawData>
+      <tags>
+        <li>EVA</li>
+      </tags>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">

@@ -82,6 +82,7 @@
     <apparelMoney>200~500</apparelMoney>
     <weaponMoney>1300~2000</weaponMoney>
     <weaponTags>
+      <li>DMS_Dragoon_SG</li>
       <li>DMS_MechWeaponHeavy</li>
     </weaponTags>
     <techHediffsRequired>
@@ -160,6 +161,7 @@
     <apparelMoney>2000~5000</apparelMoney>
     <weaponMoney>2000~10000</weaponMoney>
     <weaponTags>
+      <li>DMS_Dragoon_SG</li>
       <li>DMS_MechWeaponHeavy</li>
       <li>DMS_DragoonGun</li>
     </weaponTags>
@@ -498,6 +500,7 @@
       <li>GunHeavy</li>
       <li>Minigun</li>
       <li>Dragoon_Melee</li>
+      <li>DMS_Dragoon_SG</li>
     </weaponTags>
     <weaponMoney>1500~3000</weaponMoney>
     <techHediffsChance>0.04</techHediffsChance>

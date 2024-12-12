@@ -428,7 +428,7 @@
     </recipeMaker>
     <smeltProducts>
       <Steel>120</Steel>
-	  <Tungsteel>40</Tungsteel>
+	    <Tungsteel>40</Tungsteel>
     </smeltProducts>
     <butcherProducts>
       <ChunkSlagSteel>5</ChunkSlagSteel>
@@ -436,7 +436,7 @@
     </butcherProducts>
     <costList>
       <Steel>250</Steel>
-	  <Tungsteel>120</Tungsteel>
+	    <Tungsteel>120</Tungsteel>
       <ComponentStamped>5</ComponentStamped>
     </costList>
     <comps>
@@ -465,8 +465,8 @@
       <Mass>80</Mass>
     </statBases>
     <equippedStatOffsets>
-			<CarryingCapacity>100</CarryingCapacity>
-      <MoveSpeed>-0.25</MoveSpeed>
+			<CarryingCapacity>150</CarryingCapacity>
+      <MoveSpeed>0.25</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Modifications/HydraulicFrame/render</wornGraphicPath>

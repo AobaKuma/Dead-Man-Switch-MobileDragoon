@@ -23,16 +23,16 @@
   <!-- EN: launch missile -->
   <DMS_Apparel_MissilePodPlus.verbs.launch_missile.label>发射导弹</DMS_Apparel_MissilePodPlus.verbs.launch_missile.label>
   
-  <!-- EN: Somke launcher -->
-  <DMS_Apparel_SomkeLauncher.label>烟雾发射器</DMS_Apparel_SomkeLauncher.label>
+  <!-- EN: Smoke launcher -->
+  <DMS_Apparel_SmokeLauncher.label>烟雾发射器</DMS_Apparel_SmokeLauncher.label>
   <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
-  <DMS_Apparel_SomkeLauncher.description>一种简单的遥控发射器，能够装载烟雾弹并提供精确的掩护。</DMS_Apparel_SomkeLauncher.description>
+  <DMS_Apparel_SmokeLauncher.description>一种简单的遥控发射器，能够装载烟雾弹并提供精确的掩护。</DMS_Apparel_SmokeLauncher.description>
   <!-- EN: smoke shell -->
-  <DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.chargeNoun>烟雾弹</DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.chargeNoun>
+  <DMS_Apparel_SmokeLauncher.comps.CompApparelReloadable.chargeNoun>烟雾弹</DMS_Apparel_SmokeLauncher.comps.CompApparelReloadable.chargeNoun>
   <!-- EN: on cooldown -->
-  <DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.cooldownGerund>冷却中</DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.cooldownGerund>
+  <DMS_Apparel_SmokeLauncher.comps.CompApparelReloadable.cooldownGerund>冷却中</DMS_Apparel_SmokeLauncher.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: launch smoke shell -->
-  <DMS_Apparel_SomkeLauncher.verbs.launch_smoke_shell.label>发射烟雾弹</DMS_Apparel_SomkeLauncher.verbs.launch_smoke_shell.label>
+  <DMS_Apparel_SmokeLauncher.verbs.launch_smoke_shell.label>发射烟雾弹</DMS_Apparel_SmokeLauncher.verbs.launch_smoke_shell.label>
   
   <!-- EN: Swarm rocket Pod -->
   <DMS_Apparel_SwarmMissilePod.label>集群火箭舱</DMS_Apparel_SwarmMissilePod.label>
@@ -55,10 +55,10 @@
   <!-- EN: A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles. -->
   <DMS_Module_MissilePodPlus.description>一种安装在各种武器平台上的导弹吊舱模块，重量更重，但能够装载双倍数量的导弹。</DMS_Module_MissilePodPlus.description>
   
-  <!-- EN: Somke launcher -->
-  <DMS_Module_SomkeLauncher.label>烟雾发射器模块</DMS_Module_SomkeLauncher.label>
+  <!-- EN: Smoke launcher -->
+  <DMS_Module_SmokeLauncher.label>烟雾发射器模块</DMS_Module_SmokeLauncher.label>
   <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
-  <DMS_Module_SomkeLauncher.description>一种简单的遥控发射器，能够装载烟雾弹并提供精确的掩护。</DMS_Module_SomkeLauncher.description>
+  <DMS_Module_SmokeLauncher.description>一种简单的遥控发射器，能够装载烟雾弹并提供精确的掩护。</DMS_Module_SmokeLauncher.description>
   
   <!-- EN: Swarm rocket Pod -->
   <DMS_Module_SwarmMissilePod.label>集群火箭舱模块</DMS_Module_SwarmMissilePod.label>

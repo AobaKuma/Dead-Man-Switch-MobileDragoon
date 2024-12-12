@@ -3,12 +3,12 @@
 
     <!-- (左)煙霧發射器 -->
     <ThingDef ParentName="DMS_ModuleItemMountLeft">
-        <defName>DMS_Module_SomkeLauncher</defName>
-        <label>Somke launcher</label>
+        <defName>DMS_Module_SmokeLauncher</defName>
+        <label>Smoke launcher</label>
         <description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</description>
         <!-- 一種構造簡單的遙控發射裝置，能夠裝填煙霧砲彈並提供準確的掩護。 -->
         <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_SomkeLauncher</ThingDef>
+            <ThingDef>DMS_Apparel_SmokeLauncher</ThingDef>
         </descriptionHyperlinks>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
@@ -24,8 +24,7 @@
         </costList>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <EquipedThingDef>DMS_Apparel_SomkeLauncher</EquipedThingDef>
-                <hasReloadableProps>true</hasReloadableProps>
+                <EquipedThingDef>DMS_Apparel_SmokeLauncher</EquipedThingDef>
                 <slots>
                     <li>MountLeft</li>
                 </slots>
@@ -33,13 +32,13 @@
         </comps>
     </ThingDef>
     <ThingDef ParentName="DMS_ModuleApparelMountLeft">
-        <defName>DMS_Apparel_SomkeLauncher</defName>
-        <label>Somke launcher</label>
+        <defName>DMS_Apparel_SmokeLauncher</defName>
+        <label>Smoke launcher</label>
         <description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</description>
         <descriptionHyperlinks>
-            <ThingDef>DMS_Module_SomkeLauncher</ThingDef>
+            <ThingDef>DMS_Module_SmokeLauncher</ThingDef>
         </descriptionHyperlinks><graphicData>
-            <texPath>Things/Dragoon/SomkeLauncher/apparel_south</texPath>
+            <texPath>Things/Dragoon/SmokeLauncher/apparel_south</texPath>
         </graphicData>
         <statBases>
             <MaxHitPoints>20</MaxHitPoints>
@@ -49,7 +48,7 @@
             <MoveSpeed>-0.25</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <wornGraphicPath>Things/Dragoon/SomkeLauncher/apparel</wornGraphicPath>
+            <wornGraphicPath>Things/Dragoon/SmokeLauncher/apparel</wornGraphicPath>
             <drawData>
                 <scale>0.75</scale>
                 <defaultData>
@@ -109,8 +108,7 @@
                 <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
             </li>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <hasReloadableProps>true</hasReloadableProps>
-                <ItemDef>DMS_Module_SomkeLauncher</ItemDef>
+                <ItemDef>DMS_Module_SmokeLauncher</ItemDef>
                 <slots>
                     <li>MountLeft</li>
                 </slots>

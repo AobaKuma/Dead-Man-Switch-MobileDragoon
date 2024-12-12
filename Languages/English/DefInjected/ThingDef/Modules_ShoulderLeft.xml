@@ -23,16 +23,16 @@
   <!-- EN: launch missile -->
   <DMS_Apparel_MissilePodPlus.verbs.launch_missile.label>launch missile</DMS_Apparel_MissilePodPlus.verbs.launch_missile.label>
   
-  <!-- EN: Somke launcher -->
-  <DMS_Apparel_SomkeLauncher.label>Somke launcher</DMS_Apparel_SomkeLauncher.label>
+  <!-- EN: Smoke launcher -->
+  <DMS_Apparel_SmokeLauncher.label>Smoke launcher</DMS_Apparel_SmokeLauncher.label>
   <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
-  <DMS_Apparel_SomkeLauncher.description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</DMS_Apparel_SomkeLauncher.description>
+  <DMS_Apparel_SmokeLauncher.description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</DMS_Apparel_SmokeLauncher.description>
   <!-- EN: smoke shell -->
-  <DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.chargeNoun>smoke shell</DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.chargeNoun>
+  <DMS_Apparel_SmokeLauncher.comps.CompApparelReloadable.chargeNoun>smoke shell</DMS_Apparel_SmokeLauncher.comps.CompApparelReloadable.chargeNoun>
   <!-- EN: on cooldown -->
-  <DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.cooldownGerund>on cooldown</DMS_Apparel_SomkeLauncher.comps.CompApparelReloadable.cooldownGerund>
+  <DMS_Apparel_SmokeLauncher.comps.CompApparelReloadable.cooldownGerund>on cooldown</DMS_Apparel_SmokeLauncher.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: launch smoke shell -->
-  <DMS_Apparel_SomkeLauncher.verbs.launch_smoke_shell.label>launch smoke shell</DMS_Apparel_SomkeLauncher.verbs.launch_smoke_shell.label>
+  <DMS_Apparel_SmokeLauncher.verbs.launch_smoke_shell.label>launch smoke shell</DMS_Apparel_SmokeLauncher.verbs.launch_smoke_shell.label>
   
   <!-- EN: Swarm rocket Pod -->
   <DMS_Apparel_SwarmMissilePod.label>Swarm rocket Pod</DMS_Apparel_SwarmMissilePod.label>
@@ -55,10 +55,10 @@
   <!-- EN: A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles. -->
   <DMS_Module_MissilePodPlus.description>A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles.</DMS_Module_MissilePodPlus.description>
   
-  <!-- EN: Somke launcher -->
-  <DMS_Module_SomkeLauncher.label>Somke launcher</DMS_Module_SomkeLauncher.label>
+  <!-- EN: Smoke launcher -->
+  <DMS_Module_SmokeLauncher.label>Smoke launcher</DMS_Module_SmokeLauncher.label>
   <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
-  <DMS_Module_SomkeLauncher.description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</DMS_Module_SomkeLauncher.description>
+  <DMS_Module_SmokeLauncher.description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</DMS_Module_SmokeLauncher.description>
   
   <!-- EN: Swarm rocket Pod -->
   <DMS_Module_SwarmMissilePod.label>Swarm rocket Pod</DMS_Module_SwarmMissilePod.label>

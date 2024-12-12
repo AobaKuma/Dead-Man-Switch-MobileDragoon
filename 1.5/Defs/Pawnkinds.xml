@@ -372,7 +372,7 @@
         <chanceApparels>
           <li>
             <chance>0.25</chance>
-            <apparel>DMS_Apparel_SomkeLauncher</apparel>
+            <apparel>DMS_Apparel_SmokeLauncher</apparel>
           </li>
           <li>
             <chance>0.05</chance>

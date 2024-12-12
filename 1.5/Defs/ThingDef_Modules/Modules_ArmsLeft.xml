@@ -420,6 +420,7 @@
       <Mass>20</Mass>
     </statBases>
     <equippedStatOffsets>
+      <CarryingCapacity>70</CarryingCapacity>
       <MoveSpeed>-0.05</MoveSpeed>
       <RangedCooldownFactor>-0.05</RangedCooldownFactor>
     </equippedStatOffsets>

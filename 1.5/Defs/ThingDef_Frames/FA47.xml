@@ -26,7 +26,7 @@
       <skillRequirements>
         <Crafting>12</Crafting>
       </skillRequirements>
-	    <workAmount>60000</workAmount>
+      <workAmount>60000</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Steel>45</Steel>
@@ -56,7 +56,7 @@
     <graphicData>
       <texPath>Things/Dragoon/PV8/apparel_south</texPath>
     </graphicData>
-	<tickerType>Normal</tickerType>
+    <tickerType>Normal</tickerType>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_FA47_Core</ThingDef>
     </descriptionHyperlinks>
@@ -64,28 +64,35 @@
       <Mass>80</Mass>
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.80</ArmorRating_Heat>
+      <ArmorRating_Heat>1.10</ArmorRating_Heat>
       <JumpRange MayRequire="ludeon.rimworld.royalty">9.9</JumpRange>
-      <MoveSpeed>7</MoveSpeed>
-			<Insulation_Cold>104</Insulation_Cold>
-			<Insulation_Heat>128</Insulation_Heat>
+      <MoveSpeed>7.8</MoveSpeed>
+      <Insulation_Cold>104</Insulation_Cold>
+      <Insulation_Heat>128</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
-			<CarryingCapacity>275</CarryingCapacity>
-			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
-      <SM_BodySizeOffset MayRequire="redmattis.betterprerequisites">1</SM_BodySizeOffset>
-      <SM_Cosmetic_BodySizeOffset MayRequire="redmattis.betterprerequisites">-1</SM_Cosmetic_BodySizeOffset>
+      <CarryingCapacity>275</CarryingCapacity>
       <VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
       <DecompressionResistance MayRequire="kentington.saveourship2">0.8</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/FA47/apparel</wornGraphicPath>
-      <drawData>
-        <scale>2.25</scale>
-        <dataNorth>
-          <layer>5</layer>
-        </dataNorth>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>1</baseLayer>
+          <drawSize>2.25</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/FA47/apparel</texPath>
+          <drawData>
+            <dataNorth>
+              <layer>5</layer>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -150,7 +157,7 @@
       <skillRequirements>
         <Crafting>12</Crafting>
       </skillRequirements>
-	    <workAmount>20000</workAmount>
+      <workAmount>20000</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Steel>15</Steel>
@@ -188,13 +195,23 @@
       <DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/FA47/helmet</wornGraphicPath>
-      <drawData>
-        <defaultData>
-          <layer>20</layer>
-          <offset>(0,0,0.0)</offset>
-        </defaultData>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelHead</parentTagDef>
+          <drawSize>1</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/FA47/helmet</texPath>
+          <drawData>
+            <defaultData>
+              <layer>20</layer>
+              <offset>(0,0,0)</offset>
+            </defaultData>
+          </drawData>
+        </li>
+      </renderNodeProperties>
       <tags>
         <li>EVA</li>
       </tags>

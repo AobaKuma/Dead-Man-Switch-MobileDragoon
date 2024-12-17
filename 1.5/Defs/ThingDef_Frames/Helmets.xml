@@ -67,13 +67,23 @@
       <DecompressionResistance MayRequire="kentington.saveourship2">0.15</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/Groyne/helmet</wornGraphicPath>
-      <drawData>
-        <defaultData>
-          <layer>20</layer>
-          <offset>(0,0,0)</offset>
-        </defaultData>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelHead</parentTagDef>
+          <drawSize>1</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/Groyne/helmet</texPath>
+          <drawData>
+            <defaultData>
+              <layer>20</layer>
+              <offset>(0,0,0)</offset>
+            </defaultData>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -154,13 +164,23 @@
       <DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/Stahlhelm/helmet</wornGraphicPath>
-      <drawData>
-        <defaultData>
-          <layer>20</layer>
-          <offset>(0,0,0)</offset>
-        </defaultData>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelHead</parentTagDef>
+          <drawSize>1</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/Stahlhelm/helmet</texPath>
+          <drawData>
+            <defaultData>
+              <layer>20</layer>
+              <offset>(0,0,0)</offset>
+            </defaultData>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">

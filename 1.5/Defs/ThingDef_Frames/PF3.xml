@@ -71,18 +71,25 @@
     <equippedStatOffsets>
 			<CarryingCapacity>150</CarryingCapacity>
 			<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
-      <SM_BodySizeOffset MayRequire="redmattis.betterprerequisites">0.75</SM_BodySizeOffset>
-      <SM_Cosmetic_BodySizeOffset MayRequire="redmattis.betterprerequisites">-0.75</SM_Cosmetic_BodySizeOffset>
       <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/PF3/apparel</wornGraphicPath>
-      <drawData>
-        <scale>1.5</scale>
-        <dataNorth>
-          <layer>5</layer>
-        </dataNorth>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <drawSize>1.5</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/PF3/apparel</texPath>
+          <drawData>
+            <dataNorth>
+              <layer>5</layer>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">

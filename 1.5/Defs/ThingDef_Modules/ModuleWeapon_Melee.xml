@@ -20,6 +20,9 @@
     <statBases>
       <Mass>18</Mass>
     </statBases>
+    <recipeMaker>
+      <workAmount>12000</workAmount>
+    </recipeMaker>
 		<costList>
 			<Tungsteel>100</Tungsteel>
 			<ComponentStamped>2</ComponentStamped>

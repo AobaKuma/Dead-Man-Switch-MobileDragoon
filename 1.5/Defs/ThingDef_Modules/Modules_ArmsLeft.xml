@@ -29,7 +29,7 @@
     <costList>
       <Steel>150</Steel>
       <ComponentIndustrial>4</ComponentIndustrial>
-	  <ComponentStamped>4</ComponentStamped>
+	    <ComponentStamped>4</ComponentStamped>
       <BroadshieldCore MayRequire="ludeon.rimworld.royalty">1</BroadshieldCore>
     </costList>
     <comps>
@@ -59,28 +59,35 @@
       <MoveSpeed>-0.12</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/PulseShield/apparel</wornGraphicPath>
-      <drawData>
-        <scale>0.75</scale>
-        <defaultData>
-          <layer>20</layer>
-        </defaultData>
-        <dataSouth>
-          <offset>(0.75,0,-0.10)</offset>
-        </dataSouth>
-        <dataNorth>
-          <offset>(-0.50,0,0.15)</offset>
-          <layer>0</layer>
-        </dataNorth>
-        <dataWest>
-          <offset>(-0.15,0,-0.10)</offset>
-          <layer>64</layer>
-        </dataWest>
-        <dataEast>
-          <offset>(-0.80,0,0.8)</offset>
-          <layer>-1</layer>
-        </dataEast>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>20</baseLayer>
+          <drawSize>0.75</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/PulseShield/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <offset>(0.75,0,-0.10)</offset>
+            </dataSouth>
+            <dataNorth>
+              <offset>(-0.50,0,0.15)</offset>
+              <layer>0</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(-0.15,0,-0.10)</offset>
+              <layer>64</layer>
+            </dataWest>
+            <dataEast>
+              <offset>(-0.80,0,0.8)</offset>
+              <layer>-1</layer>
+            </dataEast>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -157,28 +164,35 @@
       <ConstructionSpeedFactor>0.75</ConstructionSpeedFactor>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/WorkArm/apparel</wornGraphicPath>
-      <drawData>
-        <scale>1.4</scale>
-        <defaultData>
-          <layer>20</layer>
-        </defaultData>
-        <dataSouth>
-          <offset>(0.8,0,0.3)</offset>
-        </dataSouth>
-        <dataNorth>
-          <offset>(-0.80,0,0.45)</offset>
-          <layer>73</layer>
-        </dataNorth>
-        <dataWest>
-          <offset>(0.35,0,0.20)</offset>
-          <layer>64</layer>
-        </dataWest>
-        <dataEast>
-          <offset>(0.25,0,0.4)</offset>
-          <layer>-1</layer>
-        </dataEast>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>20</baseLayer>
+          <drawSize>1.4</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/WorkArm/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <offset>(0.8,0,0.3)</offset>
+            </dataSouth>
+            <dataNorth>
+              <offset>(-0.80,0,0.45)</offset>
+              <layer>73</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(0.35,0,0.20)</offset>
+              <layer>64</layer>
+            </dataWest>
+            <dataEast>
+              <offset>(0.25,0,0.4)</offset>
+              <layer>-1</layer>
+            </dataEast>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -245,28 +259,35 @@
       <MoveSpeed>-0.12</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/SolidShield/apparel</wornGraphicPath>
-      <drawData>
-        <scale>1.3</scale>
-        <defaultData>
-          <layer>20</layer>
-        </defaultData>
-        <dataSouth>
-          <offset>(0.75,0,0.2)</offset>
-        </dataSouth>
-        <dataNorth>
-          <offset>(-0.50,0,0.3)</offset>
-          <layer>0</layer>
-        </dataNorth>
-        <dataWest>
-          <offset>(-0.3,0,-0.20)</offset>
-          <layer>64</layer>
-        </dataWest>
-        <dataEast>
-          <offset>(0.80,0,0.8)</offset>
-          <layer>-1</layer>
-        </dataEast>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>20</baseLayer>
+          <drawSize>1.3</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/SolidShield/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <offset>(0.75,0,0.2)</offset>
+            </dataSouth>
+            <dataNorth>
+              <offset>(-0.50,0,0.3)</offset>
+              <layer>0</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(-0.3,0,-0.20)</offset>
+              <layer>64</layer>
+            </dataWest>
+            <dataEast>
+              <offset>(0.80,0,0.8)</offset>
+              <layer>-1</layer>
+            </dataEast>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -338,28 +359,35 @@
       <MoveSpeed>-0.05</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/InfraredSensor/apparel</wornGraphicPath>
-      <drawData>
-        <scale>0.8</scale>
-        <defaultData>
-          <layer>20</layer>
-        </defaultData>
-        <dataSouth>
-          <offset>(0.75,0,0.20)</offset>
-        </dataSouth>
-        <dataNorth>
-          <offset>(-0.75,0,0.30)</offset>
-          <layer>0</layer>
-        </dataNorth>
-        <dataWest>
-          <offset>(0.10,0,0.15)</offset>
-          <layer>64</layer>
-        </dataWest>
-        <dataEast>
-          <offset>(-0.80,0,0.8)</offset>
-          <layer>-1</layer>
-        </dataEast>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>20</baseLayer>
+          <drawSize>0.8</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/InfraredSensor/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <offset>(0.75,0,0.20)</offset>
+            </dataSouth>
+            <dataNorth>
+              <offset>(-0.75,0,0.30)</offset>
+              <layer>0</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(0.10,0,0.15)</offset>
+              <layer>64</layer>
+            </dataWest>
+            <dataEast>
+              <offset>(-0.80,0,0.8)</offset>
+              <layer>-1</layer>
+            </dataEast>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -370,7 +398,6 @@
       </li>
     </comps>
   </ThingDef>
-
    <!-- (左)彈掛 -->
    <ThingDef ParentName="DMS_ModuleItemArmLeft">
     <defName>DMS_Module_CargoBox</defName>
@@ -425,28 +452,35 @@
       <RangedCooldownFactor>-0.05</RangedCooldownFactor>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/CargoBox/apparel</wornGraphicPath>
-      <drawData>
-        <scale>0.8</scale>
-        <defaultData>
-          <layer>20</layer>
-        </defaultData>
-        <dataSouth>
-          <offset>(0.65,0,0.05)</offset>
-        </dataSouth>
-        <dataNorth>
-          <offset>(-0.60,0,0.15)</offset>
-          <layer>0</layer>
-        </dataNorth>
-        <dataWest>
-          <offset>(0.0,0,-0.1)</offset>
-          <layer>64</layer>
-        </dataWest>
-        <dataEast>
-          <offset>(0.4,0,0.35)</offset>
-          <layer>-1</layer>
-        </dataEast>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>20</baseLayer>
+          <drawSize>0.8</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/CargoBox/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <offset>(0.65,0,0.05)</offset>
+            </dataSouth>
+            <dataNorth>
+              <offset>(-0.60,0,0.15)</offset>
+              <layer>0</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(0.0,0,-0.1)</offset>
+              <layer>64</layer>
+            </dataWest>
+            <dataEast>
+              <offset>(0.4,0,0.35)</offset>
+              <layer>-1</layer>
+            </dataEast>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">

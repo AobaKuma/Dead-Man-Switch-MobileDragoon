@@ -47,17 +47,17 @@
             <MoveSpeed>-0.1</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <wornGraphicPath>Things/Dragoon/RelayAntenna/apparel</wornGraphicPath>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
-                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
+                    <nodeClass>PawnRenderNode</nodeClass>
+                    <workerClass>PawnRenderNodeWorker</workerClass>
+                    <texPath>Things/Dragoon/RelayAntenna/apparel</texPath>
                     <parentTagDef>WGApparelBody</parentTagDef>
+                    <baseLayer>20</baseLayer>
+                    <drawSize>1.125</drawSize>
+                    <pawnType>Any</pawnType>
+                    <useGraphic>true</useGraphic>
                     <drawData>
-                        <scale>1.125</scale>
-                        <defaultData>
-                            <layer>20</layer>
-                        </defaultData>
                         <dataSouth>
                             <offset>(-0.90,0,0.90)</offset>
                             <layer>0</layer>
@@ -141,14 +141,15 @@
             <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
-                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
+                    <nodeClass>PawnRenderNode</nodeClass>
+                    <workerClass>PawnRenderNodeWorker</workerClass>
+                    <texPath>Things/Dragoon/TurretPack/apparel</texPath>
                     <parentTagDef>WGApparelBody</parentTagDef>
+                    <baseLayer>20</baseLayer>
+                    <drawSize>0.75</drawSize>
+                    <pawnType>Any</pawnType>
+                    <useGraphic>true</useGraphic>
                     <drawData>
-                        <scale>0.75</scale>
-                        <defaultData>
-                            <layer>20</layer>
-                        </defaultData>
                         <dataSouth>
                             <offset>(-0.50,0,1.05)</offset>
                             <layer>0</layer>
@@ -289,17 +290,17 @@
         </equippedStatOffsets>
         <tickerType>Normal</tickerType>
         <apparel>
-            <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
-                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
+                    <nodeClass>PawnRenderNode</nodeClass>
+                    <workerClass>PawnRenderNodeWorker</workerClass>
+                    <texPath>Things/Dragoon/TurretPack/apparel</texPath>
                     <parentTagDef>WGApparelBody</parentTagDef>
+                    <baseLayer>20</baseLayer>
+                    <drawSize>0.75</drawSize>
+                    <pawnType>Any</pawnType>
+                    <useGraphic>true</useGraphic>
                     <drawData>
-                        <scale>0.75</scale>
-                        <defaultData>
-                            <layer>20</layer>
-                        </defaultData>
                         <dataSouth>
                             <offset>(-0.50,0,1.05)</offset>
                             <layer>0</layer>
@@ -443,17 +444,17 @@
         </equippedStatOffsets>
         <tickerType>Normal</tickerType>
         <apparel>
-            <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
-                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
+                    <nodeClass>PawnRenderNode</nodeClass>
+                    <workerClass>PawnRenderNodeWorker</workerClass>
+                    <texPath>Things/Dragoon/TurretPack/apparel</texPath>
                     <parentTagDef>WGApparelBody</parentTagDef>
+                    <baseLayer>20</baseLayer>
+                    <drawSize>0.75</drawSize>
+                    <pawnType>Any</pawnType>
+                    <useGraphic>true</useGraphic>
                     <drawData>
-                        <scale>0.75</scale>
-                        <defaultData>
-                            <layer>20</layer>
-                        </defaultData>
                         <dataSouth>
                             <offset>(-0.50,0,1.05)</offset>
                             <layer>0</layer>

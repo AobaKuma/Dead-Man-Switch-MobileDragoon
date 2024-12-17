@@ -6,7 +6,7 @@
         <defName>DMS_Module_SmokeLauncher</defName>
         <label>Smoke launcher</label>
         <description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</description>
-        <!-- 一種構造簡單的遙控發射裝置，能夠裝填煙霧砲彈並提供準確的掩護。 -->
+        <!--一種構造簡單的遙控發射裝置，能夠裝填煙霧砲彈並提供準確的掩護。-->
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_SmokeLauncher</ThingDef>
         </descriptionHyperlinks>
@@ -16,10 +16,10 @@
         </recipeMaker>
         <statBases>
             <MaxHitPoints>20</MaxHitPoints>
-            <Mass>35</Mass>
+            <Mass>25</Mass>
         </statBases>
         <costList>
-            <Steel>150</Steel>
+            <Steel>50</Steel>
             <ComponentIndustrial>1</ComponentIndustrial>
         </costList>
         <comps>
@@ -37,40 +37,48 @@
         <description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Module_SmokeLauncher</ThingDef>
-        </descriptionHyperlinks><graphicData>
+        </descriptionHyperlinks>
+        <graphicData>
             <texPath>Things/Dragoon/SmokeLauncher/apparel_south</texPath>
         </graphicData>
         <statBases>
             <MaxHitPoints>20</MaxHitPoints>
-            <Mass>35</Mass>
+            <Mass>25</Mass>
         </statBases>
         <equippedStatOffsets>
-            <MoveSpeed>-0.25</MoveSpeed>
+            <MoveSpeed>-0.1</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <wornGraphicPath>Things/Dragoon/SmokeLauncher/apparel</wornGraphicPath>
-            <drawData>
-                <scale>0.75</scale>
-                <defaultData>
-                    <layer>30</layer>
-                </defaultData>
-                <dataSouth>
-                    <offset>(1,0,0.75)</offset>
-                    <layer>0</layer>
-                </dataSouth>
-                <dataNorth>
-                    <offset>(-1,0,0.55)</offset>
-                    <layer>80</layer>
-                </dataNorth>
-                <dataWest>
-                    <offset>(0.75,0,0.45)</offset>
-                    <layer>80</layer>
-                </dataWest>
-                <dataEast>
-                    <offset>(0.1,0,0.75)</offset>
-                    <layer>-2</layer>
-                </dataEast>
-            </drawData>
+            <renderNodeProperties>
+                <li>
+                    <nodeClass>PawnRenderNode</nodeClass>
+                    <workerClass>PawnRenderNodeWorker</workerClass>
+                    <parentTagDef>WGApparelBody</parentTagDef>
+                    <baseLayer>30</baseLayer>
+                    <drawSize>0.75</drawSize>
+                    <pawnType>Any</pawnType>
+                    <useGraphic>true</useGraphic>
+                    <texPath>Things/Dragoon/SmokeLauncher/apparel</texPath>
+                    <drawData>
+                        <dataSouth>
+                            <offset>(1,0,0.75)</offset>
+                            <layer>0</layer>
+                        </dataSouth>
+                        <dataNorth>
+                            <offset>(-1,0,0.55)</offset>
+                            <layer>80</layer>
+                        </dataNorth>
+                        <dataWest>
+                            <offset>(0.75,0,0.45)</offset>
+                            <layer>80</layer>
+                        </dataWest>
+                        <dataEast>
+                            <offset>(0.1,0,0.75)</offset>
+                            <layer>-2</layer>
+                        </dataEast>
+                    </drawData>
+                </li>
+            </renderNodeProperties>
         </apparel>
         <verbs>
             <li>
@@ -129,7 +137,7 @@
 			<workAmount>22500</workAmount>
         </recipeMaker>
         <statBases>
-            <MaxHitPoints>20</MaxHitPoints>
+            <MaxHitPoints>40</MaxHitPoints>
             <Mass>35</Mass>
         </statBases>
         <costList>
@@ -154,36 +162,43 @@
             <texPath>Things/Dragoon/MissilePod/apparel_south</texPath>
         </graphicData>
         <statBases>
-            <MaxHitPoints>20</MaxHitPoints>
+            <MaxHitPoints>40</MaxHitPoints>
             <Mass>35</Mass>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>-0.25</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <wornGraphicPath>Things/Dragoon/MissilePod/apparel</wornGraphicPath>
-            <drawData>
-                <scale>0.75</scale>
-                <defaultData>
-                    <layer>30</layer>
-                </defaultData>
-                <dataSouth>
-                    <offset>(0.95,0,0.9)</offset>
-                    <layer>0</layer>
-                </dataSouth>
-                <dataNorth>
-                    <offset>(-0.95,0,0.7)</offset>
-                    <layer>80</layer>
-                </dataNorth>
-                <dataWest>
-                    <offset>(0.75,0,0.55)</offset>
-                    <layer>80</layer>
-                </dataWest>
-                <dataEast>
-                    <offset>(-0.55,0,0.95)</offset>
-                    <layer>-2</layer>
-                </dataEast>
-            </drawData>
+            <renderNodeProperties>
+                <li>
+                    <nodeClass>PawnRenderNode</nodeClass>
+                    <workerClass>PawnRenderNodeWorker</workerClass>
+                    <parentTagDef>WGApparelBody</parentTagDef>
+                    <baseLayer>30</baseLayer>
+                    <drawSize>0.75</drawSize>
+                    <pawnType>Any</pawnType>
+                    <useGraphic>true</useGraphic>
+                    <texPath>Things/Dragoon/MissilePod/apparel</texPath>
+                    <drawData>
+                        <dataSouth>
+                            <offset>(0.95,0,0.9)</offset>
+                            <layer>0</layer>
+                        </dataSouth>
+                        <dataNorth>
+                            <offset>(-0.95,0,0.7)</offset>
+                            <layer>80</layer>
+                        </dataNorth>
+                        <dataWest>
+                            <offset>(0.75,0,0.55)</offset>
+                            <layer>80</layer>
+                        </dataWest>
+                        <dataEast>
+                            <offset>(-0.55,0,0.95)</offset>
+                            <layer>-2</layer>
+                        </dataEast>
+                    </drawData>
+                </li>
+            </renderNodeProperties>
         </apparel>
         <verbs>
             <li>
@@ -205,7 +220,7 @@
                     <canTargetLocations>true</canTargetLocations>
                     <canTargetBuildings>true</canTargetBuildings>
                 </targetParams>
-                <defaultProjectile>Bullet_Rocket</defaultProjectile><!-- 投射物有待修改 -->
+                <defaultProjectile>DMS_Bullet_HellFire</defaultProjectile><!-- 投射物有待修改 -->
                 <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
             </li>
         </verbs>
@@ -275,29 +290,36 @@
             <MoveSpeed>-0.2</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <wornGraphicPath>Things/Dragoon/MissilePodSwarm/apparel</wornGraphicPath>
-            <drawData>
-                <scale>0.75</scale>
-                <defaultData>
-                    <layer>30</layer>
-                </defaultData>
-                <dataSouth>
-                    <offset>(0.95,0,0.9)</offset>
-                    <layer>30</layer>
-                </dataSouth>
-                <dataNorth>
-                    <offset>(-0.95,0,0.95)</offset>
-                    <layer>80</layer>
-                </dataNorth>
-                <dataWest>
-                    <offset>(0.75,0,0.55)</offset>
-                    <layer>80</layer>
-                </dataWest>
-                <dataEast>
-                    <offset>(-0.15,0,1.1)</offset>
-                    <layer>-2</layer>
-                </dataEast>
-            </drawData>
+            <renderNodeProperties>
+                <li>
+                    <nodeClass>PawnRenderNode</nodeClass>
+                    <workerClass>PawnRenderNodeWorker</workerClass>
+                    <parentTagDef>WGApparelBody</parentTagDef>
+                    <baseLayer>30</baseLayer>
+                    <drawSize>0.75</drawSize>
+                    <pawnType>Any</pawnType>
+                    <useGraphic>true</useGraphic>
+                    <texPath>Things/Dragoon/MissilePodSwarm/apparel</texPath>
+                    <drawData>
+                        <dataSouth>
+                            <offset>(0.95,0,0.9)</offset>
+                            <layer>30</layer>
+                        </dataSouth>
+                        <dataNorth>
+                            <offset>(-0.95,0,0.95)</offset>
+                            <layer>80</layer>
+                        </dataNorth>
+                        <dataWest>
+                            <offset>(0.75,0,0.55)</offset>
+                            <layer>80</layer>
+                        </dataWest>
+                        <dataEast>
+                            <offset>(-0.15,0,1.1)</offset>
+                            <layer>-2</layer>
+                        </dataEast>
+                    </drawData>
+                </li>
+            </renderNodeProperties>
         </apparel>
         <verbs>
             <li>
@@ -321,7 +343,7 @@
                     <canTargetLocations>true</canTargetLocations>
                     <canTargetBuildings>true</canTargetBuildings>
                 </targetParams>
-                <defaultProjectile>Proj_Rocket</defaultProjectile>
+                <defaultProjectile>DMS_Bullet_HellFire</defaultProjectile>
                 <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
             </li>
         </verbs>
@@ -390,29 +412,36 @@
             <MoveSpeed>-0.12</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <wornGraphicPath>Things/Dragoon/MissilePod8/apparel</wornGraphicPath>
-            <drawData>
-                <scale>0.75</scale>
-                <defaultData>
-                    <layer>30</layer>
-                </defaultData>
-                <dataSouth>
-                    <offset>(0.95,0,0.9)</offset>
-                    <layer>0</layer>
-                </dataSouth>
-                <dataNorth>
-                    <offset>(-0.95,0,0.7)</offset>
-                    <layer>80</layer>
-                </dataNorth>
-                <dataWest>
-                    <offset>(0.75,0,0.55)</offset>
-                    <layer>80</layer>
-                </dataWest>
-                <dataEast>
-                    <offset>(-0.55,0,0.95)</offset>
-                    <layer>-2</layer>
-                </dataEast>
-            </drawData>
+            <renderNodeProperties>
+                <li>
+                    <nodeClass>PawnRenderNode</nodeClass>
+                    <workerClass>PawnRenderNodeWorker</workerClass>
+                    <parentTagDef>WGApparelBody</parentTagDef>
+                    <baseLayer>30</baseLayer>
+                    <drawSize>0.75</drawSize>
+                    <pawnType>Any</pawnType>
+                    <useGraphic>true</useGraphic>
+                    <texPath>Things/Dragoon/MissilePod8/apparel</texPath>
+                    <drawData>
+                        <dataSouth>
+                            <offset>(0.95,0,0.9)</offset>
+                            <layer>0</layer>
+                        </dataSouth>
+                        <dataNorth>
+                            <offset>(-0.95,0,0.7)</offset>
+                            <layer>80</layer>
+                        </dataNorth>
+                        <dataWest>
+                            <offset>(0.75,0,0.55)</offset>
+                            <layer>80</layer>
+                        </dataWest>
+                        <dataEast>
+                            <offset>(-0.55,0,0.95)</offset>
+                            <layer>-2</layer>
+                        </dataEast>
+                    </drawData>
+                </li>
+            </renderNodeProperties>
         </apparel>
         <verbs>
             <li>
@@ -434,7 +463,7 @@
                     <canTargetLocations>true</canTargetLocations>
                     <canTargetBuildings>true</canTargetBuildings>
                 </targetParams>
-                <defaultProjectile>Bullet_Rocket</defaultProjectile>
+                <defaultProjectile>DMS_Bullet_HellFire</defaultProjectile>
                 <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
             </li>
         </verbs>
@@ -457,5 +486,24 @@
             </li>
         </comps>
     </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>DMS_Bullet_HellFire</defName>
+        <label>hellfire missile</label>
+        <graphicData>
+            <texPath>Things/Projectiles/MShorad</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <!-- Use default damage from explosion def -->
+            <explosionRadius>3.9</explosionRadius>
+            <armorPenetrationBase>0.9</armorPenetrationBase>
+            <speed>60</speed>
+        </projectile>
+    </ThingDef>
+    
 
 </Defs>

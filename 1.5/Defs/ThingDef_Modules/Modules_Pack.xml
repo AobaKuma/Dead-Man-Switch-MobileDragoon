@@ -16,11 +16,11 @@
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
-	    <workAmount>30000</workAmount>
+      <workAmount>30000</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Steel>60</Steel>
-	  <Tungsteel>20</Tungsteel>
+      <Tungsteel>20</Tungsteel>
     </smeltProducts>
     <butcherProducts>
       <ChunkSlagSteel>3</ChunkSlagSteel>
@@ -28,7 +28,7 @@
     </butcherProducts>
     <costList>
       <Steel>125</Steel>
-	  <Tungsteel>50</Tungsteel>
+      <Tungsteel>50</Tungsteel>
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <comps>
@@ -61,19 +61,26 @@
       <VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/BurstThruster/apparel</wornGraphicPath>
-      <drawData>
-        <scale>2.25</scale>
-        <defaultData>
-          <layer>16</layer>
-        </defaultData>
-        <dataSouth>
-          <layer>-4</layer>
-        </dataSouth>
-        <dataNorth>
-          <layer>75</layer>
-        </dataNorth>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>16</baseLayer>
+          <drawSize>2.25</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/BurstThruster/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <layer>-4</layer>
+            </dataSouth>
+            <dataNorth>
+              <layer>75</layer>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -139,7 +146,7 @@
     </recipeMaker>
     <smeltProducts>
       <Steel>100</Steel>
-	  <Tungsteel>40</Tungsteel>
+      <Tungsteel>40</Tungsteel>
     </smeltProducts>
     <butcherProducts>
       <ChunkSlagSteel>4</ChunkSlagSteel>
@@ -147,9 +154,9 @@
     </butcherProducts>
     <costList>
       <Steel>200</Steel>
-	  <Tungsteel>75</Tungsteel>
+      <Tungsteel>75</Tungsteel>
       <ComponentStamped>5</ComponentStamped>
-	  <ComponentTransmitter>1</ComponentTransmitter>
+      <ComponentTransmitter>1</ComponentTransmitter>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -179,29 +186,36 @@
       <MoveSpeed>-0.2</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/PackControlRelay/apparel</wornGraphicPath>
-      <drawData>
-        <scale>1.125</scale>
-        <defaultData>
-          <layer>16</layer>
-        </defaultData>
-        <dataSouth>
-          <layer>-2</layer>
-          <offset>(0,0,0.9)</offset>
-        </dataSouth>
-        <dataEast>
-          <layer>0</layer>
-          <offset>(-1.05,0,0.5)</offset>
-        </dataEast>
-        <dataWest>
-          <layer>0</layer>
-          <offset>(1.05,0,0.5)</offset>
-        </dataWest>
-        <dataNorth>
-          <layer>10</layer>
-          <offset>(0,0,0.15)</offset>
-        </dataNorth>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>16</baseLayer>
+          <drawSize>1.125</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/PackControlRelay/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <layer>-2</layer>
+              <offset>(0,0,0.9)</offset>
+            </dataSouth>
+            <dataEast>
+              <layer>0</layer>
+              <offset>(-1.05,0,0.5)</offset>
+            </dataEast>
+            <dataWest>
+              <layer>0</layer>
+              <offset>(1.05,0,0.5)</offset>
+            </dataWest>
+            <dataNorth>
+              <layer>10</layer>
+              <offset>(0,0,0.15)</offset>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -275,29 +289,36 @@
 			<WorkSpeedGlobal>0.10</WorkSpeedGlobal>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/PackEngineering/apparel</wornGraphicPath>
-      <drawData>
-        <scale>1.125</scale>
-        <defaultData>
-          <layer>16</layer>
-        </defaultData>
-        <dataSouth>
-          <layer>-2</layer>
-          <offset>(0,0,0.9)</offset>
-        </dataSouth>
-        <dataEast>
-          <layer>0</layer>
-          <offset>(-1.05,0,0.5)</offset>
-        </dataEast>
-        <dataWest>
-          <layer>0</layer>
-          <offset>(1.05,0,0.5)</offset>
-        </dataWest>
-        <dataNorth>
-          <layer>10</layer>
-          <offset>(0,0,0.15)</offset>
-        </dataNorth>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>16</baseLayer>
+          <drawSize>1.125</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/PackEngineering/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <layer>-2</layer>
+              <offset>(0,0,0.9)</offset>
+            </dataSouth>
+            <dataEast>
+              <layer>0</layer>
+              <offset>(-1.05,0,0.5)</offset>
+            </dataEast>
+            <dataWest>
+              <layer>0</layer>
+              <offset>(1.05,0,0.5)</offset>
+            </dataWest>
+            <dataNorth>
+              <layer>10</layer>
+              <offset>(0,0,0.15)</offset>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -331,7 +352,7 @@
     </recipeMaker>
     <smeltProducts>
       <Steel>100</Steel>
-	  <Tungsteel>10</Tungsteel>
+      <Tungsteel>10</Tungsteel>
     </smeltProducts>
     <butcherProducts>
       <ChunkSlagSteel>4</ChunkSlagSteel>
@@ -371,29 +392,36 @@
       <MoveSpeed>-0.2</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/PackCargo/apparel</wornGraphicPath>
-      <drawData>
-        <scale>1.125</scale>
-        <defaultData>
-          <layer>16</layer>
-        </defaultData>
-        <dataSouth>
-          <layer>-2</layer>
-          <offset>(0,0,0.9)</offset>
-        </dataSouth>
-        <dataEast>
-          <layer>0</layer>
-          <offset>(-1.05,0,0.5)</offset>
-        </dataEast>
-        <dataWest>
-          <layer>0</layer>
-          <offset>(1.05,0,0.5)</offset>
-        </dataWest>
-        <dataNorth>
-          <layer>10</layer>
-          <offset>(0,0,0.15)</offset>
-        </dataNorth>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>16</baseLayer>
+          <drawSize>1.125</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/PackCargo/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <layer>-2</layer>
+              <offset>(0,0,0.9)</offset>
+            </dataSouth>
+            <dataEast>
+              <layer>0</layer>
+              <offset>(-1.05,0,0.5)</offset>
+            </dataEast>
+            <dataWest>
+              <layer>0</layer>
+              <offset>(1.05,0,0.5)</offset>
+            </dataWest>
+            <dataNorth>
+              <layer>10</layer>
+              <offset>(0,0,0.15)</offset>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -424,11 +452,11 @@
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
-	    <workAmount>30000</workAmount>
+      <workAmount>30000</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Steel>120</Steel>
-	    <Tungsteel>40</Tungsteel>
+      <Tungsteel>40</Tungsteel>
     </smeltProducts>
     <butcherProducts>
       <ChunkSlagSteel>5</ChunkSlagSteel>
@@ -436,7 +464,7 @@
     </butcherProducts>
     <costList>
       <Steel>250</Steel>
-	    <Tungsteel>120</Tungsteel>
+      <Tungsteel>120</Tungsteel>
       <ComponentStamped>5</ComponentStamped>
     </costList>
     <comps>
@@ -469,28 +497,35 @@
       <MoveSpeed>0.25</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Modifications/HydraulicFrame/render</wornGraphicPath>
-      <drawData>
-        <scale>1.7</scale>
-        <defaultData>
-          <layer>-1</layer>
-        </defaultData>
-        <dataEast>
-          <offset>(-0.20,0,0.15)</offset>
-          <rotationOffset>45</rotationOffset>
-        </dataEast>
-        <dataWest>
-          <offset>(0.20,0,0.15)</offset>
-          <rotationOffset>-45</rotationOffset>
-        </dataWest>
-        <dataNorth>
-          <offset>(0,0,0.75)</offset>
-          <layer>10</layer>
-        </dataNorth>
-        <dataSouth>
-          <offset>(0,0,0.25)</offset>
-        </dataSouth>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>-1</baseLayer>
+          <drawSize>1.7</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Modifications/HydraulicFrame/render</texPath>
+          <drawData>
+            <dataEast>
+              <offset>(-0.20,0,0.15)</offset>
+              <rotationOffset>45</rotationOffset>
+            </dataEast>
+            <dataWest>
+              <offset>(0.20,0,0.15)</offset>
+              <rotationOffset>-45</rotationOffset>
+            </dataWest>
+            <dataNorth>
+              <offset>(0,0,0.75)</offset>
+              <layer>10</layer>
+            </dataNorth>
+            <dataSouth>
+              <offset>(0,0,0.25)</offset>
+            </dataSouth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">

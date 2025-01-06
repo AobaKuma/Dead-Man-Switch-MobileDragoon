@@ -76,7 +76,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>PawnRenderNode</nodeClass>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <drawSize>1.5</drawSize>

@@ -59,7 +59,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>PawnRenderNode</nodeClass>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>0</baseLayer>
@@ -162,7 +162,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>PawnRenderNode</nodeClass>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>0</baseLayer>
@@ -281,7 +281,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>PawnRenderNode</nodeClass>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>0</baseLayer>
@@ -303,6 +303,39 @@
             <dataEast>
               <offset>(-0.05,0,-0.2)</offset>
               <layer>10</layer>
+            </dataEast>
+          </drawData>
+        </li>
+        <li> <!-- only rendering on gantry -->
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>WalkerGear.PawnRenderNodeWorker_WeaponOnGantry</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>0</baseLayer>
+          <drawSize>1.8</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Weapons/DMS_Dragoon_LMG</texPath>
+          <drawData>
+            <dataSouth>
+              <offset>(-0.95,0,0)</offset>
+              <rotationOffset>-90</rotationOffset>
+              <layer>10</layer>
+            </dataSouth>
+            <dataNorth>
+              <offset>(0.95,0,0.45)</offset>
+              <flip>true</flip>
+              <rotationOffset>90</rotationOffset>
+              <layer>-10</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(-0.45,0,0.45)</offset>
+              <rotationOffset>80</rotationOffset>
+              <layer>-10</layer>
+            </dataWest>
+            <dataEast>
+              <offset>(0.25,0,0.05)</offset>
+              <rotationOffset>-80</rotationOffset>
+              <layer>80</layer>
             </dataEast>
           </drawData>
         </li>
@@ -382,7 +415,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>PawnRenderNode</nodeClass>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>0</baseLayer>
@@ -407,6 +440,70 @@
             </dataEast>
           </drawData>
         </li>
+        <li> <!-- only rendering on gantry -->
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>WalkerGear.PawnRenderNodeWorker_WeaponOnGantry</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>0</baseLayer>
+          <drawSize>1.8</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Weapons/DMS_Dragoon_DMR</texPath>
+          <drawData>
+            <dataSouth>
+              <offset>(-0.95,0,0)</offset>
+              <rotationOffset>-90</rotationOffset>
+              <layer>10</layer>
+            </dataSouth>
+            <dataNorth>
+              <offset>(0.95,0,0.45)</offset>
+              <flip>true</flip>
+              <rotationOffset>90</rotationOffset>
+              <layer>-10</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(-0.45,0,0.45)</offset>
+              <rotationOffset>80</rotationOffset>
+              <layer>-10</layer>
+            </dataWest>
+            <dataEast>
+              <offset>(0.25,0,0.05)</offset>
+              <rotationOffset>-80</rotationOffset>
+              <layer>80</layer>
+            </dataEast>
+          </drawData>
+        </li>
+        <!-- <li> rendering when undrafted
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>WalkerGear.PawnRenderNodeWorker_Undrafted</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>0</baseLayer>
+          <drawSize>1.8</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Weapons/DMS_Dragoon_DMR</texPath>
+          <drawData>
+            <dataSouth>
+              <offset>(-0.85,0,0.25)</offset>
+              <rotationOffset>100</rotationOffset>
+              <layer>-10</layer>
+            </dataSouth>
+            <dataNorth>
+              <offset>(0.85,0,0.1)</offset>
+              <rotationOffset>70</rotationOffset>
+              <layer>80</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(-0.15,0,0.2)</offset>
+              <rotationOffset>-30</rotationOffset>
+            </dataWest>
+            <dataEast>
+              <offset>(-0.45,0,-0.3)</offset>
+              <rotationOffset>30</rotationOffset>
+              <layer>2</layer>
+            </dataEast>
+          </drawData>
+        </li> -->
       </renderNodeProperties>
     </apparel>
     <comps>

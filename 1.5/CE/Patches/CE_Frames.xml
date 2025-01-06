@@ -86,6 +86,21 @@
         </value>
     </Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Core"]/apparel</xpath>
+		<value>
+			<bodyPartGroups>
+				<li>FullHead</li>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+				<li>Hands</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+		</value>
+	</Operation>
+
     <!--AT-34 Helmet-->
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_AT34_Helmet"]/statBases</xpath>
@@ -103,6 +118,8 @@
             <AimingAccuracy>0.4</AimingAccuracy>
         </value>
     </Operation>
+
+	
 
     <!--PV-8 Core-->
     <Operation Class="PatchOperationAdd">
@@ -139,6 +156,21 @@
         </value>
     </Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Core"]/apparel</xpath>
+		<value>	
+				<bodyPartGroups>
+					<li>FullHead</li>
+					<li>Torso</li>
+					<li>Shoulders</li>
+					<li>Arms</li>
+					<li>Legs</li>
+					<li>Hands</li>
+					<li>Feet</li>
+				</bodyPartGroups>
+		</value>
+	</Operation>
+
     <!--PV-8 Helmet-->
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Helmet"]/statBases</xpath>
@@ -147,7 +179,7 @@
             <WornBulk>16</WornBulk>
         </value>
     </Operation>
-
+	
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_PV8_Helmet"]/equippedStatOffsets</xpath>
         <value>
@@ -156,6 +188,8 @@
             <AimingAccuracy>0.4</AimingAccuracy>
         </value>
     </Operation>
+
+	
 
     <!--PF-3 Core-->
     <Operation Class="PatchOperationAdd">
@@ -191,6 +225,21 @@
         </value>
     </Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DMS_Apparel_PF3_Core"]/apparel</xpath>
+		<value>
+			<bodyPartGroups>
+				<li>FullHead</li>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+				<li>Hands</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+		</value>
+	</Operation>
+
     <!--FA-47 Core-->
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_FA47_Core"]/statBases</xpath>
@@ -225,6 +274,22 @@
             <ArmorRating_Heat>1.20</ArmorRating_Heat>
         </value>
     </Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DMS_Apparel_FA47_Core"]/apparel</xpath>
+		<value>
+			<bodyPartGroups>
+				<li>FullHead</li>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+				<li>Hands</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+		</value>
+	</Operation>
+	
 
 
     <!--FA-47 Helmet-->
@@ -245,6 +310,8 @@
         </value>
     </Operation>
 
+	
+
     <!--Groyne Helmet-->
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_Groyne_Helmet"]/statBases</xpath>
@@ -259,6 +326,8 @@
             <SmokeSensitivity>-0.8</SmokeSensitivity>
         </value>
     </Operation>
+
+	
 
     <!--Stahlhelm Helmet-->
     <Operation Class="PatchOperationAdd">
@@ -276,6 +345,8 @@
             <SmokeSensitivity>-1</SmokeSensitivity>
         </value>
     </Operation>
+
+	
 
     <!--PV-4 Core-->
     <Operation Class="PatchOperationAdd">
@@ -312,6 +383,21 @@
         </value>
     </Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DMS_Apparel_PV4_Core"]/apparel</xpath>
+		<value>
+			<bodyPartGroups>
+				<li>FullHead</li>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+				<li>Hands</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+		</value>
+	</Operation>
+
     <!--PV-4 Helmet-->
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="DMS_Apparel_PV4_Helmet"]/statBases</xpath>
@@ -330,5 +416,7 @@
         </value>
     </Operation>
 
+	
+	
 
 </Patch>

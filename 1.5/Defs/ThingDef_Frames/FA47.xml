@@ -78,7 +78,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>PawnRenderNode</nodeClass>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>1</baseLayer>
@@ -129,6 +129,20 @@
             <offset>(0,0,0.35)</offset>
           </defaultData>
         </rootData>
+        <equipmentOffsetData>
+          <dataWest>
+            <offset>(-0.25,0,0)</offset>
+          </dataWest>
+          <dataEast>
+            <offset>(0.25,0,0)</offset>
+          </dataEast>
+          <dataSouth>
+            <offset>(-0.25,0,0)</offset>
+          </dataSouth>
+          <dataNorth>
+            <offset>(0.25,0,0)</offset>
+          </dataNorth>
+        </equipmentOffsetData>
       </li>
     </modExtensions>
   </ThingDef>
@@ -197,7 +211,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>PawnRenderNode</nodeClass>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelHead</parentTagDef>
           <drawSize>1</drawSize>

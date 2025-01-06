@@ -63,7 +63,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>PawnRenderNode</nodeClass>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>16</baseLayer>
@@ -188,7 +188,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>PawnRenderNode</nodeClass>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>16</baseLayer>
@@ -291,7 +291,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>PawnRenderNode</nodeClass>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>16</baseLayer>
@@ -394,7 +394,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>PawnRenderNode</nodeClass>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>16</baseLayer>
@@ -499,7 +499,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>PawnRenderNode</nodeClass>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>-1</baseLayer>

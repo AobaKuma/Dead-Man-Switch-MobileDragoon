@@ -12,12 +12,15 @@
     <weaponTags>
       <li>Dragoon_Melee</li>
     </weaponTags>
+    <useHitPoints>false</useHitPoints>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Things/Weapons/CombatAxe</texPath>
       <drawSize>1.25</drawSize>
     </graphicData>
     <statBases>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
       <Mass>18</Mass>
     </statBases>
     <recipeMaker>
@@ -86,6 +89,7 @@
       <texPath>Things/Weapons/CombatSword</texPath>
       <drawSize>1.75</drawSize>
     </graphicData>
+    <useHitPoints>false</useHitPoints>
     <statBases>
       <Mass>0</Mass>
     </statBases>

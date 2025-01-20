@@ -9,6 +9,7 @@
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <useHitPoints>false</useHitPoints>
     <statBases>
       <MaxHitPoints>10</MaxHitPoints>
       <WorkToMake>40000</WorkToMake>
@@ -205,7 +206,6 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>DMS_Bullet_DragoonShotgun</defName>
-    <!-- <thingClass>WalkerGear.Projectile_ArcSpread</thingClass> -->
     <label>canister darts</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Shotgun</texPath>
@@ -223,12 +223,6 @@
       <li Class="WalkerGear.CompProperties_LaunchExhaust" />
     </comps>
     <modExtensions>
-      <!-- <li Class="WalkerGear.RotationalArcSpreadExtension">
-        <projectile>Bullet_Shotgun</projectile>
-        <amount>5</amount>
-        <arc>3</arc>
-        <range>0~1</range>
-      </li> -->
     </modExtensions>
   </ThingDef>
 
@@ -254,7 +248,6 @@
     </projectile>
     <comps>
       <li Class="WalkerGear.CompProperties_LaunchExhaust"/>
-      
       <li Class="WalkerGear.CompProperties_ProjectileFleckEmitter">
         <fleck>BlastFlame</fleck>
         <offsetMin>(-2,0,-2)</offsetMin>

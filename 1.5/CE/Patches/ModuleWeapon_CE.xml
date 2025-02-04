@@ -133,7 +133,7 @@
                 </value>
             </li>
 
-            <!--=====DragoonL(?)MG=====-->
+            <!--=====DragoonLMG=====-->
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_Dragoon_LMG</defName>
                 <statBases>

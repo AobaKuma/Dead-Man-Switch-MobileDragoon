@@ -7,6 +7,17 @@
   <!-- EN: canister darts -->
   <DMS_Bullet_DragoonShotgun.label>canister darts</DMS_Bullet_DragoonShotgun.label>
   
+  <!-- EN: Dragoon DMR -->
+  <DMS_Dragoon_DMR.label>Dragoon DMR</DMS_Dragoon_DMR.label>
+  <!-- EN: A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon. -->
+  <DMS_Dragoon_DMR.description>A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon.</DMS_Dragoon_DMR.description>
+  <!-- EN: stock -->
+  <DMS_Dragoon_DMR.tools.stock.label>stock</DMS_Dragoon_DMR.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_Dragoon_DMR.tools.barrel.label>barrel</DMS_Dragoon_DMR.tools.barrel.label>
+  <!-- EN: Dragoon DMR -->
+  <DMS_Dragoon_DMR.verbs.Verb_Shoot.label>Dragoon DMR</DMS_Dragoon_DMR.verbs.Verb_Shoot.label>
+  
   <!-- EN: Dragoon LMG -->
   <DMS_Dragoon_LMG.label>Dragoon LMG</DMS_Dragoon_LMG.label>
   <!-- EN: A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities. -->

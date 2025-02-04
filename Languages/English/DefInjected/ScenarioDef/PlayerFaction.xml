@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: The Veteran -->
+  <DMSMD_Scenario.label>The Veteran</DMSMD_Scenario.label>
+  <!-- EN: A legendary pilot decides to retire and start a different story. -->
+  <DMSMD_Scenario.description>A legendary pilot decides to retire and start a different story.</DMSMD_Scenario.description>
+  <!-- EN: You have been an officer in the Colonial Orbital Marines for thirty years...but actually hundreds of years. Traveling through countless stars and participating in wars end up becoming a living legend with your mobile dragoon.\n\nComrades who joined in the same period as you were no longer there, died on the battlefield, from old age, or chose to stay in those colonial worlds during the colonization again and again.\nAnd you, still driving your old-generation dragoons. Even if you know that the old will eventually leave and the new will come, you still feel reluctant to leave this mobile dragoon that has been with you for several years.\n\nEverything may become obsolete in the innovations of time and technology. but whatever how no longer useful they were, they are still solid proof that you have come from the past to the present. the proof that you came from that harsh era. the proof that the past exists.\n\nFinally, you decide to retire, at least leave a different story for this weapon, not only war, and death, and soon the approval report for your application is issued. -->
+  <DMSMD_Scenario.scenario.description>You have been an officer in the Colonial Orbital Marines for thirty years...but actually hundreds of years. Traveling through countless stars and participating in wars end up becoming a living legend with your mobile dragoon.
+
+Comrades who joined in the same period as you were no longer there, died on the battlefield, from old age, or chose to stay in those colonial worlds during the colonization again and again.
+And you, still driving your old-generation dragoons. Even if you know that the old will eventually leave and the new will come, you still feel reluctant to leave this mobile dragoon that has been with you for several years.
+
+Everything may become obsolete in the innovations of time and technology. but whatever how no longer useful they were, they are still solid proof that you have come from the past to the present. the proof that you came from that harsh era. the proof that the past exists.
+
+Finally, you decide to retire, at least leave a different story for this weapon, not only war, and death, and soon the approval report for your application is issued.</DMSMD_Scenario.scenario.description>
+  <!-- EN: The Veteran -->
+  <DMSMD_Scenario.scenario.name>The Veteran</DMSMD_Scenario.scenario.name>
+  <!-- EN: A decommissioned old base -->
+  <DMSMD_Scenario.scenario.parts.VFEC_AddStartingStructure.structureLabel>A decommissioned old base</DMSMD_Scenario.scenario.parts.VFEC_AddStartingStructure.structureLabel>
+  <!-- EN: "Thank you for your efforts along the way Sir!, Just tell us if you need anything."\n\nOut of respect for you a legendary pilot, the Colonial Fleet Command allows you to take away this mobile dragoon that has been with you for almost half of your life and assigns you a decommissioned old base, willing helper from your platoon, as well as a place to be developed in this land, a piece of land completely owned by you.\n\nlook outside, the orbital pod is leaving a trail of red. this old base is the beginning of your new life. and of course... your enemies won't pass up this opportunity either. -->
+  <DMSMD_Scenario.scenario.parts.GameStartDialog.text>"Thank you for your efforts along the way Sir!, Just tell us if you need anything."
+
+Out of respect for you a legendary pilot, the Colonial Fleet Command allows you to take away this mobile dragoon that has been with you for almost half of your life and assigns you a decommissioned old base, willing helper from your platoon, as well as a place to be developed in this land, a piece of land completely owned by you.
+
+look outside, the orbital pod is leaving a trail of red. this old base is the beginning of your new life. and of course... your enemies won't pass up this opportunity either.</DMSMD_Scenario.scenario.parts.GameStartDialog.text>
+  <!-- EN: A legendary pilot decides to retire and start a different story. -->
+  <DMSMD_Scenario.scenario.summary>A legendary pilot decides to retire and start a different story.</DMSMD_Scenario.scenario.summary>
+  
+</LanguageData>

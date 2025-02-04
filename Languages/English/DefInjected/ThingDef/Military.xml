@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: Pilot Suit -->
-  <DMS_Apparel_PilotSuit.label>Pilot Suit</DMS_Apparel_PilotSuit.label>
-  <!-- EN: A driving suit designed for exosuit pilots. It has excellent bulletproof performance with adequate cushioning lining and composite bulletproof sheets. Also with environmental protection capabilities against nuclear or bio-weapons. But most pilots would rather wear a bulletproof vest than wear this when driving an exoskeleton because it's inconvenient and very stuffy. -->
-  <DMS_Apparel_PilotSuit.description>A driving suit designed for exosuit pilots. It has excellent bulletproof performance with adequate cushioning lining and composite bulletproof sheets. Also with environmental protection capabilities against nuclear or bio-weapons. But most pilots would rather wear a bulletproof vest than wear this when driving an exoskeleton because it's inconvenient and very stuffy.</DMS_Apparel_PilotSuit.description>
+  <!-- EN: EFP suit -->
+  <DMS_Apparel_PilotSuit.label>EFP suit</DMS_Apparel_PilotSuit.label>
+  <!-- EN: EFP suit stands for Exo-Frame Pilot jumpsuit. An armoured suit designed for exosuit pilots. It has excellent bulletproof performance with adequate cushioning lining and composite bulletproof sheets. Also with environmental protection capabilities against nuclear or bio-weapons. But most pilots would rather wear a bulletproof vest than wear this when driving an exoskeleton because it's inconvenient and very stuffy. -->
+  <DMS_Apparel_PilotSuit.description>EFP suit stands for Exo-Frame Pilot jumpsuit. An armoured suit designed for exosuit pilots. It has excellent bulletproof performance with adequate cushioning lining and composite bulletproof sheets. Also with environmental protection capabilities against nuclear or bio-weapons. But most pilots would rather wear a bulletproof vest than wear this when driving an exoskeleton because it's inconvenient and very stuffy.</DMS_Apparel_PilotSuit.description>
   
 </LanguageData>

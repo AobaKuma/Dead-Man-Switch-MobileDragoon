@@ -46,7 +46,7 @@
     <label>burst thruster</label>
     <description>A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult.</description>
     <graphicData>
-      <texPath>Things/Dragoon/BurstThruster/apparel_south</texPath>
+      <texPath>Things/Dragoon/JumpThruster/apparel_south</texPath>
     </graphicData>    
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_JumpThruster</ThingDef>
@@ -70,7 +70,7 @@
           <drawSize>2.25</drawSize>
           <pawnType>Any</pawnType>
           <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/BurstThruster/apparel</texPath>
+          <texPath>Things/Dragoon/JumpThruster/apparel</texPath>
           <drawData>
             <dataSouth>
               <layer>-4</layer>

@@ -1,6 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
+  <!-- EN: burst thruster -->
+  <DMS_Apparel_JumpThruster.label>burst thruster</DMS_Apparel_JumpThruster.label>
+  <!-- EN: A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult. -->
+  <DMS_Apparel_JumpThruster.description>A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult.</DMS_Apparel_JumpThruster.description>
+  <!-- EN: jump -->
+  <DMS_Apparel_JumpThruster.comps.CompApparelReloadable.chargeNoun>jump</DMS_Apparel_JumpThruster.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_JumpThruster.comps.CompApparelReloadable.cooldownGerund>on cooldown</DMS_Apparel_JumpThruster.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: jump -->
+  <DMS_Apparel_JumpThruster.verbs.jump.label>jump</DMS_Apparel_JumpThruster.verbs.jump.label>
+  
   <!-- EN: Cargo pack -->
   <DMS_Apparel_PackCargo.label>Cargo pack</DMS_Apparel_PackCargo.label>
   <!-- EN: A pack module with cargo spaces and additional drive unit, let the frame to carry more payloads. -->
@@ -20,6 +31,11 @@
   <DMS_Apparel_PackFrame.label>hydraulic frame pack</DMS_Apparel_PackFrame.label>
   <!-- EN: An exoskeleton system for the frame that allows the use of heavier heavy equipment without changing the design itself. -->
   <DMS_Apparel_PackFrame.description>An exoskeleton system for the frame that allows the use of heavier heavy equipment without changing the design itself.</DMS_Apparel_PackFrame.description>
+  
+  <!-- EN: burst thruster -->
+  <DMS_Module_JumpThruster.label>burst thruster</DMS_Module_JumpThruster.label>
+  <!-- EN: A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult. -->
+  <DMS_Module_JumpThruster.description>A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult.</DMS_Module_JumpThruster.description>
   
   <!-- EN: Cargo pack -->
   <DMS_Module_PackCargo.label>Cargo pack</DMS_Module_PackCargo.label>

@@ -4,6 +4,7 @@
     <defName>DMS_Module</defName>
     <label>mobile dragoon module</label>
     <parent>MF_Module</parent>
+    <iconPath>Things/Item/Module</iconPath>
   </ThingCategoryDef>
 
   <ThingCategoryDef>

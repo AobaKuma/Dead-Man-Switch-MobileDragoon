@@ -15,6 +15,11 @@
   <!-- EN: mechanical tool -->
   <DMS_Apparel_PileBunker.tools.mechanical_tool.label>mechanical tool</DMS_Apparel_PileBunker.tools.mechanical_tool.label>
   
+  <!-- EN: Dragoon DMR -->
+  <DMS_Apparel_WeaponDMR.label>Dragoon DMR</DMS_Apparel_WeaponDMR.label>
+  <!-- EN: A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon. -->
+  <DMS_Apparel_WeaponDMR.description>A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon.</DMS_Apparel_WeaponDMR.description>
+  
   <!-- EN: Dragoon LMG -->
   <DMS_Apparel_WeaponLmg.label>Dragoon LMG</DMS_Apparel_WeaponLmg.label>
   <!-- EN: A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities. -->
@@ -29,6 +34,11 @@
   <DMS_Module_PileBunker.label>pile bunker</DMS_Module_PileBunker.label>
   <!-- EN: An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent. -->
   <DMS_Module_PileBunker.description>An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent.</DMS_Module_PileBunker.description>
+  
+  <!-- EN: Dragoon DMR -->
+  <DMS_Module_WeaponDMR.label>Dragoon DMR</DMS_Module_WeaponDMR.label>
+  <!-- EN: A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon. -->
+  <DMS_Module_WeaponDMR.description>A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon.</DMS_Module_WeaponDMR.description>
   
   <!-- EN: Dragoon LMG -->
   <DMS_Module_WeaponLmg.label>Dragoon LMG</DMS_Module_WeaponLmg.label>

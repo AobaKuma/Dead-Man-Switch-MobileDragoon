@@ -3,7 +3,7 @@
   
   <!-- EN: Catapult -->
   <MF_Building_EjectorBay.label>Catapult</MF_Building_EjectorBay.label>
-  <!-- EN: A special place for mecha suit storage and maintenance with auxiliary rocket, It can eject mecha suit with manipulator to far-away place. -->
-  <MF_Building_EjectorBay.description>A special place for mecha suit storage and maintenance with auxiliary rocket, It can eject mecha suit with manipulator to far-away place.</MF_Building_EjectorBay.description>
+  <!-- EN: A special launcher to deploy mobile dragoon instantly, which can eject an exosuit to a far-away distance. -->
+  <MF_Building_EjectorBay.description>A special launcher to deploy mobile dragoon instantly, which can eject an exosuit to a far-away distance.</MF_Building_EjectorBay.description>
   
 </LanguageData>

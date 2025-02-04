@@ -13,8 +13,8 @@
   
   <!-- EN: pulse shield -->
   <DMS_Apparel_PulseShield.label>pulse shield</DMS_Apparel_PulseShield.label>
-  <!-- EN: A miniaturized shield module used on a small scale in the colonial fleet. Its fast charging speed allows it to completely absorb low-caliber projectiles bursts or intercept a fatal projectile. -->
-  <DMS_Apparel_PulseShield.description>A miniaturized shield module used on a small scale in the colonial fleet. Its fast charging speed allows it to completely absorb low-caliber projectiles bursts or intercept a fatal projectile.</DMS_Apparel_PulseShield.description>
+  <!-- EN: A miniaturized shield module used on a small scale in the colonial fleet. Its fast charging speed allows it to completely absorb low-caliber projectiles bursts or intercept fatal projectiles. -->
+  <DMS_Apparel_PulseShield.description>A miniaturized shield module used on a small scale in the colonial fleet. Its fast charging speed allows it to completely absorb low-caliber projectiles bursts or intercept fatal projectiles.</DMS_Apparel_PulseShield.description>
   
   <!-- EN: solid shield -->
   <DMS_Apparel_Shield.label>solid shield</DMS_Apparel_Shield.label>

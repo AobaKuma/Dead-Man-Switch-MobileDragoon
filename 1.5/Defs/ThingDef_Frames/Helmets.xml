@@ -67,6 +67,7 @@
       <DecompressionResistance MayRequire="kentington.saveourship2">0.15</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
+      <immuneToToxGasExposure>true</immuneToToxGasExposure>
       <renderNodeProperties>
         <li>
           <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>

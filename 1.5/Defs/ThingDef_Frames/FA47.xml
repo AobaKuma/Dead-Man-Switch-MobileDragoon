@@ -65,12 +65,12 @@
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
       <ArmorRating_Heat>1.10</ArmorRating_Heat>
-      <JumpRange MayRequire="ludeon.rimworld.royalty">9.9</JumpRange>
       <MoveSpeed>7.8</MoveSpeed>
       <Insulation_Cold>104</Insulation_Cold>
       <Insulation_Heat>128</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
+      <MF_FlightRange>24</MF_FlightRange>
       <CarryingCapacity>275</CarryingCapacity>
       <VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
       <DecompressionResistance MayRequire="kentington.saveourship2">0.8</DecompressionResistance>
@@ -209,6 +209,7 @@
       <DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
+      <immuneToToxGasExposure>true</immuneToToxGasExposure>
       <renderNodeProperties>
         <li>
           <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>

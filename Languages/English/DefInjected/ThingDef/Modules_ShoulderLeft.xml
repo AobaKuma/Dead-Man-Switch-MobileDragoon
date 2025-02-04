@@ -45,6 +45,9 @@
   <!-- EN: launch rocket -->
   <DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>launch rocket</DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>
   
+  <!-- EN: hellfire missile -->
+  <DMS_Bullet_HellFire.label>hellfire missile</DMS_Bullet_HellFire.label>
+  
   <!-- EN: Missile Pod -->
   <DMS_Module_MissilePod.label>Missile Pod</DMS_Module_MissilePod.label>
   <!-- EN: A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use. -->

@@ -157,11 +157,56 @@
             </li>
 
             <li Class="CombatExtended.PatchOperation_ConditionalGeneric">
-                <match Class="PatchOperationSequence">
+                <generic Class="PatchOperationSequence">
                     <operations>
+                        <li Class="PatchOperationAdd">
+                            <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackLight"]/comps</xpath>
+                            <value>
+                                <li Class="CompProperties_ApparelReloadable">
+                                    <maxCharges>500</maxCharges>
+                                    <ammoDef>Ammo_RifleIntermediate_FMJ</ammoDef>
+                                    <ammoCountPerCharge>1</ammoCountPerCharge>
+                                    <baseReloadTicks>90</baseReloadTicks>
+                                    <soundReload>Standard_Reload</soundReload>
+                                    <hotKey>Misc4</hotKey>
+                                    <chargeNoun>intermediate rifle ammo FMJ</chargeNoun>
+                                    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+                                </li>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackHeavy"]/comps</xpath>
+                            <value>
+                                <li Class="CompProperties_ApparelReloadable">
+                                    <maxCharges>300</maxCharges>
+                                    <ammoDef>Ammo_AntiMateriel_FMJ</ammoDef>
+                                    <ammoCountPerCharge>1</ammoCountPerCharge>
+                                    <baseReloadTicks>110</baseReloadTicks>
+                                    <soundReload>Standard_Reload</soundReload>
+                                    <hotKey>Misc4</hotKey>
+                                    <chargeNoun>anti-materiel rifle ammo FMJ</chargeNoun>
+                                    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+                                </li>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackGAU"]/comps</xpath>
+                            <value>
+                                <li Class="CompProperties_ApparelReloadable">
+                                    <maxCharges>420</maxCharges>
+                                    <ammoDef>Ammo_AntiMateriel_FMJ</ammoDef>
+                                    <ammoCountPerCharge>1</ammoCountPerCharge>
+                                    <baseReloadTicks>150</baseReloadTicks>
+                                    <soundReload>Standard_Reload</soundReload>
+                                    <hotKey>Misc4</hotKey>
+                                    <chargeNoun>anti-materiel rifle ammo FMJ</chargeNoun>
+                                    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+                                </li>
+                            </value>
+                        </li>
                     </operations>
-                </match>
-                <nomatch Class="PatchOperationSequence">
+                </generic>
+                <standard Class="PatchOperationSequence">
                     <operations>
                         <li Class="PatchOperationAdd">
                             <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackLight"]/comps</xpath>
@@ -209,8 +254,11 @@
                             </value>
                         </li>
                     </operations>
-                </nomatch>
+                </standard>
             </li>
         </operations>
+    </Operation>
+    <Operation Class="CombatExtended.PatchOperation_ConditionalGeneric">
+
     </Operation>
 </Patch>

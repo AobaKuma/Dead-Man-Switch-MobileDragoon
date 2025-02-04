@@ -49,7 +49,6 @@
                     </verbs>
                 </value>
             </li>
-
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePod"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
                 <value>

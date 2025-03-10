@@ -62,8 +62,8 @@
     </descriptionHyperlinks>
     <statBases>
       <Mass>80</Mass>
-      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
       <ArmorRating_Heat>1.10</ArmorRating_Heat>
       <MoveSpeed>7.8</MoveSpeed>
       <Insulation_Cold>104</Insulation_Cold>

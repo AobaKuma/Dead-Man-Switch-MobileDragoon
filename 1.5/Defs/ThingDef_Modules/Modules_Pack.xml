@@ -40,7 +40,7 @@
       </li>
     </comps>
   </ThingDef>
-  <ThingDef ParentName="DMS_ModuleApparelAttachment" MayRequire="ludeon.rimworld.royalty">
+  <ThingDef ParentName="DMS_ModuleApparelAttachment">
     <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_JumpThruster</defName>
     <label>burst thruster</label>
@@ -95,7 +95,6 @@
         <ammoCountPerCharge>20</ammoCountPerCharge>
         <baseReloadTicks>60</baseReloadTicks>
         <soundReload>Standard_Reload</soundReload>
-        <hotKey>Misc4</hotKey>
         <chargeNoun>jump</chargeNoun>
         <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
       </li>

@@ -60,9 +60,9 @@
     <statBases>
       <Mass>80</Mass>
       <MoveSpeed>4.2</MoveSpeed>
-      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.10</ArmorRating_Heat>
+      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.60</ArmorRating_Heat>
 			<Insulation_Cold>18</Insulation_Cold>
 			<Insulation_Heat>32</Insulation_Heat>
     </statBases>

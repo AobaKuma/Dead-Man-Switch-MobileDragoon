@@ -122,6 +122,8 @@
             </li>
         </comps>
     </ThingDef>
+
+    
     <ThingDef ParentName="DMS_ModuleApparelMountRight">
         <defName>DMS_Apparel_TurretPackLight</defName>
         <label>LMG Shoulder Mount</label>

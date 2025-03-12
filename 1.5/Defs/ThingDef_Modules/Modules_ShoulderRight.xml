@@ -122,6 +122,8 @@
             </li>
         </comps>
     </ThingDef>
+
+    
     <ThingDef ParentName="DMS_ModuleApparelMountRight">
         <defName>DMS_Apparel_TurretPackLight</defName>
         <label>LMG Shoulder Mount</label>
@@ -166,45 +168,57 @@
                             <offset>(-0.80,0,0.45)</offset>
                         </dataEast>
                     </drawData>
-                </li>            
-                <li Class="WalkerGear.PawnRenderNodeProperties_TurretGun_Custom">
-                    <debugLabel>DMS_Gun_LMG</debugLabel>
-                    <nodeClass>WalkerGear.PawnRenderNode_TurretGun_Custom</nodeClass>
-                    <workerClass>WalkerGear.PawnRenderNodeWorker_TurretGun_Custom</workerClass>
+                </li>
+                <li>
+                    <nodeClass>WalkerGear.PawnRenderNode_VerbCompTurret</nodeClass>
+                    <workerClass>WalkerGear.PawnRenderNodeWorker_VerbCompTurret</workerClass>
                     <texPath>Things/Turrets/DMS_Gun_LMG</texPath>
-                    <drawSize>1</drawSize>
-                    <baseLayer>40</baseLayer>
-                    <rotDrawMode>Fresh, Rotting</rotDrawMode>
-                    <overrideMeshSize>(1.5,1.5)</overrideMeshSize>
+                    <anchorTag>Gun</anchorTag>
                     <parentTagDef>WGApparelBody</parentTagDef>
+                    <drawSize>1.25</drawSize>
+                    <baseLayer>40</baseLayer>
                     <pawnType>Any</pawnType>
                     <drawData>
+                        <scale>0.75</scale>
                         <defaultData>
                             <layer>30</layer>
                         </defaultData>
                         <dataSouth>
-                            <offset>(-0.65,0,1.15)</offset>
+                            <offset>(-0.80,0,1.05)</offset>
                             <layer>10</layer>
-                            <rotationOffset>120</rotationOffset>
                         </dataSouth>
                         <dataNorth>
-                            <offset>(0.65,0,0.30)</offset>
-                            <rotationOffset>-90</rotationOffset>
+                            <offset>(0.50,0,0.40)</offset>
                             <layer>80</layer>
                         </dataNorth>
                         <dataWest>
-                            <offset>(-0.2,0,0.8)</offset>   
+                            <offset>(-0.2,0,0.8)</offset>
                             <layer>-15</layer>
-                            <rotationOffset>0</rotationOffset>
+                            <rotationOffset>-180</rotationOffset>
                         </dataWest>
                         <dataEast>
-                            <rotationOffset>30</rotationOffset>
-                            <offset>(-0.85,0,0.35)</offset>
+                            <offset>(-0.9,0,0.25)</offset>
                         </dataEast>
                     </drawData>
                 </li>
             </renderNodeProperties>
         </apparel>
+        <verbs>
+            <li>
+                <commandIcon>Things/Dragoon/TurretPack/TurretPack_MachineGun</commandIcon>
+                <verbClass>Verb_Shoot</verbClass>
+                <label>Gun</label>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_AssaultRifle</defaultProjectile>
+                <warmupTime>0.5</warmupTime>
+                <range>15.9</range>
+                <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                <burstShotCount>5</burstShotCount>
+                <soundCast>Shot_AssaultRifle</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <ItemDef>DMS_Module_TurretPackLight</ItemDef>
@@ -212,11 +226,21 @@
                     <li>MountRight</li>
                 </slots>
             </li>
-            <li Class="WalkerGear.CompProperties_TurretGun_Custom">
-                <turretDef>DMS_SubMachineGunMounted</turretDef>
-                <angleOffset>-90</angleOffset>
-                <attackUndrafted>false</attackUndrafted>
-                <cooldownTimeOverride>4</cooldownTimeOverride>
+            <li Class="MVCF.Comps.CompProperties_VerbGiver">
+                <verbProps>
+                    <li>
+                        <label>Gun</label>
+                        <visualLabel>Mounted LMG</visualLabel>
+                        <description>A simple automatic gun made to be mounted on a shoulder.</description>
+                        <canBeToggled>true</canBeToggled>
+                        <comps>
+                            <li Class="WalkerGear.VerbCompPropertiesTurret">
+                                <uniqueTargets>true</uniqueTargets>
+                                <angleOffset>-90</angleOffset>
+                            </li>
+                        </comps>
+                    </li>
+                </verbProps>
             </li>
         </comps>
     </ThingDef>
@@ -296,44 +320,59 @@
                         </dataEast>
                     </drawData>
                 </li>
-                <li Class="WalkerGear.PawnRenderNodeProperties_TurretGun_Custom">
-                    <debugLabel>DMS_Gun_Kord</debugLabel>
-                    <nodeClass>WalkerGear.PawnRenderNode_TurretGun_Custom</nodeClass>
-                    <workerClass>WalkerGear.PawnRenderNodeWorker_TurretGun_Custom</workerClass>
+                <li>
+                    <nodeClass>WalkerGear.PawnRenderNode_VerbCompTurret</nodeClass>
+                    <workerClass>WalkerGear.PawnRenderNodeWorker_VerbCompTurret</workerClass>
                     <texPath>Things/Weapons/DMS_Kord_MD</texPath>
+                    <anchorTag>Gun</anchorTag>
+                    <parentTagDef>WGApparelBody</parentTagDef>
                     <drawSize>1.75</drawSize>
                     <baseLayer>40</baseLayer>
-                    <rotDrawMode>Fresh, Rotting</rotDrawMode>
-                    <overrideMeshSize>(1.5,1.5)</overrideMeshSize>
-                    <parentTagDef>WGApparelBody</parentTagDef>
                     <pawnType>Any</pawnType>
                     <drawData>
                         <defaultData>
                             <layer>30</layer>
                         </defaultData>
                         <dataSouth>
-                            <offset>(-0.65,0,1.15)</offset>
+                            <offset>(-0.80,0,1.05)</offset>
                             <layer>10</layer>
-                            <rotationOffset>120</rotationOffset>
                         </dataSouth>
                         <dataNorth>
-                            <offset>(0.65,0,0.30)</offset>
-                            <rotationOffset>-90</rotationOffset>
+                            <offset>(0.50,0,0.40)</offset>
                             <layer>80</layer>
                         </dataNorth>
                         <dataWest>
-                            <offset>(-0.2,0,0.8)</offset>   
+                            <offset>(-0.2,0,0.8)</offset>
                             <layer>-15</layer>
-                            <rotationOffset>0</rotationOffset>
+                            <rotationOffset>-180</rotationOffset>
                         </dataWest>
                         <dataEast>
-                            <rotationOffset>30</rotationOffset>
-                            <offset>(-0.85,0,0.35)</offset>
+                            <offset>(-0.9,0,0.25)</offset>
                         </dataEast>
                     </drawData>
                 </li>
             </renderNodeProperties>
         </apparel>
+        <verbs>
+            <li>
+                <commandIcon>Things/Dragoon/TurretPack/TurretPack_Kord</commandIcon>
+                <verbClass>Verb_Shoot</verbClass>
+                <label>Gun</label>
+                <hasStandardCommand>false</hasStandardCommand>
+                <defaultProjectile>DMS_Bullet_Kord</defaultProjectile>
+                <requireLineOfSight>true</requireLineOfSight>
+                <warmupTime>1.5</warmupTime>
+                <minRange>1.9</minRange>
+                <range>39.9</range>
+                <ai_AvoidFriendlyFireRadius>7.9</ai_AvoidFriendlyFireRadius>
+                <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                <burstShotCount>3</burstShotCount>
+                <soundCast>Shot_Autocannon</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>10</muzzleFlashScale>
+                <consumeFuelPerShot>1</consumeFuelPerShot>
+            </li>
+        </verbs>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
                 <ItemDef>DMS_Module_TurretPackHeavy</ItemDef>
@@ -341,11 +380,21 @@
                     <li>MountRight</li>
                 </slots>
             </li>
-            <li Class="WalkerGear.CompProperties_TurretGun_Custom">
-                <turretDef>DMS_HeavyMachineGunMounted</turretDef>
-                <angleOffset>-90</angleOffset>
-                <attackUndrafted>false</attackUndrafted>
-                <cooldownTimeOverride>5</cooldownTimeOverride>
+            <li Class="MVCF.Comps.CompProperties_VerbGiver">
+                <verbProps>
+                    <li>
+                        <label>Gun</label>
+                        <visualLabel>Mounted Kord</visualLabel>
+                        <description>A HMG turret mounted on shoulder.</description>
+                        <canBeToggled>true</canBeToggled>
+                        <comps>
+                            <li Class="WalkerGear.VerbCompPropertiesTurret">
+                                <uniqueTargets>true</uniqueTargets>
+                                <angleOffset>-90</angleOffset>
+                            </li>
+                        </comps>
+                    </li>
+                </verbProps>
             </li>
         </comps>
     </ThingDef>
@@ -425,82 +474,47 @@
                         </dataEast>
                     </drawData>
                 </li>
-                <li Class="WalkerGear.PawnRenderNodeProperties_TurretGun_Custom">
-                    <debugLabel>DMS_Gun_GAU19A</debugLabel>
-                    <nodeClass>WalkerGear.PawnRenderNode_TurretGun_Custom</nodeClass>
-                    <workerClass>WalkerGear.PawnRenderNodeWorker_TurretGun_Custom</workerClass>
+                <li>
+                    <nodeClass>WalkerGear.PawnRenderNode_VerbCompTurret</nodeClass>
+                    <workerClass>WalkerGear.PawnRenderNodeWorker_VerbCompTurret</workerClass>
                     <texPath>Things/Weapons/DMS_Weapon_GAU19</texPath>
-                    <drawSize>1.75</drawSize>
-                    <baseLayer>40</baseLayer>
-                    <rotDrawMode>Fresh, Rotting</rotDrawMode>
-                    <overrideMeshSize>1</overrideMeshSize>
+                    <anchorTag>Gun</anchorTag>
                     <parentTagDef>WGApparelBody</parentTagDef>
+                    <drawSize>2</drawSize>
+                    <baseLayer>40</baseLayer>
                     <pawnType>Any</pawnType>
                     <drawData>
+                        <scale>0.75</scale>
                         <defaultData>
                             <layer>30</layer>
                         </defaultData>
                         <dataSouth>
-                            <offset>(-0.65,0,1.15)</offset>
+                            <offset>(-0.80,0,1.05)</offset>
                             <layer>10</layer>
-                            <rotationOffset>120</rotationOffset>
                         </dataSouth>
                         <dataNorth>
-                            <offset>(0.65,0,0.30)</offset>
-                            <rotationOffset>-90</rotationOffset>
+                            <offset>(0.50,0,0.40)</offset>
                             <layer>80</layer>
                         </dataNorth>
                         <dataWest>
-                            <offset>(-0.2,0,0.8)</offset>   
+                            <offset>(-0.2,0,0.8)</offset>
                             <layer>-15</layer>
-                            <rotationOffset>0</rotationOffset>
+                            <rotationOffset>-180</rotationOffset>
                         </dataWest>
                         <dataEast>
-                            <rotationOffset>30</rotationOffset>
-                            <offset>(-0.85,0,0.35)</offset>
+                            <offset>(-0.9,0,0.25)</offset>
                         </dataEast>
                     </drawData>
                 </li>
             </renderNodeProperties>
         </apparel>
-        <comps>
-            <li Class="WalkerGear.CompProperties_WalkerComponent">
-                <ItemDef>DMS_Module_TurretPackGAU</ItemDef>
-                <slots>
-                    <li>MountRight</li>
-                </slots>
-            </li>
-            <li Class="WalkerGear.CompProperties_TurretGun_Custom">
-                <turretDef>DMS_GAU19AMounted</turretDef>
-                <angleOffset>-90</angleOffset>
-                <attackUndrafted>false</attackUndrafted>
-                <cooldownTimeOverride>5</cooldownTimeOverride>
-            </li>
-        </comps>
-    </ThingDef>
-    
-	<!--GAU	這個是固定在不可替換武器類型機兵上的版本。-->
-	<ThingDef ParentName="DMS_AutomatroidTurretGun">
-		<defName>DMS_GAU19AMounted</defName>
-		<label>Mounted GAU-19/A</label>
-		<description>A multibarrel turret mounted on shoulder.</description>
-		<graphicData>
-			<texPath>Things/Dragoon/TurretPack/TurretPack_GAU</texPath>
-			<drawSize>1</drawSize>
-		</graphicData>
-		<statBases>
-			<AccuracyTouch>0.50</AccuracyTouch>
-			<AccuracyShort>0.70</AccuracyShort>
-			<AccuracyMedium>0.86</AccuracyMedium>
-			<AccuracyLong>0.88</AccuracyLong>
-			<RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
-		</statBases>
-		<verbs>
-			<li>
+        <verbs>
+            <li>
                 <commandIcon>Things/Dragoon/TurretPack/TurretPack_GAU</commandIcon>
                 <verbClass>Verb_Shoot</verbClass>
+                <label>Gun</label>
                 <defaultProjectile>DMS_Bullet_Kord</defaultProjectile>
-                <warmupTime>0</warmupTime>
+                <warmupTime>1.2</warmupTime>
                 <range>45</range>
                 <hasStandardCommand>true</hasStandardCommand>
                 <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
@@ -509,6 +523,31 @@
                 <soundCastTail>GunTail_Light</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
             </li>
-		</verbs>
-	</ThingDef>
+        </verbs>
+        <comps>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <ItemDef>DMS_Module_TurretPackGAU</ItemDef>
+                <slots>
+                    <li>MountRight</li>
+                </slots>
+            </li>
+            <li Class="MVCF.Comps.CompProperties_VerbGiver">
+                <verbProps>
+                    <li>
+                        <label>Gun</label>
+                        <visualLabel>Mounted GAU-19/A</visualLabel>
+                        <description>A multibarrel turret mounted on shoulder.</description>
+                        <canBeToggled>true</canBeToggled>
+                        <comps>
+                            <li Class="WalkerGear.VerbCompPropertiesTurret">
+                                <uniqueTargets>true</uniqueTargets>
+                                <angleOffset>-90</angleOffset>
+                            </li>
+                        </comps>
+                    </li>
+                </verbProps>
+            </li>
+        </comps>
+    </ThingDef>
+    
 </Defs>

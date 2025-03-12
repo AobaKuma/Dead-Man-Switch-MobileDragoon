@@ -3,7 +3,22 @@
     <Operation Class="PatchOperationSequence">
         <operations>
 
-            <!--Misslile pod-->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Module_ArmorPad"]/statBases</xpath>
+                <value>
+                    <Bulk>41</Bulk>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_ArmorPad"]/statBases</xpath>
+                <value>
+                    <Bulk>41</Bulk>
+                    <WornBulk>20</WornBulk>
+                </value>
+            </li>
+
+            <!--Misslile
+            pod-->
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName="DMS_Module_MissilePod"]/statBases</xpath>
                 <value>
@@ -50,7 +65,8 @@
                 </value>
             </li>
             <li Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePod"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
+                <xpath>
+                    Defs/ThingDef[defName="DMS_Apparel_MissilePod"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
                 <value>
                     <li Class="CompProperties_ApparelReloadable">
                         <maxCharges>4</maxCharges>
@@ -65,7 +81,8 @@
                 </value>
             </li>
 
-            <!--Swarm Misslile pod-->
+            <!--Swarm
+            Misslile pod-->
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Module_SwarmMissilePod"]/statBases/Mass</xpath>
                 <value>
@@ -115,7 +132,8 @@
             </li>
 
             <li Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_SwarmMissilePod"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
+                <xpath>
+                    Defs/ThingDef[defName="DMS_Apparel_SwarmMissilePod"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
                 <value>
                     <li Class="CompProperties_ApparelReloadable">
                         <maxCharges>14</maxCharges>
@@ -131,7 +149,8 @@
             </li>
 
 
-            <!--Misslile pods(more)-->
+            <!--Misslile
+            pods(more)-->
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName="DMS_Module_MissilePodPlus"]/statBases</xpath>
                 <value>
@@ -159,12 +178,10 @@
                             <commandIcon>UI/Ability/Missile</commandIcon>
                             <onlyManualCast>True</onlyManualCast>
                             <warmupTime>1.5</warmupTime>
-                            <!-- <noiseRadius>4</noiseRadius> -->
                             <range>85.9</range>
                             <minRange>5</minRange>
                             <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
                             <soundCast>RocketswarmLauncher_Fire</soundCast>
-                            <!-- <forcedMissRadius>1.9</forcedMissRadius> -->
                             <soundCastTail>GunTail_Medium</soundCastTail>
                             <muzzleFlashScale>14</muzzleFlashScale>
                             <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
@@ -180,7 +197,8 @@
             </li>
 
             <li Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePodPlus"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
+                <xpath>
+                    Defs/ThingDef[defName="DMS_Apparel_MissilePodPlus"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
                 <value>
                     <li Class="CompProperties_ApparelReloadable">
                         <maxCharges>8</maxCharges>
@@ -195,5 +213,55 @@
                 </value>
             </li>
         </operations>
+    </Operation>
+
+    <!-- 古機的聯動模塊 -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>The Dead Man's Switch - AncientCorps</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="DMS_Apparel_StugnaLauncher"]/verbs</xpath>
+                    <value>
+                        <verbs>
+                            <li Class="CombatExtended.VerbPropertiesCE">
+                                <label>launch stugna missile</label>
+                                <verbClass>CombatExtended.Verb_LaunchProjectileStaticCE</verbClass>
+                                <hasStandardCommand>true</hasStandardCommand>
+                                <commandIcon>Things/Projectiles/DMS_9M133Missile/VerbIcon</commandIcon>
+                                <onlyManualCast>True</onlyManualCast>
+                                <range>59.9</range>
+                                <noiseRadius>4</noiseRadius>
+                                <minRange>6.9</minRange>
+                                <warmupTime>2</warmupTime>
+                                <burstShotCount>1</burstShotCount>
+                                <soundCast>DMS_AC_Shot_GuidedMissile</soundCast>
+                                <soundCastTail>GunTail_Heavy</soundCastTail>
+                                <muzzleFlashScale>25</muzzleFlashScale>
+                                <targetable>true</targetable>
+                                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                                <ai_IsWeapon>true</ai_IsWeapon>
+                                <ai_AvoidFriendlyFireRadius>4</ai_AvoidFriendlyFireRadius>
+                                <aimingLineMote>DMS_Missile_Aim</aimingLineMote>
+                                <aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
+                                <aimingTargetMote>DMS_Missile_Target</aimingTargetMote>
+                                <soundAiming>DMS_Ability_LockOn</soundAiming>
+                                <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+                                <requireLineOfSight>true</requireLineOfSight>
+                                <targetParams>
+                                    <canTargetLocations>true</canTargetLocations>
+                                    <canTargetBuildings>true</canTargetBuildings>
+                                </targetParams>
+                                <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+                                <defaultProjectile>DMSAC_Bullet_StugnaATGM</defaultProjectile>
+                                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+                            </li>
+                        </verbs>
+                    </value>
+                </li>
+            </operations>
+        </match>
     </Operation>
 </Patch>

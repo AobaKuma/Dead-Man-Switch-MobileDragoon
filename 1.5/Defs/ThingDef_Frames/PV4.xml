@@ -64,7 +64,8 @@
 			<Insulation_Heat>64</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
-			<CarryingCapacity>400</CarryingCapacity>
+			<CarryingCapacity>380</CarryingCapacity>
+			<CarryWeight MayRequire="ceteam.combatextended">380</CarryWeight>
 			<WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
 			<MentalBreakThreshold>-0.5</MentalBreakThreshold>
       <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>

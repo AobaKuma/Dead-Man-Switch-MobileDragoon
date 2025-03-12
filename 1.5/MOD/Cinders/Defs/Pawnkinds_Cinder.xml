@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef ParentName="Cinder_BasePawn" Name="Base_CinderDragoon">
+    <defName>DMS_Cinder_Vanguard</defName>
+    <label>Silent vanguard</label>
+    <combatPower>150</combatPower>
+    <defaultFactionType>Cinder_ESDSP</defaultFactionType>
+    <apparelMoney>2000~5000</apparelMoney>
+    <weaponMoney>2000~10000</weaponMoney>
+    <maxPerGroup>3</maxPerGroup>
+    <allowRoyalApparelRequirements>false</allowRoyalApparelRequirements>
+    <allowRoyalRoomRequirements>false</allowRoyalRoomRequirements>
+    <canStrip>false</canStrip>
+    <weaponTags>
+      <li>DMS_Dragoon_SG</li>
+      <li>CinderRifles</li>
+      <li>Dragoon_Melee</li>
+    </weaponTags>
+    <techHediffsRequired>
+      <li>DMS_SensoryFilter</li>
+      <li>DMS_NutrientPort</li>
+    </techHediffsRequired>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>CinderStory_DefenseCouncil_CultChild</li>
+          <li>CinderStory_DefenseCouncil_Cult</li>
+          <li>CinderStory_DefenseCouncil</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <fixedInventory>
+      <Cinder_ExtraArmour>1</Cinder_ExtraArmour>
+    </fixedInventory>
+    <apparelTags>
+      <li>Cinder_Military</li>
+    </apparelTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>5~14</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>6~14</range>
+      </li>
+    </skills>
+    <specificApparelRequirements>
+      <li>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(102,102,93)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+    </specificApparelRequirements>
+    <modExtensions>
+      <li Class="WalkerGear.ModExtension_NoIdeoApparel" />
+      <li Class="WalkerGear.ModExtForceApparelGen">
+        <StructurePointRange>0.96~1.0</StructurePointRange>
+        <apparels>
+          <li>DMS_Apparel_PV8_Core</li>
+          <li>DMS_Apparel_Stahlhelm_Helmet</li>
+        </apparels>
+        <chanceApparels>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_SwarmMissilePod</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_TurretPackLight</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_Shield</apparel>
+          </li>
+        </chanceApparels>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(102,102,93)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+      <li Class="Embergarden.ModExtension_RandomOneAbility">
+        <abilities>
+          <li>Cinder_SuffocatingWhispers</li>
+          <li>Cinder_EternalFearAbility</li>
+          <li>Cinder_AmorphousIED</li>
+          <li>Cinder_AmorphousWinding</li>
+          <li>Cinder_ErodedBomb</li>
+        </abilities>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Cinder_BasePawn" Name="Base_CinderDragoon">
+    <defName>DMS_Cinder_Arrowhead</defName>
+    <label>Arrowhead</label>
+    <weaponTags Inherit="false">
+      <li>DMS_MechWeaponHeavy</li>
+      <li>DMS_DragoonGun</li>
+      <li>CinderCaster</li>
+      <li>CinderHeavy</li>
+    </weaponTags>
+  </PawnKindDef>
+</Defs>

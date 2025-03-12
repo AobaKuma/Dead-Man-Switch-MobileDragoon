@@ -40,7 +40,7 @@
       </li>
     </comps>
   </ThingDef>
-  <ThingDef ParentName="DMS_ModuleApparelAttachment">
+  <ThingDef ParentName="DMS_ModuleApparelAttachment" MayRequire="ludeon.rimworld.royalty">
     <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_JumpThruster</defName>
     <label>burst thruster</label>

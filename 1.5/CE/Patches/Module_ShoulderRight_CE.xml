@@ -3,8 +3,7 @@
     <Operation Class="PatchOperationSequence">
         <operations>
 
-            <!--LMG
-            Turret-->
+            <!--LMG Turret-->
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Module_TurretPackLight"]/statBases/Mass</xpath>
                 <value>

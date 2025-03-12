@@ -70,6 +70,7 @@
     </statBases>
     <equippedStatOffsets>
 			<CarryingCapacity>150</CarryingCapacity>
+			<CarryWeight MayRequire="ceteam.combatextended">150</CarryWeight>
 			<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
       <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
     </equippedStatOffsets>

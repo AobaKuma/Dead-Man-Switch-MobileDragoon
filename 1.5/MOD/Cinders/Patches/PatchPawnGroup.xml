@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAdd"> 
+                <xpath>Defs/FactionDef[defName="Cinder_ESDSP" or defName="Cinder_OutlanderCivil"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+                <value>
+                    <DMS_Cinder_Vanguard>1</DMS_Cinder_Vanguard>
+                    <DMS_Cinder_Arrowhead>1</DMS_Cinder_Arrowhead>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd"> 
+                <xpath>Defs/FactionDef[defName="Cinder_ESDSP" or defName="Cinder_OutlanderCivil"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
+                <value>
+                    <DMS_Cinder_Vanguard>1</DMS_Cinder_Vanguard>
+                    <DMS_Cinder_Arrowhead>1</DMS_Cinder_Arrowhead>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

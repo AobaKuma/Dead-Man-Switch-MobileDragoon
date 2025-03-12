@@ -72,6 +72,7 @@
     <equippedStatOffsets>
       <MF_FlightRange>24</MF_FlightRange>
       <CarryingCapacity>275</CarryingCapacity>
+			<CarryWeight MayRequire="ceteam.combatextended">275</CarryWeight>
       <VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
       <DecompressionResistance MayRequire="kentington.saveourship2">0.8</DecompressionResistance>
     </equippedStatOffsets>

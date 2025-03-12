@@ -67,7 +67,7 @@
     <allowRoyalRoomRequirements>false</allowRoyalRoomRequirements>
     <canStrip>false</canStrip>
     <modExtensions>
-      <li Class="WalkerGear.ModExtension_NoIdeoApparel"/>
+      <li Class="WalkerGear.ModExtension_NoIdeoApparel" />
     </modExtensions>
   </PawnKindDef>
 
@@ -149,7 +149,6 @@
       </li>
     </modExtensions>
   </PawnKindDef>
-
   <PawnKindDef ParentName="DMS_DragoonBase">
     <defName>DMS_Squad_ArmyDragoon</defName>
     <label>Zyklop pagoda</label>
@@ -235,7 +234,6 @@
       </li>
     </modExtensions>
   </PawnKindDef>
-
   <PawnKindDef ParentName="DMS_DragoonBase">
     <defName>DMS_Squad_ArmyDragoon_Explosive</defName>
     <label>Zyklop colossi</label>
@@ -321,7 +319,6 @@
       </li>
     </modExtensions>
   </PawnKindDef>
-
   <PawnKindDef ParentName="DMS_DragoonBase">
     <defName>DMS_Squad_ArmyDragoon_Claymore</defName>
     <label>Zyklop Claymore</label>
@@ -337,7 +334,7 @@
       <li>DMS_NutrientPort</li>
       <li>DMS_ProstheticEye</li>
     </techHediffsRequired>
-    <weaponTags/>
+    <weaponTags />
     <skills>
       <li>
         <skill>Melee</skill>
@@ -395,7 +392,6 @@
       </li>
     </modExtensions>
   </PawnKindDef>
-
   <PawnKindDef ParentName="DMS_DragoonBase">
     <defName>DMS_Squad_ArmyDragoon_Gatling</defName>
     <label>Zyklop tornado</label>
@@ -484,12 +480,109 @@
   </PawnKindDef>
 
   <PawnKindDef ParentName="GuardBase">
+    <defName>DMS_WalkerFrame_Outlander</defName>
+    <label>pilot worker</label>
+    <combatPower>100</combatPower>
+    <aiAvoidCover>true</aiAvoidCover>
+    <isFighter>true</isFighter>
+    <gearHealthRange>0.8~2</gearHealthRange>
+    <maxPerGroup>5</maxPerGroup>
+    <apparelTags>
+      <li>IndustrialMilitaryBasic</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelMoney>800~1300</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <weaponTags>
+      <li>GunHeavy</li>
+      <li>Minigun</li>
+      <li>Dragoon_Melee</li>
+      <li>DMS_Dragoon_SG</li>
+    </weaponTags>
+    <weaponMoney>1500~3000</weaponMoney>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>200~700</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>15~24</initialResistanceRange>
+    <modExtensions>
+      <li Class="WalkerGear.ModExtForceApparelGen">
+        <StructurePointRange>0.6~0.8</StructurePointRange>
+        <apparels>
+          <li>DMS_Apparel_PF3_Core</li>
+        </apparels>
+        <chanceApparels>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_CargoBox</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_PileBunker</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_WorkArm</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_Groyne_Helmet</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_AT34_Helmet</apparel>
+          </li>
+        </chanceApparels>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(0.7, 0.7, 0.7)</only>
+            </li>
+            <li>
+              <only>(0.5, 0.5, 0.5)</only>
+            </li>
+            <li>
+              <only>(0.6, 0.6, 0.6)</only>
+            </li>
+            <li>
+              <only>(104, 120, 119)</only> <!-- drab dark blue -->
+            </li>
+            <li>
+              <only>(106, 120, 104)</only> <!-- drab dark green -->
+            </li>
+            <li>
+              <only>(140, 140, 119)</only> <!-- tan -->
+            </li>
+            <li>
+              <only>(99, 87, 67)</only> <!-- muted brown -->
+            </li>
+            <li>
+              <only>(128, 116, 84)</only> <!-- light brown -->
+            </li>
+            <li>
+              <only>(107, 94, 64)</only> <!-- mid brown -->
+            </li>
+            <li>
+              <only>(77, 66, 45)</only> <!-- dark brown -->
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+      <li Class="WalkerGear.ModExtension_NoIdeoApparel" />
+    </modExtensions>
+  </PawnKindDef>
+  <PawnKindDef ParentName="GuardBase">
     <defName>DMS_Dragoon_Outlander</defName>
     <label>town dragoon</label>
     <combatPower>150</combatPower>
     <aiAvoidCover>true</aiAvoidCover>
     <isFighter>true</isFighter>
     <gearHealthRange>0.8~2</gearHealthRange>
+    <maxPerGroup>5</maxPerGroup>
     <apparelTags>
       <li>IndustrialMilitaryBasic</li>
       <li>BeltDefensePop</li>
@@ -579,17 +672,85 @@
           </options>
         </colorGenerator>
       </li>
-      <li Class="WalkerGear.ModExtension_NoIdeoApparel"/>
+      <li Class="WalkerGear.ModExtension_NoIdeoApparel" />
     </modExtensions>
   </PawnKindDef>
 
   <PawnKindDef ParentName="MercenaryBase">
-    <defName>DMS_Dragoon_Pirate</defName>
-    <label>pirate dragoon</label>
+    <defName>DMS_WalkerFrame_Pirate</defName>
+    <label>bunker</label>
     <combatPower>150</combatPower>
     <aiAvoidCover>true</aiAvoidCover>
     <isFighter>true</isFighter>
     <gearHealthRange>0.8~2</gearHealthRange>
+    <minApparelQuality>Normal</minApparelQuality>
+    <maxPerGroup>5</maxPerGroup>
+    <apparelTags>
+      <li>IndustrialMilitaryBasic</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelMoney>800~1300</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <weaponTags>
+      <li>A_MG_Light</li>
+      <li>Minigun</li>
+      <li>DMS_Dragoon_SG</li>
+    </weaponTags>
+    <weaponMoney>1500~3000</weaponMoney>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>200~700</techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>15~24</initialResistanceRange>
+    <modExtensions>
+      <li Class="WalkerGear.ModExtForceApparelGen">
+        <StructurePointRange>0.75~1</StructurePointRange>
+        <apparels>
+          <li>DMS_Apparel_PF3_Core</li>
+          <li>DMS_Apparel_Groyne_Helmet</li>
+        </apparels>
+        <chanceApparels>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_CargoBox</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_PileBunker</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_WorkArm</apparel>
+          </li>
+        </chanceApparels>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(135, 105, 105)</only>
+            </li>
+            <li>
+              <only>(105, 77, 77)</only>
+            </li>
+            <li>
+              <only>(77, 77, 77)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+      <li Class="WalkerGear.ModExtension_NoIdeoApparel" />
+    </modExtensions>
+  </PawnKindDef>
+  <PawnKindDef ParentName="MercenaryBase">
+    <defName>DMS_Dragoon_Pirate</defName>
+    <label>pirate dragoon</label>
+    <combatPower>300</combatPower>
+    <aiAvoidCover>true</aiAvoidCover>
+    <isFighter>true</isFighter>
+    <gearHealthRange>0.8~2</gearHealthRange>
+    <maxPerGroup>5</maxPerGroup>
     <apparelTags>
       <li>IndustrialMilitaryBasic</li>
       <li>BeltDefensePop</li>
@@ -613,7 +774,7 @@
     <initialResistanceRange>15~24</initialResistanceRange>
     <modExtensions>
       <li Class="WalkerGear.ModExtForceApparelGen">
-        <StructurePointRange>0.6~0.8</StructurePointRange>
+        <StructurePointRange>0.75~1</StructurePointRange>
         <apparels>
           <li>DMS_Apparel_AT34_Core</li>
         </apparels>
@@ -657,7 +818,73 @@
           </options>
         </colorGenerator>
       </li>
-      <li Class="WalkerGear.ModExtension_NoIdeoApparel"/>
+      <li Class="WalkerGear.ModExtension_NoIdeoApparel" />
+    </modExtensions>
+  </PawnKindDef>
+  <PawnKindDef ParentName="MercenaryBase">
+    <defName>DMS_Dragoon_PirateRotary</defName>
+    <label>rotary man</label>
+    <combatPower>300</combatPower>
+    <aiAvoidCover>true</aiAvoidCover>
+    <isFighter>true</isFighter>
+    <gearHealthRange>0.8~2</gearHealthRange>
+    <minApparelQuality>Good</minApparelQuality>
+    <maxPerGroup>1</maxPerGroup>
+    <apparelTags>
+      <li>IndustrialMilitaryBasic</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelMoney>800~1300</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <weaponTags>
+      <li>H_Gatling127mm</li>
+      <li>H_Gatling20mm</li>
+    </weaponTags>
+    <weaponMoney>2000~3000</weaponMoney>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>200~700</techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>15~24</initialResistanceRange>
+    <modExtensions>
+      <li Class="WalkerGear.ModExtForceApparelGen">
+        <StructurePointRange>0.9~1</StructurePointRange>
+        <apparels>
+          <li>DMS_Apparel_Groyne_Helmet</li>
+          <li>DMS_Apparel_AT34_Core</li>
+        </apparels>
+        <chanceApparels>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_SwarmMissilePod</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_CargoBox</apparel>
+          </li>
+          <li>
+            <chance>0.15</chance>
+            <apparel>DMS_Apparel_AT34_Helmet</apparel>
+          </li>
+        </chanceApparels>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(135, 105, 105)</only>
+            </li>
+            <li>
+              <only>(105, 77, 77)</only>
+            </li>
+            <li>
+              <only>(77, 77, 77)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+      <li Class="WalkerGear.ModExtension_NoIdeoApparel" />
     </modExtensions>
   </PawnKindDef>
 </Defs>

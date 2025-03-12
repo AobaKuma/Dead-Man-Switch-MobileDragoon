@@ -3,7 +3,6 @@
 <Patch>
     <Operation Class="PatchOperationSequence">
         <operations>
-
             <!--=====PatchTools=====-->
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[@Name="DMS_BaseDragoonWeapon"]/tools</xpath>
@@ -173,7 +172,6 @@
                     <li>CE_AI_Suppressive</li>
                 </weaponTags>
             </li>
-
 
             <!--=====DragoonDMR=====-->
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">

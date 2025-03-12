@@ -6,6 +6,7 @@
 		<li>1.5</li>
 		<li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.5/CE</li>
 		<li IfModActive="erdelf.humanoidalienraces,erdelf.humanoidalienraces_steam">1.5/MOD/HAR</li>
-		<li IfModActive="aoba.deadmanswitch.ancientcorps,aoba.deadmanswitch.ancientcorps_steam">1.5/MOD/DMSAC</li>
+		<li IfModActive="breadmo.cinders,breadmo.cinders_steam">1.5/MOD/DMSAC</li>
+		<li IfModActive="aoba.deadmanswitch.ancientcorps,aoba.deadmanswitch.ancientcorps_steam">1.5/MOD/Cinders</li>
 	</v1.5>
 </loadFolders>

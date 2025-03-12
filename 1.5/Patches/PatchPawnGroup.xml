@@ -7,7 +7,9 @@
                 <xpath>
                     Defs/FactionDef[@Name="PirateBandBase" or @ParentName="PirateBandBase"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
                 <value>
+                    <DMS_WalkerFrame_Pirate>2</DMS_WalkerFrame_Pirate>
                     <DMS_Dragoon_Pirate>1</DMS_Dragoon_Pirate>
+                    <DMS_Dragoon_PirateRotary>1</DMS_Dragoon_PirateRotary>
                 </value>
             </li>
 
@@ -26,16 +28,16 @@
                 <xpath>
                     Defs/FactionDef[defName="DMS_Army"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
                 <value>
-                    <DMS_Squad_ArmyDragoon>0.1</DMS_Squad_ArmyDragoon>
-                    <DMS_Squad_ArmyDragoon_Trainee>1</DMS_Squad_ArmyDragoon_Trainee>
+                    <DMS_Squad_ArmyDragoon>1</DMS_Squad_ArmyDragoon>
+                    <DMS_Squad_ArmyDragoon_Trainee>2</DMS_Squad_ArmyDragoon_Trainee>
                 </value>
             </li>
-
 
             <li Class="PatchOperationAdd">
                 <xpath>
                     Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
                 <value>
+                    <DMS_WalkerFrame_Outlander>0.5</DMS_WalkerFrame_Outlander>
                     <DMS_Dragoon_Outlander>0.25</DMS_Dragoon_Outlander>
                 </value>
             </li>

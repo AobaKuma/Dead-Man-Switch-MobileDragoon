@@ -67,6 +67,7 @@
 			<Insulation_Heat>32</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
+			<CarryWeight MayRequire="ceteam.combatextended">250</CarryWeight>
 			<CarryingCapacity>250</CarryingCapacity>
 			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
     </equippedStatOffsets>

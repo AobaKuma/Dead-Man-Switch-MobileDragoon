@@ -98,7 +98,7 @@
     </modExtensions>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="Cinder_BasePawn" Name="Base_CinderDragoon">
+  <PawnKindDef ParentName="Base_CinderDragoon">
     <defName>DMS_Cinder_Arrowhead</defName>
     <label>Arrowhead</label>
     <weaponTags Inherit="false">

@@ -1,28 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
   <!-- EN: town dragoon -->
   <DMS_Dragoon_Outlander.label>龙骑兵驾驶员</DMS_Dragoon_Outlander.label>
-  
+
   <!-- EN: pirate dragoon -->
   <DMS_Dragoon_Pirate.label>雇佣龙骑兵</DMS_Dragoon_Pirate.label>
-  
+
+  <!-- EN: rotary man -->
+  <DMS_Dragoon_PirateRotary.label>转轮王驾驶</DMS_Dragoon_PirateRotary.label>
+
   <!-- EN: Veteran -->
   <DMS_LastPilot.label>退休老兵</DMS_LastPilot.label>
-  
+
   <!-- EN: Zyklop pagoda -->
   <DMS_Squad_ArmyDragoon.label>独眼巨人 "宝塔"</DMS_Squad_ArmyDragoon.label>
-  
+
   <!-- EN: Zyklop Claymore -->
   <DMS_Squad_ArmyDragoon_Claymore.label>独眼巨人 "执剑人"</DMS_Squad_ArmyDragoon_Claymore.label>
-  
+
   <!-- EN: Zyklop colossi -->
   <DMS_Squad_ArmyDragoon_Explosive.label>独眼巨人 "巨像"</DMS_Squad_ArmyDragoon_Explosive.label>
-  
+
   <!-- EN: Zyklop tornado -->
   <DMS_Squad_ArmyDragoon_Gatling.label>独眼巨人 "加特林菩萨"</DMS_Squad_ArmyDragoon_Gatling.label>
-  
+
   <!-- EN: Yetta trainee -->
   <DMS_Squad_ArmyDragoon_Trainee.label>耶塔 "两年半练习生"</DMS_Squad_ArmyDragoon_Trainee.label>
-  
+
+  <!-- EN: pilot worker -->
+  <DMS_WalkerFrame_Outlander.label>步行者驾驶</DMS_WalkerFrame_Outlander.label>
+
+  <!-- EN: bunker -->
+  <DMS_WalkerFrame_Pirate.label>碉堡驾驶</DMS_WalkerFrame_Pirate.label>
 </LanguageData>

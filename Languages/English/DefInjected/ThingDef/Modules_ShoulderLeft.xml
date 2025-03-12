@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
+  <!-- EN: armor Pad -->
+  <DMS_Apparel_ArmorPad.label>armor Pad</DMS_Apparel_ArmorPad.label>
+  <!-- EN: A heavy shoulder armor mounted on an exosuit frame. -->
+  <DMS_Apparel_ArmorPad.description>A heavy shoulder armor mounted on an exosuit frame.</DMS_Apparel_ArmorPad.description>
+  
   <!-- EN: Demolish Missile Pod -->
   <DMS_Apparel_MissilePod.label>Demolish Missile Pod</DMS_Apparel_MissilePod.label>
   <!-- EN: A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use. -->
@@ -34,6 +39,17 @@
   <!-- EN: launch smoke shell -->
   <DMS_Apparel_SmokeLauncher.verbs.launch_smoke_shell.label>launch smoke shell</DMS_Apparel_SmokeLauncher.verbs.launch_smoke_shell.label>
   
+  <!-- EN: Stugna launcher -->
+  <DMS_Apparel_StugnaLauncher.label>Stugna launcher</DMS_Apparel_StugnaLauncher.label>
+  <!-- EN: A Dragoon shoulder launcher that holds two stugna missiles. It is effective against heavy mechs and even tanks. However, a long aiming time and a clear line of sight are required to lock on target. -->
+  <DMS_Apparel_StugnaLauncher.description>A Dragoon shoulder launcher that holds two stugna missiles. It is effective against heavy mechs and even tanks. However, a long aiming time and a clear line of sight are required to lock on target.</DMS_Apparel_StugnaLauncher.description>
+  <!-- EN: stugna missile -->
+  <DMS_Apparel_StugnaLauncher.comps.CompApparelReloadable.chargeNoun>stugna missile</DMS_Apparel_StugnaLauncher.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_StugnaLauncher.comps.CompApparelReloadable.cooldownGerund>on cooldown</DMS_Apparel_StugnaLauncher.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: launch stugna missile -->
+  <DMS_Apparel_StugnaLauncher.verbs.launch_stugna_missile.label>launch stugna missile</DMS_Apparel_StugnaLauncher.verbs.launch_stugna_missile.label>
+  
   <!-- EN: Swarm rocket Pod -->
   <DMS_Apparel_SwarmMissilePod.label>Swarm rocket Pod</DMS_Apparel_SwarmMissilePod.label>
   <!-- EN: A Rocket pod module that contains multiple high-explosive rocket rounds, can use its high fire rate to cover an large area. -->
@@ -47,6 +63,11 @@
   
   <!-- EN: hellfire missile -->
   <DMS_Bullet_HellFire.label>hellfire missile</DMS_Bullet_HellFire.label>
+  
+  <!-- EN: armor Pad -->
+  <DMS_Module_ArmorPad.label>armor Pad</DMS_Module_ArmorPad.label>
+  <!-- EN: A heavy shoulder armor mounted on an exosuit frame. -->
+  <DMS_Module_ArmorPad.description>A heavy shoulder armor mounted on an exosuit frame.</DMS_Module_ArmorPad.description>
   
   <!-- EN: Missile Pod -->
   <DMS_Module_MissilePod.label>Missile Pod</DMS_Module_MissilePod.label>
@@ -62,6 +83,11 @@
   <DMS_Module_SmokeLauncher.label>Smoke launcher</DMS_Module_SmokeLauncher.label>
   <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
   <DMS_Module_SmokeLauncher.description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</DMS_Module_SmokeLauncher.description>
+  
+  <!-- EN: Stugna launcher -->
+  <DMS_Module_StugnaLauncher.label>Stugna launcher</DMS_Module_StugnaLauncher.label>
+  <!-- EN: A Dragoon shoulder launcher that holds two stugna missiles. It is effective against heavy mechs and even tanks. However, a long aiming time and a clear line of sight are required to lock on target. -->
+  <DMS_Module_StugnaLauncher.description>A Dragoon shoulder launcher that holds two stugna missiles. It is effective against heavy mechs and even tanks. However, a long aiming time and a clear line of sight are required to lock on target.</DMS_Module_StugnaLauncher.description>
   
   <!-- EN: Swarm rocket Pod -->
   <DMS_Module_SwarmMissilePod.label>Swarm rocket Pod</DMS_Module_SwarmMissilePod.label>

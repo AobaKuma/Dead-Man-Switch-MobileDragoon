@@ -7,6 +7,9 @@
   <!-- EN: pirate dragoon -->
   <DMS_Dragoon_Pirate.label>pirate dragoon</DMS_Dragoon_Pirate.label>
   
+  <!-- EN: rotary man -->
+  <DMS_Dragoon_PirateRotary.label>rotary man</DMS_Dragoon_PirateRotary.label>
+  
   <!-- EN: Veteran -->
   <DMS_LastPilot.label>Veteran</DMS_LastPilot.label>
   
@@ -24,5 +27,11 @@
   
   <!-- EN: Yetta trainee -->
   <DMS_Squad_ArmyDragoon_Trainee.label>Yetta trainee</DMS_Squad_ArmyDragoon_Trainee.label>
+  
+  <!-- EN: pilot worker -->
+  <DMS_WalkerFrame_Outlander.label>pilot worker</DMS_WalkerFrame_Outlander.label>
+  
+  <!-- EN: bunker -->
+  <DMS_WalkerFrame_Pirate.label>bunker</DMS_WalkerFrame_Pirate.label>
   
 </LanguageData>

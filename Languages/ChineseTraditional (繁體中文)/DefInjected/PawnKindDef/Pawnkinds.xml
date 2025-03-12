@@ -7,6 +7,9 @@
   <!-- EN: pirate dragoon -->
   <DMS_Dragoon_Pirate.label>雇傭龍騎兵</DMS_Dragoon_Pirate.label>
   
+  <!-- EN: rotary man -->
+  <DMS_Dragoon_PirateRotary.label>轉輪王駕駛</DMS_Dragoon_PirateRotary.label>
+  
   <!-- EN: Veteran -->
   <DMS_LastPilot.label>退休老兵</DMS_LastPilot.label>
   
@@ -24,5 +27,11 @@
   
   <!-- EN: Yetta trainee -->
   <DMS_Squad_ArmyDragoon_Trainee.label>耶塔 "兩年半練習生"</DMS_Squad_ArmyDragoon_Trainee.label>
+  
+  <!-- EN: pilot worker -->
+  <DMS_WalkerFrame_Outlander.label>步行者駕駛</DMS_WalkerFrame_Outlander.label>
+  
+  <!-- EN: bunker -->
+  <DMS_WalkerFrame_Pirate.label>碉堡駕駛</DMS_WalkerFrame_Pirate.label>
   
 </LanguageData>

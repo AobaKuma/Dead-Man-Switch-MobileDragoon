@@ -21,6 +21,7 @@
 	<loadAfter>
 		<li>aoba.exosuit.framework</li>
     	<li>Aoba.DeadManSwitch.Core</li>
+		<li>breadmo.cinders</li>
   	</loadAfter>
 	<description>Mobile dragoon, classified as an ultra-heavy armor exosuit. It is another branch of the development of power armor technology in MidWorld.</description>
 </ModMetaData>

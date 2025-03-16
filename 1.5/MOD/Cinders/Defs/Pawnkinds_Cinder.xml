@@ -3,7 +3,7 @@
   <PawnKindDef ParentName="Cinder_BasePawn" Name="Base_CinderDragoon">
     <defName>DMS_Cinder_Vanguard</defName>
     <label>Silent vanguard</label>
-    <combatPower>150</combatPower>
+    <combatPower>500</combatPower>
     <defaultFactionType>Cinder_ESDSP</defaultFactionType>
     <apparelMoney>2000~5000</apparelMoney>
     <weaponMoney>2000~10000</weaponMoney>

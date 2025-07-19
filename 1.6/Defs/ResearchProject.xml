@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ResearchProjectDef ParentName="DMS_BaseTech">
+    <defName>DMS_MobileDragoon</defName>
+    <label>mobile dragoon</label>
+    <description>A military-duty exoskeleton technology used by colonial fleets. Due to their active colonization activities in rimworlds, these type of technology is also mastered by most former colonial worlds and some space pirates. Dragoons are generally used for armored reconnaissance missions on urban battlefields with poor road conditions, and having multiple modular mount for various needs.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <hiddenPrerequisites>
+      <li>WG_HeavyExoskeleton</li>
+      <li>DMS_Prosthetic</li>
+    </hiddenPrerequisites>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>2.00</researchViewY>
+    <techprintCount>2</techprintCount>
+    <techprintCommonality>0.5</techprintCommonality>
+    <techprintMarketValue>1500</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li>DMS</li>
+    </heldByFactionCategoryTags>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef ParentName="DMS_BaseTech">
+    <defName>DMS_MobileDragoonAdvanced</defName>
+    <label>main battle dragoon</label>
+    <description>unlocks the production of the PV-8 "Zyklop" Dragoon frame for the Colonial Fleet Mobile Armoured Regiment.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>DMS_MobileDragoon</li>
+    </prerequisites>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>1.60</researchViewY>
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>0.5</techprintCommonality>
+    <techprintMarketValue>1500</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li>DMS</li>
+    </heldByFactionCategoryTags>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef ParentName="DMS_BaseTech">
+    <defName>DMS_MobileDragoonElite</defName>
+    <label>Advanced Dragoon Engineering</label>
+    <description>unlocks the production of the F/A-47 "Arsenal Angel" Dragoon frame for the Colonial Fleet Orbital Trooper Regiment.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+      <li>DMS_MobileDragoonAdvanced</li>
+    </prerequisites>
+    <researchViewX>6.00</researchViewX>
+    <researchViewY>1.60</researchViewY>
+
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>0.05</techprintCommonality>
+    <techprintMarketValue>2000</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li>DMS</li>
+    </heldByFactionCategoryTags>
+  </ResearchProjectDef>
+
+
+  <ResearchProjectDef ParentName="DMS_BaseTech">
+    <defName>DMS_MobileDragoonModule</defName>
+    <label>electronic modules</label>
+    <description>unlock the production fo electronic communications/sensing modules for dragoon.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+      <li>DMS_MobileDragoon</li>
+    </prerequisites>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>2.30</researchViewY>
+
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>0.25</techprintCommonality>
+    <techprintMarketValue>2000</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li>DMS</li>
+    </heldByFactionCategoryTags>
+  </ResearchProjectDef>
+
+  
+</Defs>

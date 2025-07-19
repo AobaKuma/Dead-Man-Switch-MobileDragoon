@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <li Class="PatchOperationAdd">
+                <xpath>
+                    Defs/FactionDef[@Name="PirateBandBase" or @ParentName="PirateBandBase"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+                <value>
+                    <DMS_WalkerFrame_Pirate>2</DMS_WalkerFrame_Pirate>
+                    <DMS_Dragoon_Pirate>1</DMS_Dragoon_Pirate>
+                    <DMS_Dragoon_PirateRotary>1</DMS_Dragoon_PirateRotary>
+                </value>
+            </li>
+
+            <!-- 殖民艦隊本家 -->
+            <li Class="PatchOperationAdd"> 
+                <xpath>
+                    Defs/FactionDef[defName="DMS_Army"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+                <value>
+                    <DMS_Squad_ArmyDragoon_Gatling>0.1</DMS_Squad_ArmyDragoon_Gatling>
+                    <DMS_Squad_ArmyDragoon_Explosive>0.1</DMS_Squad_ArmyDragoon_Explosive>
+                    <DMS_Squad_ArmyDragoon>0.2</DMS_Squad_ArmyDragoon>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd"> 
+                <xpath>
+                    Defs/FactionDef[defName="DMS_Army"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
+                <value>
+                    <DMS_Squad_ArmyDragoon>1</DMS_Squad_ArmyDragoon>
+                    <DMS_Squad_ArmyDragoon_Trainee>2</DMS_Squad_ArmyDragoon_Trainee>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>
+                    Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
+                <value>
+                    <DMS_WalkerFrame_Outlander>0.5</DMS_WalkerFrame_Outlander>
+                    <DMS_Dragoon_Outlander>0.25</DMS_Dragoon_Outlander>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

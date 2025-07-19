@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Module_ArmorPad"]/statBases</xpath>
+                <value>
+                    <Bulk>41</Bulk>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_ArmorPad"]/statBases</xpath>
+                <value>
+                    <Bulk>41</Bulk>
+                    <WornBulk>20</WornBulk>
+                </value>
+            </li>
+
+            <!--Misslile
+            pod-->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Module_MissilePod"]/statBases</xpath>
+                <value>
+                    <Bulk>41</Bulk>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePod"]/statBases</xpath>
+                <value>
+                    <Bulk>41</Bulk>
+                    <WornBulk>14</WornBulk>
+                    <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePod"]/verbs</xpath>
+                <value>
+                    <verbs>
+                        <li Class="CombatExtended.VerbPropertiesCE">
+                            <label>launch missile</label>
+                            <verbClass>CombatExtended.Verb_LaunchProjectileStaticCE</verbClass>
+                            <hasStandardCommand>true</hasStandardCommand>
+                            <commandIcon>UI/Ability/Missile</commandIcon>
+                            <onlyManualCast>True</onlyManualCast>
+                            <warmupTime>1.5</warmupTime>
+                            <noiseRadius>4</noiseRadius>
+                            <range>85.9</range>
+                            <minRange>5</minRange>
+                            <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                            <soundCast>RocketswarmLauncher_Fire</soundCast>
+                            <soundCastTail>GunTail_Medium</soundCastTail>
+                            <muzzleFlashScale>14</muzzleFlashScale>
+                            <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+                            <targetParams>
+                                <canTargetLocations>true</canTargetLocations>
+                            </targetParams>
+                            <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+                            <defaultProjectile>Bullet_M72LAW</defaultProjectile>
+                            <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+                        </li>
+                    </verbs>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>
+                    Defs/ThingDef[defName="DMS_Apparel_MissilePod"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
+                <value>
+                    <li Class="CompProperties_ApparelReloadable">
+                        <maxCharges>4</maxCharges>
+                        <ammoDef>CE_DisposableRocketLauncher</ammoDef>
+                        <ammoCountPerCharge>1</ammoCountPerCharge>
+                        <baseReloadTicks>60</baseReloadTicks>
+                        <soundReload>Standard_Reload</soundReload>
+                        <hotKey>Misc4</hotKey>
+                        <chargeNoun>missile</chargeNoun>
+                        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+                    </li>
+                </value>
+            </li>
+
+            <!--Swarm
+            Misslile pod-->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Module_SwarmMissilePod"]/statBases/Mass</xpath>
+                <value>
+                    <Mass>55</Mass>
+                    <Bulk>36</Bulk>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_SwarmMissilePod"]/statBases</xpath>
+                <value>
+                    <Bulk>36</Bulk>
+                    <WornBulk>12</WornBulk>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_SwarmMissilePod"]/verbs</xpath>
+                <value>
+                    <verbs>
+                        <li Class="CombatExtended.VerbPropertiesCE">
+                            <label>launch rocket</label>
+                            <verbClass>CombatExtended.Verb_LaunchProjectileStaticCE</verbClass>
+                            <hasStandardCommand>true</hasStandardCommand>
+                            <commandIcon>UI/Ability/Missile</commandIcon>
+                            <onlyManualCast>True</onlyManualCast>
+                            <warmupTime>0.3</warmupTime>
+                            <noiseRadius>4</noiseRadius>
+                            <!--<burstShotCount>3</burstShotCount>
+                            <ticksBetweenBurstShots>10</ticksBetweenBurstShots>-->
+                            <range>63</range>
+                            <minRange>15</minRange>
+                            <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                            <soundCast>RocketswarmLauncher_Fire</soundCast>
+                            <soundCastTail>GunTail_Medium</soundCastTail>
+                            <muzzleFlashScale>14</muzzleFlashScale>
+                            <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+                            <targetParams>
+                                <canTargetLocations>true</canTargetLocations>
+                            </targetParams>
+                            <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+                            <defaultProjectile>Bullet_57mmRocket_Thermobaric</defaultProjectile>
+                            <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+                        </li>
+                    </verbs>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>
+                    Defs/ThingDef[defName="DMS_Apparel_SwarmMissilePod"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
+                <value>
+                    <li Class="CompProperties_ApparelReloadable">
+                        <maxCharges>14</maxCharges>
+                        <ammoDef>Ammo_57mmRocket_Thermobaric</ammoDef>
+                        <ammoCountPerCharge>1</ammoCountPerCharge>
+                        <baseReloadTicks>150</baseReloadTicks>
+                        <soundReload>Standard_Reload</soundReload>
+                        <hotKey>Misc4</hotKey>
+                        <chargeNoun>rocket</chargeNoun>
+                        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--Misslile
+            pods(more)-->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Module_MissilePodPlus"]/statBases</xpath>
+                <value>
+                    <Bulk>82</Bulk>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePodPlus"]/statBases</xpath>
+                <value>
+                    <Bulk>82</Bulk>
+                    <WornBulk>28</WornBulk>
+                    <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePodPlus"]/verbs</xpath>
+                <value>
+                    <verbs>
+                        <li Class="CombatExtended.VerbPropertiesCE">
+                            <label>launch missile</label>
+                            <verbClass>CombatExtended.Verb_LaunchProjectileStaticCE</verbClass>
+                            <hasStandardCommand>true</hasStandardCommand>
+                            <commandIcon>UI/Ability/Missile</commandIcon>
+                            <onlyManualCast>True</onlyManualCast>
+                            <warmupTime>1.5</warmupTime>
+                            <range>85.9</range>
+                            <minRange>5</minRange>
+                            <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                            <soundCast>RocketswarmLauncher_Fire</soundCast>
+                            <soundCastTail>GunTail_Medium</soundCastTail>
+                            <muzzleFlashScale>14</muzzleFlashScale>
+                            <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+                            <targetParams>
+                                <canTargetLocations>true</canTargetLocations>
+                            </targetParams>
+                            <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+                            <defaultProjectile>Bullet_M72LAW</defaultProjectile>
+                            <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+                        </li>
+                    </verbs>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>
+                    Defs/ThingDef[defName="DMS_Apparel_MissilePodPlus"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
+                <value>
+                    <li Class="CompProperties_ApparelReloadable">
+                        <maxCharges>8</maxCharges>
+                        <ammoDef>CE_DisposableRocketLauncher</ammoDef>
+                        <ammoCountPerCharge>1</ammoCountPerCharge>
+                        <baseReloadTicks>120</baseReloadTicks>
+                        <soundReload>Standard_Reload</soundReload>
+                        <hotKey>Misc4</hotKey>
+                        <chargeNoun>missile</chargeNoun>
+                        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+                    </li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

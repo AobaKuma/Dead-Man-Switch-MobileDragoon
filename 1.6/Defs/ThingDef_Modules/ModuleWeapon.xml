@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseGun" Name="DMS_BaseDragoonWeapon" Abstract="True">
+    <soundInteract>DMS_EquipGear</soundInteract>
+    <thingCategories Inherit="False">
+      <li>AutomatroidWeapon</li>
+    </thingCategories>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MaxHitPoints>10</MaxHitPoints>
+      <WorkToMake>40000</WorkToMake>
+    </statBases>
+    <tradeTags>
+      <li>DMS_WeaponRanged</li>
+    </tradeTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <modExtensions/>
+    <destroyOnDrop>true</destroyOnDrop>
+    <tradeability>None</tradeability>
+    <generateCommonality>0</generateCommonality>
+    <generateAllowChance>0</generateAllowChance>
+    <relicChance>0</relicChance>
+    <comps>
+      <li>
+        <compClass>Exosuit.CompApparelForcedWeapon</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="DMS_BaseDragoonWeapon">
+    <defName>DMS_Dragoon_LMG</defName>
+    <label>Dragoon LMG</label>
+    <description>A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities.</description>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+      <li>LongShots</li>
+      <li>Ranged</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Things/Weapons/DMS_Dragoon_LMG</texPath>
+      <drawSize>2.75</drawSize>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.8</AccuracyMedium>
+      <AccuracyLong>0.7</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <Mass>0</Mass>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_AutocannonTurret</defaultProjectile>
+        <warmupTime>3</warmupTime>
+        <range>45</range>
+        <ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+        <burstShotCount>9</burstShotCount>
+        <soundCast>Shot_Autocannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <modExtensions>
+      <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+        <def>MF_StandardMuzzleFalsh</def>
+        <drawSize>(0.75,0.75)</drawSize>
+        <offsets>
+          <li>(0.75,0)</li>
+        </offsets>
+        <isAlternately>true</isAlternately>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  
+
+  <ThingDef ParentName="DMS_BaseDragoonWeapon">
+    <defName>DMS_Dragoon_DMR</defName>
+    <label>Dragoon DMR</label>
+    <description>A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon.</description>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+      <li>LongShots</li>
+      <li>Ranged</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Things/Weapons/DMS_Dragoon_DMR</texPath>
+      <drawSize>2.75</drawSize>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.40</AccuracyTouch>
+      <AccuracyShort>0.77</AccuracyShort>
+      <AccuracyMedium>0.9</AccuracyMedium>
+      <AccuracyLong>0.72</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <Mass>0</Mass>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_TurretSniper</defaultProjectile>
+        <warmupTime>2.8</warmupTime>
+        <range>60</range>
+        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+        <burstShotCount>2</burstShotCount>
+        <soundCast>Shot_TurretSniper</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <modExtensions>
+      <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+        <def>MF_StandardMuzzleFalsh</def>
+        <drawSize>(0.75,0.75)</drawSize>
+        <offsets>
+          <li>(0.75,0)</li>
+        </offsets>
+        <isAlternately>true</isAlternately>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="DMS_AutomatroidHeavyGun">
+    <defName>DMS_Dragoon_Shotgun</defName>
+    <label>Dragoon Shotgun</label>
+    <!-- 一種代號為龍的重型半自動霰彈槍，被設計用於提供龍騎兵裝備來在不佔用太大重量的前提下提供足夠的近距離火力，能夠發射一種名為龍息的白磷霰彈來點燃敵人。 -->
+    <description>A heavy-duty semi-automatic shotgun code-named "Dragon", this equipment was designed to provide dragoons with decent firepower in close range without taking up too much weight. it's capable of firing a white phosphorous canister called Dragonbreath to incinerate the enemy.</description>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+      <li>ShortShots</li>
+      <li>Ranged</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Things/Weapons/DMS_Dragoon_Shotgun</texPath>
+      <drawSize>2</drawSize>
+    </graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.35</AccuracyMedium>
+      <AccuracyLong>0.15</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+			<WorkToMake>30000</WorkToMake>
+      <Mass>17.50</Mass>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>DMS_Bullet_DragoonShotgun</defaultProjectile>
+				<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+				<burstShotCount>5</burstShotCount>
+        <warmupTime>0.8</warmupTime>
+        <range>19.9</range>
+        <soundCast>Shot_Autocannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+		<costList>
+			<Tungsteel>85</Tungsteel>
+			<ComponentStamped>3</ComponentStamped>
+		</costList>
+    <weaponTags>
+      <li>DMS_Dragoon_SG</li>
+    </weaponTags>
+    <modExtensions>
+      <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+        <def>MF_StandardMuzzleFalsh</def>
+        <drawSize>(0.75,0.75)</drawSize>
+        <offsets>
+          <li>(0.75,0)</li>
+        </offsets>
+        <isAlternately>true</isAlternately>
+      </li>
+			<li Class="Fortified.HeavyEquippableExtension">
+				<EquippableDef>HeavyAutomatroid</EquippableDef>
+			</li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>DMS_Bullet_DragoonShotgun</defName>
+    <label>canister darts</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>35</damageAmountBase>
+      <stoppingPower>2</stoppingPower>
+      <speed>75</speed>
+      <armorPenetrationBase>0.55</armorPenetrationBase>
+    </projectile>
+    <comps>
+      <li Class="Exosuit.CompProperties_LaunchExhaust" />
+    </comps>
+    <modExtensions>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>DMS_Bullet_DragoonRocket</defName>
+    <thingClass>Exosuit.Projectile_Parabola</thingClass>
+    <label>rocket</label>
+    <graphicData>
+      <texPath>Things/Ammo/76mm9M311Missile/Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>2</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <arcHeightFactor>10</arcHeightFactor>
+      <explosionRadius>3</explosionRadius>
+      <damageAmountBase>40</damageAmountBase>
+      <stoppingPower>4</stoppingPower>
+      <speed>55</speed>
+      <armorPenetrationBase>0.55</armorPenetrationBase>
+      <flyOverhead>true</flyOverhead>
+    </projectile>
+    <comps>
+      <li Class="Exosuit.CompProperties_LaunchExhaust"/>
+      <li Class="Exosuit.CompProperties_ProjectileFleckEmitter">
+        <fleck>BlastFlame</fleck>
+        <offsetMin>(-2,0,-2)</offsetMin>
+        <offsetMax>(2,0,2)</offsetMax>
+        <emissionInterval>0</emissionInterval>
+        <burstCount>5</burstCount>
+        <scale>2~4</scale>
+        <rotationRate>-30~30</rotationRate>
+        <colorA>(1,1,1,1)</colorA>
+        <colorB>(0.8,0.8,0.8,1)</colorB>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

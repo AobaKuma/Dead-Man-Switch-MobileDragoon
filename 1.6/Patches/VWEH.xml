@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Weapons Expanded - Heavy Weapons</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <xpath>*/ThingDef[@ParentName="BaseHumanMakeableGun"]/modExtensions/li[@Class =
+                "HeavyWeapons.HeavyWeapon"]</xpath>
+            <match Class="PatchOperationAdd">
+                <xpath>*/ThingDef[@ParentName="BaseHumanMakeableGun"]/modExtensions/li[@Class =
+                    "HeavyWeapons.HeavyWeapon"]/supportedArmors</xpath>
+                <value>
+                    <li>DMS_Apparel_AT34_Core</li>
+                    <li>DMS_Apparel_PV4_Core</li>
+                    <li>DMS_Apparel_PV8_Core</li>
+                    <li>DMS_Apparel_FA47_Core</li>
+                    <li>DMS_Apparel_PF3_Core</li>
+                </value>
+            </match>
+        </match>
+    </Operation>
+</Patch>

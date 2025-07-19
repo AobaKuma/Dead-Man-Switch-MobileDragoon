@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- 物品型態的龍騎兵裝備 -->
+    <ThingDef Name="DMS_ModuleItemBase" ParentName="ModuleItemBase" Abstract="True">
+        <recipeMaker>
+            <recipeUsers>
+                <li>DMS_TableMachinePrinter</li>
+            </recipeUsers>
+            <effectWorking>Repair</effectWorking>
+            <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+            <workAmount>15000</workAmount>
+            <workSkill>Crafting</workSkill>
+            <soundWorking>Recipe_Machining</soundWorking>
+        </recipeMaker>
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <only>(0.7, 0.7, 0.7)</only>
+                </li>
+                <li>
+                    <only>(0.5, 0.5, 0.5)</only>
+                </li>
+                <li>
+                    <only>(0.6, 0.6, 0.6)</only>
+                </li>
+                <li>
+                    <only>(104, 120, 119)</only> <!-- drab dark blue -->
+                </li>
+                <li>
+                    <only>(106, 120, 104)</only> <!-- drab dark green -->
+                </li>
+                <li>
+                    <only>(128, 116, 84)</only> <!-- light brown -->
+                </li>
+                <li>
+                    <only>(107, 94, 64)</only> <!-- mid brown -->
+                </li>
+            </options>
+        </colorGenerator>
+    </ThingDef>
+
+    <ThingDef Name="DMS_ModuleItemHead" ParentName="DMS_ModuleItemBase" Abstract="True">
+        <thingCategories Inherit="False">
+            <li>DMS_Module_Helmet</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Item/Module_H</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef Name="DMS_ModuleItemCore" ParentName="DMS_ModuleItemBase" Abstract="True">
+        <thingCategories Inherit="False">
+            <li>DMS_Module_Core</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Item/Module</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef Name="DMS_ModuleItemAttachment" ParentName="DMS_ModuleItemBase" Abstract="True">
+        <thingCategories Inherit="False">
+            <li>DMS_Module_Pack</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Item/Module_A</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef Name="DMS_ModuleItemMountRight" ParentName="DMS_ModuleItemBase" Abstract="True">
+        <thingCategories Inherit="False">
+            <li>DMS_Module_ShoulderRight</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Item/Module_SR</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef Name="DMS_ModuleItemMountLeft" ParentName="DMS_ModuleItemBase" Abstract="True">
+        <thingCategories Inherit="False">
+            <li>DMS_Module_ShoulderLeft</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Item/Module_SL</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef Name="DMS_ModuleItemArmLeft" ParentName="DMS_ModuleItemBase" Abstract="True">
+        <thingCategories Inherit="False">
+            <li>DMS_Module_Attachment</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Item/Module_AL</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef Name="DMS_ModuleItemArmRight" ParentName="DMS_ModuleItemBase" Abstract="True">
+        <thingCategories Inherit="False">
+            <li>DMS_Module_Equipment</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Item/Module_AR</texPath>
+        </graphicData>
+    </ThingDef>
+
+
+    <!--衣服型態的龍騎兵裝備，理論上玩家不應該能獲取 -->
+    <ThingDef Name="DMS_ModuleApparelBase" ParentName="ModuleApparelBase" Abstract="True">
+        <tickerType>Normal</tickerType>
+        <comps>
+            <li Class="CompProperties_Styleable" />
+            <!-- <li Class="Exosuit.CompProperties_SleepCover" /> -->
+        </comps>
+        <modExtensions>
+            <li Class="VEF.Apparels.ApparelExtension">
+                <isUnifiedApparel>true</isUnifiedApparel>
+                <showBodyInBedAlways>true</showBodyInBedAlways>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef Name="DMS_ModuleApparelHead" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <apparel>
+            <tags>
+                <li>DMS_DragoonHelmet</li>
+            </tags>
+            <bodyPartGroups>
+                <li>Neck</li>
+            </bodyPartGroups>
+            <layers>
+                <li>WG_WalkerGearLayer_Core</li>
+            </layers>
+            <parentTagDef>WGApparelHead</parentTagDef>
+            <renderSkipFlags>
+                <li>Head</li>
+            </renderSkipFlags>
+        </apparel>
+    </ThingDef>
+    <ThingDef Name="DMS_ModuleApparelCore" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <thingClass>Exosuit.Exosuit_Core</thingClass>
+        <equippedStatOffsets>
+            <MeleeDamageFactor>1.25</MeleeDamageFactor>
+            <StaggerDurationFactor>-0.9</StaggerDurationFactor>
+        </equippedStatOffsets>
+        <statBases>
+            <Flammability>0</Flammability>
+        </statBases>
+        <apparel>
+            <tags>
+                <li>DMS_DragoonArmour</li>
+            </tags>
+            <parentTagDef>WGApparelBody</parentTagDef>
+            <useDeflectMetalEffect>true</useDeflectMetalEffect>
+            <renderSkipFlags>
+                <li>Body</li>
+            </renderSkipFlags>
+            <bodyPartGroups>
+                <li>Torso</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Shell</li>
+                <li>WG_WalkerGearLayer_Core</li>
+            </layers>
+        </apparel>
+        <tools>
+            <li>
+                <label>mechanical fist</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>24</power>
+                <armorPenetration>0.8</armorPenetration>
+                <cooldownTime>0.5</cooldownTime>
+            </li>
+            <li>
+                <label>mechanical leg</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>18</power>
+                <armorPenetration>0.5</armorPenetration>
+                <cooldownTime>1</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <ThingDef Name="DMS_ModuleApparelAttachment" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <thingCategories>
+            <li>DMS_Module_Pack</li>
+        </thingCategories>
+        <apparel>
+            <parentTagDef>WGApparelBody</parentTagDef>
+            <bodyPartGroups>
+                <li>Waist</li>
+                <li>Neck</li>
+            </bodyPartGroups>
+            <layers>
+                <li>WG_WalkerGearLayer_Utility</li>
+            </layers>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef Name="DMS_ModuleApparelMountRight" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <thingCategories>
+            <li>DMS_Module_ShoulderRight</li>
+        </thingCategories>
+        <apparel>
+            <bodyPartGroups>
+                <li>Shoulders</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <layers>
+                <li>WG_WalkerGearLayer_Utility</li>
+            </layers>
+            <parentTagDef>WGApparelBody</parentTagDef>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef Name="DMS_ModuleApparelMountLeft" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <thingCategories>
+            <li>DMS_Module_ShoulderLeft</li>
+        </thingCategories>
+        <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>
+            </bodyPartGroups>
+            <layers>
+                <li>WG_WalkerGearLayer_Utility</li>
+            </layers>
+            <parentTagDef>WGApparelBody</parentTagDef>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef Name="DMS_ModuleApparelArmLeft" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <thingCategories>
+            <li>DMS_Module_Attachment</li>
+        </thingCategories>
+        <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>
+            </bodyPartGroups>
+            <layers>
+                <li>WG_WalkerGearLayer</li>
+            </layers>
+            <parentTagDef>WGApparelBody</parentTagDef>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef Name="DMS_ModuleApparelArmRight" ParentName="DMS_ModuleApparelBase" Abstract="True">
+        <thingCategories>
+            <li>DMS_Module_Equipment</li>
+        </thingCategories>
+        <apparel>
+            <bodyPartGroups>
+                <li>Shoulders</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <layers>
+                <li>WG_WalkerGearLayer</li>
+            </layers>
+            <parentTagDef>WGApparelBody</parentTagDef>
+        </apparel>
+    </ThingDef>
+</Defs>

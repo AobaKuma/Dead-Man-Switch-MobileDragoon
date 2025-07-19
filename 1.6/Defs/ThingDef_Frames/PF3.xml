@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- PF3核心 -->
+  <ThingDef ParentName="DMS_ModuleItemCore">
+    <defName>DMS_Module_PF3_Core</defName>
+    <label>PF-3 "Arbeiter" powered frame</label>
+    <description>An exoskeleton frame within 2 meters high, its technology can be traced back to the end of the 22nd century, when mass-production engineering exoskeleton frames were used to construct a space elevator system for the Project Skyway.\n\nAfter the advent of the space age, a large number of engineering frames and production equipment flowed into civilian and armed organizations.\n\nArbeiter has a left arm that can use human tools and a right arm is used to install tool modules and balance the weight, allowing modules to be replaced to meet most of the work missions.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_PF3_Core</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>80</Mass>
+    </statBases>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_PF3_Core</EquipedThingDef>
+        <occupiedSlots>
+          <li>Core</li>
+        </occupiedSlots>
+        <disabledSlots>
+          <li>MountLeft</li>
+          <li>MountRight</li>
+          <li>Attachment</li>
+        </disabledSlots>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>WG_HeavyExoskeleton</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+	    <workAmount>36000</workAmount>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <smeltProducts>
+      <Steel>200</Steel>
+    </smeltProducts>
+    <butcherProducts>
+      <Steel>125</Steel>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </butcherProducts>
+    <costList>
+      <Steel>275</Steel>
+      <ComponentIndustrial>15</ComponentIndustrial>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelCore">
+    <defName>DMS_Apparel_PF3_Core</defName>
+    <label>PF-3 "Arbeiter" powered frame</label>
+    <description>An exoskeleton frame within 2 meters high, its technology can be traced back to the end of the 22nd century, when mass-production engineering exoskeleton frames were used to construct a space elevator system for the Project Skyway.\n\nAfter the advent of the space age, a large number of engineering frames and production equipment flowed into civilian and armed organizations.\n\nArbeiter has a left arm that can use human tools and a right arm is used to install tool modules and balance the weight, allowing modules to be replaced to meet most of the work missions.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/PF3/apparel_south</texPath>
+    </graphicData>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PF3_Core</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <Mass>80</Mass>
+      <MoveSpeed>4.0</MoveSpeed>
+      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.10</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>20</Insulation_Heat>
+    </statBases>
+    <equippedStatOffsets>
+			<CarryingCapacity>150</CarryingCapacity>
+			<CarryWeight MayRequire="ceteam.combatextended">150</CarryWeight>
+			<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
+    </equippedStatOffsets>
+    <apparel>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <drawSize>1.5</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/PF3/apparel</texPath>
+          <drawData>
+            <dataNorth>
+              <layer>5</layer>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
+    </apparel>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_PF3_Core</ItemDef>
+        <occupiedSlots>
+          <li>Core</li>
+        </occupiedSlots>
+        <disabledSlots>
+          <li>MountLeft</li>
+          <li>MountRight</li>
+          <li>Attachment</li>
+        </disabledSlots>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Exosuit.ExosuitExt">
+        <wreckageOverride>MF_Building_Wreckage</wreckageOverride>
+      </li>
+      <li Class="Exosuit.ApparelRenderOffsets">
+        <headData>
+          <dataWest>
+            <offset>(-0.4,0,0.35)</offset>
+          </dataWest>
+          <dataEast>
+            <offset>(0.4,0,0.35)</offset>
+          </dataEast>
+          <dataSouth>
+            <offset>(0,0,0.15)</offset>
+          </dataSouth>
+        </headData>
+        <headHideFor>
+          <li>0</li>
+        </headHideFor>
+        <rootData>
+          <defaultData>
+            <offset>(0,0,0.35)</offset>
+          </defaultData>
+        </rootData>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

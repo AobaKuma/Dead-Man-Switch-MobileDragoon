@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- (背)推進器 -->
+  <ThingDef ParentName="DMS_ModuleItemAttachment" MayRequire="ludeon.rimworld.royalty">
+    <defName>DMS_Module_JumpThruster</defName>
+    <label>burst thruster</label>
+    <description>A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult.</description>
+    <!-- <description>龍騎兵使用的重型推進器，由四具噴氣引擎驅動整個機體進行短距離飛行，也能夠在消耗大量燃料的狀況下進行較長距離的空中突擊。</description> -->
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_JumpThruster</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <Mass>60</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
+      <workAmount>30000</workAmount>
+    </recipeMaker>
+    <smeltProducts>
+      <Steel>60</Steel>
+      <Tungsteel>20</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>3</ChunkSlagSteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
+    <costList>
+      <Steel>125</Steel>
+      <Tungsteel>50</Tungsteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_JumpThruster</EquipedThingDef>
+        <occupiedSlots>
+          <li>Attachment</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelAttachment" MayRequire="ludeon.rimworld.royalty">
+    <tickerType>Normal</tickerType>
+    <defName>DMS_Apparel_JumpThruster</defName>
+    <label>burst thruster</label>
+    <description>A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/JumpThruster/apparel_south</texPath>
+    </graphicData>    
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_JumpThruster</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <Mass>60</Mass>
+      <JumpRange>14.9</JumpRange>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+      <VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
+    </equippedStatOffsets>
+    <apparel>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>16</baseLayer>
+          <drawSize>2.25</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/JumpThruster/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <layer>-4</layer>
+            </dataSouth>
+            <dataNorth>
+              <layer>75</layer>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
+    </apparel>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_JumpThruster</ItemDef>
+        <occupiedSlots>
+          <li>Attachment</li>
+        </occupiedSlots>
+      </li>
+      <li Class="CompProperties_ApparelReloadable">
+        <maxCharges>10</maxCharges>
+        <ammoDef>Chemfuel</ammoDef>
+        <ammoCountPerCharge>20</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <chargeNoun>jump</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>Verb_Jump</verbClass>
+        <label>jump</label>
+        <violent>false</violent>
+        <hasStandardCommand>true</hasStandardCommand>
+        <onlyManualCast>True</onlyManualCast>
+        <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+        <warmupTime>1</warmupTime>
+        <warmupEffecter>JumpWarmupEffect</warmupEffecter>
+        <requireLineOfSight>true</requireLineOfSight>
+        <flightEffecterDef>JumpFlightEffect</flightEffecterDef>
+        <soundLanding>JumpPackLand</soundLanding>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>false</canTargetPawns>
+          <canTargetBuildings>false</canTargetBuildings>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- (背)機控背包，這種大包會占用到右肩層 -->
+  <!-- 穿戴者能夠給玩家機械師提供額外的控制範圍，以及一個範圍性的EMP技能 -->
+  <ThingDef ParentName="DMS_ModuleItemAttachment">
+    <defName>DMS_Module_PackControlRelay</defName>
+    <label>relay pack</label>
+    <!-- 一種用於輔助機械師駕駛員進行機械控制的重型背包，能透過有效的協調來為機械師增加帶寬。 -->
+    <description>A heavy-duty backpack designed to assist mechanitor pilot in mech control. can increase bandwidth through its coordination.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_PackControlRelay</ThingDef>
+    </descriptionHyperlinks>
+    <thingCategories>
+      <li>DMS_Module_Multi</li>
+      <li>DMS_Module_ShoulderRight</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>100</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonModule</researchPrerequisite>
+	    <workAmount>30000</workAmount>
+    </recipeMaker>
+    <smeltProducts>
+      <Steel>100</Steel>
+      <Tungsteel>40</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentStamped>1</ComponentStamped>
+    </butcherProducts>
+    <costList>
+      <Steel>200</Steel>
+      <Tungsteel>75</Tungsteel>
+      <ComponentStamped>5</ComponentStamped>
+      <ComponentTransmitter>1</ComponentTransmitter>
+    </costList>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_PackControlRelay</EquipedThingDef>
+        <occupiedSlots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="DMS_ModuleApparelAttachment">
+    <tickerType>Normal</tickerType>
+    <defName>DMS_Apparel_PackControlRelay</defName>
+    <label>relay pack</label>
+    <description>A heavy-duty backpack designed to assist the mechanitor pilot in mech control can increase bandwidth for the mechanitor through effective coordination.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/PackControlRelay/apparel_north</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>100</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MechBandwidth MayRequire="ludeon.rimworld.biotech">8</MechBandwidth>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>16</baseLayer>
+          <drawSize>1.125</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/PackControlRelay/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <layer>-2</layer>
+              <offset>(0,0,0.9)</offset>
+            </dataSouth>
+            <dataEast>
+              <layer>0</layer>
+              <offset>(-1.05,0,0.5)</offset>
+            </dataEast>
+            <dataWest>
+              <layer>0</layer>
+              <offset>(1.05,0,0.5)</offset>
+            </dataWest>
+            <dataNorth>
+              <layer>10</layer>
+              <offset>(0,0,0.15)</offset>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
+    </apparel>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_PackControlRelay</ItemDef>
+        <occupiedSlots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- 增加建築與拆除速度 -->
+  <ThingDef ParentName="DMS_ModuleItemAttachment">
+    <defName>DMS_Module_PackEngineering</defName>
+    <label>engineering pack</label>
+    <description>The module which mounted on the Back of the frame. Having a pair of robotic arms to perform logistical work such as construction, maintenance, transportation, and processing.</description>
+    <!-- <description>安裝於龍騎兵框架上的工程用模塊，具有一對輔助機械臂來進行建築、維修、搬運與加工等後勤工作。</description> -->
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_PackEngineering</ThingDef>
+    </descriptionHyperlinks>
+    <thingCategories>
+      <li>DMS_Module_Multi</li>
+      <li>DMS_Module_ShoulderRight</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>110</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+    </recipeMaker>
+    <smeltProducts>
+      <Steel>80</Steel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>3</ChunkSlagSteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_PackEngineering</EquipedThingDef>
+        <occupiedSlots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelAttachment">
+    <tickerType>Normal</tickerType>
+    <defName>DMS_Apparel_PackEngineering</defName>
+    <label>engineering pack</label>
+    <description>The module which mounted on the Back of the frame. Having a pair of robotic arms to perform logistical work such as construction, maintenance, transportation, and processing.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/PackEngineering/apparel_north</texPath>
+    </graphicData>    
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PackEngineering</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>110</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+			<WorkSpeedGlobal>0.10</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <apparel>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>16</baseLayer>
+          <drawSize>1.125</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/PackEngineering/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <layer>-2</layer>
+              <offset>(0,0,0.9)</offset>
+            </dataSouth>
+            <dataEast>
+              <layer>0</layer>
+              <offset>(-1.05,0,0.5)</offset>
+            </dataEast>
+            <dataWest>
+              <layer>0</layer>
+              <offset>(1.05,0,0.5)</offset>
+            </dataWest>
+            <dataNorth>
+              <layer>10</layer>
+              <offset>(0,0,0.15)</offset>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
+    </apparel>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_PackEngineering</ItemDef>
+        <occupiedSlots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+
+   <!-- 增加攜帶量 -->
+  <ThingDef ParentName="DMS_ModuleItemAttachment">
+    <defName>DMS_Module_PackCargo</defName>
+    <label>Cargo pack</label>
+    <description>A pack module with cargo spaces and additional drive unit, let the frame to carry more payloads.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_PackCargo</ThingDef>
+    </descriptionHyperlinks>
+    <thingCategories>
+      <li>DMS_Module_Multi</li>
+      <li>DMS_Module_ShoulderRight</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>50</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+    </recipeMaker>
+    <smeltProducts>
+      <Steel>100</Steel>
+      <Tungsteel>10</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentStamped>1</ComponentStamped>
+    </butcherProducts>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentStamped>4</ComponentStamped>
+    </costList>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_PackCargo</EquipedThingDef>
+        <occupiedSlots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelAttachment">
+    <tickerType>Normal</tickerType>
+    <defName>DMS_Apparel_PackCargo</defName>
+    <label>Cargo pack</label>
+    <description>A pack module with cargo spaces and additional drive unit, let the frame to carry more payloads.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PackCargo</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Dragoon/PackCargo/apparel_north</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>50</Mass>
+    </statBases>
+    <equippedStatOffsets>
+			<CarryingCapacity>120</CarryingCapacity>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>16</baseLayer>
+          <drawSize>1.125</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/PackCargo/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <layer>-2</layer>
+              <offset>(0,0,0.9)</offset>
+            </dataSouth>
+            <dataEast>
+              <layer>0</layer>
+              <offset>(-1.05,0,0.5)</offset>
+            </dataEast>
+            <dataWest>
+              <layer>0</layer>
+              <offset>(1.05,0,0.5)</offset>
+            </dataWest>
+            <dataNorth>
+              <layer>10</layer>
+              <offset>(0,0,0.15)</offset>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
+    </apparel>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_PackCargo</ItemDef>
+        <occupiedSlots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+
+   <!-- 解鎖超重型裝備的使用 -->
+  <ThingDef ParentName="DMS_ModuleItemAttachment">
+    <defName>DMS_Module_PackFrame</defName>
+    <label>hydraulic frame pack</label>
+    <description>An exoskeleton system for the frame that allows the use of heavier heavy equipment without changing the design itself.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_PackFrame</ThingDef>
+    </descriptionHyperlinks>
+    <thingCategories>
+      <li>DMS_Module_Multi</li>
+      <li>DMS_Module_ShoulderRight</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>80</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+      <workAmount>30000</workAmount>
+    </recipeMaker>
+    <smeltProducts>
+      <Steel>120</Steel>
+      <Tungsteel>40</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>5</ChunkSlagSteel>
+      <ComponentStamped>2</ComponentStamped>
+    </butcherProducts>
+    <costList>
+      <Steel>250</Steel>
+      <Tungsteel>120</Tungsteel>
+      <ComponentStamped>5</ComponentStamped>
+    </costList>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_PackFrame</EquipedThingDef>
+        <occupiedSlots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelAttachment">
+    <tickerType>Normal</tickerType>
+    <defName>DMS_Apparel_PackFrame</defName>
+    <label>hydraulic frame pack</label>
+    <description>An exoskeleton system for the frame that allows the use of heavier heavy equipment without changing the design itself.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PackFrame</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Modifications/HydraulicFrame/render_south</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>80</Mass>
+    </statBases>
+    <equippedStatOffsets>
+			<CarryingCapacity>150</CarryingCapacity>
+      <MoveSpeed>0.25</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>-1</baseLayer>
+          <drawSize>1.7</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Modifications/HydraulicFrame/render</texPath>
+          <drawData>
+            <dataEast>
+              <offset>(-0.20,0,0.15)</offset>
+              <rotationOffset>45</rotationOffset>
+            </dataEast>
+            <dataWest>
+              <offset>(0.20,0,0.15)</offset>
+              <rotationOffset>-45</rotationOffset>
+            </dataWest>
+            <dataNorth>
+              <offset>(0,0,0.75)</offset>
+              <layer>10</layer>
+            </dataNorth>
+            <dataSouth>
+              <offset>(0,0,0.25)</offset>
+            </dataSouth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
+    </apparel>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_PackFrame</ItemDef>
+        <occupiedSlots>
+          <li>Attachment</li>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

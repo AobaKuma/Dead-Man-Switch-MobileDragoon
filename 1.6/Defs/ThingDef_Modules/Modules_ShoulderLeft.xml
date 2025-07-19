@@ -61,7 +61,7 @@
         <apparel>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
                     <workerClass>PawnRenderNodeWorker</workerClass>
                     <parentTagDef>WGApparelBody</parentTagDef>
                     <baseLayer>30</baseLayer>
@@ -154,7 +154,7 @@
         <apparel>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
                     <workerClass>PawnRenderNodeWorker</workerClass>
                     <parentTagDef>WGApparelBody</parentTagDef>
                     <baseLayer>30</baseLayer>
@@ -274,7 +274,7 @@
         <apparel>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
                     <workerClass>PawnRenderNodeWorker</workerClass>
                     <parentTagDef>WGApparelBody</parentTagDef>
                     <baseLayer>30</baseLayer>
@@ -395,7 +395,7 @@
         <apparel>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
                     <workerClass>PawnRenderNodeWorker</workerClass>
                     <parentTagDef>WGApparelBody</parentTagDef>
                     <baseLayer>30</baseLayer>
@@ -517,7 +517,7 @@
         <apparel>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
                     <workerClass>PawnRenderNodeWorker</workerClass>
                     <parentTagDef>WGApparelBody</parentTagDef>
                     <baseLayer>30</baseLayer>

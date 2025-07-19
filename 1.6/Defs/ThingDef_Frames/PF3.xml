@@ -77,7 +77,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <drawSize>1.5</drawSize>

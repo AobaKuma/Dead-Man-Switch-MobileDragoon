@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ScenarioDef>
+	<ScenarioDef ParentName="ScenarioBase">
 		<defName>DMSMD_Scenario</defName>
 		<label>The Veteran</label>
 		<description>A legendary pilot decides to retire and start a different story.</description>
@@ -20,56 +20,56 @@ Finally, you decide to retire, at least leave a different story for this weapon,
 				<factionDef>PlayerColony</factionDef>
 			</playerFaction>
 			<parts>
-        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_KindDefs">
-          <def>ConfigPage_ConfigureStartingPawns</def>
-          <summarized>true</summarized>
-          <pawnChoiceCount>2</pawnChoiceCount>
-          <leftBehindPawnKind>DMS_Soldier</leftBehindPawnKind>
-          <kindCounts>
-            <li>
-              <kindDef>DMS_Mechanitor</kindDef>
-              <count>1</count>
-              <requiredAtStart>true</requiredAtStart>
-            </li>
-            <li>
-              <kindDef>DMS_LastPilot</kindDef>
-              <count>1</count>
-              <requiredAtStart>true</requiredAtStart>
-            </li>
-          </kindCounts>
-        </li>
-        <li Class="ScenPart_PlayerPawnsArriveMethod">
-          <def>PlayerPawnsArriveMethod</def>
-          <method>DropPods</method>
-        </li>
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns_KindDefs">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<summarized>true</summarized>
+				<pawnChoiceCount>2</pawnChoiceCount>
+				<leftBehindPawnKind>DMS_Soldier</leftBehindPawnKind>
+				<kindCounts>
+					<li>
+					<kindDef>DMS_Mechanitor</kindDef>
+					<count>1</count>
+					<requiredAtStart>true</requiredAtStart>
+					</li>
+					<li>
+					<kindDef>DMS_LastPilot</kindDef>
+					<count>1</count>
+					<requiredAtStart>true</requiredAtStart>
+					</li>
+				</kindCounts>
+				</li>
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>DropPods</method>
+				</li>
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>DMS_Module_PV4_Core</thingDef>
-          			<quality>Legendary</quality>
+					<quality>Legendary</quality>
 					<count>1</count>
 				</li>
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>DMS_Module_PV4_Helmet</thingDef>
-          			<quality>Legendary</quality>
+					<quality>Legendary</quality>
 					<count>1</count>
 				</li>
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>DMS_Module_RelayAntenna</thingDef>
-          			<quality>Legendary</quality>
+					<quality>Legendary</quality>
 					<count>1</count>
 				</li>
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>DMS_Dragoon_Shotgun</thingDef>
-          			<quality>Legendary</quality>
+					<quality>Legendary</quality>
 					<count>1</count>
 				</li>
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>DMS_Dragoon_Axe</thingDef>
-          			<quality>Legendary</quality>
+					<quality>Legendary</quality>
 					<count>1</count>
 				</li>
 				<li Class="ScenPart_StartingThing_Defined">
@@ -111,71 +111,71 @@ Finally, you decide to retire, at least leave a different story for this weapon,
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>DMS_Apparel_PilotSuit</thingDef>
-          			<stuff>Plasteel</stuff>
+					<stuff>Plasteel</stuff>
 					<count>1</count>
 				</li>
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>DMS_Apparel_ArrayHelmet</thingDef>
-          			<stuff>Plasteel</stuff>
+					<stuff>Plasteel</stuff>
 					<count>1</count>
 				</li>
-        <li Class="ScenPart_StartingMech">
-          <def>StartingMech</def>
-          <mechKind>DMS_Mech_ShaftWorker</mechKind>
-          <overseenByPlayerPawnChance>0.6</overseenByPlayerPawnChance>
-        </li>
-        <li Class="ScenPart_StartingMech">
-          <def>StartingMech</def>
-          <mechKind>DMS_Mech_Lady</mechKind>
-          <overseenByPlayerPawnChance>0.6</overseenByPlayerPawnChance>
-        </li>
-        <li Class="ScenPart_StartingMech">
-          <def>StartingMech</def>
-          <mechKind>DMS_Mech_EscortLifter</mechKind>
-          <overseenByPlayerPawnChance>0.6</overseenByPlayerPawnChance>
-        </li>
-        <li Class="ScenPart_DisableMapGen">
-          <def>DisableExostriderRemains</def>
-        </li>
-        <li Class="ScenPart_StartingResearch">
-          <def>StartingResearch</def>
-          <project>WG_HeavyExoskeleton</project>
-        </li>
-        <li Class="ScenPart_StartingResearch">
-          <def>StartingResearch</def>
-          <project>DMS_EquipmentBasis</project>
-        </li>
-        <li Class="ScenPart_StartingResearch">
-          <def>StartingResearch</def>
-          <project>DMS_Automatroid</project>
-        </li>
-        <li Class="KCSG.ScenPart_AddStartingStructure">
-          <def>VFEC_AddStartingStructure</def>
-          <structureLabel>A decommissioned old base</structureLabel>
-          <nearMapCenter>True</nearMapCenter>
-          <chooseFrom>
-            <li>DMS_DragoonNest_A</li>
-            <li>DMS_DragoonNest_B</li>
-          </chooseFrom>
-        </li>
-        <li Class="ScenPart_ForcedHediff">
-          <def>ForcedHediff</def>
-          <chance>0.5</chance>
-          <context>PlayerStarter</context>
-          <hideOffMap>True</hideOffMap>
-          <hediff>CryptosleepSickness</hediff>
-          <severityRange>1~1</severityRange>
-        </li>
-        <li Class="VEF.Factions.ScenPart_ForcedFactionGoodwill">
-          <def>VFEC_ForcedFactionGoodwill</def>
-          <factionDef>DMS_Army</factionDef>
-          <affectHiddenFactions>True</affectHiddenFactions>
-          <affectStartingGoodwill>True</affectStartingGoodwill>
-          <startingGoodwillRange>100~100</startingGoodwillRange>
-          <affectNaturalGoodwill>True</affectNaturalGoodwill>
-          <naturalGoodwillRange>56~63</naturalGoodwillRange>
-        </li>
+				<li Class="ScenPart_StartingMech">
+				<def>StartingMech</def>
+				<mechKind>DMS_Mech_ShaftWorker</mechKind>
+				<overseenByPlayerPawnChance>0.6</overseenByPlayerPawnChance>
+				</li>
+				<li Class="ScenPart_StartingMech">
+				<def>StartingMech</def>
+				<mechKind>DMS_Mech_Lady</mechKind>
+				<overseenByPlayerPawnChance>0.6</overseenByPlayerPawnChance>
+				</li>
+				<li Class="ScenPart_StartingMech">
+				<def>StartingMech</def>
+				<mechKind>DMS_Mech_EscortLifter</mechKind>
+				<overseenByPlayerPawnChance>0.6</overseenByPlayerPawnChance>
+				</li>
+				<li Class="ScenPart_DisableMapGen">
+				<def>DisableExostriderRemains</def>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+				<def>StartingResearch</def>
+				<project>WG_HeavyExoskeleton</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+				<def>StartingResearch</def>
+				<project>DMS_EquipmentBasis</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+				<def>StartingResearch</def>
+				<project>DMS_Automatroid</project>
+				</li>
+				<li Class="KCSG.ScenPart_AddStartingStructure">
+				<def>VFEC_AddStartingStructure</def>
+				<structureLabel>A decommissioned old base</structureLabel>
+				<nearMapCenter>True</nearMapCenter>
+				<chooseFrom>
+					<li>DMS_DragoonNest_A</li>
+					<li>DMS_DragoonNest_B</li>
+				</chooseFrom>
+				</li>
+				<li Class="ScenPart_ForcedHediff">
+				<def>ForcedHediff</def>
+				<chance>0.5</chance>
+				<context>PlayerStarter</context>
+				<hideOffMap>True</hideOffMap>
+				<hediff>CryptosleepSickness</hediff>
+				<severityRange>1~1</severityRange>
+				</li>
+				<li Class="VEF.Factions.ScenPart_ForcedFactionGoodwill">
+				<def>VFEC_ForcedFactionGoodwill</def>
+				<factionDef>DMS_Army</factionDef>
+				<affectHiddenFactions>True</affectHiddenFactions>
+				<affectStartingGoodwill>True</affectStartingGoodwill>
+				<startingGoodwillRange>100~100</startingGoodwillRange>
+				<affectNaturalGoodwill>True</affectNaturalGoodwill>
+				<naturalGoodwillRange>56~63</naturalGoodwillRange>
+				</li>
 				<li Class="ScenPart_GameStartDialog">
 					<def>GameStartDialog</def>
 					<text>"Thank you for your efforts along the way Sir!, Just tell us if you need anything."

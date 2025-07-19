@@ -50,7 +50,7 @@
         <apparel>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
                     <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <workerClass>PawnRenderNodeWorker</workerClass>
                     <parentTagDef>WGApparelBody</parentTagDef>

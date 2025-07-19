@@ -49,7 +49,7 @@
         <apparel>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
                     <workerClass>PawnRenderNodeWorker</workerClass>
                     <texPath>Things/Dragoon/RelayAntenna/apparel</texPath>
                     <parentTagDef>WGApparelBody</parentTagDef>
@@ -143,7 +143,7 @@
             <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
                     <workerClass>PawnRenderNodeWorker</workerClass>
                     <texPath>Things/Dragoon/TurretPack/apparel</texPath>
                     <parentTagDef>WGApparelBody</parentTagDef>
@@ -294,7 +294,7 @@
         <apparel>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
                     <workerClass>PawnRenderNodeWorker</workerClass>
                     <texPath>Things/Dragoon/TurretPack/apparel</texPath>
                     <parentTagDef>WGApparelBody</parentTagDef>
@@ -448,7 +448,7 @@
         <apparel>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
                     <workerClass>PawnRenderNodeWorker</workerClass>
                     <texPath>Things/Dragoon/TurretPack/apparel</texPath>
                     <parentTagDef>WGApparelBody</parentTagDef>

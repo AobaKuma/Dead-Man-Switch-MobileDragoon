@@ -61,7 +61,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>20</baseLayer>
@@ -166,7 +166,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>20</baseLayer>
@@ -261,7 +261,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>20</baseLayer>
@@ -361,7 +361,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>20</baseLayer>
@@ -454,7 +454,7 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
+          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>PawnRenderNodeWorker</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>20</baseLayer>

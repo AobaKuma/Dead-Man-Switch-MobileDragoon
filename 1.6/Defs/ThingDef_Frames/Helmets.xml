@@ -70,8 +70,8 @@
       <immuneToToxGasExposure>true</immuneToToxGasExposure>
       <renderNodeProperties>
         <li>
-          <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
+          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>Exosuit.PawnRenderNodeWorker_InhertHead</workerClass>
           <parentTagDef>WGApparelHead</parentTagDef>
           <drawSize>1</drawSize>
           <pawnType>Any</pawnType>
@@ -167,8 +167,8 @@
     <apparel>
       <renderNodeProperties>
         <li>
-          <nodeClass>Fortified.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
+          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>Exosuit.PawnRenderNodeWorker_InhertHead</workerClass>
           <parentTagDef>WGApparelHead</parentTagDef>
           <drawSize>1</drawSize>
           <pawnType>Any</pawnType>

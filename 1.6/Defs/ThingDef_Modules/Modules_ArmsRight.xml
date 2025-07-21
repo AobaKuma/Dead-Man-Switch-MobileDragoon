@@ -5,7 +5,10 @@
   <ThingDef ParentName="DMS_ModuleItemArmRight">
     <defName>DMS_Module_CombatSword</defName>
     <label>Combat Sword</label>
-    <description>A great sword used by dragoon, it is a heavy combat weapon specially designed to fight large creatures and machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications.</description>
+    <description>A great sword used by dragoon, it is a heavy combat weapon specially designed to
+      fight large creatures and machines, and has the functions of a machete and an armor-piercing
+      hammer. Its own weight makes it very effective even when used to clear light infantry and
+      fortifications.</description>
     <!-- 一種由龍騎兵使用的雙手大劍，是專門設計用於與大型生物及機械體戰鬥的重型格鬥武器並兼具了開山刀與破甲錘的功能。 其本身的重量使得即便是用來清掃輕型步兵與防禦工事也有十分步錯的效果。 -->
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_CombatSword</ThingDef>
@@ -41,7 +44,10 @@
   <ThingDef ParentName="DMS_ModuleApparelArmRight">
     <defName>DMS_Apparel_CombatSword</defName>
     <label>Combat Sword</label>
-    <description>A great sword used by dragoon, it is a heavy combat weapon specially designed to fight large creatures and machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications.</description>
+    <description>A great sword used by dragoon, it is a heavy combat weapon specially designed to
+      fight large creatures and machines, and has the functions of a machete and an armor-piercing
+      hammer. Its own weight makes it very effective even when used to clear light infantry and
+      fortifications.</description>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Weapons/CombatSword</texPath>
@@ -57,34 +63,25 @@
       <MoveSpeed>-0.3</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <baseLayer>0</baseLayer>
-          <drawSize>1.5</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/ModuleArm/apparel</texPath>
-          <drawData>
-            <dataSouth>
-              <offset>(-0.85,0,0.10)</offset>
-            </dataSouth>
-            <dataNorth>
-              <offset>(0.75,0,0.0)</offset>
-              <layer>72</layer>
-            </dataNorth>
-            <dataWest>
-              <offset>(-0.40,0,0.5)</offset>
-            </dataWest>
-            <dataEast>
-              <offset>(-0.05,0,-0.2)</offset>
-              <layer>10</layer>
-            </dataEast>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/ModuleArm/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.5</scale>
+        <dataSouth>
+          <offset>(-0.85,0,0.10)</offset>
+        </dataSouth>
+        <dataNorth>
+          <offset>(0.75,0,0.0)</offset>
+          <layer>72</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(-0.40,0,0.5)</offset>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.05,0,-0.2)</offset>
+          <layer>10</layer>
+        </dataEast>
+      </drawData>
+
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -104,7 +101,9 @@
   <ThingDef ParentName="DMS_ModuleItemArmRight">
     <defName>DMS_Module_PileBunker</defName>
     <label>pile bunker</label>
-    <description>An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent.</description>
+    <description>An engineering module installed on the frame. Due to its extremely high working
+      efficiency, it is often used to demolish buildings and mines. It can also do other things to a
+      certain extent.</description>
     <!-- <description>一種安裝於龍騎兵機體上的工程模塊，由於其工作效率極高因此也經常被用來拆除建築時使用，讓那些訓練機能在一定程度上能做點別的事情。</description> -->
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PileBunker</ThingDef>
@@ -141,7 +140,9 @@
   <ThingDef ParentName="DMS_ModuleApparelArmRight">
     <defName>DMS_Apparel_PileBunker</defName>
     <label>pile bunker</label>
-    <description>An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent.</description>
+    <description>An engineering module installed on the frame. Due to its extremely high working
+      efficiency, it is often used to demolish buildings and mines. It can also do other things to a
+      certain extent.</description>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Dragoon/PileBunker/apparel_south</texPath>
@@ -160,34 +161,24 @@
       <DeepDrillingSpeed>1.2</DeepDrillingSpeed>
     </equippedStatOffsets>
     <apparel>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <baseLayer>0</baseLayer>
-          <drawSize>1.5</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/PileBunker/apparel</texPath>
-          <drawData>
-            <dataSouth>
-              <offset>(-0.85,0,0.10)</offset>
-            </dataSouth>
-            <dataNorth>
-              <offset>(0.75,0,0.0)</offset>
-              <layer>72</layer>
-            </dataNorth>
-            <dataWest>
-              <offset>(-0.40,0,0.7)</offset>
-            </dataWest>
-            <dataEast>
-              <offset>(-0.05,0,-0.4)</offset>
-              <layer>10</layer>
-            </dataEast>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/PileBunker/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.5</scale>
+        <dataSouth>
+          <offset>(-0.85,0,0.10)</offset>
+        </dataSouth>
+        <dataNorth>
+          <offset>(0.75,0,0.0)</offset>
+          <layer>72</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(-0.40,0,0.7)</offset>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.05,0,-0.4)</offset>
+          <layer>10</layer>
+        </dataEast>
+      </drawData>
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -225,7 +216,9 @@
   <ThingDef ParentName="DMS_ModuleItemArmRight">
     <defName>DMS_Module_WeaponLmg</defName>
     <label>Dragoon LMG</label>
-    <description>A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities.</description>
+    <description>A light machine gun relative to the size of a Dragoon, but for humans it is
+      basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient
+      firepower continuity and suppression capabilities.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Dragoon_LMG</ThingDef>
     </descriptionHyperlinks>
@@ -264,7 +257,9 @@
   <ThingDef ParentName="DMS_ModuleApparelArmRight">
     <defName>DMS_Apparel_WeaponLmg</defName>
     <label>Dragoon LMG</label>
-    <description>A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities.</description>
+    <description>A light machine gun relative to the size of a Dragoon, but for humans it is
+      basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient
+      firepower continuity and suppression capabilities.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Dragoon_LMG</ThingDef>
     </descriptionHyperlinks>
@@ -279,33 +274,25 @@
       <MoveSpeed>-0.4</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
+      <wornGraphicPath>Things/Dragoon/ModuleArm/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.5</scale>
+        <dataSouth>
+          <offset>(-0.85,0,0.10)</offset>
+        </dataSouth>
+        <dataNorth>
+          <offset>(0.75,0,0.0)</offset>
+          <layer>72</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(-0.40,0,0.5)</offset>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.05,0,-0.2)</offset>
+          <layer>10</layer>
+        </dataEast>
+      </drawData>
       <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <baseLayer>0</baseLayer>
-          <drawSize>1.5</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/ModuleArm/apparel</texPath>
-          <drawData>
-            <dataSouth>
-              <offset>(-0.85,0,0.10)</offset>
-            </dataSouth>
-            <dataNorth>
-              <offset>(0.75,0,0.0)</offset>
-              <layer>72</layer>
-            </dataNorth>
-            <dataWest>
-              <offset>(-0.40,0,0.5)</offset>
-            </dataWest>
-            <dataEast>
-              <offset>(-0.05,0,-0.2)</offset>
-              <layer>10</layer>
-            </dataEast>
-          </drawData>
-        </li>
         <li> <!-- only rendering on gantry -->
           <nodeClass>PawnRenderNode</nodeClass>
           <workerClass>Exosuit.PawnRenderNodeWorker_WeaponOnGantry</workerClass>
@@ -353,12 +340,14 @@
       </li>
     </comps>
   </ThingDef>
-  
+
   <!-- (右)DMR-->
   <ThingDef ParentName="DMS_ModuleItemArmRight">
     <defName>DMS_Module_WeaponDMR</defName>
     <label>Dragoon DMR</label>
-    <description>A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon.</description>
+    <description>A marksman rifle relative to the size of a Dragoon, but for humans it is basically
+      a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for
+      high-precision aiming, giving it considerable accuracy for a large weapon.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Dragoon_DMR</ThingDef>
     </descriptionHyperlinks>
@@ -398,7 +387,9 @@
   <ThingDef ParentName="DMS_ModuleApparelArmRight">
     <defName>DMS_Apparel_WeaponDMR</defName>
     <label>Dragoon DMR</label>
-    <description>A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon.</description>
+    <description>A marksman rifle relative to the size of a Dragoon, but for humans it is basically
+      a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for
+      high-precision aiming, giving it considerable accuracy for a large weapon.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Dragoon_DMR</ThingDef>
     </descriptionHyperlinks>
@@ -413,33 +404,25 @@
       <MoveSpeed>-0.5</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
+      <wornGraphicPath>Things/Dragoon/ModuleArm/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.5</scale>
+        <dataSouth>
+          <offset>(-0.85,0,0.10)</offset>
+        </dataSouth>
+        <dataNorth>
+          <offset>(0.75,0,0.0)</offset>
+          <layer>72</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(-0.40,0,0.5)</offset>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.05,0,-0.2)</offset>
+          <layer>10</layer>
+        </dataEast>
+      </drawData>
       <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <baseLayer>0</baseLayer>
-          <drawSize>1.5</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/ModuleArm/apparel</texPath>
-          <drawData>
-            <dataSouth>
-              <offset>(-0.85,0,0.10)</offset>
-            </dataSouth>
-            <dataNorth>
-              <offset>(0.75,0,0.0)</offset>
-              <layer>72</layer>
-            </dataNorth>
-            <dataWest>
-              <offset>(-0.40,0,0.5)</offset>
-            </dataWest>
-            <dataEast>
-              <offset>(-0.05,0,-0.2)</offset>
-              <layer>10</layer>
-            </dataEast>
-          </drawData>
-        </li>
         <li> <!-- only rendering on gantry -->
           <nodeClass>PawnRenderNode</nodeClass>
           <workerClass>Exosuit.PawnRenderNodeWorker_WeaponOnGantry</workerClass>

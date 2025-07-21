@@ -4,8 +4,17 @@
   <ThingDef ParentName="DMS_ModuleItemCore">
     <defName>DMS_Module_PV4_Core</defName>
     <label>PV-4 "Old Buddy" frame module</label>
-    <!-- 一款古老的龍騎兵型號，雖然其正式代號早已被人所遺忘，但過去被人畏稱為扎爾塔的屠戮者，由於其可能在駕駛時撕裂那些不夠嫻熟的駕駛員的風險而聞名。可以追溯至扎爾塔危機時期殖民艦隊的武裝干涉，在傳說中一支裝備了該型龍騎兵的裝甲特遣旅只用三日便殲滅了數倍於己方的軍隊。由於在近百年前就已經被更加安全的型號所淘汰，因此鮮少會在邊緣世界流通。但極度緊湊的設計也使其具有現代機兵也無法比擬的性能。 -->
-    <description>An old Dragoon model formerly known as Slayer of Zartha, whose actual call sign has been forgotten by people, notorious for its risk of tearing apart less skilled pilots while piloting. It can be traced back to the armed intervention of the colonial fleet during the Zartha crisis. \n\n According to legend, an armored task force equipped with this type of dragoon annihilated an army several times its own in just three days. Since it was decommissioned and replaced by safer models nearly a hundred years ago, making it rarely circulated in the rimworld. But its extremely compact design also gives it a performance that even modern dragoons cannot match. \n\n In order to keep pilot's safely, you need the pilot to wear specialized pilot uniform.</description>
+    <!--
+    一款古老的龍騎兵型號，雖然其正式代號早已被人所遺忘，但過去被人畏稱為扎爾塔的屠戮者，由於其可能在駕駛時撕裂那些不夠嫻熟的駕駛員的風險而聞名。可以追溯至扎爾塔危機時期殖民艦隊的武裝干涉，在傳說中一支裝備了該型龍騎兵的裝甲特遣旅只用三日便殲滅了數倍於己方的軍隊。由於在近百年前就已經被更加安全的型號所淘汰，因此鮮少會在邊緣世界流通。但極度緊湊的設計也使其具有現代機兵也無法比擬的性能。 -->
+    <description>An old Dragoon model formerly known as Slayer of Zartha, whose actual call sign has
+      been forgotten by people, notorious for its risk of tearing apart less skilled pilots while
+      piloting. It can be traced back to the armed intervention of the colonial fleet during the
+      Zartha crisis. \n\n According to legend, an armored task force equipped with this type of
+      dragoon annihilated an army several times its own in just three days. Since it was
+      decommissioned and replaced by safer models nearly a hundred years ago, making it rarely
+      circulated in the rimworld. But its extremely compact design also gives it a performance that
+      even modern dragoons cannot match. \n\n In order to keep pilot's safely, you need the pilot to
+      wear specialized pilot uniform.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PV4_Core</ThingDef>
     </descriptionHyperlinks>
@@ -21,7 +30,7 @@
         </occupiedSlots>
       </li>
     </comps>
-    <recipeMaker Inherit="false"/>
+    <recipeMaker Inherit="false" />
     <costList>
       <Tungsteel>375</Tungsteel>
       <Artifuscle>200</Artifuscle>
@@ -46,8 +55,16 @@
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_PV4_Core</defName>
     <label>PV-4 "Old Buddy" frame module</label>
-    <!-- 一款古老的龍騎兵型號，由於其可能在駕駛時撕裂那些不夠嫻熟的駕駛員的風險而聞名。可以追溯至扎爾塔危機時期殖民艦隊的武裝干涉，在傳說中一支裝備了該型龍騎兵的裝甲特遣旅只用三日便殲滅了數倍於己方的軍隊。由於在近百年前就已經被更加安全的型號所淘汰，因此鮮少會在邊緣世界流通。但極度緊湊的設計也使其具有現代機兵也無法比擬的性能。\n\n駕駛員需要專門的駕駛服才能夠安全的操作這架龍騎兵。 -->
-    <description>An old Dragoon model, notorious for its risk of tearing apart less skilled pilots while piloting. It can be traced back to the armed intervention of the colonial fleet during the Zartha crisis. \n\n According to legend, an armored task force equipped with this type of dragoon annihilated an army several times its own in just three days. Since it was decommissioned and replaced by safer models nearly a hundred years ago, making it rarely circulated in the rimworld. But its extremely compact design also gives it a performance that even modern dragoons cannot match. \n\n In order to keep pilot's safely, you need the pilot to wear specialized pilot uniform.</description>
+    <!--
+    一款古老的龍騎兵型號，由於其可能在駕駛時撕裂那些不夠嫻熟的駕駛員的風險而聞名。可以追溯至扎爾塔危機時期殖民艦隊的武裝干涉，在傳說中一支裝備了該型龍騎兵的裝甲特遣旅只用三日便殲滅了數倍於己方的軍隊。由於在近百年前就已經被更加安全的型號所淘汰，因此鮮少會在邊緣世界流通。但極度緊湊的設計也使其具有現代機兵也無法比擬的性能。\n\n駕駛員需要專門的駕駛服才能夠安全的操作這架龍騎兵。 -->
+    <description>An old Dragoon model, notorious for its risk of tearing apart less skilled pilots
+      while piloting. It can be traced back to the armed intervention of the colonial fleet during
+      the Zartha crisis. \n\n According to legend, an armored task force equipped with this type of
+      dragoon annihilated an army several times its own in just three days. Since it was
+      decommissioned and replaced by safer models nearly a hundred years ago, making it rarely
+      circulated in the rimworld. But its extremely compact design also gives it a performance that
+      even modern dragoons cannot match. \n\n In order to keep pilot's safely, you need the pilot to
+      wear specialized pilot uniform.</description>
     <graphicData>
       <texPath>Things/Dragoon/PV4/apparel_south</texPath>
     </graphicData>
@@ -60,34 +77,24 @@
       <ArmorRating_Sharp>1.44</ArmorRating_Sharp>
       <ArmorRating_Blunt>1.35</ArmorRating_Blunt>
       <ArmorRating_Heat>1.10</ArmorRating_Heat>
-			<Insulation_Cold>48</Insulation_Cold>
-			<Insulation_Heat>64</Insulation_Heat>
+      <Insulation_Cold>48</Insulation_Cold>
+      <Insulation_Heat>64</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
-			<CarryingCapacity>380</CarryingCapacity>
-			<CarryWeight MayRequire="ceteam.combatextended">380</CarryWeight>
-			<WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
-			<MentalBreakThreshold>-0.5</MentalBreakThreshold>
+      <CarryingCapacity>380</CarryingCapacity>
+      <CarryWeight MayRequire="ceteam.combatextended">380</CarryWeight>
+      <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
+      <MentalBreakThreshold>-0.5</MentalBreakThreshold>
       <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <baseLayer>1</baseLayer>
-          <drawSize>1.5</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/PV4/apparel</texPath>
-          <drawData>
-            <dataNorth>
-              <layer>5</layer>
-            </dataNorth>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/PV4/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.5</scale>
+        <dataNorth>
+          <layer>5</layer>
+        </dataNorth>
+      </drawData>
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -99,7 +106,6 @@
     </comps>
     <modExtensions>
       <li Class="Exosuit.ExosuitExt">
-        <wreckageOverride>MF_Building_Wreckage</wreckageOverride>
         <minArmorBreakdownThreshold>0.1</minArmorBreakdownThreshold>
         <RequiredApparelTag>DMS_Pilot</RequiredApparelTag>
       </li>
@@ -148,7 +154,9 @@
     <defName>DMS_Module_PV4_Helmet</defName>
     <label>PV-4 "Miboche" helmet</label>
     <!-- 一種老舊但十分有效的重型頭盔，使用了在當時也有些昂貴的合成孔徑探測器與一體化複合塑鋼裝甲。具有在核生化戰爭的戰場上也能自由活動的密閉性。 -->
-    <description>An old but very effective heavy helmet, using a synthetic aperture detector that was somewhat expensive at the time and integrated composite plastic armor. It is airtight enough to move freely even on the battlefield of nuclear, biological and chemical warfare.</description>
+    <description>An old but very effective heavy helmet, using a synthetic aperture detector that
+      was somewhat expensive at the time and integrated composite plastic armor. It is airtight
+      enough to move freely even on the battlefield of nuclear, biological and chemical warfare.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PV4_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -164,7 +172,7 @@
         </occupiedSlots>
       </li>
     </comps>
-    <recipeMaker Inherit="false"/>
+    <recipeMaker Inherit="false" />
     <costList>
       <Tungsteel>50</Tungsteel>
       <Steel>40</Steel>
@@ -186,7 +194,9 @@
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_PV4_Helmet</defName>
     <label>PV-4 "Miboche" helmet</label>
-    <description>An old but very effective heavy helmet, using a synthetic aperture detector that was somewhat expensive at the time and integrated composite plastic armor. It is airtight enough to move freely even on the battlefield of nuclear, biological and chemical warfare.</description>
+    <description>An old but very effective heavy helmet, using a synthetic aperture detector that
+      was somewhat expensive at the time and integrated composite plastic armor. It is airtight
+      enough to move freely even on the battlefield of nuclear, biological and chemical warfare.</description>
     <graphicData>
       <texPath>Things/Dragoon/PV4/helmet_south</texPath>
     </graphicData>
@@ -206,23 +216,7 @@
     </equippedStatOffsets>
     <apparel>
       <immuneToToxGasExposure>true</immuneToToxGasExposure>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>Exosuit.PawnRenderNodeWorker_InhertHead</workerClass>
-          <parentTagDef>WGApparelHead</parentTagDef>
-          <drawSize>1</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/PV4/helmet</texPath>
-          <drawData>
-            <defaultData>
-              <layer>20</layer>
-              <offset>(0,0,0)</offset>
-            </defaultData>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/PV4/helmet</wornGraphicPath>
       <tags>
         <li>EVA</li>
       </tags>

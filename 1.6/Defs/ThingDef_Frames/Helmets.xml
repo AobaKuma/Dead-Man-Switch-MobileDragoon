@@ -4,7 +4,8 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_Groyne_Helmet</defName>
     <label>"Groyne" helmet</label>
-    <description>An armored cover that provides driver protection without adequate optical manufacturing processes. It is bulky but does provide some durability.</description>
+    <description>An armored cover that provides driver protection without adequate optical
+      manufacturing processes. It is bulky but does provide some durability.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_Groyne_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -31,7 +32,7 @@
       <skillRequirements>
         <Crafting>4</Crafting>
       </skillRequirements>
-	    <workAmount>22500</workAmount>
+      <workAmount>22500</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Steel>75</Steel>
@@ -50,7 +51,8 @@
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_Groyne_Helmet</defName>
     <label>"Groyne" helmet</label>
-    <description>An armored cover that provides driver protection without adequate optical manufacturing processes. It is bulky but does provide some durability.</description>
+    <description>An armored cover that provides driver protection without adequate optical
+      manufacturing processes. It is bulky but does provide some durability.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_Groyne_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -68,23 +70,7 @@
     </equippedStatOffsets>
     <apparel>
       <immuneToToxGasExposure>true</immuneToToxGasExposure>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>Exosuit.PawnRenderNodeWorker_InhertHead</workerClass>
-          <parentTagDef>WGApparelHead</parentTagDef>
-          <drawSize>1</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/Groyne/helmet</texPath>
-          <drawData>
-            <defaultData>
-              <layer>20</layer>
-              <offset>(0,0,0)</offset>
-            </defaultData>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/Groyne/helmet</wornGraphicPath>
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -100,7 +86,8 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_Stahlhelm_Helmet</defName>
     <label>"Stahlhelm" helmet</label>
-    <description>a civil frame module used for welding. But In fact, large quantities of them were flowing into the arms market and underwent certain bulletproof modifications.</description>
+    <description>a civil frame module used for welding. But In fact, large quantities of them were
+      flowing into the arms market and underwent certain bulletproof modifications.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_Stahlhelm_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -147,7 +134,8 @@
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_Stahlhelm_Helmet</defName>
     <label>"Stahlhelm" helmet</label>
-    <description>a civil frame module used for welding. But In fact, large quantities of them were flowing into the arms market and underwent certain bulletproof modifications.</description>
+    <description>a civil frame module used for welding. But In fact, large quantities of them were
+      flowing into the arms market and underwent certain bulletproof modifications.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_Stahlhelm_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -165,23 +153,7 @@
       <DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>Exosuit.PawnRenderNodeWorker_InhertHead</workerClass>
-          <parentTagDef>WGApparelHead</parentTagDef>
-          <drawSize>1</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/Stahlhelm/helmet</texPath>
-          <drawData>
-            <defaultData>
-              <layer>20</layer>
-              <offset>(0,0,0)</offset>
-            </defaultData>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/Stahlhelm/helmet</wornGraphicPath>
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">

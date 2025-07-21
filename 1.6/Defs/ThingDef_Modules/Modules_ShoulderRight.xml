@@ -4,7 +4,9 @@
     <ThingDef ParentName="DMS_ModuleItemMountRight">
         <defName>DMS_Module_RelayAntenna</defName>
         <label>Relay Antenna</label>
-        <description>An antenna module that expands the control range for friendly mechanics. Although the control range is relatively limited, it is enough to allow mechanics to coordinate infantry around the frame.</description>
+        <description>An antenna module that expands the control range for friendly mechanics.
+            Although the control range is relatively limited, it is enough to allow mechanics to
+            coordinate infantry around the frame.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_RelayAntenna</ThingDef>
         </descriptionHyperlinks>
@@ -14,7 +16,7 @@
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoonModule</researchPrerequisite>
-			<workAmount>30000</workAmount>
+            <workAmount>30000</workAmount>
         </recipeMaker>
         <costList>
             <Steel>160</Steel>
@@ -32,7 +34,9 @@
     <ThingDef ParentName="DMS_ModuleApparelMountRight">
         <defName>DMS_Apparel_RelayAntenna</defName>
         <label>Relay Antenna</label>
-        <description>An antenna module that expands the control range for friendly mechanics. Although the control range is relatively limited, it is enough to allow mechanics to coordinate infantry around the frame.</description>
+        <description>An antenna module that expands the control range for friendly mechanics.
+            Although the control range is relatively limited, it is enough to allow mechanics to
+            coordinate infantry around the frame.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Module_RelayAntenna</ThingDef>
         </descriptionHyperlinks>
@@ -47,36 +51,26 @@
             <MoveSpeed>-0.1</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <texPath>Things/Dragoon/RelayAntenna/apparel</texPath>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>20</baseLayer>
-                    <drawSize>1.125</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(-0.90,0,0.90)</offset>
-                            <layer>0</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(0.90,0,0.50)</offset>
-                            <layer>75</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0.50,0,0.9)</offset>
-                            <layer>0</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.90,0,0.65)</offset>
-                            <layer>0</layer>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
+            <wornGraphicPath>Things/Dragoon/RelayAntenna/apparel</wornGraphicPath>
+            <drawData>
+                <scale>1.125</scale>
+                <dataSouth>
+                    <offset>(-0.90,0,0.90)</offset>
+                    <layer>0</layer>
+                </dataSouth>
+                <dataNorth>
+                    <offset>(0.90,0,0.50)</offset>
+                    <layer>75</layer>
+                </dataNorth>
+                <dataWest>
+                    <offset>(0.50,0,0.9)</offset>
+                    <layer>0</layer>
+                </dataWest>
+                <dataEast>
+                    <offset>(-0.90,0,0.65)</offset>
+                    <layer>0</layer>
+                </dataEast>
+            </drawData>
         </apparel>
         <comps>
             <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -107,12 +101,12 @@
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
-			<workAmount>30000</workAmount>
+            <workAmount>30000</workAmount>
         </recipeMaker>
         <costList>
             <Steel>100</Steel>
-			<Tungsteel>75</Tungsteel>
-			<ComponentStamped>5</ComponentStamped>
+            <Tungsteel>75</Tungsteel>
+            <ComponentStamped>5</ComponentStamped>
             <ComponentIndustrial>5</ComponentIndustrial>
         </costList>
         <comps>
@@ -141,34 +135,26 @@
         <tickerType>Normal</tickerType>
         <apparel>
             <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
+            <drawData>
+                <scale>0.75</scale>
+                <dataSouth>
+                    <offset>(-0.50,0,1.05)</offset>
+                    <layer>0</layer>
+                </dataSouth>
+                <dataNorth>
+                    <offset>(0.50,0,0.35)</offset>
+                    <layer>75</layer>
+                </dataNorth>
+                <dataWest>
+                    <offset>(0,0,0.6)</offset>
+                    <layer>0</layer>
+                </dataWest>
+                <dataEast>
+                    <offset>(-0.80,0,0.45)</offset>
+                </dataEast>
+            </drawData>
+
             <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <texPath>Things/Dragoon/TurretPack/apparel</texPath>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>20</baseLayer>
-                    <drawSize>0.75</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(-0.50,0,1.05)</offset>
-                            <layer>0</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(0.50,0,0.35)</offset>
-                            <layer>75</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0,0,0.6)</offset>
-                            <layer>0</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.80,0,0.45)</offset>
-                        </dataEast>
-                    </drawData>
-                </li>
                 <li>
                     <nodeClass>Exosuit.PawnRenderNode_TurretGun_Custom</nodeClass>
                     <workerClass>Exosuit.PawnRenderNodeWorker_TurretGun_Custom</workerClass>
@@ -259,13 +245,13 @@
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
-			<workAmount>30000</workAmount>
+            <workAmount>30000</workAmount>
         </recipeMaker>
         <costList>
             <Steel>100</Steel>
             <Tungsteel>100</Tungsteel>
-			<ComponentStamped>5</ComponentStamped>
-			<ComponentIndustrial>5</ComponentIndustrial>
+            <ComponentStamped>5</ComponentStamped>
+            <ComponentIndustrial>5</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -292,34 +278,26 @@
         </equippedStatOffsets>
         <tickerType>Normal</tickerType>
         <apparel>
+            <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
+            <drawData>
+                <scale>0.75</scale>
+                <dataSouth>
+                    <offset>(-0.50,0,1.05)</offset>
+                    <layer>0</layer>
+                </dataSouth>
+                <dataNorth>
+                    <offset>(0.50,0,0.35)</offset>
+                    <layer>75</layer>
+                </dataNorth>
+                <dataWest>
+                    <offset>(0,0,0.6)</offset>
+                    <layer>0</layer>
+                </dataWest>
+                <dataEast>
+                    <offset>(-0.80,0,0.45)</offset>
+                </dataEast>
+            </drawData>
             <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <texPath>Things/Dragoon/TurretPack/apparel</texPath>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>20</baseLayer>
-                    <drawSize>0.75</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(-0.50,0,1.05)</offset>
-                            <layer>0</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(0.50,0,0.35)</offset>
-                            <layer>75</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0,0,0.6)</offset>
-                            <layer>0</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.80,0,0.45)</offset>
-                        </dataEast>
-                    </drawData>
-                </li>
                 <li>
                     <nodeClass>Exosuit.PawnRenderNode_TurretGun_Custom</nodeClass>
                     <workerClass>Exosuit.PawnRenderNodeWorker_TurretGun_Custom</workerClass>
@@ -413,13 +391,13 @@
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
-			<workAmount>30000</workAmount>
+            <workAmount>30000</workAmount>
         </recipeMaker>
         <costList>
             <Steel>100</Steel>
-			<Tungsteel>120</Tungsteel>
-			<ComponentStamped>8</ComponentStamped>
-			<ComponentIndustrial>5</ComponentIndustrial>
+            <Tungsteel>120</Tungsteel>
+            <ComponentStamped>8</ComponentStamped>
+            <ComponentIndustrial>5</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -446,34 +424,26 @@
         </equippedStatOffsets>
         <tickerType>Normal</tickerType>
         <apparel>
+            <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
+            <drawData>
+                <scale>0.75</scale>
+                <dataSouth>
+                    <offset>(-0.50,0,1.05)</offset>
+                    <layer>0</layer>
+                </dataSouth>
+                <dataNorth>
+                    <offset>(0.50,0,0.35)</offset>
+                    <layer>75</layer>
+                </dataNorth>
+                <dataWest>
+                    <offset>(0,0,0.6)</offset>
+                    <layer>0</layer>
+                </dataWest>
+                <dataEast>
+                    <offset>(-0.80,0,0.45)</offset>
+                </dataEast>
+            </drawData>
             <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <texPath>Things/Dragoon/TurretPack/apparel</texPath>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>20</baseLayer>
-                    <drawSize>0.75</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(-0.50,0,1.05)</offset>
-                            <layer>0</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(0.50,0,0.35)</offset>
-                            <layer>75</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0,0,0.6)</offset>
-                            <layer>0</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.80,0,0.45)</offset>
-                        </dataEast>
-                    </drawData>
-                </li>
                 <li>
                     <nodeClass>Exosuit.PawnRenderNode_TurretGun_Custom</nodeClass>
                     <workerClass>Exosuit.PawnRenderNodeWorker_TurretGun_Custom</workerClass>
@@ -549,5 +519,5 @@
             </li>
         </comps>
     </ThingDef>
-    
+
 </Defs>

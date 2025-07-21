@@ -4,7 +4,12 @@
   <ThingDef ParentName="DMS_ModuleItemCore">
     <defName>DMS_Module_AT34_Core</defName>
     <label>AT-34 "Yetta" core module</label>
-    <description>A power armor frame that was exported to the entire rimworld as a training and civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become the largest individual equipment that can be used by local armed forces in the rimworld except armored vehicles. However, providing adequate maintenance and parts for this equipment without proper industrialization would have become extremely difficult without trade with the colonial fleet.</description>
+    <description>A power armor frame that was exported to the entire rimworld as a training and
+      civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become
+      the largest individual equipment that can be used by local armed forces in the rimworld except
+      armored vehicles. However, providing adequate maintenance and parts for this equipment without
+      proper industrialization would have become extremely difficult without trade with the colonial
+      fleet.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_AT34_Core</ThingDef>
     </descriptionHyperlinks>
@@ -28,7 +33,7 @@
       <skillRequirements>
         <Crafting>4</Crafting>
       </skillRequirements>
-	    <workAmount>48000</workAmount>
+      <workAmount>48000</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Tungsteel>100</Tungsteel>
@@ -50,7 +55,12 @@
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_AT34_Core</defName>
     <label>AT-34 "Yetta" frame</label>
-    <description>A power armor frame that was exported to the entire rimworld as a training and civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become the largest individual equipment that can be used by local armed forces in the rimworld except armored vehicles. However, providing adequate maintenance and parts for this equipment without proper industrialization would have become extremely difficult without trade with the colonial fleet.</description>
+    <description>A power armor frame that was exported to the entire rimworld as a training and
+      civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become
+      the largest individual equipment that can be used by local armed forces in the rimworld except
+      armored vehicles. However, providing adequate maintenance and parts for this equipment without
+      proper industrialization would have become extremely difficult without trade with the colonial
+      fleet.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_AT34_Core</ThingDef>
     </descriptionHyperlinks>
@@ -63,32 +73,22 @@
       <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
       <ArmorRating_Heat>0.60</ArmorRating_Heat>
-			<Insulation_Cold>18</Insulation_Cold>
-			<Insulation_Heat>32</Insulation_Heat>
+      <Insulation_Cold>18</Insulation_Cold>
+      <Insulation_Heat>32</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
-			<CarryWeight MayRequire="ceteam.combatextended">250</CarryWeight>
-			<CarryingCapacity>250</CarryingCapacity>
-			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
+      <CarryWeight MayRequire="ceteam.combatextended">250</CarryWeight>
+      <CarryingCapacity>250</CarryingCapacity>
+      <WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
     </equippedStatOffsets>
     <apparel>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <baseLayer>1</baseLayer>
-          <drawSize>1.5</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/AT34/apparel</texPath>
-          <drawData>
-            <dataNorth>
-              <layer>5</layer>
-            </dataNorth>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/AT34/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.5</scale>
+        <dataNorth>
+          <layer>5</layer>
+        </dataNorth>
+      </drawData>
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -99,9 +99,6 @@
       </li>
     </comps>
     <modExtensions>
-      <li Class="Exosuit.ExosuitExt">
-        <wreckageOverride>MF_Building_Wreckage</wreckageOverride>
-      </li>
       <li Class="Exosuit.ApparelRenderOffsets">
         <headData>
           <dataWest>
@@ -146,7 +143,9 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_AT34_Helmet</defName>
     <label>AT-34 "Yetta" helmet</label>
-    <description>An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD.</description>
+    <description>An integrated sensor compatible with the Dragoon head module, its designed to
+      improve the working perfromance of a frame through pre-programmed Ridar tracking system and
+      HUD.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_AT34_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -173,7 +172,7 @@
       <skillRequirements>
         <Crafting>4</Crafting>
       </skillRequirements>
-	    <workAmount>18000</workAmount>
+      <workAmount>18000</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Tungsteel>15</Tungsteel>
@@ -194,7 +193,9 @@
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_AT34_Helmet</defName>
     <label>AT-34 "Yetta" helmet</label>
-    <description>An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD.</description>
+    <description>An integrated sensor compatible with the Dragoon head module, its designed to
+      improve the working perfromance of a frame through pre-programmed Ridar tracking system and
+      HUD.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_AT34_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -206,7 +207,7 @@
       <Mass>24</Mass>
     </statBases>
     <equippedStatOffsets>
-			<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+      <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
       <MoveSpeed>-0.15</MoveSpeed>
       <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
       <HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
@@ -214,23 +215,7 @@
     </equippedStatOffsets>
     <apparel>
       <immuneToToxGasExposure>true</immuneToToxGasExposure>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>Exosuit.PawnRenderNodeWorker_InhertHead</workerClass>
-          <parentTagDef>WGApparelHead</parentTagDef>
-          <drawSize>1</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/AT34/helmet</texPath>
-          <drawData>
-            <defaultData>
-              <layer>20</layer>
-              <offset>(0,0,0)</offset>
-            </defaultData>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/AT34/helmet</wornGraphicPath>
       <tags>
         <li>EVA</li>
       </tags>

@@ -4,7 +4,11 @@
   <ThingDef ParentName="DMS_ModuleItemCore">
     <defName>DMS_Module_PV8_Core</defName>
     <label>PV-8 "Zyklop" frame module</label>
-    <description>These heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task force. Probably the largest piece of infantry equipments deployed by the colonial fleet on surface of this planet. Their extremely thick armor and powerful power system allowing ground garrison to maintain sufficient mobile firepower to deal with interference in the colonization.</description>
+    <description>These heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task
+      force. Probably the largest piece of infantry equipments deployed by the colonial fleet on
+      surface of this planet. Their extremely thick armor and powerful power system allowing ground
+      garrison to maintain sufficient mobile firepower to deal with interference in the
+      colonization.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PV8_Core</ThingDef>
     </descriptionHyperlinks>
@@ -51,7 +55,11 @@
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_PV8_Core</defName>
     <label>PV-8 "Zyklop" frame</label>
-    <description>A heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task force. This is probably the largest piece of infantry equipments deployed by the colonial fleet on surface of this planet. The extremely thick armor and powerful power system enable the ground garrison to maintain sufficient mobile firepower to deal with interference in the colonization project.</description>
+    <description>A heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task
+      force. This is probably the largest piece of infantry equipments deployed by the colonial
+      fleet on surface of this planet. The extremely thick armor and powerful power system enable
+      the ground garrison to maintain sufficient mobile firepower to deal with interference in the
+      colonization project.</description>
     <graphicData>
       <texPath>Things/Dragoon/PV8/apparel_south</texPath>
     </graphicData>
@@ -64,33 +72,24 @@
       <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.90</ArmorRating_Blunt>
       <ArmorRating_Heat>0.90</ArmorRating_Heat>
-			<Insulation_Cold>48</Insulation_Cold>
-			<Insulation_Heat>64</Insulation_Heat>
+      <Insulation_Cold>48</Insulation_Cold>
+      <Insulation_Heat>64</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
-			<CarryingCapacity>320</CarryingCapacity>
-			<CarryWeight MayRequire="ceteam.combatextended">320</CarryWeight>
-			<WorkSpeedGlobal>-0.35</WorkSpeedGlobal>
+      <CarryingCapacity>320</CarryingCapacity>
+      <CarryWeight MayRequire="ceteam.combatextended">320</CarryWeight>
+      <WorkSpeedGlobal>-0.35</WorkSpeedGlobal>
       <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <baseLayer>1</baseLayer>
-          <drawSize>1.5</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/PV8/apparel</texPath>
-          <drawData>
-            <dataNorth>
-              <layer>5</layer>
-            </dataNorth>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/PV8/apparel</wornGraphicPath>
+      <drawData>
+        <dataNorth>
+          <layer>5</layer>
+        </dataNorth>
+        <scale>1.5</scale>
+      </drawData>
+
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -101,9 +100,6 @@
       </li>
     </comps>
     <modExtensions>
-      <li Class="Exosuit.ExosuitExt">
-        <wreckageOverride>MF_Building_Wreckage</wreckageOverride>
-      </li>
       <li Class="Exosuit.ApparelRenderOffsets">
         <headData>
           <dataWest>
@@ -148,7 +144,8 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_PV8_Helmet</defName>
     <label>PV-8 "Zyklop" helmet</label>
-    <description>A heavy-duty helmet that uses small optical probes arranged in a distributed manner as sensors in order to prevent damage from frontal hits from large-caliber weapons.</description>
+    <description>A heavy-duty helmet that uses small optical probes arranged in a distributed manner
+      as sensors in order to prevent damage from frontal hits from large-caliber weapons.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PV8_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -163,7 +160,7 @@
           <li>Head</li>
         </occupiedSlots>
       </li>
-    </comps>    
+    </comps>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
       <skillRequirements>
@@ -192,7 +189,8 @@
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_PV8_Helmet</defName>
     <label>PV-8 "Zyklop" helmet</label>
-    <description>A heavy-duty helmet that uses small optical probes arranged in a distributed manner as sensors in order to prevent damage from frontal hits from large-caliber weapons.</description>
+    <description>A heavy-duty helmet that uses small optical probes arranged in a distributed manner
+      as sensors in order to prevent damage from frontal hits from large-caliber weapons.</description>
     <graphicData>
       <texPath>Things/Dragoon/PV8/helmet_south</texPath>
     </graphicData>
@@ -210,23 +208,7 @@
     </equippedStatOffsets>
     <apparel>
       <immuneToToxGasExposure>true</immuneToToxGasExposure>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>Exosuit.PawnRenderNodeWorker_InhertHead</workerClass>
-          <parentTagDef>WGApparelHead</parentTagDef>
-          <drawSize>1</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/PV8/helmet</texPath>
-          <drawData>
-            <defaultData>
-              <layer>20</layer>
-              <offset>(0,0,0)</offset>
-            </defaultData>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/PV8/helmet</wornGraphicPath>
       <tags>
         <li>EVA</li>
       </tags>

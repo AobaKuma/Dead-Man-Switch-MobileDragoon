@@ -59,40 +59,30 @@
             <StaggerDurationFactor>-0.2</StaggerDurationFactor>
         </equippedStatOffsets>
         <apparel>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>30</baseLayer>
-                    <drawSize>1</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <texPath>Things/Dragoon/ArmorPad/apparel</texPath>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(0.75,0,0.5)</offset>
-                            <layer>7</layer>
-                            <rotationOffset>15</rotationOffset>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(-0.75,0,0.6)</offset>
-                            <layer>7</layer>
-                            <rotationOffset>15</rotationOffset>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0.5,0,0.3)</offset>
-                            <layer>7</layer>
-                            <rotationOffset>-45</rotationOffset>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(0,0,0.75)</offset>
-                            <layer>-2</layer>
-                            <rotationOffset>45</rotationOffset>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
+            <wornGraphicPath>Things/Dragoon/ArmorPad/apparel</wornGraphicPath>
+            <drawData>
+                <dataSouth>
+                    <offset>(0.75,0,0.5)</offset>
+                    <layer>7</layer>
+                    <rotationOffset>15</rotationOffset>
+                </dataSouth>
+                <dataNorth>
+                    <offset>(-0.75,0,0.6)</offset>
+                    <layer>7</layer>
+                    <rotationOffset>15</rotationOffset>
+                </dataNorth>
+                <dataWest>
+                    <offset>(0.5,0,0.3)</offset>
+                    <layer>7</layer>
+                    <rotationOffset>-45</rotationOffset>
+                </dataWest>
+                <dataEast>
+                    <offset>(0,0,0.75)</offset>
+                    <layer>-2</layer>
+                    <rotationOffset>45</rotationOffset>
+                </dataEast>
+            </drawData>
+
         </apparel>
         <comps>
             <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -108,14 +98,15 @@
     <ThingDef ParentName="DMS_ModuleItemMountLeft">
         <defName>DMS_Module_SmokeLauncher</defName>
         <label>Smoke launcher</label>
-        <description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</description>
+        <description>A simple remote-controlled launcher capable of loading smoke shells and
+            providing accurate cover.</description>
         <!--一種構造簡單的遙控發射裝置，能夠裝填煙霧砲彈並提供準確的掩護。-->
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_SmokeLauncher</ThingDef>
         </descriptionHyperlinks>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
-			<workAmount>15000</workAmount>
+            <workAmount>15000</workAmount>
         </recipeMaker>
         <statBases>
             <MaxHitPoints>20</MaxHitPoints>
@@ -137,7 +128,8 @@
     <ThingDef ParentName="DMS_ModuleApparelMountLeft">
         <defName>DMS_Apparel_SmokeLauncher</defName>
         <label>Smoke launcher</label>
-        <description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</description>
+        <description>A simple remote-controlled launcher capable of loading smoke shells and
+            providing accurate cover.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Module_SmokeLauncher</ThingDef>
         </descriptionHyperlinks>
@@ -152,36 +144,27 @@
             <MoveSpeed>-0.1</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>30</baseLayer>
-                    <drawSize>0.75</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <texPath>Things/Dragoon/SmokeLauncher/apparel</texPath>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(1,0,0.75)</offset>
-                            <layer>0</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(-1,0,0.55)</offset>
-                            <layer>80</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0.75,0,0.45)</offset>
-                            <layer>80</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(0.1,0,0.75)</offset>
-                            <layer>-2</layer>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
+            <wornGraphicPath>Things/Dragoon/SmokeLauncher/apparel</wornGraphicPath>
+            <drawData>
+                <scale>0.75</scale>
+                <dataSouth>
+                    <offset>(1,0,0.75)</offset>
+                    <layer>0</layer>
+                </dataSouth>
+                <dataNorth>
+                    <offset>(-1,0,0.55)</offset>
+                    <layer>80</layer>
+                </dataNorth>
+                <dataWest>
+                    <offset>(0.75,0,0.45)</offset>
+                    <layer>80</layer>
+                </dataWest>
+                <dataEast>
+                    <offset>(0.1,0,0.75)</offset>
+                    <layer>-2</layer>
+                </dataEast>
+            </drawData>
+
         </apparel>
         <verbs>
             <li>
@@ -231,13 +214,14 @@
     <ThingDef ParentName="DMS_ModuleItemMountLeft">
         <defName>DMS_Module_MissilePod</defName>
         <label>Missile Pod</label>
-        <description>A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use.</description>
+        <description>A missile pod module that attach on variety of weapon platforms, Capable of
+            loading and firing four infrared guided missiles for anti-fortification use.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_MissilePod</ThingDef>
         </descriptionHyperlinks>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
-			<workAmount>22500</workAmount>
+            <workAmount>22500</workAmount>
         </recipeMaker>
         <statBases>
             <MaxHitPoints>40</MaxHitPoints>
@@ -245,7 +229,7 @@
         </statBases>
         <costList>
             <Steel>200</Steel>
-			<Tungsteel>40</Tungsteel>
+            <Tungsteel>40</Tungsteel>
             <ComponentIndustrial>4</ComponentIndustrial>
         </costList>
         <comps>
@@ -260,7 +244,8 @@
     <ThingDef ParentName="DMS_ModuleApparelMountLeft">
         <defName>DMS_Apparel_MissilePod</defName>
         <label>Demolish Missile Pod</label>
-        <description>A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use.</description>
+        <description>A missile pod module that attach on variety of weapon platforms, Capable of
+            loading and firing four infrared guided missiles for anti-fortification use.</description>
         <graphicData>
             <texPath>Things/Dragoon/MissilePod/apparel_south</texPath>
         </graphicData>
@@ -272,36 +257,27 @@
             <MoveSpeed>-0.25</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>30</baseLayer>
-                    <drawSize>0.75</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <texPath>Things/Dragoon/MissilePod/apparel</texPath>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(0.95,0,0.9)</offset>
-                            <layer>0</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(-0.95,0,0.7)</offset>
-                            <layer>80</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0.75,0,0.55)</offset>
-                            <layer>80</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.55,0,0.95)</offset>
-                            <layer>-2</layer>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
+            <wornGraphicPath>Things/Dragoon/MissilePod/apparel</wornGraphicPath>
+            <drawData>
+                <scale>0.75</scale>
+                <dataSouth>
+                    <offset>(0.95,0,0.9)</offset>
+                    <layer>0</layer>
+                </dataSouth>
+                <dataNorth>
+                    <offset>(-0.95,0,0.7)</offset>
+                    <layer>80</layer>
+                </dataNorth>
+                <dataWest>
+                    <offset>(0.75,0,0.55)</offset>
+                    <layer>80</layer>
+                </dataWest>
+                <dataEast>
+                    <offset>(-0.55,0,0.95)</offset>
+                    <layer>-2</layer>
+                </dataEast>
+            </drawData>
+
         </apparel>
         <verbs>
             <li>
@@ -351,13 +327,14 @@
     <ThingDef ParentName="DMS_ModuleItemMountLeft">
         <defName>DMS_Module_SwarmMissilePod</defName>
         <label>Swarm rocket Pod</label>
-        <description>Rocket pod contains multiple HE rockets, can use its high fire rate to cover an large area.</description>
+        <description>Rocket pod contains multiple HE rockets, can use its high fire rate to cover an
+            large area.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_SwarmMissilePod</ThingDef>
         </descriptionHyperlinks>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
-			<workAmount>22500</workAmount>
+            <workAmount>22500</workAmount>
         </recipeMaker>
         <statBases>
             <MaxHitPoints>10</MaxHitPoints>
@@ -365,7 +342,7 @@
         </statBases>
         <costList>
             <Steel>180</Steel>
-			<Tungsteel>30</Tungsteel>
+            <Tungsteel>30</Tungsteel>
             <ComponentIndustrial>3</ComponentIndustrial>
         </costList>
         <comps>
@@ -380,7 +357,8 @@
     <ThingDef ParentName="DMS_ModuleApparelMountLeft">
         <defName>DMS_Apparel_SwarmMissilePod</defName>
         <label>Swarm rocket Pod</label>
-        <description>A Rocket pod module that contains multiple high-explosive rocket rounds, can use its high fire rate to cover an large area.</description>
+        <description>A Rocket pod module that contains multiple high-explosive rocket rounds, can
+            use its high fire rate to cover an large area.</description>
         <graphicData>
             <texPath>Things/Dragoon/MissilePodSwarm/apparel_south</texPath>
         </graphicData>
@@ -393,36 +371,26 @@
             <MoveSpeed>-0.2</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>30</baseLayer>
-                    <drawSize>0.75</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <texPath>Things/Dragoon/MissilePodSwarm/apparel</texPath>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(0.95,0,0.9)</offset>
-                            <layer>30</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(-0.95,0,0.95)</offset>
-                            <layer>80</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0.75,0,0.55)</offset>
-                            <layer>80</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.15,0,1.1)</offset>
-                            <layer>-2</layer>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
+            <wornGraphicPath>Things/Dragoon/MissilePodSwarm/apparel</wornGraphicPath>
+            <drawData>
+                <scale>0.75</scale>
+                <dataSouth>
+                    <offset>(0.95,0,0.9)</offset>
+                    <layer>30</layer>
+                </dataSouth>
+                <dataNorth>
+                    <offset>(-0.95,0,0.95)</offset>
+                    <layer>80</layer>
+                </dataNorth>
+                <dataWest>
+                    <offset>(0.75,0,0.55)</offset>
+                    <layer>80</layer>
+                </dataWest>
+                <dataEast>
+                    <offset>(-0.15,0,1.1)</offset>
+                    <layer>-2</layer>
+                </dataEast>
+            </drawData>
         </apparel>
         <verbs>
             <li>
@@ -474,13 +442,14 @@
     <ThingDef ParentName="DMS_ModuleItemMountLeft">
         <defName>DMS_Module_MissilePodPlus</defName>
         <label>Missile Pod Plus</label>
-        <description>A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles.</description>
+        <description>A missile pod module that attach on variety of weapon platforms, it is heavier
+            but capable of loading double amount of missiles.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_MissilePod</ThingDef>
         </descriptionHyperlinks>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
-			<workAmount>22500</workAmount>
+            <workAmount>22500</workAmount>
         </recipeMaker>
         <statBases>
             <MaxHitPoints>25</MaxHitPoints>
@@ -488,7 +457,7 @@
         </statBases>
         <costList>
             <Steel>360</Steel>
-			<Tungsteel>60</Tungsteel>
+            <Tungsteel>60</Tungsteel>
             <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
         <comps>
@@ -503,7 +472,8 @@
     <ThingDef ParentName="DMS_ModuleApparelMountLeft">
         <defName>DMS_Apparel_MissilePodPlus</defName>
         <label>Missile Pod Plus</label>
-        <description>A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles.</description>
+        <description>A missile pod module that attach on variety of weapon platforms, it is heavier
+            but capable of loading double amount of missiles.</description>
         <graphicData>
             <texPath>Things/Dragoon/MissilePod8/apparel_south</texPath>
         </graphicData>
@@ -515,36 +485,27 @@
             <MoveSpeed>-0.12</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>30</baseLayer>
-                    <drawSize>0.75</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <texPath>Things/Dragoon/MissilePod8/apparel</texPath>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(0.95,0,0.9)</offset>
-                            <layer>0</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(-0.95,0,0.7)</offset>
-                            <layer>80</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0.75,0,0.55)</offset>
-                            <layer>80</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.55,0,0.95)</offset>
-                            <layer>-2</layer>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
+            <wornGraphicPath>Things/Dragoon/MissilePod8/apparel</wornGraphicPath>
+            <drawData>
+                <scale>0.75</scale>
+                <dataSouth>
+                    <offset>(0.95,0,0.9)</offset>
+                    <layer>0</layer>
+                </dataSouth>
+                <dataNorth>
+                    <offset>(-0.95,0,0.7)</offset>
+                    <layer>80</layer>
+                </dataNorth>
+                <dataWest>
+                    <offset>(0.75,0,0.55)</offset>
+                    <layer>80</layer>
+                </dataWest>
+                <dataEast>
+                    <offset>(-0.55,0,0.95)</offset>
+                    <layer>-2</layer>
+                </dataEast>
+            </drawData>
+
         </apparel>
         <verbs>
             <li>
@@ -607,6 +568,6 @@
             <speed>60</speed>
         </projectile>
     </ThingDef>
-    
+
 
 </Defs>

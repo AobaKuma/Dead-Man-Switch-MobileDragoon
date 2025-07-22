@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
   <ResearchProjectDef ParentName="DMS_BaseTech">
     <defName>DMS_MobileDragoon</defName>
     <label>mobile dragoon</label>
     <description>A military-duty exoskeleton technology used by colonial fleets. Due to their active colonization activities in rimworlds, these type of technology is also mastered by most former colonial worlds and some space pirates. Dragoons are generally used for armored reconnaissance missions on urban battlefields with poor road conditions, and having multiple modular mount for various needs.</description>
     <baseCost>2000</baseCost>
     <techLevel>Industrial</techLevel>
-    <hiddenPrerequisites>
+    <prerequisites>
       <li>WG_HeavyExoskeleton</li>
       <li>DMS_Prosthetic</li>
-    </hiddenPrerequisites>
+    </prerequisites>
     <researchViewX>4.00</researchViewX>
-    <researchViewY>2.00</researchViewY>
-    <techprintCount>2</techprintCount>
+    <researchViewY>4.50</researchViewY>
+    <techprintCount>1</techprintCount>
     <techprintCommonality>0.5</techprintCommonality>
     <techprintMarketValue>1500</techprintMarketValue>
     <heldByFactionCategoryTags>
@@ -30,7 +31,7 @@
       <li>DMS_MobileDragoon</li>
     </prerequisites>
     <researchViewX>5.00</researchViewX>
-    <researchViewY>1.60</researchViewY>
+    <researchViewY>4.50</researchViewY>
     <techprintCount>1</techprintCount>
     <techprintCommonality>0.5</techprintCommonality>
     <techprintMarketValue>1500</techprintMarketValue>
@@ -50,8 +51,7 @@
       <li>DMS_MobileDragoonAdvanced</li>
     </prerequisites>
     <researchViewX>6.00</researchViewX>
-    <researchViewY>1.60</researchViewY>
-
+    <researchViewY>4.50</researchViewY>
     <techprintCount>1</techprintCount>
     <techprintCommonality>0.05</techprintCommonality>
     <techprintMarketValue>2000</techprintMarketValue>
@@ -72,8 +72,7 @@
       <li>DMS_MobileDragoon</li>
     </prerequisites>
     <researchViewX>5.00</researchViewX>
-    <researchViewY>2.30</researchViewY>
-
+    <researchViewY>5.10</researchViewY>
     <techprintCount>1</techprintCount>
     <techprintCommonality>0.25</techprintCommonality>
     <techprintMarketValue>2000</techprintMarketValue>
@@ -81,6 +80,4 @@
       <li>DMS</li>
     </heldByFactionCategoryTags>
   </ResearchProjectDef>
-
-  
 </Defs>

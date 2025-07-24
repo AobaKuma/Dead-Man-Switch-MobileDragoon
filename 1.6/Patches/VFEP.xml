@@ -8,10 +8,10 @@
             <operations>
                 <li Class="PatchOperationConditional">
                     <xpath>*/ThingDef[@Name="VFEP_BaseWarcasketGun"]/modExtensions/li[@Class =
-                        "HeavyWeapons.HeavyWeapon"]/supportedArmors</xpath>
+                        "VEF.Weapons.HeavyWeapon"]/supportedArmors</xpath>
                     <match Class="PatchOperationAdd">
                         <xpath>*/ThingDef[@Name="VFEP_BaseWarcasketGun"]/modExtensions/li[@Class =
-                            "HeavyWeapons.HeavyWeapon"]/supportedArmors</xpath>
+                            "VEF.Weapons.HeavyWeapon"]/supportedArmors</xpath>
                         <value>
                             <li>DMS_Apparel_AT34_Core</li>
                             <li>DMS_Apparel_PV4_Core</li>
@@ -22,7 +22,7 @@
                     </match>
                     <nomatch Class="PatchOperationAdd">
                         <xpath>*/ThingDef[@Name="VFEP_BaseWarcasketGun"]/modExtensions/li[@Class =
-                            "HeavyWeapons.HeavyWeapon"]</xpath>
+                            "VEF.Weapons.HeavyWeapon"]</xpath>
                         <value>
                             <supportedArmors>
                                 <li>DMS_Apparel_AT34_Core</li>

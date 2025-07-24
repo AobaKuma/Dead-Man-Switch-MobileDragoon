@@ -7,11 +7,11 @@
     <match Class="PatchOperationConditional">
       <xpath>*/ThingDef[@Name="VFEP_BaseWarcasketGun" or
         @Name="VFEP_BaseMeleeWeapon_Warcasket"]/modExtensions/li[@Class =
-        "HeavyWeapons.HeavyWeapon"]/supportedArmors</xpath>
+        "VEF.Weapons.HeavyWeapon"]/supportedArmors</xpath>
       <nomatch Class="PatchOperationAdd">
         <xpath>*/ThingDef[@Name="VFEP_BaseWarcasketGun" or
           @Name="VFEP_BaseMeleeWeapon_Warcasket"]/modExtensions/li[@Class =
-          "HeavyWeapons.HeavyWeapon"]</xpath>
+          "VEF.Weapons.HeavyWeapon"]</xpath>
         <value>
           <supportedArmors/>
         </value>
@@ -26,11 +26,11 @@
     <match Class="PatchOperationConditional">
       <xpath>*/ThingDef[@Name="VFEP_BaseWarcasketGun" or
         @Name="VFEP_BaseMeleeWeapon_Warcasket"]/modExtensions/li[@Class =
-        "HeavyWeapons.HeavyWeapon"]/supportedArmors</xpath>
+        "VEF.Weapons.HeavyWeapon"]/supportedArmors</xpath>
       <match Class="PatchOperationAdd">
         <xpath>*/ThingDef[@Name="VFEP_BaseWarcasketGun" or
           @Name="VFEP_BaseMeleeWeapon_Warcasket"]/modExtensions/li[@Class =
-          "HeavyWeapons.HeavyWeapon"]/supportedArmors</xpath>
+          "VEF.Weapons.HeavyWeapon"]/supportedArmors</xpath>
         <value>
             <li>DMS_Apparel_PF3_Core</li>
             <li>DMS_Apparel_AT34_Core</li>
@@ -48,10 +48,10 @@
     </mods>
     <match Class="PatchOperationConditional">
       <xpath>*/ThingDef[@ParentName="BaseHumanMakeableGun"]/modExtensions/li[@Class =
-        "HeavyWeapons.HeavyWeapon"]/supportedArmors</xpath>
+        "VEF.Weapons.HeavyWeapon"]/supportedArmors</xpath>
       <match Class="PatchOperationAdd">
         <xpath>*/ThingDef[@ParentName="BaseHumanMakeableGun"]/modExtensions/li[@Class =
-          "HeavyWeapons.HeavyWeapon"]/supportedArmors</xpath>
+          "VEF.Weapons.HeavyWeapon"]/supportedArmors</xpath>
         <value>
             <li>DMS_Apparel_PF3_Core</li>
             <li>DMS_Apparel_AT34_Core</li>

@@ -307,7 +307,7 @@
           </drawData>
         </li>
         <li> <!-- only rendering on gantry -->
-          <nodeClass>PawnRenderNode</nodeClass>
+          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>Exosuit.PawnRenderNodeWorker_WeaponOnGantry</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>0</baseLayer>
@@ -441,7 +441,7 @@
           </drawData>
         </li>
         <li> <!-- only rendering on gantry -->
-          <nodeClass>PawnRenderNode</nodeClass>
+          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
           <workerClass>Exosuit.PawnRenderNodeWorker_WeaponOnGantry</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>0</baseLayer>

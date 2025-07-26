@@ -66,6 +66,9 @@
       <wornGraphicPath>Things/Dragoon/ModuleArm/apparel</wornGraphicPath>
       <drawData>
         <scale>1.5</scale>
+        <defaultData>
+          <layer>0</layer>
+        </defaultData>
         <dataSouth>
           <offset>(-0.85,0,0.10)</offset>
         </dataSouth>
@@ -81,7 +84,28 @@
           <layer>10</layer>
         </dataEast>
       </drawData>
-
+      <renderNodeProperties>
+        <li Class="Exosuit.PawnRenderNodeProperties_ApparelWeaponHolder"><!-- TODO:修正位置 -->
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <drawData>
+            <scale>1.5</scale>
+            <dataSouth>
+              <offset>(-0.85,0,0.10)</offset>
+            </dataSouth>
+            <dataNorth>
+              <offset>(0.75,0,0.0)</offset>
+              <layer>72</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(-0.40,0,0.5)</offset>
+            </dataWest>
+            <dataEast>
+              <offset>(-0.05,0,-0.2)</offset>
+              <layer>10</layer>
+            </dataEast>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -91,8 +115,10 @@
           <li>ArmLeft</li>
         </occupiedSlots>
       </li>
-      <li Class="Exosuit.CompProperties_ForceUseWeapon">
+      <li Class="Exosuit.CompProperties_ModuleWeapon">
         <weapon>DMS_Dragoon_Sword</weapon>
+
+
       </li>
     </comps>
   </ThingDef>
@@ -179,6 +205,7 @@
           <layer>10</layer>
         </dataEast>
       </drawData>
+
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -293,8 +320,28 @@
         </dataEast>
       </drawData>
       <renderNodeProperties>
-        <li> <!-- only rendering on gantry -->
-          <nodeClass>PawnRenderNode</nodeClass>
+        <li Class="Exosuit.PawnRenderNodeProperties_ApparelWeaponHolder"><!-- TODO:修正位置 -->
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <drawData>
+            <scale>1.5</scale>
+            <dataSouth>
+              <offset>(-0.85,0,0.10)</offset>
+            </dataSouth>
+            <dataNorth>
+              <offset>(0.75,0,0.0)</offset>
+              <layer>72</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(-0.40,0,0.5)</offset>
+            </dataWest>
+            <dataEast>
+              <offset>(-0.05,0,-0.2)</offset>
+              <layer>10</layer>
+            </dataEast>
+          </drawData>
+        </li>
+        <!-- <li>
+          <nodeClass>PawnRenderNode_Apparel</nodeClass>
           <workerClass>Exosuit.PawnRenderNodeWorker_WeaponOnGantry</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>0</baseLayer>
@@ -325,7 +372,7 @@
               <layer>80</layer>
             </dataEast>
           </drawData>
-        </li>
+        </li> -->
       </renderNodeProperties>
     </apparel>
     <comps>
@@ -335,7 +382,7 @@
           <li>ArmRight</li>
         </occupiedSlots>
       </li>
-      <li Class="Exosuit.CompProperties_ForceUseWeapon">
+      <li Class="Exosuit.CompProperties_ModuleWeapon">
         <weapon>DMS_Dragoon_LMG</weapon>
       </li>
     </comps>
@@ -423,8 +470,28 @@
         </dataEast>
       </drawData>
       <renderNodeProperties>
-        <li> <!-- only rendering on gantry -->
-          <nodeClass>PawnRenderNode</nodeClass>
+        <li Class="Exosuit.PawnRenderNodeProperties_ApparelWeaponHolder"><!-- TODO:修正位置 -->
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <drawData>
+            <scale>2.75</scale>
+            <dataSouth>
+              <offset>(-0.85,0,0.10)</offset>
+            </dataSouth>
+            <dataNorth>
+              <offset>(0.75,0,0.0)</offset>
+              <layer>72</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(-0.40,0,0.5)</offset>
+            </dataWest>
+            <dataEast>
+              <offset>(-0.05,0,-0.2)</offset>
+              <layer>10</layer>
+            </dataEast>
+          </drawData>
+        </li>
+        <!-- <li Class="Exosuit.PawnRenderNodeProperties_ApparelWeaponHolder">
+          <nodeClass>PawnRenderNode_Apparel</nodeClass>
           <workerClass>Exosuit.PawnRenderNodeWorker_WeaponOnGantry</workerClass>
           <parentTagDef>WGApparelBody</parentTagDef>
           <baseLayer>0</baseLayer>
@@ -455,7 +522,7 @@
               <layer>80</layer>
             </dataEast>
           </drawData>
-        </li>
+        </li> -->
       </renderNodeProperties>
     </apparel>
     <comps>
@@ -464,9 +531,6 @@
         <occupiedSlots>
           <li>ArmRight</li>
         </occupiedSlots>
-      </li>
-      <li Class="Exosuit.CompProperties_ForceUseWeapon">
-        <weapon>DMS_Dragoon_DMR</weapon>
       </li>
     </comps>
   </ThingDef>

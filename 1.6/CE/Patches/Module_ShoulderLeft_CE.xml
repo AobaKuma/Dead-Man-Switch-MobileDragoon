@@ -124,7 +124,7 @@
                                 <canTargetLocations>true</canTargetLocations>
                             </targetParams>
                             <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
-                            <defaultProjectile>Bullet_57mmRocket_Thermobaric</defaultProjectile>
+                            <defaultProjectile>Bullet_80mmRocket_Thermobaric</defaultProjectile>
                             <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
                         </li>
                     </verbs>
@@ -137,7 +137,7 @@
                 <value>
                     <li Class="CompProperties_ApparelReloadable">
                         <maxCharges>14</maxCharges>
-                        <ammoDef>Ammo_57mmRocket_Thermobaric</ammoDef>
+                        <ammoDef>Ammo_80mmRocket_Thermobaric</ammoDef>
                         <ammoCountPerCharge>1</ammoCountPerCharge>
                         <baseReloadTicks>150</baseReloadTicks>
                         <soundReload>Standard_Reload</soundReload>

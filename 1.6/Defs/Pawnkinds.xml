@@ -392,6 +392,7 @@
       </li>
     </modExtensions>
   </PawnKindDef>
+  
   <PawnKindDef ParentName="DMS_DragoonBase">
     <defName>DMS_Squad_ArmyDragoon_Gatling</defName>
     <label>Zyklop tornado</label>

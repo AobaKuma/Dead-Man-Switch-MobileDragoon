@@ -78,7 +78,6 @@
     </ThingDef>
   
     <!-- 進入彈射 -->
-  
     <JobDef>
       <defName>WG_GetInEjector</defName>
       <driverClass>Exosuit.JobDriver_GetInEjector</driverClass>

@@ -5,9 +5,7 @@
     <defName>DMS_Module_PulseShield</defName>
     <label>pulse shield</label>
     <!-- 在殖民艦隊中應用的小型化護盾模塊，因為成本的考量而只在相當小的規模使用，快速的充電速度使其能夠完全吸收低口徑的彈頭或立即攔截致命的彈頭。 -->
-    <description>A miniaturized pulse shield module used in the colonial fleet, only used on a
-      fairly small scale due to cost considerations. Its fast charging speed allows it to completely
-      absorb low-caliber projectiles bursts or intercept a fatal projectile.</description>
+    <description>A miniaturized pulse shield module used in the colonial fleet, only used on a fairly small scale due to cost considerations. Its fast charging speed allows it to completely absorb low-caliber projectiles bursts or intercept a fatal projectile.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PulseShield</ThingDef>
     </descriptionHyperlinks>
@@ -47,9 +45,7 @@
     <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_PulseShield</defName>
     <label>pulse shield</label>
-    <description>A miniaturized shield module used on a small scale in the colonial fleet. Its fast
-      charging speed allows it to completely absorb low-caliber projectiles bursts or intercept
-      fatal projectiles.</description>
+    <description>A miniaturized shield module used on a small scale in the colonial fleet. Its fast charging speed allows it to completely absorb low-caliber projectiles bursts or intercept fatal projectiles.</description>
     <graphicData>
       <texPath>Things/Dragoon/PulseShield/apparel_south</texPath>
     </graphicData>
@@ -64,7 +60,6 @@
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/PulseShield/apparel</wornGraphicPath>
-
       <drawData>
         <scale>0.75</scale>
         <dataSouth>
@@ -83,7 +78,6 @@
           <layer>-1</layer>
         </dataEast>
       </drawData>
-
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -102,14 +96,12 @@
     </comps>
   </ThingDef>
 
-
   <!-- (左)工作臂 -->
   <ThingDef ParentName="DMS_ModuleItemArmLeft">
     <defName>DMS_Module_WorkArm</defName>
     <label>work arm</label>
     <!-- 一種掛在框架左臂的作業用模塊，包含一套複雜的夾具系統與定位儀，能在一定程度上做到如同人手一樣的靈活。 -->
-    <description>A module hung on the left arm of the frame, contains a eletric motor clamp and
-      positioning device, which can achieve the same dexterity as a human hand to a certain extent.</description>
+    <description>A module hung on the left arm of the frame, contains a eletric motor clamp and positioning device, which can achieve the same dexterity as a human hand to a certain extent.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_WorkArm</ThingDef>
     </descriptionHyperlinks>
@@ -145,8 +137,7 @@
   <ThingDef ParentName="DMS_ModuleApparelArmLeft">
     <defName>DMS_Apparel_WorkArm</defName>
     <label>work arm</label>
-    <description>A module hung on the left arm of the frame, contains a eletric motor clamp and
-      positioning device, which can achieve the same dexterity as a human hand to a certain extent.</description>
+    <description>A module hung on the left arm of the frame, contains a eletric motor clamp and positioning device, which can achieve the same dexterity as a human hand to a certain extent.</description>
     <graphicData>
       <texPath>Things/Dragoon/WorkArm/apparel_south</texPath>
     </graphicData>
@@ -165,7 +156,6 @@
       <wornGraphicPath>Things/Dragoon/WorkArm/apparel</wornGraphicPath>
       <drawData>
         <scale>1.4</scale>
-
         <dataSouth>
           <offset>(0.8,0,0.3)</offset>
         </dataSouth>
@@ -181,10 +171,7 @@
           <offset>(0.25,0,0.4)</offset>
           <layer>-1</layer>
         </dataEast>
-
-
       </drawData>
-
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -200,9 +187,7 @@
   <ThingDef ParentName="DMS_ModuleItemArmLeft">
     <defName>DMS_Module_Shield</defName>
     <label>ballistic shield</label>
-    <description>A composite armor shield mounted on the dragoon frame. Although it is a bit heavy,
-      it can effectively resist the damage caused by large-caliber fragments and anti-material rifle
-      bullets.</description>
+    <description>A composite armor shield mounted on the dragoon frame. Although it is a bit heavy, it can effectively resist the damage caused by large-caliber fragments and anti-material rifle bullets.</description>
     <!-- <description>一面安裝在龍騎兵框架上的複合裝甲防彈盾牌，雖然有些沉重但能夠有效的抵擋大口徑破片與反器材步槍彈對於本體的傷害。</description> -->
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_Shield</ThingDef>
@@ -274,7 +259,6 @@
           <layer>-1</layer>
         </dataEast>
       </drawData>
-
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -291,8 +275,7 @@
     <defName>DMS_Module_InfraredSensor</defName>
     <label>infrared sensor</label>
     <!-- 一種附加的外部光學傳感器，在不改造框架本身的前提下提供了一定的夜間作業能力，並提供瞄準輔助。 -->
-    <description>An additional external optical sensor provides some night operation capabilities
-      without modifying the frame itself, and provides aiming assistance.</description>
+    <description>An additional external optical sensor provides some night operation capabilities without modifying the frame itself, and provides aiming assistance.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_InfraredSensor</ThingDef>
     </descriptionHyperlinks>
@@ -325,6 +308,7 @@
       </li>
     </comps>
   </ThingDef>
+
   <ThingDef ParentName="DMS_ModuleApparelArmLeft">
     <defName>DMS_Apparel_InfraredSensor</defName>
     <label>infrared sensor</label>
@@ -367,7 +351,6 @@
           <layer>-1</layer>
         </dataEast>
       </drawData>
-
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -378,6 +361,7 @@
       </li>
     </comps>
   </ThingDef>
+
   <!-- (左)彈掛 -->
   <ThingDef ParentName="DMS_ModuleItemArmLeft">
     <defName>DMS_Module_CargoBox</defName>
@@ -413,6 +397,7 @@
       </li>
     </comps>
   </ThingDef>
+  
   <ThingDef ParentName="DMS_ModuleApparelArmLeft">
     <defName>DMS_Apparel_CargoBox</defName>
     <label>payload cabinet</label>

@@ -4,8 +4,7 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_Groyne_Helmet</defName>
     <label>"Groyne" helmet</label>
-    <description>An armored cover that provides driver protection without adequate optical
-      manufacturing processes. It is bulky but does provide some durability.</description>
+    <description>An armored cover that provides driver protection without adequate optical manufacturing processes. It is bulky but does provide some durability.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_Groyne_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -48,11 +47,11 @@
       <ComponentStamped>1</ComponentStamped>
     </costList>
   </ThingDef>
+
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_Groyne_Helmet</defName>
     <label>"Groyne" helmet</label>
-    <description>An armored cover that provides driver protection without adequate optical
-      manufacturing processes. It is bulky but does provide some durability.</description>
+    <description>An armored cover that provides driver protection without adequate optical manufacturing processes. It is bulky but does provide some durability.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_Groyne_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -86,8 +85,7 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_Stahlhelm_Helmet</defName>
     <label>"Stahlhelm" helmet</label>
-    <description>a civil frame module used for welding. But In fact, large quantities of them were
-      flowing into the arms market and underwent certain bulletproof modifications.</description>
+    <description>a civil frame module used for welding. But In fact, large quantities of them were flowing into the arms market and underwent certain bulletproof modifications.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_Stahlhelm_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -131,11 +129,11 @@
       <ComponentStamped>1</ComponentStamped>
     </costList>
   </ThingDef>
+  
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_Stahlhelm_Helmet</defName>
     <label>"Stahlhelm" helmet</label>
-    <description>a civil frame module used for welding. But In fact, large quantities of them were
-      flowing into the arms market and underwent certain bulletproof modifications.</description>
+    <description>a civil frame module used for welding. But In fact, large quantities of them were flowing into the arms market and underwent certain bulletproof modifications.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_Stahlhelm_Helmet</ThingDef>
     </descriptionHyperlinks>

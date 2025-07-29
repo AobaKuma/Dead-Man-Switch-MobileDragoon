@@ -4,12 +4,7 @@
   <ThingDef ParentName="DMS_ModuleItemCore">
     <defName>DMS_Module_AT34_Core</defName>
     <label>AT-34 "Yetta" core module</label>
-    <description>A power armor frame that was exported to the entire rimworld as a training and
-      civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become
-      the largest individual equipment that can be used by local armed forces in the rimworld except
-      armored vehicles. However, providing adequate maintenance and parts for this equipment without
-      proper industrialization would have become extremely difficult without trade with the colonial
-      fleet.</description>
+    <description>A powerarmor frame that was exported to the entire rimworld as a training and civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become the largest individual equipment that can be used by local armed forces in the rimworld except armored vehicles. However, providing adequate maintenance and parts for this equipment without proper industrialization would have become extremely difficult without trade with the colonial fleet.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_AT34_Core</ThingDef>
     </descriptionHyperlinks>
@@ -52,15 +47,11 @@
       <ComponentSpacer>1</ComponentSpacer>
     </costList>
   </ThingDef>
+
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_AT34_Core</defName>
     <label>AT-34 "Yetta" frame</label>
-    <description>A power armor frame that was exported to the entire rimworld as a training and
-      civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become
-      the largest individual equipment that can be used by local armed forces in the rimworld except
-      armored vehicles. However, providing adequate maintenance and parts for this equipment without
-      proper industrialization would have become extremely difficult without trade with the colonial
-      fleet.</description>
+    <description>A powerarmor frame that was exported to the entire rimworld as a training and civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become the largest individual equipment that can be used by local armed forces in the rimworld except armored vehicles. However, providing adequate maintenance and parts for this equipment without proper industrialization would have become extremely difficult without trade with the colonial fleet.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_AT34_Core</ThingDef>
     </descriptionHyperlinks>
@@ -143,9 +134,7 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_AT34_Helmet</defName>
     <label>AT-34 "Yetta" helmet</label>
-    <description>An integrated sensor compatible with the Dragoon head module, its designed to
-      improve the working perfromance of a frame through pre-programmed Ridar tracking system and
-      HUD.</description>
+    <description>An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_AT34_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -190,12 +179,11 @@
       <ComponentStamped>1</ComponentStamped>
     </costList>
   </ThingDef>
+
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_AT34_Helmet</defName>
     <label>AT-34 "Yetta" helmet</label>
-    <description>An integrated sensor compatible with the Dragoon head module, its designed to
-      improve the working perfromance of a frame through pre-programmed Ridar tracking system and
-      HUD.</description>
+    <description>An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_AT34_Helmet</ThingDef>
     </descriptionHyperlinks>

@@ -29,7 +29,7 @@
       </li>
     </comps>
   </ThingDef>
-  
+
   <ThingDef ParentName="DMS_ModuleApparelMountRight">
     <defName>DMS_Apparel_RelayAntenna</defName>
     <label>Relay Antenna</label>
@@ -150,7 +150,6 @@
           <offset>(-0.80,0,0.45)</offset>
         </dataEast>
       </drawData>
-
       <renderNodeProperties>
         <li>
           <nodeClass>Exosuit.PawnRenderNode_TurretGun_Custom</nodeClass>

@@ -31,7 +31,7 @@
       <skillRequirements>
         <Crafting>4</Crafting>
       </skillRequirements>
-	    <workAmount>36000</workAmount>
+      <workAmount>36000</workAmount>
       <recipeUsers>
         <li>TableMachining</li>
       </recipeUsers>
@@ -65,32 +65,23 @@
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
       <ArmorRating_Heat>0.10</ArmorRating_Heat>
-			<Insulation_Cold>10</Insulation_Cold>
-			<Insulation_Heat>20</Insulation_Heat>
+      <Insulation_Cold>10</Insulation_Cold>
+      <Insulation_Heat>20</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
-			<CarryingCapacity>150</CarryingCapacity>
-			<CarryWeight MayRequire="ceteam.combatextended">150</CarryWeight>
-			<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+      <CarryingCapacity>150</CarryingCapacity>
+      <CarryWeight MayRequire="ceteam.combatextended">150</CarryWeight>
+      <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
       <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <drawSize>1.5</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/PF3/apparel</texPath>
-          <drawData>
-            <dataNorth>
-              <layer>5</layer>
-            </dataNorth>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/PF3/apparel</wornGraphicPath>
+      <drawData>
+        <dataNorth>
+          <layer>5</layer>
+        </dataNorth>
+        <scale>1.5</scale>
+      </drawData>
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -106,9 +97,6 @@
       </li>
     </comps>
     <modExtensions>
-      <li Class="Exosuit.ExosuitExt">
-        <wreckageOverride>MF_Building_Wreckage</wreckageOverride>
-      </li>
       <li Class="Exosuit.ApparelRenderOffsets">
         <headData>
           <dataWest>

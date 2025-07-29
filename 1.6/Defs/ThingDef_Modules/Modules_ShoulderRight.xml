@@ -1,553 +1,520 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <!-- (右)中繼天線 -->
-    <ThingDef ParentName="DMS_ModuleItemMountRight">
-        <defName>DMS_Module_RelayAntenna</defName>
-        <label>Relay Antenna</label>
-        <description>An antenna module that expands the control range for friendly mechanics. Although the control range is relatively limited, it is enough to allow mechanics to coordinate infantry around the frame.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_RelayAntenna</ThingDef>
-        </descriptionHyperlinks>
-        <statBases>
-            <MaxHitPoints>25</MaxHitPoints>
-            <Mass>15</Mass>
-        </statBases>
-        <recipeMaker>
-            <researchPrerequisite>DMS_MobileDragoonModule</researchPrerequisite>
-			<workAmount>30000</workAmount>
-        </recipeMaker>
-        <costList>
-            <Steel>160</Steel>
-            <ComponentIndustrial>4</ComponentIndustrial>
-        </costList>
-        <comps>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <EquipedThingDef>DMS_Apparel_RelayAntenna</EquipedThingDef>
-                <occupiedSlots>
-                    <li>MountRight</li>
-                </occupiedSlots>
-            </li>
-        </comps>
-    </ThingDef>
-    <ThingDef ParentName="DMS_ModuleApparelMountRight">
-        <defName>DMS_Apparel_RelayAntenna</defName>
-        <label>Relay Antenna</label>
-        <description>An antenna module that expands the control range for friendly mechanics. Although the control range is relatively limited, it is enough to allow mechanics to coordinate infantry around the frame.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Module_RelayAntenna</ThingDef>
-        </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Dragoon/RelayAntenna/apparel_south</texPath>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>25</MaxHitPoints>
-            <Mass>15</Mass>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.1</MoveSpeed>
-        </equippedStatOffsets>
-        <apparel>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <texPath>Things/Dragoon/RelayAntenna/apparel</texPath>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>20</baseLayer>
-                    <drawSize>1.125</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(-0.90,0,0.90)</offset>
-                            <layer>0</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(0.90,0,0.50)</offset>
-                            <layer>75</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0.50,0,0.9)</offset>
-                            <layer>0</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.90,0,0.65)</offset>
-                            <layer>0</layer>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
-        </apparel>
-        <comps>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <ItemDef>DMS_Module_RelayAntenna</ItemDef>
-                <occupiedSlots>
-                    <li>MountRight</li>
-                </occupiedSlots>
-            </li>
-            <li Class="Fortified.CompProperties_SubRelay">
-                <relayRange>10</relayRange>
-            </li>
-        </comps>
-    </ThingDef>
+  <!-- (右)中繼天線 -->
+  <ThingDef ParentName="DMS_ModuleItemMountRight">
+    <defName>DMS_Module_RelayAntenna</defName>
+    <label>Relay Antenna</label>
+    <description>An antenna module that expands the control range for friendly mechanics. \n\nAlthough the control range is relatively limited, it is enough to allow mechanics to coordinate infantry around the frame.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_RelayAntenna</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>25</MaxHitPoints>
+      <Mass>15</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonModule</researchPrerequisite>
+      <workAmount>30000</workAmount>
+    </recipeMaker>
+    <costList>
+      <Steel>160</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_RelayAntenna</EquipedThingDef>
+        <occupiedSlots>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="DMS_ModuleApparelMountRight">
+    <defName>DMS_Apparel_RelayAntenna</defName>
+    <label>Relay Antenna</label>
+    <description>An antenna module that expands the control range for friendly mechanics. \n\nAlthough the control range is relatively limited, it is enough to allow mechanics to coordinate infantry around the frame.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_RelayAntenna</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Dragoon/RelayAntenna/apparel_south</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>25</MaxHitPoints>
+      <Mass>15</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.1</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/RelayAntenna/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.125</scale>
+        <dataSouth>
+          <offset>(-0.90,0,0.90)</offset>
+          <layer>0</layer>
+        </dataSouth>
+        <dataNorth>
+          <offset>(0.90,0,0.50)</offset>
+          <layer>75</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(0.50,0,0.9)</offset>
+          <layer>0</layer>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.90,0,0.65)</offset>
+          <layer>0</layer>
+        </dataEast>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_RelayAntenna</ItemDef>
+        <occupiedSlots>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+      <li Class="Fortified.CompProperties_SubRelay">
+        <relayRange>10</relayRange>
+      </li>
+    </comps>
+  </ThingDef>
 
-    <!-- 各種肩砲暫時是沒了 -->
+  <!-- 各種肩砲暫時是沒了 -->
 
-    <!-- (右)肩部機槍 -->
-    <ThingDef ParentName="DMS_ModuleItemMountRight" Abstract="True">
-        <defName>DMS_Module_TurretPackLight</defName>
-        <label>LMG Shoulder Mount</label>
-        <description>A shoulder-mounted remote-controlled machine gun.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_TurretPackLight</ThingDef>
-        </descriptionHyperlinks>
-        <statBases>
-            <MaxHitPoints>50</MaxHitPoints>
-            <Mass>30</Mass>
-        </statBases>
-        <recipeMaker>
-            <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
-			<workAmount>30000</workAmount>
-        </recipeMaker>
-        <costList>
-            <Steel>100</Steel>
-			<Tungsteel>75</Tungsteel>
-			<ComponentStamped>5</ComponentStamped>
-            <ComponentIndustrial>5</ComponentIndustrial>
-        </costList>
-        <comps>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <EquipedThingDef>DMS_Apparel_TurretPackLight</EquipedThingDef>
-                <occupiedSlots>
-                    <li>MountRight</li>
-                </occupiedSlots>
-            </li>
-        </comps>
-    </ThingDef>
-    <ThingDef ParentName="DMS_ModuleApparelMountRight" Abstract="True">
-        <defName>DMS_Apparel_TurretPackLight</defName>
-        <label>LMG Shoulder Mount</label>
-        <description>A shoulder-mounted remote-controlled machine gun.</description>
-        <graphicData>
-            <texPath>Things/Dragoon/TurretPack/TurretPack_MachineGun</texPath>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>50</MaxHitPoints>
-            <Mass>30</Mass>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.12</MoveSpeed>
-        </equippedStatOffsets>
-        <tickerType>Normal</tickerType>
-        <apparel>
-            <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <texPath>Things/Dragoon/TurretPack/apparel</texPath>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>20</baseLayer>
-                    <drawSize>0.75</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(-0.50,0,1.05)</offset>
-                            <layer>0</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(0.50,0,0.35)</offset>
-                            <layer>75</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0,0,0.6)</offset>
-                            <layer>0</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.80,0,0.45)</offset>
-                        </dataEast>
-                    </drawData>
-                </li>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_TurretGun_Custom</nodeClass>
-                    <workerClass>Exosuit.PawnRenderNodeWorker_TurretGun_Custom</workerClass>
-                    <texPath>Things/Turrets/DMS_Gun_LMG</texPath>
-                    <anchorTag>Gun</anchorTag>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <drawSize>1.25</drawSize>
-                    <baseLayer>40</baseLayer>
-                    <pawnType>Any</pawnType>
-                    <drawData>
-                        <scale>0.75</scale>
-                        <defaultData>
-                            <layer>30</layer>
-                        </defaultData>
-                        <dataSouth>
-                            <offset>(-0.80,0,1.05)</offset>
-                            <layer>10</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(0.50,0,0.40)</offset>
-                            <layer>80</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(-0.2,0,0.8)</offset>
-                            <layer>-15</layer>
-                            <rotationOffset>-180</rotationOffset>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.9,0,0.25)</offset>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
-        </apparel>
-        <verbs>
-            <li>
-                <commandIcon>Things/Dragoon/TurretPack/TurretPack_MachineGun</commandIcon>
-                <verbClass>Verb_Shoot</verbClass>
-                <label>Gun</label>
-                <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>Bullet_AssaultRifle</defaultProjectile>
-                <warmupTime>0.5</warmupTime>
-                <range>15.9</range>
-                <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-                <burstShotCount>5</burstShotCount>
-                <soundCast>Shot_AssaultRifle</soundCast>
-                <soundCastTail>GunTail_Medium</soundCastTail>
-                <muzzleFlashScale>9</muzzleFlashScale>
-            </li>
-        </verbs>
-        <comps>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <ItemDef>DMS_Module_TurretPackLight</ItemDef>
-                <occupiedSlots>
-                    <li>MountRight</li>
-                </occupiedSlots>
-            </li>
-            <li Class="MVCF.Comps.CompProperties_VerbGiver">
-                <verbProps>
-                    <li>
-                        <label>Gun</label>
-                        <visualLabel>Mounted LMG</visualLabel>
-                        <description>A simple automatic gun made to be mounted on a shoulder.</description>
-                        <canBeToggled>true</canBeToggled>
-                        <comps>
-                            <li Class="Exosuit.VerbCompPropertiesTurret">
-                                <uniqueTargets>true</uniqueTargets>
-                                <angleOffset>-90</angleOffset>
-                            </li>
-                        </comps>
-                    </li>
-                </verbProps>
-            </li>
-        </comps>
-    </ThingDef>
+  <!-- (右)肩部機槍 -->
+  <ThingDef ParentName="DMS_ModuleItemMountRight" Abstract="True">
+    <defName>DMS_Module_TurretPackLight</defName>
+    <label>LMG Shoulder Mount</label>
+    <description>A shoulder-mounted remote-controlled machine gun.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_TurretPackLight</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>30</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+      <workAmount>30000</workAmount>
+    </recipeMaker>
+    <costList>
+      <Steel>100</Steel>
+      <Tungsteel>75</Tungsteel>
+      <ComponentStamped>5</ComponentStamped>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_TurretPackLight</EquipedThingDef>
+        <occupiedSlots>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelMountRight" Abstract="True">
+    <defName>DMS_Apparel_TurretPackLight</defName>
+    <label>LMG Shoulder Mount</label>
+    <description>A shoulder-mounted remote-controlled machine gun.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/TurretPack/TurretPack_MachineGun</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>30</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <tickerType>Normal</tickerType>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
+      <drawData>
+        <scale>0.75</scale>
+        <dataSouth>
+          <offset>(-0.50,0,1.05)</offset>
+          <layer>0</layer>
+        </dataSouth>
+        <dataNorth>
+          <offset>(0.50,0,0.35)</offset>
+          <layer>75</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(0,0,0.6)</offset>
+          <layer>0</layer>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.80,0,0.45)</offset>
+        </dataEast>
+      </drawData>
 
-    <!-- (右)肩部機槍 (Kord)-->
-    <ThingDef ParentName="DMS_ModuleItemMountRight" Abstract="True">
-        <defName>DMS_Module_TurretPackHeavy</defName>
-        <label>Kord Shoulder Mount</label>
-        <description>A shoulder-mounted remote-controlled machine gun.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_TurretPackHeavy</ThingDef>
-        </descriptionHyperlinks>
-        <statBases>
-            <MaxHitPoints>100</MaxHitPoints>
-            <Mass>50</Mass>
-        </statBases>
-        <recipeMaker>
-            <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
-			<workAmount>30000</workAmount>
-        </recipeMaker>
-        <costList>
-            <Steel>100</Steel>
-            <Tungsteel>100</Tungsteel>
-			<ComponentStamped>5</ComponentStamped>
-			<ComponentIndustrial>5</ComponentIndustrial>
-        </costList>
-        <comps>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <EquipedThingDef>DMS_Apparel_TurretPackHeavy</EquipedThingDef>
-                <occupiedSlots>
-                    <li>MountRight</li>
-                </occupiedSlots>
-            </li>
-        </comps>
-    </ThingDef>
-    <ThingDef ParentName="DMS_ModuleApparelMountRight" Abstract="True">
-        <defName>DMS_Apparel_TurretPackHeavy</defName>
-        <label>Kord Shoulder Mount</label>
-        <description>A shoulder-mounted remote-controlled machine gun.</description>
-        <graphicData>
-            <texPath>Things/Dragoon/TurretPack/TurretPack_Kord</texPath>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>100</MaxHitPoints>
-            <Mass>50</Mass>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.12</MoveSpeed>
-        </equippedStatOffsets>
-        <tickerType>Normal</tickerType>
-        <apparel>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <texPath>Things/Dragoon/TurretPack/apparel</texPath>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>20</baseLayer>
-                    <drawSize>0.75</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(-0.50,0,1.05)</offset>
-                            <layer>0</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(0.50,0,0.35)</offset>
-                            <layer>75</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0,0,0.6)</offset>
-                            <layer>0</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.80,0,0.45)</offset>
-                        </dataEast>
-                    </drawData>
-                </li>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_TurretGun_Custom</nodeClass>
-                    <workerClass>Exosuit.PawnRenderNodeWorker_TurretGun_Custom</workerClass>
-                    <texPath>Things/Weapons/DMS_Kord_MD</texPath>
-                    <anchorTag>Gun</anchorTag>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <drawSize>1.75</drawSize>
-                    <baseLayer>40</baseLayer>
-                    <pawnType>Any</pawnType>
-                    <drawData>
-                        <defaultData>
-                            <layer>30</layer>
-                        </defaultData>
-                        <dataSouth>
-                            <offset>(-0.80,0,1.05)</offset>
-                            <layer>10</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(0.50,0,0.40)</offset>
-                            <layer>80</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(-0.2,0,0.8)</offset>
-                            <layer>-15</layer>
-                            <rotationOffset>-180</rotationOffset>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.9,0,0.25)</offset>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
-        </apparel>
-        <verbs>
-            <li>
-                <commandIcon>Things/Dragoon/TurretPack/TurretPack_Kord</commandIcon>
-                <verbClass>Verb_Shoot</verbClass>
-                <label>Gun</label>
-                <hasStandardCommand>false</hasStandardCommand>
-                <defaultProjectile>DMS_Bullet_Kord</defaultProjectile>
-                <requireLineOfSight>true</requireLineOfSight>
-                <warmupTime>1.5</warmupTime>
-                <minRange>1.9</minRange>
-                <range>39.9</range>
-                <ai_AvoidFriendlyFireRadius>7.9</ai_AvoidFriendlyFireRadius>
-                <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-                <burstShotCount>3</burstShotCount>
-                <soundCast>Shot_Autocannon</soundCast>
-                <soundCastTail>GunTail_Heavy</soundCastTail>
-                <muzzleFlashScale>10</muzzleFlashScale>
-                <consumeFuelPerShot>1</consumeFuelPerShot>
-            </li>
-        </verbs>
-        <comps>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <ItemDef>DMS_Module_TurretPackHeavy</ItemDef>
-                <occupiedSlots>
-                    <li>MountRight</li>
-                </occupiedSlots>
-            </li>
-            <li Class="MVCF.Comps.CompProperties_VerbGiver">
-                <verbProps>
-                    <li>
-                        <label>Gun</label>
-                        <visualLabel>Mounted Kord</visualLabel>
-                        <description>A HMG turret mounted on shoulder.</description>
-                        <canBeToggled>true</canBeToggled>
-                        <comps>
-                            <li Class="Exosuit.VerbCompPropertiesTurret">
-                                <uniqueTargets>true</uniqueTargets>
-                                <angleOffset>-90</angleOffset>
-                            </li>
-                        </comps>
-                    </li>
-                </verbProps>
-            </li>
-        </comps>
-    </ThingDef>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>Exosuit.PawnRenderNode_TurretGun_Custom</nodeClass>
+          <workerClass>Exosuit.PawnRenderNodeWorker_TurretGun_Custom</workerClass>
+          <texPath>Things/Turrets/DMS_Gun_LMG</texPath>
+          <anchorTag>Gun</anchorTag>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <drawSize>1.25</drawSize>
+          <baseLayer>40</baseLayer>
+          <pawnType>Any</pawnType>
+          <drawData>
+            <scale>0.75</scale>
+            <defaultData>
+              <layer>30</layer>
+            </defaultData>
+            <dataSouth>
+              <offset>(-0.80,0,1.05)</offset>
+              <layer>10</layer>
+            </dataSouth>
+            <dataNorth>
+              <offset>(0.50,0,0.40)</offset>
+              <layer>80</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(-0.2,0,0.8)</offset>
+              <layer>-15</layer>
+              <rotationOffset>-180</rotationOffset>
+            </dataWest>
+            <dataEast>
+              <offset>(-0.9,0,0.25)</offset>
+            </dataEast>
+          </drawData>
+        </li>
+      </renderNodeProperties>
+    </apparel>
+    <verbs>
+      <li>
+        <commandIcon>Things/Dragoon/TurretPack/TurretPack_MachineGun</commandIcon>
+        <verbClass>Verb_Shoot</verbClass>
+        <label>Gun</label>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_AssaultRifle</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>15.9</range>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_TurretPackLight</ItemDef>
+        <occupiedSlots>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+      <li Class="MVCF.Comps.CompProperties_VerbGiver">
+        <verbProps>
+          <li>
+            <label>Gun</label>
+            <visualLabel>Mounted LMG</visualLabel>
+            <description>A simple automatic gun made to be mounted on a shoulder.</description>
+            <canBeToggled>true</canBeToggled>
+            <comps>
+              <li Class="Exosuit.VerbCompPropertiesTurret">
+                <uniqueTargets>true</uniqueTargets>
+                <angleOffset>-90</angleOffset>
+              </li>
+            </comps>
+          </li>
+        </verbProps>
+      </li>
+    </comps>
+  </ThingDef>
 
-    <!-- (右)肩部機槍 (gau)-->
-    <ThingDef ParentName="DMS_ModuleItemMountRight" Abstract="True">
-        <defName>DMS_Module_TurretPackGAU</defName>
-        <label>GAU19/A Shoulder Mount</label>
-        <description>A shoulder-mounted remote-controlled machine gun.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_TurretPackGAU</ThingDef>
-        </descriptionHyperlinks>
-        <statBases>
-            <MaxHitPoints>50</MaxHitPoints>
-            <Mass>100</Mass>
-        </statBases>
-        <recipeMaker>
-            <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
-			<workAmount>30000</workAmount>
-        </recipeMaker>
-        <costList>
-            <Steel>100</Steel>
-			<Tungsteel>120</Tungsteel>
-			<ComponentStamped>8</ComponentStamped>
-			<ComponentIndustrial>5</ComponentIndustrial>
-        </costList>
-        <comps>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <EquipedThingDef>DMS_Apparel_TurretPackGAU</EquipedThingDef>
-                <occupiedSlots>
-                    <li>MountRight</li>
-                </occupiedSlots>
-            </li>
-        </comps>
-    </ThingDef>
-    <ThingDef ParentName="DMS_ModuleApparelMountRight" Abstract="True">
-        <defName>DMS_Apparel_TurretPackGAU</defName>
-        <label>GAU19/A Shoulder Mount</label>
-        <description>A shoulder-mounted remote-controlled machine gun.</description>
-        <graphicData>
-            <texPath>Things/Dragoon/TurretPack/TurretPack_GAU</texPath>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>50</MaxHitPoints>
-            <Mass>100</Mass>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.12</MoveSpeed>
-        </equippedStatOffsets>
-        <tickerType>Normal</tickerType>
-        <apparel>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <texPath>Things/Dragoon/TurretPack/apparel</texPath>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>20</baseLayer>
-                    <drawSize>0.75</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(-0.50,0,1.05)</offset>
-                            <layer>0</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(0.50,0,0.35)</offset>
-                            <layer>75</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0,0,0.6)</offset>
-                            <layer>0</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.80,0,0.45)</offset>
-                        </dataEast>
-                    </drawData>
-                </li>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_TurretGun_Custom</nodeClass>
-                    <workerClass>Exosuit.PawnRenderNodeWorker_TurretGun_Custom</workerClass>
-                    <texPath>Things/Weapons/DMS_Weapon_GAU19</texPath>
-                    <anchorTag>Gun</anchorTag>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <drawSize>2</drawSize>
-                    <baseLayer>40</baseLayer>
-                    <pawnType>Any</pawnType>
-                    <drawData>
-                        <scale>0.75</scale>
-                        <defaultData>
-                            <layer>30</layer>
-                        </defaultData>
-                        <dataSouth>
-                            <offset>(-0.80,0,1.05)</offset>
-                            <layer>10</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(0.50,0,0.40)</offset>
-                            <layer>80</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(-0.2,0,0.8)</offset>
-                            <layer>-15</layer>
-                            <rotationOffset>-180</rotationOffset>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.9,0,0.25)</offset>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
-        </apparel>
-        <verbs>
-            <li>
-                <commandIcon>Things/Dragoon/TurretPack/TurretPack_GAU</commandIcon>
-                <verbClass>Verb_Shoot</verbClass>
-                <label>Gun</label>
-                <defaultProjectile>DMS_Bullet_Kord</defaultProjectile>
-                <warmupTime>1.2</warmupTime>
-                <range>45</range>
-                <hasStandardCommand>true</hasStandardCommand>
-                <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-                <burstShotCount>6</burstShotCount>
-                <soundCast>GunShotA</soundCast>
-                <soundCastTail>GunTail_Light</soundCastTail>
-                <muzzleFlashScale>9</muzzleFlashScale>
-            </li>
-        </verbs>
-        <comps>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <ItemDef>DMS_Module_TurretPackGAU</ItemDef>
-                <occupiedSlots>
-                    <li>MountRight</li>
-                </occupiedSlots>
-            </li>
-            <li Class="MVCF.Comps.CompProperties_VerbGiver">
-                <verbProps>
-                    <li>
-                        <label>Gun</label>
-                        <visualLabel>Mounted GAU-19/A</visualLabel>
-                        <description>A multibarrel turret mounted on shoulder.</description>
-                        <canBeToggled>true</canBeToggled>
-                        <comps>
-                            <li Class="Exosuit.VerbCompPropertiesTurret">
-                                <uniqueTargets>true</uniqueTargets>
-                                <angleOffset>-90</angleOffset>
-                            </li>
-                        </comps>
-                    </li>
-                </verbProps>
-            </li>
-        </comps>
-    </ThingDef>
-    
+  <!-- (右)肩部機槍 (Kord)-->
+  <ThingDef ParentName="DMS_ModuleItemMountRight" Abstract="True">
+    <defName>DMS_Module_TurretPackHeavy</defName>
+    <label>Kord Shoulder Mount</label>
+    <description>A shoulder-mounted remote-controlled machine gun.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_TurretPackHeavy</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>50</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+      <workAmount>30000</workAmount>
+    </recipeMaker>
+    <costList>
+      <Steel>100</Steel>
+      <Tungsteel>100</Tungsteel>
+      <ComponentStamped>5</ComponentStamped>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_TurretPackHeavy</EquipedThingDef>
+        <occupiedSlots>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelMountRight" Abstract="True">
+    <defName>DMS_Apparel_TurretPackHeavy</defName>
+    <label>Kord Shoulder Mount</label>
+    <description>A shoulder-mounted remote-controlled machine gun.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/TurretPack/TurretPack_Kord</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>50</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <tickerType>Normal</tickerType>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
+      <drawData>
+        <scale>0.75</scale>
+        <dataSouth>
+          <offset>(-0.50,0,1.05)</offset>
+          <layer>0</layer>
+        </dataSouth>
+        <dataNorth>
+          <offset>(0.50,0,0.35)</offset>
+          <layer>75</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(0,0,0.6)</offset>
+          <layer>0</layer>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.80,0,0.45)</offset>
+        </dataEast>
+      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>Exosuit.PawnRenderNode_TurretGun_Custom</nodeClass>
+          <workerClass>Exosuit.PawnRenderNodeWorker_TurretGun_Custom</workerClass>
+          <texPath>Things/Weapons/DMS_Kord_MD</texPath>
+          <anchorTag>Gun</anchorTag>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <drawSize>1.75</drawSize>
+          <baseLayer>40</baseLayer>
+          <pawnType>Any</pawnType>
+          <drawData>
+            <defaultData>
+              <layer>30</layer>
+            </defaultData>
+            <dataSouth>
+              <offset>(-0.80,0,1.05)</offset>
+              <layer>10</layer>
+            </dataSouth>
+            <dataNorth>
+              <offset>(0.50,0,0.40)</offset>
+              <layer>80</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(-0.2,0,0.8)</offset>
+              <layer>-15</layer>
+              <rotationOffset>-180</rotationOffset>
+            </dataWest>
+            <dataEast>
+              <offset>(-0.9,0,0.25)</offset>
+            </dataEast>
+          </drawData>
+        </li>
+      </renderNodeProperties>
+    </apparel>
+    <verbs>
+      <li>
+        <commandIcon>Things/Dragoon/TurretPack/TurretPack_Kord</commandIcon>
+        <verbClass>Verb_Shoot</verbClass>
+        <label>Gun</label>
+        <hasStandardCommand>false</hasStandardCommand>
+        <defaultProjectile>DMS_Bullet_Kord</defaultProjectile>
+        <requireLineOfSight>true</requireLineOfSight>
+        <warmupTime>1.5</warmupTime>
+        <minRange>1.9</minRange>
+        <range>39.9</range>
+        <ai_AvoidFriendlyFireRadius>7.9</ai_AvoidFriendlyFireRadius>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>Shot_Autocannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_TurretPackHeavy</ItemDef>
+        <occupiedSlots>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+      <li Class="MVCF.Comps.CompProperties_VerbGiver">
+        <verbProps>
+          <li>
+            <label>Gun</label>
+            <visualLabel>Mounted Kord</visualLabel>
+            <description>A HMG turret mounted on shoulder.</description>
+            <canBeToggled>true</canBeToggled>
+            <comps>
+              <li Class="Exosuit.VerbCompPropertiesTurret">
+                <uniqueTargets>true</uniqueTargets>
+                <angleOffset>-90</angleOffset>
+              </li>
+            </comps>
+          </li>
+        </verbProps>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- (右)肩部機槍 (gau)-->
+  <ThingDef ParentName="DMS_ModuleItemMountRight" Abstract="True">
+    <defName>DMS_Module_TurretPackGAU</defName>
+    <label>GAU19/A Shoulder Mount</label>
+    <description>A shoulder-mounted remote-controlled machine gun.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_TurretPackGAU</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>100</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
+      <workAmount>30000</workAmount>
+    </recipeMaker>
+    <costList>
+      <Steel>100</Steel>
+      <Tungsteel>120</Tungsteel>
+      <ComponentStamped>8</ComponentStamped>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_TurretPackGAU</EquipedThingDef>
+        <occupiedSlots>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelMountRight" Abstract="True">
+    <defName>DMS_Apparel_TurretPackGAU</defName>
+    <label>GAU19/A Shoulder Mount</label>
+    <description>A shoulder-mounted remote-controlled machine gun.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/TurretPack/TurretPack_GAU</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>100</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <tickerType>Normal</tickerType>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
+      <drawData>
+        <scale>0.75</scale>
+        <dataSouth>
+          <offset>(-0.50,0,1.05)</offset>
+          <layer>0</layer>
+        </dataSouth>
+        <dataNorth>
+          <offset>(0.50,0,0.35)</offset>
+          <layer>75</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(0,0,0.6)</offset>
+          <layer>0</layer>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.80,0,0.45)</offset>
+        </dataEast>
+      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>Exosuit.PawnRenderNode_TurretGun_Custom</nodeClass>
+          <workerClass>Exosuit.PawnRenderNodeWorker_TurretGun_Custom</workerClass>
+          <texPath>Things/Weapons/DMS_Weapon_GAU19</texPath>
+          <anchorTag>Gun</anchorTag>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <drawSize>2</drawSize>
+          <baseLayer>40</baseLayer>
+          <pawnType>Any</pawnType>
+          <drawData>
+            <scale>0.75</scale>
+            <defaultData>
+              <layer>30</layer>
+            </defaultData>
+            <dataSouth>
+              <offset>(-0.80,0,1.05)</offset>
+              <layer>10</layer>
+            </dataSouth>
+            <dataNorth>
+              <offset>(0.50,0,0.40)</offset>
+              <layer>80</layer>
+            </dataNorth>
+            <dataWest>
+              <offset>(-0.2,0,0.8)</offset>
+              <layer>-15</layer>
+              <rotationOffset>-180</rotationOffset>
+            </dataWest>
+            <dataEast>
+              <offset>(-0.9,0,0.25)</offset>
+            </dataEast>
+          </drawData>
+        </li>
+      </renderNodeProperties>
+    </apparel>
+    <verbs>
+      <li>
+        <commandIcon>Things/Dragoon/TurretPack/TurretPack_GAU</commandIcon>
+        <verbClass>Verb_Shoot</verbClass>
+        <label>Gun</label>
+        <defaultProjectile>DMS_Bullet_Kord</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>45</range>
+        <hasStandardCommand>true</hasStandardCommand>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>6</burstShotCount>
+        <soundCast>GunShotA</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_TurretPackGAU</ItemDef>
+        <occupiedSlots>
+          <li>MountRight</li>
+        </occupiedSlots>
+      </li>
+      <li Class="MVCF.Comps.CompProperties_VerbGiver">
+        <verbProps>
+          <li>
+            <label>Gun</label>
+            <visualLabel>Mounted GAU-19/A</visualLabel>
+            <description>A multibarrel turret mounted on shoulder.</description>
+            <canBeToggled>true</canBeToggled>
+            <comps>
+              <li Class="Exosuit.VerbCompPropertiesTurret">
+                <uniqueTargets>true</uniqueTargets>
+                <angleOffset>-90</angleOffset>
+              </li>
+            </comps>
+          </li>
+        </verbProps>
+      </li>
+    </comps>
+  </ThingDef>
+
 </Defs>

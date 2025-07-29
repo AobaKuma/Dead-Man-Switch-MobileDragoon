@@ -57,17 +57,32 @@
       <MoveSpeed>-0.3</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
+      <wornGraphicPath>Things/Dragoon/ModuleArm/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.5</scale>
+        <defaultData>
+          <layer>0</layer>
+        </defaultData>
+        <dataSouth>
+          <offset>(-0.85,0,0.10)</offset>
+        </dataSouth>
+        <dataNorth>
+          <offset>(0.75,0,0.0)</offset>
+          <layer>72</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(-0.40,0,0.5)</offset>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.05,0,-0.2)</offset>
+          <layer>10</layer>
+        </dataEast>
+      </drawData>
       <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
+        <li Class="Exosuit.PawnRenderNodeProperties_ApparelWeaponHolder"><!-- TODO:修正位置 -->
           <parentTagDef>WGApparelBody</parentTagDef>
-          <baseLayer>0</baseLayer>
-          <drawSize>1.5</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/ModuleArm/apparel</texPath>
           <drawData>
+            <scale>1.5</scale>
             <dataSouth>
               <offset>(-0.85,0,0.10)</offset>
             </dataSouth>
@@ -94,7 +109,7 @@
           <li>ArmLeft</li>
         </occupiedSlots>
       </li>
-      <li Class="Exosuit.CompProperties_ForceUseWeapon">
+      <li Class="Exosuit.CompProperties_ModuleWeapon">
         <weapon>DMS_Dragoon_Sword</weapon>
       </li>
     </comps>
@@ -138,6 +153,7 @@
       </li>
     </comps>
   </ThingDef>
+
   <ThingDef ParentName="DMS_ModuleApparelArmRight">
     <defName>DMS_Apparel_PileBunker</defName>
     <label>pile bunker</label>
@@ -160,34 +176,24 @@
       <DeepDrillingSpeed>1.2</DeepDrillingSpeed>
     </equippedStatOffsets>
     <apparel>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <baseLayer>0</baseLayer>
-          <drawSize>1.5</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/PileBunker/apparel</texPath>
-          <drawData>
-            <dataSouth>
-              <offset>(-0.85,0,0.10)</offset>
-            </dataSouth>
-            <dataNorth>
-              <offset>(0.75,0,0.0)</offset>
-              <layer>72</layer>
-            </dataNorth>
-            <dataWest>
-              <offset>(-0.40,0,0.7)</offset>
-            </dataWest>
-            <dataEast>
-              <offset>(-0.05,0,-0.4)</offset>
-              <layer>10</layer>
-            </dataEast>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/PileBunker/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.5</scale>
+        <dataSouth>
+          <offset>(-0.85,0,0.10)</offset>
+        </dataSouth>
+        <dataNorth>
+          <offset>(0.75,0,0.0)</offset>
+          <layer>72</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(-0.40,0,0.7)</offset>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.05,0,-0.4)</offset>
+          <layer>10</layer>
+        </dataEast>
+      </drawData>
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -261,6 +267,7 @@
       </li>
     </comps>
   </ThingDef>
+
   <ThingDef ParentName="DMS_ModuleApparelArmRight">
     <defName>DMS_Apparel_WeaponLmg</defName>
     <label>Dragoon LMG</label>
@@ -279,17 +286,29 @@
       <MoveSpeed>-0.4</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
+      <wornGraphicPath>Things/Dragoon/ModuleArm/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.5</scale>
+        <dataSouth>
+          <offset>(-0.85,0,0.10)</offset>
+        </dataSouth>
+        <dataNorth>
+          <offset>(0.75,0,0.0)</offset>
+          <layer>72</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(-0.40,0,0.5)</offset>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.05,0,-0.2)</offset>
+          <layer>10</layer>
+        </dataEast>
+      </drawData>
       <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
+        <li Class="Exosuit.PawnRenderNodeProperties_ApparelWeaponHolder"><!-- TODO:修正位置 -->
           <parentTagDef>WGApparelBody</parentTagDef>
-          <baseLayer>0</baseLayer>
-          <drawSize>1.5</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/ModuleArm/apparel</texPath>
           <drawData>
+            <scale>1.5</scale>
             <dataSouth>
               <offset>(-0.85,0,0.10)</offset>
             </dataSouth>
@@ -306,39 +325,6 @@
             </dataEast>
           </drawData>
         </li>
-        <li> <!-- only rendering on gantry -->
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>Exosuit.PawnRenderNodeWorker_WeaponOnGantry</workerClass>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <baseLayer>0</baseLayer>
-          <drawSize>1.8</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Weapons/DMS_Dragoon_LMG</texPath>
-          <drawData>
-            <dataSouth>
-              <offset>(-0.95,0,0)</offset>
-              <rotationOffset>-90</rotationOffset>
-              <layer>10</layer>
-            </dataSouth>
-            <dataNorth>
-              <offset>(0.95,0,0.45)</offset>
-              <flip>true</flip>
-              <rotationOffset>90</rotationOffset>
-              <layer>-10</layer>
-            </dataNorth>
-            <dataWest>
-              <offset>(-0.45,0,0.45)</offset>
-              <rotationOffset>80</rotationOffset>
-              <layer>-10</layer>
-            </dataWest>
-            <dataEast>
-              <offset>(0.25,0,0.05)</offset>
-              <rotationOffset>-80</rotationOffset>
-              <layer>80</layer>
-            </dataEast>
-          </drawData>
-        </li>
       </renderNodeProperties>
     </apparel>
     <comps>
@@ -348,12 +334,12 @@
           <li>ArmRight</li>
         </occupiedSlots>
       </li>
-      <li Class="Exosuit.CompProperties_ForceUseWeapon">
+      <li Class="Exosuit.CompProperties_ModuleWeapon">
         <weapon>DMS_Dragoon_LMG</weapon>
       </li>
     </comps>
   </ThingDef>
-  
+
   <!-- (右)DMR-->
   <ThingDef ParentName="DMS_ModuleItemArmRight">
     <defName>DMS_Module_WeaponDMR</defName>
@@ -395,6 +381,7 @@
       </li>
     </comps>
   </ThingDef>
+
   <ThingDef ParentName="DMS_ModuleApparelArmRight">
     <defName>DMS_Apparel_WeaponDMR</defName>
     <label>Dragoon DMR</label>
@@ -413,17 +400,29 @@
       <MoveSpeed>-0.5</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
+      <wornGraphicPath>Things/Dragoon/ModuleArm/apparel</wornGraphicPath>
+      <drawData>
+        <scale>1.5</scale>
+        <dataSouth>
+          <offset>(-0.85,0,0.10)</offset>
+        </dataSouth>
+        <dataNorth>
+          <offset>(0.75,0,0.0)</offset>
+          <layer>72</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(-0.40,0,0.5)</offset>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.05,0,-0.2)</offset>
+          <layer>10</layer>
+        </dataEast>
+      </drawData>
       <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
+        <li Class="Exosuit.PawnRenderNodeProperties_ApparelWeaponHolder"><!-- TODO:修正位置 -->
           <parentTagDef>WGApparelBody</parentTagDef>
-          <baseLayer>0</baseLayer>
-          <drawSize>1.5</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/ModuleArm/apparel</texPath>
           <drawData>
+            <scale>2.75</scale>
             <dataSouth>
               <offset>(-0.85,0,0.10)</offset>
             </dataSouth>
@@ -440,39 +439,6 @@
             </dataEast>
           </drawData>
         </li>
-        <li> <!-- only rendering on gantry -->
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>Exosuit.PawnRenderNodeWorker_WeaponOnGantry</workerClass>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <baseLayer>0</baseLayer>
-          <drawSize>1.8</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Weapons/DMS_Dragoon_DMR</texPath>
-          <drawData>
-            <dataSouth>
-              <offset>(-0.95,0,0)</offset>
-              <rotationOffset>-90</rotationOffset>
-              <layer>10</layer>
-            </dataSouth>
-            <dataNorth>
-              <offset>(0.95,0,0.45)</offset>
-              <flip>true</flip>
-              <rotationOffset>90</rotationOffset>
-              <layer>-10</layer>
-            </dataNorth>
-            <dataWest>
-              <offset>(-0.45,0,0.45)</offset>
-              <rotationOffset>80</rotationOffset>
-              <layer>-10</layer>
-            </dataWest>
-            <dataEast>
-              <offset>(0.25,0,0.05)</offset>
-              <rotationOffset>-80</rotationOffset>
-              <layer>80</layer>
-            </dataEast>
-          </drawData>
-        </li>
       </renderNodeProperties>
     </apparel>
     <comps>
@@ -482,10 +448,6 @@
           <li>ArmRight</li>
         </occupiedSlots>
       </li>
-      <li Class="Exosuit.CompProperties_ForceUseWeapon">
-        <weapon>DMS_Dragoon_DMR</weapon>
-      </li>
     </comps>
   </ThingDef>
-
 </Defs>

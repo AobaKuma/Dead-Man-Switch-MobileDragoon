@@ -31,7 +31,7 @@
       <skillRequirements>
         <Crafting>4</Crafting>
       </skillRequirements>
-	    <workAmount>22500</workAmount>
+      <workAmount>22500</workAmount>
     </recipeMaker>
     <smeltProducts>
       <Steel>75</Steel>
@@ -47,6 +47,7 @@
       <ComponentStamped>1</ComponentStamped>
     </costList>
   </ThingDef>
+
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_Groyne_Helmet</defName>
     <label>"Groyne" helmet</label>
@@ -68,23 +69,7 @@
     </equippedStatOffsets>
     <apparel>
       <immuneToToxGasExposure>true</immuneToToxGasExposure>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>Exosuit.PawnRenderNodeWorker_InhertHead</workerClass>
-          <parentTagDef>WGApparelHead</parentTagDef>
-          <drawSize>1</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/Groyne/helmet</texPath>
-          <drawData>
-            <defaultData>
-              <layer>20</layer>
-              <offset>(0,0,0)</offset>
-            </defaultData>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/Groyne/helmet</wornGraphicPath>
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -144,6 +129,7 @@
       <ComponentStamped>1</ComponentStamped>
     </costList>
   </ThingDef>
+  
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_Stahlhelm_Helmet</defName>
     <label>"Stahlhelm" helmet</label>
@@ -165,23 +151,7 @@
       <DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>Exosuit.PawnRenderNodeWorker_InhertHead</workerClass>
-          <parentTagDef>WGApparelHead</parentTagDef>
-          <drawSize>1</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/Stahlhelm/helmet</texPath>
-          <drawData>
-            <defaultData>
-              <layer>20</layer>
-              <offset>(0,0,0)</offset>
-            </defaultData>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/Stahlhelm/helmet</wornGraphicPath>
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">

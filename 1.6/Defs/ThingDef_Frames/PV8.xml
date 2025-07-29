@@ -51,7 +51,7 @@
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_PV8_Core</defName>
     <label>PV-8 "Zyklop" frame</label>
-    <description>A heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task force. This is probably the largest piece of infantry equipments deployed by the colonial fleet on surface of this planet. The extremely thick armor and powerful power system enable the ground garrison to maintain sufficient mobile firepower to deal with interference in the colonization project.</description>
+    <description>These heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task force. Probably the largest piece of infantry equipments deployed by the colonial fleet on surface of this planet. Their extremely thick armor and powerful power system allowing ground garrison to maintain sufficient mobile firepower to deal with interference in the colonization.</description>
     <graphicData>
       <texPath>Things/Dragoon/PV8/apparel_south</texPath>
     </graphicData>
@@ -64,33 +64,24 @@
       <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.90</ArmorRating_Blunt>
       <ArmorRating_Heat>0.90</ArmorRating_Heat>
-			<Insulation_Cold>48</Insulation_Cold>
-			<Insulation_Heat>64</Insulation_Heat>
+      <Insulation_Cold>48</Insulation_Cold>
+      <Insulation_Heat>64</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
-			<CarryingCapacity>320</CarryingCapacity>
-			<CarryWeight MayRequire="ceteam.combatextended">320</CarryWeight>
-			<WorkSpeedGlobal>-0.35</WorkSpeedGlobal>
+      <CarryingCapacity>320</CarryingCapacity>
+      <CarryWeight MayRequire="ceteam.combatextended">320</CarryWeight>
+      <WorkSpeedGlobal>-0.35</WorkSpeedGlobal>
       <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <baseLayer>1</baseLayer>
-          <drawSize>1.5</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/PV8/apparel</texPath>
-          <drawData>
-            <dataNorth>
-              <layer>5</layer>
-            </dataNorth>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/PV8/apparel</wornGraphicPath>
+      <drawData>
+        <dataNorth>
+          <layer>5</layer>
+        </dataNorth>
+        <scale>1.5</scale>
+      </drawData>
+
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -101,9 +92,6 @@
       </li>
     </comps>
     <modExtensions>
-      <li Class="Exosuit.ExosuitExt">
-        <wreckageOverride>MF_Building_Wreckage</wreckageOverride>
-      </li>
       <li Class="Exosuit.ApparelRenderOffsets">
         <headData>
           <dataWest>
@@ -163,7 +151,7 @@
           <li>Head</li>
         </occupiedSlots>
       </li>
-    </comps>    
+    </comps>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
       <skillRequirements>
@@ -210,23 +198,7 @@
     </equippedStatOffsets>
     <apparel>
       <immuneToToxGasExposure>true</immuneToToxGasExposure>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>Exosuit.PawnRenderNodeWorker_InhertHead</workerClass>
-          <parentTagDef>WGApparelHead</parentTagDef>
-          <drawSize>1</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/PV8/helmet</texPath>
-          <drawData>
-            <defaultData>
-              <layer>20</layer>
-              <offset>(0,0,0)</offset>
-            </defaultData>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/PV8/helmet</wornGraphicPath>
       <tags>
         <li>EVA</li>
       </tags>

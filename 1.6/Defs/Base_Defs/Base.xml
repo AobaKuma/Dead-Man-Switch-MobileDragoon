@@ -104,12 +104,7 @@
             <li Class="CompProperties_Styleable" />
             <!-- <li Class="Exosuit.CompProperties_SleepCover" /> -->
         </comps>
-        <modExtensions>
-            <li Class="VEF.Apparels.ApparelExtension">
-                <isUnifiedApparel>true</isUnifiedApparel>
-                <showBodyInBedAlways>true</showBodyInBedAlways>
-            </li>
-        </modExtensions>
+        
     </ThingDef>
 
     <ThingDef Name="DMS_ModuleApparelHead" ParentName="DMS_ModuleApparelBase" Abstract="True">
@@ -129,8 +124,7 @@
             </renderSkipFlags>
         </apparel>
     </ThingDef>
-    <ThingDef Name="DMS_ModuleApparelCore" ParentName="DMS_ModuleApparelBase" Abstract="True">
-        <thingClass>Exosuit.Exosuit_Core</thingClass>
+    <ThingDef Name="DMS_ModuleApparelCore" ParentName="ModuleApparelCore" Abstract="True">
         <equippedStatOffsets>
             <MeleeDamageFactor>1.25</MeleeDamageFactor>
             <StaggerDurationFactor>-0.9</StaggerDurationFactor>
@@ -142,18 +136,7 @@
             <tags>
                 <li>DMS_DragoonArmour</li>
             </tags>
-            <parentTagDef>WGApparelBody</parentTagDef>
             <useDeflectMetalEffect>true</useDeflectMetalEffect>
-            <renderSkipFlags>
-                <li>Body</li>
-            </renderSkipFlags>
-            <bodyPartGroups>
-                <li>Torso</li>
-            </bodyPartGroups>
-            <layers>
-                <li>Shell</li>
-                <li>WG_WalkerGearLayer_Core</li>
-            </layers>
         </apparel>
         <tools>
             <li>
@@ -182,7 +165,6 @@
             <li>DMS_Module_Pack</li>
         </thingCategories>
         <apparel>
-            <parentTagDef>WGApparelBody</parentTagDef>
             <bodyPartGroups>
                 <li>Waist</li>
                 <li>Neck</li>
@@ -205,7 +187,6 @@
             <layers>
                 <li>WG_WalkerGearLayer_Utility</li>
             </layers>
-            <parentTagDef>WGApparelBody</parentTagDef>
         </apparel>
     </ThingDef>
 
@@ -220,7 +201,6 @@
             <layers>
                 <li>WG_WalkerGearLayer_Utility</li>
             </layers>
-            <parentTagDef>WGApparelBody</parentTagDef>
         </apparel>
     </ThingDef>
 
@@ -235,7 +215,6 @@
             <layers>
                 <li>WG_WalkerGearLayer</li>
             </layers>
-            <parentTagDef>WGApparelBody</parentTagDef>
         </apparel>
     </ThingDef>
 
@@ -251,7 +230,6 @@
             <layers>
                 <li>WG_WalkerGearLayer</li>
             </layers>
-            <parentTagDef>WGApparelBody</parentTagDef>
         </apparel>
     </ThingDef>
 </Defs>

@@ -4,7 +4,6 @@
   <ThingDef ParentName="DMS_ModuleItemCore">
     <defName>DMS_Module_FA47_Core</defName>
     <label>F/A-47 "Arsenal Angel" core module</label>
-    <!-- 由殖民艦隊軌道軍使用的龍騎兵系統，作為一種具備外太空戰鬥能力的龍騎兵使用，使用塑鋼打造的全封閉外殼也使其能夠在星球地表上搭載推進系統進行短距離的亞軌道飛行。 -->
     <description>A Dragoon with outer space combat capabilities, used by the Colonial Fleet Orbital Cavalry. Its fully enclosed shell is made of plasteel. can carry a propulsion system capable of short-distance suborbital flights on the planet's surface.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_FA47_Core</ThingDef>
@@ -48,7 +47,8 @@
       <Neurocomputer>1</Neurocomputer>
     </costList>
   </ThingDef>
-    <!-- F/A-47，能增加額外的跳躍距離 -->
+
+  <!-- F/A-47，能增加額外的跳躍距離 -->
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_FA47_Core</defName>
     <label>F/A-47 "Arsenal Angel" frame</label>
@@ -72,28 +72,18 @@
     <equippedStatOffsets>
       <MF_FlightRange>24</MF_FlightRange>
       <CarryingCapacity>275</CarryingCapacity>
-			<CarryWeight MayRequire="ceteam.combatextended">275</CarryWeight>
+      <CarryWeight MayRequire="ceteam.combatextended">275</CarryWeight>
       <VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
       <DecompressionResistance MayRequire="kentington.saveourship2">0.8</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>PawnRenderNodeWorker</workerClass>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <baseLayer>1</baseLayer>
-          <drawSize>2.25</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/FA47/apparel</texPath>
-          <drawData>
-            <dataNorth>
-              <layer>5</layer>
-            </dataNorth>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/FA47/apparel</wornGraphicPath>
+      <drawData>
+        <scale>2.25</scale>
+        <dataNorth>
+          <layer>5</layer>
+        </dataNorth>
+      </drawData>
     </apparel>
     <comps>
       <li Class="Exosuit.CompProperties_ExosuitModule">
@@ -104,9 +94,6 @@
       </li>
     </comps>
     <modExtensions>
-      <li Class="Exosuit.ExosuitExt">
-        <wreckageOverride>MF_Building_Wreckage</wreckageOverride>
-      </li>
       <li Class="Exosuit.ApparelRenderOffsets">
         <headData>
           <dataWest>
@@ -189,6 +176,7 @@
       <ComponentStamped>3</ComponentStamped>
     </costList>
   </ThingDef>
+  
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_FA47_Helmet</defName>
     <label>F/A-47 "Arsenal Angel" helmet</label>
@@ -211,23 +199,7 @@
     </equippedStatOffsets>
     <apparel>
       <immuneToToxGasExposure>true</immuneToToxGasExposure>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-          <workerClass>Exosuit.PawnRenderNodeWorker_InhertHead</workerClass>
-          <parentTagDef>WGApparelHead</parentTagDef>
-          <drawSize>1</drawSize>
-          <pawnType>Any</pawnType>
-          <useGraphic>true</useGraphic>
-          <texPath>Things/Dragoon/FA47/helmet</texPath>
-          <drawData>
-            <defaultData>
-              <layer>20</layer>
-              <offset>(0,0,0)</offset>
-            </defaultData>
-          </drawData>
-        </li>
-      </renderNodeProperties>
+      <wornGraphicPath>Things/Dragoon/FA47/helmet</wornGraphicPath>
       <tags>
         <li>EVA</li>
       </tags>

@@ -48,18 +48,9 @@
             <MoveSpeed>-0.2</MoveSpeed>
         </equippedStatOffsets>
         <apparel>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <shaderTypeDef>CutoutComplex</shaderTypeDef>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>30</baseLayer>
-                    <drawSize>1</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <texPath>Things/Dragoon/StugnaLauncher/apparel</texPath>
-                    <drawData>
+            <wornGraphicPath>Things/Dragoon/StugnaLauncher/apparel</wornGraphicPath>
+            <drawData>
+                <scale>1</scale>
                         <dataSouth>
                             <offset>(1,0,0.65)</offset>
                             <layer>80</layer>
@@ -79,8 +70,6 @@
                             <rotationOffset>-15</rotationOffset>
                         </dataEast>
                     </drawData>
-                </li>
-            </renderNodeProperties>
         </apparel>
         <verbs>
             <li>

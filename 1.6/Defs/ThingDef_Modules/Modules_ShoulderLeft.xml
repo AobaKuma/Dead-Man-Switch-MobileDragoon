@@ -1,612 +1,561 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <!-- (左)肩部裝甲 -->
-    <ThingDef ParentName="DMS_ModuleItemMountLeft">
-        <defName>DMS_Module_ArmorPad</defName>
-        <label>armor Pad</label>
-        <description>A heavy shoulder armor mounted on an exosuit frame.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_ArmorPad</ThingDef>
-        </descriptionHyperlinks>
-        <recipeMaker>
-            <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
-            <workAmount>25000</workAmount>
-        </recipeMaker>
-        <statBases>
-            <MaxHitPoints>150</MaxHitPoints>
-            <Mass>40</Mass>
-        </statBases>
-        <smeltProducts>
-            <DMS_Ceramics>70</DMS_Ceramics>
-            <Tungsteel>80</Tungsteel>
-        </smeltProducts>
-        <butcherProducts>
-            <Tungsteel>50</Tungsteel>
-            <DMS_Ceramics>100</DMS_Ceramics>
-            <ComponentStamped>2</ComponentStamped>
-        </butcherProducts>
-        <costList>
-            <DMS_Ceramics>125</DMS_Ceramics>
-            <Tungsteel>75</Tungsteel>
-            <ComponentStamped>2</ComponentStamped>
-        </costList>
-        <comps>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <EquipedThingDef>DMS_Apparel_ArmorPad</EquipedThingDef>
-                <occupiedSlots>
-                    <li>MountLeft</li>
-                </occupiedSlots>
-            </li>
-        </comps>
-    </ThingDef>
-    <ThingDef ParentName="DMS_ModuleApparelMountLeft">
-        <defName>DMS_Apparel_ArmorPad</defName>
-        <label>armor Pad</label>
-        <description>A heavy shoulder armor mounted on an exosuit frame.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Module_ArmorPad</ThingDef>
-        </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Dragoon/ArmorPad/apparel_south</texPath>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>150</MaxHitPoints>
-            <Mass>40</Mass>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.2</MoveSpeed>
-            <MeleeDamageFactor>0.15</MeleeDamageFactor>
-            <StaggerDurationFactor>-0.2</StaggerDurationFactor>
-        </equippedStatOffsets>
-        <apparel>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>30</baseLayer>
-                    <drawSize>1</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <texPath>Things/Dragoon/ArmorPad/apparel</texPath>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(0.75,0,0.5)</offset>
-                            <layer>7</layer>
-                            <rotationOffset>15</rotationOffset>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(-0.75,0,0.6)</offset>
-                            <layer>7</layer>
-                            <rotationOffset>15</rotationOffset>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0.5,0,0.3)</offset>
-                            <layer>7</layer>
-                            <rotationOffset>-45</rotationOffset>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(0,0,0.75)</offset>
-                            <layer>-2</layer>
-                            <rotationOffset>45</rotationOffset>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
-        </apparel>
-        <comps>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <ItemDef>DMS_Module_ArmorPad</ItemDef>
-                <occupiedSlots>
-                    <li>MountLeft</li>
-                </occupiedSlots>
-            </li>
-        </comps>
-    </ThingDef>
+  <!-- (左)肩部裝甲 -->
+  <ThingDef ParentName="DMS_ModuleItemMountLeft">
+    <defName>DMS_Module_ArmorPad</defName>
+    <label>armor Pad</label>
+    <description>A heavy shoulder armor mounted on an exosuit frame.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_ArmorPad</ThingDef>
+    </descriptionHyperlinks>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+      <workAmount>25000</workAmount>
+    </recipeMaker>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>40</Mass>
+    </statBases>
+    <smeltProducts>
+      <DMS_Ceramics>70</DMS_Ceramics>
+      <Tungsteel>80</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <Tungsteel>50</Tungsteel>
+      <DMS_Ceramics>100</DMS_Ceramics>
+      <ComponentStamped>2</ComponentStamped>
+    </butcherProducts>
+    <costList>
+      <DMS_Ceramics>125</DMS_Ceramics>
+      <Tungsteel>75</Tungsteel>
+      <ComponentStamped>2</ComponentStamped>
+    </costList>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_ArmorPad</EquipedThingDef>
+        <occupiedSlots>
+          <li>MountLeft</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelMountLeft">
+    <defName>DMS_Apparel_ArmorPad</defName>
+    <label>armor Pad</label>
+    <description>A heavy shoulder armor mounted on an exosuit frame.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_ArmorPad</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Dragoon/ArmorPad/apparel_south</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>40</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+      <MeleeDamageFactor>0.15</MeleeDamageFactor>
+      <StaggerDurationFactor>-0.2</StaggerDurationFactor>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/ArmorPad/apparel</wornGraphicPath>
+      <drawData>
+        <dataSouth>
+          <offset>(0.75,0,0.5)</offset>
+          <layer>7</layer>
+          <rotationOffset>15</rotationOffset>
+        </dataSouth>
+        <dataNorth>
+          <offset>(-0.75,0,0.6)</offset>
+          <layer>7</layer>
+          <rotationOffset>15</rotationOffset>
+        </dataNorth>
+        <dataWest>
+          <offset>(0.5,0,0.3)</offset>
+          <layer>7</layer>
+          <rotationOffset>-45</rotationOffset>
+        </dataWest>
+        <dataEast>
+          <offset>(0,0,0.75)</offset>
+          <layer>-2</layer>
+          <rotationOffset>45</rotationOffset>
+        </dataEast>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_ArmorPad</ItemDef>
+        <occupiedSlots>
+          <li>MountLeft</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
 
-    <!-- (左)煙霧發射器 -->
-    <ThingDef ParentName="DMS_ModuleItemMountLeft">
-        <defName>DMS_Module_SmokeLauncher</defName>
-        <label>Smoke launcher</label>
-        <description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</description>
-        <!--一種構造簡單的遙控發射裝置，能夠裝填煙霧砲彈並提供準確的掩護。-->
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_SmokeLauncher</ThingDef>
-        </descriptionHyperlinks>
-        <recipeMaker>
-            <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
-			<workAmount>15000</workAmount>
-        </recipeMaker>
-        <statBases>
-            <MaxHitPoints>20</MaxHitPoints>
-            <Mass>25</Mass>
-        </statBases>
-        <costList>
-            <Steel>50</Steel>
-            <ComponentIndustrial>1</ComponentIndustrial>
-        </costList>
-        <comps>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <EquipedThingDef>DMS_Apparel_SmokeLauncher</EquipedThingDef>
-                <occupiedSlots>
-                    <li>MountLeft</li>
-                </occupiedSlots>
-            </li>
-        </comps>
-    </ThingDef>
-    <ThingDef ParentName="DMS_ModuleApparelMountLeft">
-        <defName>DMS_Apparel_SmokeLauncher</defName>
-        <label>Smoke launcher</label>
-        <description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Module_SmokeLauncher</ThingDef>
-        </descriptionHyperlinks>
-        <graphicData>
-            <texPath>Things/Dragoon/SmokeLauncher/apparel_south</texPath>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>20</MaxHitPoints>
-            <Mass>25</Mass>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.1</MoveSpeed>
-        </equippedStatOffsets>
-        <apparel>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>30</baseLayer>
-                    <drawSize>0.75</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <texPath>Things/Dragoon/SmokeLauncher/apparel</texPath>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(1,0,0.75)</offset>
-                            <layer>0</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(-1,0,0.55)</offset>
-                            <layer>80</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0.75,0,0.45)</offset>
-                            <layer>80</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(0.1,0,0.75)</offset>
-                            <layer>-2</layer>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
-        </apparel>
-        <verbs>
-            <li>
-                <label>launch smoke shell</label>
-                <verbClass>Verb_LaunchProjectileStatic</verbClass>
-                <hasStandardCommand>true</hasStandardCommand>
-                <onlyManualCast>True</onlyManualCast>
-                <range>59.9</range>
-                <forcedMissRadius>1.9</forcedMissRadius>
-                <warmupTime>1</warmupTime>
-                <noiseRadius>4</noiseRadius>
-                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-                <soundCast>RocketswarmLauncher_Fire</soundCast>
-                <soundCastTail>GunTail_Medium</soundCastTail>
-                <muzzleFlashScale>14</muzzleFlashScale>
-                <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
-                <requireLineOfSight>false</requireLineOfSight>
-                <targetParams>
-                    <canTargetLocations>true</canTargetLocations>
-                    <canTargetBuildings>true</canTargetBuildings>
-                </targetParams>
-                <defaultProjectile>Bullet_Shell_Smoke</defaultProjectile><!-- 投射物有待修改 -->
-                <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
-            </li>
-        </verbs>
-        <comps>
-            <li Class="CompProperties_ApparelReloadable">
-                <maxCharges>5</maxCharges>
-                <ammoDef>Shell_Smoke</ammoDef>
-                <ammoCountPerCharge>1</ammoCountPerCharge>
-                <baseReloadTicks>60</baseReloadTicks>
-                <soundReload>Standard_Reload</soundReload>
-                <hotKey>Misc4</hotKey>
-                <chargeNoun>smoke shell</chargeNoun>
-                <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-            </li>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <ItemDef>DMS_Module_SmokeLauncher</ItemDef>
-                <occupiedSlots>
-                    <li>MountLeft</li>
-                </occupiedSlots>
-            </li>
-        </comps>
-    </ThingDef>
+  <!-- (左)煙霧發射器 -->
+  <ThingDef ParentName="DMS_ModuleItemMountLeft">
+    <defName>DMS_Module_SmokeLauncher</defName>
+    <label>Smoke launcher</label>
+    <description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</description>
+    <!--一種構造簡單的遙控發射裝置，能夠裝填煙霧砲彈並提供準確的掩護。-->
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_SmokeLauncher</ThingDef>
+    </descriptionHyperlinks>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+      <workAmount>15000</workAmount>
+    </recipeMaker>
+    <statBases>
+      <MaxHitPoints>20</MaxHitPoints>
+      <Mass>25</Mass>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_SmokeLauncher</EquipedThingDef>
+        <occupiedSlots>
+          <li>MountLeft</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
 
-    <!-- (左)4x反工事導彈 -->
-    <ThingDef ParentName="DMS_ModuleItemMountLeft">
-        <defName>DMS_Module_MissilePod</defName>
-        <label>Missile Pod</label>
-        <description>A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_MissilePod</ThingDef>
-        </descriptionHyperlinks>
-        <recipeMaker>
-            <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
-			<workAmount>22500</workAmount>
-        </recipeMaker>
-        <statBases>
-            <MaxHitPoints>40</MaxHitPoints>
-            <Mass>35</Mass>
-        </statBases>
-        <costList>
-            <Steel>200</Steel>
-			<Tungsteel>40</Tungsteel>
-            <ComponentIndustrial>4</ComponentIndustrial>
-        </costList>
-        <comps>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <EquipedThingDef>DMS_Apparel_MissilePod</EquipedThingDef>
-                <occupiedSlots>
-                    <li>MountLeft</li>
-                </occupiedSlots>
-            </li>
-        </comps>
-    </ThingDef>
-    <ThingDef ParentName="DMS_ModuleApparelMountLeft">
-        <defName>DMS_Apparel_MissilePod</defName>
-        <label>Demolish Missile Pod</label>
-        <description>A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use.</description>
-        <graphicData>
-            <texPath>Things/Dragoon/MissilePod/apparel_south</texPath>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>40</MaxHitPoints>
-            <Mass>35</Mass>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.25</MoveSpeed>
-        </equippedStatOffsets>
-        <apparel>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>30</baseLayer>
-                    <drawSize>0.75</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <texPath>Things/Dragoon/MissilePod/apparel</texPath>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(0.95,0,0.9)</offset>
-                            <layer>0</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(-0.95,0,0.7)</offset>
-                            <layer>80</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0.75,0,0.55)</offset>
-                            <layer>80</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.55,0,0.95)</offset>
-                            <layer>-2</layer>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
-        </apparel>
-        <verbs>
-            <li>
-                <label>launch missile</label>
-                <verbClass>Verb_LaunchProjectileStatic</verbClass>
-                <hasStandardCommand>true</hasStandardCommand>
-                <commandIcon>UI/Ability/Missile</commandIcon>
-                <onlyManualCast>True</onlyManualCast>
-                <range>99.9</range>
-                <forcedMissRadius>1.9</forcedMissRadius>
-                <warmupTime>2</warmupTime>
-                <noiseRadius>4</noiseRadius>
-                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-                <soundCast>RocketswarmLauncher_Fire</soundCast>
-                <soundCastTail>GunTail_Medium</soundCastTail>
-                <muzzleFlashScale>14</muzzleFlashScale>
-                <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
-                <targetParams>
-                    <canTargetLocations>true</canTargetLocations>
-                    <canTargetBuildings>true</canTargetBuildings>
-                </targetParams>
-                <defaultProjectile>DMS_Bullet_HellFire</defaultProjectile><!-- 投射物有待修改 -->
-                <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
-            </li>
-        </verbs>
-        <comps>
-            <li Class="CompProperties_ApparelReloadable">
-                <maxCharges>4</maxCharges>
-                <ammoDef>Steel</ammoDef>
-                <ammoCountPerCharge>50</ammoCountPerCharge>
-                <baseReloadTicks>60</baseReloadTicks>
-                <soundReload>Standard_Reload</soundReload>
-                <hotKey>Misc4</hotKey>
-                <chargeNoun>missile</chargeNoun>
-                <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-            </li>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <ItemDef>DMS_Module_MissilePod</ItemDef>
-                <occupiedSlots>
-                    <li>MountLeft</li>
-                </occupiedSlots>
-            </li>
-        </comps>
-    </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelMountLeft">
+    <defName>DMS_Apparel_SmokeLauncher</defName>
+    <label>Smoke launcher</label>
+    <description>A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_SmokeLauncher</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Dragoon/SmokeLauncher/apparel_south</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>20</MaxHitPoints>
+      <Mass>25</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.1</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/SmokeLauncher/apparel</wornGraphicPath>
+      <drawData>
+        <scale>0.75</scale>
+        <dataSouth>
+          <offset>(1,0,0.75)</offset>
+          <layer>0</layer>
+        </dataSouth>
+        <dataNorth>
+          <offset>(-1,0,0.55)</offset>
+          <layer>80</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(0.75,0,0.45)</offset>
+          <layer>80</layer>
+        </dataWest>
+        <dataEast>
+          <offset>(0.1,0,0.75)</offset>
+          <layer>-2</layer>
+        </dataEast>
+      </drawData>
+    </apparel>
+    <verbs>
+      <li>
+        <label>launch smoke shell</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <onlyManualCast>True</onlyManualCast>
+        <range>59.9</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>1</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>RocketswarmLauncher_Fire</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+        <requireLineOfSight>false</requireLineOfSight>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetBuildings>true</canTargetBuildings>
+        </targetParams>
+        <defaultProjectile>Bullet_Shell_Smoke</defaultProjectile><!-- 投射物有待修改 -->
+        <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_ApparelReloadable">
+        <maxCharges>5</maxCharges>
+        <ammoDef>Shell_Smoke</ammoDef>
+        <ammoCountPerCharge>1</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>smoke shell</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_SmokeLauncher</ItemDef>
+        <occupiedSlots>
+          <li>MountLeft</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
 
-    <!-- (左)肩部蜂窩導彈(SRM) -->
-    <ThingDef ParentName="DMS_ModuleItemMountLeft">
-        <defName>DMS_Module_SwarmMissilePod</defName>
-        <label>Swarm rocket Pod</label>
-        <description>Rocket pod contains multiple HE rockets, can use its high fire rate to cover an large area.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_SwarmMissilePod</ThingDef>
-        </descriptionHyperlinks>
-        <recipeMaker>
-            <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
-			<workAmount>22500</workAmount>
-        </recipeMaker>
-        <statBases>
-            <MaxHitPoints>10</MaxHitPoints>
-            <Mass>20</Mass>
-        </statBases>
-        <costList>
-            <Steel>180</Steel>
-			<Tungsteel>30</Tungsteel>
-            <ComponentIndustrial>3</ComponentIndustrial>
-        </costList>
-        <comps>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <EquipedThingDef>DMS_Apparel_SwarmMissilePod</EquipedThingDef>
-                <occupiedSlots>
-                    <li>MountLeft</li>
-                </occupiedSlots>
-            </li>
-        </comps>
-    </ThingDef>
-    <ThingDef ParentName="DMS_ModuleApparelMountLeft">
-        <defName>DMS_Apparel_SwarmMissilePod</defName>
-        <label>Swarm rocket Pod</label>
-        <description>A Rocket pod module that contains multiple high-explosive rocket rounds, can use its high fire rate to cover an large area.</description>
-        <graphicData>
-            <texPath>Things/Dragoon/MissilePodSwarm/apparel_south</texPath>
-        </graphicData>
-        <tickerType>Normal</tickerType>
-        <statBases>
-            <MaxHitPoints>10</MaxHitPoints>
-            <Mass>20</Mass>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.2</MoveSpeed>
-        </equippedStatOffsets>
-        <apparel>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>30</baseLayer>
-                    <drawSize>0.75</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <texPath>Things/Dragoon/MissilePodSwarm/apparel</texPath>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(0.95,0,0.9)</offset>
-                            <layer>30</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(-0.95,0,0.95)</offset>
-                            <layer>80</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0.75,0,0.55)</offset>
-                            <layer>80</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.15,0,1.1)</offset>
-                            <layer>-2</layer>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
-        </apparel>
-        <verbs>
-            <li>
-                <label>launch rocket</label>
-                <verbClass>Verb_LaunchProjectileStatic</verbClass>
-                <hasStandardCommand>true</hasStandardCommand>
-                <commandIcon>UI/Ability/Missile</commandIcon>
-                <range>39.9</range>
-                <forcedMissRadius>3.9</forcedMissRadius>
-                <burstShotCount>3</burstShotCount>
-                <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-                <consumeFuelPerShot>1</consumeFuelPerShot>
-                <warmupTime>0.5</warmupTime>
-                <noiseRadius>4</noiseRadius>
-                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-                <soundCast>RocketswarmLauncher_Fire</soundCast>
-                <soundCastTail>GunTail_Medium</soundCastTail>
-                <muzzleFlashScale>14</muzzleFlashScale>
-                <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
-                <targetParams>
-                    <canTargetLocations>true</canTargetLocations>
-                    <canTargetBuildings>true</canTargetBuildings>
-                </targetParams>
-                <defaultProjectile>DMS_Bullet_HellFire</defaultProjectile>
-                <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
-            </li>
-        </verbs>
-        <comps>
-            <li Class="CompProperties_ApparelReloadable">
-                <maxCharges>14</maxCharges>
-                <ammoDef>Chemfuel</ammoDef>
-                <ammoCountPerCharge>25</ammoCountPerCharge>
-                <baseReloadTicks>60</baseReloadTicks>
-                <soundReload>Standard_Reload</soundReload>
-                <hotKey>Misc4</hotKey>
-                <chargeNoun>rocket</chargeNoun>
-                <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-            </li>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <ItemDef>DMS_Module_SwarmMissilePod</ItemDef>
-                <occupiedSlots>
-                    <li>MountLeft</li>
-                </occupiedSlots>
-            </li>
-        </comps>
-    </ThingDef>
+  <!-- (左)4x反工事導彈 -->
+  <ThingDef ParentName="DMS_ModuleItemMountLeft">
+    <defName>DMS_Module_MissilePod</defName>
+    <label>Missile Pod</label>
+    <description>A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_MissilePod</ThingDef>
+    </descriptionHyperlinks>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
+      <workAmount>22500</workAmount>
+    </recipeMaker>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <Mass>35</Mass>
+    </statBases>
+    <costList>
+      <Steel>200</Steel>
+      <Tungsteel>40</Tungsteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_MissilePod</EquipedThingDef>
+        <occupiedSlots>
+          <li>MountLeft</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelMountLeft">
+    <defName>DMS_Apparel_MissilePod</defName>
+    <label>Demolish Missile Pod</label>
+    <description>A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/MissilePod/apparel_south</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <Mass>35</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.25</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/MissilePod/apparel</wornGraphicPath>
+      <drawData>
+        <scale>0.75</scale>
+        <dataSouth>
+          <offset>(0.95,0,0.9)</offset>
+          <layer>0</layer>
+        </dataSouth>
+        <dataNorth>
+          <offset>(-0.95,0,0.7)</offset>
+          <layer>80</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(0.75,0,0.55)</offset>
+          <layer>80</layer>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.55,0,0.95)</offset>
+          <layer>-2</layer>
+        </dataEast>
+      </drawData>
+    </apparel>
+    <verbs>
+      <li>
+        <label>launch missile</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <commandIcon>UI/Ability/Missile</commandIcon>
+        <onlyManualCast>True</onlyManualCast>
+        <range>99.9</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>2</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>RocketswarmLauncher_Fire</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetBuildings>true</canTargetBuildings>
+        </targetParams>
+        <defaultProjectile>DMS_Bullet_HellFire</defaultProjectile><!-- 投射物有待修改 -->
+        <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_ApparelReloadable">
+        <maxCharges>4</maxCharges>
+        <ammoDef>Steel</ammoDef>
+        <ammoCountPerCharge>50</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>missile</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_MissilePod</ItemDef>
+        <occupiedSlots>
+          <li>MountLeft</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
 
-    <!-- (左)肩部導彈(8连)-->
-    <ThingDef ParentName="DMS_ModuleItemMountLeft">
-        <defName>DMS_Module_MissilePodPlus</defName>
-        <label>Missile Pod Plus</label>
-        <description>A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles.</description>
-        <descriptionHyperlinks>
-            <ThingDef>DMS_Apparel_MissilePod</ThingDef>
-        </descriptionHyperlinks>
-        <recipeMaker>
-            <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
-			<workAmount>22500</workAmount>
-        </recipeMaker>
-        <statBases>
-            <MaxHitPoints>25</MaxHitPoints>
-            <Mass>65</Mass>
-        </statBases>
-        <costList>
-            <Steel>360</Steel>
-			<Tungsteel>60</Tungsteel>
-            <ComponentIndustrial>6</ComponentIndustrial>
-        </costList>
-        <comps>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <EquipedThingDef>DMS_Apparel_MissilePodPlus</EquipedThingDef>
-                <occupiedSlots>
-                    <li>MountLeft</li>
-                </occupiedSlots>
-            </li>
-        </comps>
-    </ThingDef>
-    <ThingDef ParentName="DMS_ModuleApparelMountLeft">
-        <defName>DMS_Apparel_MissilePodPlus</defName>
-        <label>Missile Pod Plus</label>
-        <description>A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles.</description>
-        <graphicData>
-            <texPath>Things/Dragoon/MissilePod8/apparel_south</texPath>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>25</MaxHitPoints>
-            <Mass>65</Mass>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.12</MoveSpeed>
-        </equippedStatOffsets>
-        <apparel>
-            <renderNodeProperties>
-                <li>
-                    <nodeClass>Exosuit.PawnRenderNode_ApparelColor</nodeClass>
-                    <workerClass>PawnRenderNodeWorker</workerClass>
-                    <parentTagDef>WGApparelBody</parentTagDef>
-                    <baseLayer>30</baseLayer>
-                    <drawSize>0.75</drawSize>
-                    <pawnType>Any</pawnType>
-                    <useGraphic>true</useGraphic>
-                    <texPath>Things/Dragoon/MissilePod8/apparel</texPath>
-                    <drawData>
-                        <dataSouth>
-                            <offset>(0.95,0,0.9)</offset>
-                            <layer>0</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(-0.95,0,0.7)</offset>
-                            <layer>80</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0.75,0,0.55)</offset>
-                            <layer>80</layer>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(-0.55,0,0.95)</offset>
-                            <layer>-2</layer>
-                        </dataEast>
-                    </drawData>
-                </li>
-            </renderNodeProperties>
-        </apparel>
-        <verbs>
-            <li>
-                <label>launch missile</label>
-                <verbClass>Verb_LaunchProjectileStatic</verbClass>
-                <hasStandardCommand>true</hasStandardCommand>
-                <commandIcon>UI/Ability/Missile</commandIcon>
-                <onlyManualCast>True</onlyManualCast>
-                <range>99.9</range>
-                <forcedMissRadius>1.9</forcedMissRadius>
-                <warmupTime>2</warmupTime>
-                <noiseRadius>4</noiseRadius>
-                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-                <soundCast>RocketswarmLauncher_Fire</soundCast>
-                <soundCastTail>GunTail_Medium</soundCastTail>
-                <muzzleFlashScale>14</muzzleFlashScale>
-                <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
-                <targetParams>
-                    <canTargetLocations>true</canTargetLocations>
-                    <canTargetBuildings>true</canTargetBuildings>
-                </targetParams>
-                <defaultProjectile>DMS_Bullet_HellFire</defaultProjectile>
-                <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
-            </li>
-        </verbs>
-        <comps>
-            <li Class="CompProperties_ApparelReloadable">
-                <maxCharges>8</maxCharges>
-                <ammoDef>Steel</ammoDef>
-                <ammoCountPerCharge>50</ammoCountPerCharge>
-                <baseReloadTicks>60</baseReloadTicks>
-                <soundReload>Standard_Reload</soundReload>
-                <hotKey>Misc4</hotKey>
-                <chargeNoun>missile</chargeNoun>
-                <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-            </li>
-            <li Class="Exosuit.CompProperties_ExosuitModule">
-                <ItemDef>DMS_Module_MissilePodPlus</ItemDef>
-                <occupiedSlots>
-                    <li>MountLeft</li>
-                </occupiedSlots>
-            </li>
-        </comps>
-    </ThingDef>
+  <!-- (左)肩部蜂窩導彈(SRM) -->
+  <ThingDef ParentName="DMS_ModuleItemMountLeft">
+    <defName>DMS_Module_SwarmMissilePod</defName>
+    <label>Swarm rocket Pod</label>
+    <description>Rocket pod contains multiple HE rockets, can use its high fire rate to cover an large area.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_SwarmMissilePod</ThingDef>
+    </descriptionHyperlinks>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+      <workAmount>22500</workAmount>
+    </recipeMaker>
+    <statBases>
+      <MaxHitPoints>10</MaxHitPoints>
+      <Mass>20</Mass>
+    </statBases>
+    <costList>
+      <Steel>180</Steel>
+      <Tungsteel>30</Tungsteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_SwarmMissilePod</EquipedThingDef>
+        <occupiedSlots>
+          <li>MountLeft</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelMountLeft">
+    <defName>DMS_Apparel_SwarmMissilePod</defName>
+    <label>Swarm rocket Pod</label>
+    <description>A Rocket pod module that contains multiple high-explosive rocket rounds, can use its high fire rate to cover an large area.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/MissilePodSwarm/apparel_south</texPath>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <MaxHitPoints>10</MaxHitPoints>
+      <Mass>20</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/MissilePodSwarm/apparel</wornGraphicPath>
+      <drawData>
+        <scale>0.75</scale>
+        <dataSouth>
+          <offset>(0.95,0,0.9)</offset>
+          <layer>30</layer>
+        </dataSouth>
+        <dataNorth>
+          <offset>(-0.95,0,0.95)</offset>
+          <layer>80</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(0.75,0,0.55)</offset>
+          <layer>80</layer>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.15,0,1.1)</offset>
+          <layer>-2</layer>
+        </dataEast>
+      </drawData>
+    </apparel>
+    <verbs>
+      <li>
+        <label>launch rocket</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <commandIcon>UI/Ability/Missile</commandIcon>
+        <range>39.9</range>
+        <forcedMissRadius>3.9</forcedMissRadius>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+        <warmupTime>0.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>RocketswarmLauncher_Fire</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetBuildings>true</canTargetBuildings>
+        </targetParams>
+        <defaultProjectile>DMS_Bullet_HellFire</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_ApparelReloadable">
+        <maxCharges>14</maxCharges>
+        <ammoDef>Chemfuel</ammoDef>
+        <ammoCountPerCharge>25</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>rocket</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_SwarmMissilePod</ItemDef>
+        <occupiedSlots>
+          <li>MountLeft</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
 
-    <ThingDef ParentName="BaseBullet">
-        <defName>DMS_Bullet_HellFire</defName>
-        <label>hellfire missile</label>
-        <graphicData>
-            <texPath>Things/Projectiles/MShorad</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <shaderType>TransparentPostLight</shaderType>
-        </graphicData>
-        <thingClass>Projectile_Explosive</thingClass>
-        <projectile>
-            <damageDef>Bomb</damageDef>
-            <!-- Use default damage from explosion def -->
-            <explosionRadius>3.9</explosionRadius>
-            <armorPenetrationBase>0.9</armorPenetrationBase>
-            <speed>60</speed>
-        </projectile>
-    </ThingDef>
-    
+  <!-- (左)肩部導彈(8连)-->
+  <ThingDef ParentName="DMS_ModuleItemMountLeft">
+    <defName>DMS_Module_MissilePodPlus</defName>
+    <label>Missile Pod Plus</label>
+    <description>A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_MissilePod</ThingDef>
+    </descriptionHyperlinks>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
+      <workAmount>22500</workAmount>
+    </recipeMaker>
+    <statBases>
+      <MaxHitPoints>25</MaxHitPoints>
+      <Mass>65</Mass>
+    </statBases>
+    <costList>
+      <Steel>360</Steel>
+      <Tungsteel>60</Tungsteel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_MissilePodPlus</EquipedThingDef>
+        <occupiedSlots>
+          <li>MountLeft</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="DMS_ModuleApparelMountLeft">
+    <defName>DMS_Apparel_MissilePodPlus</defName>
+    <label>Missile Pod Plus</label>
+    <description>A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/MissilePod8/apparel_south</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>25</MaxHitPoints>
+      <Mass>65</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/MissilePod8/apparel</wornGraphicPath>
+      <drawData>
+        <scale>0.75</scale>
+        <dataSouth>
+          <offset>(0.95,0,0.9)</offset>
+          <layer>0</layer>
+        </dataSouth>
+        <dataNorth>
+          <offset>(-0.95,0,0.7)</offset>
+          <layer>80</layer>
+        </dataNorth>
+        <dataWest>
+          <offset>(0.75,0,0.55)</offset>
+          <layer>80</layer>
+        </dataWest>
+        <dataEast>
+          <offset>(-0.55,0,0.95)</offset>
+          <layer>-2</layer>
+        </dataEast>
+      </drawData>
+    </apparel>
+    <verbs>
+      <li>
+        <label>launch missile</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <commandIcon>UI/Ability/Missile</commandIcon>
+        <onlyManualCast>True</onlyManualCast>
+        <range>99.9</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>2</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>RocketswarmLauncher_Fire</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetBuildings>true</canTargetBuildings>
+        </targetParams>
+        <defaultProjectile>DMS_Bullet_HellFire</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_ApparelReloadable">
+        <maxCharges>8</maxCharges>
+        <ammoDef>Steel</ammoDef>
+        <ammoCountPerCharge>50</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>missile</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_MissilePodPlus</ItemDef>
+        <occupiedSlots>
+          <li>MountLeft</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>DMS_Bullet_HellFire</defName>
+    <label>hellfire missile</label>
+    <graphicData>
+      <texPath>Things/Projectiles/MShorad</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>3.9</explosionRadius>
+      <armorPenetrationBase>0.9</armorPenetrationBase>
+      <speed>60</speed>
+    </projectile>
+  </ThingDef>
 
 </Defs>

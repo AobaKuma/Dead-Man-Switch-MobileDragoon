@@ -96,7 +96,6 @@
     </modExtensions>
   </ThingDef>
   
-
   <ThingDef ParentName="DMS_BaseDragoonWeapon">
     <defName>DMS_Dragoon_DMR</defName>
     <label>Dragoon DMR</label>
@@ -174,7 +173,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>DMS_Bullet_DragoonShotgun</defaultProjectile>
 				<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
-				<burstShotCount>5</burstShotCount>
+				<burstShotCount>3</burstShotCount>
         <warmupTime>0.8</warmupTime>
         <range>19.9</range>
         <soundCast>Shot_Autocannon</soundCast>
@@ -261,5 +260,4 @@
       </li>
     </comps>
   </ThingDef>
-
 </Defs>

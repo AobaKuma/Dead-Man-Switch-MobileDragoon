@@ -61,9 +61,6 @@
       <wornGraphicPath>Things/Dragoon/ModuleArm/apparel</wornGraphicPath>
       <drawData>
         <scale>1.5</scale>
-        <defaultData>
-          <layer>0</layer>
-        </defaultData>
         <dataSouth>
           <offset>(-0.85,0,0.10)</offset>
           <layer>10</layer>
@@ -74,6 +71,7 @@
         </dataNorth>
         <dataWest>
           <offset>(-0.40,0,0.5)</offset>
+          <layer>10</layer>
         </dataWest>
         <dataEast>
           <offset>(-0.05,0,-0.2)</offset>
@@ -84,20 +82,25 @@
         <li Class="Exosuit.PawnRenderNodeProperties_ApparelWeaponHolder"><!-- TODO:修正位置 -->
           <parentTagDef>WGApparelBody</parentTagDef>
           <drawData>
-            <scale>1.5</scale>
+            <scale>1.2</scale>
             <dataSouth>
-              <offset>(-0.85,0,0.10)</offset>
+              <offset>(-0.65,0,0.25)</offset>
+              <rotationOffset>150</rotationOffset>
             </dataSouth>
             <dataNorth>
-              <offset>(0.75,0,0.0)</offset>
-              <layer>72</layer>
+              <offset>(0.65,0,0)</offset>
+              <layer>80</layer>
+              <rotationOffset>130</rotationOffset>
             </dataNorth>
             <dataWest>
-              <offset>(-0.40,0,0.5)</offset>
+              <offset>(-0.05,0,0.25)</offset>
+              <layer>10</layer>
+              <rotationOffset>290</rotationOffset>
             </dataWest>
             <dataEast>
-              <offset>(-0.05,0,-0.2)</offset>
-              <layer>10</layer>
+              <offset>(-0.45,0,-0.45)</offset>
+              <rotationOffset>75</rotationOffset>
+              <layer>25</layer>
             </dataEast>
           </drawData>
         </li>
@@ -314,6 +317,7 @@
             <scale>1.5</scale>
             <dataSouth>
               <offset>(-0.85,0,0.10)</offset>
+              <layer>10</layer>
             </dataSouth>
             <dataNorth>
               <offset>(0.75,0,0.0)</offset>
@@ -321,10 +325,11 @@
             </dataNorth>
             <dataWest>
               <offset>(-0.40,0,0.5)</offset>
+              <layer>10</layer>
             </dataWest>
             <dataEast>
               <offset>(-0.05,0,-0.2)</offset>
-              <layer>10</layer>
+              <layer>20</layer>
             </dataEast>
           </drawData>
         </li>

@@ -73,7 +73,7 @@
         </dataNorth>
         <dataWest>
           <offset>(0.5,0,0.3)</offset>
-          <layer>30</layer>
+          <layer>30 </layer>
           <rotationOffset>-45</rotationOffset>
         </dataWest>
         <dataEast>

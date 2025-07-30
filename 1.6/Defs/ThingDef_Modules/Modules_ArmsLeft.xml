@@ -242,7 +242,7 @@
       <drawData>
         <scale>1.3</scale>
         <dataSouth>
-          <offset>(0.75,0,0.2)</offset>r
+          <offset>(0.75,0,0.2)</offset>
           <layer>40</layer>
         </dataSouth>
         <dataNorth>

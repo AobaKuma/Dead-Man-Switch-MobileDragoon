@@ -63,17 +63,17 @@
       <drawData>
         <dataSouth>
           <offset>(0.75,0,0.5)</offset>
-          <layer>7</layer>
+          <layer>30</layer>
           <rotationOffset>15</rotationOffset>
         </dataSouth>
         <dataNorth>
           <offset>(-0.75,0,0.6)</offset>
-          <layer>7</layer>
+          <layer>30</layer>
           <rotationOffset>15</rotationOffset>
         </dataNorth>
         <dataWest>
           <offset>(0.5,0,0.3)</offset>
-          <layer>7</layer>
+          <layer>30</layer>
           <rotationOffset>-45</rotationOffset>
         </dataWest>
         <dataEast>

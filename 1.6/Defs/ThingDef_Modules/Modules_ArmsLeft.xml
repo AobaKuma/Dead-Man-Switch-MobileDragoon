@@ -225,9 +225,7 @@
   <ThingDef ParentName="DMS_ModuleApparelArmLeft">
     <defName>DMS_Apparel_Shield</defName>
     <label>solid shield</label>
-    <description>A composite armor shield mounted on the dragoon frame. Although it is a bit heavy,
-      it can effectively resist the damage caused by large-caliber fragments and anti-material rifle
-      bullets.</description>
+    <description>A composite armor shield mounted on the dragoon frame. Although it is a bit heavy, it can effectively resist the damage caused by large-caliber fragments and anti-material rifle bullets.</description>
     <graphicData>
       <texPath>Things/Dragoon/SolidShield/apparel_south</texPath>
     </graphicData>
@@ -244,14 +242,15 @@
       <drawData>
         <scale>1.3</scale>
         <dataSouth>
-          <offset>(0.75,0,0.2)</offset>
+          <offset>(0.75,0,0.2)</offset>r
+          <layer>40</layer>
         </dataSouth>
         <dataNorth>
           <offset>(-0.50,0,0.3)</offset>
           <layer>0</layer>
         </dataNorth>
         <dataWest>
-          <offset>(-0.3,0,-0.20)</offset>
+          <offset>(0,0,-0.20)</offset>
           <layer>64</layer>
         </dataWest>
         <dataEast>
@@ -312,8 +311,7 @@
   <ThingDef ParentName="DMS_ModuleApparelArmLeft">
     <defName>DMS_Apparel_InfraredSensor</defName>
     <label>infrared sensor</label>
-    <description>An additional external optical sensor provides some night operation capabilities
-      without modifying the frame itself, and provides aiming assistance.</description>
+    <description>An additional external optical sensor provides some night operation capabilities without modifying the frame itself, and provides aiming assistance.</description>
     <graphicData>
       <shaderType>CutoutComplex</shaderType>
       <texPath>Things/Dragoon/InfraredSensor/apparel_south</texPath>

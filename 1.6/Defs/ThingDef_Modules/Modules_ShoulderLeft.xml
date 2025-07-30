@@ -179,6 +179,8 @@
         <muzzleFlashScale>14</muzzleFlashScale>
         <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
         <requireLineOfSight>false</requireLineOfSight>
+				<ai_IsWeapon>false</ai_IsWeapon>
+        <targetable>true</targetable>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
           <canTargetBuildings>true</canTargetBuildings>

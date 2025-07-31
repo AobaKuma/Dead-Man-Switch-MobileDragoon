@@ -122,8 +122,14 @@
             <renderSkipFlags>
                 <li>Head</li>
             </renderSkipFlags>
+            <drawData>
+                <defaultData>
+                    <layer>25</layer>
+                </defaultData>
+            </drawData>
         </apparel>
     </ThingDef>
+
     <ThingDef Name="DMS_ModuleApparelCore" ParentName="ModuleApparelCore" Abstract="True">
         <equippedStatOffsets>
             <MeleeDamageFactor>1.25</MeleeDamageFactor>

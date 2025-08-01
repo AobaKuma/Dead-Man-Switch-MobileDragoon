@@ -62,6 +62,7 @@
       <Insulation_Heat>64</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
+			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.38</VacuumResistance>
       <CarryingCapacity>380</CarryingCapacity>
       <CarryWeight MayRequire="ceteam.combatextended">380</CarryWeight>
       <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
@@ -130,6 +131,7 @@
       </li>
     </modExtensions>
   </ThingDef>
+
   <!-- PV-4頭盔 -->
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_PV4_Helmet</defName>
@@ -170,6 +172,7 @@
       <ComponentStamped>3</ComponentStamped>
     </butcherProducts>
   </ThingDef>
+
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_PV4_Helmet</defName>
     <label>PV-4 "Miboche" helmet</label>
@@ -185,6 +188,7 @@
       <Mass>40</Mass>
     </statBases>
     <equippedStatOffsets>
+			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.65</VacuumResistance>
       <PsychicSensitivity>-0.75</PsychicSensitivity>
       <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
       <MoveSpeed>-0.35</MoveSpeed>

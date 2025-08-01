@@ -48,6 +48,7 @@
       <Neurocomputer>1</Neurocomputer>
     </costList>
   </ThingDef>
+
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_PV8_Core</defName>
     <label>PV-8 "Zyklop" frame</label>
@@ -68,6 +69,7 @@
       <Insulation_Heat>64</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
+      <VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.35</VacuumResistance>
       <CarryingCapacity>320</CarryingCapacity>
       <CarryWeight MayRequire="ceteam.combatextended">320</CarryWeight>
       <WorkSpeedGlobal>-0.35</WorkSpeedGlobal>
@@ -192,6 +194,7 @@
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.2</MoveSpeed>
+      <VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.5</VacuumResistance>
       <HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
       <DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
     </equippedStatOffsets>

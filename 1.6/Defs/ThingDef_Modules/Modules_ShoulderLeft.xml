@@ -180,7 +180,7 @@
         <muzzleFlashScale>14</muzzleFlashScale>
         <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
         <requireLineOfSight>false</requireLineOfSight>
-				<ai_IsWeapon>false</ai_IsWeapon>
+        <ai_IsWeapon>false</ai_IsWeapon>
         <targetable>true</targetable>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
@@ -287,6 +287,8 @@
         <forcedMissRadius>1.9</forcedMissRadius>
         <warmupTime>2</warmupTime>
         <noiseRadius>4</noiseRadius>
+        <ai_IsWeapon>false</ai_IsWeapon>
+        <targetable>true</targetable>
         <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
         <soundCast>RocketswarmLauncher_Fire</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
@@ -400,6 +402,8 @@
         <consumeFuelPerShot>1</consumeFuelPerShot>
         <warmupTime>0.5</warmupTime>
         <noiseRadius>4</noiseRadius>
+        <ai_IsWeapon>false</ai_IsWeapon>
+        <targetable>true</targetable>
         <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
         <soundCast>RocketswarmLauncher_Fire</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
@@ -514,6 +518,8 @@
         <soundCast>RocketswarmLauncher_Fire</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>14</muzzleFlashScale>
+        <ai_IsWeapon>false</ai_IsWeapon>
+        <targetable>true</targetable>
         <drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>

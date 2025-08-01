@@ -68,6 +68,8 @@
       <Insulation_Heat>32</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
+      <VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.35</VacuumResistance>
+			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.2</VacuumResistance>
       <CarryWeight MayRequire="ceteam.combatextended">250</CarryWeight>
       <CarryingCapacity>250</CarryingCapacity>
       <WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
@@ -130,6 +132,7 @@
       </li>
     </modExtensions>
   </ThingDef>
+
   <!-- AT-34頭盔 -->
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_AT34_Helmet</defName>
@@ -198,6 +201,7 @@
       <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
       <MoveSpeed>-0.15</MoveSpeed>
       <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+      <VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.5</VacuumResistance>
       <HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
       <DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
     </equippedStatOffsets>

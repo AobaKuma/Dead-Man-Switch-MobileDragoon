@@ -69,10 +69,10 @@
             <chance>0.15</chance>
             <apparel>DMS_Apparel_SwarmMissilePod</apparel>
           </li>
-          <li>
+          <!-- <li>
             <chance>0.15</chance>
             <apparel>DMS_Apparel_TurretPackLight</apparel>
-          </li>
+          </li> -->
           <li>
             <chance>0.15</chance>
             <apparel>DMS_Apparel_Shield</apparel>

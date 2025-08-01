@@ -62,7 +62,7 @@
       <Insulation_Heat>64</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
-			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.38</VacuumResistance>
+      <VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.38</VacuumResistance>
       <CarryingCapacity>380</CarryingCapacity>
       <CarryWeight MayRequire="ceteam.combatextended">380</CarryWeight>
       <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
@@ -188,7 +188,7 @@
       <Mass>40</Mass>
     </statBases>
     <equippedStatOffsets>
-			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.65</VacuumResistance>
+      <VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.65</VacuumResistance>
       <PsychicSensitivity>-0.75</PsychicSensitivity>
       <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
       <MoveSpeed>-0.35</MoveSpeed>

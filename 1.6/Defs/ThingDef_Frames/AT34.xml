@@ -69,7 +69,6 @@
     </statBases>
     <equippedStatOffsets>
       <VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.35</VacuumResistance>
-			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.2</VacuumResistance>
       <CarryWeight MayRequire="ceteam.combatextended">250</CarryWeight>
       <CarryingCapacity>250</CarryingCapacity>
       <WorkSpeedGlobal>-0.25</WorkSpeedGlobal>

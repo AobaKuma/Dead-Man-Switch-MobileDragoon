@@ -19,7 +19,7 @@
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>Bullet_57mmRocket_HE</defaultProjectile>
+                <defaultProjectile>Bullet_80mmRocket_Thermobaric</defaultProjectile>
                 <warmupTime>1.5</warmupTime>
                 <range>75</range>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
@@ -28,9 +28,9 @@
         </verbs>
         <comps>
             <li Class="CombatExtended.CompProperties_AmmoUser">
-                <magazineSize>10</magazineSize>
+                <magazineSize>7</magazineSize>
                 <reloadTime>9.2</reloadTime>
-                <ammoSet>AmmoSet_57mmRocket_direct</ammoSet>
+                <ammoSet>AmmoSet_80mmRocket_direct</ammoSet>
             </li>
         </comps>
         <relicChance>0</relicChance>

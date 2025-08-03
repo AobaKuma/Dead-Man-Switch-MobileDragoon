@@ -136,7 +136,7 @@
                     Defs/ThingDef[defName="DMS_Apparel_SwarmMissilePod"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
                 <value>
                     <li Class="CompProperties_ApparelReloadable">
-                        <maxCharges>14</maxCharges>
+                        <maxCharges>7</maxCharges>
                         <ammoDef>Ammo_80mmRocket_Thermobaric</ammoDef>
                         <ammoCountPerCharge>1</ammoCountPerCharge>
                         <baseReloadTicks>150</baseReloadTicks>

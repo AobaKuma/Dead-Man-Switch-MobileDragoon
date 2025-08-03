@@ -5,7 +5,10 @@
     <label>Silent vanguard</label>
     <combatPower>500</combatPower>
     <defaultFactionType>Cinder_ESDSP</defaultFactionType>
-    <apparelMoney>2000~5000</apparelMoney>
+    <apparelMoney>
+      <min>2500</min>
+      <max>5000</max>
+    </apparelMoney>
     <weaponMoney>2000~10000</weaponMoney>
     <maxPerGroup>3</maxPerGroup>
     <allowRoyalApparelRequirements>false</allowRoyalApparelRequirements>
@@ -69,10 +72,6 @@
             <chance>0.15</chance>
             <apparel>DMS_Apparel_SwarmMissilePod</apparel>
           </li>
-          <!-- <li>
-            <chance>0.15</chance>
-            <apparel>DMS_Apparel_TurretPackLight</apparel>
-          </li> -->
           <li>
             <chance>0.15</chance>
             <apparel>DMS_Apparel_Shield</apparel>

@@ -13,7 +13,7 @@
                         <verbs>
                             <li Class="CombatExtended.VerbPropertiesCE">
                                 <label>launch stugna missile</label>
-                                <verbClass>CombatExtended.Verb_LaunchProjectileStaticCE</verbClass>
+                                <verbClass>CombatExtended.Verb_LaunchProjectileCE</verbClass>
                                 <hasStandardCommand>true</hasStandardCommand>
                                 <commandIcon>Things/Projectiles/DMS_9M133Missile/VerbIcon</commandIcon>
                                 <onlyManualCast>True</onlyManualCast>

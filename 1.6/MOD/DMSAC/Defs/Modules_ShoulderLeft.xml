@@ -18,6 +18,7 @@
             <Mass>40</Mass>
         </statBases>
         <costList>
+            <DMSAC_StugnaATGM>1</DMSAC_StugnaATGM>
             <Steel>50</Steel>
         </costList>
         <comps>
@@ -75,7 +76,7 @@
             <li>
                 <label>launch stugna missile</label>
                 <commandIcon>Things/Projectiles/DMS_9M133Missile/VerbIcon</commandIcon>
-                <verbClass>Verb_LaunchProjectileStatic</verbClass>
+                <verbClass>Verb_LaunchProjectile</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
                 <onlyManualCast>True</onlyManualCast>
                 <range>59.9</range>

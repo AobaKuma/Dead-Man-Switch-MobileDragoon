@@ -576,6 +576,7 @@
       <li Class="Exosuit.ModExtension_NoIdeoApparel" />
     </modExtensions>
   </PawnKindDef>
+  
   <PawnKindDef ParentName="GuardBase">
     <defName>DMS_Dragoon_Outlander</defName>
     <label>town dragoon</label>

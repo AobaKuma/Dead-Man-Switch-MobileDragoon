@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ScenarioDef ParentName="ScenarioBase">
+	<ScenarioDef ParentName="ScenarioBase" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 		<defName>DMSMD_Scenario</defName>
 		<label>The Veteran</label>
 		<description>A legendary pilot decides to retire and start a different story.</description>

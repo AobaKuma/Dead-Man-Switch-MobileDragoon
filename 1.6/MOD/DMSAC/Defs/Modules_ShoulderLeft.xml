@@ -1,5 +1,111 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+    <!-- (左)APS -->
+    <ThingDef ParentName="DMS_ModuleItemMountLeft">
+        <defName>DMS_Module_APS</defName>
+        <label>Active protection system</label>
+        <!-- 一種安裝在大型戰鬥平台上的主動防禦系統，能夠在啟動時透過使迎來的爆破投射物提前引爆來防止受到直接打擊，由於運轉時的能耗極高因此無法長時間運作並需要冷卻。 -->
+        <description>An active defense system installed on large combat platforms that can prevent direct hits by prematurely detonating incoming explosive projectiles when activated. Due to its extremely high energy consumption during operation, it cannot operate for long periods of time and requires cooling.</description>
+        <descriptionHyperlinks>
+            <ThingDef>DMS_Apparel_APS</ThingDef>
+        </descriptionHyperlinks>
+        <recipeMaker>
+            <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
+            <workAmount>50000</workAmount>
+        </recipeMaker>
+        <statBases>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Mass>40</Mass>
+        </statBases>
+        <costList>
+            <ComponentFireControl>1</ComponentFireControl>
+            <ComponentStamped>10</ComponentStamped>
+            <Steel>50</Steel>
+        </costList>
+        <comps>
+            <li Class="Exosuit.CompProperties_ExosuitModule">
+                <EquipedThingDef>DMS_Apparel_APS</EquipedThingDef>
+                <occupiedSlots>
+                    <li>MountLeft</li>
+                </occupiedSlots>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="DMS_ModuleApparelMountLeft">
+        <defName>DMS_Apparel_APS</defName>
+        <label>Active protection system</label>
+        <description>An active defense system installed on large combat platforms that can prevent direct hits by prematurely detonating incoming explosive projectiles when activated. Due to its extremely high energy consumption during operation, it cannot operate for long periods of time and requires cooling.</description>
+        <descriptionHyperlinks>
+            <ThingDef>DMS_Module_APS</ThingDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Dragoon/ActiveProtectionSystem/apparel_west</texPath>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Mass>40</Mass>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.1</MoveSpeed>
+        </equippedStatOffsets>
+        <apparel>
+            <wornGraphicPath>Things/Dragoon/ActiveProtectionSystem/apparel</wornGraphicPath>
+            <drawData>
+                <scale>1</scale>
+                <dataSouth>
+                    <offset>(0.7,0,0.85)</offset>
+                    <layer>20</layer>
+                </dataSouth>
+                <dataNorth>
+                    <offset>(-0.65,0,0.5)</offset>
+                    <layer>80</layer>
+                </dataNorth>
+                <dataWest>
+                    <offset>(0.75,0,0.60)</offset>
+                    <layer>80</layer>
+                </dataWest>
+                <dataEast>
+                    <offset>(-0.15,0,0.85)</offset>
+                    <layer>-2</layer>
+                </dataEast>
+            </drawData>
+        </apparel>
+        <comps>
+            <li Class="CompProperties_CauseHediff_Apparel">
+                <hediff>DMSAC_AbilityProvider_APS</hediff>
+                <part>Head</part>
+            </li>
+            <li Class="Exosuit.CompProperties_ExosuitModule">
+                <ItemDef>DMS_Module_APS</ItemDef>
+                <occupiedSlots>
+                    <li>MountLeft</li>
+                </occupiedSlots>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <HediffDef>
+        <defName>DMSAC_AbilityProvider_APS</defName>
+        <label>APS</label>
+        <description>APS Ability Provider</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_GiveAbility">
+                <abilityDef>DMSAC_APS</abilityDef>
+            </li>
+            <li Class="HediffCompProperties_RemoveIfApparelDropped" />
+        </comps>
+    </HediffDef>
+
+
     <!-- (左)短號發射器 -->
     <ThingDef ParentName="DMS_ModuleItemMountLeft">
         <defName>DMS_Module_StugnaLauncher</defName>
@@ -30,6 +136,7 @@
             </li>
         </comps>
     </ThingDef>
+
     <ThingDef ParentName="DMS_ModuleApparelMountLeft">
         <defName>DMS_Apparel_StugnaLauncher</defName>
         <label>Stugna launcher</label>
@@ -52,25 +159,25 @@
             <wornGraphicPath>Things/Dragoon/StugnaLauncher/apparel</wornGraphicPath>
             <drawData>
                 <scale>1</scale>
-                        <dataSouth>
-                            <offset>(1,0,0.65)</offset>
-                            <layer>80</layer>
-                        </dataSouth>
-                        <dataNorth>
-                            <offset>(-1,0,0.65)</offset>
-                            <layer>80</layer>
-                        </dataNorth>
-                        <dataWest>
-                            <offset>(0.75,0,0.45)</offset>
-                            <layer>80</layer>
-                            <rotationOffset>15</rotationOffset>
-                        </dataWest>
-                        <dataEast>
-                            <offset>(0,0,0.75)</offset>
-                            <layer>-2</layer>
-                            <rotationOffset>-15</rotationOffset>
-                        </dataEast>
-                    </drawData>
+                <dataSouth>
+                    <offset>(1,0,0.65)</offset>
+                    <layer>80</layer>
+                </dataSouth>
+                <dataNorth>
+                    <offset>(-1,0,0.65)</offset>
+                    <layer>80</layer>
+                </dataNorth>
+                <dataWest>
+                    <offset>(0.75,0,0.45)</offset>
+                    <layer>80</layer>
+                    <rotationOffset>15</rotationOffset>
+                </dataWest>
+                <dataEast>
+                    <offset>(0,0,0.75)</offset>
+                    <layer>-2</layer>
+                    <rotationOffset>-15</rotationOffset>
+                </dataEast>
+            </drawData>
         </apparel>
         <verbs>
             <li>

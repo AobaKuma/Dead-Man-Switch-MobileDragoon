@@ -335,6 +335,7 @@
         <scale>0.8</scale>
         <dataSouth>
           <offset>(0.75,0,0.20)</offset>
+          <layer>30</layer>
         </dataSouth>
         <dataNorth>
           <offset>(-0.75,0,0.30)</offset>

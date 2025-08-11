@@ -197,9 +197,8 @@
 	</ThingDef>
 
 	<!-- ==================== Recipes ========================== -->
-
 	<RecipeDef ParentName="LauncherAmmoRecipeBase">
-		<defName>MakeAmmo_80mmS8_HE</defName>
+		<defName>MakeAmmo_80mmRocket_HE</defName>
 		<label>make 80mm S8 (HE) rockets x5</label>
 		<description>Craft 5 80mm S8 (HE) rockets.</description>
 		<jobString>Making 80mm S8 (HE) rockets.</jobString>
@@ -243,7 +242,7 @@
 	</RecipeDef>
 
 	<RecipeDef ParentName="LauncherAmmoRecipeBase">
-		<defName>MakeAmmo_80mmS8_HEAT</defName>
+		<defName>MakeAmmo_80mmRocket_HEAT</defName>
 		<label>make 80mm S8 (HEAT) rockets x5</label>
 		<description>Craft 5 80mm S8 (HEAT) rockets.</description>
 		<jobString>Making 80mm S8 (HEAT) rockets.</jobString>
@@ -287,7 +286,7 @@
 	</RecipeDef>
 
 	<RecipeDef ParentName="LauncherAmmoRecipeBase">
-		<defName>MakeAmmo_80mmS8_Thermobaric</defName>
+		<defName>MakeAmmo_80mmRocket_Thermobaric</defName>
 		<label>make 80mm S8 (Thermobaric) rockets x5</label>
 		<description>Craft 5 80mm S8 (Thermobaric) rockets.</description>
 		<jobString>Making 80mm S8 (Thermobaric) rockets.</jobString>

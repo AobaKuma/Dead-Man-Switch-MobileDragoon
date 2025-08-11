@@ -13,6 +13,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/Fortified.HeavyEquippableDef[
             defName="HeavyAutomatroid" or
+            defName="TransHeavyAutomatroid" or
             defName="BulkyAutomatroid" or
             defName="StandardAutomatroid"
             ]/EquippableWithApparel</xpath>

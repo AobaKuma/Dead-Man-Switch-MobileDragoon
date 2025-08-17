@@ -11,12 +11,14 @@
     <defName>DMS_Module_Helmet</defName>
     <label>helmet module</label>
     <parent>DMS_Module</parent>
+    <iconPath>Things/Item/Module_H</iconPath>
   </ThingCategoryDef>
   
   <ThingCategoryDef>
     <defName>DMS_Module_Core</defName>
     <label>core module</label>
     <parent>DMS_Module</parent>
+    <iconPath>Things/Item/Module</iconPath>
   </ThingCategoryDef>
 
   <!-- 左手-->
@@ -24,6 +26,7 @@
     <defName>DMS_Module_Attachment</defName>
     <label>attachment module</label>
     <parent>DMS_Module</parent>
+    <iconPath>Things/Item/Module_AL</iconPath>
   </ThingCategoryDef>
 
   <!-- 右手-->
@@ -31,29 +34,34 @@
     <defName>DMS_Module_Equipment</defName>
     <label>equipment module</label>
     <parent>DMS_Module</parent>
+    <iconPath>Things/Item/Module_AR</iconPath>
   </ThingCategoryDef>
 
   <ThingCategoryDef>
     <defName>DMS_Module_Pack</defName>
     <label>pack module</label>
     <parent>DMS_Module</parent>
+    <iconPath>Things/Item/Module_A</iconPath>
   </ThingCategoryDef>
 
   <ThingCategoryDef>
     <defName>DMS_Module_ShoulderRight</defName>
     <label>right shoulder module</label>
     <parent>DMS_Module</parent>
+    <iconPath>Things/Item/Module_SR</iconPath>
   </ThingCategoryDef>
 
   <ThingCategoryDef>
     <defName>DMS_Module_ShoulderLeft</defName>
     <label>left shoulder module</label>
     <parent>DMS_Module</parent>
+    <iconPath>Things/Item/Module_SL</iconPath>
   </ThingCategoryDef>
   
   <ThingCategoryDef>
     <defName>DMS_Module_Multi</defName>
     <label>multi slot module</label>
     <parent>DMS_Module</parent>
+    <iconPath>Things/Item/Module</iconPath>
   </ThingCategoryDef>
 </Defs>

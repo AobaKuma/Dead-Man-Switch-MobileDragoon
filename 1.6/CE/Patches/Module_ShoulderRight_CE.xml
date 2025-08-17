@@ -50,8 +50,7 @@
                     </verbs>
                 </value>
             </li>
-            <!--Kord
-            Turret-->
+            <!--Kord Turret-->
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Module_TurretPackHeavy"]/statBases/Mass</xpath>
                 <value>
@@ -59,7 +58,6 @@
                     <Bulk>27</Bulk>
                 </value>
             </li>
-
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackHeavy"]/statBases</xpath>
                 <value>
@@ -73,8 +71,7 @@
             </li>
 
             <li Class="PatchOperationRemove">
-                <xpath>
-                    Defs/ThingDef[defName="DMS_Apparel_TurretPackHeavy"]/equippedStatOffsets/MoveSpeed</xpath>
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackHeavy"]/equippedStatOffsets/MoveSpeed</xpath>
             </li>
 
             <li Class="PatchOperationReplace">
@@ -105,8 +102,7 @@
                 </value>
             </li>
 
-            <!--GAU
-            Turret-->
+            <!--GAU Turret-->
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Module_TurretPackGAU"]/statBases/Mass</xpath>
                 <value>
@@ -114,7 +110,6 @@
                     <Bulk>34</Bulk>
                 </value>
             </li>
-
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackGAU"]/statBases</xpath>
                 <value>
@@ -155,6 +150,7 @@
                 </value>
             </li>
 
+            <!--Turret Ammo-->
             <li Class="CombatExtended.PatchOperation_ConditionalGeneric">
                 <generic Class="PatchOperationSequence">
                     <operations>
@@ -256,8 +252,5 @@
                 </standard>
             </li>
         </operations>
-    </Operation>
-    <Operation Class="CombatExtended.PatchOperation_ConditionalGeneric">
-
     </Operation>
 </Patch>

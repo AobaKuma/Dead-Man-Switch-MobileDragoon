@@ -240,6 +240,7 @@
       </li>
     </comps>
   </ThingDef>
+
   <ThingDef ParentName="DMS_ModuleApparelMountLeft">
     <defName>DMS_Apparel_MissilePod</defName>
     <label>Demolish Missile Pod</label>
@@ -395,7 +396,7 @@
         <verbClass>Verb_LaunchProjectile</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <commandIcon>UI/Ability/Missile</commandIcon>
-        <range>39.9</range>
+        <range>49.9</range>
         <forcedMissRadius>3.9</forcedMissRadius>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
@@ -413,7 +414,7 @@
           <canTargetLocations>true</canTargetLocations>
           <canTargetBuildings>true</canTargetBuildings>
         </targetParams>
-        <defaultProjectile>DMS_Bullet_HellFire</defaultProjectile>
+        <defaultProjectile>DMS_Bullet_DragoonRocket</defaultProjectile>
         <rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
       </li>
     </verbs>
@@ -557,14 +558,38 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
+    <thingClass>Fortified.Projectile_Parabola</thingClass>
     <projectile>
       <damageDef>Bomb</damageDef>
-      <!-- Use default damage from explosion def -->
-      <explosionRadius>3.9</explosionRadius>
-      <armorPenetrationBase>0.9</armorPenetrationBase>
+      <explosionRadius>1.9</explosionRadius>
+      <damageAmountBase>120</damageAmountBase>
+      <armorPenetrationBase>1.5</armorPenetrationBase>
       <speed>60</speed>
+      <arcHeightFactor>2</arcHeightFactor>
     </projectile>
+    <comps>
+      <li Class="Fortified.CompProperties_AfterBurner">
+        <lifeTime>30</lifeTime>
+        <ExhaustFleck>DMS_Fleck_RocketFlame</ExhaustFleck>
+        <ExhaustCurve>
+          <points>
+            <li>(0,5)</li>
+            <li>(0.15,4)</li>
+            <li>(0.5,3)</li>
+            <li>(0.75,0)</li>
+          </points>
+        </ExhaustCurve>
+        <SmokeFleck>DMS_Fleck_RocketSmokeTrail</SmokeFleck>
+        <SmokeCurve>
+          <points>
+            <li>(0,1)</li>
+            <li>(0.5,1)</li>
+            <li>(0.9,1)</li>
+            <li>(1,0.5)</li>
+          </points>
+        </SmokeCurve>
+      </li>
+    </comps>
   </ThingDef>
 
 </Defs>

@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+    <MVCF.ModDef>
+        <defName>DMSMD</defName>
+        <label>DMS Mobile dragoon</label>
+        <description>DMS Mobile dragoon</description>
+        <ActivateFeatures>
+            <li>Drawing</li>
+            <li>ApparelVerbs</li>
+            <li>IndependentFire</li>
+            <li>IntegratedToggle</li>
+        </ActivateFeatures>
+    </MVCF.ModDef>
+    
     <!-- 物品型態的龍騎兵裝備 -->
     <ThingDef Name="DMS_ModuleItemBase" ParentName="ModuleItemBase" Abstract="True">
         <recipeMaker>
@@ -96,13 +108,11 @@
         </graphicData>
     </ThingDef>
 
-
     <!--衣服型態的龍騎兵裝備，理論上玩家不應該能獲取 -->
     <ThingDef Name="DMS_ModuleApparelBase" ParentName="ModuleApparelBase" Abstract="True">
         <tickerType>Normal</tickerType>
         <comps>
             <li Class="CompProperties_Styleable" />
-            <!-- <li Class="Exosuit.CompProperties_SleepCover" /> -->
         </comps>
         
     </ThingDef>

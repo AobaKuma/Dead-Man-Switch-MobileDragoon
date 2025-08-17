@@ -41,7 +41,7 @@
                     <verbs>
                         <li Class="CombatExtended.VerbPropertiesCE">
                             <label>launch missile</label>
-                            <verbClass>CombatExtended.Verb_LaunchProjectileStaticCE</verbClass>
+                            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                             <hasStandardCommand>true</hasStandardCommand>
                             <commandIcon>UI/Ability/Missile</commandIcon>
                             <onlyManualCast>True</onlyManualCast>
@@ -105,14 +105,12 @@
                     <verbs>
                         <li Class="CombatExtended.VerbPropertiesCE">
                             <label>launch rocket</label>
-                            <verbClass>CombatExtended.Verb_LaunchProjectileStaticCE</verbClass>
+                            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                             <hasStandardCommand>true</hasStandardCommand>
                             <commandIcon>UI/Ability/Missile</commandIcon>
                             <onlyManualCast>True</onlyManualCast>
                             <warmupTime>0.3</warmupTime>
                             <noiseRadius>4</noiseRadius>
-                            <!--<burstShotCount>3</burstShotCount>
-                            <ticksBetweenBurstShots>10</ticksBetweenBurstShots>-->
                             <range>63</range>
                             <minRange>15</minRange>
                             <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
@@ -173,7 +171,7 @@
                     <verbs>
                         <li Class="CombatExtended.VerbPropertiesCE">
                             <label>launch missile</label>
-                            <verbClass>CombatExtended.Verb_LaunchProjectileStaticCE</verbClass>
+                            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                             <hasStandardCommand>true</hasStandardCommand>
                             <commandIcon>UI/Ability/Missile</commandIcon>
                             <onlyManualCast>True</onlyManualCast>

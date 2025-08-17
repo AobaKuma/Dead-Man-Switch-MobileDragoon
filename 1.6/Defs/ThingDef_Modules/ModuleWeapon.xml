@@ -227,36 +227,50 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>DMS_Bullet_DragoonRocket</defName>
-    <thingClass>Exosuit.Projectile_Parabola</thingClass>
-    <label>rocket</label>
+    <thingClass>Fortified.Projectile_Parabola</thingClass>
+    <label>swarm rocket</label>
     <graphicData>
-      <texPath>Things/Ammo/76mm9M311Missile/Projectile</texPath>
+      <texPath>Things/Projectiles/S8</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
-      <drawSize>2</drawSize>
+      <drawSize>1.25</drawSize>
     </graphicData>
     <projectile>
       <damageDef>Bomb</damageDef>
-      <arcHeightFactor>10</arcHeightFactor>
-      <explosionRadius>3</explosionRadius>
-      <damageAmountBase>40</damageAmountBase>
-      <stoppingPower>4</stoppingPower>
       <speed>55</speed>
-      <armorPenetrationBase>0.55</armorPenetrationBase>
+      <armorPenetrationBase>0.5</armorPenetrationBase>
+      <explosionRadius>4.5</explosionRadius>
+      <explosionChanceToStartFire>0.8</explosionChanceToStartFire>
+      <damageAmountBase>40</damageAmountBase>
       <flyOverhead>true</flyOverhead>
+      <explosionRadiusDisplayPadding>3</explosionRadiusDisplayPadding>
+      <arcHeightFactor>4</arcHeightFactor>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundExplode>Explosion_Rocket</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
     </projectile>
     <comps>
-      <li Class="Exosuit.CompProperties_LaunchExhaust"/>
-      <li Class="Exosuit.CompProperties_ProjectileFleckEmitter">
-        <fleck>BlastFlame</fleck>
-        <offsetMin>(-2,0,-2)</offsetMin>
-        <offsetMax>(2,0,2)</offsetMax>
-        <emissionInterval>0</emissionInterval>
-        <burstCount>5</burstCount>
-        <scale>2~4</scale>
-        <rotationRate>-30~30</rotationRate>
-        <colorA>(1,1,1,1)</colorA>
-        <colorB>(0.8,0.8,0.8,1)</colorB>
+      <li Class="Fortified.CompProperties_AfterBurner">
+        <lifeTime>30</lifeTime>
+        <ExhaustFleck>DMS_Fleck_RocketFlame</ExhaustFleck>
+        <ExhaustCurve>
+          <points>
+            <li>(0,5)</li>
+            <li>(0.15,4)</li>
+            <li>(0.5,3)</li>
+            <li>(0.75,0)</li>
+          </points>
+        </ExhaustCurve>
+        <SmokeFleck>DMS_Fleck_RocketSmokeTrail</SmokeFleck>
+        <SmokeCurve>
+          <points>
+            <li>(0,1)</li>
+            <li>(0.5,1)</li>
+            <li>(0.9,1)</li>
+            <li>(1,0.5)</li>
+          </points>
+        </SmokeCurve>
       </li>
     </comps>
   </ThingDef>

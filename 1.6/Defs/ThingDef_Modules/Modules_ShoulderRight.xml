@@ -85,7 +85,7 @@
   <!-- 各種肩砲暫時是沒了 -->
 
   <!-- (右)肩部機槍 -->
-  <ThingDef ParentName="DMS_ModuleItemMountRight" Abstract="True">
+  <ThingDef ParentName="DMS_ModuleItemMountRight">
     <defName>DMS_Module_TurretPackLight</defName>
     <label>LMG Shoulder Mount</label>
     <description>A shoulder-mounted remote-controlled machine gun.</description>
@@ -115,7 +115,8 @@
       </li>
     </comps>
   </ThingDef>
-  <ThingDef ParentName="DMS_ModuleApparelMountRight" Abstract="True">
+
+  <ThingDef ParentName="DMS_ModuleApparelMountRight">
     <defName>DMS_Apparel_TurretPackLight</defName>
     <label>LMG Shoulder Mount</label>
     <description>A shoulder-mounted remote-controlled machine gun.</description>
@@ -150,40 +151,6 @@
           <offset>(-0.80,0,0.45)</offset>
         </dataEast>
       </drawData>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_TurretGun_Custom</nodeClass>
-          <workerClass>Exosuit.PawnRenderNodeWorker_TurretGun_Custom</workerClass>
-          <texPath>Things/Turrets/DMS_Gun_LMG</texPath>
-          <anchorTag>Gun</anchorTag>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <drawSize>1.25</drawSize>
-          <baseLayer>40</baseLayer>
-          <pawnType>Any</pawnType>
-          <drawData>
-            <scale>0.75</scale>
-            <defaultData>
-              <layer>30</layer>
-            </defaultData>
-            <dataSouth>
-              <offset>(-0.80,0,1.05)</offset>
-              <layer>10</layer>
-            </dataSouth>
-            <dataNorth>
-              <offset>(0.50,0,0.40)</offset>
-              <layer>80</layer>
-            </dataNorth>
-            <dataWest>
-              <offset>(-0.2,0,0.8)</offset>
-              <layer>-15</layer>
-              <rotationOffset>-180</rotationOffset>
-            </dataWest>
-            <dataEast>
-              <offset>(-0.9,0,0.25)</offset>
-            </dataEast>
-          </drawData>
-        </li>
-      </renderNodeProperties>
     </apparel>
     <verbs>
       <li>
@@ -216,9 +183,19 @@
             <description>A simple automatic gun made to be mounted on a shoulder.</description>
             <canBeToggled>true</canBeToggled>
             <comps>
-              <li Class="Exosuit.VerbCompPropertiesTurret">
-                <uniqueTargets>true</uniqueTargets>
-                <angleOffset>-90</angleOffset>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Turret">
+								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
+                <graphic>
+									<texPath>Things/Turrets/DMS_Gun_LMG</texPath>
+									<graphicClass>Graphic_Single</graphicClass>
+								</graphic>
+                <drawScale>1</drawScale>
+                <defaultPosition>
+										<Up>(0.65,0.75)</Up>
+										<Down>(-0.65,1.475)</Down>
+										<Right>(-0.85,0.7)</Right>
+										<Left>(0.6,1.5)</Left>
+                </defaultPosition>
               </li>
             </comps>
           </li>
@@ -228,7 +205,7 @@
   </ThingDef>
 
   <!-- (右)肩部機槍 (Kord)-->
-  <ThingDef ParentName="DMS_ModuleItemMountRight" Abstract="True">
+  <ThingDef ParentName="DMS_ModuleItemMountRight">
     <defName>DMS_Module_TurretPackHeavy</defName>
     <label>Kord Shoulder Mount</label>
     <description>A shoulder-mounted remote-controlled machine gun.</description>
@@ -258,7 +235,7 @@
       </li>
     </comps>
   </ThingDef>
-  <ThingDef ParentName="DMS_ModuleApparelMountRight" Abstract="True">
+  <ThingDef ParentName="DMS_ModuleApparelMountRight">
     <defName>DMS_Apparel_TurretPackHeavy</defName>
     <label>Kord Shoulder Mount</label>
     <description>A shoulder-mounted remote-controlled machine gun.</description>
@@ -293,39 +270,6 @@
           <offset>(-0.80,0,0.45)</offset>
         </dataEast>
       </drawData>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_TurretGun_Custom</nodeClass>
-          <workerClass>Exosuit.PawnRenderNodeWorker_TurretGun_Custom</workerClass>
-          <texPath>Things/Weapons/DMS_Kord_MD</texPath>
-          <anchorTag>Gun</anchorTag>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <drawSize>1.75</drawSize>
-          <baseLayer>40</baseLayer>
-          <pawnType>Any</pawnType>
-          <drawData>
-            <defaultData>
-              <layer>30</layer>
-            </defaultData>
-            <dataSouth>
-              <offset>(-0.80,0,1.05)</offset>
-              <layer>10</layer>
-            </dataSouth>
-            <dataNorth>
-              <offset>(0.50,0,0.40)</offset>
-              <layer>80</layer>
-            </dataNorth>
-            <dataWest>
-              <offset>(-0.2,0,0.8)</offset>
-              <layer>-15</layer>
-              <rotationOffset>-180</rotationOffset>
-            </dataWest>
-            <dataEast>
-              <offset>(-0.9,0,0.25)</offset>
-            </dataEast>
-          </drawData>
-        </li>
-      </renderNodeProperties>
     </apparel>
     <verbs>
       <li>
@@ -362,9 +306,19 @@
             <description>A HMG turret mounted on shoulder.</description>
             <canBeToggled>true</canBeToggled>
             <comps>
-              <li Class="Exosuit.VerbCompPropertiesTurret">
-                <uniqueTargets>true</uniqueTargets>
-                <angleOffset>-90</angleOffset>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Turret">
+								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
+                <graphic>
+									<texPath>Things/Weapons/DMS_Kord_MD</texPath>
+									<graphicClass>Graphic_Single</graphicClass>
+								</graphic>
+                <drawScale>2.5</drawScale>
+                <defaultPosition>
+										<Up>(0.65,0.75)</Up>
+										<Down>(-0.65,1.475)</Down>
+										<Right>(-0.85,0.7)</Right>
+										<Left>(0.6,1.5)</Left>
+                </defaultPosition>
               </li>
             </comps>
           </li>
@@ -374,7 +328,7 @@
   </ThingDef>
 
   <!-- (右)肩部機槍 (gau)-->
-  <ThingDef ParentName="DMS_ModuleItemMountRight" Abstract="True">
+  <ThingDef ParentName="DMS_ModuleItemMountRight">
     <defName>DMS_Module_TurretPackGAU</defName>
     <label>GAU19/A Shoulder Mount</label>
     <description>A shoulder-mounted remote-controlled machine gun.</description>
@@ -405,7 +359,7 @@
     </comps>
   </ThingDef>
   
-  <ThingDef ParentName="DMS_ModuleApparelMountRight" Abstract="True">
+  <ThingDef ParentName="DMS_ModuleApparelMountRight">
     <defName>DMS_Apparel_TurretPackGAU</defName>
     <label>GAU19/A Shoulder Mount</label>
     <description>A shoulder-mounted remote-controlled machine gun.</description>
@@ -440,40 +394,6 @@
           <offset>(-0.80,0,0.45)</offset>
         </dataEast>
       </drawData>
-      <renderNodeProperties>
-        <li>
-          <nodeClass>Exosuit.PawnRenderNode_TurretGun_Custom</nodeClass>
-          <workerClass>Exosuit.PawnRenderNodeWorker_TurretGun_Custom</workerClass>
-          <texPath>Things/Weapons/DMS_Weapon_GAU19</texPath>
-          <anchorTag>Gun</anchorTag>
-          <parentTagDef>WGApparelBody</parentTagDef>
-          <drawSize>2</drawSize>
-          <baseLayer>40</baseLayer>
-          <pawnType>Any</pawnType>
-          <drawData>
-            <scale>0.75</scale>
-            <defaultData>
-              <layer>30</layer>
-            </defaultData>
-            <dataSouth>
-              <offset>(-0.80,0,1.05)</offset>
-              <layer>10</layer>
-            </dataSouth>
-            <dataNorth>
-              <offset>(0.50,0,0.40)</offset>
-              <layer>80</layer>
-            </dataNorth>
-            <dataWest>
-              <offset>(-0.2,0,0.8)</offset>
-              <layer>-15</layer>
-              <rotationOffset>-180</rotationOffset>
-            </dataWest>
-            <dataEast>
-              <offset>(-0.9,0,0.25)</offset>
-            </dataEast>
-          </drawData>
-        </li>
-      </renderNodeProperties>
     </apparel>
     <verbs>
       <li>
@@ -506,9 +426,19 @@
             <description>A multibarrel turret mounted on shoulder.</description>
             <canBeToggled>true</canBeToggled>
             <comps>
-              <li Class="Exosuit.VerbCompPropertiesTurret">
-                <uniqueTargets>true</uniqueTargets>
-                <angleOffset>-90</angleOffset>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Turret">
+								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
+                <graphic>
+									<texPath>Things/Weapons/DMS_Weapon_GAU19</texPath>
+									<graphicClass>Graphic_Single</graphicClass>
+								</graphic>
+                <drawScale>2.25</drawScale>
+                <defaultPosition>
+										<Up>(0.65,0.75)</Up>
+										<Down>(-0.65,1.475)</Down>
+										<Right>(-0.85,0.7)</Right>
+										<Left>(0.6,1.5)</Left>
+                </defaultPosition>
               </li>
             </comps>
           </li>

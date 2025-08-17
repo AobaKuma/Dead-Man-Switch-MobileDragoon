@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Dragoon Tomahawk -->
+  <DMS_Dragoon_Axe.label>龍機戦斧</DMS_Dragoon_Axe.label>
+  <!-- EN: A lightweight one-handed axe used by Dragoons, designed for close combat between other exosuits or clearing passages in tight environments. Unlike Claymore, Dragoons doesn't require additional modules to hold a Tomahawk. Therefore it can be carried as a sidearm. -->
+  <DMS_Dragoon_Axe.description>龍機が使用する軽量片手斧。他の外骨格との近接戦闘や狭い環境での通路確保用に設計されています。重剣とは異なり、龍機は戦斧を保持するために追加の兵装を必要としません。したがって、副武装として携行できます。</DMS_Dragoon_Axe.description>
+  <!-- EN: poke -->
+  <DMS_Dragoon_Axe.tools.poke.label>突き</DMS_Dragoon_Axe.tools.poke.label>
+  <!-- EN: sweep -->
+  <DMS_Dragoon_Axe.tools.sweep.label>薙ぎ払い</DMS_Dragoon_Axe.tools.sweep.label>
+  <!-- EN: stock -->
+  <DMS_Dragoon_Axe.tools.stock.label>柄</DMS_Dragoon_Axe.tools.stock.label>
+  
+  <!-- EN: Dragoon Claymore -->
+  <DMS_Dragoon_Sword.label>龍機重剣</DMS_Dragoon_Sword.label>
+  <!-- EN: A two-handed great sword used by Dragoons, it is specially designed to fight against large creatures and war machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications. -->
+  <DMS_Dragoon_Sword.description>龍機が使用する両手重剣。大型生物と戦争機械との戦闘専用に設計され、軍刀と装甲貫通槌の機能を持ちます。その重量により、軽歩兵と要塞の掃討に使用しても非常に効果的です。</DMS_Dragoon_Sword.description>
+  <!-- EN: poke -->
+  <DMS_Dragoon_Sword.tools.poke.label>突き</DMS_Dragoon_Sword.tools.poke.label>
+  <!-- EN: sweep -->
+  <DMS_Dragoon_Sword.tools.sweep.label>薙ぎ払い</DMS_Dragoon_Sword.tools.sweep.label>
+  <!-- EN: stock -->
+  <DMS_Dragoon_Sword.tools.stock.label>柄</DMS_Dragoon_Sword.tools.stock.label>
+  
+</LanguageData>
+

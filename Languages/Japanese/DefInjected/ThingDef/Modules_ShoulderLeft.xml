@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: armor Pad -->
+  <DMS_Apparel_ArmorPad.label>装甲板</DMS_Apparel_ArmorPad.label>
+  <!-- EN: A heavy shoulder armor mounted on an exosuit frame. -->
+  <DMS_Apparel_ArmorPad.description>外骨格機体に装着される重肩装甲。</DMS_Apparel_ArmorPad.description>
+  
+  <!-- EN: Demolish Missile Pod -->
+  <DMS_Apparel_MissilePod.label>破砕誘導弾架</DMS_Apparel_MissilePod.label>
+  <!-- EN: A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use. -->
+  <DMS_Apparel_MissilePod.description>様々な兵器基盤に取り付ける誘導弾架兵装。対要塞用の赤外線誘導弾4発の装填と発射が可能です。</DMS_Apparel_MissilePod.description>
+  <!-- EN: missile -->
+  <DMS_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>誘導弾</DMS_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_MissilePod.comps.CompApparelReloadable.cooldownGerund>冷却中</DMS_Apparel_MissilePod.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: launch missile -->
+  <DMS_Apparel_MissilePod.verbs.launch_missile.label>誘導弾発射</DMS_Apparel_MissilePod.verbs.launch_missile.label>
+  
+  <!-- EN: Missile Pod Plus -->
+  <DMS_Apparel_MissilePodPlus.label>誘導弾架増強型</DMS_Apparel_MissilePodPlus.label>
+  <!-- EN: A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles. -->
+  <DMS_Apparel_MissilePodPlus.description>様々な兵器基盤に取り付ける誘導弾架兵装。より重いですが、2倍の量の誘導弾を装填できます。</DMS_Apparel_MissilePodPlus.description>
+  <!-- EN: missile -->
+  <DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.chargeNoun>誘導弾</DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.cooldownGerund>冷却中</DMS_Apparel_MissilePodPlus.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: launch missile -->
+  <DMS_Apparel_MissilePodPlus.verbs.launch_missile.label>誘導弾発射</DMS_Apparel_MissilePodPlus.verbs.launch_missile.label>
+  
+  <!-- EN: Smoke launcher -->
+  <DMS_Apparel_SmokeLauncher.label>煙幕発射器</DMS_Apparel_SmokeLauncher.label>
+  <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
+  <DMS_Apparel_SmokeLauncher.description>煙幕弾を装填し、正確な遮蔽を提供できる簡素な遠隔制御発射器。</DMS_Apparel_SmokeLauncher.description>
+  <!-- EN: smoke shell -->
+  <DMS_Apparel_SmokeLauncher.comps.CompApparelReloadable.chargeNoun>煙幕弾</DMS_Apparel_SmokeLauncher.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_SmokeLauncher.comps.CompApparelReloadable.cooldownGerund>冷却中</DMS_Apparel_SmokeLauncher.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: launch smoke shell -->
+  <DMS_Apparel_SmokeLauncher.verbs.launch_smoke_shell.label>煙幕弾発射</DMS_Apparel_SmokeLauncher.verbs.launch_smoke_shell.label>
+  
+  <!-- EN: Stugna launcher -->
+  <DMS_Apparel_StugnaLauncher.label>対戦車弾発射器</DMS_Apparel_StugnaLauncher.label>
+  <!-- EN: A Dragoon shoulder launcher that holds two stugna missiles. It is effective against heavy mechs and even tanks. However, a long aiming time and a clear line of sight are required to lock on target. -->
+  <DMS_Apparel_StugnaLauncher.description>2発の対戦車誘導弾を保持する龍機肩部発射器。重機械や戦車にさえ効果的です。ただし、目標を追尾するには長い照準時間と明確な視線が必要です。</DMS_Apparel_StugnaLauncher.description>
+  <!-- EN: stugna missile -->
+  <DMS_Apparel_StugnaLauncher.comps.CompApparelReloadable.chargeNoun>対戦車誘導弾</DMS_Apparel_StugnaLauncher.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_StugnaLauncher.comps.CompApparelReloadable.cooldownGerund>冷却中</DMS_Apparel_StugnaLauncher.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: launch stugna missile -->
+  <DMS_Apparel_StugnaLauncher.verbs.launch_stugna_missile.label>対戦車誘導弾発射</DMS_Apparel_StugnaLauncher.verbs.launch_stugna_missile.label>
+
+  <!-- EN: Swarm rocket Pod -->
+  <DMS_Apparel_SwarmMissilePod.label>多連装推進弾架</DMS_Apparel_SwarmMissilePod.label>
+  <!-- EN: A Rocket pod module that contains multiple high-explosive rocket rounds, can use its high fire rate to cover an large area. -->
+  <DMS_Apparel_SwarmMissilePod.description>多数の高威力推進弾を内蔵する推進弾架兵装。高速連射により広範囲の制圧が可能です。</DMS_Apparel_SwarmMissilePod.description>
+  <!-- EN: rocket -->
+  <DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.chargeNoun>火箭</DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.cooldownGerund>冷却中</DMS_Apparel_SwarmMissilePod.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: launch rocket -->
+  <DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>火箭発射</DMS_Apparel_SwarmMissilePod.verbs.launch_rocket.label>
+  
+  <!-- EN: hellfire missile -->
+  <DMS_Bullet_HellFire.label>ヘルファイア誘導弾</DMS_Bullet_HellFire.label>
+  
+  <!-- EN: armor Pad -->
+  <DMS_Module_ArmorPad.label>装甲板</DMS_Module_ArmorPad.label>
+  <!-- EN: A heavy shoulder armor mounted on an exosuit frame. -->
+  <DMS_Module_ArmorPad.description>外骨格機体に装着される重肩装甲。</DMS_Module_ArmorPad.description>
+  
+  <!-- EN: Missile Pod -->
+  <DMS_Module_MissilePod.label>誘導弾架</DMS_Module_MissilePod.label>
+  <!-- EN: A missile pod module that attach on variety of weapon platforms, Capable of loading and firing four infrared guided missiles for anti-fortification use. -->
+  <DMS_Module_MissilePod.description>様々な兵器基盤に取り付ける誘導弾架兵装。対要塞用の赤外線誘導弾4発の装填と発射が可能です。</DMS_Module_MissilePod.description>
+  
+  <!-- EN: Missile Pod Plus -->
+  <DMS_Module_MissilePodPlus.label>誘導弾架増強型</DMS_Module_MissilePodPlus.label>
+  <!-- EN: A missile pod module that attach on variety of weapon platforms, it is heavier but capable of loading double amount of missiles. -->
+  <DMS_Module_MissilePodPlus.description>様々な兵器基盤に取り付ける誘導弾架兵装。より重いですが、2倍の量の誘導弾を装填できます。</DMS_Module_MissilePodPlus.description>
+  
+  <!-- EN: Smoke launcher -->
+  <DMS_Module_SmokeLauncher.label>煙幕発射器</DMS_Module_SmokeLauncher.label>
+  <!-- EN: A simple remote-controlled launcher capable of loading smoke shells and providing accurate cover. -->
+  <DMS_Module_SmokeLauncher.description>煙幕弾を装填し、正確な遮蔽を提供できる簡素な遠隔制御発射器。</DMS_Module_SmokeLauncher.description>
+  
+  <!-- EN: Stugna launcher -->
+  <DMS_Module_StugnaLauncher.label>対戦車弾発射器</DMS_Module_StugnaLauncher.label>
+  <!-- EN: A Dragoon shoulder launcher that holds two stugna missiles. It is effective against heavy mechs and even tanks. However, a long aiming time and a clear line of sight are required to lock on target. -->
+  <DMS_Module_StugnaLauncher.description>2発の対戦車誘導弾を保持する龍機肩部発射器。重機械や戦車にさえ効果的です。ただし、目標を追尾するには長い照準時間と明確な視線が必要です。</DMS_Module_StugnaLauncher.description>
+  
+  <!-- EN: Swarm rocket Pod -->
+  <DMS_Module_SwarmMissilePod.label>多連装推進弾架</DMS_Module_SwarmMissilePod.label>
+  <!-- EN: Rocket pod contains multiple HE rockets, can use its high fire rate to cover an large area. -->
+  <DMS_Module_SwarmMissilePod.description>多数の高威力推進弾を内蔵する推進弾架兵装。高速連射により広範囲の制圧が可能です。</DMS_Module_SwarmMissilePod.description>
+
+</LanguageData>
+
+

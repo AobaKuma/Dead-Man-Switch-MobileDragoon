@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: F/A-47 "Arsenal Angel" frame -->
+  <DMS_Apparel_FA47_Core.label>F/A-47「武装天使」機体</DMS_Apparel_FA47_Core.label>
+  <!-- EN: A Dragoon with outer space combat capabilities, used by the Colonial Fleet Orbital Cavalry. Its fully enclosed shell is made of plasteel. can carry a propulsion system capable of short-distance suborbital flights on the planet's surface. -->
+  <DMS_Apparel_FA47_Core.description>植民艦隊軌道騎兵隊が使用する宇宙戦闘能力を持つ龍機。完全密閉された殻体はプラスチールで作られており、惑星表面での短距離準軌道飛行が可能な推進系統を搭載できます。</DMS_Apparel_FA47_Core.description>
+  <!-- EN: mechanical fist -->
+  <DMS_Apparel_FA47_Core.tools.mechanical_fist.label>機械拳</DMS_Apparel_FA47_Core.tools.mechanical_fist.label>
+  <!-- EN: mechanical leg -->
+  <DMS_Apparel_FA47_Core.tools.mechanical_leg.label>機械脚</DMS_Apparel_FA47_Core.tools.mechanical_leg.label>
+  
+  <!-- EN: F/A-47 "Arsenal Angel" helmet -->
+  <DMS_Apparel_FA47_Helmet.label>F/A-47「武装天使」頭部</DMS_Apparel_FA47_Helmet.label>
+  <!-- EN: A complex synthetic caliber sensor module used by colonial fleets on dragoons used in space operations, It can effectively track high-speed moving enemies and assist pilot in aiming. -->
+  <DMS_Apparel_FA47_Helmet.description>植民艦隊が宇宙作戦で使用する龍機に搭載される複合合成口径感知兵装。高速移動する敵を効果的に追跡し、操縦者の照準を支援します。</DMS_Apparel_FA47_Helmet.description>
+  
+  <!-- EN: F/A-47 "Arsenal Angel" core module -->
+  <DMS_Module_FA47_Core.label>F/A-47「武装天使」中核兵装</DMS_Module_FA47_Core.label>
+  <!-- EN: A Dragoon with outer space combat capabilities, used by the Colonial Fleet Orbital Cavalry. Its fully enclosed shell is made of plasteel. can carry a propulsion system capable of short-distance suborbital flights on the planet's surface. -->
+  <DMS_Module_FA47_Core.description>植民艦隊軌道騎兵隊が使用する宇宙戦闘能力を持つ龍機。完全密閉された殻体はプラスチールで作られており、惑星表面での短距離準軌道飛行が可能な推進系統を搭載できます。</DMS_Module_FA47_Core.description>
+  
+  <!-- EN: F/A-47 "Arsenal Angel" helmet -->
+  <DMS_Module_FA47_Helmet.label>F/A-47「武装天使」頭部</DMS_Module_FA47_Helmet.label>
+  <!-- EN: A complex synthetic caliber sensor module used by colonial fleets on dragoons used in space operations, It can effectively track high-speed moving enemies and assist pilot in aiming. -->
+  <DMS_Module_FA47_Helmet.description>植民艦隊が宇宙作戦で使用する龍機に搭載される複合合成感知兵装。高速移動する敵を効果的に追跡し、操縦者の照準を支援します。</DMS_Module_FA47_Helmet.description>
+  
+</LanguageData>
+

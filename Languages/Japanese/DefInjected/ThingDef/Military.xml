@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: EFP suit -->
+  <DMS_Apparel_PilotSuit.label>外骨格操縦服</DMS_Apparel_PilotSuit.label>
+  <!-- EN: EFP suit stands for Exo-Frame Pilot jumpsuit. An armoured suit designed for exosuit pilots. It has excellent bulletproof performance with adequate cushioning lining and composite bulletproof sheets. Also with environmental protection capabilities against nuclear or bio-weapons. But most pilots would rather wear a bulletproof vest than wear this when driving an exoskeleton because it's inconvenient and very stuffy. -->
+  <DMS_Apparel_PilotSuit.description>外骨格操縦服(EFPスーツ)は外骨格機体操縦者用作業衣の略です。外骨格操縦者向けに設計された装甲服で、適切な衝撃吸収パッドと複合防弾板により優れた防弾性能を備えています。また、核兵器や生物兵器に対する環境耐性も備えています。しかし、ほとんどの操縦者は外骨格を操縦する際、不便で非常に蒸し暑いため、これを着るよりも防弾着の着用を好みます。</DMS_Apparel_PilotSuit.description>
+  
+</LanguageData>

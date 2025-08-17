@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: PV-4 "Old Buddy" frame module -->
+  <DMS_Apparel_PV4_Core.label>PV-4「戦友」機体兵装</DMS_Apparel_PV4_Core.label>
+  <!-- EN: An old Dragoon model, notorious for its risk of tearing apart less skilled pilots while piloting. It can be traced back to the armed intervention of the colonial fleet during the Zartha crisis. \n\n According to legend, an armored task force equipped with this type of dragoon annihilated an army several times its own in just three days. Since it was decommissioned and replaced by safer models nearly a hundred years ago, making it rarely circulated in the rimworld. But its extremely compact design also gives it a performance that even modern dragoons cannot match. \n\n In order to keep pilot's safely, you need the pilot to wear specialized pilot uniform. -->
+  <DMS_Apparel_PV4_Core.description>古い龍機型。操縦中に技量の劣る操縦者を引き裂く危険性で悪名高い。ザルタ危機における植民艦隊の武力介入まで遡ることができます。
+
+伝説によると、この種の龍機で装備された装甲機動部隊が、わずか3日間で自軍の数倍の敵軍を殲滅したとされています。約100年前により安全な型に退役・交換されたため、リムワールドでの流通は稀です。しかし、その極めて堅牢な設計により、現代の龍機でさえ匹敵できない性能を持ちます。
+
+操縦者の安全を保つため、専用の操縦服の着用が必要です。</DMS_Apparel_PV4_Core.description>
+  <!-- EN: mechanical fist -->
+  <DMS_Apparel_PV4_Core.tools.mechanical_fist.label>機械拳</DMS_Apparel_PV4_Core.tools.mechanical_fist.label>
+  <!-- EN: mechanical leg -->
+  <DMS_Apparel_PV4_Core.tools.mechanical_leg.label>機械脚</DMS_Apparel_PV4_Core.tools.mechanical_leg.label>
+  
+  <!-- EN: PV-4 "Miboche" helmet -->
+  <DMS_Apparel_PV4_Helmet.label>PV-4「護面」頭部装甲</DMS_Apparel_PV4_Helmet.label>
+  <!-- EN: An old but very effective heavy helmet, using a synthetic aperture detector that was somewhat expensive at the time and integrated composite plastic armor. It is airtight enough to move freely even on the battlefield of nuclear, biological and chemical warfare. -->
+  <DMS_Apparel_PV4_Helmet.description>古いが非常に効果的な重装頭部装甲。当時やや高価だった合成開口検出器と統合複合樹脂装甲を使用しています。核・生物・化学戦の戦場でも自由に行動できるほど気密性が高いです。</DMS_Apparel_PV4_Helmet.description>
+  
+  <!-- EN: PV-4 "Old Buddy" frame module -->
+  <DMS_Module_PV4_Core.label>PV-4「戦友」機体兵装</DMS_Module_PV4_Core.label>
+  <!-- EN: An old Dragoon model formerly known as Slayer of Zartha, whose actual call sign has been forgotten by people, notorious for its risk of tearing apart less skilled pilots while piloting. It can be traced back to the armed intervention of the colonial fleet during the Zartha crisis. \n\n According to legend, an armored task force equipped with this type of dragoon annihilated an army several times its own in just three days. Since it was decommissioned and replaced by safer models nearly a hundred years ago, making it rarely circulated in the rimworld. But its extremely compact design also gives it a performance that even modern dragoons cannot match. \n\n In order to keep pilot's safely, you need the pilot to wear specialized pilot uniform. -->
+  <DMS_Module_PV4_Core.description>かつて「ザルタの殺戮者」として知られた古い龍機型。実際の呼称は人々に忘れられており、操縦中に技量の劣る操縦者を引き裂く危険性で悪名高い。ザルタ危機における植民艦隊の武力介入まで遡ることができます。
+
+伝説によると、この種の龍機で装備された装甲機動部隊が、わずか3日間で自軍の数倍の敵軍を殲滅したとされています。約100年前により安全な型に退役・交換されたため、リムワールドでの流通は稀です。しかし、その極めて堅牢な設計により、現代の龍機でさえ匹敵できない性能を持ちます。
+
+操縦者の安全を保つため、専用の操縦服の着用が必要です。</DMS_Module_PV4_Core.description>
+
+  <!-- EN: PV-4 "Miboche" helmet -->
+  <DMS_Module_PV4_Helmet.label>PV-4「ミボーシェ」ヘルメット</DMS_Module_PV4_Helmet.label>
+  <!-- EN: An old but very effective heavy helmet, using a synthetic aperture detector that was somewhat expensive at the time and integrated composite plastic armor. It is airtight enough to move freely even on the battlefield of nuclear, biological and chemical warfare. -->
+  <DMS_Module_PV4_Helmet.description>古いが非常に効果的な重ヘルメット。当時やや高価だった合成開口検出器と統合複合プラスチール装甲を使用しています。核・生物・化学戦の戦場でも自由に行動できるほど気密性が高いです。</DMS_Module_PV4_Helmet.description>
+  
+</LanguageData>
+

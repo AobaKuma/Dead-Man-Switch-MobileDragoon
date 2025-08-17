@@ -2,10 +2,10 @@
 <LanguageData>
   
   <!-- EN: town dragoon -->
-  <DMS_Dragoon_Outlander.label>町の龍機</DMS_Dragoon_Outlander.label>
+  <DMS_Dragoon_Outlander.label>市街龍機</DMS_Dragoon_Outlander.label>
   
   <!-- EN: pirate dragoon -->
-  <DMS_Dragoon_Pirate.label>山賊龍機</DMS_Dragoon_Pirate.label>
+  <DMS_Dragoon_Pirate.label>海賊龍機</DMS_Dragoon_Pirate.label>
   
   <!-- EN: rotary man -->
   <DMS_Dragoon_PirateRotary.label>回転砲兵</DMS_Dragoon_PirateRotary.label>

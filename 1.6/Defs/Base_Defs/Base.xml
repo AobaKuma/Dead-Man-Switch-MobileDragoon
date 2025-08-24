@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <MVCF.ModDef>
+    <MVCF.ModDef MayRequire="oskarpotocki.vanillafactionsexpanded.core">
         <defName>DMSMD</defName>
         <label>DMS Mobile dragoon</label>
         <description>DMS Mobile dragoon</description>
@@ -114,7 +114,6 @@
         <comps>
             <li Class="CompProperties_Styleable" />
         </comps>
-        
     </ThingDef>
 
     <ThingDef Name="DMS_ModuleApparelHead" ParentName="DMS_ModuleApparelBase" Abstract="True">

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <AbilityDef Abstract="true">
+        <defName>OM_AssaultBurst</defName>
+        <label>assault burst</label>
+        <description>Fly instantly to another map by choosing a world tile or site.</description>
+        <iconPath>UI/Ability/Grenade</iconPath>
+        <cooldownTicksRange>1800~1800</cooldownTicksRange>
+        <charges>2</charges>
+        <cooldownPerCharge>true</cooldownPerCharge>
+        <targetRequired>false</targetRequired>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <defaultCooldownTime>5</defaultCooldownTime>
+            <verbClass>Exosuit.Verb_FlyAcrossMaps</verbClass>
+            <onlyManualCast>false</onlyManualCast>
+            <requireLineOfSight>false</requireLineOfSight>
+            <range>24.9</range>
+            <warmupTime>0.5</warmupTime>
+            <soundCast>Mortar_LaunchA</soundCast>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetAnimals>true</canTargetAnimals>
+                <canTargetHumans>true</canTargetHumans>
+                <canTargetEntities>False</canTargetEntities>
+                <canTargetSubhumans>False</canTargetSubhumans>
+                <canTargetMechs>false</canTargetMechs>
+                <canTargetBuildings>false</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+</Defs>

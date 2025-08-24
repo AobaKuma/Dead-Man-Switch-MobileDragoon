@@ -64,6 +64,7 @@
         <scale>0.75</scale>
         <dataSouth>
           <offset>(0.75,0,-0.10)</offset>
+          <layer>25</layer>
         </dataSouth>
         <dataNorth>
           <offset>(-0.50,0,0.15)</offset>
@@ -158,6 +159,7 @@
         <scale>1.4</scale>
         <dataSouth>
           <offset>(0.8,0,0.3)</offset>
+          <layer>25</layer>
         </dataSouth>
         <dataNorth>
           <offset>(-0.80,0,0.45)</offset>
@@ -421,6 +423,7 @@
         <scale>0.8</scale>
         <dataSouth>
           <offset>(0.65,0,0.05)</offset>
+          <layer>25</layer>
         </dataSouth>
         <dataNorth>
           <offset>(-0.60,0,0.15)</offset>

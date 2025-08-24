@@ -311,7 +311,7 @@
         </dataEast>
       </drawData>
       <renderNodeProperties>
-        <li Class="Exosuit.PawnRenderNodeProperties_ApparelWeaponHolder"><!-- TODO:修正位置 -->
+        <li Class="Exosuit.PawnRenderNodeProperties_ApparelWeaponHolder">
           <parentTagDef>WGApparelBody</parentTagDef>
           <drawData>
             <scale>1.7</scale>

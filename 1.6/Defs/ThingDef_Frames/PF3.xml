@@ -101,10 +101,10 @@
       <li Class="Exosuit.ApparelRenderOffsets">
         <headData>
           <dataWest>
-            <offset>(-0.4,0,0.35)</offset>
+            <offset>(-0.4,0,0.2)</offset>
           </dataWest>
           <dataEast>
-            <offset>(0.4,0,0.35)</offset>
+            <offset>(0.4,0,0.2)</offset>
           </dataEast>
           <dataSouth>
             <offset>(0,0,0.15)</offset>
@@ -115,7 +115,7 @@
         </headHideFor>
         <rootData>
           <defaultData>
-            <offset>(0,0,0.35)</offset>
+            <offset>(0,0,0.26)</offset>
           </defaultData>
         </rootData>
       </li>

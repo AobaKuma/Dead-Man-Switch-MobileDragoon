@@ -115,12 +115,12 @@
         </headHideFor>
         <rootData>
           <defaultData>
-            <offset>(0,0,0.35)</offset>
+            <offset>(0,0,0.26)</offset>
           </defaultData>
         </rootData>
         <equipmentOffsetData>
           <dataWest>
-            <offset>(-0.25,0,0)</offset>
+            <offset>(-0.35,-1,0.6)</offset>
           </dataWest>
           <dataEast>
             <offset>(0.25,0,0)</offset>

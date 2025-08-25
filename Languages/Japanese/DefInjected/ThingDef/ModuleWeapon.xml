@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: rocket -->
+  <DMS_Bullet_DragoonRocket.label>推進弾</DMS_Bullet_DragoonRocket.label>
+  
+  <!-- EN: canister darts -->
+  <DMS_Bullet_DragoonShotgun.label>散弾</DMS_Bullet_DragoonShotgun.label>
+  
+  <!-- EN: Dragoon DMR -->
+  <DMS_Dragoon_DMR.label>龍機精密銃</DMS_Dragoon_DMR.label>
+  <!-- EN: A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon. -->
+  <DMS_Dragoon_DMR.description>龍機のサイズに比例した精密射撃銃ですが、人間にとっては基本的に致命的な大口径自動砲です。高精度照準のために電子合成画像測距器を使用し、大型兵器としてはかなりの精度を持ちます。</DMS_Dragoon_DMR.description>
+  <!-- EN: stock -->
+  <DMS_Dragoon_DMR.tools.stock.label>銃床</DMS_Dragoon_DMR.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_Dragoon_DMR.tools.barrel.label>銃身</DMS_Dragoon_DMR.tools.barrel.label>
+  <!-- EN: Dragoon DMR -->
+  <DMS_Dragoon_DMR.verbs.Verb_Shoot.label>龍機精密銃</DMS_Dragoon_DMR.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Dragoon LMG -->
+  <DMS_Dragoon_LMG.label>龍機軽機銃</DMS_Dragoon_LMG.label>
+  <!-- EN: A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities. -->
+  <DMS_Dragoon_LMG.description>龍機のサイズに比例した軽機関銃ですが、人間にとっては基本的に致命的な大口径自動砲です。重い弾倉を使用して十分な火力持続性と制圧能力を提供します。</DMS_Dragoon_LMG.description>
+  <!-- EN: stock -->
+  <DMS_Dragoon_LMG.tools.stock.label>銃床</DMS_Dragoon_LMG.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_Dragoon_LMG.tools.barrel.label>銃身</DMS_Dragoon_LMG.tools.barrel.label>
+  <!-- EN: Dragoon LMG -->
+  <DMS_Dragoon_LMG.verbs.Verb_Shoot.label>龍機軽機銃</DMS_Dragoon_LMG.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Dragoon Shotgun -->
+  <DMS_Dragoon_Shotgun.label>龍機散弾銃</DMS_Dragoon_Shotgun.label>
+  <!-- EN: A heavy-duty semi-automatic shotgun code-named "Dragon", this equipment was designed to provide dragoons with decent firepower in close range without taking up too much weight. it's capable of firing a white phosphorous canister called Dragonbreath to incinerate the enemy. -->
+  <DMS_Dragoon_Shotgun.description>暗号名「竜」の頑丈な半自動散弾銃。この装備は、重量を過度に増やすことなく、龍機に近距離での適切な火力を提供するよう設計されました。敵を焼却するために「竜息」と呼ばれる白燐弾を発射することができます。</DMS_Dragoon_Shotgun.description>
+  <!-- EN: stock -->
+  <DMS_Dragoon_Shotgun.tools.stock.label>銃床</DMS_Dragoon_Shotgun.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_Dragoon_Shotgun.tools.barrel.label>銃身</DMS_Dragoon_Shotgun.tools.barrel.label>
+  <!-- EN: Dragoon Shotgun -->
+  <DMS_Dragoon_Shotgun.verbs.Verb_Shoot.label>龍機散弾銃</DMS_Dragoon_Shotgun.verbs.Verb_Shoot.label>
+  
+</LanguageData>
+

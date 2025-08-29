@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Catapult -->
+  <MF_Building_EjectorBay.label>射出機</MF_Building_EjectorBay.label>
+  <!-- EN: A special launcher to deploy mobile dragoon instantly, which can eject an exosuit to a far-away distance. -->
+  <MF_Building_EjectorBay.description>機動龍機を瞬時に展開するための特殊な射出装置。外骨格を遠距離まで射出することができます。</MF_Building_EjectorBay.description>
+  
+</LanguageData>
+

@@ -42,9 +42,9 @@
 				<li>DMS_Apparel_SwarmMissilePod</li>
 				<!-- Modules_ShoulderLeft -->
 				<li>DMS_Apparel_RelayAntenna</li>
-				<!-- <li>DMS_Apparel_TurretPackGAU</li> -->
-				<!-- <li>DMS_Apparel_TurretPackHeavy</li> -->
-				<!-- <li>DMS_Apparel_TurretPackLight</li> -->
+				<li MayRequire="oskarpotocki.vanillafactionsexpanded.core">DMS_Apparel_TurretPackGAU</li>
+				<li MayRequire="oskarpotocki.vanillafactionsexpanded.core">DMS_Apparel_TurretPackHeavy</li>
+				<li MayRequire="oskarpotocki.vanillafactionsexpanded.core">DMS_Apparel_TurretPackLight</li>
 			</value>
 		</match>
 	</Operation>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ScenarioDef ParentName="ScenarioBase" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+	<ScenarioDef ParentName="ScenarioBase" MayRequire="AOBA.Framework">
 		<defName>DMSMD_Scenario</defName>
 		<label>The Veteran</label>
 		<description>A legendary pilot decides to retire and start a different story.</description>
@@ -150,8 +150,8 @@ Finally, you decide to retire, at least leave a different story for this weapon,
 				<def>StartingResearch</def>
 				<project>DMS_Automatroid</project>
 				</li>
-				<li Class="KCSG.ScenPart_AddStartingStructure">
-				<def>VFEC_AddStartingStructure</def>
+				<li Class="Fortified.Structures.ScenPart_AddStartingStructure">
+				<def>FFF_AddStartingStructure</def>
 				<structureLabel>A decommissioned old base</structureLabel>
 				<nearMapCenter>True</nearMapCenter>
 				<chooseFrom>
@@ -167,8 +167,8 @@ Finally, you decide to retire, at least leave a different story for this weapon,
 				<hediff>CryptosleepSickness</hediff>
 				<severityRange>1~1</severityRange>
 				</li>
-				<li Class="VEF.Factions.ScenPart_ForcedFactionGoodwill">
-				<def>VFEC_ForcedFactionGoodwill</def>
+				<li Class="Fortified.Structures.ScenPart_ForcedFactionGoodwill">
+				<def>FFF_ForcedFactionGoodwill</def>
 				<factionDef>DMS_Army</factionDef>
 				<affectHiddenFactions>True</affectHiddenFactions>
 				<affectStartingGoodwill>True</affectStartingGoodwill>

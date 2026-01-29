@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMS_DragoonNest_A</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -183,9 +183,9 @@
       <li>ludeon.rimworld.biotech</li>
       <li>aoba.exosuit.framework</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMS_DragoonNest_B</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -415,84 +415,84 @@
       <li>aoba.exosuit.framework</li>
       <li>ludeon.rimworld.biotech</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 
-  <KCSG.SymbolDef >
+  <Fortified.Structures.SymbolDef >
     <defName>MF_Building_ParkingSpot_West</defName>
     <thing>MF_Building_ParkingSpot</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>MF_Building_Scaffold_South</defName>
     <thing>MF_Building_Scaffold</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_TableMachinePrinter_South</defName>
     <thing>DMS_TableMachinePrinter</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Turret_Okhotnik</defName>
     <thing>DMS_Turret_Okhotnik</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>MF_Building_ScaffoldStair_West</defName>
     <thing>MF_Building_ScaffoldStair</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>MF_Building_Scaffold_North</defName>
     <thing>MF_Building_Scaffold</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>MF_Building_ScaffoldStair_North</defName>
     <thing>MF_Building_ScaffoldStair</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>MF_Building_ComponentStorage_West</defName>
     <thing>MF_Building_ComponentStorage</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>MF_Building_MaintenanceBay_North</defName>
     <thing>MF_Building_MaintenanceBay</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>MF_Building_Scaffold_West</defName>
     <thing>MF_Building_Scaffold</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>MF_Building_Scaffold_East</defName>
     <thing>MF_Building_Scaffold</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_TableMachinePrinter_North</defName>
     <thing>DMS_TableMachinePrinter</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_BandNode</defName>
     <thing>DMS_BandNode</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>MF_Building_ScaffoldStair_South</defName>
     <thing>MF_Building_ScaffoldStair</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
 </Defs>

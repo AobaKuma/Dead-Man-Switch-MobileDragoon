@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <MVCF.ModDef MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-        <defName>DMSMD</defName>
-        <label>DMS Mobile dragoon</label>
-        <description>DMS Mobile dragoon</description>
-        <ActivateFeatures>
-            <li>Drawing</li>
-            <li>ApparelVerbs</li>
-            <li>IndependentFire</li>
-            <li>IntegratedToggle</li>
-        </ActivateFeatures>
-    </MVCF.ModDef>
-    
+
     <!-- 物品型態的龍騎兵裝備 -->
     <ThingDef Name="DMS_ModuleItemBase" ParentName="ModuleItemBase" Abstract="True">
         <recipeMaker>

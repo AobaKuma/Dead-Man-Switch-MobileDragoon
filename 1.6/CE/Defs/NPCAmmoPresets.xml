@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <Exosuit.CE.NPCAmmoPresetDef>
+        <defName>MF_NPCAmmo_GenericIndustrialMix</defName>
+        <label>generic industrial mix</label>
+        <priority>10</priority>
+        <generateChance>0.7</generateChance> <!-- 70% 概率使用混装，否则回退到单装 -->
+        <fillRatio>0.9</fillRatio>
+        <entries>
+            <li>
+                <ammoClass>FullMetalJacket</ammoClass>
+                <ratio>3</ratio>
+            </li>
+            <li>
+                <ammoClass>ArmorPiercing</ammoClass>
+                <ratio>1</ratio>
+            </li>
+        </entries>
+    </Exosuit.CE.NPCAmmoPresetDef>
+
+    <Exosuit.CE.NPCAmmoPresetDef>
+        <defName>MF_NPCAmmo_GenericAdvancedMix</defName>
+        <label>generic advanced mix</label>
+        <priority>15</priority>
+        <generateChance>0.7</generateChance>
+        <fillRatio>0.9</fillRatio>
+        <entries>
+            <li>
+                <ammoClass>Sabot</ammoClass>
+                <ratio>2</ratio>
+            </li>
+            <li>
+                <ammoClass>ArmorPiercing</ammoClass>
+                <ratio>1</ratio>
+            </li>
+        </entries>
+    </Exosuit.CE.NPCAmmoPresetDef>
+
+    <Exosuit.CE.NPCAmmoPresetDef>
+        <defName>MF_NPCAmmo_ShotgunMix</defName>
+        <label>shotgun mix</label>
+        <priority>20</priority>
+        <generateChance>0.6</generateChance>
+        <fillRatio>0.8</fillRatio>
+        <entries>
+            <li>
+                <ammoClass>BuckShot</ammoClass>
+                <ratio>2</ratio>
+            </li>
+            <li>
+                <ammoClass>Slug</ammoClass>
+                <ratio>1</ratio>
+            </li>
+        </entries>
+    </Exosuit.CE.NPCAmmoPresetDef>
+
+    <Exosuit.CE.NPCAmmoPresetDef>
+        <defName>DMS_NPCAmmo_ShotgunAntiAir</defName>
+        <label>shotgun anti-armor mix</label>
+        <priority>25</priority>
+        <generateChance>0.8</generateChance>
+        <fillRatio>0.9</fillRatio>
+        <entries>
+            <li>
+                <ammoClass>ElectroSlug</ammoClass>
+                <ratio>1</ratio>
+            </li>
+            <li>
+                <ammoClass>Slug</ammoClass>
+                <ratio>6</ratio>
+            </li>
+        </entries>
+    </Exosuit.CE.NPCAmmoPresetDef>
+</Defs>

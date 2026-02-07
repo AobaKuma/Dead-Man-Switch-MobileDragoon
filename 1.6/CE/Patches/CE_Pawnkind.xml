@@ -59,6 +59,32 @@
                     </li>
                 </value>
             </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/PawnKindDef[contains(defName, "Dragoon") or contains(defName, "WalkerFrame")]/modExtensions/li[@Class="Exosuit.ModExtForceApparelGen"]/apparels/li[text()="DMS_Apparel_PackCargo" or text()="DMS_Apparel_PackFrame" or text()="DMS_Apparel_CargoBox"]</xpath>
+                <value>
+                    <li>MF_Apparel_AmmoBackpack</li>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/PawnKindDef[contains(defName, "Dragoon") or contains(defName, "WalkerFrame")]/modExtensions/li[@Class="Exosuit.ModExtForceApparelGen"]/chanceApparels/li[apparel="DMS_Apparel_PackCargo" or apparel="DMS_Apparel_PackFrame" or apparel="DMS_Apparel_CargoBox"]/apparel</xpath>
+                <value>
+                    <apparel>MF_Apparel_AmmoBackpack</apparel>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/PawnKindDef[contains(defName, "Dragoon") or contains(defName, "WalkerFrame")]/modExtensions/li[@Class="Exosuit.ModExtForceApparelGen"]</xpath>
+                <value>
+                    <fallbackApparels>
+                        <li>
+                            <target>MF_Apparel_AmmoBackpack</target>
+                            <fallback>DMS_Apparel_PackCargo</fallback>
+                        </li>
+                    </fallbackApparels>
+                </value>
+            </li>
         </operations>
     </Operation>
 </Patch>

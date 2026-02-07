@@ -85,7 +85,7 @@
   <!-- 各種肩砲需要VEF支持 -->
 
   <!-- (右)肩部機槍 -->
-  <ThingDef ParentName="DMS_ModuleItemMountRight" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+  <ThingDef ParentName="DMS_ModuleItemMountRight">
     <defName>DMS_Module_TurretPackLight</defName>
     <label>LMG Shoulder Mount</label>
     <description>A shoulder-mounted remote-controlled machine gun.</description>
@@ -116,7 +116,7 @@
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="DMS_ModuleApparelMountRight" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+  <ThingDef ParentName="DMS_ModuleApparelMountRight">
     <defName>DMS_Apparel_TurretPackLight</defName>
     <label>LMG Shoulder Mount</label>
     <description>A shoulder-mounted remote-controlled machine gun.</description>
@@ -151,13 +151,37 @@
           <offset>(-0.80,0,0.45)</offset>
         </dataEast>
       </drawData>
+      <renderNodeProperties>
+        <li Class="Mechsuit.PawnRenderNodeProperties_TurretGun">
+          <debugLabel>ShoulderTurret_LMG</debugLabel>
+          <texPath>Things/Turrets/DMS_Gun_LMG</texPath>
+          <drawData>
+            <scale>1</scale>
+            <defaultData>
+              <layer>85</layer>
+            </defaultData>
+            <dataNorth>
+              <offset>(0.65,0,0.75)</offset>
+            </dataNorth>
+            <dataSouth>
+              <offset>(-0.65,0,1.475)</offset>
+            </dataSouth>
+            <dataEast>
+              <offset>(-0.85,0,0.7)</offset>
+            </dataEast>
+            <dataWest>
+              <offset>(0.6,0,1.5)</offset>
+            </dataWest>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <verbs>
       <li>
-        <commandIcon>Things/Dragoon/TurretPack/TurretPack_MachineGun</commandIcon>
-        <verbClass>Verb_Shoot</verbClass>
+        <verbClass>Mechsuit.AsyncShootVerb</verbClass>
         <label>Gun</label>
         <hasStandardCommand>true</hasStandardCommand>
+        <commandIcon>Things/Dragoon/TurretPack/TurretPack_MachineGun</commandIcon>
         <defaultProjectile>Bullet_AssaultRifle</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>15.9</range>
@@ -175,37 +199,16 @@
           <li>MountRight</li>
         </occupiedSlots>
       </li>
-      <li Class="MVCF.Comps.CompProperties_VerbGiver">
-        <verbProps>
-          <li>
-            <label>Gun</label>
-            <visualLabel>Mounted LMG</visualLabel>
-            <description>A simple automatic gun made to be mounted on a shoulder.</description>
-            <canBeToggled>true</canBeToggled>
-            <comps>
-              <li Class="MVCF.VerbComps.VerbCompProperties_Turret">
-								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
-                <graphic>
-									<texPath>Things/Turrets/DMS_Gun_LMG</texPath>
-									<graphicClass>Graphic_Single</graphicClass>
-								</graphic>
-                <drawScale>1</drawScale>
-                <defaultPosition>
-										<Up>(0.65,0.75)</Up>
-										<Down>(-0.65,1.475)</Down>
-										<Right>(-0.85,0.7)</Right>
-										<Left>(0.6,1.5)</Left>
-                </defaultPosition>
-              </li>
-            </comps>
-          </li>
-        </verbProps>
+      <li Class="Mechsuit.CompProperties_TurretGun">
+        <!-- 示例：限制炮塔旋转范围（相对于机体正面） -->
+        <!-- <minAngle>-45</minAngle> --><!-- 向左偏转最大45度 -->
+        <!-- <maxAngle>45</maxAngle> --><!-- 向右偏转最大45度 -->
       </li>
     </comps>
   </ThingDef>
 
   <!-- (右)肩部機槍 (Kord)-->
-  <ThingDef ParentName="DMS_ModuleItemMountRight" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+  <ThingDef ParentName="DMS_ModuleItemMountRight">
     <defName>DMS_Module_TurretPackHeavy</defName>
     <label>Kord Shoulder Mount</label>
     <description>A shoulder-mounted remote-controlled machine gun.</description>
@@ -235,7 +238,7 @@
       </li>
     </comps>
   </ThingDef>
-  <ThingDef ParentName="DMS_ModuleApparelMountRight" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+  <ThingDef ParentName="DMS_ModuleApparelMountRight">
     <defName>DMS_Apparel_TurretPackHeavy</defName>
     <label>Kord Shoulder Mount</label>
     <description>A shoulder-mounted remote-controlled machine gun.</description>
@@ -270,13 +273,37 @@
           <offset>(-0.80,0,0.45)</offset>
         </dataEast>
       </drawData>
+      <renderNodeProperties>
+        <li Class="Mechsuit.PawnRenderNodeProperties_TurretGun">
+          <debugLabel>ShoulderTurret_Kord</debugLabel>
+          <texPath>Things/Weapons/DMS_Kord_MD</texPath>
+          <drawData>
+            <scale>2.5</scale>
+            <defaultData>
+              <layer>85</layer>
+            </defaultData>
+            <dataNorth>
+              <offset>(0.65,0,0.75)</offset>
+            </dataNorth>
+            <dataSouth>
+              <offset>(-0.65,0,1.475)</offset>
+            </dataSouth>
+            <dataEast>
+              <offset>(-0.85,0,0.7)</offset>
+            </dataEast>
+            <dataWest>
+              <offset>(0.6,0,1.5)</offset>
+            </dataWest>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <verbs>
       <li>
-        <commandIcon>Things/Dragoon/TurretPack/TurretPack_Kord</commandIcon>
-        <verbClass>Verb_Shoot</verbClass>
+        <verbClass>Mechsuit.AsyncShootVerb</verbClass>
         <label>Gun</label>
-        <hasStandardCommand>false</hasStandardCommand>
+        <hasStandardCommand>true</hasStandardCommand>
+        <commandIcon>Things/Dragoon/TurretPack/TurretPack_Kord</commandIcon>
         <defaultProjectile>DMS_Bullet_Kord</defaultProjectile>
         <requireLineOfSight>true</requireLineOfSight>
         <warmupTime>1.5</warmupTime>
@@ -298,37 +325,12 @@
           <li>MountRight</li>
         </occupiedSlots>
       </li>
-      <li Class="MVCF.Comps.CompProperties_VerbGiver">
-        <verbProps>
-          <li>
-            <label>Gun</label>
-            <visualLabel>Mounted Kord</visualLabel>
-            <description>A HMG turret mounted on shoulder.</description>
-            <canBeToggled>true</canBeToggled>
-            <comps>
-              <li Class="MVCF.VerbComps.VerbCompProperties_Turret">
-								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
-                <graphic>
-									<texPath>Things/Weapons/DMS_Kord_MD</texPath>
-									<graphicClass>Graphic_Single</graphicClass>
-								</graphic>
-                <drawScale>2.5</drawScale>
-                <defaultPosition>
-										<Up>(0.65,0.75)</Up>
-										<Down>(-0.65,1.475)</Down>
-										<Right>(-0.85,0.7)</Right>
-										<Left>(0.6,1.5)</Left>
-                </defaultPosition>
-              </li>
-            </comps>
-          </li>
-        </verbProps>
-      </li>
+      <li Class="Mechsuit.CompProperties_TurretGun" />
     </comps>
   </ThingDef>
 
   <!-- (右)肩部機槍 (gau)-->
-  <ThingDef ParentName="DMS_ModuleItemMountRight" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+  <ThingDef ParentName="DMS_ModuleItemMountRight">
     <defName>DMS_Module_TurretPackGAU</defName>
     <label>GAU19/A Shoulder Mount</label>
     <description>A shoulder-mounted remote-controlled machine gun.</description>
@@ -359,7 +361,7 @@
     </comps>
   </ThingDef>
   
-  <ThingDef ParentName="DMS_ModuleApparelMountRight" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+  <ThingDef ParentName="DMS_ModuleApparelMountRight">
     <defName>DMS_Apparel_TurretPackGAU</defName>
     <label>GAU19/A Shoulder Mount</label>
     <description>A shoulder-mounted remote-controlled machine gun.</description>
@@ -394,12 +396,36 @@
           <offset>(-0.80,0,0.45)</offset>
         </dataEast>
       </drawData>
+      <renderNodeProperties>
+        <li Class="Mechsuit.PawnRenderNodeProperties_TurretGun">
+          <debugLabel>ShoulderTurret_GAU</debugLabel>
+          <texPath>Things/Weapons/DMS_Weapon_GAU19</texPath>
+          <drawData>
+            <scale>2.25</scale>
+            <defaultData>
+              <layer>85</layer>
+            </defaultData>
+            <dataNorth>
+              <offset>(0.65,0,0.75)</offset>
+            </dataNorth>
+            <dataSouth>
+              <offset>(-0.65,0,1.475)</offset>
+            </dataSouth>
+            <dataEast>
+              <offset>(-0.85,0,0.7)</offset>
+            </dataEast>
+            <dataWest>
+              <offset>(0.6,0,1.5)</offset>
+            </dataWest>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <verbs>
       <li>
-        <commandIcon>Things/Dragoon/TurretPack/TurretPack_GAU</commandIcon>
-        <verbClass>Verb_Shoot</verbClass>
+        <verbClass>Mechsuit.AsyncShootVerb</verbClass>
         <label>Gun</label>
+        <commandIcon>Things/Dragoon/TurretPack/TurretPack_GAU</commandIcon>
         <defaultProjectile>DMS_Bullet_Kord</defaultProjectile>
         <warmupTime>1.2</warmupTime>
         <range>45</range>
@@ -418,32 +444,7 @@
           <li>MountRight</li>
         </occupiedSlots>
       </li>
-      <li Class="MVCF.Comps.CompProperties_VerbGiver">
-        <verbProps>
-          <li>
-            <label>Gun</label>
-            <visualLabel>Mounted GAU-19/A</visualLabel>
-            <description>A multibarrel turret mounted on shoulder.</description>
-            <canBeToggled>true</canBeToggled>
-            <comps>
-              <li Class="MVCF.VerbComps.VerbCompProperties_Turret">
-								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
-                <graphic>
-									<texPath>Things/Weapons/DMS_Weapon_GAU19</texPath>
-									<graphicClass>Graphic_Single</graphicClass>
-								</graphic>
-                <drawScale>2.25</drawScale>
-                <defaultPosition>
-										<Up>(0.65,0.75)</Up>
-										<Down>(-0.65,1.475)</Down>
-										<Right>(-0.85,0.7)</Right>
-										<Left>(0.6,1.5)</Left>
-                </defaultPosition>
-              </li>
-            </comps>
-          </li>
-        </verbProps>
-      </li>
+      <li Class="Mechsuit.CompProperties_TurretGun" />
     </comps>
   </ThingDef>
 

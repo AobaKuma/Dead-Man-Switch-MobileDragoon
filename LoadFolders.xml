@@ -16,6 +16,6 @@
 		<li IfModActive="erdelf.humanoidalienraces,erdelf.humanoidalienraces_steam">1.6/MOD/HAR</li>
 		<li IfModActive="breadmo.cinders,breadmo.cinders_steam">1.6/MOD/Cinders</li>
 		<li IfModActive="aoba.deadmanswitch.ancientcorps,aoba.deadmanswitch.ancientcorps_steam">1.6/MOD/DMSAC</li>
-		<li IfModActive="oskarpotocki.vanillafactionsexpanded.core,oskarpotocki.vanillafactionsexpanded.core_steam">1.6/MOD/VEF</li>
+		<li IfModActive="AOBA.Framework">1.6/MOD/VEF</li>
 	</v1.6>
 </loadFolders>

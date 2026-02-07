@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-    <Operation Class="PatchOperationSequence" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+    <Operation Class="PatchOperationSequence" MayRequire="CETeam.CombatExtended">
         <operations>
-            <!--LMG Turret-->
+            <!--========== LMG Turret ==========-->
+            <!-- CE Stats -->
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Module_TurretPackLight"]/statBases/Mass</xpath>
                 <value>
@@ -21,15 +22,15 @@
                     <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
                 </value>
             </li>
-
+            <!-- CE Verb -->
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackLight"]/verbs</xpath>
                 <value>
                     <verbs>
                         <li Class="CombatExtended.VerbPropertiesCE">
-                            <label>Gun</label>
+                            <label>LMG</label>
                             <recoilAmount>1.25</recoilAmount>
-                            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                            <verbClass>Exosuit.CE.AsyncShootVerbCE</verbClass>
                             <hasStandardCommand>true</hasStandardCommand>
                             <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
                             <commandIcon>Things/Dragoon/TurretPack/TurretPack_MachineGun</commandIcon>
@@ -49,7 +50,21 @@
                     </verbs>
                 </value>
             </li>
-            <!--Kord Turret-->
+            <!-- Turret Ammo Component -->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackLight"]/comps</xpath>
+                <value>
+                    <li Class="Exosuit.CE.CompProperties_TurretAmmo">
+                        <magCapacity>500</magCapacity>
+                        <reloadTicks>90</reloadTicks>
+                        <ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+                        <defaultAllowBackpackFeed>true</defaultAllowBackpackFeed>
+                    </li>
+                </value>
+            </li>
+
+            <!--========== Kord Turret ==========-->
+            <!-- CE Stats -->
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Module_TurretPackHeavy"]/statBases/Mass</xpath>
                 <value>
@@ -68,19 +83,18 @@
                     <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
                 </value>
             </li>
-
             <li Class="PatchOperationRemove">
                 <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackHeavy"]/equippedStatOffsets/MoveSpeed</xpath>
             </li>
-
+            <!-- CE Verb -->
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackHeavy"]/verbs</xpath>
                 <value>
                     <verbs>
                         <li Class="CombatExtended.VerbPropertiesCE">
-                            <label>Gun</label>
+                            <label>Kord</label>
                             <recoilAmount>1.46</recoilAmount>
-                            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                            <verbClass>Exosuit.CE.AsyncShootVerbCE</verbClass>
                             <hasStandardCommand>true</hasStandardCommand>
                             <defaultProjectile>Bullet_127x108mm_FMJ</defaultProjectile>
                             <commandIcon>Things/Dragoon/TurretPack/TurretPack_Kord</commandIcon>
@@ -100,8 +114,21 @@
                     </verbs>
                 </value>
             </li>
+            <!-- Turret Ammo Component -->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackHeavy"]/comps</xpath>
+                <value>
+                    <li Class="Exosuit.CE.CompProperties_TurretAmmo">
+                        <magCapacity>300</magCapacity>
+                        <reloadTicks>110</reloadTicks>
+                        <ammoSet>AmmoSet_127x108mm</ammoSet>
+                        <defaultAllowBackpackFeed>true</defaultAllowBackpackFeed>
+                    </li>
+                </value>
+            </li>
 
-            <!--GAU Turret-->
+            <!--========== GAU Turret ==========-->
+            <!-- CE Stats -->
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Module_TurretPackGAU"]/statBases/Mass</xpath>
                 <value>
@@ -120,15 +147,15 @@
                     <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
                 </value>
             </li>
-
+            <!-- CE Verb -->
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackGAU"]/verbs</xpath>
                 <value>
                     <verbs>
                         <li Class="CombatExtended.VerbPropertiesCE">
-                            <label>Gun</label>
+                            <label>GAU-19</label>
                             <recoilAmount>1.31</recoilAmount>
-                            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                            <verbClass>Exosuit.CE.AsyncShootVerbCE</verbClass>
                             <hasStandardCommand>true</hasStandardCommand>
                             <defaultProjectile>Bullet_50BMG_FMJ</defaultProjectile>
                             <commandIcon>Things/Dragoon/TurretPack/TurretPack_GAU</commandIcon>
@@ -148,107 +175,17 @@
                     </verbs>
                 </value>
             </li>
-
-            <!--Turret Ammo-->
-            <li Class="CombatExtended.PatchOperation_ConditionalGeneric">
-                <generic Class="PatchOperationSequence">
-                    <operations>
-                        <li Class="PatchOperationAdd">
-                            <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackLight"]/comps</xpath>
-                            <value>
-                                <li Class="CompProperties_ApparelReloadable">
-                                    <maxCharges>500</maxCharges>
-                                    <ammoDef>Ammo_RifleIntermediate_FMJ</ammoDef>
-                                    <ammoCountPerCharge>1</ammoCountPerCharge>
-                                    <baseReloadTicks>90</baseReloadTicks>
-                                    <soundReload>Standard_Reload</soundReload>
-                                    <hotKey>Misc4</hotKey>
-                                    <chargeNoun>intermediate rifle ammo FMJ</chargeNoun>
-                                    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-                                </li>
-                            </value>
-                        </li>
-                        <li Class="PatchOperationAdd">
-                            <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackHeavy"]/comps</xpath>
-                            <value>
-                                <li Class="CompProperties_ApparelReloadable">
-                                    <maxCharges>300</maxCharges>
-                                    <ammoDef>Ammo_AntiMateriel_FMJ</ammoDef>
-                                    <ammoCountPerCharge>1</ammoCountPerCharge>
-                                    <baseReloadTicks>110</baseReloadTicks>
-                                    <soundReload>Standard_Reload</soundReload>
-                                    <hotKey>Misc4</hotKey>
-                                    <chargeNoun>anti-materiel rifle ammo FMJ</chargeNoun>
-                                    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-                                </li>
-                            </value>
-                        </li>
-                        <li Class="PatchOperationAdd">
-                            <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackGAU"]/comps</xpath>
-                            <value>
-                                <li Class="CompProperties_ApparelReloadable">
-                                    <maxCharges>420</maxCharges>
-                                    <ammoDef>Ammo_AntiMateriel_FMJ</ammoDef>
-                                    <ammoCountPerCharge>1</ammoCountPerCharge>
-                                    <baseReloadTicks>150</baseReloadTicks>
-                                    <soundReload>Standard_Reload</soundReload>
-                                    <hotKey>Misc4</hotKey>
-                                    <chargeNoun>anti-materiel rifle ammo FMJ</chargeNoun>
-                                    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-                                </li>
-                            </value>
-                        </li>
-                    </operations>
-                </generic>
-                <standard Class="PatchOperationSequence">
-                    <operations>
-                        <li Class="PatchOperationAdd">
-                            <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackLight"]/comps</xpath>
-                            <value>
-                                <li Class="CompProperties_ApparelReloadable">
-                                    <maxCharges>500</maxCharges>
-                                    <ammoDef>Ammo_556x45mmNATO_FMJ</ammoDef>
-                                    <ammoCountPerCharge>1</ammoCountPerCharge>
-                                    <baseReloadTicks>90</baseReloadTicks>
-                                    <soundReload>Standard_Reload</soundReload>
-                                    <hotKey>Misc4</hotKey>
-                                    <chargeNoun>5.56x45mm NATO FMJ</chargeNoun>
-                                    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-                                </li>
-                            </value>
-                        </li>
-                        <li Class="PatchOperationAdd">
-                            <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackHeavy"]/comps</xpath>
-                            <value>
-                                <li Class="CompProperties_ApparelReloadable">
-                                    <maxCharges>300</maxCharges>
-                                    <ammoDef>Ammo_127x108mm_FMJ</ammoDef>
-                                    <ammoCountPerCharge>1</ammoCountPerCharge>
-                                    <baseReloadTicks>110</baseReloadTicks>
-                                    <soundReload>Standard_Reload</soundReload>
-                                    <hotKey>Misc4</hotKey>
-                                    <chargeNoun>12.7x108mm Soviet FMJ</chargeNoun>
-                                    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-                                </li>
-                            </value>
-                        </li>
-                        <li Class="PatchOperationAdd">
-                            <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackGAU"]/comps</xpath>
-                            <value>
-                                <li Class="CompProperties_ApparelReloadable">
-                                    <maxCharges>420</maxCharges>
-                                    <ammoDef>Ammo_50BMG_FMJ</ammoDef>
-                                    <ammoCountPerCharge>1</ammoCountPerCharge>
-                                    <baseReloadTicks>150</baseReloadTicks>
-                                    <soundReload>Standard_Reload</soundReload>
-                                    <hotKey>Misc4</hotKey>
-                                    <chargeNoun>.50BMG FMJ</chargeNoun>
-                                    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-                                </li>
-                            </value>
-                        </li>
-                    </operations>
-                </standard>
+            <!-- Turret Ammo Component -->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_TurretPackGAU"]/comps</xpath>
+                <value>
+                    <li Class="Exosuit.CE.CompProperties_TurretAmmo">
+                        <magCapacity>420</magCapacity>
+                        <reloadTicks>150</reloadTicks>
+                        <ammoSet>AmmoSet_50BMG</ammoSet>
+                        <defaultAllowBackpackFeed>true</defaultAllowBackpackFeed>
+                    </li>
+                </value>
             </li>
         </operations>
     </Operation>

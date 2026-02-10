@@ -151,7 +151,7 @@
       <MoveSpeed>-0.15</MoveSpeed>
       <ConstructSuccessChance>0.25</ConstructSuccessChance>
       <PlantWorkSpeed>0.5</PlantWorkSpeed>
-      <ConstructionSpeedFactor>0.75</ConstructionSpeedFactor>
+      <ConstructionSpeed>0.75</ConstructionSpeed>
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Things/Dragoon/WorkArm/apparel</wornGraphicPath>

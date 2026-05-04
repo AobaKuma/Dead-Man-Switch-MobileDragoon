@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ScenarioDef[defName="DMSMD_Scenario"]/scenario/parts</xpath>
+				<value>
+					<li Class="ScenPart_StartingThing_Defined">
+						<def>StartingThing_Defined</def>
+						<thingDef>Ammo_50AE_HP</thingDef>
+						<count>300</count>
+					</li>
+					<li Class="ScenPart_StartingThing_Defined">
+						<def>StartingThing_Defined</def>
+						<thingDef>Ammo_40x102mm_Buck</thingDef>
+						<count>180</count>
+					</li>
+					<li Class="ScenPart_StartingThing_Defined">
+						<def>StartingThing_Defined</def>
+						<thingDef>Ammo_40x102mm_Slug</thingDef>
+						<count>90</count>
+					</li>
+					<li Class="ScenPart_StartingThing_Defined">
+						<def>StartingThing_Defined</def>
+						<thingDef>MF_Module_AmmoBackpack_Light</thingDef>
+						<count>1</count>
+					</li>
+					<li Class="ScenPart_StartingThing_Defined">
+						<def>StartingThing_Defined</def>
+						<thingDef>DMS_Module_TurretPackLight</thingDef>
+						<count>1</count>
+					</li>
+					<li Class="ScenPart_StartingThing_Defined">
+						<def>StartingThing_Defined</def>
+						<thingDef>Ammo_556x45mmNATO_FMJ</thingDef>
+						<count>1000</count>
+					</li>
+					<li Class="ScenPart_StartingThing_Defined">
+						<def>StartingThing_Defined</def>
+						<thingDef>Ammo_127x108mm_FMJ</thingDef>
+						<count>600</count>
+					</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

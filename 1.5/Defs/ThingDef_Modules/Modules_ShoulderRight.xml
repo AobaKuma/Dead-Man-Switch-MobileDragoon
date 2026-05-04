@@ -1,24 +1,117 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+    <!-- (右)中繼天線 -->
+    <ThingDef ParentName="DMS_ModuleItemMountRight">
+        <defName>DMS_Module_RelayAntenna</defName>
+        <label>Relay Antenna</label>
+        <description>An antenna module that expands the control range for friendly mechanics. Although the control range is relatively limited, it is enough to allow mechanics to coordinate infantry around the frame.</description>
+        <descriptionHyperlinks>
+            <ThingDef>DMS_Apparel_RelayAntenna</ThingDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MaxHitPoints>25</MaxHitPoints>
+            <Mass>15</Mass>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisite>DMS_MobileDragoonModule</researchPrerequisite>
+			<workAmount>30000</workAmount>
+        </recipeMaker>
+        <costList>
+            <Steel>160</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <EquipedThingDef>DMS_Apparel_RelayAntenna</EquipedThingDef>
+                <slots>
+                    <li>MountRight</li>
+                </slots>
+            </li>
+        </comps>
+    </ThingDef>
+    <ThingDef ParentName="DMS_ModuleApparelMountRight">
+        <defName>DMS_Apparel_RelayAntenna</defName>
+        <label>Relay Antenna</label>
+        <description>An antenna module that expands the control range for friendly mechanics. Although the control range is relatively limited, it is enough to allow mechanics to coordinate infantry around the frame.</description>
+        <descriptionHyperlinks>
+            <ThingDef>DMS_Module_RelayAntenna</ThingDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Dragoon/RelayAntenna/apparel_south</texPath>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>25</MaxHitPoints>
+            <Mass>15</Mass>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.1</MoveSpeed>
+        </equippedStatOffsets>
+        <apparel>
+            <renderNodeProperties>
+                <li>
+                    <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+                    <workerClass>PawnRenderNodeWorker</workerClass>
+                    <texPath>Things/Dragoon/RelayAntenna/apparel</texPath>
+                    <parentTagDef>WGApparelBody</parentTagDef>
+                    <baseLayer>20</baseLayer>
+                    <drawSize>1.125</drawSize>
+                    <pawnType>Any</pawnType>
+                    <useGraphic>true</useGraphic>
+                    <drawData>
+                        <dataSouth>
+                            <offset>(-0.90,0,0.90)</offset>
+                            <layer>0</layer>
+                        </dataSouth>
+                        <dataNorth>
+                            <offset>(0.90,0,0.50)</offset>
+                            <layer>75</layer>
+                        </dataNorth>
+                        <dataWest>
+                            <offset>(0.50,0,0.9)</offset>
+                            <layer>0</layer>
+                        </dataWest>
+                        <dataEast>
+                            <offset>(-0.90,0,0.65)</offset>
+                            <layer>0</layer>
+                        </dataEast>
+                    </drawData>
+                </li>
+            </renderNodeProperties>
+        </apparel>
+        <comps>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <ItemDef>DMS_Module_RelayAntenna</ItemDef>
+                <slots>
+                    <li>MountRight</li>
+                </slots>
+            </li>
+            <li Class="DMS.CompProperties_SubRelay">
+                <relayRange>10</relayRange>
+            </li>
+        </comps>
+    </ThingDef>
 
     <!-- (右)肩部機槍 -->
     <ThingDef ParentName="DMS_ModuleItemMountRight">
         <defName>DMS_Module_TurretPackLight</defName>
         <label>LMG Shoulder Mount</label>
-        <description>todo.</description>
+        <description>A shoulder-mounted remote-controlled machine gun.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_TurretPackLight</ThingDef>
         </descriptionHyperlinks>
         <statBases>
-            <MaxHitPoints>100</MaxHitPoints>
-            <Mass>8</Mass>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Mass>30</Mass>
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+			<workAmount>30000</workAmount>
         </recipeMaker>
         <costList>
             <Steel>100</Steel>
-            <ComponentIndustrial>2</ComponentIndustrial>
+			<Tungsteel>75</Tungsteel>
+			<ComponentStamped>5</ComponentStamped>
+            <ComponentIndustrial>5</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -29,15 +122,18 @@
             </li>
         </comps>
     </ThingDef>
+
+    
     <ThingDef ParentName="DMS_ModuleApparelMountRight">
         <defName>DMS_Apparel_TurretPackLight</defName>
         <label>LMG Shoulder Mount</label>
-        <description>Todo.</description>
+        <description>A shoulder-mounted remote-controlled machine gun.</description>
         <graphicData>
             <texPath>Things/Dragoon/TurretPack/TurretPack_MachineGun</texPath>
         </graphicData>
         <statBases>
-            <Mass>0</Mass>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Mass>30</Mass>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>-0.12</MoveSpeed>
@@ -47,14 +143,15 @@
             <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
-                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
+                    <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+                    <workerClass>PawnRenderNodeWorker</workerClass>
+                    <texPath>Things/Dragoon/TurretPack/apparel</texPath>
                     <parentTagDef>WGApparelBody</parentTagDef>
+                    <baseLayer>20</baseLayer>
+                    <drawSize>0.75</drawSize>
+                    <pawnType>Any</pawnType>
+                    <useGraphic>true</useGraphic>
                     <drawData>
-                        <scale>0.75</scale>
-                        <defaultData>
-                            <layer>20</layer>
-                        </defaultData>
                         <dataSouth>
                             <offset>(-0.50,0,1.05)</offset>
                             <layer>0</layer>
@@ -152,20 +249,23 @@
     <ThingDef ParentName="DMS_ModuleItemMountRight">
         <defName>DMS_Module_TurretPackHeavy</defName>
         <label>Kord Shoulder Mount</label>
-        <description>todo.</description>
+        <description>A shoulder-mounted remote-controlled machine gun.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_TurretPackHeavy</ThingDef>
         </descriptionHyperlinks>
         <statBases>
             <MaxHitPoints>100</MaxHitPoints>
-            <Mass>8</Mass>
+            <Mass>50</Mass>
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+			<workAmount>30000</workAmount>
         </recipeMaker>
         <costList>
             <Steel>100</Steel>
-            <ComponentIndustrial>2</ComponentIndustrial>
+            <Tungsteel>100</Tungsteel>
+			<ComponentStamped>5</ComponentStamped>
+			<ComponentIndustrial>5</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -179,29 +279,30 @@
     <ThingDef ParentName="DMS_ModuleApparelMountRight">
         <defName>DMS_Apparel_TurretPackHeavy</defName>
         <label>Kord Shoulder Mount</label>
-        <description>Todo.</description>
+        <description>A shoulder-mounted remote-controlled machine gun.</description>
         <graphicData>
             <texPath>Things/Dragoon/TurretPack/TurretPack_Kord</texPath>
         </graphicData>
         <statBases>
-            <Mass>0</Mass>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>50</Mass>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>-0.12</MoveSpeed>
         </equippedStatOffsets>
         <tickerType>Normal</tickerType>
         <apparel>
-            <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
-                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
+                    <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+                    <workerClass>PawnRenderNodeWorker</workerClass>
+                    <texPath>Things/Dragoon/TurretPack/apparel</texPath>
                     <parentTagDef>WGApparelBody</parentTagDef>
+                    <baseLayer>20</baseLayer>
+                    <drawSize>0.75</drawSize>
+                    <pawnType>Any</pawnType>
+                    <useGraphic>true</useGraphic>
                     <drawData>
-                        <scale>0.75</scale>
-                        <defaultData>
-                            <layer>20</layer>
-                        </defaultData>
                         <dataSouth>
                             <offset>(-0.50,0,1.05)</offset>
                             <layer>0</layer>
@@ -257,7 +358,7 @@
                 <commandIcon>Things/Dragoon/TurretPack/TurretPack_Kord</commandIcon>
                 <verbClass>Verb_Shoot</verbClass>
                 <label>Gun</label>
-                <hasStandardCommand>true</hasStandardCommand>
+                <hasStandardCommand>false</hasStandardCommand>
                 <defaultProjectile>DMS_Bullet_Kord</defaultProjectile>
                 <requireLineOfSight>true</requireLineOfSight>
                 <warmupTime>1.5</warmupTime>
@@ -302,20 +403,23 @@
     <ThingDef ParentName="DMS_ModuleItemMountRight">
         <defName>DMS_Module_TurretPackGAU</defName>
         <label>GAU19/A Shoulder Mount</label>
-        <description>todo.</description>
+        <description>A shoulder-mounted remote-controlled machine gun.</description>
         <descriptionHyperlinks>
             <ThingDef>DMS_Apparel_TurretPackGAU</ThingDef>
         </descriptionHyperlinks>
         <statBases>
-            <MaxHitPoints>100</MaxHitPoints>
-            <Mass>8</Mass>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Mass>100</Mass>
         </statBases>
         <recipeMaker>
             <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
+			<workAmount>30000</workAmount>
         </recipeMaker>
         <costList>
             <Steel>100</Steel>
-            <ComponentIndustrial>2</ComponentIndustrial>
+			<Tungsteel>120</Tungsteel>
+			<ComponentStamped>8</ComponentStamped>
+			<ComponentIndustrial>5</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -329,29 +433,30 @@
     <ThingDef ParentName="DMS_ModuleApparelMountRight">
         <defName>DMS_Apparel_TurretPackGAU</defName>
         <label>GAU19/A Shoulder Mount</label>
-        <description>Todo.</description>
+        <description>A shoulder-mounted remote-controlled machine gun.</description>
         <graphicData>
             <texPath>Things/Dragoon/TurretPack/TurretPack_GAU</texPath>
         </graphicData>
         <statBases>
-            <Mass>0</Mass>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Mass>100</Mass>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>-0.12</MoveSpeed>
         </equippedStatOffsets>
         <tickerType>Normal</tickerType>
         <apparel>
-            <wornGraphicPath>Things/Dragoon/TurretPack/apparel</wornGraphicPath>
             <renderNodeProperties>
                 <li>
-                    <nodeClass>PawnRenderNode_Apparel</nodeClass>
-                    <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
+                    <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+                    <workerClass>PawnRenderNodeWorker</workerClass>
+                    <texPath>Things/Dragoon/TurretPack/apparel</texPath>
                     <parentTagDef>WGApparelBody</parentTagDef>
+                    <baseLayer>20</baseLayer>
+                    <drawSize>0.75</drawSize>
+                    <pawnType>Any</pawnType>
+                    <useGraphic>true</useGraphic>
                     <drawData>
-                        <scale>0.75</scale>
-                        <defaultData>
-                            <layer>20</layer>
-                        </defaultData>
                         <dataSouth>
                             <offset>(-0.50,0,1.05)</offset>
                             <layer>0</layer>
@@ -444,4 +549,5 @@
             </li>
         </comps>
     </ThingDef>
+    
 </Defs>

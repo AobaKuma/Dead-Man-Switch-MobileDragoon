@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Swarm missile -->
+  <Swarmmissile_EnableAmmo.label>蜂窝火箭</Swarmmissile_EnableAmmo.label>
+  <!-- EN: swarm missile enable -->
+  <Swarmmissile_EnableAmmo.description>启用蜂窝火箭</Swarmmissile_EnableAmmo.description>
+  <!-- EN: Swarm missile -->
+  <Swarmmissile_EnableAmmo.verbs.Verb_Shoot.label>蜂窝火箭</Swarmmissile_EnableAmmo.verbs.Verb_Shoot.label>
+  
+</LanguageData>

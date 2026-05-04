@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: payload cabinet -->
+  <DMS_Apparel_CargoBox.label>载荷挂架</DMS_Apparel_CargoBox.label>
+  <!-- EN: An attached metal rack capable of storing payloads on a walker frame. -->
+  <DMS_Apparel_CargoBox.description>一个安装在框架左胸位置的货架模块，方便在工作时取用工具或物资。</DMS_Apparel_CargoBox.description>
+  
+  <!-- EN: infrared sensor -->
+  <DMS_Apparel_InfraredSensor.label>红外传感器</DMS_Apparel_InfraredSensor.label>
+  <!-- EN: An additional external optical sensor provides some night operation capabilities without modifying the frame itself, and provides aiming assistance. -->
+  <DMS_Apparel_InfraredSensor.description>一种附加的外部光学传感器，在不改造框架本身的前提下提供了一定的夜间作业能力，并提供瞄准辅助。</DMS_Apparel_InfraredSensor.description>
+  
+  <!-- EN: pulse shield -->
+  <DMS_Apparel_PulseShield.label>能量盾</DMS_Apparel_PulseShield.label>
+  <!-- EN: A miniaturized shield module used on a small scale in the colonial fleet. Its fast charging speed allows it to completely absorb low-caliber projectiles bursts or intercept a fatal projectile. -->
+  <DMS_Apparel_PulseShield.description>在殖民舰队中应用的小型化护盾模块，因为成本的考量而只有相当小规模的装备，快速的充电速度使其能够完全吸收低口径的弹头或拦截致命的弹头。</DMS_Apparel_PulseShield.description>
+  
+  <!-- EN: solid shield -->
+  <DMS_Apparel_Shield.label>防弹盾</DMS_Apparel_Shield.label>
+  <!-- EN: A composite armor shield mounted on the dragoon frame. Although it is a bit heavy, it can effectively resist the damage caused by large-caliber fragments and anti-material rifle bullets. -->
+  <DMS_Apparel_Shield.description>一面安装在龙骑兵框架上的复合装甲防弹盾牌，虽然有些沉重但能够有效的抵挡大口径破片与反器材步枪弹对於本体的伤害。</DMS_Apparel_Shield.description>
+  
+  <!-- EN: work arm -->
+  <DMS_Apparel_WorkArm.label>辅助工作臂</DMS_Apparel_WorkArm.label>
+  <!-- EN: A module hung on the left arm of the frame, contains a eletric motor clamp and positioning device, which can achieve the same dexterity as a human hand to a certain extent. -->
+  <DMS_Apparel_WorkArm.description>一种挂在框架左臂的作业用模块，包含一套复杂的夹具系统与定位仪，能在一定程度上做到如同人手一样的灵活。</DMS_Apparel_WorkArm.description>
+  
+  <!-- EN: payload cabinet -->
+  <DMS_Module_CargoBox.label>载荷挂架模块</DMS_Module_CargoBox.label>
+  <!-- EN: An attached metal rack capable of storing payloads on a walker frame. -->
+  <DMS_Module_CargoBox.description>一个安装在框架左胸位置的货架模块，方便在工作时取用工具或物资。</DMS_Module_CargoBox.description>
+  
+  <!-- EN: infrared sensor -->
+  <DMS_Module_InfraredSensor.label>红外传感器模块</DMS_Module_InfraredSensor.label>
+  <!-- EN: An additional external optical sensor provides some night operation capabilities without modifying the frame itself, and provides aiming assistance. -->
+  <DMS_Module_InfraredSensor.description>一种附加的外部光学传感器，在不改造框架本身的前提下提供了一定的夜间作业能力，并提供瞄准辅助。</DMS_Module_InfraredSensor.description>
+  
+  <!-- EN: pulse shield -->
+  <DMS_Module_PulseShield.label>能量盾模块</DMS_Module_PulseShield.label>
+  <!-- EN: A miniaturized pulse shield module used in the colonial fleet, only used on a fairly small scale due to cost considerations. Its fast charging speed allows it to completely absorb low-caliber projectiles bursts or intercept a fatal projectile. -->
+  <DMS_Module_PulseShield.description>在殖民舰队中应用的小型化护盾模块，因为成本的考量而只有相当小规模的装备，快速的充电速度使其能够完全吸收低口径的弹头或拦截致命的弹头。</DMS_Module_PulseShield.description>
+  
+  <!-- EN: ballistic shield -->
+  <DMS_Module_Shield.label>防弹盾模块</DMS_Module_Shield.label>
+  <!-- EN: A composite armor shield mounted on the dragoon frame. Although it is a bit heavy, it can effectively resist the damage caused by large-caliber fragments and anti-material rifle bullets. -->
+  <DMS_Module_Shield.description>一面安装在龙骑兵框架上的复合装甲防弹盾牌，虽然有些沉重但能够有效的抵挡大口径破片与反器材步枪弹对於本体的伤害。</DMS_Module_Shield.description>
+  
+  <!-- EN: work arm -->
+  <DMS_Module_WorkArm.label>辅助工作臂模块</DMS_Module_WorkArm.label>
+  <!-- EN: A module hung on the left arm of the frame, contains a eletric motor clamp and positioning device, which can achieve the same dexterity as a human hand to a certain extent. -->
+  <DMS_Module_WorkArm.description>一种挂在框架左臂的作业用模块，包含一套复杂的夹具系统与定位仪，能在一定程度上做到如同人手一样的灵活。</DMS_Module_WorkArm.description>
+  
+</LanguageData>

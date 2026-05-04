@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: AT-34 "Yetta" frame -->
+  <DMS_Apparel_AT34_Core.label>AT-34 "Yetta" frame</DMS_Apparel_AT34_Core.label>
+  <!-- EN: A power armor frame that was exported to the entire rimworld as a training and civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become the largest individual equipment that can be used by local armed forces in the rimworld except armored vehicles. However, providing adequate maintenance and parts for this equipment without proper industrialization would have become extremely difficult without trade with the colonial fleet. -->
+  <DMS_Apparel_AT34_Core.description>A power armor frame that was exported to the entire rimworld as a training and civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become the largest individual equipment that can be used by local armed forces in the rimworld except armored vehicles. However, providing adequate maintenance and parts for this equipment without proper industrialization would have become extremely difficult without trade with the colonial fleet.</DMS_Apparel_AT34_Core.description>
+  <!-- EN: mechanical fist -->
+  <DMS_Apparel_AT34_Core.tools.mechanical_fist.label>mechanical fist</DMS_Apparel_AT34_Core.tools.mechanical_fist.label>
+  <!-- EN: mechanical leg -->
+  <DMS_Apparel_AT34_Core.tools.mechanical_leg.label>mechanical leg</DMS_Apparel_AT34_Core.tools.mechanical_leg.label>
+  
+  <!-- EN: AT-34 "Yetta" helmet -->
+  <DMS_Apparel_AT34_Helmet.label>AT-34 "Yetta" helmet</DMS_Apparel_AT34_Helmet.label>
+  <!-- EN: An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD. -->
+  <DMS_Apparel_AT34_Helmet.description>An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD.</DMS_Apparel_AT34_Helmet.description>
+  
+  <!-- EN: AT-34 "Yetta" core module -->
+  <DMS_Module_AT34_Core.label>AT-34 "Yetta" core module</DMS_Module_AT34_Core.label>
+  <!-- EN: A power armor frame that was exported to the entire rimworld as a training and civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become the largest individual equipment that can be used by local armed forces in the rimworld except armored vehicles. However, providing adequate maintenance and parts for this equipment without proper industrialization would have become extremely difficult without trade with the colonial fleet. -->
+  <DMS_Module_AT34_Core.description>A power armor frame that was exported to the entire rimworld as a training and civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become the largest individual equipment that can be used by local armed forces in the rimworld except armored vehicles. However, providing adequate maintenance and parts for this equipment without proper industrialization would have become extremely difficult without trade with the colonial fleet.</DMS_Module_AT34_Core.description>
+  
+  <!-- EN: AT-34 "Yetta" helmet -->
+  <DMS_Module_AT34_Helmet.label>AT-34 "Yetta" helmet</DMS_Module_AT34_Helmet.label>
+  <!-- EN: An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD. -->
+  <DMS_Module_AT34_Helmet.description>An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD.</DMS_Module_AT34_Helmet.description>
+  
+</LanguageData>

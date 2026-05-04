@@ -18,6 +18,7 @@
             ]/EquippableWithApparel</xpath>
         <value>
             <li>DMS_Apparel_AT34_Core</li>
+            <li>DMS_Apparel_PV4_Core</li>
             <li>DMS_Apparel_PV8_Core</li>
             <li>DMS_Apparel_FA47_Core</li>
         </value>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: PV-4 "Old Buddy" frame module -->
+  <DMS_Apparel_PV4_Core.label>PV-4 "老夥伴" 核心</DMS_Apparel_PV4_Core.label>
+  <!-- EN: An old Dragoon model, notorious for its risk of tearing apart less skilled pilots while piloting. It can be traced back to the armed intervention of the colonial fleet during the Zartha crisis. \n\n According to legend, an armored task force equipped with this type of dragoon annihilated an army several times its own in just three days. Since it was decommissioned and replaced by safer models nearly a hundred years ago, making it rarely circulated in the rimworld. But its extremely compact design also gives it a performance that even modern dragoons cannot match. \n\n In order to keep pilot's safely, you need the pilot to wear specialized pilot uniform. -->
+  <DMS_Apparel_PV4_Core.description>一款古老的龙骑兵型号，虽然其正式代号早已被人所遗忘，但过去被人畏称为扎尔塔的屠戮者，可以追溯至扎尔塔危机时期殖民舰队的武装干涉，传说一支装备了该型龙骑兵的装甲特遣旅只用三日便歼灭了数倍於己方的军队。由於其可能在驾驶时撕裂那些不够娴熟的驾驶员以及在近百年前就已经被更加安全的型号所淘汰，因此鲜少会在边缘世界流通。但极度紧凑的设计也使其具有现代机兵也无法比拟的性能。\n\n驾驶员需要专门的驾驶服才能够安全的操作这架龙骑兵。</DMS_Apparel_PV4_Core.description>
+
+  <!-- EN: PV-4 "Miboche" helmet -->
+  <DMS_Apparel_PV4_Helmet.label>PV-4A "弥波切" 头部</DMS_Apparel_PV4_Helmet.label>
+  <!-- EN: An old but very effective heavy helmet, using a synthetic aperture detector that was somewhat expensive at the time and integrated composite plastic armor. It is airtight enough to move freely even on the battlefield of nuclear, biological and chemical warfare. -->
+  <DMS_Apparel_PV4_Helmet.description>一种老旧但十分有效的重型头盔，使用了在当时也有些昂贵的合成孔径探测器与一体化复合塑钢装甲。具有在核生化战争的战场上也能自由活动的密闭性。</DMS_Apparel_PV4_Helmet.description>
+  
+  <!-- EN: PV-4 "Old Buddy" frame module -->
+  <DMS_Module_PV4_Core.label>PV-4 "老夥伴" 核心模块</DMS_Module_PV4_Core.label>
+  <!-- EN: An old Dragoon model formerly known as Slayer of Zartha, whose actual call sign has been forgotten by people, notorious for its risk of tearing apart less skilled pilots while piloting. It can be traced back to the armed intervention of the colonial fleet during the Zartha crisis. \n\n According to legend, an armored task force equipped with this type of dragoon annihilated an army several times its own in just three days. Since it was decommissioned and replaced by safer models nearly a hundred years ago, making it rarely circulated in the rimworld. But its extremely compact design also gives it a performance that even modern dragoons cannot match. \n\n In order to keep pilot's safely, you need the pilot to wear specialized pilot uniform. -->
+  <DMS_Module_PV4_Core.description>一款古老的龙骑兵型号，虽然其正式代号早已被人所遗忘，但过去被人畏称为扎尔塔的屠戮者，可以追溯至扎尔塔危机时期殖民舰队的武装干涉，传说一支装备了该型龙骑兵的装甲特遣旅只用三日便歼灭了数倍於己方的军队。由於其可能在驾驶时撕裂那些不够娴熟的驾驶员以及在近百年前就已经被更加安全的型号所淘汰，因此鲜少会在边缘世界流通。但极度紧凑的设计也使其具有现代机兵也无法比拟的性能。\n\n驾驶员需要专门的驾驶服才能够安全的操作这架龙骑兵。</DMS_Module_PV4_Core.description>
+  
+  <!-- EN: PV-4 "Miboche" helmet -->
+  <DMS_Module_PV4_Helmet.label>PV-4A "弥波切" 头部模块</DMS_Module_PV4_Helmet.label>
+  <!-- EN: An old but very effective heavy helmet, using a synthetic aperture detector that was somewhat expensive at the time and integrated composite plastic armor. It is airtight enough to move freely even on the battlefield of nuclear, biological and chemical warfare. -->
+  <DMS_Module_PV4_Helmet.description>一种老旧但十分有效的重型头盔，使用了在当时也有些昂贵的合成孔径探测器与一体化复合塑钢装甲。具有在核生化战争的战场上也能自由活动的密闭性。</DMS_Module_PV4_Helmet.description>
+  
+</LanguageData>

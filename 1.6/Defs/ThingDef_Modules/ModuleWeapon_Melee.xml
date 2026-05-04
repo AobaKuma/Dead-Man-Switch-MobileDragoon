@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>DMS_Dragoon_Axe</defName>
+    <label>Dragoon Tomahawk</label>
+    <!-- 一種龍騎兵所使用的輕型單手斧頭，被設計用於機甲間的近距離格鬥以及在狹窄的環境中清出通道。不同於純粹用於戰鬥的大劍，格鬥斧並不需要加裝額外的動力骨骼來握持。因此它可以被作為副武器攜帶。 -->
+    <description>A lightweight one-handed axe used by Dragoons, designed for close combat between other exosuits or clearing passages in tight environments. Unlike Claymore, Dragoons doesn't require additional modules to hold a Tomahawk. Therefore it can be carried as a sidearm.</description>
+    <weaponClasses>
+      <li>Melee</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>Dragoon_Melee</li>
+    </weaponTags>
+    <useHitPoints>false</useHitPoints>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Weapons/CombatAxe</texPath>
+      <drawSize>1.25</drawSize>
+    </graphicData>
+    <statBases>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>18</Mass>
+    </statBases>
+    <recipeMaker>
+      <workAmount>12000</workAmount>
+    </recipeMaker>
+		<costList>
+			<Tungsteel>100</Tungsteel>
+			<ComponentStamped>2</ComponentStamped>
+		</costList>
+    <modExtensions>
+      <li Class="Fortified.HeavyEquippableExtension">
+        <EquippableDef>HeavyAutomatroid</EquippableDef>
+      </li>
+    </modExtensions>
+    <comps>
+      <li Class="Exosuit.CompProperties_MeleeSweep">
+        <damageDef>Cut</damageDef>
+        <damage>30</damage>
+        <armorPenetration>0.6</armorPenetration>
+        <radius>2</radius>
+        <angle>120</angle>
+      </li>
+    </comps>
+    <equippedDistanceOffset>0.5</equippedDistanceOffset>
+    <equippedAngleOffset>0</equippedAngleOffset>
+    <tools Inherit="False">
+      <li>
+        <label>poke</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>40</power>
+        <armorPenetration>1.2</armorPenetration>
+        <cooldownTime>3</cooldownTime>
+        <chanceFactor>2</chanceFactor>
+      </li>
+      <li>
+        <label>sweep</label>
+        <capacities>
+          <li>WG_HeavySweep</li>
+        </capacities>
+        <power>30</power>
+        <cooldownTime>1.5</cooldownTime>
+        <chanceFactor>3</chanceFactor>
+      </li>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>24</power>
+        <armorPenetration>0.6</armorPenetration>
+        <cooldownTime>1</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="DMS_BaseDragoonWeapon">
+    <defName>DMS_Dragoon_Sword</defName>
+    <label>Dragoon Claymore</label>
+    <description>A two-handed great sword used by Dragoons, it is specially designed to fight against large creatures and war machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications.</description>
+    <weaponClasses>
+      <li>Melee</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Things/Weapons/CombatSword</texPath>
+      <drawSize>1.75</drawSize>
+    </graphicData>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <Mass>0</Mass>
+    </statBases>
+    <comps>
+      <li Class="Exosuit.CompProperties_MeleeSweep">
+        <damageDef>Cut</damageDef>
+        <damage>40</damage>
+        <armorPenetration>0.5</armorPenetration>
+        <radius>3</radius>
+        <angle>180</angle>
+      </li>
+    </comps>
+    <equippedDistanceOffset>0.5</equippedDistanceOffset>
+    <equippedAngleOffset>-20</equippedAngleOffset>
+    <tools Inherit="False">
+      <li>
+        <label>poke</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>100</power>
+        <armorPenetration>1.2</armorPenetration>
+        <cooldownTime>3</cooldownTime>
+        <chanceFactor>2</chanceFactor>
+      </li>
+      <li>
+        <label>sweep</label>
+        <capacities>
+          <li>WG_HeavySweep</li>
+        </capacities>
+        <power>90</power>
+        <cooldownTime>2</cooldownTime>
+        <chanceFactor>3</chanceFactor>
+      </li>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>48</power>
+        <armorPenetration>0.6</armorPenetration>
+        <cooldownTime>1</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

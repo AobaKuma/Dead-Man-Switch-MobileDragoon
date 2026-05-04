@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 40x102mm shell (Bean) -->
+  <Ammo_40x102mm_Beanbag.label>40x102毫米霰弹(豆袋)</Ammo_40x102mm_Beanbag.label>
+  <!-- EN: Large 40mm shotgun caliber specifically designed for Dragoon shotgun. -->
+  <Ammo_40x102mm_Beanbag.description>专为龙骑兵霰弹枪设计的40毫米大口径霰弹。</Ammo_40x102mm_Beanbag.description>
+  
+  <!-- EN: 40x102mm shell (Buck) -->
+  <Ammo_40x102mm_Buck.label>40x102毫米霰弹(鹿弹)</Ammo_40x102mm_Buck.label>
+  <!-- EN: Large 40mm shotgun caliber specifically designed for Dragoon shotgun. -->
+  <Ammo_40x102mm_Buck.description>专为龙骑兵霰弹枪设计的40毫米大口径霰弹。</Ammo_40x102mm_Buck.description>
+  
+  <!-- EN: 40x102mm shell (EMP) -->
+  <Ammo_40x102mm_ElectroSlug.label>40x102毫米霰弹(EMP)</Ammo_40x102mm_ElectroSlug.label>
+  <!-- EN: Large 40mm shotgun caliber specifically designed for Dragoon shotgun. -->
+  <Ammo_40x102mm_ElectroSlug.description>专为龙骑兵霰弹枪设计的40毫米大口径霰弹。</Ammo_40x102mm_ElectroSlug.description>
+  
+  <!-- EN: 40x102mm shell (Slug) -->
+  <Ammo_40x102mm_Slug.label>40x102毫米霰弹(独头弹)</Ammo_40x102mm_Slug.label>
+  <!-- EN: Large 40mm shotgun caliber specifically designed for Dragoon shotgun. -->
+  <Ammo_40x102mm_Slug.description>专为龙骑兵霰弹枪设计的40毫米大口径霰弹。</Ammo_40x102mm_Slug.description>
+  
+  <!-- EN: Beanbag -->
+  <Bullet_40x102mm_Beanbag.label>豆袋弹</Bullet_40x102mm_Beanbag.label>
+  
+  <!-- EN: buckshot pellet -->
+  <Bullet_40x102mm_Buck.label>霰弹弹丸</Bullet_40x102mm_Buck.label>
+  
+  <!-- EN: EMP slug -->
+  <Bullet_40x102mm_ElectroSlug.label>EMP弹</Bullet_40x102mm_ElectroSlug.label>
+  
+  <!-- EN: shotgun slug -->
+  <Bullet_40x102mm_Slug.label>独头弹</Bullet_40x102mm_Slug.label>
+  
+</LanguageData>

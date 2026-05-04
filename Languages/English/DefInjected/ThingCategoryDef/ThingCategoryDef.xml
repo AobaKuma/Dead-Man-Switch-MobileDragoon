@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: mobile dragoon module -->
+  <DMS_Module.label>mobile dragoon module</DMS_Module.label>
+  
+  <!-- EN: attachment module -->
+  <DMS_Module_Attachment.label>attachment module</DMS_Module_Attachment.label>
+  
+  <!-- EN: core module -->
+  <DMS_Module_Core.label>core module</DMS_Module_Core.label>
+  
+  <!-- EN: equipment module -->
+  <DMS_Module_Equipment.label>equipment module</DMS_Module_Equipment.label>
+  
+  <!-- EN: helmet module -->
+  <DMS_Module_Helmet.label>helmet module</DMS_Module_Helmet.label>
+  
+  <!-- EN: multi slot module -->
+  <DMS_Module_Multi.label>multi slot module</DMS_Module_Multi.label>
+  
+  <!-- EN: pack module -->
+  <DMS_Module_Pack.label>pack module</DMS_Module_Pack.label>
+  
+  <!-- EN: left shoulder module -->
+  <DMS_Module_ShoulderLeft.label>left shoulder module</DMS_Module_ShoulderLeft.label>
+  
+  <!-- EN: right shoulder module -->
+  <DMS_Module_ShoulderRight.label>right shoulder module</DMS_Module_ShoulderRight.label>
+  
+</LanguageData>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Relay Antenna -->
+  <DMS_Apparel_RelayAntenna.label>中継通信器</DMS_Apparel_RelayAntenna.label>
+  <!-- EN: An antenna module that expands the control range for friendly mechanics. Although the control range is relatively limited, it is enough to allow mechanics to coordinate infantry around the frame. -->
+  <DMS_Apparel_RelayAntenna.description>友軍メカ技師の制御範囲を拡張する通信器兵装。制御範囲は比較的限定的ですが、機械技師が機体周辺の歩兵を協調させるには十分です。</DMS_Apparel_RelayAntenna.description>
+  
+  <!-- EN: GAU19/A Shoulder Mount -->
+  <DMS_Apparel_TurretPackGAU.label>GAU19/A肩部架台</DMS_Apparel_TurretPackGAU.label>
+  <!-- EN: A shoulder-mounted remote-controlled machine gun. -->
+  <DMS_Apparel_TurretPackGAU.description>肩部に装着される遠隔制御機関銃。</DMS_Apparel_TurretPackGAU.description>
+  <!-- EN: A multibarrel turret mounted on shoulder. -->
+  <DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.description>肩部に装着される多銃身砲塔。</DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.description>
+  <!-- EN: Mounted GAU-19/A -->
+  <DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.visualLabel>装着型GAU-19/A</DMS_Apparel_TurretPackGAU.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <!-- EN: Gun -->
+  <DMS_Apparel_TurretPackGAU.verbs.Gun.label>銃砲</DMS_Apparel_TurretPackGAU.verbs.Gun.label>
+  
+  <!-- EN: Kord Shoulder Mount -->
+  <DMS_Apparel_TurretPackHeavy.label>コルド肩部架台</DMS_Apparel_TurretPackHeavy.label>
+  <!-- EN: A shoulder-mounted remote-controlled machine gun. -->
+  <DMS_Apparel_TurretPackHeavy.description>肩部に装着される遠隔制御機関銃。</DMS_Apparel_TurretPackHeavy.description>
+  <!-- EN: A HMG turret mounted on shoulder. -->
+  <DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.description>肩部に装着される重機関銃砲塔。</DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.description>
+  <!-- EN: Mounted Kord -->
+  <DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.visualLabel>装着型コルド</DMS_Apparel_TurretPackHeavy.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <!-- EN: Gun -->
+  <DMS_Apparel_TurretPackHeavy.verbs.Gun.label>銃砲</DMS_Apparel_TurretPackHeavy.verbs.Gun.label>
+  
+  <!-- EN: LMG Shoulder Mount -->
+  <DMS_Apparel_TurretPackLight.label>軽機銃肩部架台</DMS_Apparel_TurretPackLight.label>
+  <!-- EN: A shoulder-mounted remote-controlled machine gun. -->
+  <DMS_Apparel_TurretPackLight.description>肩部に装着される遠隔制御機関銃。</DMS_Apparel_TurretPackLight.description>
+  <!-- EN: A simple automatic gun made to be mounted on a shoulder. -->
+  <DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.description>肩部に装着するよう作られた簡素な自動銃。</DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.description>
+  <!-- EN: Mounted LMG -->
+  <DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.visualLabel>装着型軽機銃</DMS_Apparel_TurretPackLight.comps.Comp_VerbGiver.verbProps.0.visualLabel>
+  <!-- EN: Gun -->
+  <DMS_Apparel_TurretPackLight.verbs.Gun.label>銃砲</DMS_Apparel_TurretPackLight.verbs.Gun.label>
+  
+  <!-- EN: Relay Antenna -->
+  <DMS_Module_RelayAntenna.label>中継通信器</DMS_Module_RelayAntenna.label>
+  <!-- EN: An antenna module that expands the control range for friendly mechanics. Although the control range is relatively limited, it is enough to allow mechanics to coordinate infantry around the frame. -->
+  <DMS_Module_RelayAntenna.description>友軍メカ技師の制御範囲を拡張する通信器兵装。制御範囲は比較的限定的ですが、メカ技師が機体周辺の歩兵を協調させるには十分です。</DMS_Module_RelayAntenna.description>
+
+  <!-- EN: GAU19/A Shoulder Mount -->
+  <DMS_Module_TurretPackGAU.label>GAU19/A肩部架台</DMS_Module_TurretPackGAU.label>
+  <!-- EN: A shoulder-mounted remote-controlled machine gun. -->
+  <DMS_Module_TurretPackGAU.description>肩部に装着される遠隔制御機関銃。</DMS_Module_TurretPackGAU.description>
+  
+  <!-- EN: Kord Shoulder Mount -->
+  <DMS_Module_TurretPackHeavy.label>コルド肩部架台</DMS_Module_TurretPackHeavy.label>
+  <!-- EN: A shoulder-mounted remote-controlled machine gun. -->
+  <DMS_Module_TurretPackHeavy.description>肩部に装着される遠隔制御機関銃。</DMS_Module_TurretPackHeavy.description>
+  
+  <!-- EN: LMG Shoulder Mount -->
+  <DMS_Module_TurretPackLight.label>軽機銃肩部架台</DMS_Module_TurretPackLight.label>
+  <!-- EN: A shoulder-mounted remote-controlled machine gun. -->
+  <DMS_Module_TurretPackLight.description>肩部に装着される遠隔制御機関銃。</DMS_Module_TurretPackLight.description>
+  
+</LanguageData>
+

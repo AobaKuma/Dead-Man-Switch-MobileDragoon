@@ -10,7 +10,7 @@
       <ThingDef>DMS_Apparel_FA47_Core</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>200</MaxHitPoints>
       <Mass>80</Mass>
     </statBases>
     <comps>
@@ -26,7 +26,19 @@
       <skillRequirements>
         <Crafting>12</Crafting>
       </skillRequirements>
+      <workAmount>60000</workAmount>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>45</Steel>
+      <Tungsteel>75</Tungsteel>
+      <Plasteel>120</Plasteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ComponentStamped>4</ComponentStamped>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <ChunkSlagSteel>5</ChunkSlagSteel>
+      <Artifuscle>75</Artifuscle>
+    </butcherProducts>
     <costList>
       <Plasteel>300</Plasteel>
       <Artifuscle>140</Artifuscle>
@@ -44,30 +56,44 @@
     <graphicData>
       <texPath>Things/Dragoon/PV8/apparel_south</texPath>
     </graphicData>
+    <tickerType>Normal</tickerType>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_FA47_Core</ThingDef>
+    </descriptionHyperlinks>
     <statBases>
       <Mass>80</Mass>
-      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.80</ArmorRating_Heat>
-      <JumpRange MayRequire="ludeon.rimworld.royalty">9.9</JumpRange>
-      <MoveSpeed>7</MoveSpeed>
-			<CarryingCapacity>480</CarryingCapacity>
-			<Insulation_Cold>104</Insulation_Cold>
-			<Insulation_Heat>128</Insulation_Heat>
+      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.10</ArmorRating_Heat>
+      <MoveSpeed>7.8</MoveSpeed>
+      <Insulation_Cold>104</Insulation_Cold>
+      <Insulation_Heat>128</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
-			<WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
-      <SM_BodySizeOffset MayRequire="redmattis.betterprerequisites">1</SM_BodySizeOffset>
-      <SM_Cosmetic_BodySizeOffset MayRequire="redmattis.betterprerequisites">-1</SM_Cosmetic_BodySizeOffset>
+      <MF_FlightRange>24</MF_FlightRange>
+      <CarryingCapacity>275</CarryingCapacity>
+			<CarryWeight MayRequire="ceteam.combatextended">275</CarryWeight>
+      <VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.8</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/FA47/apparel</wornGraphicPath>
-      <drawData>
-        <scale>2.25</scale>
-        <dataNorth>
-          <layer>70</layer>
-        </dataNorth>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>1</baseLayer>
+          <drawSize>2.25</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/FA47/apparel</texPath>
+          <drawData>
+            <dataNorth>
+              <layer>5</layer>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -96,11 +122,28 @@
             <offset>(0.00,0,0.40)</offset>
           </dataNorth>
         </headData>
+        <headHideFor>
+          <li>0</li>
+        </headHideFor>
         <rootData>
           <defaultData>
             <offset>(0,0,0.35)</offset>
           </defaultData>
         </rootData>
+        <equipmentOffsetData>
+          <dataWest>
+            <offset>(-0.25,0,0)</offset>
+          </dataWest>
+          <dataEast>
+            <offset>(0.25,0,0)</offset>
+          </dataEast>
+          <dataSouth>
+            <offset>(-0.25,0,0)</offset>
+          </dataSouth>
+          <dataNorth>
+            <offset>(0.25,0,0)</offset>
+          </dataNorth>
+        </equipmentOffsetData>
       </li>
     </modExtensions>
   </ThingDef>
@@ -108,13 +151,13 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_FA47_Helmet</defName>
     <label>F/A-47 "Arsenal Angel" helmet</label>
-    <description>todo.</description>
+    <description>A complex synthetic caliber sensor module used by colonial fleets on dragoons used in space operations, It can effectively track high-speed moving enemies and assist pilot in aiming.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_FA47_Helmet</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Mass>8</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Mass>18</Mass>
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -129,7 +172,17 @@
       <skillRequirements>
         <Crafting>12</Crafting>
       </skillRequirements>
+      <workAmount>20000</workAmount>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>15</Steel>
+      <Plasteel>25</Plasteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ComponentStamped>2</ComponentStamped>
+      <ComponentSpacer>1</ComponentSpacer>
+      <Plasteel>35</Plasteel>
+    </butcherProducts>
     <costList>
       <Plasteel>75</Plasteel>
       <ComponentSpacer>2</ComponentSpacer>
@@ -139,32 +192,50 @@
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_FA47_Helmet</defName>
     <label>F/A-47 "Arsenal Angel" helmet</label>
-    <description>Todo.</description>
+    <description>A complex synthetic caliber sensor module used by colonial fleets on dragoons used in space operations, It can effectively track high-speed moving enemies and assist pilot in aiming.</description>
     <graphicData>
       <texPath>Things/Dragoon/FA47/helmet_south</texPath>
     </graphicData>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_FA47_Helmet</ThingDef>
+    </descriptionHyperlinks>
     <statBases>
-      <Mass>0</Mass>
-      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.80</ArmorRating_Heat>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Mass>18</Mass>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.12</MoveSpeed>
+      <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+      <MoveSpeed>-0.2</MoveSpeed>
+      <HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/FA47/helmet</wornGraphicPath>
-      <drawData>
-        <defaultData>
-          <layer>20</layer>
-          <offset>(0,0,0.0)</offset>
-        </defaultData>
-      </drawData>
+      <immuneToToxGasExposure>true</immuneToToxGasExposure>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelHead</parentTagDef>
+          <drawSize>1</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/FA47/helmet</texPath>
+          <drawData>
+            <defaultData>
+              <layer>20</layer>
+              <offset>(0,0,0)</offset>
+            </defaultData>
+          </drawData>
+        </li>
+      </renderNodeProperties>
+      <tags>
+        <li>EVA</li>
+      </tags>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
         <ItemDef>DMS_Module_FA47_Helmet</ItemDef>
-                <slots>
+        <slots>
           <li>Head</li>
         </slots>
       </li>

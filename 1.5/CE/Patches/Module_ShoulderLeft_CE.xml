@@ -3,7 +3,22 @@
     <Operation Class="PatchOperationSequence">
         <operations>
 
-            <!--Misslile pod-->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Module_ArmorPad"]/statBases</xpath>
+                <value>
+                    <Bulk>41</Bulk>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_ArmorPad"]/statBases</xpath>
+                <value>
+                    <Bulk>41</Bulk>
+                    <WornBulk>20</WornBulk>
+                </value>
+            </li>
+
+            <!--Misslile
+            pod-->
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName="DMS_Module_MissilePod"]/statBases</xpath>
                 <value>
@@ -18,10 +33,6 @@
                     <WornBulk>14</WornBulk>
                     <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
                 </value>
-            </li>
-
-            <li Class="PatchOperationRemove">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePod"]/equippedStatOffsets/MoveSpeed</xpath>
             </li>
 
             <li Class="PatchOperationReplace">
@@ -53,9 +64,9 @@
                     </verbs>
                 </value>
             </li>
-
             <li Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePod"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
+                <xpath>
+                    Defs/ThingDef[defName="DMS_Apparel_MissilePod"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
                 <value>
                     <li Class="CompProperties_ApparelReloadable">
                         <maxCharges>4</maxCharges>
@@ -70,8 +81,8 @@
                 </value>
             </li>
 
-
-            <!--Swarm Misslile pod-->
+            <!--Swarm
+            Misslile pod-->
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Module_SwarmMissilePod"]/statBases/Mass</xpath>
                 <value>
@@ -80,17 +91,12 @@
                 </value>
             </li>
 
-            <li Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_SwarmMissilePod"]/statBases/Mass</xpath>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Apparel_SwarmMissilePod"]/statBases</xpath>
                 <value>
-                    <Mass>55</Mass>
                     <Bulk>36</Bulk>
                     <WornBulk>12</WornBulk>
                 </value>
-            </li>
-
-            <li Class="PatchOperationRemove">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_SwarmMissilePod"]/equippedStatOffsets/MoveSpeed</xpath>
             </li>
 
             <li Class="PatchOperationReplace">
@@ -118,7 +124,7 @@
                                 <canTargetLocations>true</canTargetLocations>
                             </targetParams>
                             <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
-                            <defaultProjectile>Bullet_57mmRocket_HE</defaultProjectile>
+                            <defaultProjectile>Bullet_57mmRocket_Thermobaric</defaultProjectile>
                             <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
                         </li>
                     </verbs>
@@ -126,11 +132,12 @@
             </li>
 
             <li Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_SwarmMissilePod"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
+                <xpath>
+                    Defs/ThingDef[defName="DMS_Apparel_SwarmMissilePod"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
                 <value>
                     <li Class="CompProperties_ApparelReloadable">
                         <maxCharges>14</maxCharges>
-                        <ammoDef>Ammo_57mmRocket_HE</ammoDef>
+                        <ammoDef>Ammo_57mmRocket_Thermobaric</ammoDef>
                         <ammoCountPerCharge>1</ammoCountPerCharge>
                         <baseReloadTicks>150</baseReloadTicks>
                         <soundReload>Standard_Reload</soundReload>
@@ -142,7 +149,8 @@
             </li>
 
 
-            <!--Misslile pods(more)-->
+            <!--Misslile
+            pods(more)-->
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName="DMS_Module_MissilePodPlus"]/statBases</xpath>
                 <value>
@@ -159,10 +167,6 @@
                 </value>
             </li>
 
-            <li Class="PatchOperationRemove">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePodPlus"]/equippedStatOffsets/MoveSpeed</xpath>
-            </li>
-
             <li Class="PatchOperationReplace">
                 <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePodPlus"]/verbs</xpath>
                 <value>
@@ -174,7 +178,6 @@
                             <commandIcon>UI/Ability/Missile</commandIcon>
                             <onlyManualCast>True</onlyManualCast>
                             <warmupTime>1.5</warmupTime>
-                            <noiseRadius>4</noiseRadius>
                             <range>85.9</range>
                             <minRange>5</minRange>
                             <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
@@ -194,7 +197,8 @@
             </li>
 
             <li Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="DMS_Apparel_MissilePodPlus"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
+                <xpath>
+                    Defs/ThingDef[defName="DMS_Apparel_MissilePodPlus"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
                 <value>
                     <li Class="CompProperties_ApparelReloadable">
                         <maxCharges>8</maxCharges>
@@ -208,9 +212,6 @@
                     </li>
                 </value>
             </li>
-
-
-
         </operations>
     </Operation>
 </Patch>

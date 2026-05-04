@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/PawnKindDef[
+                    defName="DMS_Squad_ArmyDragoon_Trainee" or
+                    defName="DMS_Squad_ArmyDragoon" or
+                    defName="DMS_Squad_ArmyDragoon_Explosive" or
+                    defName="DMS_Squad_ArmyDragoon_Gatling"
+                    ]</xpath>
+                <value>
+                    <li Class="CombatExtended.LoadoutPropertiesExtension">
+                        <primaryMagazineCount>
+                            <min>8</min>
+                            <max>14</max>
+                        </primaryMagazineCount>
+                        <sidearms>
+                            <li>
+                                <generateChance>0.85</generateChance>
+                                <sidearmMoney>
+                                    <min>200</min>
+                                    <max>1200</max>
+                                </sidearmMoney>
+                                <weaponTags>
+                                    <li>CE_Sidearm_Melee</li>
+                                </weaponTags>
+                            </li>
+                        </sidearms>
+                    </li>
+                </value>
+            </li>
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/PawnKindDef[
+                    defName="DMS_WalkerFrame_Outlander" or
+                    defName="DMS_Dragoon_Outlander" or
+                    defName="DMS_WalkerFrame_Pirate" or
+                    defName="DMS_Dragoon_Pirate" or
+                    defName="DMS_Dragoon_PirateRotary"
+                    ]</xpath>
+                <value>
+                    <li Class="CombatExtended.LoadoutPropertiesExtension">
+                        <primaryMagazineCount>
+                            <min>2</min>
+                            <max>10</max>
+                        </primaryMagazineCount>
+                        <sidearms>
+                            <li>
+                                <generateChance>0.85</generateChance>
+                                <sidearmMoney>
+                                    <min>200</min>
+                                    <max>1200</max>
+                                </sidearmMoney>
+                                <weaponTags>
+                                    <li>CE_Sidearm_Melee</li>
+                                </weaponTags>
+                            </li>
+                        </sidearms>
+                    </li>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/PawnKindDef[contains(defName, "Dragoon") or contains(defName, "WalkerFrame")]/modExtensions/li[@Class="Exosuit.ModExtForceApparelGen"]/apparels/li[text()="DMS_Apparel_PackCargo" or text()="DMS_Apparel_PackFrame" or text()="DMS_Apparel_CargoBox"]</xpath>
+                <value>
+                    <li>MF_Apparel_AmmoBackpack</li>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/PawnKindDef[contains(defName, "Dragoon") or contains(defName, "WalkerFrame")]/modExtensions/li[@Class="Exosuit.ModExtForceApparelGen"]/chanceApparels/li[apparel="DMS_Apparel_PackCargo" or apparel="DMS_Apparel_PackFrame" or apparel="DMS_Apparel_CargoBox"]/apparel</xpath>
+                <value>
+                    <apparel>MF_Apparel_AmmoBackpack</apparel>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/PawnKindDef[contains(defName, "Dragoon") or contains(defName, "WalkerFrame")]/modExtensions/li[@Class="Exosuit.ModExtForceApparelGen"]</xpath>
+                <value>
+                    <fallbackApparels>
+                        <li>
+                            <target>MF_Apparel_AmmoBackpack</target>
+                            <fallback>DMS_Apparel_PackCargo</fallback>
+                        </li>
+                    </fallbackApparels>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: town dragoon -->
+  <DMS_Dragoon_Outlander.label>市街龍機</DMS_Dragoon_Outlander.label>
+  
+  <!-- EN: pirate dragoon -->
+  <DMS_Dragoon_Pirate.label>海賊龍機</DMS_Dragoon_Pirate.label>
+  
+  <!-- EN: rotary man -->
+  <DMS_Dragoon_PirateRotary.label>回転砲兵</DMS_Dragoon_PirateRotary.label>
+  
+  <!-- EN: Veteran -->
+  <DMS_LastPilot.label>古参兵</DMS_LastPilot.label>
+  
+  <!-- EN: Zyklop pagoda -->
+  <DMS_Squad_ArmyDragoon.label>ツィクロプ・パゴダ</DMS_Squad_ArmyDragoon.label>
+  
+  <!-- EN: Zyklop Claymore -->
+  <DMS_Squad_ArmyDragoon_Claymore.label>ツィクロプ・クレイモア</DMS_Squad_ArmyDragoon_Claymore.label>
+  
+  <!-- EN: Zyklop colossi -->
+  <DMS_Squad_ArmyDragoon_Explosive.label>ツィクロプ・コロッサス</DMS_Squad_ArmyDragoon_Explosive.label>
+  
+  <!-- EN: Zyklop tornado -->
+  <DMS_Squad_ArmyDragoon_Gatling.label>ツィクロプ・トルネード</DMS_Squad_ArmyDragoon_Gatling.label>
+  
+  <!-- EN: Yetta trainee -->
+  <DMS_Squad_ArmyDragoon_Trainee.label>イエッタ練習兵</DMS_Squad_ArmyDragoon_Trainee.label>
+  
+  <!-- EN: pilot worker -->
+  <DMS_WalkerFrame_Outlander.label>操縦者</DMS_WalkerFrame_Outlander.label>
+  
+  <!-- EN: bunker -->
+  <DMS_WalkerFrame_Pirate.label>要塞</DMS_WalkerFrame_Pirate.label>
+  
+</LanguageData>
+

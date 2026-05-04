@@ -4,12 +4,12 @@
   <ThingDef ParentName="DMS_ModuleItemCore">
     <defName>DMS_Module_PV8_Core</defName>
     <label>PV-8 "Zyklop" frame module</label>
-    <description>A heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task force. This is probably the largest piece of infantry equipments deployed by the colonial fleet on surface of this planet. The extremely thick armor and powerful power system enable the ground garrison to maintain sufficient mobile firepower to deal with interference in the colonization project.</description>
+    <description>These heavy armed powerarmour or so-called "Dragoon" used by the Colonial Army task force. Probably the largest piece of infantry equipments deployed by the colonial fleet on surface of this planet. Their extremely thick armor and powerful power system allowing ground garrison to maintain sufficient mobile firepower to deal with interference in the colonization.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PV8_Core</ThingDef>
     </descriptionHyperlinks>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>259</MaxHitPoints>
       <Mass>80</Mass>
     </statBases>
     <comps>
@@ -25,7 +25,20 @@
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
+      <workAmount>80000</workAmount>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>75</Steel>
+      <Tungsteel>170</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <Tungsteel>200</Tungsteel>
+      <Artifuscle>110</Artifuscle>
+      <Steel>75</Steel>
+      <ChunkSlagSteel>3</ChunkSlagSteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <ComponentStamped>4</ComponentStamped>
+    </butcherProducts>
     <costList>
       <Tungsteel>375</Tungsteel>
       <Artifuscle>200</Artifuscle>
@@ -42,29 +55,42 @@
     <graphicData>
       <texPath>Things/Dragoon/PV8/apparel_south</texPath>
     </graphicData>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PV8_Core</ThingDef>
+    </descriptionHyperlinks>
     <statBases>
       <Mass>80</Mass>
-			<CarryingCapacity>575</CarryingCapacity>
       <MoveSpeed>6.2</MoveSpeed>
-      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.10</ArmorRating_Heat>
+      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.90</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.90</ArmorRating_Heat>
 			<Insulation_Cold>48</Insulation_Cold>
 			<Insulation_Heat>64</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
+			<CarryingCapacity>320</CarryingCapacity>
+			<CarryWeight MayRequire="ceteam.combatextended">320</CarryWeight>
 			<WorkSpeedGlobal>-0.35</WorkSpeedGlobal>
-      <SM_BodySizeOffset MayRequire="redmattis.betterprerequisites">1</SM_BodySizeOffset>
-      <SM_Cosmetic_BodySizeOffset MayRequire="redmattis.betterprerequisites">-1</SM_Cosmetic_BodySizeOffset>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/PV8/apparel</wornGraphicPath>
-      <drawData>
-        <scale>1.5</scale>
-        <dataNorth>
-          <layer>70</layer>
-        </dataNorth>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>1</baseLayer>
+          <drawSize>1.5</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/PV8/apparel</texPath>
+          <drawData>
+            <dataNorth>
+              <layer>5</layer>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -93,11 +119,28 @@
             <offset>(0.00,0,0.40)</offset>
           </dataNorth>
         </headData>
+        <headHideFor>
+          <li>0</li>
+        </headHideFor>
         <rootData>
           <defaultData>
             <offset>(0,0,0.35)</offset>
           </defaultData>
         </rootData>
+        <equipmentOffsetData>
+          <dataWest>
+            <offset>(-0.25,0,0)</offset>
+          </dataWest>
+          <dataEast>
+            <offset>(0.25,0,0)</offset>
+          </dataEast>
+          <dataSouth>
+            <offset>(-0.25,0,0)</offset>
+          </dataSouth>
+          <dataNorth>
+            <offset>(0.25,0,0)</offset>
+          </dataNorth>
+        </equipmentOffsetData>
       </li>
     </modExtensions>
   </ThingDef>
@@ -105,13 +148,13 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_PV8_Helmet</defName>
     <label>PV-8 "Zyklop" helmet</label>
-    <description>todo.</description>
+    <description>A heavy-duty helmet that uses small optical probes arranged in a distributed manner as sensors in order to prevent damage from frontal hits from large-caliber weapons.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PV8_Helmet</ThingDef>
     </descriptionHyperlinks>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <Mass>35</Mass>
+      <Mass>40</Mass>
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -126,7 +169,19 @@
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
+      <workAmount>30000</workAmount>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>45</Steel>
+      <Tungsteel>30</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <Tungsteel>40</Tungsteel>
+      <Steel>10</Steel>
+      <ChunkSlagSteel>2</ChunkSlagSteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <ComponentStamped>3</ComponentStamped>
+    </butcherProducts>
     <costList>
       <Tungsteel>50</Tungsteel>
       <Steel>40</Steel>
@@ -137,27 +192,44 @@
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_PV8_Helmet</defName>
     <label>PV-8 "Zyklop" helmet</label>
-    <description>Todo.</description>
+    <description>A heavy-duty helmet that uses small optical probes arranged in a distributed manner as sensors in order to prevent damage from frontal hits from large-caliber weapons.</description>
     <graphicData>
       <texPath>Things/Dragoon/PV8/helmet_south</texPath>
     </graphicData>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PV8_Helmet</ThingDef>
+    </descriptionHyperlinks>
     <statBases>
-      <Mass>35</Mass>
-      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.10</ArmorRating_Heat>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>40</Mass>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.12</MoveSpeed>
+      <MoveSpeed>-0.2</MoveSpeed>
+      <HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/PV8/helmet</wornGraphicPath>
-      <drawData>
-        <defaultData>
-          <layer>20</layer>
-          <offset>(0,0,0.0)</offset>
-        </defaultData>
-      </drawData>
+      <immuneToToxGasExposure>true</immuneToToxGasExposure>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelHead</parentTagDef>
+          <drawSize>1</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/PV8/helmet</texPath>
+          <drawData>
+            <defaultData>
+              <layer>20</layer>
+              <offset>(0,0,0)</offset>
+            </defaultData>
+          </drawData>
+        </li>
+      </renderNodeProperties>
+      <tags>
+        <li>EVA</li>
+      </tags>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">

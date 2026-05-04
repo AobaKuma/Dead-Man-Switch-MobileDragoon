@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Combat Sword -->
+  <DMS_Apparel_CombatSword.label>戦闘大剣</DMS_Apparel_CombatSword.label>
+  <!-- EN: A great sword used by dragoon, it is a heavy combat weapon specially designed to fight large creatures and machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications. -->
+  <DMS_Apparel_CombatSword.description>龍機が使用する大剣。大型生物と機械との戦闘専用に設計された重戦闘兵器で、軍刀としての切断機能と装甲貫通槌としての打撃機能を持ちます。その重量により、軽歩兵と要塞の掃討に使用しても非常に効果的です。</DMS_Apparel_CombatSword.description>
+
+  <!-- EN: pile bunker -->
+  <DMS_Apparel_PileBunker.label>杭打機</DMS_Apparel_PileBunker.label>
+  <!-- EN: An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent. -->
+  <DMS_Apparel_PileBunker.description>機体に設置される工学兵装。極めて高い作業効率により、鉱山での作業や建物の解体にしばしば使用されます。ある程度他のことも行えます。</DMS_Apparel_PileBunker.description>
+  <!-- EN: tungsteel pile -->
+  <DMS_Apparel_PileBunker.tools.tungsteel_pile.label>タングステン杭</DMS_Apparel_PileBunker.tools.tungsteel_pile.label>
+  <!-- EN: mechanical tool -->
+  <DMS_Apparel_PileBunker.tools.mechanical_tool.label>機械工具</DMS_Apparel_PileBunker.tools.mechanical_tool.label>
+  
+  <!-- EN: Dragoon DMR -->
+  <DMS_Apparel_WeaponDMR.label>龍機精密銃</DMS_Apparel_WeaponDMR.label>
+  <!-- EN: A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon. -->
+  <DMS_Apparel_WeaponDMR.description>龍機のサイズに比例した狙撃銃ですが、人間にとっては基本的に致命的な大口径自動砲です。高精度照準のために電子合成画像測距器を使用し、大型兵器としてはかなりの精度を持ちます。</DMS_Apparel_WeaponDMR.description>
+  
+  <!-- EN: Dragoon LMG -->
+  <DMS_Apparel_WeaponLmg.label>龍機軽機銃</DMS_Apparel_WeaponLmg.label>
+  <!-- EN: A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities. -->
+  <DMS_Apparel_WeaponLmg.description>龍機のサイズに比例した軽機関銃ですが、人間にとっては基本的に致命的な大口径自動砲です。重い弾倉を使用して十分な火力持続性と制圧能力を提供します。</DMS_Apparel_WeaponLmg.description>
+  
+  <!-- EN: Combat Sword -->
+  <DMS_Module_CombatSword.label>戦闘大剣</DMS_Module_CombatSword.label>
+  <!-- EN: A great sword used by dragoon, it is a heavy combat weapon specially designed to fight large creatures and machines, and has the functions of a machete and an armor-piercing hammer. Its own weight makes it very effective even when used to clear light infantry and fortifications. -->
+  <DMS_Module_CombatSword.description>龍機が使用する大剣。大型生物と機械との戦闘専用に設計された重戦闘兵器で、軍刀としての切断機能と装甲貫通槌としての打撃機能を持ちます。その重量により、軽歩兵と要塞の掃討に使用しても非常に効果的です。</DMS_Module_CombatSword.description>
+  
+  <!-- EN: pile bunker -->
+  <DMS_Module_PileBunker.label>杭打機</DMS_Module_PileBunker.label>
+  <!-- EN: An engineering module installed on the frame. Due to its extremely high working efficiency, it is often used to demolish buildings and mines. It can also do other things to a certain extent. -->
+  <DMS_Module_PileBunker.description>機体に設置される工学兵装。極めて高い作業効率により、鉱山での作業や建物の解体にしばしば使用されます。ある程度他のことも行えます。</DMS_Module_PileBunker.description>
+
+  <!-- EN: Dragoon DMR -->
+  <DMS_Module_WeaponDMR.label>龍機精密銃</DMS_Module_WeaponDMR.label>
+  <!-- EN: A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon. -->
+  <DMS_Module_WeaponDMR.description>龍機のサイズに比例した狙撃銃ですが、人間にとっては基本的に致命的な大口径自動砲です。高精度照準のために電子合成画像測距器を使用し、大型兵器としてはかなりの精度を持ちます。</DMS_Module_WeaponDMR.description>
+  
+  <!-- EN: Dragoon LMG -->
+  <DMS_Module_WeaponLmg.label>龍機軽機銃</DMS_Module_WeaponLmg.label>
+  <!-- EN: A light machine gun relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, using a heavy drum to provide sufficient firepower continuity and suppression capabilities. -->
+  <DMS_Module_WeaponLmg.description>龍機のサイズに比例した軽機関銃ですが、人間にとっては基本的に致命的な大口径自動砲です。重い弾倉を使用して十分な火力持続性と制圧能力を提供します。</DMS_Module_WeaponLmg.description>
+  
+</LanguageData>
+
+

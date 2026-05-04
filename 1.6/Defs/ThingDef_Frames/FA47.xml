@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- F/A-47核心 -->
+  <ThingDef ParentName="DMS_ModuleItemCore">
+    <defName>DMS_Module_FA47_Core</defName>
+    <label>F/A-47 "Arsenal Angel" core module</label>
+    <description>A Dragoon with outer space combat capabilities, used by the Colonial Fleet Orbital Cavalry. Its fully enclosed shell is made of plasteel. can carry a propulsion system capable of short-distance suborbital flights on the planet's surface.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_FA47_Core</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>80</Mass>
+    </statBases>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_FA47_Core</EquipedThingDef>
+        <occupiedSlots>
+          <li>Core</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <workAmount>60000</workAmount>
+    </recipeMaker>
+    <smeltProducts>
+      <Steel>45</Steel>
+      <Tungsteel>75</Tungsteel>
+      <Plasteel>120</Plasteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ComponentStamped>4</ComponentStamped>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <ChunkSlagSteel>5</ChunkSlagSteel>
+      <Artifuscle>75</Artifuscle>
+    </butcherProducts>
+    <costList>
+      <Plasteel>300</Plasteel>
+      <Artifuscle>140</Artifuscle>
+      <Tungsteel>125</Tungsteel>
+      <ComponentStamped>12</ComponentStamped>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <Neurocomputer>1</Neurocomputer>
+    </costList>
+  </ThingDef>
+
+  <!-- F/A-47，能增加額外的跳躍距離 -->
+  <ThingDef ParentName="DMS_ModuleApparelCore">
+    <defName>DMS_Apparel_FA47_Core</defName>
+    <label>F/A-47 "Arsenal Angel" frame</label>
+    <description>A Dragoon with outer space combat capabilities, used by the Colonial Fleet Orbital Cavalry. Its fully enclosed shell is made of plasteel. can carry a propulsion system capable of short-distance suborbital flights on the planet's surface.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/PV8/apparel_south</texPath>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_FA47_Core</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <Mass>80</Mass>
+      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.10</ArmorRating_Heat>
+      <MoveSpeed>7.8</MoveSpeed>
+      <Insulation_Cold>104</Insulation_Cold>
+      <Insulation_Heat>128</Insulation_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <MF_FlightRange>24</MF_FlightRange>
+      <CarryingCapacity>275</CarryingCapacity>
+      <CarryWeight MayRequire="ceteam.combatextended">275</CarryWeight>
+      <VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.6</VacuumResistance>
+      <VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.8</DecompressionResistance>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Dragoon/FA47/apparel</wornGraphicPath>
+      <drawData>
+        <scale>2.25</scale>
+        <dataNorth>
+          <layer>5</layer>
+        </dataNorth>
+      </drawData>
+    </apparel>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_FA47_Core</ItemDef>
+        <occupiedSlots>
+          <li>Core</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Exosuit.ApparelRenderOffsets">
+        <headData>
+          <dataWest>
+            <offset>(-0.29,0,0.44)</offset>
+          </dataWest>
+          <dataEast>
+            <offset>(0.29,0,0.44)</offset>
+          </dataEast>
+          <dataSouth>
+            <offset>(0.00,0,0.40)</offset>
+          </dataSouth>
+          <dataNorth>
+            <offset>(0.00,0,0.40)</offset>
+          </dataNorth>
+        </headData>
+        <headHideFor>
+          <li>0</li>
+        </headHideFor>
+        <rootData>
+          <defaultData>
+            <offset>(0,0,0.26)</offset>
+          </defaultData>
+        </rootData>
+        <equipmentOffsetData>
+          <dataWest>
+            <offset>(-0.35,-1,0.6)</offset>
+          </dataWest>
+          <dataEast>
+            <offset>(0.25,0,0)</offset>
+          </dataEast>
+          <dataSouth>
+            <offset>(-0.25,0,0)</offset>
+          </dataSouth>
+          <dataNorth>
+            <offset>(0.25,0,0)</offset>
+          </dataNorth>
+        </equipmentOffsetData>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <!-- F/A-47頭盔 -->
+  <ThingDef ParentName="DMS_ModuleItemHead">
+    <defName>DMS_Module_FA47_Helmet</defName>
+    <label>F/A-47 "Arsenal Angel" helmet</label>
+    <description>A complex synthetic caliber sensor module used by colonial fleets on dragoons used in space operations, It can effectively track high-speed moving enemies and assist pilot in aiming.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Apparel_FA47_Helmet</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Mass>18</Mass>
+    </statBases>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <EquipedThingDef>DMS_Apparel_FA47_Helmet</EquipedThingDef>
+        <occupiedSlots>
+          <li>Head</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <workAmount>20000</workAmount>
+    </recipeMaker>
+    <smeltProducts>
+      <Steel>15</Steel>
+      <Plasteel>25</Plasteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ComponentStamped>2</ComponentStamped>
+      <ComponentSpacer>1</ComponentSpacer>
+      <Plasteel>35</Plasteel>
+    </butcherProducts>
+    <costList>
+      <Plasteel>75</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+      <ComponentStamped>3</ComponentStamped>
+    </costList>
+  </ThingDef>
+  
+  <ThingDef ParentName="DMS_ModuleApparelHead">
+    <defName>DMS_Apparel_FA47_Helmet</defName>
+    <label>F/A-47 "Arsenal Angel" helmet</label>
+    <description>A complex synthetic caliber sensor module used by colonial fleets on dragoons used in space operations, It can effectively track high-speed moving enemies and assist pilot in aiming.</description>
+    <graphicData>
+      <texPath>Things/Dragoon/FA47/helmet_south</texPath>
+    </graphicData>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_FA47_Helmet</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Mass>18</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+      <MoveSpeed>-0.2</MoveSpeed>
+      <VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.6</VacuumResistance>
+      <HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+    </equippedStatOffsets>
+    <apparel>
+      <immuneToToxGasExposure>true</immuneToToxGasExposure>
+      <wornGraphicPath>Things/Dragoon/FA47/helmet</wornGraphicPath>
+      <tags>
+        <li>EVA</li>
+      </tags>
+    </apparel>
+    <comps>
+      <li Class="Exosuit.CompProperties_ExosuitModule">
+        <ItemDef>DMS_Module_FA47_Helmet</ItemDef>
+        <occupiedSlots>
+          <li>Head</li>
+        </occupiedSlots>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

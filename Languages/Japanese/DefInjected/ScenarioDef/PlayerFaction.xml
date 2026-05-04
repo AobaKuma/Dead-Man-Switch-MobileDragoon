@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: The Veteran -->
+  <DMSMD_Scenario.label>古参兵</DMSMD_Scenario.label>
+  <!-- EN: A legendary pilot decides to retire and start a different story. -->
+  <DMSMD_Scenario.description>伝説の龍機兵が引退し、新たな物語を始めることを決意する。</DMSMD_Scenario.description>
+  <!-- EN: You have been an officer in the Colonial Orbital Marines for thirty years...but actually hundreds of years. Traveling through countless stars and participating in wars end up becoming a living legend with your mobile dragoon.\n\nComrades who joined in the same period as you were no longer there, died on the battlefield, from old age, or chose to stay in those colonial worlds during the colonization again and again.\nAnd you, still driving your old-generation dragoons. Even if you know that the old will eventually leave and the new will come, you still feel reluctant to leave this mobile dragoon that has been with you for several years.\n\nEverything may become obsolete in the innovations of time and technology. but whatever how no longer useful they were, they are still solid proof that you have come from the past to the present. the proof that you came from that harsh era. the proof that the past exists.\n\nFinally, you decide to retire, at least leave a different story for this weapon, not only war, and death, and soon the approval report for your application is issued. -->
+  <DMSMD_Scenario.scenario.description>あなたは植民軌道海兵隊の将校として30年間...いや、実際には数百年間勤務してきました。無数の星を旅し、戦争に参加し、機動龍機とともに生きる伝説となったのです。
+
+同期の仲間たちはもういません。戦場で死に、老衰で死に、あるいは植民活動の中でそれらの植民地世界に留まることを選んだのです。
+そして、あなたはまだ旧世代の龍機を操縦しています。やがて古いものは去り、新しいものが来ることを知っていても、何年も共にしてきたこの機動龍機を手放すことに躊躇いを感じています。
+
+すべてのものは時代と技術の革新の中で時代遅れになるかもしれません。しかし、どれほど役に立たなくなったとしても、それらはあなたが過去から現在へとやってきた確固たる証なのです。あの過酷な時代から来た証拠であり、過去が存在した証拠なのです。
+
+ついに、あなたは引退を決意しました。少なくともこの武器に、戦争と死以外の、異なる物語を残そうと。そして間もなく、あなたの申請に対する承認報告書が発行されました。</DMSMD_Scenario.scenario.description>
+  <!-- EN: The Veteran -->
+  <DMSMD_Scenario.scenario.name>古参兵</DMSMD_Scenario.scenario.name>
+  <!-- EN: A decommissioned old base -->
+  <DMSMD_Scenario.scenario.parts.VFEC_AddStartingStructure.structureLabel>廃棄された旧基地</DMSMD_Scenario.scenario.parts.VFEC_AddStartingStructure.structureLabel>
+  <!-- EN: "Thank you for your efforts along the way Sir!, Just tell us if you need anything."\n\nOut of respect for you a legendary pilot, the Colonial Fleet Command allows you to take away this mobile dragoon that has been with you for almost half of your life and assigns you a decommissioned old base, willing helper from your platoon, as well as a place to be developed in this land, a piece of land completely owned by you.\n\nlook outside, the orbital pod is leaving a trail of red. this old base is the beginning of your new life. and of course... your enemies won't pass up this opportunity either. -->
+  <DMSMD_Scenario.scenario.parts.GameStartDialog.text>「これまでのご尽力、ありがとうございました、長官！何か必要でしたらお申し付けください。」
+
+伝説の操縦者であるあなたへの敬意から、植民艦隊司令部は人生の半分近くを共にしたこの機動龍機の持ち帰りを許可し、廃棄された旧基地、小隊からの協力的な助手、そしてこの土地で開発すべき場所、完全にあなたの所有となる土地の一区画を割り当てました。
+
+外を見てください。軌道降下艇が赤い軌跡を残して去っていきます。この旧基地があなたの新たな人生の始まりです。そしてもちろん...あなたの敵たちもこの機会を逃すことはないでしょう。</DMSMD_Scenario.scenario.parts.GameStartDialog.text>
+  <!-- EN: A legendary pilot decides to retire and start a different story. -->
+  <DMSMD_Scenario.scenario.summary>伝説の龍機兵が引退し、新たな物語を始めることを決意する。</DMSMD_Scenario.scenario.summary>
+  
+</LanguageData>
+

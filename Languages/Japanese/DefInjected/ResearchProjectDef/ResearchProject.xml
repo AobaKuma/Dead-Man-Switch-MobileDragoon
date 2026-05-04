@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: mobile dragoon -->
+  <DMS_MobileDragoon.label>機動龍機</DMS_MobileDragoon.label>
+  <!-- EN: A military-duty exoskeleton technology used by colonial fleets. Due to their active colonization activities in rimworlds, these type of technology is also mastered by most former colonial worlds and some space pirates. Dragoons are generally used for armored reconnaissance missions on urban battlefields with poor road conditions, and having multiple modular mount for various needs. -->
+  <DMS_MobileDragoon.description>植民艦隊で使用される軍用外骨格技術。リムワールドでの活発な植民活動により、この種の技術は旧植民地世界や一部の宇宙海賊によっても習得されています。龍機は一般的に道路状況の悪い都市戦場での装甲偵察任務に使用され、様々な用途に応じた複数の兵装架を備えています。</DMS_MobileDragoon.description>
+  
+  <!-- EN: main battle dragoon -->
+  <DMS_MobileDragoonAdvanced.label>主力戦闘龍機</DMS_MobileDragoonAdvanced.label>
+  <!-- EN: unlocks the production of the PV-8 "Zyklop" Dragoon frame for the Colonial Fleet Mobile Armoured Regiment. -->
+  <DMS_MobileDragoonAdvanced.description>植民艦隊機動装甲連隊のPV-8「ツィクロプ」龍機機体の製造を可能にします。</DMS_MobileDragoonAdvanced.description>
+  
+  <!-- EN: Advanced Dragoon Engineering -->
+  <DMS_MobileDragoonElite.label>高等龍機工学</DMS_MobileDragoonElite.label>
+  <!-- EN: unlocks the production of the F/A-47 "Arsenal Angel" Dragoon frame for the Colonial Fleet Orbital Trooper Regiment. -->
+  <DMS_MobileDragoonElite.description>植民艦隊軌道降下兵連隊のF/A-47「武装天使」龍機機体の製造を可能にします。</DMS_MobileDragoonElite.description>
+
+  <!-- EN: Electronic modules -->
+  <DMS_MobileDragoonModule.label>電子兵装</DMS_MobileDragoonModule.label>
+  <!-- EN: unlock the production fo electronic communications/sensing modules for dragoon. -->
+  <DMS_MobileDragoonModule.description>龍機用の電子通信・感知兵装の製造を可能にします。</DMS_MobileDragoonModule.description>
+
+</LanguageData>
+

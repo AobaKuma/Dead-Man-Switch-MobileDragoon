@@ -4,7 +4,7 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_Groyne_Helmet</defName>
     <label>"Groyne" helmet</label>
-    <description>todo.</description>
+    <description>An armored cover that provides driver protection without adequate optical manufacturing processes. It is bulky but does provide some durability.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_Groyne_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -31,10 +31,18 @@
       <skillRequirements>
         <Crafting>4</Crafting>
       </skillRequirements>
+	    <workAmount>22500</workAmount>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>75</Steel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ComponentStamped>1</ComponentStamped>
+    </butcherProducts>
     <costList>
-      <Tungsteel>30</Tungsteel>
-      <Steel>50</Steel>
+      <Steel>150</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
       <ComponentStamped>1</ComponentStamped>
     </costList>
@@ -42,7 +50,7 @@
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_Groyne_Helmet</defName>
     <label>"Groyne" helmet</label>
-    <description>Todo.</description>
+    <description>An armored cover that provides driver protection without adequate optical manufacturing processes. It is bulky but does provide some durability.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_Groyne_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -51,22 +59,32 @@
     </graphicData>
     <statBases>
       <Mass>50</Mass>
-      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.80</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.40</ArmorRating_Heat>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.3</MoveSpeed>
       <ToxicEnvironmentResistance>0.75</ToxicEnvironmentResistance>
+      <HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.15</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/Groyne/helmet</wornGraphicPath>
-      <drawData>
-        <defaultData>
-          <layer>20</layer>
-          <offset>(0,0,0)</offset>
-        </defaultData>
-      </drawData>
+      <immuneToToxGasExposure>true</immuneToToxGasExposure>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelHead</parentTagDef>
+          <drawSize>1</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/Groyne/helmet</texPath>
+          <drawData>
+            <defaultData>
+              <layer>20</layer>
+              <offset>(0,0,0)</offset>
+            </defaultData>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -82,7 +100,7 @@
   <ThingDef ParentName="DMS_ModuleItemHead">
     <defName>DMS_Module_Stahlhelm_Helmet</defName>
     <label>"Stahlhelm" helmet</label>
-    <description>todo.</description>
+    <description>a civil frame module used for welding. But In fact, large quantities of them were flowing into the arms market and underwent certain bulletproof modifications.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_Stahlhelm_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -93,7 +111,7 @@
       <texPath>Things/Item/Module</texPath>
     </graphicData>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>30</MaxHitPoints>
       <Mass>35</Mass>
     </statBases>
     <comps>
@@ -105,11 +123,20 @@
       </li>
     </comps>
     <recipeMaker>
-      <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+      <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
       <skillRequirements>
         <Crafting>4</Crafting>
       </skillRequirements>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>35</Steel>
+      <Tungsteel>25</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <Tungsteel>10</Tungsteel>
+      <ChunkSlagSteel>2</ChunkSlagSteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </butcherProducts>
     <costList>
       <Tungsteel>30</Tungsteel>
       <Steel>50</Steel>
@@ -120,7 +147,7 @@
   <ThingDef ParentName="DMS_ModuleApparelHead">
     <defName>DMS_Apparel_Stahlhelm_Helmet</defName>
     <label>"Stahlhelm" helmet</label>
-    <description>Todo.</description>
+    <description>a civil frame module used for welding. But In fact, large quantities of them were flowing into the arms market and underwent certain bulletproof modifications.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_Stahlhelm_Helmet</ThingDef>
     </descriptionHyperlinks>
@@ -128,23 +155,33 @@
       <texPath>Things/Dragoon/Stahlhelm/helmet_south</texPath>
     </graphicData>
     <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
       <Mass>35</Mass>
-      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.80</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.40</ArmorRating_Heat>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.3</MoveSpeed>
+      <MoveSpeed>-0.1</MoveSpeed>
       <ToxicEnvironmentResistance>0.6</ToxicEnvironmentResistance>
+      <HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/Stahlhelm/helmet</wornGraphicPath>
-      <drawData>
-        <defaultData>
-          <layer>20</layer>
-          <offset>(0,0,0)</offset>
-        </defaultData>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelHead</parentTagDef>
+          <drawSize>1</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/Stahlhelm/helmet</texPath>
+          <drawData>
+            <defaultData>
+              <layer>20</layer>
+              <offset>(0,0,0)</offset>
+            </defaultData>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">

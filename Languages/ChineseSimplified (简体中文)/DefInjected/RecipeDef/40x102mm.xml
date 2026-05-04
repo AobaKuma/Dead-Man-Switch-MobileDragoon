@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: make 40x102mm (Beanbag) shell x100 -->
+  <MakeAmmo_40x102mm_Beanbag.label>制作40x102mm豆袋弹 x100</MakeAmmo_40x102mm_Beanbag.label>
+  <!-- EN: Craft 100 40x102mm (Beanbag) shells. -->
+  <MakeAmmo_40x102mm_Beanbag.description>制作40x102mm豆袋弹</MakeAmmo_40x102mm_Beanbag.description>
+  <!-- EN: Making 40x102mm (Beanbag) shells. -->
+  <MakeAmmo_40x102mm_Beanbag.jobString>制作40x102mm豆袋弹中</MakeAmmo_40x102mm_Beanbag.jobString>
+  
+  <!-- EN: make 40x102mm (Buck) shell x100 -->
+  <MakeAmmo_40x102mm_Buck.label>制作40x102mm鹿弹 x100</MakeAmmo_40x102mm_Buck.label>
+  <!-- EN: Craft 100 40x102mm (Buck) shells. -->
+  <MakeAmmo_40x102mm_Buck.description>制作40x102mm鹿弹</MakeAmmo_40x102mm_Buck.description>
+  <!-- EN: Making 40x102mm (Buck) shells. -->
+  <MakeAmmo_40x102mm_Buck.jobString>制作40x102mmEMP弹中</MakeAmmo_40x102mm_Buck.jobString>
+  
+  <!-- EN: make 40x102mm (EMP) shell x100 -->
+  <MakeAmmo_40x102mm_ElectroSlug.label>制作40x102mmEMP弹 x100</MakeAmmo_40x102mm_ElectroSlug.label>
+  <!-- EN: Craft 100 40x102mm (EMP) shells. -->
+  <MakeAmmo_40x102mm_ElectroSlug.description>制作40x102mmEMP弹</MakeAmmo_40x102mm_ElectroSlug.description>
+  <!-- EN: Making 40x102mm (EMP) shells. -->
+  <MakeAmmo_40x102mm_ElectroSlug.jobString>中</MakeAmmo_40x102mm_ElectroSlug.jobString>
+  
+  <!-- EN: make 40x102mm (Slug) shell x200 -->
+  <MakeAmmo_40x102mm_Slug.label>制作40x102mm独头弹 x100</MakeAmmo_40x102mm_Slug.label>
+  <!-- EN: Craft 100 40x102mm (Slug) shells. -->
+  <MakeAmmo_40x102mm_Slug.description>制作40x102mm独头弹</MakeAmmo_40x102mm_Slug.description>
+  <!-- EN: Making 40x102mm (Slug) shells. -->
+  <MakeAmmo_40x102mm_Slug.jobString>制作40x102mm独头弹中</MakeAmmo_40x102mm_Slug.jobString>
+  
+</LanguageData>

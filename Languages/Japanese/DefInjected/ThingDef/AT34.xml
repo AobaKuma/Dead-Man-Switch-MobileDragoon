@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: AT-34 "Yetta" frame -->
+  <DMS_Apparel_AT34_Core.label>AT-34「イエッタ」機体</DMS_Apparel_AT34_Core.label>
+  <!-- EN: A power armor frame that was exported to the entire rimworld as a training and civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become the largest individual equipment that can be used by local armed forces in the rimworld except armored vehicles. However, providing adequate maintenance and parts for this equipment without proper industrialization would have become extremely difficult without trade with the colonial fleet. -->
+  <DMS_Apparel_AT34_Core.description>訓練と民間用途としてリムワールド全域に輸出された動力装甲機体。しかし、その名目上の目的とは異なり、イエッタは装甲車両を除いてリムワールドの地方武装勢力が使用できる最大の個人装備となっています。ただし、適切な工業化がなければ、この装備に十分な保守や部品を供給することは困難であり、植民艦隊との貿易が不可欠であった。</DMS_Apparel_AT34_Core.description>
+  <!-- EN: mechanical fist -->
+  <DMS_Apparel_AT34_Core.tools.mechanical_fist.label>機械拳</DMS_Apparel_AT34_Core.tools.mechanical_fist.label>
+  <!-- EN: mechanical leg -->
+  <DMS_Apparel_AT34_Core.tools.mechanical_leg.label>機械脚</DMS_Apparel_AT34_Core.tools.mechanical_leg.label>
+  
+  <!-- EN: AT-34 "Yetta" helmet -->
+  <DMS_Apparel_AT34_Helmet.label>AT-34「イエッタ」頭部</DMS_Apparel_AT34_Helmet.label>
+  <!-- EN: An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD. -->
+  <DMS_Apparel_AT34_Helmet.description>龍機頭部兵装と互換性のある統合感知器。事前設定された電波追跡系統と視界表示装置を通じて、機体の作業性能を向上させるよう設計されています。</DMS_Apparel_AT34_Helmet.description>
+  
+  <!-- EN: AT-34 "Yetta" core module -->
+  <DMS_Module_AT34_Core.label>AT-34「イエッタ」中核兵装</DMS_Module_AT34_Core.label>
+  <!-- EN: A power armor frame that was exported to the entire rimworld as a training and civilian purpose. However, unlike its nominal purpose, Yetta has to a certain extent become the largest individual equipment that can be used by local armed forces in the rimworld except armored vehicles. However, providing adequate maintenance and parts for this equipment without proper industrialization would have become extremely difficult without trade with the colonial fleet. -->
+  <DMS_Module_AT34_Core.description>訓練と民間用途として辺境世界全域に輸出された動力装甲機体。しかし、その名目上の目的とは異なり、イエッタは装甲車両を除いてリムワールドの地方武装勢力が使用できる最大の個人装備となっています。ただし、適切な工業化がなければ、この装備に十分な保守や部品を供給することは困難であり、植民艦隊との貿易が不可欠であった。</DMS_Module_AT34_Core.description>
+  
+  <!-- EN: AT-34 "Yetta" helmet -->
+  <DMS_Module_AT34_Helmet.label>AT-34「イエッタ」頭部</DMS_Module_AT34_Helmet.label>
+  <!-- EN: An integrated sensor compatible with the Dragoon head module, its designed to improve the working perfromance of a frame through pre-programmed Ridar tracking system and HUD. -->
+  <DMS_Module_AT34_Helmet.description>龍機頭部兵装と互換性のある統合感知器。事前設定された電波追跡系統と視界表示装置を通じて、機体の作業性能を向上させるよう設計されています。</DMS_Module_AT34_Helmet.description>
+  
+</LanguageData>
+

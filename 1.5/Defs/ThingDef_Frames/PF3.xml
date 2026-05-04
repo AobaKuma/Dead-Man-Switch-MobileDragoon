@@ -11,7 +11,7 @@
     </descriptionHyperlinks>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <Mass>50</Mass>
+      <Mass>80</Mass>
     </statBases>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -27,28 +27,40 @@
       </li>
     </comps>
     <recipeMaker>
-      <researchPrerequisite>DMS_MobileDragoonBasis</researchPrerequisite>
+      <researchPrerequisite>WG_HeavyExoskeleton</researchPrerequisite>
       <skillRequirements>
         <Crafting>4</Crafting>
       </skillRequirements>
+	    <workAmount>36000</workAmount>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>200</Steel>
+    </smeltProducts>
+    <butcherProducts>
+      <Steel>125</Steel>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </butcherProducts>
     <costList>
-      <Tungsteel>75</Tungsteel>
-      <Steel>250</Steel>
-      <ComponentIndustrial>10</ComponentIndustrial>
-      <ComponentStamped>6</ComponentStamped>
+      <Steel>275</Steel>
+      <ComponentIndustrial>15</ComponentIndustrial>
     </costList>
   </ThingDef>
   <ThingDef ParentName="DMS_ModuleApparelCore">
     <defName>DMS_Apparel_PF3_Core</defName>
     <label>PF-3 "Arbeiter" powered frame</label>
-    <description>Todo.</description>
+    <description>An exoskeleton frame within 2 meters high, its technology can be traced back to the end of the 22nd century, when mass-production engineering exoskeleton frames were used to construct a space elevator system for the Project Skyway.\n\nAfter the advent of the space age, a large number of engineering frames and production equipment flowed into civilian and armed organizations.\n\nArbeiter has a left arm that can use human tools and a right arm is used to install tool modules and balance the weight, allowing modules to be replaced to meet most of the work missions.</description>
     <graphicData>
       <texPath>Things/Dragoon/PF3/apparel_south</texPath>
     </graphicData>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PF3_Core</ThingDef>
+    </descriptionHyperlinks>
     <statBases>
-      <Mass>50</Mass>
-			<CarryingCapacity>225</CarryingCapacity>
+      <Mass>80</Mass>
       <MoveSpeed>4.0</MoveSpeed>
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
@@ -57,18 +69,28 @@
 			<Insulation_Heat>20</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
+			<CarryingCapacity>150</CarryingCapacity>
+			<CarryWeight MayRequire="ceteam.combatextended">150</CarryWeight>
 			<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
-      <SM_BodySizeOffset MayRequire="redmattis.betterprerequisites">0.75</SM_BodySizeOffset>
-      <SM_Cosmetic_BodySizeOffset MayRequire="redmattis.betterprerequisites">-0.75</SM_Cosmetic_BodySizeOffset>
+      <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/PF3/apparel</wornGraphicPath>
-      <drawData>
-        <scale>1.5</scale>
-        <dataNorth>
-          <layer>70</layer>
-        </dataNorth>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <drawSize>1.5</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/PF3/apparel</texPath>
+          <drawData>
+            <dataNorth>
+              <layer>5</layer>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -99,6 +121,9 @@
             <offset>(0,0,0.15)</offset>
           </dataSouth>
         </headData>
+        <headHideFor>
+          <li>0</li>
+        </headHideFor>
         <rootData>
           <defaultData>
             <offset>(0,0,0.35)</offset>

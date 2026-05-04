@@ -9,8 +9,9 @@
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <useHitPoints>false</useHitPoints>
     <statBases>
-      <MaxHitPoints>150</MaxHitPoints>
+      <MaxHitPoints>10</MaxHitPoints>
       <WorkToMake>40000</WorkToMake>
     </statBases>
     <tradeTags>
@@ -35,7 +36,7 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
-    <modExtensions />
+    <modExtensions/>
     <destroyOnDrop>true</destroyOnDrop>
     <tradeability>None</tradeability>
     <generateCommonality>0</generateCommonality>
@@ -47,6 +48,7 @@
       </li>
     </comps>
   </ThingDef>
+
   <ThingDef ParentName="DMS_BaseDragoonWeapon">
     <defName>DMS_Dragoon_LMG</defName>
     <label>Dragoon LMG</label>
@@ -66,11 +68,8 @@
       <AccuracyMedium>0.8</AccuracyMedium>
       <AccuracyLong>0.7</AccuracyLong>
       <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
-      <Mass>30.50</Mass>
+      <Mass>0</Mass>
     </statBases>
-    <equippedStatOffsets>
-      <MoveSpeed>-0.4</MoveSpeed>
-    </equippedStatOffsets>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -81,6 +80,54 @@
         <ticksBetweenBurstShots>9</ticksBetweenBurstShots>
         <burstShotCount>9</burstShotCount>
         <soundCast>Shot_Autocannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <modExtensions>
+      <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+        <def>MF_StandardMuzzleFalsh</def>
+        <drawSize>(0.75,0.75)</drawSize>
+        <offsets>
+          <li>(0.75,0)</li>
+        </offsets>
+        <isAlternately>true</isAlternately>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  
+
+  <ThingDef ParentName="DMS_BaseDragoonWeapon">
+    <defName>DMS_Dragoon_DMR</defName>
+    <label>Dragoon DMR</label>
+    <description>A marksman rifle relative to the size of a Dragoon, but for humans it is basically a deadly large-caliber autocannon, uses an electronic synthetic imaging rangefinder for high-precision aiming, giving it considerable accuracy for a large weapon.</description>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+      <li>LongShots</li>
+      <li>Ranged</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Things/Weapons/DMS_Dragoon_DMR</texPath>
+      <drawSize>2.75</drawSize>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.40</AccuracyTouch>
+      <AccuracyShort>0.77</AccuracyShort>
+      <AccuracyMedium>0.9</AccuracyMedium>
+      <AccuracyLong>0.72</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <Mass>0</Mass>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_TurretSniper</defaultProjectile>
+        <warmupTime>2.8</warmupTime>
+        <range>60</range>
+        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+        <burstShotCount>2</burstShotCount>
+        <soundCast>Shot_TurretSniper</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>12</muzzleFlashScale>
       </li>
@@ -126,9 +173,10 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>DMS_Bullet_DragoonShotgun</defaultProjectile>
+				<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+				<burstShotCount>5</burstShotCount>
         <warmupTime>0.8</warmupTime>
         <range>19.9</range>
-        <burstShotCount>1</burstShotCount>
         <soundCast>Shot_Autocannon</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>12</muzzleFlashScale>
@@ -136,8 +184,11 @@
     </verbs>
 		<costList>
 			<Tungsteel>85</Tungsteel>
-			<ComponentStamped>3</ComponentStamped>		
-		</costList>	
+			<ComponentStamped>3</ComponentStamped>
+		</costList>
+    <weaponTags>
+      <li>DMS_Dragoon_SG</li>
+    </weaponTags>
     <modExtensions>
       <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
         <def>MF_StandardMuzzleFalsh</def>
@@ -148,36 +199,30 @@
         <isAlternately>true</isAlternately>
       </li>
 			<li Class="DMS.HeavyEquippableExtension">
-				<EquippableDef>BulkyAutomatroid</EquippableDef>
+				<EquippableDef>HeavyAutomatroid</EquippableDef>
 			</li>
     </modExtensions>
   </ThingDef>
+
   <ThingDef ParentName="BaseBullet">
     <defName>DMS_Bullet_DragoonShotgun</defName>
-    <thingClass>WalkerGear.Projectile_ArcSpread</thingClass>
     <label>canister darts</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Shotgun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>2</drawSize>
+      <drawSize>1.5</drawSize>
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>40</damageAmountBase>
-      <stoppingPower>4</stoppingPower>
-      <speed>55</speed>
+      <damageAmountBase>35</damageAmountBase>
+      <stoppingPower>2</stoppingPower>
+      <speed>75</speed>
       <armorPenetrationBase>0.55</armorPenetrationBase>
     </projectile>
     <comps>
       <li Class="WalkerGear.CompProperties_LaunchExhaust" />
     </comps>
     <modExtensions>
-      <li Class="WalkerGear.RotationalArcSpreadExtension">
-        <projectile>Bullet_Shotgun</projectile>
-        <amount>5</amount>
-        <arc>3</arc>
-        <range>0~1</range>
-      </li>
     </modExtensions>
   </ThingDef>
 
@@ -203,7 +248,6 @@
     </projectile>
     <comps>
       <li Class="WalkerGear.CompProperties_LaunchExhaust"/>
-      
       <li Class="WalkerGear.CompProperties_ProjectileFleckEmitter">
         <fleck>BlastFlame</fleck>
         <offsetMin>(-2,0,-2)</offsetMin>

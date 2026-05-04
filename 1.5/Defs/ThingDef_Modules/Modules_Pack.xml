@@ -2,23 +2,34 @@
 <Defs>
 
   <!-- (背)推進器 -->
-  <ThingDef ParentName="DMS_ModuleItemAttachment">
+  <ThingDef ParentName="DMS_ModuleItemAttachment" MayRequire="ludeon.rimworld.royalty">
     <defName>DMS_Module_JumpThruster</defName>
     <label>burst thruster</label>
-    <description>todo</description>
+    <description>A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult.</description>
     <!-- <description>龍騎兵使用的重型推進器，由四具噴氣引擎驅動整個機體進行短距離飛行，也能夠在消耗大量燃料的狀況下進行較長距離的空中突擊。</description> -->
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_JumpThruster</ThingDef>
     </descriptionHyperlinks>
     <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
       <Mass>60</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonElite</researchPrerequisite>
+      <workAmount>30000</workAmount>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>60</Steel>
+      <Tungsteel>20</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>3</ChunkSlagSteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
     <costList>
-      <Steel>100</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>125</Steel>
+      <Tungsteel>50</Tungsteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -29,35 +40,47 @@
       </li>
     </comps>
   </ThingDef>
-  <ThingDef ParentName="DMS_ModuleApparelAttachment">
+  <ThingDef ParentName="DMS_ModuleApparelAttachment" MayRequire="ludeon.rimworld.royalty">
     <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_JumpThruster</defName>
     <label>burst thruster</label>
-    <description>Todo.</description>
+    <description>A heavy thruster driven by 4 jet engines. it allows Dragoon to fly short distances and they can also conduct longer-distance air assaults while launched in the catapult.</description>
     <graphicData>
-      <texPath>Things/Dragoon/BurstThruster/apparel_south</texPath>
-    </graphicData>
+      <texPath>Things/Dragoon/JumpThruster/apparel_south</texPath>
+    </graphicData>    
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_JumpThruster</ThingDef>
+    </descriptionHyperlinks>
     <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
       <Mass>60</Mass>
       <JumpRange>14.9</JumpRange>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.2</MoveSpeed>
+      <VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/BurstThruster/apparel</wornGraphicPath>
-      <drawData>
-        <scale>2.25</scale>
-        <defaultData>
-          <layer>16</layer>
-        </defaultData>
-        <dataSouth>
-          <layer>-4</layer>
-        </dataSouth>
-        <dataNorth>
-          <layer>75</layer>
-        </dataNorth>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>16</baseLayer>
+          <drawSize>2.25</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/JumpThruster/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <layer>-4</layer>
+            </dataSouth>
+            <dataNorth>
+              <layer>75</layer>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -72,7 +95,6 @@
         <ammoCountPerCharge>20</ammoCountPerCharge>
         <baseReloadTicks>60</baseReloadTicks>
         <soundReload>Standard_Reload</soundReload>
-        <hotKey>Misc4</hotKey>
         <chargeNoun>jump</chargeNoun>
         <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
       </li>
@@ -104,19 +126,36 @@
   <ThingDef ParentName="DMS_ModuleItemAttachment">
     <defName>DMS_Module_PackControlRelay</defName>
     <label>relay pack</label>
-    <description>todo.</description>
+    <!-- 一種用於輔助機械師駕駛員進行機械控制的重型背包，能透過有效的協調來為機械師增加帶寬。 -->
+    <description>A heavy-duty backpack designed to assist mechanitor pilot in mech control. can increase bandwidth through its coordination.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackControlRelay</ThingDef>
     </descriptionHyperlinks>
+    <thingCategories>
+      <li>DMS_Module_Multi</li>
+      <li>DMS_Module_ShoulderRight</li>
+    </thingCategories>
     <statBases>
-      <Mass>30</Mass>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>100</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoonModule</researchPrerequisite>
+	    <workAmount>30000</workAmount>
     </recipeMaker>
-    <costList>
+    <smeltProducts>
       <Steel>100</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Tungsteel>40</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentStamped>1</ComponentStamped>
+    </butcherProducts>
+    <costList>
+      <Steel>200</Steel>
+      <Tungsteel>75</Tungsteel>
+      <ComponentStamped>5</ComponentStamped>
+      <ComponentTransmitter>1</ComponentTransmitter>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -128,44 +167,54 @@
       </li>
     </comps>
   </ThingDef>
+
   <ThingDef ParentName="DMS_ModuleApparelAttachment">
     <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_PackControlRelay</defName>
     <label>relay pack</label>
-    <description>Todo.</description>
+    <description>A heavy-duty backpack designed to assist the mechanitor pilot in mech control can increase bandwidth for the mechanitor through effective coordination.</description>
     <graphicData>
       <texPath>Things/Dragoon/PackControlRelay/apparel_north</texPath>
     </graphicData>
     <statBases>
-      <Mass>30</Mass>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>100</Mass>
     </statBases>
     <equippedStatOffsets>
+      <MechBandwidth MayRequire="ludeon.rimworld.biotech">8</MechBandwidth>
       <MoveSpeed>-0.2</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/PackControlRelay/apparel</wornGraphicPath>
-      <drawData>
-        <scale>1.125</scale>
-        <defaultData>
-          <layer>16</layer>
-        </defaultData>
-        <dataSouth>
-          <layer>-2</layer>
-          <offset>(0,0,0.9)</offset>
-        </dataSouth>
-        <dataEast>
-          <layer>0</layer>
-          <offset>(-1.05,0,0.5)</offset>
-        </dataEast>
-        <dataWest>
-          <layer>0</layer>
-          <offset>(1.05,0,0.5)</offset>
-        </dataWest>
-        <dataNorth>
-          <layer>75</layer>
-          <offset>(0,0,0.15)</offset>
-        </dataNorth>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>16</baseLayer>
+          <drawSize>1.125</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/PackControlRelay/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <layer>-2</layer>
+              <offset>(0,0,0.9)</offset>
+            </dataSouth>
+            <dataEast>
+              <layer>0</layer>
+              <offset>(-1.05,0,0.5)</offset>
+            </dataEast>
+            <dataWest>
+              <layer>0</layer>
+              <offset>(1.05,0,0.5)</offset>
+            </dataWest>
+            <dataNorth>
+              <layer>10</layer>
+              <offset>(0,0,0.15)</offset>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -182,20 +231,32 @@
   <ThingDef ParentName="DMS_ModuleItemAttachment">
     <defName>DMS_Module_PackEngineering</defName>
     <label>engineering pack</label>
-    <description>todo</description>
+    <description>The module which mounted on the Back of the frame. Having a pair of robotic arms to perform logistical work such as construction, maintenance, transportation, and processing.</description>
     <!-- <description>安裝於龍騎兵框架上的工程用模塊，具有一對輔助機械臂來進行建築、維修、搬運與加工等後勤工作。</description> -->
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackEngineering</ThingDef>
     </descriptionHyperlinks>
+    <thingCategories>
+      <li>DMS_Module_Multi</li>
+      <li>DMS_Module_ShoulderRight</li>
+    </thingCategories>
     <statBases>
-      <Mass>35</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>110</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>80</Steel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>3</ChunkSlagSteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
     <costList>
-      <Steel>100</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>150</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -211,40 +272,52 @@
     <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_PackEngineering</defName>
     <label>engineering pack</label>
-    <description>Todo.</description>
+    <description>The module which mounted on the Back of the frame. Having a pair of robotic arms to perform logistical work such as construction, maintenance, transportation, and processing.</description>
     <graphicData>
       <texPath>Things/Dragoon/PackEngineering/apparel_north</texPath>
-    </graphicData>
+    </graphicData>    
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PackEngineering</ThingDef>
+    </descriptionHyperlinks>
     <statBases>
-      <Mass>35</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>110</Mass>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.2</MoveSpeed>
+			<WorkSpeedGlobal>0.10</WorkSpeedGlobal>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/PackEngineering/apparel</wornGraphicPath>
-      <drawData>
-        <scale>1.125</scale>
-        <defaultData>
-          <layer>16</layer>
-        </defaultData>
-        <dataSouth>
-          <layer>-2</layer>
-          <offset>(0,0,0.9)</offset>
-        </dataSouth>
-        <dataEast>
-          <layer>0</layer>
-          <offset>(-1.05,0,0.5)</offset>
-        </dataEast>
-        <dataWest>
-          <layer>0</layer>
-          <offset>(1.05,0,0.5)</offset>
-        </dataWest>
-        <dataNorth>
-          <layer>75</layer>
-          <offset>(0,0,0.15)</offset>
-        </dataNorth>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>16</baseLayer>
+          <drawSize>1.125</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/PackEngineering/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <layer>-2</layer>
+              <offset>(0,0,0.9)</offset>
+            </dataSouth>
+            <dataEast>
+              <layer>0</layer>
+              <offset>(-1.05,0,0.5)</offset>
+            </dataEast>
+            <dataWest>
+              <layer>0</layer>
+              <offset>(1.05,0,0.5)</offset>
+            </dataWest>
+            <dataNorth>
+              <layer>10</layer>
+              <offset>(0,0,0.15)</offset>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -258,22 +331,35 @@
   </ThingDef>
 
    <!-- 增加攜帶量 -->
-   <ThingDef ParentName="DMS_ModuleItemAttachment">
+  <ThingDef ParentName="DMS_ModuleItemAttachment">
     <defName>DMS_Module_PackCargo</defName>
     <label>Cargo pack</label>
-    <description>todo</description>
+    <description>A pack module with cargo spaces and additional drive unit, let the frame to carry more payloads.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackCargo</ThingDef>
     </descriptionHyperlinks>
+    <thingCategories>
+      <li>DMS_Module_Multi</li>
+      <li>DMS_Module_ShoulderRight</li>
+    </thingCategories>
     <statBases>
-      <Mass>35</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>50</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
     </recipeMaker>
-    <costList>
+    <smeltProducts>
       <Steel>100</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Tungsteel>10</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+      <ComponentStamped>1</ComponentStamped>
+    </butcherProducts>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentStamped>4</ComponentStamped>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -289,41 +375,52 @@
     <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_PackCargo</defName>
     <label>Cargo pack</label>
-    <description>Todo.</description>
+    <description>A pack module with cargo spaces and additional drive unit, let the frame to carry more payloads.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Module_PackCargo</ThingDef>
+    </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Dragoon/PackCargo/apparel_north</texPath>
     </graphicData>
     <statBases>
-      <Mass>35</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>50</Mass>
     </statBases>
     <equippedStatOffsets>
 			<CarryingCapacity>120</CarryingCapacity>
       <MoveSpeed>-0.2</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Dragoon/PackCargo/apparel</wornGraphicPath>
-      <drawData>
-        <scale>1.125</scale>
-        <defaultData>
-          <layer>16</layer>
-        </defaultData>
-        <dataSouth>
-          <layer>-2</layer>
-          <offset>(0,0,0.9)</offset>
-        </dataSouth>
-        <dataEast>
-          <layer>0</layer>
-          <offset>(-1.05,0,0.5)</offset>
-        </dataEast>
-        <dataWest>
-          <layer>0</layer>
-          <offset>(1.05,0,0.5)</offset>
-        </dataWest>
-        <dataNorth>
-          <layer>75</layer>
-          <offset>(0,0,0.15)</offset>
-        </dataNorth>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>16</baseLayer>
+          <drawSize>1.125</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Dragoon/PackCargo/apparel</texPath>
+          <drawData>
+            <dataSouth>
+              <layer>-2</layer>
+              <offset>(0,0,0.9)</offset>
+            </dataSouth>
+            <dataEast>
+              <layer>0</layer>
+              <offset>(-1.05,0,0.5)</offset>
+            </dataEast>
+            <dataWest>
+              <layer>0</layer>
+              <offset>(1.05,0,0.5)</offset>
+            </dataWest>
+            <dataNorth>
+              <layer>10</layer>
+              <offset>(0,0,0.15)</offset>
+            </dataNorth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -336,24 +433,38 @@
     </comps>
   </ThingDef>
 
-
    <!-- 解鎖超重型裝備的使用 -->
-   <ThingDef ParentName="DMS_ModuleItemAttachment">
+  <ThingDef ParentName="DMS_ModuleItemAttachment">
     <defName>DMS_Module_PackFrame</defName>
     <label>hydraulic frame pack</label>
-    <description>todo</description>
+    <description>An exoskeleton system for the frame that allows the use of heavier heavy equipment without changing the design itself.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Apparel_PackFrame</ThingDef>
     </descriptionHyperlinks>
+    <thingCategories>
+      <li>DMS_Module_Multi</li>
+      <li>DMS_Module_ShoulderRight</li>
+    </thingCategories>
     <statBases>
-      <Mass>35</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>80</Mass>
     </statBases>
     <recipeMaker>
       <researchPrerequisite>DMS_MobileDragoon</researchPrerequisite>
+      <workAmount>30000</workAmount>
     </recipeMaker>
+    <smeltProducts>
+      <Steel>120</Steel>
+      <Tungsteel>40</Tungsteel>
+    </smeltProducts>
+    <butcherProducts>
+      <ChunkSlagSteel>5</ChunkSlagSteel>
+      <ComponentStamped>2</ComponentStamped>
+    </butcherProducts>
     <costList>
-      <Steel>100</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>250</Steel>
+      <Tungsteel>120</Tungsteel>
+      <ComponentStamped>5</ComponentStamped>
     </costList>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">
@@ -369,7 +480,7 @@
     <tickerType>Normal</tickerType>
     <defName>DMS_Apparel_PackFrame</defName>
     <label>hydraulic frame pack</label>
-    <description>Todo.</description>
+    <description>An exoskeleton system for the frame that allows the use of heavier heavy equipment without changing the design itself.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Module_PackFrame</ThingDef>
     </descriptionHyperlinks>
@@ -377,35 +488,43 @@
       <texPath>Things/Modifications/HydraulicFrame/render_south</texPath>
     </graphicData>
     <statBases>
-      <Mass>35</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>80</Mass>
     </statBases>
     <equippedStatOffsets>
-			<CarryingCapacity>100</CarryingCapacity>
-      <MoveSpeed>-0.25</MoveSpeed>
+			<CarryingCapacity>150</CarryingCapacity>
+      <MoveSpeed>0.25</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
-      <wornGraphicPath>Things/Modifications/HydraulicFrame/render</wornGraphicPath>
-      <drawData>
-        <scale>1.7</scale>
-        <defaultData>
-          <layer>-1</layer>
-        </defaultData>
-        <dataEast>
-          <offset>(-0.20,0,0.15)</offset>
-          <rotationOffset>45</rotationOffset>
-        </dataEast>
-        <dataWest>
-          <offset>(0.20,0,0.15)</offset>
-          <rotationOffset>-45</rotationOffset>
-        </dataWest>
-        <dataNorth>
-          <offset>(0,0,0.75)</offset>
-          <layer>75</layer>
-        </dataNorth>
-        <dataSouth>
-          <offset>(0,0,0.25)</offset>
-        </dataSouth>
-      </drawData>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+          <workerClass>PawnRenderNodeWorker</workerClass>
+          <parentTagDef>WGApparelBody</parentTagDef>
+          <baseLayer>-1</baseLayer>
+          <drawSize>1.7</drawSize>
+          <pawnType>Any</pawnType>
+          <useGraphic>true</useGraphic>
+          <texPath>Things/Modifications/HydraulicFrame/render</texPath>
+          <drawData>
+            <dataEast>
+              <offset>(-0.20,0,0.15)</offset>
+              <rotationOffset>45</rotationOffset>
+            </dataEast>
+            <dataWest>
+              <offset>(0.20,0,0.15)</offset>
+              <rotationOffset>-45</rotationOffset>
+            </dataWest>
+            <dataNorth>
+              <offset>(0,0,0.75)</offset>
+              <layer>10</layer>
+            </dataNorth>
+            <dataSouth>
+              <offset>(0,0,0.25)</offset>
+            </dataSouth>
+          </drawData>
+        </li>
+      </renderNodeProperties>
     </apparel>
     <comps>
       <li Class="WalkerGear.CompProperties_WalkerComponent">

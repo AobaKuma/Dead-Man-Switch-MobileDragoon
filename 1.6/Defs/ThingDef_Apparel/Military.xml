@@ -3,7 +3,7 @@
 	<ThingDef ParentName="ArmorMachineableBase">
 		<defName>DMS_Apparel_PilotSuit</defName>
 		<label>EFP suit</label>
-		<description>EFP suit stands for Exo-Frame Pilot jumpsuit. An armoured suit designed for exosuit pilots. It has excellent bulletproof performance with adequate cushioning lining and composite bulletproof sheets. Also with environmental protection capabilities against nuclear or bio-weapons. But most pilots would rather wear a bulletproof vest than wear this when driving an exoskeleton because it's inconvenient and very stuffy.</description>
+		<description>EFP suit stands for Exo-Frame pilot jumpsuit. An armoured suit designed for exosuit pilots. It has excellent bulletproof performance with adequate cushioning lining and composite bulletproof sheets. Also with environmental protection capabilities against nuclear or bio-weapons. But most pilots would rather wear a bulletproof vest than wear this when driving an exoskeleton because it's inconvenient and very stuffy.</description>
 		<techLevel>Industrial</techLevel>
 		<recipeMaker>
 			<researchPrerequisite>WG_HeavyExoskeleton</researchPrerequisite>
@@ -12,7 +12,6 @@
 				<Crafting>5</Crafting>
 			</skillRequirements>
 			<displayPriority>230</displayPriority>
-			
 			<defaultIngredientFilter>
 				<disallowedThingDefs>
 					<li>Silver</li>
@@ -47,6 +46,7 @@
 		</costList>
 		<equippedStatOffsets>
 			<MoveSpeed>-1.2</MoveSpeed>
+			<ExosuitMoveSpeed>1</ExosuitMoveSpeed>
 			<RestFallRateFactor>0.25</RestFallRateFactor>
 			<ToxicEnvironmentResistance>0.75</ToxicEnvironmentResistance>
 		</equippedStatOffsets>
